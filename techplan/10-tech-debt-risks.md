@@ -52,7 +52,9 @@ word filter, `/mute`, `/report`, bans), v0.2.10 S3 (the relay checks every hit; 
 
 Fixed: R2-R8, R10-R13, D1-D15. Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05.
-- **C3 step 2:** switch the CSP from report-only to enforced (`CSP_ENFORCE=1`) once `[csp]` lines stay away.
+- **C3 step 2:** switch the CSP from report-only to enforced (`CSP_ENFORCE=1`) once `[csp]` lines stay away. The first
+  real reports (2026-11-03) found an inline `onclick` and the Cloudflare Web Analytics beacon: both fixed in v0.2.11;
+  watch the log again after it goes live.
 - **R1** single home PC: deferred by the owner until the Windows app's server needs are known.
 - **S4** server-authoritative health (hp, EMP hits, dodges decided by the server): deferred by the owner, to be
   planned with the Windows app's game server (same decision as R1).
