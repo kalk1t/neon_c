@@ -8,7 +8,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 
 | # | Risk | Severity | Evidence | Known issue | Mitigation idea |
 |---|---|---|---|---|---|
-| R1 | **Single point of failure:** one home PC serves the site and FREE ROAM; power, network, Windows Update reboot or sleep take everything down | H | `server/*`, `start-live.cmd` | | Move static files to Firebase Hosting or Cloudflare Pages; keep or move the relay to a small VPS |
+| R1 | **Single point of failure:** one home PC serves the site and FREE ROAM; power, network, Windows Update reboot or sleep take everything down | H | `server/*`, `start-live.cmd` | | **Postponed by the owner (2026-11-03)** until the Windows app (win_app) shows what servers both games need; then: website to Firebase Hosting (free), relay to a small VPS if FREE ROAM grows. Player data is in Firebase, so an outage loses no data |
 | R2 | ~~**Restart deploys the working tree**~~ **Fixed 2026-11-02:** production serves per-commit release worktrees (`npm run release`, `server/release.mjs`, launcher `server/start-live.cmd`); `serve` no longer builds | ~~H~~ | `package.json` `serve`, `server/release.mjs` | T2 (fixed) | Done; switched over 2026-11-02 (release `1843f2c` live) |
 | R3 | ~~`npm run build` in `game/` changes production at once~~ **Fixed 2026-11-02** (as R2) | ~~M~~ | release folders under `neon_c/live/releases` | T2 (fixed) | Done |
 | R4 | ~~`npm run deploy` bypasses the release order and deploys unused Hosting~~ **Fixed 2026-11-02:** `npm run deploy -- <functions\|client\|rules>` (`server/deploy.mjs`) runs the named parts in the order functions → client → rules, each behind its tests, refuses uncommitted functions/rules, and prints help with no parts; `hosting` removed from `firebase.json` | ~~M~~ | `server/deploy.mjs`, `firebase.json` | | Done |
@@ -18,9 +18,9 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | R8 | Race results client-claimed. **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** per-road fastest times (`ROAD_MIN_RACE_S` / `ROAD_MIN_LAP_S`), the best lap must fit the race, coins need the road's minimum real time, **2,000 coins a day**, cut claims logged. Remaining: a cheat can still claim up to the cap with plausible times (the server doesn't replay the race) | ~~M~~ L | `functions/index.js` `finishRace`, `functions/rules.js` | S1 | Replay-checking would close it fully (big job); App Check enforcement (R9) blocks scripts that don't run the game |
 | R9 | No App Check. **In progress (2026-11-02):** code ready (dev debug token, `appCheckToken()`, relay forwards `hi.ac` as `X-Firebase-AppCheck` so Firestore enforcement won't break FREE ROAM); **tokens live since v0.2.2** (2026-11-02, exchange verified 200, TTL 1 h); next: watch metrics, enforce no earlier than 2026-11-05 | M | `src/online/firebase.js`, `server/live.js` identify | yes (open) | Rollout steps in `docs/technical/10-operations.md#app-check` |
 | R10 | ~~No CI; tests only run by hand~~ **Fixed 2026-11-02:** GitHub Actions (`.github/workflows/ci.yml`) runs build, live, rules, functions and browser tests on every push to `main` | ~~M~~ | `.github/workflows/ci.yml` | | Done |
-| R11 | No Firestore backups configured in repo | M | [unknown] | | Scheduled exports |
+| R11 | ~~No Firestore backups~~ **Fixed 2026-11-03:** Firestore scheduled backups on `(default)`: daily (kept 7 days) and weekly on Sunday (kept 14 weeks). Restore = `firebase firestore:databases:restore` into a new database (see `docs/technical/10-operations.md#backups`) | ~~M~~ | `firebase firestore:backups:schedules:list` | | Done |
 | R12 | ~~`server.log` grows forever and holds chat text~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** the launcher rotates it at 5 MB (3 old files kept); chat text isn't logged | ~~L~~ | `server/launcher.mjs`, `server/live.js` | | Install the new launcher once: `install-autostart.ps1` (admin) |
-| R13 | `neon_c/` (assets, milestones, techplan) is not in git | L | | | Separate repo or backup |
+| R13 | ~~`neon_c/` not in git~~ **Fixed 2026-11-03:** github.com/kalk1t/neon_c (private): Assets, techplan, milestones, archive, meshy scripts, win_app; left out (root `.gitignore`): `game/` (own repo), `live/`, raw Meshy downloads, videos | ~~L~~ | `neon_c/.gitignore` | | Claude commits and pushes it after changes (win_app committed as-is, never edited) |
 
 ## 13.2 Code-level debt
 
@@ -42,10 +42,10 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
 | D14 | ~~`RACE_GAP_S` (120 s) longer than a fast race~~ **Fixed in v0.2.1:** `RACE_GAP_S` = `MIN_RACE_S` = 60 s, so a real back-to-back race never waits (trade-off: R8 cheat rate doubles) | `functions/rules.js` | — |
 
-## 13.3 Status 2026-11-03 (v0.2.4)
-Fixed in code (live once v0.2.4 is deployed): R5, R6, R7, R8, R12, D2, D4, D5, D6, D8, D9, D10, D11, D12 (earlier: R2,
-R3, R4, R10, D3, D7, D13, D14, D15). Still open:
-- **R9** App Check enforcement: date-gated, not before 2026-11-05.
-- **D1** `main.js` split: planned as its own step after v0.2.4 (a pure refactor, kept apart from the security fixes).
-- **R1** (single home PC), **R11** (Firestore backups), **R13** (`neon_c/` not in git): need the owner's decisions or
-  accounts (hosting, a backup schedule in Google Cloud, a backup repository).
+## 13.3 Status 2026-11-03 (v0.2.5 live)
+v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
+glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotates the secret (version 2), disables version 1 and adds a build
+guard (`vite.config.js` `secretGuard`). Fixed: R2-R8, R10-R13, D2-D15. Still open:
+- **R9** App Check enforcement: date-gated, not before 2026-11-05 (check first that v0.2.5's App Check key works).
+- **D1** `main.js` split: the next step (a pure refactor).
+- **R1** single home PC: postponed by the owner until the Windows app's server needs are known.
