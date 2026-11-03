@@ -49,7 +49,7 @@ There is no staging environment [confirmed: no second project or config in the r
 | Relay secret | `RELAY_SECRET` in Secret Manager (`firebase functions:secrets:set`) and in `game/.env.local` (copied into releases); see `docs/technical/10-operations.md#relay-secret` | `functions/index.js`, `server/relay.mjs` |
 | Health check | `GET https://roadstersrace.com/live/count`; menu online count | `server/live.js:287` |
 | Firebase monitoring | Firebase console (functions logs, Firestore usage); no alerts configured in the repo | [unknown] |
-| Backups | No Firestore export or backup job in the repo | [unknown] whether one exists in GCP |
+| Backups | Firestore scheduled backups since 2026-11-03 (R11): daily, kept 7 days, and weekly on Sunday, kept 14 weeks; restore into a new database | `docs/technical/10-operations.md#backups` |
 | Downtime | PC off, asleep, rebooting or offline means the site **and** FREE ROAM are down; Firebase parts keep working for open tabs | [inferred] |
 | Restart effect | All FREE ROAM sessions drop and reconnect (backoff up to 15 s); clients on an older protocol reload (≤ once a minute) | `src/online/live.js:93,171` |
 

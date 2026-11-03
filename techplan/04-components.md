@@ -44,7 +44,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 
 | Module | Lines | Key exports | Responsibility |
 |---|---|---|---|
-| `src/hud.js` | 396 | `HUD` | Speed, boost, heat, missiles, lap times, sub-titles (`sub()` uses `innerHTML`), kill feed, health bars |
+| `src/hud.js` | 396 | `HUD` | Speed, boost, heat, missiles, lap times, sub-titles (`sub()` is plain text since v0.2.7, C2), kill feed, health bars |
 | `src/chat.js` | 76 | `Chat`, `CHAT_MAX` | FREE ROAM chat log and input (120 chars, own pace 1.2 s) |
 | `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge |
 | `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |

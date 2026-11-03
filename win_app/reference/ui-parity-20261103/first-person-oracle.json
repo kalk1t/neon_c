@@ -1,0 +1,10 @@
+{
+  "reference": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\components\\source\\main.js",
+  "referenceSHA256": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307",
+  "current": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+  "currentSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "normalizedChaseCameraEqual": true,
+  "cases": 1080,
+  "rawSeatPoses": 108,
+  "scope": "Actual chaseCamera with real Three PerspectiveCamera; no graphics/audio/account. Alive/dead, three modes, yaw/pitch/roll and orbit threshold/wrap cases. Shake/nitro/punch disabled; no human input or pixel acceptance."
+}

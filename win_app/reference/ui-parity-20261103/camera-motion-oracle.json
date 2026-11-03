@@ -1,0 +1,46 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+  "sourceSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "cases": 960,
+  "sequences": 6,
+  "ticksPerSequence": 160,
+  "endStates": [
+    {
+      "scenario": 0,
+      "looking": false,
+      "lookYaw": 0.00003883510091459376,
+      "lookPitch": 0.00001043192782945554
+    },
+    {
+      "scenario": 1,
+      "looking": true,
+      "lookYaw": -0.04866220032899435,
+      "lookPitch": -0.00871446277378433
+    },
+    {
+      "scenario": 2,
+      "looking": false,
+      "lookYaw": 0.000013909237105940738,
+      "lookPitch": 0.00001043192782945554
+    },
+    {
+      "scenario": 3,
+      "looking": true,
+      "lookYaw": 0.04866220032899435,
+      "lookPitch": -0.00871446277378433
+    },
+    {
+      "scenario": 4,
+      "looking": false,
+      "lookYaw": -0.00003883510091459376,
+      "lookPitch": 0.00001043192782945554
+    },
+    {
+      "scenario": 5,
+      "looking": true,
+      "lookYaw": 0.017428925547568676,
+      "lookPitch": -0.00871446277378433
+    }
+  ],
+  "scope": "Actual v0.2.6 chaseCamera timing plus real Three camera poses. 120 active-input ticks then 40 finished ticks retaining the last processed looking flag. Delta times are already capped host values; no graphics, mouse devices, pause showcase, effects or accounts."
+}

@@ -21,7 +21,7 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 | Identity in FREE ROAM | Firebase ID token verified against Google JWKS with project issuer/audience; nickname from Firestore; one connection per uid [confirmed: `server/live.js:81-98,218-221`] | Low |
 | Mock logins | Only with `LIVE_MOCK=1` in `vite dev`; `preview` forces `allowMock: false` [confirmed: `server/live.js:296-297`] | Low (production uses `preview`) |
 | Private data (`players`) | Owner-only read; email must equal token email [confirmed: `firestore.rules:38-63`] | Low; stored PII: email, Google name, device, timezone, referrer |
-| Relay availability (DoS) | 24-player cap, message size/rate limits, 15 s sign-in timer, 30 s idle drop, 15 s ping | **Medium.** Unauthenticated sockets can be opened freely (each closed after 15 s); no per-IP limit in code; Cloudflare-side protection [unknown]. The relay shares a process with the website, so a relay crash takes the site down |
+| Relay availability (DoS) | 24-player cap, message size/rate limits, 15 s sign-in timer, 30 s idle drop, 15 s ping; since v0.2.7 at most 6 open and 20 new connections a minute per address (`CF-Connecting-IP`) and 64 still signing in (HTTP 429 before the WebSocket opens) | **Low/medium.** A spread-out attack from many addresses can still fill the 64 sign-in places for a while; Cloudflare-side protection [unknown]. The relay is its own process since v0.2.4 (R6): a relay crash no longer takes the site down |
 | Functions abuse / cost | `maxInstances` 10; auth required; **App Check not enforced** (`functions/.env` absent) [confirmed in repo] | Low/medium cost exposure; bots with real Google accounts can call the functions |
 
 ## 10.2 Client-side findings
@@ -29,8 +29,8 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 | # | Finding | Evidence | Severity | Notes |
 |---|---|---|---|---|
 | C1 | ~~`window.NEON` debug handle is exposed in production~~ **Fixed in v0.2.4 (D9):** only dev builds define it (`import.meta.env.DEV`) | `src/main.js` | — | — |
-| C2 | `hud.sub()` sets `innerHTML`; FREE ROAM messages interpolate remote names (`${p.name} JOINED`, `BY ${from.name}`) | `src/hud.js:56`, `src/roam.js` (`join`, `roamHit`, `roamKill`) | Low | Names come from the relay, which reads `users/{uid}.nickname`; rules restrict nicknames to `[A-Za-z0-9_-]{3,16}`. Safe as long as that regex holds |
-| C3 | No Content-Security-Policy (no meta tag; `server/serve.mjs` sets no CSP header, only `X-Content-Type-Options`) | `index.html` | Low/medium | A CSP header in `serve.mjs` or Cloudflare |
+| C2 | ~~`hud.sub()` sets `innerHTML` with remote names~~ **Fixed in v0.2.7:** `sub()` writes plain text (`textContent`); the kill feed, chat and roster already did. The results lists escape names (`esc`) | `src/hud.js` | — | — |
+| C3 | ~~No Content-Security-Policy~~ **Fixed in v0.2.7, report-only first:** `server/serve.mjs` sends a CSP on every page (scripts only from the site and the Google services Firebase loads; no inline or eval'd scripts; `object-src 'none'`; `frame-ancestors 'self'`); violations go to `/csp-report`, logged as `[csp]` lines in `server.log`. A real build loaded through it had no violations (2026-11-03: reCAPTCHA, Analytics, Firebase, Google Fonts). Next: `CSP_ENFORCE=1` once the log stays clean for signed-in players | `server/serve.mjs` | Low | Enforce after a few days of clean reports |
 | C4 | Race results, `place`, coins are client-claimed | `src/account.js:401` | Medium | By design; see 10.1 |
 | C5 | The Firebase auth helper is proxied through the site (`/__` → `roadsters-race.firebaseapp.com`) | `vite.config.js` | Info | Required for first-party sign-in; trusts that host |
 
@@ -51,5 +51,5 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 3. Credit kills only when the named killer recently `hit` the victim (the relay already sees `hit` messages).
 4. ~~Strip `window.NEON` from production builds~~ Done in v0.2.4 (D9).
 5. Use `textContent` in `hud.sub` call sites that include names, or escape them.
-6. Add a CSP (via Cloudflare Transform Rules or a small middleware).
+6. ~~Add a CSP~~ Done in v0.2.7 (report-only, then enforce with `CSP_ENFORCE=1`).
 7. ~~Rotate `server.log` and avoid logging chat text.~~ Done in v0.2.4 (R12).

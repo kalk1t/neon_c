@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-11-03T16:15:46.777975+00:00",
+  "target_baseline": "Owner v0.2.5 request, prepared pre-split camera source; current working browser advanced to v0.2.6 during turn. No whole-version equivalence asserted.",
+  "oracle": {
+    "reference": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\components\\source\\main.js",
+    "referenceSHA256": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307",
+    "current": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+    "currentSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+    "normalizedChaseCameraEqual": true,
+    "cases": 1080,
+    "rawSeatPoses": 108,
+    "scope": "Actual chaseCamera with real Three PerspectiveCamera; no graphics/audio/account. Alive/dead, three modes, yaw/pitch/roll and orbit threshold/wrap cases. Shake/nitro/punch disabled; no human input or pixel acceptance."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "full_application_build": "passed",
+      "focused_tests_passed": 5,
+      "focused_tests_failed": 0,
+      "camera_summary": "Actual source chaseCamera: 1080 visibility cases, 108 raw seat poses, max error 6.0973509486883858e-16, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\first-person-native-build.log",
+      "build_log_sha256": "1fe3bd738b2bb2df83fa763f7a8eb7ac855caff769ae3acb9e915fcc449817f9",
+      "test_log_sha256": "e8b8bddf23818bb10091863d83281cc429d1fdf4bf937714c4982567cca6925d"
+    },
+    {
+      "target": "web",
+      "full_application_build": "passed",
+      "focused_tests_passed": 5,
+      "focused_tests_failed": 0,
+      "camera_summary": "Actual source chaseCamera: 1080 visibility cases, 108 raw seat poses, max error 6.0973509486883858e-16, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\first-person-web-build.log",
+      "build_log_sha256": "4867cf01db5e0cfae13dc84933a389576182370759e1f1d6c1ad2ce99c0fc7c1",
+      "test_log_sha256": "e71cf31295381bf57b80118c071cd3988d2f8e89a13a9bad285ddcf4d0846942"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_first_person.h",
+      "sha256": "e34be3a02955a51f61aacb0be8c6c4c71fb0e1dc887ddb0f05538a1c0e9b2714"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "f33a2f711dcd99f9a5e654b27d51751b2b7d4c38751808da667af0ba7f4827ad"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "6c4cd55fec16eba01a530a93f0c652a5bfa4df788fc6681876b098482ac14838"
+    },
+    {
+      "path": "tests/test_first_person.c",
+      "sha256": "2839ef40f1ceaa6d7357e86ba1472e5238f47736f105d88420dd2a55a2fe1100"
+    },
+    {
+      "path": "tests/first_person_fixture.h",
+      "sha256": "ddc841b8830f8924f1bfd1ceef10ae79a0c9dfdc1b61c57d9d6c0d7047f4f8cc"
+    },
+    {
+      "path": "tools/capture-first-person.mjs",
+      "sha256": "57d09b74b82ac1c72b37ed824633eaba7791c39a03efc4813c6d960dcfcee60d"
+    },
+    {
+      "path": "reference/ui-parity-20261103/first-person-oracle.json",
+      "sha256": "b4e279b832f54bc25e6fddfd8921b7e1cc5fd69c5b118c462a8020d043c4752f"
+    }
+  ],
+  "preceding_input_files_verified_unchanged": [
+    "src/core/rr_input_mix.h",
+    "tests/test_input_mix.c",
+    "tests/input_state_fixture.h",
+    "tools/capture-input-state.mjs",
+    "reference/ui-parity-20261103/input-state-oracle.json"
+  ],
+  "reused_evidence": "Prior input slice full 42/42 native and WASM; current full 43-test suite not rerun, focused five tests fresh.",
+  "graphics": "Not run; rejected launch authorization pending, no retry.",
+  "limits": "Native pose, body clipping and input/hardware qualification remain pending; no graphics resources added or limits changed, no progression/account/browser writes."
+}

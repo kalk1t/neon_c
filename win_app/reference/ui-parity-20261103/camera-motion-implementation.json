@@ -1,0 +1,122 @@
+{
+  "created_utc": "2026-11-03T16:29:55.720442+00:00",
+  "local_browser_version": "0.2.6",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+    "sourceSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+    "cases": 960,
+    "sequences": 6,
+    "ticksPerSequence": 160,
+    "endStates": [
+      {
+        "scenario": 0,
+        "looking": false,
+        "lookYaw": 3.883510091459376e-05,
+        "lookPitch": 1.043192782945554e-05
+      },
+      {
+        "scenario": 1,
+        "looking": true,
+        "lookYaw": -0.04866220032899435,
+        "lookPitch": -0.00871446277378433
+      },
+      {
+        "scenario": 2,
+        "looking": false,
+        "lookYaw": 1.3909237105940738e-05,
+        "lookPitch": 1.043192782945554e-05
+      },
+      {
+        "scenario": 3,
+        "looking": true,
+        "lookYaw": 0.04866220032899435,
+        "lookPitch": -0.00871446277378433
+      },
+      {
+        "scenario": 4,
+        "looking": false,
+        "lookYaw": -3.883510091459376e-05,
+        "lookPitch": 1.043192782945554e-05
+      },
+      {
+        "scenario": 5,
+        "looking": true,
+        "lookYaw": 0.017428925547568676,
+        "lookPitch": -0.00871446277378433
+      }
+    ],
+    "scope": "Actual v0.2.6 chaseCamera timing plus real Three camera poses. 120 active-input ticks then 40 finished ticks retaining the last processed looking flag. Delta times are already capped host values; no graphics, mouse devices, pause showcase, effects or accounts."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 7,
+      "focused_tests_failed": 0,
+      "timing_summary": "Actual v0.2.6 chaseCamera timing: 960 sequential states and resulting poses, max error 1.8207657603852567e-14, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\camera-motion-v026-native-build.log",
+      "build_log_sha256": "92d46aae1b5a990c81a36bf8eb4644e33a6af4e8b034cb4daafb333cf95c98e7",
+      "test_log_sha256": "7db9b89352c7daa5fc95ff1c9ed4b53cca1ca72ae1c7b1d93c71e2faad8ff55f"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 7,
+      "focused_tests_failed": 0,
+      "timing_summary": "Actual v0.2.6 chaseCamera timing: 960 sequential states and resulting poses, max error 3.5527136788005009e-15, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\camera-motion-v026-web-build.log",
+      "build_log_sha256": "a3a4e456b9d4e03e6c869502997be09ccb995d1c3cdeb77eb4341e254102cf44",
+      "test_log_sha256": "2241b7c1567c5078444aff6c2c097e5804bd9b04aba0af909833bcdba9905477"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_camera_motion.h",
+      "sha256": "5de165524819d7a8756a6c0daca1f717e617c3d0a9ede22ecc0f68e7a2488981"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "82381879e3dd5c51821aa8ba1a1094b2efb2bd295a460ed582920fdd06bf691d"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "42832473c8f8a1048cdcc89bcc4f58c383e501129d72cee474b2b57d5d3e4040"
+    },
+    {
+      "path": "tests/test_camera_motion.c",
+      "sha256": "5729e28259f167a63fc06cd44e16e54d8c60681b8d9b3a983afb46d0cd59e392"
+    },
+    {
+      "path": "tests/camera_motion_fixture.h",
+      "sha256": "dba10ffb14ce40919efaed71614804c534cad5a7b0c667c4533885e4c5a37872"
+    },
+    {
+      "path": "tools/capture-camera-motion.mjs",
+      "sha256": "bab4192c3443ff517e98fc78daa8136641fdca641bee26320f367d7704635ea5"
+    },
+    {
+      "path": "reference/ui-parity-20261103/camera-motion-oracle.json",
+      "sha256": "a04c574879b1c6209bc7b11bad7ee4fd7d816a2246355f7d7785f550b63e58a0"
+    }
+  ],
+  "preceding_files_verified_unchanged": [
+    "src/core/rr_input_mix.h",
+    "tests/test_input_mix.c",
+    "tests/input_state_fixture.h",
+    "tools/capture-input-state.mjs",
+    "reference/ui-parity-20261103/input-state-oracle.json",
+    "src/core/rr_first_person.h",
+    "tests/test_first_person.c",
+    "tests/first_person_fixture.h",
+    "tools/capture-first-person.mjs",
+    "reference/ui-parity-20261103/first-person-oracle.json",
+    "src/core/rr_chase_camera.h",
+    "tests/test_chase_camera.c",
+    "tests/chase_camera_fixture.h",
+    "tools/capture-chase-camera.mjs",
+    "reference/ui-parity-20261103/chase-camera-oracle.json"
+  ],
+  "reused": "Earlier full 42/42 input suites and previous focused camera suites remain separate. Full 45-test suite not rerun.",
+  "graphics": "Not run. Prior rejection remains pending separate explicit authorization; no retry, desktop input or process inspection.",
+  "limits": "Shared sequential timing/pose coupling, not native hardware input, visual/stability/shutdown or whole-game acceptance. No graphics resources/caps/account/progression/browser changes."
+}

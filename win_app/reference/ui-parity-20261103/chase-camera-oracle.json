@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+  "sourceSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "threeSHA256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+  "cases": 1225,
+  "maxOldPositionDistance": 2.252257277307888,
+  "maxOldUpComponentError": 0.9881654119012497,
+  "scope": "Actual v0.2.6 chaseCamera with real Three camera math, dt=0 to isolate geometry. Smoothing, free-look phase, Nitro/shake/punch and lens effects excluded. Old math measurement uses doubles without native float rounding and never entered a graphics context."
+}

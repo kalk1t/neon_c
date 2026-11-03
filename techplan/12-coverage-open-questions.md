@@ -13,10 +13,11 @@
 | `server/*.ps1`, `start-live.cmd`, `release.mjs` (`start-server.cmd` deleted 2026-11-02) | Full | read; `release.mjs` written and rehearsed 2026-11-02 |
 | `src/online/*` | Full | read |
 | `src/account.js` | Most (save, kill, killer, errors, ranks) | read |
-| `src/race.js` | Constants, roam / race / lock-on / wreck paths, `window.NEON` (dev only since v0.2.4), boot | partly read and grepped (~1,850 lines) |
+| `src/main.js` | Start-up, state machine, menus, `window.NEON` (dev only since v0.2.4), main loop | read (~700 lines since the v0.2.6 split) |
+| `src/race.js`, `aim.js`, `roam.js`, `camera.js`, `render.js`, `world.js` | Race rules, weapons, FREE ROAM, cameras, renderer, world (split from `main.js` in v0.2.6) | read; `race.js` unit-tested (`tests/race.test.mjs`) |
 | `car.js`, `ai.js`, `physics.js`, `track.js`, `roads.js`, `maps.js`, `killer.js`, `chat.js`, `shop.js`, `touch.js`, `input.js`, `audio.js` | Constants and public API | grepped headers, exports, constants |
 | `city.js`, `env.js`, `skyprops.js`, `props.js`, `ads.js`, `materials.js`, `geo.js`, `fx.js`, `nitro.js`, `cockpit.js`, `coins.js`, `sysreq.js`, `hud.js` | Headers, exports, constants | skimmed |
-| `index.html`, `style.css` | External resources, CSP | skimmed; DOM structure not documented in detail |
+| `index.html`, `style.css` | External resources (Google Fonts); the CSP is a header from `server/serve.mjs` (v0.2.7) | skimmed; DOM structure not documented in detail |
 | `tools/roadgen` | File list only | not read or run |
 | `tests/*` | Suites and counts | **run**: live 7/7, rules 40/40, functions 18/18 (2026-11-01; live and functions re-run for v0.2.1) |
 | Production | Live bundle version 0.2.0 and `/live/count` responding (checked at the v0.2 launch, same day) | observed earlier in the session; not re-checked for this document |
@@ -59,6 +60,6 @@ Not examined: GLB/texture assets, `docs/media`, the Cloudflare dashboard, the Fi
 
 **Verified by running:** the three test suites passed while writing this (relay 7/7, rules 40/40, functions 18/18), against the repository's code in emulators; re-run for v0.2.1 along with three browser tests (see [08](08-testing.md)).
 
-**Kept current:** updated for v0.2.1 on 2026-11-01. Every `file:line` citation was re-checked against the code by script (189 references; the remaining mismatches flagged by the script cite a neighbouring line on purpose, e.g. the `NICK_RE` copy in `server/live.js` is a regex literal).
+**Kept current:** updated for v0.2.7 on 2026-11-03 (line numbers of the modules split from `main.js` were replaced by file and symbol names). Earlier: v0.2.1 on 2026-11-01. Every `file:line` citation was re-checked against the code by script (189 references; the remaining mismatches flagged by the script cite a neighbouring line on purpose, e.g. the `NICK_RE` copy in `server/live.js` is a regex literal).
 
 **Remaining gaps:** everything in 14.2. Production cloud and Cloudflare settings can't be seen from the repository. Some rendering modules and `tools/roadgen` are covered only at the API and constant level.

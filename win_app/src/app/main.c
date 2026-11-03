@@ -11,6 +11,9 @@
 #include "rr_road_picker.h"
 #include "rr_key_events.h"
 #include "rr_input_mix.h"
+#include "rr_first_person.h"
+#include "rr_chase_camera.h"
+#include "rr_camera_motion.h"
 #include "rr_minimap.h"
 #include "rr_render_policy.h"
 #include "rr_ui.h"
@@ -27,7 +30,7 @@
 typedef struct RRApp {
     RRTrack track; RRCorridor corridor; RRWorld world; RRCityPlan city_plan; RRCourse course; RRSharedScenery shared; RRCar car; RRScene scene; RRSession session; RRRaceMode selected_mode; RRMenuPolicy menu_policy; RRRecovery recovery; RRRoadPicker picker; RRKeyEvents key_events; RRMinimap minimap;
     Camera3D camera; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
-    bool interior_requested,cockpit_visible; double cockpit_steer,cockpit_control;
+    bool interior_requested,cockpit_visible,first_person_visible,camera_looking; double cockpit_steer,cockpit_control;
     double aim_yaw,aim_pitch,look_yaw,look_pitch,camera_yaw,camera_pitch,camera_fov;
     double spin_cooldown,message_time,warning_time,picker_notice;
     unsigned warning;
@@ -101,7 +104,7 @@ static void start_flight(RRRaceMode mode)
     rr_minimap_init(&app.minimap,&app.track);
     rr_recovery_init(&app.recovery,&app.track,app.car.pos);app.warning_time=0;app.warning=0;
     app.spin_cooldown=0;app.message_time=0;app.ui_best_lap=0;
-    app.look_yaw=0;app.look_pitch=0;app.camera_fov=68;
+    app.look_yaw=0;app.look_pitch=0;app.camera_looking=false;app.camera_fov=68;
     app.camera_yaw=0;app.camera_pitch=0;app.slow_frames=0;app.overloaded=false;
     /* Existing diagnostic smoke path remains distinct from normal countdown. */
     if(app.smoke){app.session.phase=RR_SESSION_ACTIVE;center_aim();}else capture();
@@ -111,7 +114,7 @@ static int input_pad(void){for(int p=0;p<4;p++)if(IsGamepadAvailable(p))return p
 static bool pad_pressed(int button){int p=input_pad();return p>=0&&IsGamepadButtonPressed(p,button);}
 static bool pad_down(int button){int p=input_pad();return p>=0&&IsGamepadButtonDown(p,button);}
 
-static RRInput controls(double dt)
+static RRInput controls(void)
 {
     const int codes[]={KEY_W,KEY_S,KEY_D,KEY_RIGHT,KEY_A,KEY_LEFT,KEY_UP,KEY_DOWN,KEY_E,KEY_Q,KEY_LEFT_SHIFT,KEY_RIGHT_SHIFT};
     unsigned held=0;for(unsigned i=0;i<sizeof(codes)/sizeof(codes[0]);i++)if(IsKeyDown(codes[i]))held|=1u<<i;
@@ -124,11 +127,11 @@ static RRInput controls(double dt)
     }
     RRInput in=rr_input_mix(held,pad);
     Vector2 delta=GetMouseDelta();
-    if(IsMouseButtonDown(MOUSE_BUTTON_RIGHT)){
+    app.camera_looking=IsMouseButtonDown(MOUSE_BUTTON_RIGHT);
+    if(app.camera_looking){
         app.look_yaw-=delta.x*.0021*1.6;app.look_pitch=rr_clamp(app.look_pitch+delta.y*.0021*1.6,-.45,1.15);
     }else{
         app.aim_yaw-=delta.x*.0021;app.aim_pitch-=delta.y*.0021;
-        app.look_yaw=atan2(sin(app.look_yaw),cos(app.look_yaw))*exp(-4*dt);app.look_pitch*=exp(-4*dt);
     }
     bool key_steer=in.steer!=0,key_climb=in.climb!=0;
     if(key_steer)app.aim_yaw=app.car.yaw;
@@ -143,32 +146,34 @@ static RRInput controls(double dt)
 
 static void update_camera(double dt)
 {
-    app.cockpit_visible=false;
+    app.cockpit_visible=false;app.first_person_visible=false;
     Vector3 car=vector(app.car.pos);
     if(app.session.phase==RR_SESSION_MENU){
         app.camera.position=Vector3Add(car,(Vector3){10,3.8f,-12});
         app.camera.target=Vector3Add(car,(Vector3){5,.3f,3.8f});app.camera.fovy=42;
         return;
     }
-    double difference=atan2(sin(app.car.yaw-app.camera_yaw),cos(app.car.yaw-app.camera_yaw));
-    app.camera_yaw+=difference*(1-exp(-7*dt));
-    app.camera_pitch+=(app.car.pitch*.6-app.camera_pitch)*(1-exp(-5*dt));
-    double yaw=app.camera_yaw+app.look_yaw,pitch=rr_clamp(app.camera_pitch-app.look_pitch,-1.3,1.3);
-    Vector3 forward={(float)(-sin(yaw)*cos(pitch)),(float)sin(pitch),(float)(-cos(yaw)*cos(pitch))};
-    double sf=fmax(0,app.car.speed)/RR_CAR_MAX;
-    float distance=(float)((app.camera_mode?15:9)*(1+sf*.22));
-    app.camera.position=Vector3Subtract(car,Vector3Scale(forward,distance));
-    app.camera.position.y+=(app.camera_mode?4.8f:2.7f)-(float)(sf*.6);
-    double orbit=fmin(1,(fabs(atan2(sin(app.look_yaw),cos(app.look_yaw)))+fabs(app.look_pitch))*4);
-    app.camera.target=Vector3Add(car,Vector3Scale(vector(app.car.fwd),(float)(9*(1-orbit))));app.camera.target.y+=.9f;
+    bool chase_phase=app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_COUNTDOWN||app.session.phase==RR_SESSION_FINISHED||app.session.phase==RR_SESSION_RESULTS;
+    RRCameraMotion motion={app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch};
+    rr_camera_motion_step(&motion,app.car.yaw,app.car.pitch,app.camera_looking||!chase_phase,dt);
+    app.camera_yaw=motion.yaw;app.camera_pitch=motion.pitch;app.look_yaw=motion.look_yaw;app.look_pitch=motion.look_pitch;
+    double orbit=rr_camera_orbit(app.look_yaw,app.look_pitch);
+    RRFirstPerson chase=rr_chase_pose(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch);
+    app.camera.position=vector(chase.position);app.camera.target=vector(rr_add(chase.position,rr_scale(chase.forward,20)));app.camera.up=vector(chase.up);
+    double sf=fmin(1.4,fmax(0,app.car.speed)/RR_CAR_MAX);
     app.camera_fov+=(68+15*fmin(1,sf)+9*app.car.nitro-app.camera_fov)*(1-exp(-4*dt));
     app.camera.fovy=(float)app.camera_fov;
-    Vector3 right={(float)cos(yaw),0,(float)-sin(yaw)};
-    app.camera.up=Vector3Normalize(Vector3Add((Vector3){0,1,0},Vector3Scale(right,(float)(-app.car.roll*.28*(1-orbit)))));
+    bool flight=app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_COUNTDOWN||app.session.phase==RR_SESSION_FINISHED;
+    app.first_person_visible=flight&&rr_first_person_active(app.camera_mode,true,app.look_yaw,app.look_pitch);
+    if(app.first_person_visible){
+        RRFirstPerson seat=rr_first_person_pose(&app.car,orbit);
+        app.camera.position=vector(seat.position);app.camera.target=vector(rr_add(seat.position,rr_scale(seat.forward,20)));app.camera.up=vector(seat.up);
+    }
+
 #if defined(RR_COCKPIT_PREVIEW)
     app.cockpit_visible=rr_cockpit_visible(app.interior_requested,app.session.phase,app.look_yaw,app.look_pitch,app.cockpit_art.loaded==RR_COCKPIT_LAYER_COUNT&&!app.cockpit_art.failed);
     if(app.cockpit_visible){
-        RRCKSeat seat=rr_cockpit_seat(&app.car);app.camera.position=vector(seat.position);app.camera.target=vector(rr_add(seat.position,rr_scale(seat.forward,20)));
+        app.first_person_visible=false;RRCKSeat seat=rr_cockpit_seat(&app.car);app.camera.position=vector(seat.position);app.camera.target=vector(rr_add(seat.position,rr_scale(seat.forward,20)));
         app.camera_fov+=(seat.extra_fov)*(1-exp(-4*dt));app.camera.fovy=(float)app.camera_fov;
     }
 #endif
@@ -455,18 +460,18 @@ static void frame(void)
 #if defined(RR_COCKPIT_PREVIEW)
     if(focused&&(app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_COUNTDOWN||app.session.phase==RR_SESSION_FINISHED)){
         if(key_hit(KEY_I))app.interior_requested=!app.interior_requested;
-        if(key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP)){if(app.interior_requested)app.interior_requested=false;else app.camera_mode=1-app.camera_mode;}
+        if(key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP)){if(app.interior_requested)app.interior_requested=false;else app.camera_mode=rr_camera_next(app.camera_mode);}
     }
     if(focused&&(app.session.phase==RR_SESSION_MENU||app.session.phase==RR_SESSION_PAUSED)&&!app.load_requested)
         rr_cockpit_load_next(&app.cockpit_art);
 #endif
     if(app.session.phase==RR_SESSION_ACTIVE){
-        RRInput in=app.smoke?(RRInput){1,0,0,.1,false}:controls(dt);
+        RRInput in=app.smoke?(RRInput){1,0,0,.1,false}:controls();
 #if defined(RR_FINISH_VALIDATION) || defined(RR_COLLISION_VALIDATION)
         in=(RRInput){0};
 #endif
 #if !defined(RR_COCKPIT_PREVIEW)
-        if(key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP))app.camera_mode=1-app.camera_mode;
+        if(key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP))app.camera_mode=rr_camera_next(app.camera_mode);
 #endif
         app.cockpit_control=in.steer;
         app.spin_cooldown=fmax(0,app.spin_cooldown-dt);
@@ -510,7 +515,7 @@ static void frame(void)
     if((app.session.phase==RR_SESSION_ACTIVE || app.session.phase==RR_SESSION_COUNTDOWN || app.session.phase==RR_SESSION_FINISHED || app.session.phase==RR_SESSION_RESULTS) && (focused || app.smoke) && app.scene_ready){
         if(rr_scene_begin(&app.scene,app.camera)){
             rr_scene_world(&app.scene,&app.track,&app.course,&app.shared,app.camera,app.session.race.finished?-1:app.session.race.next_checkpoint,GetTime());
-            rr_scene_car_view(&app.scene,&app.car,app.cockpit_visible);
+            rr_scene_car_view(&app.scene,&app.car,app.cockpit_visible||app.first_person_visible);
             rr_scene_finish(&app.scene);
         }else{
             TraceLog(LOG_ERROR,"STATE: render target unavailable; returning to 2D menu");

@@ -1,0 +1,80 @@
+{
+  "created_utc": "2026-11-03T16:23:14.150887+00:00",
+  "local_browser_version": "0.2.6",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+    "sourceSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+    "threeSHA256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+    "cases": 1225,
+    "maxOldPositionDistance": 2.252257277307888,
+    "maxOldUpComponentError": 0.9881654119012497,
+    "scope": "Actual v0.2.6 chaseCamera with real Three camera math, dt=0 to isolate geometry. Smoothing, free-look phase, Nitro/shake/punch and lens effects excluded. Old math measurement uses doubles without native float rounding and never entered a graphics context."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 6,
+      "focused_tests_failed": 0,
+      "geometry_summary": "Actual v0.2.6 chaseCamera: 1225 geometry/bank/speed/degenerate cases, max error 4.4408920985006262e-16, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\chase-v026-native-build.log",
+      "build_log_sha256": "3d38c70a27a654b2255b5822ebd4524a4fb629f3553ba3ae9451fe1c319e5bb4",
+      "test_log_sha256": "b5f4d7ad697437cb08230a7cc284627a066835476e6c6a006ffc6c636befdfc7"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 6,
+      "focused_tests_failed": 0,
+      "geometry_summary": "Actual v0.2.6 chaseCamera: 1225 geometry/bank/speed/degenerate cases, max error 4.4408920985006262e-16, 0 failures",
+      "build_log": "reference\\ui-parity-20261103\\chase-v026-web-build.log",
+      "build_log_sha256": "c6e845208bcf9e326eab4332f6b696dea1083a436f6d8da7b1a0a0b46f7ac9c1",
+      "test_log_sha256": "6888a8dfce108795d0392830fd9849604a8bee0f8da7937884f297ce68d7d139"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_chase_camera.h",
+      "sha256": "d775a838853e30f2b58c99e322a42903783d82aa06a481e6123f1202e508cb66"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "208c17e5c03606a63a4a4347d5e181b09c80965e6c50aa1881d86393711f0295"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "a6a4d5f976bf0e17a7c0b370edfd3e012dedc502f333a2e434724811a8f4d783"
+    },
+    {
+      "path": "tests/test_chase_camera.c",
+      "sha256": "d2556c4521d577969e907ac061be9bdeb1b3ba960f6abd08b5dd822215dc2c7a"
+    },
+    {
+      "path": "tests/chase_camera_fixture.h",
+      "sha256": "1436f60057752791e837b46f3e6cf39c4ff19c7763b749fd7e3838f6372a25b4"
+    },
+    {
+      "path": "tools/capture-chase-camera.mjs",
+      "sha256": "ca256273d2cf7bd84ce1a856bc8fddd9d73b479f7ef4b8ec898e8472ab5c4a24"
+    },
+    {
+      "path": "reference/ui-parity-20261103/chase-camera-oracle.json",
+      "sha256": "e44eb0a034056ae141e808747b55e299d47b90da2a3931a2e86181e19ada076a"
+    }
+  ],
+  "preceding_input_and_first_person_files_verified_unchanged": [
+    "src/core/rr_input_mix.h",
+    "tests/test_input_mix.c",
+    "tests/input_state_fixture.h",
+    "tools/capture-input-state.mjs",
+    "reference/ui-parity-20261103/input-state-oracle.json",
+    "src/core/rr_first_person.h",
+    "tests/test_first_person.c",
+    "tests/first_person_fixture.h",
+    "tools/capture-first-person.mjs",
+    "reference/ui-parity-20261103/first-person-oracle.json"
+  ],
+  "reused": "Earlier full input 42/42 suites and first-person five-test runs remain separate. Full 44-test suite not rerun for this geometry-only slice.",
+  "graphics": "Not run; approval rejection remains pending separate explicit authorization; no retry or desktop interaction.",
+  "limits": "Base double geometry only; raylib float matrix, GPU, clipping, hardware input and comfort unverified. No resource caps/assets/account/progression/browser changes."
+}

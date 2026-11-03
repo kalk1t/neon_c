@@ -46,14 +46,23 @@ For v0.2.4 (R7, R8, R5/R6, R12, D2, D4, D9-D12; all run on 2026-11-03 against th
 | `test:functions` | 26 / 26 | `relayKills`, per-road minimums, daily cap, ticket clean-up |
 | `test:browser` | rivals 12/12, save 5/5, void 9/9, killer 29/29 | on the dev server. The first full run had killer 27/29: once, the R key press in the RACE Killer check wasn't registered (the 10-minute wait then also let the automatic LOW graphics switch fail the menu-tier check); a re-run passed 29/29, and the check now prints the game state when it fails |
 
+For v0.2.7 (C2, C3, relay connection limits, race unit tests; 2026-11-03):
+
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 57 / 57 | relay 17 (new: connections per address, per minute, still signing in, this PC exempt), constants 10, production server 11 (new: CSP header, report-only vs enforced, `/csp-report`), launcher 1, race rules 18 |
+| `test:game` | 18 / 18 | `tests/race.test.mjs`: gates (counted, missed beside, MISSED GATE), laps and best lap, finish and place, FREE ROAM without gates, SIGNAL LOST respawn, damage by kind, dodging, takedown loot and streaks, player wreck and respawn, ranking (finishers first), rubber band limits, rival fire (6 s hold, target ahead), results banking (coin bonus, ranked time only in RACE). Loads the real game modules in Node (Vite SSR + a stub page, `tests/game-env.mjs`); 1.4 s. Checked by breaking two rules on purpose (loot share, gate radius): both caught |
+| `test:browser` | killer 29/29, rivals 12/12, save 5/5, void 9/9 | on the dev server |
+| CSP on a real build | no violations | `serve.mjs` + Chromium: reCAPTCHA, Analytics, Firebase, Google Fonts all loaded |
+
 ## 11.3 Gaps
 
 | Area | Automated test? |
 |---|---|
-| Game simulation (physics, AI, laps, weapons, coins) | **Partly**: the browser tests exercise races, FREE ROAM kills and respawns end to end; no unit tests |
+| Game simulation (physics, AI, laps, weapons, coins) | **Partly**: race rules unit-tested (`race.test.mjs`, v0.2.7); physics, AI steering, coins and the player's weapons (`aim.js`) only through the browser tests |
 | `account.js` flows (pending races, retry, unsaved-kills display) | Partly (`save.test.mjs`: pending races, retry) |
 | `src/online/live.js` client (reconnect, interpolation) | Indirectly, by `killer.test.mjs` (reconnect) |
-| Relay: rate limits, size limits, idle drop, `die` / `hit` validation, `err full`, `err again` | Partly (KILLER STATUS, kill saving, shop cars, invalid kills) |
+| Relay: rate limits, size limits, idle drop, `die` / `hit` validation, `err full`, `err again` | Partly (KILLER STATUS, kill saving, shop cars, invalid kills, connection limits) |
 | Rendering / visual regressions | No (`docs:shots` makes screenshots for docs, no comparison) |
 | Build smoke test | No script; builds were checked manually into a scratch `outDir` |
 | CI | **GitHub Actions** since 2026-11-02 (`.github/workflows/ci.yml`): on push to `main`, pull requests and by hand; Node 22, Java 21; build + live + rules + functions + browser. Never deploys |

@@ -98,7 +98,7 @@ flowchart TB
 
 [confirmed: imports in `src/main.js`; file roles taken from module headers]
 
-**Game loop** [confirmed: `src/main.js` `frame`; rules in `race.js`, weapons in `aim.js`, cameras in `camera.js`, FREE ROAM in `roam.js`]: `requestAnimationFrame` → read input → step the player and rivals (`stepRacer`) or the FREE ROAM car → physics against the collider grid → weapons → HUD → render. Graphics quality is `GFX.high` or `GFX.low` (`src/main.js:128`), with automatic switching to low if the frame rate stays under 40 fps after 3 s (`src/main.js:156`). Details: `docs/technical/02-game-loop.md`.
+**Game loop** [confirmed: `src/main.js` `frame`; rules in `race.js`, weapons in `aim.js`, cameras in `camera.js`, FREE ROAM in `roam.js`]: `requestAnimationFrame` → read input → step the player and rivals (`stepRacer`) or the FREE ROAM car → physics against the collider grid → weapons → HUD → render. Graphics quality is `GFX.high` or `GFX.low` (`src/render.js` `GFX`), with automatic switching to low if the frame rate stays under 40 fps after 3 s (`src/render.js` `measureGfx`). Details: `docs/technical/02-game-loop.md`.
 
 ## 4.4 Online state ownership
 
