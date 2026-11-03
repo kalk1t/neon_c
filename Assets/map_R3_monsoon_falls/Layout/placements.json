@@ -1,0 +1,540 @@
+{
+  "schema_version": "1.0",
+  "map_id": "R3",
+  "coordinate_system": "game_x_right_y_up_z_forward_meters",
+  "layout_status": "authored_blockout",
+  "origin_convention": "All instance origins are base-center; sizes are local [X width, Y height, Z depth] in meters. Positive yaw rotates local +Z toward game +X.",
+  "reserved_flight_corridor": {
+    "half_width_m": 11,
+    "half_height_m": 2,
+    "method": "Conservative local-XZ AABB inflation of each collision part against every dense route chord. 11 m is route half-width 9 m plus 2 m clearance; vertical envelope is +/-2 m. This is a source-layout check, not swept vehicle collision or engine physics.",
+    "replacement_warning": "Recheck final mesh colliders, banks, route changes, and all spawn points. Empty space in arches/skybridges must stay empty."
+  },
+  "instances": [
+    {
+      "id": "F01_01",
+      "asset_id": "F01",
+      "placeholder_kind": "cliff",
+      "position_game": [
+        -367.587738,
+        0,
+        142.04461
+      ],
+      "yaw_degrees": -136.850774,
+      "size_xyz_m": [
+        100,
+        155,
+        80
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            77.5,
+            0
+          ],
+          "size_xyz_m": [
+            100,
+            155,
+            80
+          ]
+        }
+      ],
+      "notes": "Organic silhouette may be rebuilt or generated with Meshy. Use a simple collision hull after cleanup."
+    },
+    {
+      "id": "F02_01",
+      "asset_id": "F02",
+      "placeholder_kind": "rock_arch",
+      "position_game": [
+        -477.494965,
+        0,
+        -182.667178
+      ],
+      "yaw_degrees": 141.745741,
+      "size_xyz_m": [
+        90,
+        94.862,
+        38
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "left_rock_pier",
+          "center_local": [
+            -33.5,
+            47.431,
+            0
+          ],
+          "size_xyz_m": [
+            23,
+            94.862,
+            38
+          ]
+        },
+        {
+          "id": "right_rock_pier",
+          "center_local": [
+            33.5,
+            47.431,
+            0
+          ],
+          "size_xyz_m": [
+            23,
+            94.862,
+            38
+          ]
+        },
+        {
+          "id": "arch_crown",
+          "center_local": [
+            0,
+            85.8620511230229,
+            0
+          ],
+          "size_xyz_m": [
+            90,
+            18,
+            38
+          ]
+        }
+      ],
+      "notes": "44 m wide clear opening; crown bottom is 22 m above local flight center. Keep this aperture in every replacement mesh and collider."
+    },
+    {
+      "id": "F03_01",
+      "asset_id": "F03",
+      "placeholder_kind": "mesa",
+      "position_game": [
+        -142.025141,
+        0,
+        -546.700355
+      ],
+      "yaw_degrees": 106.510701,
+      "size_xyz_m": [
+        125,
+        112,
+        110
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            56.0,
+            0
+          ],
+          "size_xyz_m": [
+            125,
+            112,
+            110
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "F04_01",
+      "asset_id": "F04",
+      "placeholder_kind": "dam",
+      "position_game": [
+        44.055012,
+        0,
+        330.059087
+      ],
+      "yaw_degrees": -90.242273,
+      "size_xyz_m": [
+        140,
+        110,
+        38
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            55.0,
+            0
+          ],
+          "size_xyz_m": [
+            140,
+            110,
+            38
+          ]
+        }
+      ],
+      "notes": "Precise modular dam structure belongs in Blender. Do not ask Meshy to determine the route clearance."
+    },
+    {
+      "id": "F05_01",
+      "asset_id": "F05",
+      "placeholder_kind": "spillway",
+      "position_game": [
+        19.055235,
+        92,
+        329.953376
+      ],
+      "yaw_degrees": -90.242273,
+      "size_xyz_m": [
+        42,
+        14,
+        26
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            7.0,
+            0
+          ],
+          "size_xyz_m": [
+            42,
+            14,
+            26
+          ]
+        }
+      ],
+      "notes": "",
+      "anchor_instance_id": "F04_01"
+    },
+    {
+      "id": "C15_01",
+      "asset_id": "C15",
+      "placeholder_kind": "service_platform",
+      "position_game": [
+        -367.909801,
+        122.49672,
+        371.092407
+      ],
+      "yaw_degrees": -124.704039,
+      "size_xyz_m": [
+        25,
+        4,
+        24
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        4,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            2.0,
+            0
+          ],
+          "size_xyz_m": [
+            25,
+            4,
+            24
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "F06_01",
+      "asset_id": "F06",
+      "placeholder_kind": "observation_pod",
+      "position_game": [
+        -367.909801,
+        126.49672,
+        371.092407
+      ],
+      "yaw_degrees": -124.704039,
+      "size_xyz_m": [
+        20,
+        12,
+        19
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "rear_bracket_center",
+      "source_root_offset_game": [
+        0,
+        6.0,
+        9.5
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            6.0,
+            0
+          ],
+          "size_xyz_m": [
+            20,
+            12,
+            19
+          ]
+        }
+      ],
+      "notes": "",
+      "anchor_instance_id": "C15_01"
+    },
+    {
+      "id": "F07_01",
+      "asset_id": "F07",
+      "placeholder_kind": "tree",
+      "position_game": [
+        -151.609692,
+        112,
+        -515.698155
+      ],
+      "yaw_degrees": 106.510701,
+      "size_xyz_m": [
+        24,
+        33,
+        24
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            16.5,
+            0
+          ],
+          "size_xyz_m": [
+            24,
+            33,
+            24
+          ]
+        }
+      ],
+      "notes": "Anchored to mesa top in this blockout. Scatter additional instances only after terrain surfaces exist.",
+      "anchor_instance_id": "F03_01"
+    },
+    {
+      "id": "F08_01",
+      "asset_id": "F08",
+      "placeholder_kind": "palm",
+      "position_game": [
+        -139.826529,
+        112,
+        -574.470233
+      ],
+      "yaw_degrees": 106.510701,
+      "size_xyz_m": [
+        16,
+        30,
+        16
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            15.0,
+            0
+          ],
+          "size_xyz_m": [
+            16,
+            30,
+            16
+          ]
+        }
+      ],
+      "notes": "Anchored to mesa top in this blockout. Scatter additional instances only after terrain surfaces exist.",
+      "anchor_instance_id": "F03_01"
+    },
+    {
+      "id": "F09_01",
+      "asset_id": "F09",
+      "placeholder_kind": "fern",
+      "position_game": [
+        -109.067936,
+        112,
+        -519.964187
+      ],
+      "yaw_degrees": 106.510701,
+      "size_xyz_m": [
+        7,
+        4,
+        7
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            2.0,
+            0
+          ],
+          "size_xyz_m": [
+            7,
+            4,
+            7
+          ]
+        }
+      ],
+      "notes": "Anchored to mesa top in this blockout. Scatter additional instances only after terrain surfaces exist.",
+      "anchor_instance_id": "F03_01"
+    },
+    {
+      "id": "F10_01",
+      "asset_id": "F10",
+      "placeholder_kind": "boulder",
+      "position_game": [
+        217.985611,
+        0,
+        -320.451296
+      ],
+      "yaw_degrees": 64.908582,
+      "size_xyz_m": [
+        24,
+        24,
+        22
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            12.0,
+            0
+          ],
+          "size_xyz_m": [
+            24,
+            24,
+            22
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "F11_01",
+      "asset_id": "F11",
+      "placeholder_kind": "waterfall",
+      "position_game": [
+        4.055369,
+        5,
+        329.889949
+      ],
+      "yaw_degrees": -90.242273,
+      "size_xyz_m": [
+        38,
+        87,
+        0.4
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        87,
+        0
+      ],
+      "collision_mode": "none",
+      "collision_parts": [],
+      "notes": "VFX placement plane only. Replace material with scrolling waterfall texture and spray; keep collision disabled.",
+      "anchor_instance_id": "F05_01"
+    },
+    {
+      "id": "F12_01",
+      "asset_id": "F12",
+      "placeholder_kind": "vine",
+      "position_game": [
+        -369.414703,
+        95,
+        198.583643
+      ],
+      "yaw_degrees": -136.850774,
+      "size_xyz_m": [
+        6,
+        60,
+        1
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        60,
+        0
+      ],
+      "collision_mode": "none",
+      "collision_parts": [],
+      "notes": "Small transparent-plane proxy. Final hanging vines should stay outside the route.",
+      "anchor_instance_id": "F01_01"
+    }
+  ]
+}

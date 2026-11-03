@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Roadsters Race — Cockpit asset preview</title>
+  <link rel="stylesheet" href="cockpit-ui.css">
+  <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <div><p class="eyebrow">ROADSTERS RACE · LOCAL ASSET PREVIEW</p><h1 id="pack-title">Cockpit interface</h1><p id="pack-subtitle">Preview the selected cockpit and live instrument states.</p></div>
+      <a href="gallery.html" class="gallery-link">Browse individual assets <span aria-hidden="true">↗</span></a>
+    </header>
+    <div class="stage-wrap">
+      <div id="stage" class="preview-stage" aria-label="Cockpit artwork preview">
+        <div class="demo-world" aria-hidden="true"><div class="demo-stars"></div><div class="demo-city"></div><div class="demo-ring"></div><div class="demo-horizon"></div></div>
+        <div id="external-message" class="external-message" hidden><strong>External view</strong><span>The host game would show its chase camera here.</span></div>
+      </div>
+      <div class="stage-caption"><span id="view-label">COCKPIT VIEW</span><span>Illustrative background · live HTML readouts · press <kbd>I</kbd> to switch</span></div>
+    </div>
+    <section class="controls" aria-label="Preview instrument values">
+      <label>Speed <output id="speed-output">338 km/h</output><input id="speed" type="range" min="0" max="600" value="338" step="1"></label>
+      <label>Boost <output id="boost-output">78%</output><input id="boost" type="range" min="0" max="100" value="78" step="1"></label>
+      <label>Steering <output id="steering-output">0%</output><input id="steering" type="range" min="-100" max="100" value="0" step="1"></label>
+      <label>Attack state<select id="attack-state"><option value="ready">Ready</option><option value="cooldown">Cooldown</option><option value="disabled">Unavailable</option></select></label>
+      <label>Cooldown <output id="cooldown-output">3.5 s</output><input id="cooldown" type="range" min="0" max="10000" value="3500" step="100"></label>
+      <label class="check-label"><input id="timer-running" type="checkbox"> Animate the sample timer</label>
+    </section>
+    <p class="preview-note">These controls change this preview only. Pressing <kbd>I</kbd> demonstrates the view toggle; the game camera is connected through the integration callback. Exact placement can be adjusted in <code>pack-config.js</code>.</p>
+  </main>
+  <script src="cockpit-ui.js"></script>
+  <script src="pack-config.js"></script>
+  <script src="preview.js"></script>
+</body>
+</html>

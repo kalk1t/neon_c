@@ -1,0 +1,45 @@
+{
+  "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\runtime\\fonts\\Orbitron.ttf",
+  "source_sha256": "f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd",
+  "method": "FontTools 4.61.1 instantiateVariableFont wght=500/700/900, unaltered interpolated outlines; derivative primary family renamed RoadstersUI to respect Orbitron RFN; filenames retain source lineage",
+  "fonts": [
+    {
+      "path": "Orbitron-500.ttf",
+      "sha256": "4a8d43a256f454ad64653125c87e76effcbb4253c9bb989f403a3225cdd851be",
+      "weight": 500,
+      "static": true,
+      "primary_family": "RoadstersUI",
+      "missing_ascii": [
+        "^"
+      ],
+      "note": "Caret unused by bounded menu/road UI",
+      "glyph_count": 269
+    },
+    {
+      "path": "Orbitron-700.ttf",
+      "sha256": "9c8cf4a5fba051259831ed558d0970b277332f185fffefbb9bc6b11c34ce9204",
+      "weight": 700,
+      "static": true,
+      "primary_family": "RoadstersUI",
+      "missing_ascii": [
+        "^"
+      ],
+      "note": "Caret unused by bounded menu/road UI",
+      "glyph_count": 269
+    },
+    {
+      "path": "Orbitron-900.ttf",
+      "sha256": "e7b18322a46a4a6d20c0b4c1034d19ec156238be3f2225e279bc5af3b365b958",
+      "weight": 900,
+      "static": true,
+      "primary_family": "RoadstersUI",
+      "missing_ascii": [
+        "^"
+      ],
+      "note": "Caret unused by bounded menu/road UI",
+      "glyph_count": 269
+    }
+  ],
+  "license": "SIL OFL notices retained; original copyright attribution unchanged",
+  "native_rendering": "Unrun; CPU rasterization is separate evidence"
+}

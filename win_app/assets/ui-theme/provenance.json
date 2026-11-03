@@ -1,0 +1,60 @@
+{
+  "source_package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2",
+  "manifest_sha256": "a171f138a70fdff9cd9973671b3ecdf52148f8c9e1805f8e2cf25c9ddd551bda",
+  "method": "Unmodified copies of verified static TTFs from the exact source Google Fonts weight request; no derivative renaming needed. Rajdhani-500.ttf aliased to existing native Medium filename.",
+  "font_request": "https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&display=swap",
+  "faces": [
+    {
+      "source_file": "Orbitron-500.ttf",
+      "target_file": "Orbitron-500.ttf",
+      "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+      "weight": 500,
+      "static": true,
+      "missing_ascii": [
+        "^"
+      ],
+      "shared_codepoints_compared": 207,
+      "advance_metric_differences_from_prior_pack": 2,
+      "upstream": "https://fonts.gstatic.com/s/orbitron/v35/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nyKS6xpg.ttf"
+    },
+    {
+      "source_file": "Orbitron-700.ttf",
+      "target_file": "Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+      "weight": 700,
+      "static": true,
+      "missing_ascii": [
+        "^"
+      ],
+      "shared_codepoints_compared": 207,
+      "advance_metric_differences_from_prior_pack": 2,
+      "upstream": "https://fonts.gstatic.com/s/orbitron/v35/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1ny_Cmxpg.ttf"
+    },
+    {
+      "source_file": "Orbitron-900.ttf",
+      "target_file": "Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+      "weight": 900,
+      "static": true,
+      "missing_ascii": [
+        "^"
+      ],
+      "shared_codepoints_compared": 207,
+      "advance_metric_differences_from_prior_pack": 0,
+      "upstream": "https://fonts.gstatic.com/s/orbitron/v35/yMJMMIlzdpvBhQQL_SC3X9yhF25-T1nysimxpg.ttf"
+    },
+    {
+      "source_file": "Rajdhani-500.ttf",
+      "target_file": "Rajdhani-Medium.ttf",
+      "sha256": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802",
+      "weight": 500,
+      "static": true,
+      "missing_ascii": [],
+      "shared_codepoints_compared": 465,
+      "advance_metric_differences_from_prior_pack": 0,
+      "upstream": "https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pb0EMOs.ttf"
+    }
+  ],
+  "prior_derived_instances_preserved": "C:\\Users\\User\\Projects\\neon_c\\win_app\\reference\\pre-v2-ui-fonts-20261103",
+  "native_appearance": "Unverified; browser may use WOFF2 container and different rasterization."
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "Reference harness omitted startRace weapons.racers assignment, so actual source projectile update saw empty roster. Set weapons.racers to the local roster before frames; no C core change.",
+  "initial_focused_failures": 30254,
+  "first_divergent_frame": 6,
+  "initial_reference_draws_per_trace": 3774,
+  "corrected_reference_draws_per_trace": 3914,
+  "corrected_max_fx": 48
+}

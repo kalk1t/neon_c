@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neon Circuit authored placements v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "map_id",
+    "coordinate_system",
+    "layout_status",
+    "origin_convention",
+    "reserved_flight_corridor",
+    "instances"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "map_id": {
+      "enum": [
+        "R1",
+        "R3"
+      ]
+    },
+    "coordinate_system": {
+      "const": "game_x_right_y_up_z_forward_meters"
+    },
+    "layout_status": {
+      "const": "authored_blockout"
+    },
+    "origin_convention": {
+      "type": "string"
+    },
+    "reserved_flight_corridor": {
+      "type": "object",
+      "required": [
+        "half_width_m",
+        "half_height_m",
+        "method",
+        "replacement_warning"
+      ],
+      "properties": {
+        "half_width_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "half_height_m": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "method": {
+          "type": "string"
+        },
+        "replacement_warning": {
+          "type": "string"
+        }
+      }
+    },
+    "instances": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "asset_id",
+          "placeholder_kind",
+          "position_game",
+          "yaw_degrees",
+          "size_xyz_m",
+          "origin",
+          "source_asset_pivot",
+          "source_root_offset_game",
+          "collision_mode",
+          "collision_parts",
+          "notes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[CNF][0-9]{2}$"
+          },
+          "placeholder_kind": {
+            "type": "string"
+          },
+          "position_game": {
+            "$ref": "#/$defs/vec3"
+          },
+          "yaw_degrees": {
+            "type": "number"
+          },
+          "size_xyz_m": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "origin": {
+            "const": "base_center"
+          },
+          "source_asset_pivot": {
+            "enum": [
+              "base_center",
+              "top_center",
+              "rear_mount_center",
+              "rear_bracket_center"
+            ]
+          },
+          "source_root_offset_game": {
+            "$ref": "#/$defs/vec3"
+          },
+          "collision_mode": {
+            "enum": [
+              "parts",
+              "none"
+            ]
+          },
+          "collision_parts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "center_local",
+                "size_xyz_m"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "center_local": {
+                  "$ref": "#/$defs/vec3"
+                },
+                "size_xyz_m": {
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "minItems": 3,
+                  "maxItems": 3
+                }
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          },
+          "anchor_instance_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "vec3": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  }
+}

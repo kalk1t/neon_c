@@ -1,0 +1,31 @@
+{
+  "saved_utc": "2026-11-02T17:33:59.2033021Z",
+  "graphics_executed": false,
+  "artifacts": [
+    {
+      "path": "build\\all-roads-native\\bin\\RoadstersRace.exe",
+      "sha256": "58483EFC9246D0A78B5E0CFCF60B00036441DDD2E80A314E818BC2ECAF2685AD",
+      "bytes": 768512
+    },
+    {
+      "path": "build\\all-roads-web\\bin\\RoadstersRace.html",
+      "sha256": "707D1FA1A413C17ED00D3848C89C4140F57565AB627A3FAE5225A984D974CBB0",
+      "bytes": 1136
+    },
+    {
+      "path": "build\\all-roads-web\\bin\\RoadstersRace.js",
+      "sha256": "84DA49A6DDB8D7D53C4D1537E1E8AA3222EA4F30993C43C935E69DC9DD5EBFB4",
+      "bytes": 149143
+    },
+    {
+      "path": "build\\all-roads-web\\bin\\RoadstersRace.wasm",
+      "sha256": "DA769B8401E220475350602E08A67AE13D1979CDFF449BCF6F178AA352D32C47",
+      "bytes": 415548
+    },
+    {
+      "path": "build\\all-roads-web\\bin\\RoadstersRace.data",
+      "sha256": "3A6B53C74017EE76562212606EF00F38E68612707EC42D5AC0C9DDCBABDEB0CF",
+      "bytes": 14616820
+    }
+  ]
+}

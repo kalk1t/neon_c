@@ -1,0 +1,26 @@
+{
+  "source": "../game/public/models/props/control_tower.glb",
+  "source_sha256": "12516829ad2502f263bc3e515e693ad635b0b45429f503245a8509db914b9c7f",
+  "output": "reference/converted-assets/control-tower-png.glb",
+  "output_sha256": "caa607377383529331995852649a783cd6d0a128e053bd4726658fcb7fc65848",
+  "converted": [
+    {
+      "index": 0,
+      "source_bytes": 71530,
+      "png_bytes": 1438300
+    },
+    {
+      "index": 1,
+      "source_bytes": 276064,
+      "png_bytes": 2327865
+    },
+    {
+      "index": 2,
+      "source_bytes": 130754,
+      "png_bytes": 1993286
+    }
+  ],
+  "geometry": "Original BIN payload retained byte-for-byte; PNG image views appended; mesh/accessor/node transforms unchanged.",
+  "source_images": 3,
+  "scope": "Existing asset, installed Chrome lossless WebP-to-PNG decode only; no generation or rendering of game."
+}

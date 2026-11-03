@@ -1,0 +1,359 @@
+{
+  "package_root": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets",
+  "manifest_sha256": "7a7a636ecb41c58510fc5179eec11650a52fc829ea9c4f5c7e3e361bfa22a075",
+  "verified_files": 264,
+  "checksum_failures": 0,
+  "targeted_browser_originals": [
+    {
+      "source": "game/public/brand/logo-120.png",
+      "packaged_path": "runtime/brand/logo-120.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/brand/logo-512.png",
+      "packaged_path": "runtime/brand/logo-512.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/favicon.svg",
+      "packaged_path": "runtime/favicon.svg",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/coin-32.png",
+      "packaged_path": "runtime/ui/coin-32.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/coin-64.png",
+      "packaged_path": "runtime/ui/coin-64.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/coin-256.png",
+      "packaged_path": "runtime/ui/coin-256.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/car-roadster.png",
+      "packaged_path": "runtime/ui/car-roadster.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/car-viper.png",
+      "packaged_path": "runtime/ui/car-viper.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/ui/car-titan.png",
+      "packaged_path": "runtime/ui/car-titan.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/attack.png",
+      "packaged_path": "runtime/tex/attack.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/impact.png",
+      "packaged_path": "runtime/tex/impact.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/projectile.png",
+      "packaged_path": "runtime/tex/projectile.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/skyline.png",
+      "packaged_path": "runtime/tex/skyline.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/smoke.png",
+      "packaged_path": "runtime/tex/smoke.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/tex/trail.png",
+      "packaged_path": "runtime/tex/trail.png",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/models/car.glb",
+      "packaged_path": "runtime/models/car.glb",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/models/car02.glb",
+      "packaged_path": "runtime/models/car02.glb",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/models/car03.glb",
+      "packaged_path": "runtime/models/car03.glb",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/attack.webp",
+      "packaged_path": "runtime/cockpit/attack.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/boost.webp",
+      "packaged_path": "runtime/cockpit/boost.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car01/base.webp",
+      "packaged_path": "runtime/cockpit/car01/base.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car01/control.webp",
+      "packaged_path": "runtime/cockpit/car01/control.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car02/base.webp",
+      "packaged_path": "runtime/cockpit/car02/base.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car02/control_left.webp",
+      "packaged_path": "runtime/cockpit/car02/control_left.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car02/control_right.webp",
+      "packaged_path": "runtime/cockpit/car02/control_right.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car03/base.webp",
+      "packaged_path": "runtime/cockpit/car03/base.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/car03/control.webp",
+      "packaged_path": "runtime/cockpit/car03/control.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/reticle.webp",
+      "packaged_path": "runtime/cockpit/reticle.webp",
+      "byte_identical": true
+    },
+    {
+      "source": "game/public/cockpit/warning.webp",
+      "packaged_path": "runtime/cockpit/warning.webp",
+      "byte_identical": true
+    }
+  ],
+  "cockpit_rgba_png_headers": [
+    {
+      "source": "game/public/cockpit/attack.webp",
+      "png": "native-png/cockpit/attack.png",
+      "sha256": "bb9df38ab8479b438dde9b8935df634f1d4f6142c2fba78f9a853f1e2ee33ff0",
+      "width": 128,
+      "height": 110,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/boost.webp",
+      "png": "native-png/cockpit/boost.png",
+      "sha256": "75daca40e00256652fc1dea2ca108a75f51eb4a8ece43b7ab88883609df01620",
+      "width": 128,
+      "height": 134,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car01/base.webp",
+      "png": "native-png/cockpit/car01/base.png",
+      "sha256": "dc1b6075e51a91124efb14bb6c11fd9c61c1515c2a717b1af35e20ebb98fddd6",
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car01/control.webp",
+      "png": "native-png/cockpit/car01/control.png",
+      "sha256": "3d74769ad5ef0d6aa7ab342ad259febce9ba0948faa4071b6844e55a961e8a7b",
+      "width": 900,
+      "height": 492,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car02/base.webp",
+      "png": "native-png/cockpit/car02/base.png",
+      "sha256": "1a71c205ae97e17adff4fa531e94192619f05c08149f2c18f1e524202ad34eb9",
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car02/control_left.webp",
+      "png": "native-png/cockpit/car02/control_left.png",
+      "sha256": "f5f679665364398b6557070453319a6e575e38d10d32e7d91725493d9065dc79",
+      "width": 260,
+      "height": 367,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car02/control_right.webp",
+      "png": "native-png/cockpit/car02/control_right.png",
+      "sha256": "83e101ced411e2aa771d7ae04509d92546ae4a2a803512e17459fd981f5d7642",
+      "width": 260,
+      "height": 353,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car03/base.webp",
+      "png": "native-png/cockpit/car03/base.png",
+      "sha256": "0235407e9a78a528287846c227197afc14e23eda692aadab9baa1282e4af3bef",
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/car03/control.webp",
+      "png": "native-png/cockpit/car03/control.png",
+      "sha256": "73801c85d79fcd96b415ab9d5c5d3abd3d5ceb51521aeaa72498201e98a20474",
+      "width": 1000,
+      "height": 696,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/reticle.webp",
+      "png": "native-png/cockpit/reticle.png",
+      "sha256": "a6f6900d7045858100e1f58aff1df1cce16dce40f8a7a0c61bd6fd70a1b7ded9",
+      "width": 128,
+      "height": 129,
+      "png_color_type": 6,
+      "dimensions_match": true
+    },
+    {
+      "source": "game/public/cockpit/warning.webp",
+      "png": "native-png/cockpit/warning.png",
+      "sha256": "aed5fcd42a3fc68cdaef99b142853f2f5e8e3f7b2afb76d6dd10567a4b3ea29b",
+      "width": 128,
+      "height": 111,
+      "png_color_type": 6,
+      "dimensions_match": true
+    }
+  ],
+  "fonts": [
+    {
+      "path": "runtime/fonts/Orbitron.ttf",
+      "sha256": "f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd",
+      "tables_valid": true,
+      "variable_axes": [
+        {
+          "tag": "wght",
+          "min": 400.0,
+          "default": 400.0,
+          "max": 900.0
+        }
+      ]
+    },
+    {
+      "path": "runtime/fonts/Rajdhani-Bold.ttf",
+      "sha256": "691470dd3286a14e9677940d0bf75796179841ba5215cbda1a2c8910a3226afd",
+      "tables_valid": true,
+      "variable_axes": []
+    },
+    {
+      "path": "runtime/fonts/Rajdhani-Medium.ttf",
+      "sha256": "12ff7dcfe4c206e3875ac53b1762eab57de6a2fa7f5a86c26b97b88d6591eac2",
+      "tables_valid": true,
+      "variable_axes": []
+    }
+  ],
+  "reused_asset_team_validation": {
+    "createdUTC": "2026-11-03T06:17:20.183Z",
+    "originalRuntimeFiles": 46,
+    "originalCarModels": 3,
+    "originalSceneryModels": 9,
+    "proceduralPrefabGLBs": 14,
+    "generatedMaterialTextures": 7,
+    "billboardCells": 4,
+    "webpPNGConversions": 18,
+    "decodedRuntimeImages": 33,
+    "allImagePNGRoundtripsEqual": true,
+    "glbHeaderAndStructureChecks": 26,
+    "glbExternalResources": [],
+    "audioCues": 20,
+    "audioAllFiniteNonSilentUnclipped": true,
+    "roads": 9,
+    "routeSamplesFinite": true,
+    "checkpoints": [
+      {
+        "road": 1,
+        "count": 8
+      },
+      {
+        "road": 2,
+        "count": 9
+      },
+      {
+        "road": 3,
+        "count": 10
+      },
+      {
+        "road": 4,
+        "count": 11
+      },
+      {
+        "road": 5,
+        "count": 13
+      },
+      {
+        "road": 6,
+        "count": 14
+      },
+      {
+        "road": 7,
+        "count": 16
+      },
+      {
+        "road": 8,
+        "count": 17
+      },
+      {
+        "road": 9,
+        "count": 19
+      }
+    ],
+    "originalsMatchLive": false,
+    "originalSourcesStable": true,
+    "workingVsLiveSemanticDifferences": [
+      "account.js",
+      "ai.js",
+      "chat.js",
+      "course.js",
+      "main.js",
+      "online/firebase.js",
+      "online/index.js",
+      "online/live.js",
+      "online/protocol.js"
+    ],
+    "liveSnapshot": {
+      "children": 10,
+      "canvasTextures": 7,
+      "pageErrors": []
+    },
+    "nativeVisualParityTested": false,
+    "audioListeningReviewCompleted": false,
+    "originalsMatchLiveIgnoringSVGLineEndings": true
+  },
+  "limits": "Fresh checks verify manifest bytes, targeted source identity, PNG RGBA headers/dimensions and font table bounds. Decoded RGBA equivalence is asset-team evidence, not independently rerun here. No native texture/font render or GLB visual acceptance. Orbitron is variable: default weight and native weight selection need explicit validation/static instances."
+}

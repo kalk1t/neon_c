@@ -1,0 +1,66 @@
+{
+  "reference\\verification-20261102\\city-witness-native-twentythree-tests.log": "d0ebf89845f09302c93fa4c5a76abff5c4e6b9b61c331481bf7667c38141aedb",
+  "reference\\verification-20261102\\city-witness-wasm-twentythree-tests.log": "521aeacad0f1e23cb51158b861a6f4c20aaa6571fb5659a5bb6dcf4b91df3d22",
+  "build/city-witness-native/bin/RoadstersRace.exe": {
+    "sha256": "884076057aa253305ef174b0dfb675f129543b22e3a1eb3b40013b33ecc2410a",
+    "bytes": 879616
+  },
+  "build/city-witness-native/rr_city_witness_tests.exe": {
+    "sha256": "e6860824497d10d2ffa92588901bf7ed0a0d5728fe88ca7118e0df48b5292e5f",
+    "bytes": 2847232
+  },
+  "build/city-witness-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/city-witness-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/city-witness-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/city-witness-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "1dbc874329c3b46910b573da3debb9b621f1693456699ca45caa784c75cddb50",
+    "tools/race-rules-check/CMakeLists.txt": "66bcc9ffed0ac07db60314432ccc417c4e826572ff831362d6e4af6ac97c0590",
+    "src/experimental/rr_city_witness.h": "eb5e04c82c43de38ed8f0cb590e8a5ba6afc8cc5f3795f2ecea1c183644c487c",
+    "src/experimental/rr_city_witness.c": "12900055b810bc22aa3e0e1502aba5edf4d089300b1fcc3e4f3b129dde3c2652",
+    "tests/test_city_witness.c": "e86627b39feaa5e484d9f0d41100ff3228febe9544cb65474bf4d1f72dd157b2",
+    "tests/test_city_occlusion.c": "21c49c7790163a9407669f0a8a0a4ab88a7849aae26dc0eff810d3e923f842bc",
+    "tests/generated_coarse_witness_masks.h": "c8c1c1f561ced6806f911e5d01cd324973f8109574d8b75b15baef7e526c0d21",
+    "tools/generate-coarse-mask-header.py": "e8d6b0ec8691efa46b9a19dba1b7a7c640b39df6418c848b2176e33cdaa77c9c",
+    "reference/city-coarse-witness-masks.bin": "c9ff77dc492119dd5a64a01d1708eb4f3ab87610ae824806962fa38bec26ae6d",
+    "reference/city-coarse-witness-masks.json": "41017db0403d3fcee4129b06a9d7fac9327af67f5bf4a11c7056d8bf99a1d2ab",
+    "reference/city-witness-results.json": "87335f8c3119e869a65324327e91b00aa06b237c7b06c42181dcf8f6f555db3e"
+  },
+  "source_hashes_rechecked": true,
+  "native_wasm_witnesses_and_certificates_identical": true,
+  "runtime_sources_assets_and_preload_unchanged": true,
+  "bounds_and_scope": [
+    {
+      "view": 255,
+      "city_only_witnessed_triangles": 64097,
+      "witnessed_deindexed_vertices": 192291,
+      "witness_subset_exact_indexed32_bytes": 4862732,
+      "old_coarse_retained_vertices": 833265,
+      "new_certified_examples": 16,
+      "conservative_retained_after_only_these_examples": 833217
+    },
+    {
+      "view": 0,
+      "city_only_witnessed_triangles": 6146,
+      "witnessed_deindexed_vertices": 18438,
+      "witness_subset_exact_indexed32_bytes": 474072,
+      "old_coarse_retained_vertices": 164484,
+      "new_certified_examples": 22,
+      "conservative_retained_after_only_these_examples": 164418
+    }
+  ],
+  "conclusion": "Measured city-only geometric witnesses and38 new whole-polygon occlusion certificates prove coarse-bound looseness. Blocked point samples do not prove whole hidden triangles; no complete-frame fit or unavoidable memory increase follows. Next:scale exact coverage checks using recorded blockers,then multi-occluder unions.",
+  "graphics": "Unrun;window3148188 state unresolved. No graphics launch,desktop/log retry,termination or modification of its executable/bin assets."
+}

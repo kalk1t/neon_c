@@ -1,0 +1,139 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\ui-theme-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web
+[1/40] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.o
+[2/40] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[3/40] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[4/40] Linking C executable rr_ui_layout_tests.js
+[5/40] Linking C executable rr_city_batching_tests.js
+[6/40] Linking C executable rr_city_catalog_tests.js
+[7/40] Linking C executable rr_mesh_loader_tests.js
+[8/40] Linking C executable rr_city_repacking_tests.js
+[9/40] Linking C executable rr_city_triangle_tests.js
+[10/40] Linking C executable rr_city_occlusion_tests.js
+[11/40] Linking C executable rr_city_witness_tests.js
+[12/40] Linking C executable rr_poster_tests.js
+[13/40] Linking C executable rr_rival_tests.js
+[14/40] Linking C executable rr_city_coverage_tests.js
+[15/40] Linking C executable rr_ai_tests.js
+[16/40] Linking C executable rr_arsenal_tests.js
+[17/40] Linking C executable rr_targeting_tests.js
+[18/40] Linking C executable rr_coin_tests.js
+[19/40] Linking C executable rr_fire_tests.js
+[20/40] Linking C executable rr_combat_tests.js
+[21/40] Linking C executable rr_pack_tests.js
+[22/40] Linking C executable rr_battle_tests.js
+[23/40] Linking C executable rr_core_tests.js
+[24/40] Linking C executable rr_render_policy_tests.js
+[25/40] Linking C executable rr_local_run_tests.js
+[26/40] Linking C executable rr_race_tests.js
+[27/40] Linking C executable rr_session_tests.js
+[28/40] Linking C executable rr_menu_policy_tests.js
+[29/40] Linking C executable rr_recovery_tests.js
+[30/40] Linking C executable rr_all_roads_tests.js
+[31/40] Linking C executable rr_road_picker_tests.js
+[32/40] Linking C executable rr_city_clearance_tests.js
+[33/40] Linking C executable rr_finish_tests.js
+[34/40] Linking C executable rr_course_tests.js
+[35/40] Linking C executable rr_physics_tests.js
+[36/40] Linking C executable rr_shared_scenery_tests.js
+[37/40] Linking C executable rr_hero_asset_tests.js
+[38/40] Linking C executable rr_canonical_city_tests.js
+[39/40] Linking C executable rr_ui_font_tests.js
+[40/40] Linking C executable bin\RoadstersRace.html
+Test project C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web
+      Start  1: browser_ui_layout_and_hit_regions
+ 1/37 Test  #1: browser_ui_layout_and_hit_regions ..........   Passed    0.20 sec
+      Start  2: browser_facade_window_pixels
+ 2/37 Test  #2: browser_facade_window_pixels ...............   Passed    0.18 sec
+      Start  3: canonical_mesh_loader_guards
+ 3/37 Test  #3: canonical_mesh_loader_guards ...............   Passed    0.18 sec
+      Start  4: experimental_city_catalog_paging
+ 4/37 Test  #4: experimental_city_catalog_paging ...........   Passed    0.20 sec
+      Start  5: experimental_exact_city_batching
+ 5/37 Test  #5: experimental_exact_city_batching ...........   Passed    0.31 sec
+      Start  6: experimental_material_repacking
+ 6/37 Test  #6: experimental_material_repacking ............   Passed    0.94 sec
+      Start  7: experimental_triangle_visibility
+ 7/37 Test  #7: experimental_triangle_visibility ...........   Passed    0.87 sec
+      Start  8: experimental_conservative_city_occlusion
+ 8/37 Test  #8: experimental_conservative_city_occlusion ...   Passed   10.41 sec
+      Start  9: experimental_city_visibility_witness
+ 9/37 Test  #9: experimental_city_visibility_witness .......   Passed    9.28 sec
+      Start 10: experimental_city_blocker_coverage
+10/37 Test #10: experimental_city_blocker_coverage .........   Passed   28.30 sec
+      Start 11: experimental_browser_poster_plan
+11/37 Test #11: experimental_browser_poster_plan ...........   Passed    0.20 sec
+      Start 12: browser_ai_controller
+12/37 Test #12: browser_ai_controller ......................   Passed    0.22 sec
+      Start 13: browser_rival_contacts_lifecycle
+13/37 Test #13: browser_rival_contacts_lifecycle ...........   Passed    0.46 sec
+      Start 14: browser_offline_coin_rules
+14/37 Test #14: browser_offline_coin_rules .................   Passed    0.27 sec
+      Start 15: browser_local_pack_ordering
+15/37 Test #15: browser_local_pack_ordering ................   Passed    0.26 sec
+      Start 16: browser_targeting_and_late_coin_phase
+16/37 Test #16: browser_targeting_and_late_coin_phase ......   Passed    0.20 sec
+      Start 17: browser_player_arsenal_rules
+17/37 Test #17: browser_player_arsenal_rules ...............   Passed    0.20 sec
+      Start 18: browser_player_combat_rules
+18/37 Test #18: browser_player_combat_rules ................   Passed    0.20 sec
+      Start 19: browser_fire_dispatch_rng
+19/37 Test #19: browser_fire_dispatch_rng ..................   Passed    0.20 sec
+      Start 20: browser_local_pack_combat_rng
+20/37 Test #20: browser_local_pack_combat_rng ..............   Passed    0.22 sec
+      Start 21: browser_full_local_player_ticks
+21/37 Test #21: browser_full_local_player_ticks ............   Passed    0.21 sec
+      Start 22: browser_flight_and_skyline_parity
+22/37 Test #22: browser_flight_and_skyline_parity ..........   Passed    0.20 sec
+      Start 23: bounded_rendering_policy
+23/37 Test #23: bounded_rendering_policy ...................   Passed    0.20 sec
+      Start 24: current_browser_race_rules
+24/37 Test #24: current_browser_race_rules .................   Passed    0.19 sec
+      Start 25: race_session_lifecycle
+25/37 Test #25: race_session_lifecycle .....................   Passed    0.19 sec
+      Start 26: menu_activation_policy
+26/37 Test #26: menu_activation_policy .....................   Passed    0.19 sec
+      Start 27: browser_route_recovery
+27/37 Test #27: browser_route_recovery .....................   Passed    0.19 sec
+      Start 28: all_browser_road_geometry
+28/37 Test #28: all_browser_road_geometry ..................   Passed    0.21 sec
+      Start 29: browser_road_picker
+29/37 Test #29: browser_road_picker ........................   Passed    0.22 sec
+      Start 30: browser_city_clearance
+30/37 Test #30: browser_city_clearance .....................   Passed    0.25 sec
+      Start 31: browser_finish_results
+31/37 Test #31: browser_finish_results .....................   Passed    0.33 sec
+      Start 32: browser_collision_primitives
+32/37 Test #32: browser_collision_primitives ...............   Passed    0.21 sec
+      Start 33: browser_course_furniture
+33/37 Test #33: browser_course_furniture ...................   Passed    0.22 sec
+      Start 34: browser_shared_scenery
+34/37 Test #34: browser_shared_scenery .....................   Passed    0.21 sec
+      Start 35: browser_hero_asset
+35/37 Test #35: browser_hero_asset .........................   Passed    0.20 sec
+      Start 36: browser_canonical_city_core
+36/37 Test #36: browser_canonical_city_core ................   Passed    0.22 sec
+      Start 37: browser_ui_font_cpu_atlas
+37/37 Test #37: browser_ui_font_cpu_atlas ..................   Passed    0.21 sec
+
+100% tests passed out of 37
+
+Total Test time (real) =  56.99 sec

@@ -1,0 +1,25 @@
+{
+  "saved_utc": "2026-11-02T17:20:43.8477469Z",
+  "receipts": [
+    {
+      "source": "build\\menu-diagnostics-native\\Testing\\Temporary\\LastTest.log",
+      "sha256": "DC35F9A79DDCE1201EA52EA17E84B0DF011B22338E6070BB86F2B583D0651245",
+      "file": "native-five-tests.log"
+    },
+    {
+      "source": "build\\session-integration-web\\Testing\\Temporary\\LastTest.log",
+      "sha256": "D26FC3CD097D121CF0E6B804725CFEB831F35A65D5E142523AE13C88E3682FE0",
+      "file": "wasm-five-tests.log"
+    },
+    {
+      "source": "build\\recovery-integration-native\\Testing\\Temporary\\LastTest.log",
+      "sha256": "AB3CBB8B56E417FB76054381BD1B195A88F9E6CC6903B6CA590547E517910B4F",
+      "file": "native-six-tests.log"
+    },
+    {
+      "source": "build\\recovery-integration-web\\Testing\\Temporary\\LastTest.log",
+      "sha256": "6C715717E35B4A4A9011BF4C68A1B22D4964FCA19688FE11069C9CA3593CF948",
+      "file": "wasm-six-tests.log"
+    }
+  ]
+}

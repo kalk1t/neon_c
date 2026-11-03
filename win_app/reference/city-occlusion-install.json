@@ -1,0 +1,18 @@
+{
+  "modified": {
+    "CMakeLists.txt": "e19d45d428e7125c96e40273cec8a4a12ed99ac675652d96ef01f5b32f996761",
+    "tools/race-rules-check/CMakeLists.txt": "92b20cf3f8e1baee7b76b83e2927d409f68c130fda24639c8daf7a9cf3d05dad"
+  },
+  "added": [
+    "src/experimental/rr_city_occlusion.h",
+    "src/experimental/rr_city_occlusion.c",
+    "tests/test_city_occlusion.c",
+    "tests/generated_city_occlusion_cameras.h",
+    "tools/capture-occlusion-cameras.mjs",
+    "reference/city-occlusion-cameras.json"
+  ],
+  "runtime_changes": false,
+  "new_runtime_assets": false,
+  "existing_headless_fixture_reused": true,
+  "window_files_touched": false
+}

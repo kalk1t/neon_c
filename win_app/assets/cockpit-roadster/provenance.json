@@ -1,0 +1,33 @@
+{
+  "source_package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets",
+  "source_manifest_sha256": "7a7a636ecb41c58510fc5179eec11650a52fc829ea9c4f5c7e3e361bfa22a075",
+  "method": "Verified existing asset-team lossless decoded WebP-to-RGBA-PNG exports, unmodified copies. Browser originals remain authoritative.",
+  "imports": [
+    {
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\native-png\\cockpit\\car01\\base.png",
+      "target": "assets/cockpit-roadster/base.png",
+      "sha256": "dc1b6075e51a91124efb14bb6c11fd9c61c1515c2a717b1af35e20ebb98fddd6"
+    },
+    {
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\native-png\\cockpit\\car01\\control.png",
+      "target": "assets/cockpit-roadster/control.png",
+      "sha256": "3d74769ad5ef0d6aa7ab342ad259febce9ba0948faa4071b6844e55a961e8a7b"
+    },
+    {
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\native-png\\cockpit\\boost.png",
+      "target": "assets/cockpit-roadster/boost.png",
+      "sha256": "75daca40e00256652fc1dea2ca108a75f51eb4a8ece43b7ab88883609df01620"
+    },
+    {
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\native-png\\cockpit\\attack.png",
+      "target": "assets/cockpit-roadster/attack.png",
+      "sha256": "bb9df38ab8479b438dde9b8935df634f1d4f6142c2fba78f9a853f1e2ee33ff0"
+    },
+    {
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\native-png\\cockpit\\warning.png",
+      "target": "assets/cockpit-roadster/warning.png",
+      "sha256": "aed5fcd42a3fc68cdaef99b142853f2f5e8e3f7b2afb76d6dd10567a4b3ea29b"
+    }
+  ],
+  "runtime_gate": "RR_COCKPIT_PREVIEW default OFF; Roadster only; no ownership/profile change"
+}

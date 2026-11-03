@@ -1,0 +1,53 @@
+ROADSTERS RACE - SOURCE BUILD / OFFLINE SKYLINE PROTOTYPE
+
+
+Latest course update: native/WASM 12/12; nine-road guidance/beacons/barriers/signs/ring-support placement and collision, six existing prefab meshes. Normal Skyline render/start/pause and shutdown verified. Shared platforms/trees, full city/materials and manual race acceptance remain open. No progress changes. See docs/COURSE-FURNITURE-2026-11-02.md.
+
+
+Latest collision update: native/WASM 11/11 suites; native city bodies and browser start/checkpoint contacts integrated. Scripted post impact/pause and clean shutdown verified. Full furniture/city/collision-course and manual race acceptance remain open; locks/progress unchanged. See docs/COLLISION-2026-11-02.md.
+
+
+Latest finish update: native/WASM 10/10 headless suites; post-finish autopilot and results overlay, restart/menu cancellation. Scripted native result/restart/menu visuals passed; full human-driven race remains open. No progress/unlock changes. See docs/FINISH-RESULTS-2026-11-02.md.
+
+
+Current city update: shared clearance around all nine routes is integrated and both full native/WASM builds pass 9/9 headless tests. Controlled Skyline city/countdown/pause and clean shutdown were observed at 18:15 UTC; other-route graphics, complete city art/collision and full race acceptance remain open. Only road 1 is selectable; no progress/auth/persistence changes. Details and fresh versus prior evidence: docs/CITY-CLEARANCE-2026-11-02.md.
+
+Current source has TWO-LAP TRIAL and endless TIME ATTACK on Skyline Loop,
+countdown, ordered checkpoints, lap history, offline results, wrong-way and
+timed signal-lost recovery. It does not include rivals, combat, rewards,
+progression, accounts, online play or full browser visuals.
+
+Current compiled native build:
+build/road-picker-native/bin/RoadstersRace.exe
+It has passed 8/8 headless tests and a scoped native functional UI check.
+Complete-race/results visuals, broader graphics and performance remain open.
+Run-RoadstersRace.cmd still points to the older dist/first-flight package.
+No launcher or existing package was replaced by this continuation.
+
+Enter opens the trial road picker; TIME ATTACK has a separate menu button.
+Use Up/Down and Enter in the picker, or click a row; Esc/Back returns to menu.
+Only road 1 is open in this clean offline prototype. No saved browser/account
+progress is imported, and trial finishes grant no road unlocks or rewards.
+Per-road SESSION BEST times last only for this application run.
+Start inputs require a focused release frame. Countdown ignores flight input.
+W thrust / S brake-reverse; mouse aim; A/D steer; E/Q climb-dive;
+Shift boost; F spin; R reset to safe transform; C near/far chase camera;
+P or Esc pause; F11 fullscreen. Physical gamepad parity remains unverified.
+Each new lap requires every checkpoint and then the start/finish gantry.
+Two-lap results are local trial times; they award or upload nothing.
+
+Conservative rendering remains: deferred 3D load, 30 FPS, bounded internal
+target at most 960x600, MSAA off and glow off. Focus loss pauses flight.
+A slow-frame pause cannot interrupt a blocked driver call or guarantee that
+the earlier reported whole-PC freeze cannot recur. Its cause is unresolved.
+
+Prior menu-only and interrupted flight evidence refer to an earlier executable.
+No complete race/results graphics acceptance or sustained performance check
+has passed. Respect current owner authorization and any physical stop before
+further graphics testing; do not duplicate a possibly running instance.
+
+The C geometry API and picker support all nine roads. Roads 2-9 stay locked
+until native progress/profile integration exists; all-route city clearance
+and broader road presentation also remain unfinished.
+
+See docs/ROAD-PICKER-2026-11-02.md for current build/test evidence and gaps.

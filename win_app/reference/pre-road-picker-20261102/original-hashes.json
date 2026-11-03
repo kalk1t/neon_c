@@ -1,0 +1,6 @@
+{
+  "src/app/main.c": "099f422775dbce4f16efd8bd48c4f6c0170a746f19f9806a50a07fac7497616a",
+  "CMakeLists.txt": "dbd3c27f9a716504c52eaa5d2bf8d38c54e31f783f6b2d8031f7c8277ceef190",
+  "tools/race-rules-check/CMakeLists.txt": "af0a79fc1ff12dd34f517046bb7ccd116759c6388e2b2800fc5cdbb62c72ad4b",
+  "tests/test_menu_policy.c": "76d88198691fa8bfb0596798a61c9c2ebe4fce76067825f67561a3e52c54b683"
+}

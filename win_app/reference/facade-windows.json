@@ -1,0 +1,31 @@
+{
+  "captured_utc": "2026-11-02T20:39:18.191Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    }
+  ],
+  "width": 256,
+  "height": 512,
+  "rgba_sha256": "eeb408674dcedd2643af25d0832f5f61431dab6ae002d710a67ca78f6ce6afe2",
+  "fnv": 1762891081,
+  "rectangles": 513,
+  "lit_windows": 142,
+  "texture": {
+    "colorSpace": "srgb",
+    "wrap": "repeat",
+    "magFilter": "linear",
+    "minFilter": "linear-mipmap-linear",
+    "anisotropy": 8
+  },
+  "runtime_scope": "Exact source RGBA8 map, canonical-body emissive .95 using source UV and canvas flipY, linear decode; current native diffuse/light/fog pipeline retained. Anisotropy/PBR/output/bloom remain open."
+}

@@ -1,0 +1,32 @@
+{
+  "owner_authorization": {
+    "utc": "2026-11-02 23:29 UTC",
+    "message": "You can take control again",
+    "sentinel": "Sentinel_17a5dc033b44819187631bb59645b489",
+    "scope": "Supported resumed control to reconcile Roadsters; no protection bypass."
+  },
+  "supported_workflow": "computer-use skill read; legacy node_repl/sky tools not exposed; current supported cua_repl inventory used",
+  "observations": [
+    {
+      "action": "cua.getState()",
+      "result": "Succeeded. No native Roadsters app/window returned."
+    },
+    {
+      "action": "cua.listWindows()",
+      "result": "Succeeded. Old window3148188 and any native Roadsters window absent. Browser Roadsters page is separate and untouched."
+    },
+    {
+      "action": "cua.getApp({windowId:265208}) for existing Task Manager",
+      "result": "Computer Use app approval timed out after300s. No process check completed."
+    }
+  ],
+  "window_closed_by_agent": false,
+  "old_window_absence_verified": true,
+  "process_shutdown_verified": false,
+  "input_qualification": "No input sent; whether current input protection would permit it remains untested. No fresh input rejection occurred.",
+  "new_launches": 0,
+  "graphics_measurements": "Unrun: no duplicate instance launched while process shutdown unverified.",
+  "state": "Partially reconciled: window absent, process state unknown, Task Manager app approval incomplete/timed out.",
+  "next": "Obtain fresh supported Task Manager approval or explicit owner confirmation the old Roadsters process has stopped; verify before any new native launch, then resume bounded texture/GPU work.",
+  "protected_files": "No active logs read/retried; facade-windows-view executable/bin/assets unchanged. No CIM/Git retries or alternate process lookup."
+}

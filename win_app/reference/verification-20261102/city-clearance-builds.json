@@ -1,0 +1,11 @@
+{
+  "reference\\verification-20261102\\city-clearance-native-nine-tests.log": "2ce7763533adf08194f7a69178b7e35441ab56439f916d8f8f98822dcb066e44",
+  "reference\\verification-20261102\\city-clearance-wasm-nine-tests.log": "c82d8cbb7efcf10842e9f7aa77c35e73ea73f6e582f7ef9248c4634e14a6106a",
+  "reference\\graphics-20261102\\city-clearance-181519-original.log": "dfc15fa40e88da9e7fbc8099adbd5b90c2c5f711b36dc0180785f9826a7847c8",
+  "build/city-clearance-native/bin/RoadstersRace.exe": "3ea419a59362a673a98dad44537ca240e6023ca10293a36d90210a5e584343dc",
+  "build/city-clearance-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/city-clearance-web/bin/RoadstersRace.js": "659b2535199ddf54a01c25d94f691048a4f9cdef0e8787fca8b2be3ec71d35fc",
+  "build/city-clearance-web/bin/RoadstersRace.wasm": "0bfce53e8216b8ebe3b7499ac3fbd37188e9e8a423118ac6514fefc5e13e398e",
+  "build/city-clearance-web/bin/RoadstersRace.data": "3a6b53c74017ee76562212606ef00f38e68612707ec42d5ac0c9ddcbabdeb0cf",
+  "reference_sources_still_match": true
+}

@@ -1,0 +1,454 @@
+{
+  "pack": "Neon Circuit B",
+  "asset_count": 27,
+  "transparent_asset_count": 23,
+  "assets": [
+    {
+      "id": 1,
+      "name": "Flying car",
+      "file": "01_Vehicle/01_flying_car.png",
+      "intended_use": "3D modeling reference",
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 2056362,
+      "sha256": "e45bb00ac45129b7bde3599bea5c834b53d28f1b7401385a88db2ce72dd215a5",
+      "generation_prompt": "Prompts/01_flying_car.md"
+    },
+    {
+      "id": 2,
+      "name": "Thruster module",
+      "file": "01_Vehicle/02_thruster_module.png",
+      "intended_use": "3D modeling reference",
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 2095319,
+      "sha256": "d9eb0cc10ea8f679b9269e8618f136e459752de8c8a91c3ddd82e7ab038dcdc0",
+      "generation_prompt": "Prompts/02_thruster_module.md"
+    },
+    {
+      "id": 3,
+      "name": "Pulse weapon module",
+      "file": "01_Vehicle/03_pulse_weapon_module.png",
+      "intended_use": "3D modeling reference",
+      "width": 1536,
+      "height": 1024,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 1964213,
+      "sha256": "92dde3e0446824f1e30c618b6067f36a512f77185c389b00910dd1d5e46593b8",
+      "generation_prompt": "Prompts/03_pulse_weapon_module.md"
+    },
+    {
+      "id": 4,
+      "name": "Aerial course",
+      "file": "02_Course/04_aerial_course_reference.png",
+      "intended_use": "Scene and layout reference",
+      "width": 1672,
+      "height": 941,
+      "color_mode": "RGB",
+      "has_transparent_pixels": false,
+      "alpha_range": null,
+      "bytes": 2669686,
+      "sha256": "be2729cd230f4297c4452fd447e6741f7de2a979d186d75ce373f054a4af8bc4",
+      "generation_prompt": "Prompts/04_aerial_course_reference.md"
+    },
+    {
+      "id": 5,
+      "name": "Start / finish gate",
+      "file": "02_Course/05_start_finish_gate.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1121205,
+      "sha256": "9a8378909f940ffdc6a5e9704b99a06a4cc63d2ba244c0dd44804a1387d1e34f",
+      "generation_prompt": "Prompts/05_start_finish_gate.md"
+    },
+    {
+      "id": 6,
+      "name": "Checkpoint ring",
+      "file": "02_Course/06_checkpoint_ring.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1423695,
+      "sha256": "373c55be761ab79b1573acaad64e6413fd2a7699fdbb735f4e86f4d3074a1e89",
+      "generation_prompt": "Prompts/06_checkpoint_ring.md"
+    },
+    {
+      "id": 7,
+      "name": "Route beacon pylon",
+      "file": "02_Course/07_route_beacon_pylon.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 832972,
+      "sha256": "214dbc671ad4355e780cf8b9e72ede4fb6a16ece14eee3d53b27ec743089cfb8",
+      "generation_prompt": "Prompts/07_route_beacon_pylon.md"
+    },
+    {
+      "id": 8,
+      "name": "Floating barrier",
+      "file": "02_Course/08_floating_barrier.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1018037,
+      "sha256": "94dcc1e0f2a0f77dd976eba3735df1b6612d548c114cad24e10c616249c37d09",
+      "generation_prompt": "Prompts/08_floating_barrier.md"
+    },
+    {
+      "id": 9,
+      "name": "Turn arrow sign",
+      "file": "02_Course/09_turn_arrow_sign.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1349527,
+      "sha256": "6276e577d83e163806c06d1b2331f9c7c396bef03fdfc19101b55f9a7703a2f4",
+      "generation_prompt": "Prompts/09_turn_arrow_sign.md"
+    },
+    {
+      "id": 10,
+      "name": "Floating service platform",
+      "file": "02_Course/10_floating_service_platform.png",
+      "intended_use": "3D modeling reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1175758,
+      "sha256": "e88f6abbf48395b68036517bd56eed5f5c4aa9db8bf67ec05db5f7bfc96b4efe",
+      "generation_prompt": "Prompts/10_floating_service_platform.md"
+    },
+    {
+      "id": 11,
+      "name": "City tower",
+      "file": "03_Scenery/11_city_tower.png",
+      "intended_use": "3D modeling reference",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 1718556,
+      "sha256": "d7a5af05ff0e7e07f3419dc6662a2686a17e46c3c36098d77a09c9a8fe63363b",
+      "generation_prompt": "Prompts/11_city_tower.md"
+    },
+    {
+      "id": 12,
+      "name": "Control tower",
+      "file": "03_Scenery/12_control_tower.png",
+      "intended_use": "3D modeling reference",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 2179080,
+      "sha256": "6bf5b1dd4c8410481df606e92940936ae60a5df71ea6ef6ec96b9f6c56721711",
+      "generation_prompt": "Prompts/12_control_tower.md"
+    },
+    {
+      "id": 13,
+      "name": "Magenta tree",
+      "file": "03_Scenery/13_magenta_tree.png",
+      "intended_use": "3D modeling reference",
+      "width": 1298,
+      "height": 1212,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1775373,
+      "sha256": "3ff68a577fc652291869f1eaef0b720549c5a37658429b8b8eb998c7bbc590d4",
+      "generation_prompt": "Prompts/13_magenta_tree.md"
+    },
+    {
+      "id": 14,
+      "name": "Cyan tree",
+      "file": "03_Scenery/14_cyan_tree.png",
+      "intended_use": "3D modeling reference",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 2291383,
+      "sha256": "5cec91880bb8811fa7b7b93d0e94e0e9a14cd7ef9568267473fa7c62315dbff3",
+      "generation_prompt": "Prompts/14_cyan_tree.md"
+    },
+    {
+      "id": 15,
+      "name": "City skyline",
+      "file": "03_Scenery/15_city_skyline_background.png",
+      "intended_use": "Panoramic background reference",
+      "width": 1774,
+      "height": 887,
+      "color_mode": "RGB",
+      "has_transparent_pixels": false,
+      "alpha_range": null,
+      "bytes": 2541444,
+      "sha256": "5ad44b334f61f733ce6b70c0321de7d16af78bc5c249013ca3e98e2605947b76",
+      "generation_prompt": "Prompts/15_city_skyline_background.md"
+    },
+    {
+      "id": 16,
+      "name": "Racing HUD",
+      "file": "04_Interface/16_racing_hud_reference.png",
+      "intended_use": "Static interface design reference",
+      "width": 1983,
+      "height": 793,
+      "color_mode": "RGB",
+      "has_transparent_pixels": false,
+      "alpha_range": null,
+      "bytes": 1455541,
+      "sha256": "c34690aedb854adea40ef3892435f7ba6eb5f01504fa3a4e6f927495a1610b14",
+      "generation_prompt": "Prompts/16_racing_hud_reference.md"
+    },
+    {
+      "id": 17,
+      "name": "Menu",
+      "file": "04_Interface/17_menu_reference.png",
+      "intended_use": "Static interface design reference",
+      "width": 1024,
+      "height": 1536,
+      "color_mode": "RGB",
+      "has_transparent_pixels": false,
+      "alpha_range": null,
+      "bytes": 1747285,
+      "sha256": "d717a43bac936ed641e4a744b0bd7d9c26c34d76b15c11619d13bde1f2279935",
+      "generation_prompt": "Prompts/17_menu_reference.md"
+    },
+    {
+      "id": 18,
+      "name": "Minimap",
+      "file": "04_Interface/18_minimap_reference.png",
+      "intended_use": "Static interface design reference",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 983997,
+      "sha256": "e33a593773f64e5a39d27102380234338b171956d1178173eec0436a5f23db41",
+      "generation_prompt": "Prompts/18_minimap_reference.md"
+    },
+    {
+      "id": 19,
+      "name": "Attack skill icon",
+      "file": "04_Interface/19_attack_skill_icon.png",
+      "intended_use": "Interface source artwork",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1789973,
+      "sha256": "894495fb88a4aec26ea890de7198c0b836f473158d27c0a808607cad6251fd63",
+      "generation_prompt": "Prompts/19_attack_skill_icon.md"
+    },
+    {
+      "id": 20,
+      "name": "Black metal",
+      "file": "05_Materials/20_black_metal_material_reference.png",
+      "intended_use": "Material appearance reference",
+      "width": 1274,
+      "height": 1234,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1847931,
+      "sha256": "8b7f8e6f88ca1a43e00ec0c2cd81cbd4af499d3b5af66cb10f959e92e0df11ba",
+      "generation_prompt": "Prompts/20_black_metal_material_reference.md"
+    },
+    {
+      "id": 21,
+      "name": "Chrome",
+      "file": "05_Materials/21_chrome_material_reference.png",
+      "intended_use": "Material appearance reference",
+      "width": 1312,
+      "height": 1199,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1714393,
+      "sha256": "a085c29d6394c5796879dcf60fa1d19118acd64da74f8cf080bca7665f6d740c",
+      "generation_prompt": "Prompts/21_chrome_material_reference.md"
+    },
+    {
+      "id": 22,
+      "name": "Magenta emissive",
+      "file": "05_Materials/22_magenta_emissive_material_reference.png",
+      "intended_use": "Material appearance reference",
+      "width": 1374,
+      "height": 1145,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 1408441,
+      "sha256": "b5b586b7ea6a7139290f5884db9b0a332b83f1eef0ffa3c767ebc5d4221f5075",
+      "generation_prompt": "Prompts/22_magenta_emissive_material_reference.md"
+    },
+    {
+      "id": 23,
+      "name": "Blue glass",
+      "file": "05_Materials/23_blue_glass_material_reference.png",
+      "intended_use": "Material appearance reference",
+      "width": 1295,
+      "height": 1214,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        255
+      ],
+      "bytes": 1289480,
+      "sha256": "e0148d0b5a2678ac34f4396e022a7ed63cf27abdc9798289805817b31dea548b",
+      "generation_prompt": "Prompts/23_blue_glass_material_reference.md"
+    },
+    {
+      "id": 24,
+      "name": "Thruster trail",
+      "file": "06_Effects/24_thruster_trail.png",
+      "intended_use": "Single-frame effect sprite artwork",
+      "width": 2172,
+      "height": 724,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 909066,
+      "sha256": "9a27a850f40019f3932bcb4d38d196931a7ffc932d0a1332955aab3f456bc11f",
+      "generation_prompt": "Prompts/24_thruster_trail.md"
+    },
+    {
+      "id": 25,
+      "name": "Energy projectile",
+      "file": "06_Effects/25_energy_projectile.png",
+      "intended_use": "Single-frame effect sprite artwork",
+      "width": 2172,
+      "height": 724,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 848559,
+      "sha256": "3d81b8ab9bea8e4bebf5a23bd00d1d5f9da70bfbb2625a82e03eb80ab9f68fd3",
+      "generation_prompt": "Prompts/25_energy_projectile.md"
+    },
+    {
+      "id": 26,
+      "name": "Energy impact",
+      "file": "06_Effects/26_energy_impact.png",
+      "intended_use": "Single-frame effect sprite artwork",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 1543103,
+      "sha256": "7bb4da52b7fc073605028e9afd87959bb225b5d7e561bfd95e50d1e3290044b3",
+      "generation_prompt": "Prompts/26_energy_impact.md"
+    },
+    {
+      "id": 27,
+      "name": "Smoke particle",
+      "file": "06_Effects/27_smoke_particle.png",
+      "intended_use": "Single-frame effect sprite artwork",
+      "width": 1254,
+      "height": 1254,
+      "color_mode": "RGBA",
+      "has_transparent_pixels": true,
+      "alpha_range": [
+        0,
+        254
+      ],
+      "bytes": 1121696,
+      "sha256": "24f29d2c4f65896061336aa6aa8fc119e26904b1800d66305bdefca0f1e2191b",
+      "generation_prompt": "Prompts/27_smoke_particle.md"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-11-03T15:20:32.645093+00:00",
+  "manifest_links_v1_v6": [
+    {
+      "version": 1,
+      "manifest_sha256": "7a7a636ecb41c58510fc5179eec11650a52fc829ea9c4f5c7e3e361bfa22a075",
+      "matches_index": true
+    },
+    {
+      "version": 2,
+      "manifest_sha256": "a171f138a70fdff9cd9973671b3ecdf52148f8c9e1805f8e2cf25c9ddd551bda",
+      "matches_index": true
+    },
+    {
+      "version": 3,
+      "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+      "matches_index": true
+    },
+    {
+      "version": 4,
+      "manifest_sha256": "882a496cd86be227ad123092ebaa3a2e2a5b41ec9eae28388c6744b7afe61b60",
+      "matches_index": true
+    },
+    {
+      "version": 5,
+      "manifest_sha256": "56cfa675cfb497436e726f415580bb1653484588419a845013fbbabbef9fe4d3",
+      "matches_index": true
+    },
+    {
+      "version": 6,
+      "manifest_sha256": "e08d39b4349f70345dd3873228b1498aeb7a1799095be2061a4ad2a84f2cce7d",
+      "matches_index": true
+    }
+  ],
+  "fresh_directory_checks": [
+    {
+      "name": "RoadstersSharedAssets-v5",
+      "files": 149,
+      "bytes": 95798662,
+      "failures": 0
+    },
+    {
+      "name": "RoadstersSharedAssets-v6",
+      "files": 248,
+      "bytes": 16413493,
+      "failures": 0
+    },
+    {
+      "name": "RoadstersSharedAssets-v7",
+      "files": 47,
+      "bytes": 625779,
+      "failures": 0
+    },
+    {
+      "name": "RoadstersWindowsAssetIndex-v1",
+      "files": 12,
+      "bytes": 4187459,
+      "failures": 0
+    }
+  ],
+  "v7_external_asset_checks": [
+    {
+      "package": 1,
+      "file": "runtime/ui/coin-256.png",
+      "matches": true
+    },
+    {
+      "package": 1,
+      "file": "generated/live-snapshot/canvas-07.png",
+      "matches": true
+    },
+    {
+      "package": 1,
+      "file": "runtime/tex/projectile.png",
+      "matches": true
+    },
+    {
+      "package": 1,
+      "file": "runtime/tex/impact.png",
+      "matches": true
+    },
+    {
+      "package": 1,
+      "file": "runtime/tex/smoke.png",
+      "matches": true
+    }
+  ],
+  "source_snapshot": {
+    "selected_local_release": "28a4e302e63d2e797db65f62d042025b97a7de84",
+    "unchanged_files": 36,
+    "changed_files": []
+  },
+  "process_gate": {
+    "roadsters_window_observed": false,
+    "process_absence_verified": false,
+    "task_manager_window": 265208,
+    "limitation": "Higher Windows integrity; screenshot was occluded by an unrelated foreground window. No process input, termination or game launch attempted."
+  },
+  "limits": "Directory hashes and source freshness only; no archive revalidation, native rendering, GPU, pixel parity, gameplay or hardware qualification. Existing 41/41 native and WASM results are reused, not fresh this turn."
+}

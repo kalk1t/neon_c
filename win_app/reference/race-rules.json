@@ -1,0 +1,200 @@
+{
+  "captured_utc": "2026-11-02T16:03:14.236Z",
+  "package_version": "0.2.3",
+  "source_identity": "Working file hashes; Git metadata unavailable. Not a frozen/deployed release.",
+  "content_hashes_verified_twice": true,
+  "scope": "Ordered checkpoints, endpoint apertures, boost, last-safe transform, two-lap finish/time attack/free roam. No rendering, collisions, warnings, respawn, rewards, UI or services.",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "0dc42968a942ff3bdd8740e367c0fb5805c017c418473d839cb3a3a79e651db8"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/maps.js",
+      "sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3"
+    },
+    {
+      "path": "src/ai.js",
+      "sha256": "bafac9913d6b0b40c88a8c53fe7366d14df234e25769d1473ada329548c77b66"
+    },
+    {
+      "path": "node_modules/three/package.json",
+      "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "road-1-two-lap",
+      "mode": 0,
+      "steps": 31
+    },
+    {
+      "name": "road-1-time-attack",
+      "mode": 1,
+      "steps": 31
+    },
+    {
+      "name": "road-1-free-roam",
+      "mode": 2,
+      "steps": 31
+    },
+    {
+      "name": "road-2-two-lap",
+      "mode": 0,
+      "steps": 34
+    },
+    {
+      "name": "road-2-time-attack",
+      "mode": 1,
+      "steps": 34
+    },
+    {
+      "name": "road-2-free-roam",
+      "mode": 2,
+      "steps": 34
+    },
+    {
+      "name": "road-3-two-lap",
+      "mode": 0,
+      "steps": 37
+    },
+    {
+      "name": "road-3-time-attack",
+      "mode": 1,
+      "steps": 37
+    },
+    {
+      "name": "road-3-free-roam",
+      "mode": 2,
+      "steps": 37
+    },
+    {
+      "name": "road-4-two-lap",
+      "mode": 0,
+      "steps": 40
+    },
+    {
+      "name": "road-4-time-attack",
+      "mode": 1,
+      "steps": 40
+    },
+    {
+      "name": "road-4-free-roam",
+      "mode": 2,
+      "steps": 40
+    },
+    {
+      "name": "road-5-two-lap",
+      "mode": 0,
+      "steps": 46
+    },
+    {
+      "name": "road-5-time-attack",
+      "mode": 1,
+      "steps": 46
+    },
+    {
+      "name": "road-5-free-roam",
+      "mode": 2,
+      "steps": 46
+    },
+    {
+      "name": "road-6-two-lap",
+      "mode": 0,
+      "steps": 49
+    },
+    {
+      "name": "road-6-time-attack",
+      "mode": 1,
+      "steps": 49
+    },
+    {
+      "name": "road-6-free-roam",
+      "mode": 2,
+      "steps": 49
+    },
+    {
+      "name": "road-7-two-lap",
+      "mode": 0,
+      "steps": 55
+    },
+    {
+      "name": "road-7-time-attack",
+      "mode": 1,
+      "steps": 55
+    },
+    {
+      "name": "road-7-free-roam",
+      "mode": 2,
+      "steps": 55
+    },
+    {
+      "name": "road-8-two-lap",
+      "mode": 0,
+      "steps": 58
+    },
+    {
+      "name": "road-8-time-attack",
+      "mode": 1,
+      "steps": 58
+    },
+    {
+      "name": "road-8-free-roam",
+      "mode": 2,
+      "steps": 58
+    },
+    {
+      "name": "road-9-two-lap",
+      "mode": 0,
+      "steps": 64
+    },
+    {
+      "name": "road-9-time-attack",
+      "mode": 1,
+      "steps": 64
+    },
+    {
+      "name": "road-9-free-roam",
+      "mode": 2,
+      "steps": 64
+    },
+    {
+      "name": "checkpoint-aperture-direction-endpoint",
+      "mode": 0,
+      "steps": 7
+    },
+    {
+      "name": "finish-x-edge",
+      "mode": 0,
+      "steps": 3
+    },
+    {
+      "name": "finish-lower-edge",
+      "mode": 0,
+      "steps": 3
+    },
+    {
+      "name": "finish-upper-edge",
+      "mode": 0,
+      "steps": 3
+    },
+    {
+      "name": "finish-reverse-and-plane",
+      "mode": 0,
+      "steps": 4
+    }
+  ],
+  "steps": 1262
+}

@@ -1,0 +1,13 @@
+import{readFile,writeFile}from'node:fs/promises';import{createHash}from'node:crypto';import{fileURLToPath}from'node:url';import path from'node:path';import vm from'node:vm';
+const root=fileURLToPath(new URL('../',import.meta.url)),browser=path.resolve(process.argv[2]);const sha=b=>createHash('sha256').update(b).digest('hex');
+const sources=await Promise.all(['package.json','src/materials.js','src/city.js'].map(async p=>({path:p,sha256:sha(await readFile(path.join(browser,p)))})));
+const source=await readFile(path.join(browser,'src/materials.js'),'utf8');const pixels=Buffer.alloc(256*512*4);let color=[0,0,0],rects=[];
+const ctx={set fillStyle(value){color=value==='#000'?[0,0,0]:value.match(/\d+/g).map(Number);},fillRect(x,y,w,h){rects.push({x,y,w,h,color:[...color]});for(let j=y;j<y+h;j++)for(let i=x;i<x+w;i++){const at=(j*256+i)*4;for(let k=0;k<3;k++)pixels[at+k]=color[k];pixels[at+3]=255;}}};
+class CanvasTexture{constructor(canvas){this.canvas=canvas;}}
+const extract=(a,b)=>source.slice(source.indexOf(a),source.indexOf(b,source.indexOf(a))).replace('export function','function');
+const script=extract('export function rng(','// Hard-surface')+extract('export function windowTexture(','// Holographic');const context={THREE:{CanvasTexture,SRGBColorSpace:'srgb',RepeatWrapping:1000,LinearFilter:1006},makeCanvas:()=>[{},ctx]};vm.createContext(context);vm.runInContext(script+';this.texture=windowTexture();',context);
+let fnv=2166136261;for(const p of pixels)fnv=Math.imul(fnv^p,16777619)>>>0;
+let header=`/* Actual browser Canvas fillRect output; top-row-first RGBA8. */\n#define RR_WINDOW_REFERENCE_FNV ${fnv}u\nstatic const unsigned char window_reference_colors[512][3]={\n${rects.slice(1).map(r=>`{${r.color}}`).join(',\n')}\n};\n`;
+await writeFile(path.join(root,'tests/generated_facade_reference.h'),header);await writeFile(path.join(root,'reference/facade-browser-rgba.bin'),pixels);
+for(const s of sources)if(sha(await readFile(path.join(browser,s.path)))!==s.sha256)throw Error('Source changed');
+await writeFile(path.join(root,'reference/facade-windows.json'),JSON.stringify({captured_utc:new Date().toISOString(),sources,width:256,height:512,rgba_sha256:sha(pixels),fnv,rectangles:rects.length,lit_windows:rects.slice(1).filter(r=>r.color.join(',')!=='11,9,30').length,texture:{colorSpace:'srgb',wrap:'repeat',magFilter:'linear',minFilter:'linear-mipmap-linear',anisotropy:8},runtime_scope:'Exact source RGBA8 map, canonical-body emissive .95 using source UV and canvas flipY, linear decode; current native diffuse/light/fog pipeline retained. Anisotropy/PBR/output/bloom remain open.'},null,2)+'\n');console.log({fnv,rectangles:rects.length,sha256:sha(pixels)});

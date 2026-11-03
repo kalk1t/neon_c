@@ -1,0 +1,21 @@
+{
+  "source": "../game/public/models/props/cyan_tree.glb",
+  "converted": "reference/converted-assets/cyan-tree-png.glb",
+  "converted_sha256": "c6268340b3a51bdf8f1904a5be0a29bbfa8916e2cb91943ddb5182f868a8d3a3",
+  "mesh": {
+    "path": "assets/course/cyan-sculpt.rrmesh",
+    "sha256": "1622045d21d38d2b9456366c35494357bdc373d00bf45bdb1bf5b0dc0b4665c9",
+    "vertices": 15000,
+    "source_vertices": 10786,
+    "source_height": 0.9980993866920471,
+    "fit": 13.024755022729025
+  },
+  "texture": {
+    "path": "assets/models/cyan-tree-base.png",
+    "sha256": "f0a0668785cded54c91a8bbede9411db0152ce5e7c1e2f3618523e13dd1cc2c9",
+    "width": 1024,
+    "height": 1024
+  },
+  "double_sided": true,
+  "scope": "Original first mesh/node identity, original indexed triangle order flattened losslessly, same UV/normals; decoded base-color map only. Normal/roughness/PBR environment remain unported; no new generation."
+}

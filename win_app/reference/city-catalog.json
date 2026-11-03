@@ -1,0 +1,54 @@
+{
+  "captured_utc": "2026-11-02T21:10:50.663Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "src/skyprops.js",
+      "sha256": "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    }
+  ],
+  "native_catalog_sha256": "d59da1314b03ff6fa6fd8cd09b41946ec630f5509b8b12542427cb59dbd39019",
+  "city_records": 2741,
+  "grid_towers": 2360,
+  "ring": 380,
+  "skyways": 1,
+  "hero_anchors": 450,
+  "total_geometry_vertices": 1695222,
+  "existing_mesh_records": 413,
+  "existing_records_with_missing_poster_geometry": 97,
+  "unrepresented_grid_towers": 1947,
+  "source_city_cells": 2692,
+  "max_city_shapes_per_cell": 6,
+  "collision_queries": 5482,
+  "view_fixtures": 108,
+  "view_far": 1000,
+  "largest_fine_grain_visible_set": 235,
+  "scope": "Full metadata only; no runtime geometry/collision/paging integration. Per-structure sphere visibility is a proposed finer-grain native approach, not browser merged-batch culling. Hero anchors separately cataloged, not paged by this body-only model; materials/traffic/course omitted."
+}

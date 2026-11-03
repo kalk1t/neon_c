@@ -1,0 +1,16 @@
+{
+  "modified": {
+    "src/core/rr_mesh_asset.h": "ae0be998022a20d76e29cf63216f4147c9fd3d34995ee1bf1e2666a3ccfa026d",
+    "src/presentation/rr_scene.c": "f237fee32dd9b570068d023712b7c670d2c4c1c75c9b1c3702c9f020438af2d8",
+    "CMakeLists.txt": "f86b9c14c088b53431d156910b39b4a695a33e22dd77f282e62ae4e3fd5866b4",
+    "tools/race-rules-check/CMakeLists.txt": "53ab3638f79e47fddf2c4b109707523265709474331d403452674a6a43613a39"
+  },
+  "added": [
+    "tests/test_mesh_loader.c",
+    "tests/generated_mesh_loader_fixture.h",
+    "tools/audit-browser-city.mjs",
+    "reference/browser-city-loading-audit.json"
+  ],
+  "geometry_assets_changed": false,
+  "active_camera_output_touched": false
+}

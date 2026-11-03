@@ -1,0 +1,29 @@
+{
+  "captured_utc": "2026-11-02T17:44:43.167Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "0dc42968a942ff3bdd8740e367c0fb5805c017c418473d839cb3a3a79e651db8"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/hud.js",
+      "sha256": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "cases": 20,
+  "minimap_cases": 36,
+  "scope": "Actual browser open-count clamp, current/first focus, locked row refusal, selected mode/road, unlock eligibility and normalized HUD minimap projection. Storage is a new in-memory Map per case, not user/browser data. No graphics, auth or persistence integration."
+}

@@ -1,0 +1,50 @@
+{
+  "map_id": "R3",
+  "weather": "rain",
+  "status": "authoring targets; not wired to an engine",
+  "rain": {
+    "source": "Assets/Effects/C11_rain_streak.png",
+    "camera_local_volume_m": [
+      55,
+      35,
+      70
+    ],
+    "medium_count": 650,
+    "low_count": 220,
+    "nominal_fall_speed_m_s": 25,
+    "wind_game_xz_m_s": [
+      -3,
+      1
+    ],
+    "alpha_start": 0.22,
+    "runtime_texture_target_px": 128
+  },
+  "splash": {
+    "source": "Assets/Effects/C12_rain_splash.png",
+    "medium_pool": 40,
+    "low_pool": 0,
+    "life_seconds": [
+      0.18,
+      0.45
+    ],
+    "runtime_texture_target_px": 256
+  },
+  "mist": {
+    "source": "Assets/Effects/C13_soft_mist.png",
+    "medium_card_limit": 18,
+    "low_card_limit": 4,
+    "runtime_texture_target_px": 512
+  },
+  "fog": {
+    "color_hex": "#759B98",
+    "density_exponential_start": 0.0006,
+    "note": "Interpret only if the engine uses this fog equation; tune to preserve checkpoint visibility."
+  },
+  "waterfall": {
+    "enabled": true,
+    "reference": "Assets/Environment/F11_waterfall_curtain.png",
+    "method": "runtime mesh strips, scrolling flow texture, foam and sparse mist",
+    "collision": "none on visual sheets"
+  },
+  "quality_note": "Reduce rain density, splashes and alpha overlap before removing navigation. These values have not been profiled in the game."
+}

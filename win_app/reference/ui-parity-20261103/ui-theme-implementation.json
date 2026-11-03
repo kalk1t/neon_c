@@ -1,0 +1,87 @@
+{
+  "utc": "2026-11-03T06:36:28.494896+00:00",
+  "scope": "Bounded theme/menu/road-picker implementation; not graphical qualification",
+  "targets": {
+    "native": {
+      "full_regression_before_name_only_metadata_change": 37,
+      "final_focused_ui_after_packaging": 2,
+      "build": "passed",
+      "artifacts": {
+        "build/ui-theme-native/bin/RoadstersRace.exe": {
+          "bytes": 929280,
+          "sha256": "9ca39b7bcfbf7bd45f4274d23b42cefdc2a8fd6875345933228b9e024078067e"
+        }
+      },
+      "final_log_sha256": "0049150069be160015be561226a5d3698b5bf242b10c04e802535d077fb586d7"
+    },
+    "web": {
+      "full_regression_before_name_only_metadata_change": 37,
+      "final_focused_ui_after_packaging": 2,
+      "build": "passed",
+      "artifacts": {
+        "build/ui-theme-web/bin/RoadstersRace.data": {
+          "bytes": 36531067,
+          "sha256": "ea57487002a97cdba1ee9aab021157d5ccc2e91c465e077674277e1969571d6a"
+        },
+        "build/ui-theme-web/bin/RoadstersRace.html": {
+          "bytes": 1136,
+          "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+        },
+        "build/ui-theme-web/bin/RoadstersRace.js": {
+          "bytes": 180017,
+          "sha256": "21cf0b68434dbb626e018b50107e200d7b77c0d9de23eb4435d97f60c79e8ddb"
+        },
+        "build/ui-theme-web/bin/RoadstersRace.wasm": {
+          "bytes": 582383,
+          "sha256": "188bf4f3cd920c154ba0b9e0fa21e9c07b53e1acdaa368353f36cff41ecfbe8f"
+        }
+      },
+      "final_log_sha256": "1c0f3947eae57efa2b9e2da1eb6470ff901c64f7a7b7056fd441d77c1582f711"
+    }
+  },
+  "font_source_sha256": "f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd",
+  "font_outline_equivalence": [
+    {
+      "weight": 500,
+      "matched_outlines_and_advance_metrics": 269,
+      "sha256": "4a8d43a256f454ad64653125c87e76effcbb4253c9bb989f403a3225cdd851be"
+    },
+    {
+      "weight": 700,
+      "matched_outlines_and_advance_metrics": 269,
+      "sha256": "9c8cf4a5fba051259831ed558d0970b277332f185fffefbb9bc6b11c34ce9204"
+    },
+    {
+      "weight": 900,
+      "matched_outlines_and_advance_metrics": 269,
+      "sha256": "e7b18322a46a4a6d20c0b4c1034d19ec156238be3f2225e279bc5af3b365b958"
+    }
+  ],
+  "font_atlas_cpu_rgba8_upper_bytes": 6815744,
+  "graphics": "Unrun. No desktop/process retry. Outstanding supported process absence verification remains pending; no new instance or shutdown observation.",
+  "gameplay": "No production rivals/combat/coins activation; offline locks preserved; no backend/progress/wallet writes.",
+  "changed_files": {
+    "CMakeLists.txt": "2eaaf3b322fd90745818ec7228b9f1b0a38e48fda444e78d74cc7ce5b5cca406",
+    "src/app/main.c": "27ec85cbe1ff9ba04d312ec82a091dc988f581cbaa10a17c7d4cc66f7ed026d5",
+    "src/presentation/rr_ui.h": "416016056415cf3cea7abc2ad03a39e5d0e4f9aa4b9905fa86fef5d4cc9edbf2",
+    "src/presentation/rr_ui.c": "15983da883575b9bdb72a92750cded154ef4f2f3da04829ea5ad8f91e74facc1",
+    "src/presentation/rr_ui_layout.h": "d469bd094fc11fc06550a814d5028b08a4d32bbb7e9d2bba4a3592d2ea9d9e93",
+    "tests/test_ui_layout.c": "3cbc068c5f463e30beb697f4a4c5c2bc53bde1fe0f5ae5fc835178541a07c98c",
+    "tests/test_ui_fonts.c": "da57d990d1cdc28ce32dce38fd1ff196ff1e26623d447c33a1ce38312dccec1e",
+    "tools/prepare-ui-fonts.py": "0cb3b5995bf6f90fec7cf9a619a9efe25b7fe3cd3b5c0efbe3c9b5b660f03bce",
+    "docs/UI-THEME-FIRST-SLICE-2026-11-03.md": "ff6d4dae9c7bb6aa0267aaa059022402800e92f171b331520e8b374739f4a8f9",
+    "assets/ui-theme/Orbitron-500.ttf": "4a8d43a256f454ad64653125c87e76effcbb4253c9bb989f403a3225cdd851be",
+    "assets/ui-theme/Orbitron-700.ttf": "9c8cf4a5fba051259831ed558d0970b277332f185fffefbb9bc6b11c34ce9204",
+    "assets/ui-theme/Orbitron-900.ttf": "e7b18322a46a4a6d20c0b4c1034d19ec156238be3f2225e279bc5af3b365b958",
+    "assets/ui-theme/Orbitron-OFL.txt": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819",
+    "assets/ui-theme/provenance.json": "cc5402ce07ee0ecfa956889da5e713e70b619e32168d4b506c281fe1056dcdaf",
+    "assets/ui-theme/Rajdhani-Medium.ttf": "12ff7dcfe4c206e3875ac53b1762eab57de6a2fa7f5a86c26b97b88d6591eac2",
+    "assets/ui-theme/Rajdhani-OFL.txt": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+  },
+  "preserved_originals": {
+    "reference/pre-ui-theme-20261103/CMakeLists.txt": "74e1b7cc962388cfa5c36824affe21a70f637cc761583dab86948ee7ba0909f1",
+    "reference/pre-ui-theme-20261103/main.c": "642c94c75f207f8067afafd049ba90e4b9142cbbbcbd3bb074c5963f2c333344"
+  },
+  "browser_reference_manifest_sha256": "9ff049a465a1293ae303e3d93a8874483e9c8620e9983fecb68790c8b6481c50",
+  "asset_team_note": "Static weight compatibility solved locally from verified supplied original. Broad extraction not duplicated. Native derived primary family RoadstersUI, OFL preserved. Request only remaining component/state/layout metadata through parent."
+}

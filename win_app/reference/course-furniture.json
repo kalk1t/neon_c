@@ -1,0 +1,198 @@
+{
+  "captured_utc": "2026-11-02T18:42:03.622Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/course.js",
+      "sha256": "1740e742c04677f1481cafdba5afd64997d9d56639ff2530df9d398bdb16e70e"
+    },
+    {
+      "path": "src/props.js",
+      "sha256": "9d1a97df6f0988eec60c91490c58a789da20c337c110df97f5ab58affa9a2033"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "counts": [
+    {
+      "road": 1,
+      "dots": 805,
+      "items": 131,
+      "kinds": [
+        64,
+        8,
+        1,
+        1,
+        57
+      ],
+      "colliders": 114
+    },
+    {
+      "road": 2,
+      "dots": 890,
+      "items": 153,
+      "kinds": [
+        54,
+        35,
+        0,
+        1,
+        63
+      ],
+      "colliders": 135
+    },
+    {
+      "road": 3,
+      "dots": 977,
+      "items": 172,
+      "kinds": [
+        58,
+        40,
+        3,
+        2,
+        69
+      ],
+      "colliders": 153
+    },
+    {
+      "road": 4,
+      "dots": 1060,
+      "items": 187,
+      "kinds": [
+        60,
+        48,
+        2,
+        4,
+        73
+      ],
+      "colliders": 169
+    },
+    {
+      "road": 5,
+      "dots": 1145,
+      "items": 203,
+      "kinds": [
+        54,
+        63,
+        3,
+        3,
+        80
+      ],
+      "colliders": 188
+    },
+    {
+      "road": 6,
+      "dots": 1230,
+      "items": 207,
+      "kinds": [
+        64,
+        54,
+        2,
+        2,
+        85
+      ],
+      "colliders": 192
+    },
+    {
+      "road": 7,
+      "dots": 1315,
+      "items": 228,
+      "kinds": [
+        60,
+        71,
+        4,
+        2,
+        91
+      ],
+      "colliders": 217
+    },
+    {
+      "road": 8,
+      "dots": 1400,
+      "items": 240,
+      "kinds": [
+        66,
+        71,
+        2,
+        3,
+        98
+      ],
+      "colliders": 227
+    },
+    {
+      "road": 9,
+      "dots": 1485,
+      "items": 261,
+      "kinds": [
+        70,
+        81,
+        4,
+        5,
+        101
+      ],
+      "colliders": 255
+    }
+  ],
+  "fixtures": {
+    "dots": 10307,
+    "items": 1782,
+    "colliders": 1650
+  },
+  "assets": [
+    {
+      "path": "assets/course/beacon.rrmesh",
+      "vertices": 3576,
+      "bytes": 128744,
+      "sha256": "52a0280cc76cddfa9d68ed51ba3139eb522c94a218be8134f17695a9f5c3b238"
+    },
+    {
+      "path": "assets/course/barrier.rrmesh",
+      "vertices": 3108,
+      "bytes": 111896,
+      "sha256": "82737a1d1d7010e93469d840510cfadb376d2e85babbab93f12ed1f573b57037"
+    },
+    {
+      "path": "assets/course/sign-pos.rrmesh",
+      "vertices": 1860,
+      "bytes": 66968,
+      "sha256": "fec1b665fb6af7d063df96392d5fc8000cadcad0b6b776cc7556ee1aec887be1"
+    },
+    {
+      "path": "assets/course/sign-neg.rrmesh",
+      "vertices": 1860,
+      "bytes": 66968,
+      "sha256": "b4c1dbe5de85150f645190d35ff1cf568f53f2718aee2d886f52aa0a77122608"
+    },
+    {
+      "path": "assets/course/chevron.rrmesh",
+      "vertices": 120,
+      "bytes": 4328,
+      "sha256": "09db3639fcbe1d26ebc1b3c5c7b6f04f6690d59daef2ced5b3dbb82cbf822670"
+    },
+    {
+      "path": "assets/course/ring-station.rrmesh",
+      "vertices": 21360,
+      "bytes": 768968,
+      "sha256": "6e6ec4b660bb1cbd6249b03d21a45dfc5a6a21a841cb5b9eeea164f90d66b055"
+    }
+  ],
+  "material_scope": "Existing prefab triangle geometry/normals/UV and source base RGB palette; native vertex-color shader, no browser HDR/PBR/maps/bloom equivalence.",
+  "scope": "Selected-road guidance, chevrons, beacons, turn barriers/signs, full ring supports; no platforms/trees/city layout/progress/renderer execution."
+}

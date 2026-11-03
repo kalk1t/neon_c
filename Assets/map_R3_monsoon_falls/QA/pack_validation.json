@@ -1,0 +1,368 @@
+{
+  "map_id": "R3",
+  "status": "passed for stated file/source checks",
+  "item_pngs": 27,
+  "total_pngs": 29,
+  "all_item_pngs_decode": true,
+  "all_item_pngs_have_transparency": true,
+  "all_item_source_hashes_match": true,
+  "selected_scene_hash_matches": true,
+  "portable_local_links_ok": true,
+  "python_syntax_checked": [
+    "author_routes.py",
+    "build_map.py",
+    "mesh_geometry.py",
+    "route_tools.py",
+    "test_layout.py",
+    "validate_routes.py"
+  ],
+  "source_route_validation": {
+    "ok": true,
+    "errors": [],
+    "scope": "Authored source layout math; not Blender execution or game collision verification",
+    "computed": {
+      "length_m": 3109.631,
+      "bounds_min_game": [
+        -550.0,
+        36.006,
+        -450.062
+      ],
+      "bounds_max_game": [
+        550.0,
+        173.994,
+        450.062
+      ],
+      "footprint_xz_m": [
+        1100.0,
+        900.125
+      ],
+      "elevation_range_m": [
+        36.006,
+        173.994
+      ],
+      "maximum_grade_degrees": 9.297,
+      "minimum_horizontal_turn_radius_m": 209.818,
+      "arc_table_segments": 3072
+    },
+    "control_count": 24,
+    "checkpoint_count": 16,
+    "checkpoint_spacing_range_m": [
+      194.352,
+      194.352
+    ],
+    "projected_self_intersections": [],
+    "placeholder_collision_parts_checked": 13,
+    "placeholder_clearance_collisions": [],
+    "coordinate_roundtrip_error": 0.0
+  },
+  "image_checks": [
+    {
+      "id": "C01",
+      "path": "Assets/Course/C01_straight_deck.png",
+      "sha256": "4e89d496cef818935cc07a37591b662fa3589f61da78290e6f02fdbd939f75a9",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.689982
+    },
+    {
+      "id": "C02",
+      "path": "Assets/Course/C02_curved_deck.png",
+      "sha256": "f0d8d23ee8edccfbff7a11e1f23524d0a39342c8f4dcaacfb6e12c5edaeaee5a",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.572528
+    },
+    {
+      "id": "C03",
+      "path": "Assets/Course/C03_climbing_ramp.png",
+      "sha256": "be46ba1712205fe5b26d7ab9c98f3462f8881067f7dc75bc02bd7644f6e38f66",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.714124
+    },
+    {
+      "id": "C04",
+      "path": "Assets/Course/C04_checkpoint_ring.png",
+      "sha256": "373c55be761ab79b1573acaad64e6413fd2a7699fdbb735f4e86f4d3074a1e89",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.628954
+    },
+    {
+      "id": "C05",
+      "path": "Assets/Course/C05_start_finish_arch.png",
+      "sha256": "9a8378909f940ffdc6a5e9704b99a06a4cc63d2ba244c0dd44804a1387d1e34f",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.642331
+    },
+    {
+      "id": "C06",
+      "path": "Assets/Course/C06_support_column.png",
+      "sha256": "71d179498417670c68095b9e457e28c3bb250208a7d4726fa4518538522a70db",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.737062
+    },
+    {
+      "id": "C07",
+      "path": "Assets/Course/C07_safety_barrier.png",
+      "sha256": "94dcc1e0f2a0f77dd976eba3735df1b6612d548c114cad24e10c616249c37d09",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.677598
+    },
+    {
+      "id": "C08",
+      "path": "Assets/Course/C08_turn_chevron.png",
+      "sha256": "6276e577d83e163806c06d1b2331f9c7c396bef03fdfc19101b55f9a7703a2f4",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.54631
+    },
+    {
+      "id": "C09",
+      "path": "Assets/Course/C09_route_beacon.png",
+      "sha256": "214dbc671ad4355e780cf8b9e72ede4fb6a16ece14eee3d53b27ec743089cfb8",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.753969
+    },
+    {
+      "id": "C10",
+      "path": "Assets/Course/C10_start_platform.png",
+      "sha256": "915fc9b762838e98baa3b2b5d9e50022a1bccfa8f07823c69e235dccc770f61e",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.547458
+    },
+    {
+      "id": "C11",
+      "path": "Assets/Effects/C11_rain_streak.png",
+      "sha256": "353974e40ca471b0faa9c85f619f7c2556786f4e0d3ec8913924be98add04913",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 253,
+      "fully_transparent_fraction": 0.971676
+    },
+    {
+      "id": "C12",
+      "path": "Assets/Effects/C12_rain_splash.png",
+      "sha256": "993581655d3574a3ffc15e646d6f93973bb6b72fe8162e87da05a0f47291d121",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.591162
+    },
+    {
+      "id": "C13",
+      "path": "Assets/Effects/C13_soft_mist.png",
+      "sha256": "c3038d2ba9ea1c66b76c37bda6e077e91457f0742c1ef06b14748d527df91743",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 253,
+      "fully_transparent_fraction": 0.66851
+    },
+    {
+      "id": "C14",
+      "path": "Assets/Course/C14_dotted_route_lights.png",
+      "sha256": "4a14738219d734c5cd69435066a04d0e82ebedb839f1c61cd5528687b731e444",
+      "width": 1774,
+      "height": 887,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.711194
+    },
+    {
+      "id": "C15",
+      "path": "Assets/Course/C15_service_platform.png",
+      "sha256": "e88f6abbf48395b68036517bd56eed5f5c4aa9db8bf67ec05db5f7bfc96b4efe",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.666648
+    },
+    {
+      "id": "F01",
+      "path": "Assets/Environment/F01_basalt_cliff.png",
+      "sha256": "d600f8e5660cb59ee9993ee37856e1eb65bd99251a3663e923979a4f7d52db29",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.278084
+    },
+    {
+      "id": "F02",
+      "path": "Assets/Environment/F02_natural_arch.png",
+      "sha256": "e7702e3bd2cc9739b1a2f5facdef0088214f0223cfd9768d2a32eaf3b5161b42",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.446344
+    },
+    {
+      "id": "F03",
+      "path": "Assets/Environment/F03_flat_top_mesa.png",
+      "sha256": "2eee41b811a0cbcd3a8c1c116e1e8bfbdc81c8178b088ecc740e6e1954c1f008",
+      "width": 1390,
+      "height": 1132,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.343377
+    },
+    {
+      "id": "F04",
+      "path": "Assets/Environment/F04_dam_section.png",
+      "sha256": "99a95ab07bd1c134014f1ec2a5300d2a045ecddaf4f30f485f0a502b99a5bb63",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.401683
+    },
+    {
+      "id": "F05",
+      "path": "Assets/Environment/F05_spillway_gate.png",
+      "sha256": "72aa5f406594686edd85d1656b4633140637e015516936c9c8de32d33948a7df",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.337477
+    },
+    {
+      "id": "F06",
+      "path": "Assets/Environment/F06_observation_pod.png",
+      "sha256": "e1c7c3d4ebed59503c1043fd7e4d574f434b60b526f76d1212a1688fb8e8cb88",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.593444
+    },
+    {
+      "id": "F07",
+      "path": "Assets/Environment/F07_tropical_tree.png",
+      "sha256": "4499d20f83d6688ffa6fcbbc4ec5eacd85c0b1a0c3d2b85f04e614a13824f8d5",
+      "width": 1374,
+      "height": 1145,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.399928
+    },
+    {
+      "id": "F08",
+      "path": "Assets/Environment/F08_palm_tree.png",
+      "sha256": "cb1820ecdb5bc22396c9ba7b2ce90904deecf13c29f21279c6070d0897e703b6",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.616597
+    },
+    {
+      "id": "F09",
+      "path": "Assets/Environment/F09_fern.png",
+      "sha256": "44693fe07839eb1cf36fe8462a2e87f3998bc0b996d7b0046439027a4894d5f5",
+      "width": 1374,
+      "height": 1145,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "fully_transparent_fraction": 0.43156
+    },
+    {
+      "id": "F10",
+      "path": "Assets/Environment/F10_moss_boulder.png",
+      "sha256": "5cc2878b958d14c672d40328be266a772e7a28c43f3d03ba1eac59b0856dd9ad",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.394937
+    },
+    {
+      "id": "F11",
+      "path": "Assets/Environment/F11_waterfall_curtain.png",
+      "sha256": "25b833210398f6785cc6cae8b13fdfc05840dcd84c8531e3a2ee8b832f907ecc",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.46243
+    },
+    {
+      "id": "F12",
+      "path": "Assets/Environment/F12_hanging_vines.png",
+      "sha256": "2f90cc378d7b6fcf403abac55e3d74760ebb1ca8ad4ad5184c85ceb0de1410b7",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "alpha_min": 0,
+      "alpha_max": 254,
+      "fully_transparent_fraction": 0.612829
+    }
+  ],
+  "not_executed": [
+    "Blender bpy runtime",
+    "GLB export/import",
+    "browser-rendered gallery screenshot",
+    "actual game integration/physics/performance"
+  ],
+  "notes": [
+    "Each image was visually reviewed in its generation workflow.",
+    "PNG files are copied unchanged; small residual alpha or hidden RGB can remain outside an antialiased silhouette.",
+    "Route validation covers authored source layout and placeholder clearance only."
+  ]
+}

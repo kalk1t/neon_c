@@ -1,0 +1,28 @@
+{
+  "native": {
+    "cases": 4324,
+    "draws": 1727,
+    "events": 2870,
+    "overheats": 39,
+    "denies": 908,
+    "restarts": 6,
+    "max_error": 0.0,
+    "state_bytes": 48,
+    "event_bytes": 64
+  },
+  "wasm": {
+    "cases": 4324,
+    "draws": 1727,
+    "events": 2870,
+    "overheats": 39,
+    "denies": 908,
+    "restarts": 6,
+    "max_error": 0.0,
+    "state_bytes": 48,
+    "event_bytes": 64
+  },
+  "prior_pack_and_targeting_unchanged": true,
+  "source_hashes_rechecked": true,
+  "production_active": false,
+  "graphics": "Unrun"
+}

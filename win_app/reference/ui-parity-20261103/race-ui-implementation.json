@@ -1,0 +1,110 @@
+{
+  "utc": "2026-11-03T06:54:14.559102+00:00",
+  "scope": "Offline HUD/pause/results presentation, source fonts and UI-only clipping; native appearance not qualified",
+  "targets": {
+    "native": {
+      "final_build": "passed",
+      "full_regression_before_final_presentation_refinements": 38,
+      "final_affected_ui_suites": 3,
+      "font_cpu_rgba8_upper_bytes": 6815744,
+      "artifacts": {
+        "build/race-ui-native/bin/RoadstersRace.exe": {
+          "bytes": 941056,
+          "sha256": "fdd45439cf016082ab82e84c2d8d94af6f40dc32767d0efc51c38d22069264ef"
+        }
+      },
+      "full_log_sha256": "50750ea6d659d5a6e4604a66ad345551a77bb00b2482b8c0b8c5f51389f7f838",
+      "final_log_sha256": "bc8a24e05a36bb137ae5b5dd7bd5ad42ca480cdf6843be166e9d2cf0d504da13"
+    },
+    "web": {
+      "final_build": "passed",
+      "full_regression_before_final_presentation_refinements": 38,
+      "final_affected_ui_suites": 3,
+      "font_cpu_rgba8_upper_bytes": 6815744,
+      "artifacts": {
+        "build/race-ui-web/bin/RoadstersRace.data": {
+          "bytes": 36484880,
+          "sha256": "99aefca99aed78a836526ef3de6df3129b0fe56de88ee2912a8a7ef3fcdb4531"
+        },
+        "build/race-ui-web/bin/RoadstersRace.html": {
+          "bytes": 1136,
+          "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+        },
+        "build/race-ui-web/bin/RoadstersRace.js": {
+          "bytes": 180017,
+          "sha256": "4cab2047453824fb1555cfbba30d50d506824323d4b586443d9129c8ecb9105d"
+        },
+        "build/race-ui-web/bin/RoadstersRace.wasm": {
+          "bytes": 593657,
+          "sha256": "ed2a07550e4d8e00e43b144073b7c851de288ef4fe545adf27c46f16e891708d"
+        }
+      },
+      "full_log_sha256": "1552a968349b934c9bae50c336528a776a839f92b64c6d33b8ea5e4cd41a19fb",
+      "final_log_sha256": "8f4ba3b4ba9cf60bf25f68f465b80104990f3b2dcd59be931dc5d62472bb4111"
+    }
+  },
+  "new_tests": {
+    "browser_time_cases": 142,
+    "viewports": 6,
+    "route_projections": 9,
+    "first_best_ties": true,
+    "pause_resume_restart_menu": "shared session fixtures, no observed host input or world restart"
+  },
+  "graphics": "Unrun. No process inspection, desktop retry, graphics launch or termination. No fresh screenshot or shutdown claim.",
+  "blocker": {
+    "action": "Native graphical validation",
+    "target": "isolated build/race-ui-native/bin/RoadstersRace.exe",
+    "state": "pending supported process absence check",
+    "reason": "Previous higher-integrity Task Manager input did not establish process absence; no retry authorized by current delegation."
+  },
+  "asset_v2": "756 files hash/length verified; exact source-request static faces imported unchanged; prior derived pack preserved; no PNG runtime import or original package edits",
+  "source_reference_hashes": {
+    "game/src/hud.js": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b",
+    "game/src/style.css": "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e",
+    "game/index.html": "06380033a8aa5a19ee6a22e0e665945be8613233776ffb34000bb6591f558a85"
+  },
+  "source_drift": {},
+  "prior_ui_theme_artifacts_verified_unchanged": [
+    "build/ui-theme-native/bin/RoadstersRace.exe",
+    "build/ui-theme-web/bin/RoadstersRace.data",
+    "build/ui-theme-web/bin/RoadstersRace.html",
+    "build/ui-theme-web/bin/RoadstersRace.js",
+    "build/ui-theme-web/bin/RoadstersRace.wasm"
+  ],
+  "changed_paths_sha256": {
+    "CMakeLists.txt": "c6ff71e3f06559292bfdddb1cec787da18ec4d1e7125499070fcc87def69585d",
+    "src/app/main.c": "1f482e3c0d01b753f142c42994ee65d09e3e3200df3afc4a0a098d9feb27f820",
+    "src/presentation/rr_ui.c": "5350a05d92f8ac6bd34d15fabe09507d65718e578f76a6f89c1076a289a93d3f",
+    "src/presentation/rr_ui.h": "e0ee543da9de8df5a33035b8df7456faf42e4a0a5cdbec558cb03ead6d7d0893",
+    "src/presentation/rr_race_ui.h": "f757a996fa9770e3e31f67ff0587109cf93b4b6cb387198d301f6e8b52fba61e",
+    "tests/test_race_ui.c": "1f1757de87f9150cbb595567f9ffe1357a91f51228c13117bc4fedbcf228ac78",
+    "tests/ui-time-reference.h": "bea0b3a5ca9563f8780c086871ff689285da94be5449f008fde79d537e2b064b",
+    "tools/capture-ui-time.mjs": "d54988acddf1b82553809dc890f3724643334ef73af8444bb2b8244e3c5be1ee",
+    "tools/import-ui-static-fonts.py": "c2fb8fc2431bd009047a27be8c5f82976a6c0f8369e36a5fa989ad9db634e2fa",
+    "docs/RACE-UI-TYPOGRAPHY-2026-11-03.md": "76b7fcbad0529d66f3ecd2b21b62174a8c5089776c420f2b9147751f9104ece1",
+    "reference/ui-parity-20261103/ui-time-reference.json": "4d1529899b810b5d6b997c5d02701e43f66735167ee9ebccfdb24c53940c7671",
+    "reference/ui-parity-20261103/race-ui-source-hashes.json": "83c221f2d305cdcc4b13318ab2ac8c068c1fca631d3f24f628f9d2906bf00a48",
+    "reference/ui-parity-20261103/asset-v2-compatibility-review.json": "62c129fcb053408ee1e91ebd337c83127bfbf0469f8db50a3e6f6eb8cd3310ce",
+    "assets/ui-theme/Orbitron-500.ttf": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+    "assets/ui-theme/Orbitron-700.ttf": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+    "assets/ui-theme/Orbitron-900.ttf": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+    "assets/ui-theme/Orbitron-OFL.txt": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819",
+    "assets/ui-theme/provenance.json": "db5276ab2776c568f815615a606e14fa03cf18a4a35eef8fac663df3e71101de",
+    "assets/ui-theme/Rajdhani-Medium.ttf": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802",
+    "assets/ui-theme/Rajdhani-OFL.txt": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+  },
+  "preserved_pre_slice": {
+    "reference/pre-race-ui-20261103/CMakeLists.txt": "2eaaf3b322fd90745818ec7228b9f1b0a38e48fda444e78d74cc7ce5b5cca406",
+    "reference/pre-race-ui-20261103/main.c": "27ec85cbe1ff9ba04d312ec82a091dc988f581cbaa10a17c7d4cc66f7ed026d5",
+    "reference/pre-race-ui-20261103/rr_ui.c": "15983da883575b9bdb72a92750cded154ef4f2f3da04829ea5ad8f91e74facc1",
+    "reference/pre-race-ui-20261103/rr_ui.h": "416016056415cf3cea7abc2ad03a39e5d0e4f9aa4b9905fa86fef5d4cc9edbf2"
+  },
+  "progression": "No wallet/accounts/unlock/network writes; production rivals/combat/coins inactive",
+  "limits": [
+    "Latest three time-attack laps only, full scroll history pending",
+    "Rim player glyph clipping conservative",
+    "Glow/raster/DPI/kerning/Unicode appearance unverified",
+    "No shield/weapon/coin/rival controls enabled",
+    "GPU cost/frame time unmeasured; four font atlases retained and world caps unchanged"
+  ]
+}

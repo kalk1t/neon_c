@@ -1,0 +1,29 @@
+[1/2] text-to-3d preview (geometry)  01a1949f-7a0b-7417-aacb-827ce3a2ec08
+[text-to-3d] IN_PROGRESS 1%
+[text-to-3d] IN_PROGRESS 20%
+[text-to-3d] IN_PROGRESS 25%
+[text-to-3d] IN_PROGRESS 35%
+[text-to-3d] IN_PROGRESS 51%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 28s
+[2/2] text-to-3d refine (textures)  01a1949f-f2d1-75a9-8f64-28ac1bff8f2a
+[text-to-3d] IN_PROGRESS 0%
+[text-to-3d] IN_PROGRESS 34%
+[text-to-3d] IN_PROGRESS 49%
+[text-to-3d] IN_PROGRESS 69%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 38s
+Status: SUCCESS
+Task Id: 01a1949f-f2d1-75a9-8f64-28ac1bff8f2a
+Generated text-to-3d-refine
+Saved to:
+- blimp\model.glb
+- blimp\thumbnail.png
+- blimp\texture_0_base_color.png
+- blimp\texture_0_metallic.png
+- blimp\texture_0_normal.png
+- blimp\texture_0_roughness.png
+Metadata path: blimp\meta.json
+meshy-cli 0.7.3 available (current 0.4.4), run: npm i -g meshy-cli@latest

@@ -1,0 +1,7 @@
+/build/
+/dist/
+/downloads/
+/third_party/raylib-*/
+/third_party/emsdk-*/
+/third_party/web-toolchain.json
+

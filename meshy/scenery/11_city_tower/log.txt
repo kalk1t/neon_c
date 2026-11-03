@@ -1,0 +1,26 @@
+[1/1] image-to-3d (geometry + textures)  01a194b0-5247-775a-9d2c-a23ea7a1ff05
+[image-to-3d] IN_PROGRESS 1%
+[image-to-3d] IN_PROGRESS 3%
+[image-to-3d] IN_PROGRESS 11%
+[image-to-3d] IN_PROGRESS 20%
+[image-to-3d] IN_PROGRESS 26%
+[image-to-3d] IN_PROGRESS 59%
+[image-to-3d] IN_PROGRESS 67%
+[image-to-3d] IN_PROGRESS 74%
+[image-to-3d] IN_PROGRESS 84%
+[image-to-3d] IN_PROGRESS 93%
+[image-to-3d] IN_PROGRESS 99%
+[image-to-3d] SUCCEEDED 100%
+      ok in 75s
+Status: SUCCESS
+Task Id: 01a194b0-5247-775a-9d2c-a23ea7a1ff05
+Generated image-to-3d
+Saved to:
+- 11_city_tower\model.glb
+- 11_city_tower\thumbnail.png
+- 11_city_tower\texture_0_base_color.png
+- 11_city_tower\texture_0_metallic.png
+- 11_city_tower\texture_0_normal.png
+- 11_city_tower\texture_0_roughness.png
+Metadata path: 11_city_tower\meta.json
+meshy-cli 0.7.3 available (current 0.4.4), run: npm i -g meshy-cli@latest

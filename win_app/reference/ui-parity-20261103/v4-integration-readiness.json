@@ -1,0 +1,71 @@
+{
+  "utc": "2026-11-03T08:16:32.891305+00:00",
+  "scope": "Read-only v4 import/readiness audit and contract; no runtime integration or new hidden screen",
+  "fresh_checks": {
+    "directory_files": 1004,
+    "archive_files": 1004,
+    "png_ihdrs": 950,
+    "state_layers": 930,
+    "unique_state_ids": 247,
+    "state_scale_records": 494,
+    "checksum_failures": 0,
+    "png_rgb8": 13,
+    "png_rgba8": 937,
+    "all_pngs_noninterlaced_8bit": true,
+    "all_png_rgba8_bytes_if_loaded": 1175735504,
+    "state_png_rgba8_bytes_if_loaded": 1123063120
+  },
+  "visual_inspection": "One existing chrome PNG viewed as a local image; no desktop/browser/native-app control or new render",
+  "native_wasm_checks": "Not rerun: no C/runtime asset changes. Prior41/41 suites each retained as historical scoped evidence.",
+  "asset_team_behavior_checks_reused": 28,
+  "runtime_assets_imported": 0,
+  "new_native_code_or_screens": 0,
+  "upstream_writes": 0,
+  "account_progression_writes": 0,
+  "prior_build_artifacts_verified_unchanged": [
+    "build/v3-ui-corrections-native/bin/RoadstersRace.exe",
+    "build/v3-ui-corrections-web/bin/RoadstersRace.data",
+    "build/v3-ui-corrections-web/bin/RoadstersRace.html",
+    "build/v3-ui-corrections-web/bin/RoadstersRace.js",
+    "build/v3-ui-corrections-web/bin/RoadstersRace.wasm",
+    "build/cockpit-native/bin/RoadstersRace.exe",
+    "build/cockpit-web/bin/RoadstersRace.data",
+    "build/cockpit-web/bin/RoadstersRace.html",
+    "build/cockpit-web/bin/RoadstersRace.js",
+    "build/cockpit-web/bin/RoadstersRace.wasm",
+    "build/cockpit-default-native/bin/RoadstersRace.exe",
+    "build/cockpit-default-web/bin/RoadstersRace.data",
+    "build/cockpit-default-web/bin/RoadstersRace.html",
+    "build/cockpit-default-web/bin/RoadstersRace.js",
+    "build/cockpit-default-web/bin/RoadstersRace.wasm",
+    "build/race-ui-native/bin/RoadstersRace.exe",
+    "build/race-ui-web/bin/RoadstersRace.data",
+    "build/race-ui-web/bin/RoadstersRace.html",
+    "build/race-ui-web/bin/RoadstersRace.js",
+    "build/race-ui-web/bin/RoadstersRace.wasm",
+    "build/ui-theme-native/bin/RoadstersRace.exe",
+    "build/ui-theme-web/bin/RoadstersRace.data",
+    "build/ui-theme-web/bin/RoadstersRace.html",
+    "build/ui-theme-web/bin/RoadstersRace.js",
+    "build/ui-theme-web/bin/RoadstersRace.wasm"
+  ],
+  "deliverables_sha256": {
+    "tools/audit-ui-package.py": "dbe61eff0fc7cccab6ad1a4c96f2740e7f3acaeebcba63e14cd58b99deb7b47e",
+    "docs/V4-ASSET-INTEGRATION-READINESS-2026-11-03.md": "d917494530419ef9f50e8286c7e0f2285526d4542f2313d148c2a9c21a154b54",
+    "reference/ui-parity-20261103/v4-package-audit.json": "4100f9b7e35723c432fa6fbda9a01706a975410b8d2a49b9cf9aa44350d64bc3",
+    "reference/ui-parity-20261103/v4-import-contract.json": "721a1e288f2790c0e8048db0cbad10fc8f25044b8b7ab465406a667c5b9dc374"
+  },
+  "source_reference_sha256": {
+    "game/src/shop.js": "9280a5fe4c2a6a3c3322f82e19a7d20b06eb63e7b80086b1a4a12d972b484761",
+    "game/src/online/index.js": "d82b544cf09cc332b3151ea4089b6a262262147c0d1700387a764d7f824c246f",
+    "game/src/style.css": "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e",
+    "game/src/car.js": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af",
+    "game/src/main.js": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307"
+  },
+  "blocker": {
+    "action": "Existing native graphical qualification, then bounded live garage preview",
+    "state": "pending supported process absence/identity resolution",
+    "reason": "Prior higher-integrity/input limitation left process state independently unverified; no new relevant evidence authorizes retry.",
+    "attempts_this_turn": "No process inspection, alternate lookup, control retry, graphics launch, termination or bypass."
+  }
+}

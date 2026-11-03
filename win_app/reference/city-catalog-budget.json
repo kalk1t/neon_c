@@ -1,0 +1,1090 @@
+{
+  "scope": "Offline geometry-only working-set analysis of 108 finer-grain per-structure sphere views, far1000; matches every captured Three.Frustum visible count. No runtime cap change, GPU measurement or browser merged-batch frame-cost claim. Crowns/props/traffic/material overhead excluded.",
+  "max_visible_records": 235,
+  "max_visible_vertices": 171546,
+  "max_attribute_bytes_rgba": 6175656,
+  "views_over_64_records": 108,
+  "views_over_141312_vertices": 21,
+  "views": [
+    {
+      "fixture": 0,
+      "road": 1,
+      "step": 0,
+      "visible_structures": 188,
+      "vertices": 127422,
+      "attribute_bytes_rgba": 4587192,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 1,
+      "road": 1,
+      "step": 1,
+      "visible_structures": 169,
+      "vertices": 97560,
+      "attribute_bytes_rgba": 3512160,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 2,
+      "road": 1,
+      "step": 2,
+      "visible_structures": 172,
+      "vertices": 113628,
+      "attribute_bytes_rgba": 4090608,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 3,
+      "road": 1,
+      "step": 3,
+      "visible_structures": 201,
+      "vertices": 146424,
+      "attribute_bytes_rgba": 5271264,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 4,
+      "road": 1,
+      "step": 4,
+      "visible_structures": 196,
+      "vertices": 141330,
+      "attribute_bytes_rgba": 5087880,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 5,
+      "road": 1,
+      "step": 5,
+      "visible_structures": 180,
+      "vertices": 128526,
+      "attribute_bytes_rgba": 4626936,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 6,
+      "road": 1,
+      "step": 6,
+      "visible_structures": 168,
+      "vertices": 121002,
+      "attribute_bytes_rgba": 4356072,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 7,
+      "road": 1,
+      "step": 7,
+      "visible_structures": 192,
+      "vertices": 129240,
+      "attribute_bytes_rgba": 4652640,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 8,
+      "road": 1,
+      "step": 8,
+      "visible_structures": 208,
+      "vertices": 136686,
+      "attribute_bytes_rgba": 4920696,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 9,
+      "road": 1,
+      "step": 9,
+      "visible_structures": 222,
+      "vertices": 150816,
+      "attribute_bytes_rgba": 5429376,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 10,
+      "road": 1,
+      "step": 10,
+      "visible_structures": 190,
+      "vertices": 132306,
+      "attribute_bytes_rgba": 4763016,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 11,
+      "road": 1,
+      "step": 11,
+      "visible_structures": 154,
+      "vertices": 110610,
+      "attribute_bytes_rgba": 3981960,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 12,
+      "road": 2,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 13,
+      "road": 2,
+      "step": 1,
+      "visible_structures": 171,
+      "vertices": 114366,
+      "attribute_bytes_rgba": 4117176,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 14,
+      "road": 2,
+      "step": 2,
+      "visible_structures": 202,
+      "vertices": 140160,
+      "attribute_bytes_rgba": 5045760,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 15,
+      "road": 2,
+      "step": 3,
+      "visible_structures": 162,
+      "vertices": 114246,
+      "attribute_bytes_rgba": 4112856,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 16,
+      "road": 2,
+      "step": 4,
+      "visible_structures": 198,
+      "vertices": 140268,
+      "attribute_bytes_rgba": 5049648,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 17,
+      "road": 2,
+      "step": 5,
+      "visible_structures": 191,
+      "vertices": 128376,
+      "attribute_bytes_rgba": 4621536,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 18,
+      "road": 2,
+      "step": 6,
+      "visible_structures": 215,
+      "vertices": 140304,
+      "attribute_bytes_rgba": 5050944,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 19,
+      "road": 2,
+      "step": 7,
+      "visible_structures": 212,
+      "vertices": 147366,
+      "attribute_bytes_rgba": 5305176,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 20,
+      "road": 2,
+      "step": 8,
+      "visible_structures": 183,
+      "vertices": 129564,
+      "attribute_bytes_rgba": 4664304,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 21,
+      "road": 2,
+      "step": 9,
+      "visible_structures": 175,
+      "vertices": 126300,
+      "attribute_bytes_rgba": 4546800,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 22,
+      "road": 2,
+      "step": 10,
+      "visible_structures": 127,
+      "vertices": 98376,
+      "attribute_bytes_rgba": 3541536,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 23,
+      "road": 2,
+      "step": 11,
+      "visible_structures": 198,
+      "vertices": 140106,
+      "attribute_bytes_rgba": 5043816,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 24,
+      "road": 3,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 25,
+      "road": 3,
+      "step": 1,
+      "visible_structures": 165,
+      "vertices": 100020,
+      "attribute_bytes_rgba": 3600720,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 26,
+      "road": 3,
+      "step": 2,
+      "visible_structures": 189,
+      "vertices": 126060,
+      "attribute_bytes_rgba": 4538160,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 27,
+      "road": 3,
+      "step": 3,
+      "visible_structures": 194,
+      "vertices": 133074,
+      "attribute_bytes_rgba": 4790664,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 28,
+      "road": 3,
+      "step": 4,
+      "visible_structures": 173,
+      "vertices": 129834,
+      "attribute_bytes_rgba": 4674024,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 29,
+      "road": 3,
+      "step": 5,
+      "visible_structures": 143,
+      "vertices": 100812,
+      "attribute_bytes_rgba": 3629232,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 30,
+      "road": 3,
+      "step": 6,
+      "visible_structures": 199,
+      "vertices": 138882,
+      "attribute_bytes_rgba": 4999752,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 31,
+      "road": 3,
+      "step": 7,
+      "visible_structures": 204,
+      "vertices": 157398,
+      "attribute_bytes_rgba": 5666328,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 32,
+      "road": 3,
+      "step": 8,
+      "visible_structures": 161,
+      "vertices": 123906,
+      "attribute_bytes_rgba": 4460616,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 33,
+      "road": 3,
+      "step": 9,
+      "visible_structures": 161,
+      "vertices": 117516,
+      "attribute_bytes_rgba": 4230576,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 34,
+      "road": 3,
+      "step": 10,
+      "visible_structures": 180,
+      "vertices": 120864,
+      "attribute_bytes_rgba": 4351104,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 35,
+      "road": 3,
+      "step": 11,
+      "visible_structures": 182,
+      "vertices": 126198,
+      "attribute_bytes_rgba": 4543128,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 36,
+      "road": 4,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 37,
+      "road": 4,
+      "step": 1,
+      "visible_structures": 163,
+      "vertices": 109308,
+      "attribute_bytes_rgba": 3935088,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 38,
+      "road": 4,
+      "step": 2,
+      "visible_structures": 167,
+      "vertices": 118854,
+      "attribute_bytes_rgba": 4278744,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 39,
+      "road": 4,
+      "step": 3,
+      "visible_structures": 181,
+      "vertices": 135486,
+      "attribute_bytes_rgba": 4877496,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 40,
+      "road": 4,
+      "step": 4,
+      "visible_structures": 196,
+      "vertices": 143754,
+      "attribute_bytes_rgba": 5175144,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 41,
+      "road": 4,
+      "step": 5,
+      "visible_structures": 209,
+      "vertices": 128838,
+      "attribute_bytes_rgba": 4638168,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 42,
+      "road": 4,
+      "step": 6,
+      "visible_structures": 183,
+      "vertices": 126048,
+      "attribute_bytes_rgba": 4537728,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 43,
+      "road": 4,
+      "step": 7,
+      "visible_structures": 199,
+      "vertices": 141768,
+      "attribute_bytes_rgba": 5103648,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 44,
+      "road": 4,
+      "step": 8,
+      "visible_structures": 197,
+      "vertices": 133470,
+      "attribute_bytes_rgba": 4804920,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 45,
+      "road": 4,
+      "step": 9,
+      "visible_structures": 194,
+      "vertices": 133536,
+      "attribute_bytes_rgba": 4807296,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 46,
+      "road": 4,
+      "step": 10,
+      "visible_structures": 183,
+      "vertices": 120096,
+      "attribute_bytes_rgba": 4323456,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 47,
+      "road": 4,
+      "step": 11,
+      "visible_structures": 182,
+      "vertices": 129780,
+      "attribute_bytes_rgba": 4672080,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 48,
+      "road": 5,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 49,
+      "road": 5,
+      "step": 1,
+      "visible_structures": 156,
+      "vertices": 105432,
+      "attribute_bytes_rgba": 3795552,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 50,
+      "road": 5,
+      "step": 2,
+      "visible_structures": 173,
+      "vertices": 116832,
+      "attribute_bytes_rgba": 4205952,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 51,
+      "road": 5,
+      "step": 3,
+      "visible_structures": 202,
+      "vertices": 140016,
+      "attribute_bytes_rgba": 5040576,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 52,
+      "road": 5,
+      "step": 4,
+      "visible_structures": 197,
+      "vertices": 129156,
+      "attribute_bytes_rgba": 4649616,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 53,
+      "road": 5,
+      "step": 5,
+      "visible_structures": 198,
+      "vertices": 140790,
+      "attribute_bytes_rgba": 5068440,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 54,
+      "road": 5,
+      "step": 6,
+      "visible_structures": 200,
+      "vertices": 148296,
+      "attribute_bytes_rgba": 5338656,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 55,
+      "road": 5,
+      "step": 7,
+      "visible_structures": 215,
+      "vertices": 171546,
+      "attribute_bytes_rgba": 6175656,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 56,
+      "road": 5,
+      "step": 8,
+      "visible_structures": 167,
+      "vertices": 122424,
+      "attribute_bytes_rgba": 4407264,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 57,
+      "road": 5,
+      "step": 9,
+      "visible_structures": 154,
+      "vertices": 112740,
+      "attribute_bytes_rgba": 4058640,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 58,
+      "road": 5,
+      "step": 10,
+      "visible_structures": 180,
+      "vertices": 126828,
+      "attribute_bytes_rgba": 4565808,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 59,
+      "road": 5,
+      "step": 11,
+      "visible_structures": 202,
+      "vertices": 137064,
+      "attribute_bytes_rgba": 4934304,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 60,
+      "road": 6,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 61,
+      "road": 6,
+      "step": 1,
+      "visible_structures": 191,
+      "vertices": 135654,
+      "attribute_bytes_rgba": 4883544,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 62,
+      "road": 6,
+      "step": 2,
+      "visible_structures": 159,
+      "vertices": 113196,
+      "attribute_bytes_rgba": 4075056,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 63,
+      "road": 6,
+      "step": 3,
+      "visible_structures": 174,
+      "vertices": 130146,
+      "attribute_bytes_rgba": 4685256,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 64,
+      "road": 6,
+      "step": 4,
+      "visible_structures": 154,
+      "vertices": 116316,
+      "attribute_bytes_rgba": 4187376,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 65,
+      "road": 6,
+      "step": 5,
+      "visible_structures": 193,
+      "vertices": 128880,
+      "attribute_bytes_rgba": 4639680,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 66,
+      "road": 6,
+      "step": 6,
+      "visible_structures": 188,
+      "vertices": 130740,
+      "attribute_bytes_rgba": 4706640,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 67,
+      "road": 6,
+      "step": 7,
+      "visible_structures": 191,
+      "vertices": 142122,
+      "attribute_bytes_rgba": 5116392,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 68,
+      "road": 6,
+      "step": 8,
+      "visible_structures": 209,
+      "vertices": 150978,
+      "attribute_bytes_rgba": 5435208,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 69,
+      "road": 6,
+      "step": 9,
+      "visible_structures": 170,
+      "vertices": 124794,
+      "attribute_bytes_rgba": 4492584,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 70,
+      "road": 6,
+      "step": 10,
+      "visible_structures": 167,
+      "vertices": 113964,
+      "attribute_bytes_rgba": 4102704,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 71,
+      "road": 6,
+      "step": 11,
+      "visible_structures": 204,
+      "vertices": 145338,
+      "attribute_bytes_rgba": 5232168,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 72,
+      "road": 7,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 73,
+      "road": 7,
+      "step": 1,
+      "visible_structures": 185,
+      "vertices": 120108,
+      "attribute_bytes_rgba": 4323888,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 74,
+      "road": 7,
+      "step": 2,
+      "visible_structures": 173,
+      "vertices": 116988,
+      "attribute_bytes_rgba": 4211568,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 75,
+      "road": 7,
+      "step": 3,
+      "visible_structures": 187,
+      "vertices": 136374,
+      "attribute_bytes_rgba": 4909464,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 76,
+      "road": 7,
+      "step": 4,
+      "visible_structures": 194,
+      "vertices": 141420,
+      "attribute_bytes_rgba": 5091120,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 77,
+      "road": 7,
+      "step": 5,
+      "visible_structures": 174,
+      "vertices": 121968,
+      "attribute_bytes_rgba": 4390848,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 78,
+      "road": 7,
+      "step": 6,
+      "visible_structures": 181,
+      "vertices": 128736,
+      "attribute_bytes_rgba": 4634496,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 79,
+      "road": 7,
+      "step": 7,
+      "visible_structures": 212,
+      "vertices": 151158,
+      "attribute_bytes_rgba": 5441688,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 80,
+      "road": 7,
+      "step": 8,
+      "visible_structures": 235,
+      "vertices": 166398,
+      "attribute_bytes_rgba": 5990328,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 81,
+      "road": 7,
+      "step": 9,
+      "visible_structures": 182,
+      "vertices": 131664,
+      "attribute_bytes_rgba": 4739904,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 82,
+      "road": 7,
+      "step": 10,
+      "visible_structures": 163,
+      "vertices": 111786,
+      "attribute_bytes_rgba": 4024296,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 83,
+      "road": 7,
+      "step": 11,
+      "visible_structures": 195,
+      "vertices": 136968,
+      "attribute_bytes_rgba": 4930848,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 84,
+      "road": 8,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 85,
+      "road": 8,
+      "step": 1,
+      "visible_structures": 161,
+      "vertices": 104742,
+      "attribute_bytes_rgba": 3770712,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 86,
+      "road": 8,
+      "step": 2,
+      "visible_structures": 213,
+      "vertices": 161682,
+      "attribute_bytes_rgba": 5820552,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 87,
+      "road": 8,
+      "step": 3,
+      "visible_structures": 152,
+      "vertices": 109386,
+      "attribute_bytes_rgba": 3937896,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 88,
+      "road": 8,
+      "step": 4,
+      "visible_structures": 183,
+      "vertices": 143736,
+      "attribute_bytes_rgba": 5174496,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 89,
+      "road": 8,
+      "step": 5,
+      "visible_structures": 172,
+      "vertices": 125142,
+      "attribute_bytes_rgba": 4505112,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 90,
+      "road": 8,
+      "step": 6,
+      "visible_structures": 194,
+      "vertices": 130836,
+      "attribute_bytes_rgba": 4710096,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 91,
+      "road": 8,
+      "step": 7,
+      "visible_structures": 182,
+      "vertices": 124770,
+      "attribute_bytes_rgba": 4491720,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 92,
+      "road": 8,
+      "step": 8,
+      "visible_structures": 224,
+      "vertices": 166104,
+      "attribute_bytes_rgba": 5979744,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 93,
+      "road": 8,
+      "step": 9,
+      "visible_structures": 197,
+      "vertices": 125514,
+      "attribute_bytes_rgba": 4518504,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 94,
+      "road": 8,
+      "step": 10,
+      "visible_structures": 183,
+      "vertices": 122778,
+      "attribute_bytes_rgba": 4420008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 95,
+      "road": 8,
+      "step": 11,
+      "visible_structures": 147,
+      "vertices": 108186,
+      "attribute_bytes_rgba": 3894696,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 96,
+      "road": 9,
+      "step": 0,
+      "visible_structures": 185,
+      "vertices": 124278,
+      "attribute_bytes_rgba": 4474008,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 97,
+      "road": 9,
+      "step": 1,
+      "visible_structures": 179,
+      "vertices": 120000,
+      "attribute_bytes_rgba": 4320000,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 98,
+      "road": 9,
+      "step": 2,
+      "visible_structures": 190,
+      "vertices": 137790,
+      "attribute_bytes_rgba": 4960440,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 99,
+      "road": 9,
+      "step": 3,
+      "visible_structures": 187,
+      "vertices": 138984,
+      "attribute_bytes_rgba": 5003424,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 100,
+      "road": 9,
+      "step": 4,
+      "visible_structures": 205,
+      "vertices": 142464,
+      "attribute_bytes_rgba": 5128704,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 101,
+      "road": 9,
+      "step": 5,
+      "visible_structures": 187,
+      "vertices": 134664,
+      "attribute_bytes_rgba": 4847904,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 102,
+      "road": 9,
+      "step": 6,
+      "visible_structures": 203,
+      "vertices": 143778,
+      "attribute_bytes_rgba": 5176008,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 103,
+      "road": 9,
+      "step": 7,
+      "visible_structures": 185,
+      "vertices": 137340,
+      "attribute_bytes_rgba": 4944240,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 104,
+      "road": 9,
+      "step": 8,
+      "visible_structures": 213,
+      "vertices": 148458,
+      "attribute_bytes_rgba": 5344488,
+      "over_64_records": true,
+      "over_141312_vertices": true
+    },
+    {
+      "fixture": 105,
+      "road": 9,
+      "step": 9,
+      "visible_structures": 176,
+      "vertices": 125802,
+      "attribute_bytes_rgba": 4528872,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 106,
+      "road": 9,
+      "step": 10,
+      "visible_structures": 159,
+      "vertices": 113640,
+      "attribute_bytes_rgba": 4091040,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    },
+    {
+      "fixture": 107,
+      "road": 9,
+      "step": 11,
+      "visible_structures": 186,
+      "vertices": 136488,
+      "attribute_bytes_rgba": 4913568,
+      "over_64_records": true,
+      "over_141312_vertices": false
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "captured_utc": "2026-11-02T18:57:08.834Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/course.js",
+      "sha256": "1740e742c04677f1481cafdba5afd64997d9d56639ff2530df9d398bdb16e70e"
+    },
+    {
+      "path": "src/props.js",
+      "sha256": "9d1a97df6f0988eec60c91490c58a789da20c337c110df97f5ab58affa9a2033"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "0dc42968a942ff3bdd8740e367c0fb5805c017c418473d839cb3a3a79e651db8"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "counts": [
+    9,
+    9,
+    8,
+    13
+  ],
+  "colliders": 48,
+  "fog": {
+    "density": 0.00062,
+    "color_linear": [
+      0.012286488353353374,
+      0.009134058699157796,
+      0.061246054224174035
+    ],
+    "color_hex": 1906758,
+    "cases": 10,
+    "source_expression": "1.0 - exp( - fogDensity * fogDensity * vFogDepth * vFogDepth )",
+    "depth": "camera-space view depth, not radial distance"
+  },
+  "assets": [
+    {
+      "path": "assets/course/platform.rrmesh",
+      "vertices": 5148,
+      "bytes": 185336,
+      "sha256": "3995f74a286491c970e2cff89a4ec6520471e08c21c2f74d7ffdb33b8e087aed"
+    },
+    {
+      "path": "assets/course/platform-column.rrmesh",
+      "vertices": 5280,
+      "bytes": 190088,
+      "sha256": "f303a48fdbf1dd3d99f250f1fee3958ffe722408ad3f2455e3605df91a1b108e"
+    },
+    {
+      "path": "assets/course/tree-magenta.rrmesh",
+      "vertices": 6288,
+      "bytes": 226376,
+      "sha256": "b2b27ef08f5929fe21c8693c92c822ffaf08b16b0dae44c14bac783fbbe4bb4e"
+    },
+    {
+      "path": "assets/course/tree-cyan.rrmesh",
+      "vertices": 6288,
+      "bytes": 226376,
+      "sha256": "614ae6fb5ad9c3754f864e33dbbca11a60307f75d9da0b30445162d90b8635ed"
+    }
+  ],
+  "material_scope": "Existing prefab geometry and source base RGB palette; native shader does not reproduce source PBR/environment/emissive intensity.",
+  "scope": "Shared Skyline-derived platforms/trees cleared against all routes, all-road checkpoint exclusions, fixed start-deck trees, seeded transforms and collider insertion order. No accounts/progress/renderer execution."
+}

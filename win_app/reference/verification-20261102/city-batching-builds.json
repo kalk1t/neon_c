@@ -1,0 +1,450 @@
+{
+  "reference\\verification-20261102\\city-batching-native-nineteen-tests.log": "974f03234dcdd5895ee4c8e3775e219424f64103717040ce7f415afff6b93df9",
+  "reference\\verification-20261102\\city-batching-wasm-nineteen-tests.log": "9034e7d25cb8d3df6048696c6a7b4a085acaf3962b26a4aac5c25e7add7f0e4b",
+  "build/city-batching-native/bin/RoadstersRace.exe": {
+    "sha256": "4cd18656f3863d17fa8f3ac32a58d57c9d4401edfc30e8081f7a4644a30f6e58",
+    "bytes": 879616
+  },
+  "build/city-batching-native/rr_city_batching_tests.exe": {
+    "sha256": "78131655bab52b1ac1218671a82ee32571c36c8a04ade5737c3e7bf6297f2b0c",
+    "bytes": 1331712
+  },
+  "build/city-batching-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/city-batching-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/city-batching-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/city-batching-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "8127bfcf15f7e38b6a625cacba83b0e2649cc1f2a2b06e9cb923cbc1646b77b4",
+    "tools/race-rules-check/CMakeLists.txt": "c0a108c3727366ff225c940a3d940b53d279c3ec17b09da9ba5831a98b56c02f",
+    "src/experimental/rr_city_batching.h": "e5cd4374b7f2327930e99ce63a01c5bed339b776e02fcfb8af98fc3cc427477d",
+    "src/experimental/rr_city_batching.c": "25cfa42054716afa27ae6d7df97dd8f8c9e98716d1e8a6eac6bf95a2153a3307",
+    "src/experimental/generated_city_batches.h": "d8336f62f3b5eaf02f81366278791221ad8125956f5b762ccb2287720dd69a7d",
+    "tests/test_city_batching.c": "d8b1d3e045a9eeb2de02d2f64e5fdc85efd4e0d0339f3dff20658443e5bc7aca",
+    "tests/generated_city_batch_reference.h": "4d6cf480b99e0d04461cce20f39028f8a363f9199e162192f2d6996d79351da9",
+    "tools/capture-city-batching.mjs": "6adff5e3ccc85e1641698a8542d134ca7ea764e97ba3e16ce599b2a3dec989d4",
+    "reference/city-batching.json": "649e53ba93ffe0efe143f6e8a710dfec88df5aadd19157881f0c87d643f80c49"
+  },
+  "source_hashes_rechecked": true,
+  "actual_unmodified_browser_cpu_batches_verified": 45,
+  "source_sphere_max_error": 0,
+  "runtime_preload_identical_to_loader_build": true,
+  "runtime_sources_and_assets_unchanged": true,
+  "scope": {
+    "poses": 264,
+    "route_poses": 216,
+    "free_roam_poses": 48,
+    "far_planes": [
+      1000,
+      22000
+    ],
+    "frusta": 528,
+    "schemes": 5,
+    "bound_methods": 2,
+    "set_comparisons": 5280,
+    "source_vertices_preserved_per_scheme": 1695222,
+    "headless_volume_metadata_bytes": 1151744,
+    "unrepresented_runtime_grid_towers": 1897
+  },
+  "independent_collision_test": {
+    "city_only_queries": 5482,
+    "max_candidates": 6,
+    "worst_error": 1.11e-16,
+    "render_residency_dependency": false,
+    "course_props_union_integrated": false
+  },
+  "measured_options": [
+    {
+      "far": 1000,
+      "scheme": "browser-material-CH900",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 262,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "sphere",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "landmark-fixture",
+        "pose": 263
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "browser-material-CH900",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "box",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "roam-center",
+        "pose": 260
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell128",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 364,
+      "max_vertices": 144960,
+      "over_64_draws": 253,
+      "over_141312_vertices": 1,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "sphere",
+        "count": 352,
+        "vertices": 144960,
+        "hash": 3617732454,
+        "category": "route",
+        "pose": 110
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell128",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 265,
+      "max_vertices": 92676,
+      "over_64_draws": 253,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "box",
+        "count": 239,
+        "vertices": 92676,
+        "hash": 1648633615,
+        "category": "route",
+        "pose": 136
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell256",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 161,
+      "max_vertices": 175140,
+      "over_64_draws": 253,
+      "over_141312_vertices": 113,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "sphere",
+        "count": 155,
+        "vertices": 175140,
+        "hash": 4155231883,
+        "category": "route",
+        "pose": 110
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell256",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 126,
+      "max_vertices": 139308,
+      "over_64_draws": 251,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "box",
+        "count": 126,
+        "vertices": 139308,
+        "hash": 2873210267,
+        "category": "roam-grid",
+        "pose": 235
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell512",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 74,
+      "max_vertices": 246876,
+      "over_64_draws": 75,
+      "over_141312_vertices": 251,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "sphere",
+        "count": 68,
+        "vertices": 246876,
+        "hash": 2967530236,
+        "category": "route",
+        "pose": 197
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell512",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 69,
+      "max_vertices": 218700,
+      "over_64_draws": 4,
+      "over_141312_vertices": 158,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "box",
+        "count": 66,
+        "vertices": 218700,
+        "hash": 3167124640,
+        "category": "route",
+        "pose": 109
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "per-structure-body",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 245,
+      "max_vertices": 178374,
+      "over_64_draws": 253,
+      "over_141312_vertices": 68,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "sphere",
+        "count": 238,
+        "vertices": 178374,
+        "hash": 1226879175,
+        "category": "roam-grid",
+        "pose": 240
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "per-structure-body",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 124,
+      "max_vertices": 89634,
+      "over_64_draws": 227,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "box",
+        "count": 118,
+        "vertices": 89634,
+        "hash": 3185837608,
+        "category": "route",
+        "pose": 136
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "browser-material-CH900",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 264,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "sphere",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "landmark-fixture",
+        "pose": 263
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "browser-material-CH900",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 264,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "box",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "roam-center",
+        "pose": 260
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell128",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 5897,
+      "max_vertices": 1676790,
+      "over_64_draws": 262,
+      "over_141312_vertices": 256,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "sphere",
+        "count": 5897,
+        "vertices": 1676790,
+        "hash": 511452325,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell128",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 5871,
+      "max_vertices": 1675242,
+      "over_64_draws": 262,
+      "over_141312_vertices": 248,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "box",
+        "count": 5871,
+        "vertices": 1675242,
+        "hash": 1132643347,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell256",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 2465,
+      "max_vertices": 1676826,
+      "over_64_draws": 262,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "sphere",
+        "count": 2465,
+        "vertices": 1676826,
+        "hash": 3197274030,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell256",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 2442,
+      "max_vertices": 1675386,
+      "over_64_draws": 262,
+      "over_141312_vertices": 254,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "box",
+        "count": 2442,
+        "vertices": 1675386,
+        "hash": 508590302,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell512",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 939,
+      "max_vertices": 1677402,
+      "over_64_draws": 262,
+      "over_141312_vertices": 261,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "sphere",
+        "count": 939,
+        "vertices": 1677402,
+        "hash": 874648496,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell512",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 919,
+      "max_vertices": 1675782,
+      "over_64_draws": 262,
+      "over_141312_vertices": 260,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "box",
+        "count": 919,
+        "vertices": 1675782,
+        "hash": 1176494087,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "per-structure-body",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 2600,
+      "max_vertices": 1677942,
+      "over_64_draws": 262,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "sphere",
+        "count": 2600,
+        "vertices": 1677942,
+        "hash": 4049971400,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "per-structure-body",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 2581,
+      "max_vertices": 1675710,
+      "over_64_draws": 262,
+      "over_141312_vertices": 246,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "box",
+        "count": 2581,
+        "vertices": 1675710,
+        "hash": 3739195709,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    }
+  ],
+  "graphics": "Unrun;window3148188 state unresolved. No desktop/log retries,launch,termination or modification to its facade-windows-view executable/bin assets."
+}

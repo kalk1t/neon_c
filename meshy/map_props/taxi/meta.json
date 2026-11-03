@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a1949f-fbe7-77ee-b1c6-b4c46455c2ea",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494875135,
+    "started_at": 1793494875142,
+    "finished_at": 1793494910734,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/model.glb?Expires=4947091200&Signature=mJeZHd~wPxVZNAIoYrMSemgNg2f3Xs4kNR~Fwb7fxtrejzks0-t6vr8TtfymfZqchFnGCgscu9ndQPOsoIY1oPJzS1T~ipptW34ueMDt4SIqHVB-tOaQXU-p~T2HhR-f5gByyrcObcuHB~G13ahhtP6iJYQZkLRyyrrD8zKvdKf8R-RbU3ilq2POWDfr2DR2fvT-1h3PnLS1xWJEyg-KYybm2UxlIY-jq1pKtetttYSk~jP3r57rrdNr~H9ATxJGJiWo9xMCHwwgbhlcOWT1z0s2NAL934w0gkD1mPdEpOf0Kxk6Ri6KVFry1wj8gq2uZIOiEXpAxArIiwteSHgHOw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/texture_0.png?Expires=4947091200&Signature=Nc0vijjTgNpBDDvXFOpBgqIADTF2CQ9up3MJdzHgNXKfI10KYzsoaYc5yOcvvTyeaNDrZu~pN51ZK2vaRJyAjYJOI1hZm-o4njSMjpHUqcg006ZofxFMOy6CVjh2YgsGt4Nn7tQIwUiPzMZLNRewZ8xTyc23eBsrhWmkpJWRRxfMM9Aohc6SlGKA94h9tJdLMOBcu6raCvnLVnXd03JWuY8ZudXkwLdFBu7H4QYzUcxsdmAmK1rRBByoRnKv3wyitwTuMon1aLzrLrY-nK41CTGFd6gCHAOkN2bzFMBWBGlA7EYBXa~ui9OUcfcU8Wj2~pOArhB9ogqgqdM8zum0Ig__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/texture_0_metallic.png?Expires=4947091200&Signature=p4fzm7YNv0ElZ5WpCySQEQPP8vvVnGPOBodecdCvdvehyW5wkiG3XYOmdTSTq5Sp0By-fs~VN4xjMO41vmonB6cYjYJxZy~Y4SGZvo~towLav8jrfNGJ4KZthJ3CdoLgevhT1wVejVXMyFelyrJKIT~uLvHaAMFr2lLxZOOtzOl-yDrEVTcXpfHcxYrR5s6pyYbd7qisyzi8Aj5lOSvlA5CNrd1RhH3ja3lSEpu9xAa9rH~wze9RlaHTtghkAbw9~K~G5-EXXIdoUyGLUz5iKwbHUfK0Ed-hR0qxtN7Al4rPgB2oN0lHoOF6koowEuH9kYAqb0A8wiON~4tZzF94bg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/texture_0_normal.png?Expires=4947091200&Signature=PYM7KYqexV~ynkDMxGsFFjueBy45j3wEdBFE-ULoLxtTPO69tFqimASHL4VIS64cSGZ~8RoiWZS8L517TXmgEzmrUCsd2rwTrJxK6a3BNhWOAs4qWh3MP6umos2s-vrFMhNtLTarDtK7F5iofr9h~OIumlLrsNlsPhwr8zi6eX6xAjoDFeYHX83r7Wj9sJhAIF2HxtvcXBQyHIwdG60Us--SxolqZsWdaLp~s3VxazH0yP1D4JfpwQzsmJm3Sxdma-s1zfk2UZWwCi5pXm5EUgTTJgguQYdrfnnCgUdEJ-ZFKuADvoXQJm5p~PUUNCGG7ifHlIuoS4sidtur24RUmg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/texture_0_roughness.png?Expires=4947091200&Signature=T-yM5752dFFgpiKZdEmL-8CNdMTLdtNVQmFqRhX5R7Nv4DejBlqbWgwrm1RHbB-v5d18ZtfhcUJ7urli3Zi0o1fQPWMTH-hQeIRjSZTam~BfOqRMj20C2fCF7hd0VfRkCc4qUD~X3Pco9arU0w~LzPj0wupkYyiKg1K~6HrF3-PI3vbh3Dp0v5lgX7NQeEv7rQ4-grgr0gEJbEU1FcWd5btg86G0FS1qV604-IGtS51jqwpuhB8MakmoQ~tiMTvgRklwIjjyc9syzq8VaQknT9HL7kkjFobhzj3HZ4pBPWcGe9yyLjufglIFcc2aCepTc6Q7hzA-owVSdlU-5im4UA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-fbe7-77ee-b1c6-b4c46455c2ea/output/preview.png?Expires=4947091200&Signature=haThmBYKgIf2gPHoiJVIUTm0ii8GnhFwMHLrTt6v27stKBoQpuQ62li~YSqBHmZE4aRI13GrUjBTeEaI3nhMe9jvrNI04RLsqxCFA0XCnWaX7JmiKM5WQNhHkC0P0UO~SrbwS61oVP9CMtXxs9wHuGORuAnbZrLkXxtM-Zrj4kI0rijyTlg63b5SnWvYw6UeUqaaCaR6OmN6qxiX8qfJxhJ4eJuLeQ4cleGxhAjLL3kuHr45zTb2A2TaBAjWxnb3hzIU1wqHuY29ADQ2LK62PHgCRvgrUVGhHElG~70iBqSb68l8eWb0uuFiYqvg~Rqmmk2aj0SQ98zcJmrLEso0qA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "futuristic flying sky taxi hover car, rounded dark body, glowing cyan headlights, magenta underglow, no wheels, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 777974090,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "taxi\\model.glb",
+    "taxi\\thumbnail.png",
+    "taxi\\texture_0_base_color.png",
+    "taxi\\texture_0_metallic.png",
+    "taxi\\texture_0_normal.png",
+    "taxi\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:01:56.322Z"
+}

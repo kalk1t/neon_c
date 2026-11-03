@@ -1,0 +1,27 @@
+# neon_c: project workspace (assets, techplan, milestones, archive, win_app).
+# game/ is its own repository (github.com/kalk1t/Roadsters-Race); live/ is the production releases, logs and secrets.
+/game/
+/live/
+/.claude/
+
+# raw Meshy downloads: big, and they can be downloaded again (the scripts and notes beside them are kept)
+/meshy/**/*.glb
+/meshy/**/*.png
+/meshy/**/*.jpg
+
+# videos
+/tiktok videos/
+
+# never commit secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.secret.local
+
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+node_modules/

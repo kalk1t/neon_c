@@ -1,0 +1,53 @@
+2026-11-02T17:06:01Z [3] SESSION: bounded renderer, 2D startup, 30 FPS, MSAA off, smoke=0 fallback=0 glow=0
+2026-11-02T17:06:01Z [3] Initializing raylib 6.2
+2026-11-02T17:06:01Z [3] Platform backend: DESKTOP (GLFW)
+2026-11-02T17:06:01Z [3] Supported raylib modules:
+2026-11-02T17:06:01Z [3]     > rcore:..... loaded (mandatory)
+2026-11-02T17:06:01Z [3]     > rlgl:...... loaded (mandatory)
+2026-11-02T17:06:01Z [3]     > rshapes:... loaded (optional)
+2026-11-02T17:06:01Z [3]     > rtextures:. loaded (optional)
+2026-11-02T17:06:01Z [3]     > rtext:..... loaded (optional)
+2026-11-02T17:06:01Z [3]     > rmodels:... loaded (optional)
+2026-11-02T17:06:01Z [3]     > raudio:.... loaded (optional)
+2026-11-02T17:06:01Z [3] DISPLAY: Trying to enable VSYNC
+2026-11-02T17:06:01Z [3] DISPLAY: Device initialized successfully 
+2026-11-02T17:06:01Z [3]     > Display size: 1920 x 1080
+2026-11-02T17:06:01Z [3]     > Screen size:  960 x 720
+2026-11-02T17:06:01Z [3]     > Render size:  960 x 720
+2026-11-02T17:06:01Z [3]     > Viewport offsets: 0, 0
+2026-11-02T17:06:01Z [3] GLAD: OpenGL extensions loaded successfully
+2026-11-02T17:06:01Z [3] GL: Supported extensions count: 404
+2026-11-02T17:06:01Z [3] GL: OpenGL device information:
+2026-11-02T17:06:01Z [3]     > Vendor:   NVIDIA Corporation
+2026-11-02T17:06:01Z [3]     > Renderer: NVIDIA GeForce RTX 5080/PCIe/SSE2
+2026-11-02T17:06:01Z [3]     > Version:  3.3.0 NVIDIA 610.88
+2026-11-02T17:06:01Z [3]     > GLSL:     3.30 NVIDIA via Cg compiler
+2026-11-02T17:06:01Z [3] GL: VAO extension detected, VAO functions loaded successfully
+2026-11-02T17:06:01Z [3] GL: NPOT textures extension detected, full NPOT textures supported
+2026-11-02T17:06:01Z [3] GL: DXT compressed textures supported
+2026-11-02T17:06:01Z [3] GL: ETC2/EAC compressed textures supported
+2026-11-02T17:06:01Z [3] PLATFORM: DESKTOP (GLFW - Win32): Initialized successfully
+2026-11-02T17:06:01Z [3] TEXTURE: [ID 1] Texture loaded successfully (1x1 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:06:01Z [3] TEXTURE: [ID 1] Default texture loaded successfully
+2026-11-02T17:06:01Z [3] SHADER: [ID 1] Vertex shader compiled successfully
+2026-11-02T17:06:01Z [3] SHADER: [ID 2] Fragment shader compiled successfully
+2026-11-02T17:06:01Z [3] SHADER: [ID 3] Program shader loaded successfully
+2026-11-02T17:06:01Z [3] SHADER: [ID 3] Default shader loaded successfully
+2026-11-02T17:06:01Z [3] RLGL: Render batch vertex buffers loaded successfully in RAM (CPU)
+2026-11-02T17:06:01Z [3] RLGL: Render batch vertex buffers loaded successfully in VRAM (GPU)
+2026-11-02T17:06:01Z [3] RLGL: Default OpenGL state initialized successfully
+2026-11-02T17:06:01Z [3] TEXTURE: [ID 2] Texture loaded successfully (128x128 | GRAY_ALPHA | 1 mipmaps)
+2026-11-02T17:06:01Z [3] FONT: Default font loaded successfully (224 glyphs)
+2026-11-02T17:06:01Z [3] SYSTEM: Working Directory: C:\Users\User\projects\neon_c\win_app\build\menu-diagnostics-native\bin
+2026-11-02T17:06:01Z [3] TIMER: Target time per frame: 33.333 milliseconds
+2026-11-02T17:06:01Z [3] STARTUP: 2D menu ready; track 5638.166 m, 1410 samples; scene deferred
+2026-11-02T17:06:06Z [3] HEARTBEAT: frame=140 mode=0 window=960x720 target=0x0 worst-frame=46.3ms focused=1
+2026-11-02T17:06:11Z [3] HEARTBEAT: frame=290 mode=0 window=960x720 target=0x0 worst-frame=35.6ms focused=1
+2026-11-02T17:06:16Z [3] HEARTBEAT: frame=441 mode=0 window=960x720 target=0x0 worst-frame=33.9ms focused=1
+2026-11-02T17:06:21Z [3] HEARTBEAT: frame=592 mode=0 window=960x720 target=0x0 worst-frame=34.1ms focused=1
+2026-11-02T17:06:26Z [3] HEARTBEAT: frame=742 mode=0 window=960x720 target=0x0 worst-frame=34.1ms focused=1
+2026-11-02T17:06:27Z [3] TEXTURE: [ID 2] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:06:27Z [3] SHADER: [ID 3] Default shader unloaded successfully
+2026-11-02T17:06:27Z [3] TEXTURE: [ID 1] Default texture unloaded successfully
+2026-11-02T17:06:27Z [3] Window closed successfully
+2026-11-02T17:06:27Z [3] SESSION: clean shutdown

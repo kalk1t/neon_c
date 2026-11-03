@@ -1,0 +1,68 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\cockpit-default-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_BUILD_TESTS=OFF -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (9.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/cockpit-default-web
+[0/2] Re-checking globbed directories...
+[1/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[2/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[3/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[4/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[5/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[6/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[7/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[8/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[9/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[10/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[11/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[12/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[13/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[14/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[15/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[16/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[17/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[18/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[19/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[20/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[21/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[22/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[23/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[24/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[25/39] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[26/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[27/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[28/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[29/39] Linking C static library librr_core.a
+[30/39] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[31/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[32/39] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.o
+[33/39] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[34/39] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_cockpit.c.o
+[35/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[36/39] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[37/39] Linking C static library raylib\raylib\libraylib.a
+[38/39] Linking C executable bin\RoadstersRace.html

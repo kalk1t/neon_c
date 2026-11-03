@@ -1,0 +1,64 @@
+{
+  "reference\\verification-20261103\\local-pack-native-twentynine-tests.log": "ecd5505f3e1444b7732ee50dddf73941fececa15b3ef0120acba33c95a25e43d",
+  "reference\\verification-20261103\\local-pack-wasm-twentynine-tests.log": "19def6a15e04395fea0c8c140086f4dbe8505beac57510e843c9f5343f2f8364",
+  "build/local-pack-native/bin/RoadstersRace.exe": {
+    "sha256": "5490c65b586ba5c453d329c7acc675c6a2a7ef1c6cbe240ed542d2e76bb94550",
+    "bytes": 879616
+  },
+  "build/local-pack-native/rr_pack_tests.exe": {
+    "sha256": "3f3f7c0d4775f3bd825e0e5157bdc3f13143abff00c648d76916417cbbf45b34",
+    "bytes": 40881664
+  },
+  "build/local-pack-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/local-pack-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/local-pack-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/local-pack-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "preserved_desktop_reconciliation_sha256": "8355ff99c6ac588ec0e0c98846cded91ef216c8ad9a899ac771491d9fd4119dc",
+  "post_test_comment_only": {
+    "path": "src/core/rr_pack.h",
+    "before_sha256": "66e5b51c86fc6690c37e58c3b2afd514854826044db99954927ded6652271a3a",
+    "after_sha256": "a8dab46270713c7067fb4cf6b4a5c6cbc6d52974f445f7cfb8a168e8e91d2c05",
+    "C_tokens_unchanged": true
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "401943f7a63aab2d63dcf2841fd2de2d53ae6d24de5f0e7106fc115ca0e50076",
+    "tools/race-rules-check/CMakeLists.txt": "d4e20d012c1d584df646b01e9209944603bf1e4fd7dbbfede206ce09ba538747",
+    "src/core/rr_rival.h": "14d11255695047bff56bdda9bbb21b1f118c4403302630a80b056bc076f6a6fd",
+    "src/core/rr_rival.c": "721d9f23fe4474fb76ec7047e24634632db088b43f410f0e568e2bd0d3f18df2",
+    "src/core/rr_pack.h": "a8dab46270713c7067fb4cf6b4a5c6cbc6d52974f445f7cfb8a168e8e91d2c05",
+    "src/core/rr_pack.c": "6e185db0dc767d0dad1aabcc934f94391f56b85e1548668c4304cacc6e9e0078",
+    "tests/test_pack.c": "624ca6cba8e907b56d73a3172bcd16e2240d331b499b1f9488aaab0e501acc02",
+    "tests/generated_pack_reference.h": "92a33349961ca98696c062ea4ccc6243e832ceac68a410279d528c77647c2fd4",
+    "tools/capture-pack.mjs": "38ec3ac286acba04731c5f2aee2e876766e5ed7b9958e76bdb27cb5ebecde15f",
+    "tools/prepare-pack-reference.py": "3589f900a9596bfa8dc3ab9dfd9dbd7561e5ebe77c43ca9a85e5ee4835bd64c8",
+    "reference/pack-reference.json": "6588eb408b182bc9ba5e0ac4666db20bc4507ad772590409c2ff95717c263324",
+    "reference/local-pack-results.json": "04cf814a36f79dbe66a2fe41dc93e0a2543560bd4d220aa14cca56d617ef87ec",
+    "docs/LOCAL-PACK-ORDERING-2026-11-03.md": "853db8b0b7b4f9ef13e74bbc2afb876d226a97fdbff39560e2b11257b7b645b9",
+    "README.md": "d822d746c281f22b332dd12af10f005b0e6b57ee5d9b169c3198369bc6a53e84",
+    "docs/PARITY.md": "ee8a4e15c17da9ca29d3e78b0fd3c741bca482d917bedb74d2cac847fc3adf59"
+  },
+  "suites_each": 29,
+  "functional_counts_identical": true,
+  "reference_hashes_rechecked": true,
+  "existing_app_presentation_assets_and_preload_unchanged": true,
+  "adapted_existing_core": "rr_rival.h/c for demand-driven RNG; old fixed-value APIs and regressions retained",
+  "player_phase": "Borrowed caller-supplied post-player state",
+  "combat_projection": "Disabled source sinks, coin tail must be split for stateful weapons",
+  "production_activation": false,
+  "wallet_account_network_writes": false,
+  "desktop": "No fresh call; prior window absent/process unverified and approval timeout preserved.",
+  "graphics": "Unrun",
+  "human_race_acceptance": false
+}

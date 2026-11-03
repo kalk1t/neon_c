@@ -1,0 +1,590 @@
+{
+  "schema_version": "1.0",
+  "map_id": "R1",
+  "coordinate_system": "game_x_right_y_up_z_forward_meters",
+  "layout_status": "authored_blockout",
+  "origin_convention": "All instance origins are base-center; sizes are local [X width, Y height, Z depth] in meters. Positive yaw rotates local +Z toward game +X.",
+  "reserved_flight_corridor": {
+    "half_width_m": 11,
+    "half_height_m": 2,
+    "method": "Conservative local-XZ AABB inflation of each collision part against every dense route chord. 11 m is route half-width 9 m plus 2 m clearance; vertical envelope is +/-2 m. This is a source-layout check, not swept vehicle collision or engine physics.",
+    "replacement_warning": "Recheck final mesh colliders, banks, route changes, and all spawn points. Empty space in arches/skybridges must stay empty."
+  },
+  "instances": [
+    {
+      "id": "N01_01",
+      "asset_id": "N01",
+      "placeholder_kind": "tower",
+      "position_game": [
+        441.679201,
+        0,
+        230.793418
+      ],
+      "yaw_degrees": -39.380203,
+      "size_xyz_m": [
+        42,
+        175,
+        45
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            87.5,
+            0
+          ],
+          "size_xyz_m": [
+            42,
+            175,
+            45
+          ]
+        }
+      ],
+      "notes": "Cyan vertical accents; neutral dark facade."
+    },
+    {
+      "id": "N02_01",
+      "asset_id": "N02",
+      "placeholder_kind": "stepped_tower",
+      "position_game": [
+        -143.190374,
+        0,
+        413.138759
+      ],
+      "yaw_degrees": -110.715628,
+      "size_xyz_m": [
+        48,
+        155,
+        58
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            77.5,
+            0
+          ],
+          "size_xyz_m": [
+            48,
+            155,
+            58
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "N03_01",
+      "asset_id": "N03",
+      "placeholder_kind": "skybridge",
+      "position_game": [
+        60.546581,
+        0,
+        348.598785
+      ],
+      "yaw_degrees": -86.560564,
+      "size_xyz_m": [
+        140,
+        190,
+        42
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "left_tower",
+          "center_local": [
+            -53.75,
+            95,
+            0
+          ],
+          "size_xyz_m": [
+            32.5,
+            190,
+            42
+          ]
+        },
+        {
+          "id": "right_tower",
+          "center_local": [
+            53.75,
+            95,
+            0
+          ],
+          "size_xyz_m": [
+            32.5,
+            190,
+            42
+          ]
+        },
+        {
+          "id": "high_skybridge",
+          "center_local": [
+            0,
+            175,
+            0
+          ],
+          "size_xyz_m": [
+            140,
+            16,
+            34
+          ]
+        }
+      ],
+      "notes": "Hollow opening 75 m wide. Treat the three collision boxes separately; never use one filled bounding box. Skybridge beam bottom is Y=167 m."
+    },
+    {
+      "id": "N04_01",
+      "asset_id": "N04",
+      "placeholder_kind": "midrise",
+      "position_game": [
+        -244.251048,
+        0,
+        136.133079
+      ],
+      "yaw_degrees": -126.261659,
+      "size_xyz_m": [
+        58,
+        90,
+        65
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            45.0,
+            0
+          ],
+          "size_xyz_m": [
+            58,
+            90,
+            65
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "N05_01",
+      "asset_id": "N05",
+      "placeholder_kind": "platform",
+      "position_game": [
+        441.744255,
+        106.886995,
+        60.619938
+      ],
+      "yaw_degrees": -14.80635,
+      "size_xyz_m": [
+        52,
+        4,
+        45
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        4,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            2.0,
+            0
+          ],
+          "size_xyz_m": [
+            52,
+            4,
+            45
+          ]
+        }
+      ],
+      "notes": "Underlying rooftop slab sits 6 m below flight center; deck is 3 m below. Starter geometry, not final roof detailing."
+    },
+    {
+      "id": "N06_01",
+      "asset_id": "N06",
+      "placeholder_kind": "canal_wall",
+      "position_game": [
+        -121.910735,
+        0,
+        -362.381058
+      ],
+      "yaw_degrees": 110.518841,
+      "size_xyz_m": [
+        15,
+        30,
+        180
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            15.0,
+            0
+          ],
+          "size_xyz_m": [
+            15,
+            30,
+            180
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "N06_02",
+      "asset_id": "N06",
+      "placeholder_kind": "canal_wall",
+      "position_game": [
+        -90.364351,
+        0,
+        -278.09093
+      ],
+      "yaw_degrees": 110.518841,
+      "size_xyz_m": [
+        15,
+        30,
+        180
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            15.0,
+            0
+          ],
+          "size_xyz_m": [
+            15,
+            30,
+            180
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "N07_01",
+      "asset_id": "N07",
+      "placeholder_kind": "bridge",
+      "position_game": [
+        -59.269023,
+        34.39409,
+        -335.391917
+      ],
+      "yaw_degrees": 105.34153,
+      "size_xyz_m": [
+        110,
+        5,
+        28
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        5,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            2.5,
+            0
+          ],
+          "size_xyz_m": [
+            110,
+            5,
+            28
+          ]
+        }
+      ],
+      "notes": "Deck-only canal bridge proxy below the flying course. The 110 x 5 x 28 m box describes only the deck slab, not a filled overall bridge. Build supports separately below it with a hollow underpass and validate each support collider."
+    },
+    {
+      "id": "N08_01",
+      "asset_id": "N08",
+      "placeholder_kind": "vent",
+      "position_game": [
+        461.080156,
+        110.886995,
+        65.730996
+      ],
+      "yaw_degrees": -14.80635,
+      "size_xyz_m": [
+        5,
+        4,
+        6
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            2.0,
+            0
+          ],
+          "size_xyz_m": [
+            5,
+            4,
+            6
+          ]
+        }
+      ],
+      "notes": "",
+      "anchor_instance_id": "N05_01"
+    },
+    {
+      "id": "N09_01",
+      "asset_id": "N09",
+      "placeholder_kind": "antenna",
+      "position_game": [
+        -143.190374,
+        155,
+        413.138759
+      ],
+      "yaw_degrees": 0,
+      "size_xyz_m": [
+        4,
+        38,
+        4
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            19.0,
+            0
+          ],
+          "size_xyz_m": [
+            4,
+            38,
+            4
+          ]
+        }
+      ],
+      "notes": "",
+      "anchor_instance_id": "N02_01"
+    },
+    {
+      "id": "N10_01",
+      "asset_id": "N10",
+      "placeholder_kind": "billboard",
+      "position_game": [
+        250.609876,
+        66.313965,
+        -208.524028
+      ],
+      "yaw_degrees": 54.211509,
+      "size_xyz_m": [
+        32,
+        22,
+        5
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "rear_mount_center",
+      "source_root_offset_game": [
+        0,
+        11.0,
+        -2.5
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            11.0,
+            0
+          ],
+          "size_xyz_m": [
+            32,
+            22,
+            5
+          ]
+        }
+      ],
+      "notes": "Blank panel. Add game text in the engine or Blender; do not bake generated letters."
+    },
+    {
+      "id": "C15_01",
+      "asset_id": "C15",
+      "placeholder_kind": "service_platform",
+      "position_game": [
+        468.069347,
+        110.787148,
+        53.735876
+      ],
+      "yaw_degrees": -12.150611,
+      "size_xyz_m": [
+        12,
+        1.5,
+        16
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "top_center",
+      "source_root_offset_game": [
+        0,
+        1.5,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            0.75,
+            0
+          ],
+          "size_xyz_m": [
+            12,
+            1.5,
+            16
+          ]
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "N11_01",
+      "asset_id": "N11",
+      "placeholder_kind": "cabinet",
+      "position_game": [
+        468.069347,
+        112.287148,
+        53.735876
+      ],
+      "yaw_degrees": -12.150611,
+      "size_xyz_m": [
+        2.5,
+        3,
+        2
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "parts",
+      "collision_parts": [
+        {
+          "id": "solid",
+          "center_local": [
+            0,
+            1.5,
+            0
+          ],
+          "size_xyz_m": [
+            2.5,
+            3,
+            2
+          ]
+        }
+      ],
+      "notes": "",
+      "anchor_instance_id": "C15_01"
+    },
+    {
+      "id": "N12_01",
+      "asset_id": "N12",
+      "placeholder_kind": "cluster",
+      "position_game": [
+        0,
+        0,
+        -615
+      ],
+      "yaw_degrees": 0,
+      "size_xyz_m": [
+        280,
+        225,
+        145
+      ],
+      "origin": "base_center",
+      "source_asset_pivot": "base_center",
+      "source_root_offset_game": [
+        0,
+        0,
+        0
+      ],
+      "collision_mode": "none",
+      "collision_parts": [],
+      "notes": "Non-colliding distant skyline placeholder; replace with low-detail merged silhouettes or billboards."
+    }
+  ]
+}

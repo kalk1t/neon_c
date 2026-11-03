@@ -1,0 +1,4184 @@
+{
+  "scope": "Independent headless byte audit. Full position/normal/UV and captured base RGBA palette; excludes shader/PBR/lighting, poster raster and graphics. Existing fixtures, no new source export or assets.",
+  "source_version": "0.2.3",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "src/skyprops.js",
+      "sha256": "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    }
+  ],
+  "source_fixture_sha256": "1f912789fc48aa1eca8d31e07ad6fb8426fe929cf07c992467e5c59b92215fae",
+  "canonical_assets_checked": 413,
+  "matched_vertices": 275520,
+  "matched_by_material": {
+    "0": 130476,
+    "1": 89280,
+    "3": 17028,
+    "2": 38736
+  },
+  "records_with_omitted_boards": 97,
+  "omitted_board_vertices": 582,
+  "omitted_board_planes": 97,
+  "unrepresented_grid_towers": 1947,
+  "rows": [
+    {
+      "catalog_id": 648,
+      "mesh_id": 363,
+      "path": "assets/city-core/b0363.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 649,
+      "mesh_id": 364,
+      "path": "assets/city-core/b0364.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 650,
+      "mesh_id": 365,
+      "path": "assets/city-core/b0365.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 651,
+      "mesh_id": 366,
+      "path": "assets/city-core/b0366.rrmesh",
+      "native_vertices": 864,
+      "source_vertices": 864,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 652,
+      "mesh_id": 367,
+      "path": "assets/city-core/b0367.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 653,
+      "mesh_id": 368,
+      "path": "assets/city-core/b0368.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 654,
+      "mesh_id": 369,
+      "path": "assets/city-core/b0369.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 655,
+      "mesh_id": 370,
+      "path": "assets/city-core/b0370.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 656,
+      "mesh_id": 371,
+      "path": "assets/city-core/b0371.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 657,
+      "mesh_id": 372,
+      "path": "assets/city-core/b0372.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 658,
+      "mesh_id": 373,
+      "path": "assets/city-core/b0373.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 659,
+      "mesh_id": 374,
+      "path": "assets/city-core/b0374.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 660,
+      "mesh_id": 375,
+      "path": "assets/city-core/b0375.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 661,
+      "mesh_id": 376,
+      "path": "assets/city-core/b0376.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 662,
+      "mesh_id": 377,
+      "path": "assets/city-core/b0377.rrmesh",
+      "native_vertices": 1776,
+      "source_vertices": 1776,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 663,
+      "mesh_id": 378,
+      "path": "assets/city-core/b0378.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 664,
+      "mesh_id": 379,
+      "path": "assets/city-core/b0379.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 687,
+      "mesh_id": 380,
+      "path": "assets/city-core/b0380.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 688,
+      "mesh_id": 381,
+      "path": "assets/city-core/b0381.rrmesh",
+      "native_vertices": 732,
+      "source_vertices": 738,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 689,
+      "mesh_id": 382,
+      "path": "assets/city-core/b0382.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 690,
+      "mesh_id": 383,
+      "path": "assets/city-core/b0383.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 691,
+      "mesh_id": 384,
+      "path": "assets/city-core/b0384.rrmesh",
+      "native_vertices": 480,
+      "source_vertices": 480,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 692,
+      "mesh_id": 385,
+      "path": "assets/city-core/b0385.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 693,
+      "mesh_id": 386,
+      "path": "assets/city-core/b0386.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 694,
+      "mesh_id": 387,
+      "path": "assets/city-core/b0387.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 695,
+      "mesh_id": 388,
+      "path": "assets/city-core/b0388.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 696,
+      "mesh_id": 389,
+      "path": "assets/city-core/b0389.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 697,
+      "mesh_id": 390,
+      "path": "assets/city-core/b0390.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 698,
+      "mesh_id": 391,
+      "path": "assets/city-core/b0391.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 699,
+      "mesh_id": 392,
+      "path": "assets/city-core/b0392.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 700,
+      "mesh_id": 393,
+      "path": "assets/city-core/b0393.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 701,
+      "mesh_id": 394,
+      "path": "assets/city-core/b0394.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 724,
+      "mesh_id": 395,
+      "path": "assets/city-core/b0395.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 725,
+      "mesh_id": 396,
+      "path": "assets/city-core/b0396.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 726,
+      "mesh_id": 397,
+      "path": "assets/city-core/b0397.rrmesh",
+      "native_vertices": 1332,
+      "source_vertices": 1332,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 727,
+      "mesh_id": 398,
+      "path": "assets/city-core/b0398.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 728,
+      "mesh_id": 399,
+      "path": "assets/city-core/b0399.rrmesh",
+      "native_vertices": 1740,
+      "source_vertices": 1740,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 729,
+      "mesh_id": 400,
+      "path": "assets/city-core/b0400.rrmesh",
+      "native_vertices": 1884,
+      "source_vertices": 1884,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 730,
+      "mesh_id": 401,
+      "path": "assets/city-core/b0401.rrmesh",
+      "native_vertices": 1044,
+      "source_vertices": 1044,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 731,
+      "mesh_id": 402,
+      "path": "assets/city-core/b0402.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 732,
+      "mesh_id": 403,
+      "path": "assets/city-core/b0403.rrmesh",
+      "native_vertices": 1776,
+      "source_vertices": 1776,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 733,
+      "mesh_id": 404,
+      "path": "assets/city-core/b0404.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 734,
+      "mesh_id": 405,
+      "path": "assets/city-core/b0405.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 735,
+      "mesh_id": 406,
+      "path": "assets/city-core/b0406.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 736,
+      "mesh_id": 407,
+      "path": "assets/city-core/b0407.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 737,
+      "mesh_id": 408,
+      "path": "assets/city-core/b0408.rrmesh",
+      "native_vertices": 1044,
+      "source_vertices": 1050,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 738,
+      "mesh_id": 409,
+      "path": "assets/city-core/b0409.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 739,
+      "mesh_id": 410,
+      "path": "assets/city-core/b0410.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 740,
+      "mesh_id": 411,
+      "path": "assets/city-core/b0411.rrmesh",
+      "native_vertices": 1008,
+      "source_vertices": 1014,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 741,
+      "mesh_id": 412,
+      "path": "assets/city-core/b0412.rrmesh",
+      "native_vertices": 732,
+      "source_vertices": 738,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 762,
+      "mesh_id": 0,
+      "path": "assets/city-core/b0000.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 763,
+      "mesh_id": 1,
+      "path": "assets/city-core/b0001.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 764,
+      "mesh_id": 2,
+      "path": "assets/city-core/b0002.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 765,
+      "mesh_id": 3,
+      "path": "assets/city-core/b0003.rrmesh",
+      "native_vertices": 1008,
+      "source_vertices": 1014,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 766,
+      "mesh_id": 4,
+      "path": "assets/city-core/b0004.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 767,
+      "mesh_id": 5,
+      "path": "assets/city-core/b0005.rrmesh",
+      "native_vertices": 1044,
+      "source_vertices": 1044,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 768,
+      "mesh_id": 6,
+      "path": "assets/city-core/b0006.rrmesh",
+      "native_vertices": 1740,
+      "source_vertices": 1740,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 769,
+      "mesh_id": 7,
+      "path": "assets/city-core/b0007.rrmesh",
+      "native_vertices": 444,
+      "source_vertices": 444,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 770,
+      "mesh_id": 8,
+      "path": "assets/city-core/b0008.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 771,
+      "mesh_id": 9,
+      "path": "assets/city-core/b0009.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 772,
+      "mesh_id": 10,
+      "path": "assets/city-core/b0010.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 773,
+      "mesh_id": 11,
+      "path": "assets/city-core/b0011.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 774,
+      "mesh_id": 12,
+      "path": "assets/city-core/b0012.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 775,
+      "mesh_id": 13,
+      "path": "assets/city-core/b0013.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 776,
+      "mesh_id": 14,
+      "path": "assets/city-core/b0014.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 777,
+      "mesh_id": 15,
+      "path": "assets/city-core/b0015.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 778,
+      "mesh_id": 16,
+      "path": "assets/city-core/b0016.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 779,
+      "mesh_id": 17,
+      "path": "assets/city-core/b0017.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 780,
+      "mesh_id": 18,
+      "path": "assets/city-core/b0018.rrmesh",
+      "native_vertices": 732,
+      "source_vertices": 738,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 801,
+      "mesh_id": 19,
+      "path": "assets/city-core/b0019.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 802,
+      "mesh_id": 20,
+      "path": "assets/city-core/b0020.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 803,
+      "mesh_id": 21,
+      "path": "assets/city-core/b0021.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 804,
+      "mesh_id": 22,
+      "path": "assets/city-core/b0022.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 805,
+      "mesh_id": 23,
+      "path": "assets/city-core/b0023.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 806,
+      "mesh_id": 24,
+      "path": "assets/city-core/b0024.rrmesh",
+      "native_vertices": 1884,
+      "source_vertices": 1884,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 807,
+      "mesh_id": 25,
+      "path": "assets/city-core/b0025.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 808,
+      "mesh_id": 26,
+      "path": "assets/city-core/b0026.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 809,
+      "mesh_id": 27,
+      "path": "assets/city-core/b0027.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 810,
+      "mesh_id": 28,
+      "path": "assets/city-core/b0028.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 811,
+      "mesh_id": 29,
+      "path": "assets/city-core/b0029.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 812,
+      "mesh_id": 30,
+      "path": "assets/city-core/b0030.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 813,
+      "mesh_id": 31,
+      "path": "assets/city-core/b0031.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 814,
+      "mesh_id": 32,
+      "path": "assets/city-core/b0032.rrmesh",
+      "native_vertices": 1188,
+      "source_vertices": 1194,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 815,
+      "mesh_id": 33,
+      "path": "assets/city-core/b0033.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 816,
+      "mesh_id": 34,
+      "path": "assets/city-core/b0034.rrmesh",
+      "native_vertices": 1920,
+      "source_vertices": 1920,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 817,
+      "mesh_id": 35,
+      "path": "assets/city-core/b0035.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 841,
+      "mesh_id": 36,
+      "path": "assets/city-core/b0036.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 842,
+      "mesh_id": 37,
+      "path": "assets/city-core/b0037.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 843,
+      "mesh_id": 38,
+      "path": "assets/city-core/b0038.rrmesh",
+      "native_vertices": 1296,
+      "source_vertices": 1302,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 844,
+      "mesh_id": 39,
+      "path": "assets/city-core/b0039.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 845,
+      "mesh_id": 40,
+      "path": "assets/city-core/b0040.rrmesh",
+      "native_vertices": 1704,
+      "source_vertices": 1704,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 846,
+      "mesh_id": 41,
+      "path": "assets/city-core/b0041.rrmesh",
+      "native_vertices": 2028,
+      "source_vertices": 2028,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 847,
+      "mesh_id": 42,
+      "path": "assets/city-core/b0042.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 848,
+      "mesh_id": 43,
+      "path": "assets/city-core/b0043.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 849,
+      "mesh_id": 44,
+      "path": "assets/city-core/b0044.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 850,
+      "mesh_id": 45,
+      "path": "assets/city-core/b0045.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 851,
+      "mesh_id": 46,
+      "path": "assets/city-core/b0046.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 852,
+      "mesh_id": 47,
+      "path": "assets/city-core/b0047.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 853,
+      "mesh_id": 48,
+      "path": "assets/city-core/b0048.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 854,
+      "mesh_id": 49,
+      "path": "assets/city-core/b0049.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 855,
+      "mesh_id": 50,
+      "path": "assets/city-core/b0050.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 880,
+      "mesh_id": 51,
+      "path": "assets/city-core/b0051.rrmesh",
+      "native_vertices": 1956,
+      "source_vertices": 1956,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 881,
+      "mesh_id": 52,
+      "path": "assets/city-core/b0052.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 882,
+      "mesh_id": 53,
+      "path": "assets/city-core/b0053.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 883,
+      "mesh_id": 54,
+      "path": "assets/city-core/b0054.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 884,
+      "mesh_id": 55,
+      "path": "assets/city-core/b0055.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 885,
+      "mesh_id": 56,
+      "path": "assets/city-core/b0056.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 886,
+      "mesh_id": 57,
+      "path": "assets/city-core/b0057.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 887,
+      "mesh_id": 58,
+      "path": "assets/city-core/b0058.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 888,
+      "mesh_id": 59,
+      "path": "assets/city-core/b0059.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 889,
+      "mesh_id": 60,
+      "path": "assets/city-core/b0060.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 890,
+      "mesh_id": 61,
+      "path": "assets/city-core/b0061.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 891,
+      "mesh_id": 62,
+      "path": "assets/city-core/b0062.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 892,
+      "mesh_id": 63,
+      "path": "assets/city-core/b0063.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 893,
+      "mesh_id": 64,
+      "path": "assets/city-core/b0064.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 909,
+      "mesh_id": 65,
+      "path": "assets/city-core/b0065.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 910,
+      "mesh_id": 66,
+      "path": "assets/city-core/b0066.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 911,
+      "mesh_id": 67,
+      "path": "assets/city-core/b0067.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 912,
+      "mesh_id": 68,
+      "path": "assets/city-core/b0068.rrmesh",
+      "native_vertices": 2100,
+      "source_vertices": 2106,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 913,
+      "mesh_id": 69,
+      "path": "assets/city-core/b0069.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 914,
+      "mesh_id": 70,
+      "path": "assets/city-core/b0070.rrmesh",
+      "native_vertices": 1260,
+      "source_vertices": 1266,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 915,
+      "mesh_id": 71,
+      "path": "assets/city-core/b0071.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 916,
+      "mesh_id": 72,
+      "path": "assets/city-core/b0072.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 917,
+      "mesh_id": 73,
+      "path": "assets/city-core/b0073.rrmesh",
+      "native_vertices": 2136,
+      "source_vertices": 2136,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 918,
+      "mesh_id": 74,
+      "path": "assets/city-core/b0074.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 919,
+      "mesh_id": 75,
+      "path": "assets/city-core/b0075.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 920,
+      "mesh_id": 76,
+      "path": "assets/city-core/b0076.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 921,
+      "mesh_id": 77,
+      "path": "assets/city-core/b0077.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 922,
+      "mesh_id": 78,
+      "path": "assets/city-core/b0078.rrmesh",
+      "native_vertices": 2064,
+      "source_vertices": 2064,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 923,
+      "mesh_id": 79,
+      "path": "assets/city-core/b0079.rrmesh",
+      "native_vertices": 1188,
+      "source_vertices": 1188,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 924,
+      "mesh_id": 80,
+      "path": "assets/city-core/b0080.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 925,
+      "mesh_id": 81,
+      "path": "assets/city-core/b0081.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 947,
+      "mesh_id": 82,
+      "path": "assets/city-core/b0082.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 948,
+      "mesh_id": 83,
+      "path": "assets/city-core/b0083.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 949,
+      "mesh_id": 84,
+      "path": "assets/city-core/b0084.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 950,
+      "mesh_id": 85,
+      "path": "assets/city-core/b0085.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 951,
+      "mesh_id": 86,
+      "path": "assets/city-core/b0086.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 952,
+      "mesh_id": 87,
+      "path": "assets/city-core/b0087.rrmesh",
+      "native_vertices": 2100,
+      "source_vertices": 2106,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 953,
+      "mesh_id": 88,
+      "path": "assets/city-core/b0088.rrmesh",
+      "native_vertices": 1224,
+      "source_vertices": 1224,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 954,
+      "mesh_id": 89,
+      "path": "assets/city-core/b0089.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 955,
+      "mesh_id": 90,
+      "path": "assets/city-core/b0090.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 956,
+      "mesh_id": 91,
+      "path": "assets/city-core/b0091.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 957,
+      "mesh_id": 92,
+      "path": "assets/city-core/b0092.rrmesh",
+      "native_vertices": 972,
+      "source_vertices": 972,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 958,
+      "mesh_id": 93,
+      "path": "assets/city-core/b0093.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 979,
+      "mesh_id": 94,
+      "path": "assets/city-core/b0094.rrmesh",
+      "native_vertices": 1848,
+      "source_vertices": 1848,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 980,
+      "mesh_id": 95,
+      "path": "assets/city-core/b0095.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 981,
+      "mesh_id": 96,
+      "path": "assets/city-core/b0096.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 982,
+      "mesh_id": 97,
+      "path": "assets/city-core/b0097.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 983,
+      "mesh_id": 98,
+      "path": "assets/city-core/b0098.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 984,
+      "mesh_id": 99,
+      "path": "assets/city-core/b0099.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 985,
+      "mesh_id": 100,
+      "path": "assets/city-core/b0100.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 986,
+      "mesh_id": 101,
+      "path": "assets/city-core/b0101.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 987,
+      "mesh_id": 102,
+      "path": "assets/city-core/b0102.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 988,
+      "mesh_id": 103,
+      "path": "assets/city-core/b0103.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1015,
+      "mesh_id": 104,
+      "path": "assets/city-core/b0104.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1016,
+      "mesh_id": 105,
+      "path": "assets/city-core/b0105.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1017,
+      "mesh_id": 106,
+      "path": "assets/city-core/b0106.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1018,
+      "mesh_id": 107,
+      "path": "assets/city-core/b0107.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1019,
+      "mesh_id": 108,
+      "path": "assets/city-core/b0108.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1020,
+      "mesh_id": 109,
+      "path": "assets/city-core/b0109.rrmesh",
+      "native_vertices": 1188,
+      "source_vertices": 1194,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1021,
+      "mesh_id": 110,
+      "path": "assets/city-core/b0110.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1022,
+      "mesh_id": 111,
+      "path": "assets/city-core/b0111.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1158,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1023,
+      "mesh_id": 112,
+      "path": "assets/city-core/b0112.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1024,
+      "mesh_id": 113,
+      "path": "assets/city-core/b0113.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1025,
+      "mesh_id": 114,
+      "path": "assets/city-core/b0114.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1026,
+      "mesh_id": 115,
+      "path": "assets/city-core/b0115.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1053,
+      "mesh_id": 116,
+      "path": "assets/city-core/b0116.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1054,
+      "mesh_id": 117,
+      "path": "assets/city-core/b0117.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1055,
+      "mesh_id": 118,
+      "path": "assets/city-core/b0118.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1056,
+      "mesh_id": 119,
+      "path": "assets/city-core/b0119.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1057,
+      "mesh_id": 120,
+      "path": "assets/city-core/b0120.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1058,
+      "mesh_id": 121,
+      "path": "assets/city-core/b0121.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1059,
+      "mesh_id": 122,
+      "path": "assets/city-core/b0122.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1060,
+      "mesh_id": 123,
+      "path": "assets/city-core/b0123.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1061,
+      "mesh_id": 124,
+      "path": "assets/city-core/b0124.rrmesh",
+      "native_vertices": 1260,
+      "source_vertices": 1260,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1062,
+      "mesh_id": 125,
+      "path": "assets/city-core/b0125.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1083,
+      "mesh_id": 126,
+      "path": "assets/city-core/b0126.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1084,
+      "mesh_id": 127,
+      "path": "assets/city-core/b0127.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1085,
+      "mesh_id": 128,
+      "path": "assets/city-core/b0128.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1086,
+      "mesh_id": 129,
+      "path": "assets/city-core/b0129.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1087,
+      "mesh_id": 130,
+      "path": "assets/city-core/b0130.rrmesh",
+      "native_vertices": 1332,
+      "source_vertices": 1332,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1088,
+      "mesh_id": 131,
+      "path": "assets/city-core/b0131.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1089,
+      "mesh_id": 132,
+      "path": "assets/city-core/b0132.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1090,
+      "mesh_id": 133,
+      "path": "assets/city-core/b0133.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1114,
+      "mesh_id": 134,
+      "path": "assets/city-core/b0134.rrmesh",
+      "native_vertices": 900,
+      "source_vertices": 906,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1115,
+      "mesh_id": 135,
+      "path": "assets/city-core/b0135.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1116,
+      "mesh_id": 136,
+      "path": "assets/city-core/b0136.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1117,
+      "mesh_id": 137,
+      "path": "assets/city-core/b0137.rrmesh",
+      "native_vertices": 2028,
+      "source_vertices": 2028,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1118,
+      "mesh_id": 138,
+      "path": "assets/city-core/b0138.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1119,
+      "mesh_id": 139,
+      "path": "assets/city-core/b0139.rrmesh",
+      "native_vertices": 1044,
+      "source_vertices": 1044,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1152,
+      "mesh_id": 140,
+      "path": "assets/city-core/b0140.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1153,
+      "mesh_id": 141,
+      "path": "assets/city-core/b0141.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1154,
+      "mesh_id": 142,
+      "path": "assets/city-core/b0142.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1152,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1180,
+      "mesh_id": 143,
+      "path": "assets/city-core/b0143.rrmesh",
+      "native_vertices": 2028,
+      "source_vertices": 2028,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1181,
+      "mesh_id": 144,
+      "path": "assets/city-core/b0144.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1182,
+      "mesh_id": 145,
+      "path": "assets/city-core/b0145.rrmesh",
+      "native_vertices": 1920,
+      "source_vertices": 1920,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1183,
+      "mesh_id": 146,
+      "path": "assets/city-core/b0146.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1212,
+      "mesh_id": 147,
+      "path": "assets/city-core/b0147.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1213,
+      "mesh_id": 148,
+      "path": "assets/city-core/b0148.rrmesh",
+      "native_vertices": 1956,
+      "source_vertices": 1956,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1214,
+      "mesh_id": 149,
+      "path": "assets/city-core/b0149.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1215,
+      "mesh_id": 150,
+      "path": "assets/city-core/b0150.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1216,
+      "mesh_id": 151,
+      "path": "assets/city-core/b0151.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1217,
+      "mesh_id": 152,
+      "path": "assets/city-core/b0152.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1218,
+      "mesh_id": 153,
+      "path": "assets/city-core/b0153.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1219,
+      "mesh_id": 154,
+      "path": "assets/city-core/b0154.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1220,
+      "mesh_id": 155,
+      "path": "assets/city-core/b0155.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1239,
+      "mesh_id": 156,
+      "path": "assets/city-core/b0156.rrmesh",
+      "native_vertices": 972,
+      "source_vertices": 972,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1240,
+      "mesh_id": 157,
+      "path": "assets/city-core/b0157.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1241,
+      "mesh_id": 158,
+      "path": "assets/city-core/b0158.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1242,
+      "mesh_id": 159,
+      "path": "assets/city-core/b0159.rrmesh",
+      "native_vertices": 1188,
+      "source_vertices": 1188,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1243,
+      "mesh_id": 160,
+      "path": "assets/city-core/b0160.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1244,
+      "mesh_id": 161,
+      "path": "assets/city-core/b0161.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1245,
+      "mesh_id": 162,
+      "path": "assets/city-core/b0162.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1246,
+      "mesh_id": 163,
+      "path": "assets/city-core/b0163.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1247,
+      "mesh_id": 164,
+      "path": "assets/city-core/b0164.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1248,
+      "mesh_id": 165,
+      "path": "assets/city-core/b0165.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1249,
+      "mesh_id": 166,
+      "path": "assets/city-core/b0166.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1271,
+      "mesh_id": 167,
+      "path": "assets/city-core/b0167.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1272,
+      "mesh_id": 168,
+      "path": "assets/city-core/b0168.rrmesh",
+      "native_vertices": 1116,
+      "source_vertices": 1116,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1273,
+      "mesh_id": 169,
+      "path": "assets/city-core/b0169.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1152,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1274,
+      "mesh_id": 170,
+      "path": "assets/city-core/b0170.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1275,
+      "mesh_id": 171,
+      "path": "assets/city-core/b0171.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1276,
+      "mesh_id": 172,
+      "path": "assets/city-core/b0172.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1277,
+      "mesh_id": 173,
+      "path": "assets/city-core/b0173.rrmesh",
+      "native_vertices": 864,
+      "source_vertices": 864,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1278,
+      "mesh_id": 174,
+      "path": "assets/city-core/b0174.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1279,
+      "mesh_id": 175,
+      "path": "assets/city-core/b0175.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1280,
+      "mesh_id": 176,
+      "path": "assets/city-core/b0176.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1281,
+      "mesh_id": 177,
+      "path": "assets/city-core/b0177.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1282,
+      "mesh_id": 178,
+      "path": "assets/city-core/b0178.rrmesh",
+      "native_vertices": 1776,
+      "source_vertices": 1776,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1305,
+      "mesh_id": 179,
+      "path": "assets/city-core/b0179.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1306,
+      "mesh_id": 180,
+      "path": "assets/city-core/b0180.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1307,
+      "mesh_id": 181,
+      "path": "assets/city-core/b0181.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1308,
+      "mesh_id": 182,
+      "path": "assets/city-core/b0182.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1309,
+      "mesh_id": 183,
+      "path": "assets/city-core/b0183.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1310,
+      "mesh_id": 184,
+      "path": "assets/city-core/b0184.rrmesh",
+      "native_vertices": 732,
+      "source_vertices": 738,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1311,
+      "mesh_id": 185,
+      "path": "assets/city-core/b0185.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1312,
+      "mesh_id": 186,
+      "path": "assets/city-core/b0186.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1313,
+      "mesh_id": 187,
+      "path": "assets/city-core/b0187.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1314,
+      "mesh_id": 188,
+      "path": "assets/city-core/b0188.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1315,
+      "mesh_id": 189,
+      "path": "assets/city-core/b0189.rrmesh",
+      "native_vertices": 2100,
+      "source_vertices": 2106,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1316,
+      "mesh_id": 190,
+      "path": "assets/city-core/b0190.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1317,
+      "mesh_id": 191,
+      "path": "assets/city-core/b0191.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1318,
+      "mesh_id": 192,
+      "path": "assets/city-core/b0192.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1344,
+      "mesh_id": 193,
+      "path": "assets/city-core/b0193.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1345,
+      "mesh_id": 194,
+      "path": "assets/city-core/b0194.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1346,
+      "mesh_id": 195,
+      "path": "assets/city-core/b0195.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1347,
+      "mesh_id": 196,
+      "path": "assets/city-core/b0196.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1348,
+      "mesh_id": 197,
+      "path": "assets/city-core/b0197.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1349,
+      "mesh_id": 198,
+      "path": "assets/city-core/b0198.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1350,
+      "mesh_id": 199,
+      "path": "assets/city-core/b0199.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1351,
+      "mesh_id": 200,
+      "path": "assets/city-core/b0200.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1352,
+      "mesh_id": 201,
+      "path": "assets/city-core/b0201.rrmesh",
+      "native_vertices": 1884,
+      "source_vertices": 1884,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1353,
+      "mesh_id": 202,
+      "path": "assets/city-core/b0202.rrmesh",
+      "native_vertices": 1404,
+      "source_vertices": 1410,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1354,
+      "mesh_id": 203,
+      "path": "assets/city-core/b0203.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1355,
+      "mesh_id": 204,
+      "path": "assets/city-core/b0204.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1356,
+      "mesh_id": 205,
+      "path": "assets/city-core/b0205.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1357,
+      "mesh_id": 206,
+      "path": "assets/city-core/b0206.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1358,
+      "mesh_id": 207,
+      "path": "assets/city-core/b0207.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1380,
+      "mesh_id": 208,
+      "path": "assets/city-core/b0208.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1381,
+      "mesh_id": 209,
+      "path": "assets/city-core/b0209.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1382,
+      "mesh_id": 210,
+      "path": "assets/city-core/b0210.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1383,
+      "mesh_id": 211,
+      "path": "assets/city-core/b0211.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1384,
+      "mesh_id": 212,
+      "path": "assets/city-core/b0212.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1385,
+      "mesh_id": 213,
+      "path": "assets/city-core/b0213.rrmesh",
+      "native_vertices": 972,
+      "source_vertices": 978,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1386,
+      "mesh_id": 214,
+      "path": "assets/city-core/b0214.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1387,
+      "mesh_id": 215,
+      "path": "assets/city-core/b0215.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1388,
+      "mesh_id": 216,
+      "path": "assets/city-core/b0216.rrmesh",
+      "native_vertices": 1956,
+      "source_vertices": 1962,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1389,
+      "mesh_id": 217,
+      "path": "assets/city-core/b0217.rrmesh",
+      "native_vertices": 1812,
+      "source_vertices": 1812,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1390,
+      "mesh_id": 218,
+      "path": "assets/city-core/b0218.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1391,
+      "mesh_id": 219,
+      "path": "assets/city-core/b0219.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1392,
+      "mesh_id": 220,
+      "path": "assets/city-core/b0220.rrmesh",
+      "native_vertices": 732,
+      "source_vertices": 738,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1393,
+      "mesh_id": 221,
+      "path": "assets/city-core/b0221.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1394,
+      "mesh_id": 222,
+      "path": "assets/city-core/b0222.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1413,
+      "mesh_id": 223,
+      "path": "assets/city-core/b0223.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1414,
+      "mesh_id": 224,
+      "path": "assets/city-core/b0224.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1415,
+      "mesh_id": 225,
+      "path": "assets/city-core/b0225.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1416,
+      "mesh_id": 226,
+      "path": "assets/city-core/b0226.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1417,
+      "mesh_id": 227,
+      "path": "assets/city-core/b0227.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1418,
+      "mesh_id": 228,
+      "path": "assets/city-core/b0228.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1419,
+      "mesh_id": 229,
+      "path": "assets/city-core/b0229.rrmesh",
+      "native_vertices": 2028,
+      "source_vertices": 2034,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1420,
+      "mesh_id": 230,
+      "path": "assets/city-core/b0230.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1421,
+      "mesh_id": 231,
+      "path": "assets/city-core/b0231.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1422,
+      "mesh_id": 232,
+      "path": "assets/city-core/b0232.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1423,
+      "mesh_id": 233,
+      "path": "assets/city-core/b0233.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1424,
+      "mesh_id": 234,
+      "path": "assets/city-core/b0234.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1425,
+      "mesh_id": 235,
+      "path": "assets/city-core/b0235.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1426,
+      "mesh_id": 236,
+      "path": "assets/city-core/b0236.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1427,
+      "mesh_id": 237,
+      "path": "assets/city-core/b0237.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1447,
+      "mesh_id": 238,
+      "path": "assets/city-core/b0238.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1448,
+      "mesh_id": 239,
+      "path": "assets/city-core/b0239.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1449,
+      "mesh_id": 240,
+      "path": "assets/city-core/b0240.rrmesh",
+      "native_vertices": 1956,
+      "source_vertices": 1962,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1450,
+      "mesh_id": 241,
+      "path": "assets/city-core/b0241.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1451,
+      "mesh_id": 242,
+      "path": "assets/city-core/b0242.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1452,
+      "mesh_id": 243,
+      "path": "assets/city-core/b0243.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1453,
+      "mesh_id": 244,
+      "path": "assets/city-core/b0244.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1998,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1454,
+      "mesh_id": 245,
+      "path": "assets/city-core/b0245.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1455,
+      "mesh_id": 246,
+      "path": "assets/city-core/b0246.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1456,
+      "mesh_id": 247,
+      "path": "assets/city-core/b0247.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1457,
+      "mesh_id": 248,
+      "path": "assets/city-core/b0248.rrmesh",
+      "native_vertices": 2208,
+      "source_vertices": 2214,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1458,
+      "mesh_id": 249,
+      "path": "assets/city-core/b0249.rrmesh",
+      "native_vertices": 1116,
+      "source_vertices": 1122,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1483,
+      "mesh_id": 250,
+      "path": "assets/city-core/b0250.rrmesh",
+      "native_vertices": 2028,
+      "source_vertices": 2034,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1484,
+      "mesh_id": 251,
+      "path": "assets/city-core/b0251.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1485,
+      "mesh_id": 252,
+      "path": "assets/city-core/b0252.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1486,
+      "mesh_id": 253,
+      "path": "assets/city-core/b0253.rrmesh",
+      "native_vertices": 1116,
+      "source_vertices": 1116,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1487,
+      "mesh_id": 254,
+      "path": "assets/city-core/b0254.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1488,
+      "mesh_id": 255,
+      "path": "assets/city-core/b0255.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1489,
+      "mesh_id": 256,
+      "path": "assets/city-core/b0256.rrmesh",
+      "native_vertices": 1848,
+      "source_vertices": 1854,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1490,
+      "mesh_id": 257,
+      "path": "assets/city-core/b0257.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1491,
+      "mesh_id": 258,
+      "path": "assets/city-core/b0258.rrmesh",
+      "native_vertices": 1224,
+      "source_vertices": 1230,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1492,
+      "mesh_id": 259,
+      "path": "assets/city-core/b0259.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1493,
+      "mesh_id": 260,
+      "path": "assets/city-core/b0260.rrmesh",
+      "native_vertices": 1224,
+      "source_vertices": 1230,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1494,
+      "mesh_id": 261,
+      "path": "assets/city-core/b0261.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1495,
+      "mesh_id": 262,
+      "path": "assets/city-core/b0262.rrmesh",
+      "native_vertices": 1332,
+      "source_vertices": 1332,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1496,
+      "mesh_id": 263,
+      "path": "assets/city-core/b0263.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1497,
+      "mesh_id": 264,
+      "path": "assets/city-core/b0264.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1516,
+      "mesh_id": 265,
+      "path": "assets/city-core/b0265.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1517,
+      "mesh_id": 266,
+      "path": "assets/city-core/b0266.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1518,
+      "mesh_id": 267,
+      "path": "assets/city-core/b0267.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1519,
+      "mesh_id": 268,
+      "path": "assets/city-core/b0268.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1520,
+      "mesh_id": 269,
+      "path": "assets/city-core/b0269.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1521,
+      "mesh_id": 270,
+      "path": "assets/city-core/b0270.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1522,
+      "mesh_id": 271,
+      "path": "assets/city-core/b0271.rrmesh",
+      "native_vertices": 1224,
+      "source_vertices": 1224,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1523,
+      "mesh_id": 272,
+      "path": "assets/city-core/b0272.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1524,
+      "mesh_id": 273,
+      "path": "assets/city-core/b0273.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1525,
+      "mesh_id": 274,
+      "path": "assets/city-core/b0274.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1526,
+      "mesh_id": 275,
+      "path": "assets/city-core/b0275.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1527,
+      "mesh_id": 276,
+      "path": "assets/city-core/b0276.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1528,
+      "mesh_id": 277,
+      "path": "assets/city-core/b0277.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1529,
+      "mesh_id": 278,
+      "path": "assets/city-core/b0278.rrmesh",
+      "native_vertices": 1260,
+      "source_vertices": 1260,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1530,
+      "mesh_id": 279,
+      "path": "assets/city-core/b0279.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1553,
+      "mesh_id": 280,
+      "path": "assets/city-core/b0280.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 666,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1554,
+      "mesh_id": 281,
+      "path": "assets/city-core/b0281.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1555,
+      "mesh_id": 282,
+      "path": "assets/city-core/b0282.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1556,
+      "mesh_id": 283,
+      "path": "assets/city-core/b0283.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1557,
+      "mesh_id": 284,
+      "path": "assets/city-core/b0284.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1558,
+      "mesh_id": 285,
+      "path": "assets/city-core/b0285.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1559,
+      "mesh_id": 286,
+      "path": "assets/city-core/b0286.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1152,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1560,
+      "mesh_id": 287,
+      "path": "assets/city-core/b0287.rrmesh",
+      "native_vertices": 1920,
+      "source_vertices": 1920,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1561,
+      "mesh_id": 288,
+      "path": "assets/city-core/b0288.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1562,
+      "mesh_id": 289,
+      "path": "assets/city-core/b0289.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1563,
+      "mesh_id": 290,
+      "path": "assets/city-core/b0290.rrmesh",
+      "native_vertices": 2100,
+      "source_vertices": 2106,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1564,
+      "mesh_id": 291,
+      "path": "assets/city-core/b0291.rrmesh",
+      "native_vertices": 1404,
+      "source_vertices": 1410,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1565,
+      "mesh_id": 292,
+      "path": "assets/city-core/b0292.rrmesh",
+      "native_vertices": 1920,
+      "source_vertices": 1926,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1566,
+      "mesh_id": 293,
+      "path": "assets/city-core/b0293.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1567,
+      "mesh_id": 294,
+      "path": "assets/city-core/b0294.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1592,
+      "mesh_id": 295,
+      "path": "assets/city-core/b0295.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1593,
+      "mesh_id": 296,
+      "path": "assets/city-core/b0296.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1594,
+      "mesh_id": 297,
+      "path": "assets/city-core/b0297.rrmesh",
+      "native_vertices": 1296,
+      "source_vertices": 1296,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1595,
+      "mesh_id": 298,
+      "path": "assets/city-core/b0298.rrmesh",
+      "native_vertices": 1008,
+      "source_vertices": 1008,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1596,
+      "mesh_id": 299,
+      "path": "assets/city-core/b0299.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1597,
+      "mesh_id": 300,
+      "path": "assets/city-core/b0300.rrmesh",
+      "native_vertices": 1992,
+      "source_vertices": 1992,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1598,
+      "mesh_id": 301,
+      "path": "assets/city-core/b0301.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1599,
+      "mesh_id": 302,
+      "path": "assets/city-core/b0302.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1600,
+      "mesh_id": 303,
+      "path": "assets/city-core/b0303.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1601,
+      "mesh_id": 304,
+      "path": "assets/city-core/b0304.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1158,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1602,
+      "mesh_id": 305,
+      "path": "assets/city-core/b0305.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1603,
+      "mesh_id": 306,
+      "path": "assets/city-core/b0306.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1604,
+      "mesh_id": 307,
+      "path": "assets/city-core/b0307.rrmesh",
+      "native_vertices": 972,
+      "source_vertices": 972,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1605,
+      "mesh_id": 308,
+      "path": "assets/city-core/b0308.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1606,
+      "mesh_id": 309,
+      "path": "assets/city-core/b0309.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1607,
+      "mesh_id": 310,
+      "path": "assets/city-core/b0310.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1608,
+      "mesh_id": 311,
+      "path": "assets/city-core/b0311.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1609,
+      "mesh_id": 312,
+      "path": "assets/city-core/b0312.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1610,
+      "mesh_id": 313,
+      "path": "assets/city-core/b0313.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1633,
+      "mesh_id": 314,
+      "path": "assets/city-core/b0314.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1634,
+      "mesh_id": 315,
+      "path": "assets/city-core/b0315.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1635,
+      "mesh_id": 316,
+      "path": "assets/city-core/b0316.rrmesh",
+      "native_vertices": 2136,
+      "source_vertices": 2136,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1636,
+      "mesh_id": 317,
+      "path": "assets/city-core/b0317.rrmesh",
+      "native_vertices": 696,
+      "source_vertices": 702,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1637,
+      "mesh_id": 318,
+      "path": "assets/city-core/b0318.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1638,
+      "mesh_id": 319,
+      "path": "assets/city-core/b0319.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1639,
+      "mesh_id": 320,
+      "path": "assets/city-core/b0320.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1640,
+      "mesh_id": 321,
+      "path": "assets/city-core/b0321.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1641,
+      "mesh_id": 322,
+      "path": "assets/city-core/b0322.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1642,
+      "mesh_id": 323,
+      "path": "assets/city-core/b0323.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1643,
+      "mesh_id": 324,
+      "path": "assets/city-core/b0324.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1644,
+      "mesh_id": 325,
+      "path": "assets/city-core/b0325.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1645,
+      "mesh_id": 326,
+      "path": "assets/city-core/b0326.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1646,
+      "mesh_id": 327,
+      "path": "assets/city-core/b0327.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1647,
+      "mesh_id": 328,
+      "path": "assets/city-core/b0328.rrmesh",
+      "native_vertices": 588,
+      "source_vertices": 588,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1648,
+      "mesh_id": 329,
+      "path": "assets/city-core/b0329.rrmesh",
+      "native_vertices": 1884,
+      "source_vertices": 1884,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1649,
+      "mesh_id": 330,
+      "path": "assets/city-core/b0330.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1650,
+      "mesh_id": 331,
+      "path": "assets/city-core/b0331.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1671,
+      "mesh_id": 332,
+      "path": "assets/city-core/b0332.rrmesh",
+      "native_vertices": 2100,
+      "source_vertices": 2106,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1672,
+      "mesh_id": 333,
+      "path": "assets/city-core/b0333.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1673,
+      "mesh_id": 334,
+      "path": "assets/city-core/b0334.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1674,
+      "mesh_id": 335,
+      "path": "assets/city-core/b0335.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1675,
+      "mesh_id": 336,
+      "path": "assets/city-core/b0336.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1676,
+      "mesh_id": 337,
+      "path": "assets/city-core/b0337.rrmesh",
+      "native_vertices": 2208,
+      "source_vertices": 2214,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1677,
+      "mesh_id": 338,
+      "path": "assets/city-core/b0338.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1678,
+      "mesh_id": 339,
+      "path": "assets/city-core/b0339.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1679,
+      "mesh_id": 340,
+      "path": "assets/city-core/b0340.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1680,
+      "mesh_id": 341,
+      "path": "assets/city-core/b0341.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1681,
+      "mesh_id": 342,
+      "path": "assets/city-core/b0342.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1682,
+      "mesh_id": 343,
+      "path": "assets/city-core/b0343.rrmesh",
+      "native_vertices": 468,
+      "source_vertices": 468,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1683,
+      "mesh_id": 344,
+      "path": "assets/city-core/b0344.rrmesh",
+      "native_vertices": 2136,
+      "source_vertices": 2142,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1684,
+      "mesh_id": 345,
+      "path": "assets/city-core/b0345.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1685,
+      "mesh_id": 346,
+      "path": "assets/city-core/b0346.rrmesh",
+      "native_vertices": 660,
+      "source_vertices": 660,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1686,
+      "mesh_id": 347,
+      "path": "assets/city-core/b0347.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1687,
+      "mesh_id": 348,
+      "path": "assets/city-core/b0348.rrmesh",
+      "native_vertices": 1080,
+      "source_vertices": 1080,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1688,
+      "mesh_id": 349,
+      "path": "assets/city-core/b0349.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1713,
+      "mesh_id": 350,
+      "path": "assets/city-core/b0350.rrmesh",
+      "native_vertices": 648,
+      "source_vertices": 654,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1714,
+      "mesh_id": 351,
+      "path": "assets/city-core/b0351.rrmesh",
+      "native_vertices": 1152,
+      "source_vertices": 1152,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1715,
+      "mesh_id": 352,
+      "path": "assets/city-core/b0352.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1716,
+      "mesh_id": 353,
+      "path": "assets/city-core/b0353.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1717,
+      "mesh_id": 354,
+      "path": "assets/city-core/b0354.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1718,
+      "mesh_id": 355,
+      "path": "assets/city-core/b0355.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1719,
+      "mesh_id": 356,
+      "path": "assets/city-core/b0356.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1720,
+      "mesh_id": 357,
+      "path": "assets/city-core/b0357.rrmesh",
+      "native_vertices": 108,
+      "source_vertices": 108,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1721,
+      "mesh_id": 358,
+      "path": "assets/city-core/b0358.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1722,
+      "mesh_id": 359,
+      "path": "assets/city-core/b0359.rrmesh",
+      "native_vertices": 1812,
+      "source_vertices": 1812,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1723,
+      "mesh_id": 360,
+      "path": "assets/city-core/b0360.rrmesh",
+      "native_vertices": 540,
+      "source_vertices": 546,
+      "omitted_board_vertices": 6,
+      "omitted_board_planes": 1,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1724,
+      "mesh_id": 361,
+      "path": "assets/city-core/b0361.rrmesh",
+      "native_vertices": 624,
+      "source_vertices": 624,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    },
+    {
+      "catalog_id": 1725,
+      "mesh_id": 362,
+      "path": "assets/city-core/b0362.rrmesh",
+      "native_vertices": 576,
+      "source_vertices": 576,
+      "omitted_board_vertices": 0,
+      "omitted_board_planes": 0,
+      "attributes_and_base_palette_byte_exact": true
+    }
+  ],
+  "failures": 0
+}

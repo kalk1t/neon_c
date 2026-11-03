@@ -1,0 +1,49 @@
+{
+  "resource": "retexture",
+  "task": {
+    "id": "01a19422-c409-756c-b9c1-1bc7c6572909",
+    "type": "retexture",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793486670262,
+    "started_at": 1793486670267,
+    "finished_at": 1793486719642,
+    "expires_at": 1793745919642,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/model.glb?Expires=1793745919&Signature=dvDIYfoPkTdoKm3qz97RdN9Vrvtj9cLJdH~Vm1x3Fvyo8dZLv0a44XZkhVVdI3LcPR1q7XvjfoBh-p7PeGGwQAKv1ncCPdavZfxVF9s7PVJVmHg0qDsMbdbnaVmdwCwgAhsqESHH19VUvskfV~~Uba-AF2n7VKpt5fvMfdgszXABuU41XdqETLy-zc-c~A~uugN8UAcYR8RHbf9j9kryVW~A~~TlwqTPwfi4oIZbrbyxJHJaUk6OHnb1vNlPmDGdpT8cuiEZz6CCm3huM5~5BzWbVcA15gqA1~FVCcRA4qtXD3sAicVbOmCxw9PeBi4moNWHS9YbMvSAkhfgeMQU1A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/texture_0.png?Expires=1793745919&Signature=Q78W7ohFBLASdwHSSC0zAwl3FilYEBUoRZzfEha52CMgPd0oKyD2tMfsXswu7UgEyQ4EYs0J6W0m2-13OqhnWEG6n-MuvXrt64rIZETMQY1g3KNrzrF5gKYyOvS6GpBUtyRIYBqk3nSyA2HJExzixNGFjjsTSq5g3-yW~089Zf4iIZynXMKBhElokRsDM3D9VIHA-RltGaKnLQ7i4aIoKuCtIOHHNtzkHBTO8R673Seg-zZFKQQU-NnefvWQRCK-U4ozQxghVgAKR--2dB2ekFgJPKEyw3IsY9OiwgeUMhJSYD1X~X3heqY-VoPwzVz1-n558LqkOU5BCtNaJgHF6g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/texture_0_metallic.png?Expires=1793745919&Signature=SYSzvuJWNmMyOQpuygP-1tGY1ZEKQv3xznkjjU-OplE6koHdFDcEVPuWpdfl-dMboklwHxAO0mUWAU451ZUzX9~eoqBdYj0TYuLfIox7W6zLngqZtP2OTJ92AHl7TmdHUaFePICKDszEUSln7mQ-aA-cJxXVD04rZaWL9fUqAm1RfZjm6hf91GehOIc1WmLRGFxZ9ba1lR2DHVyF-odGVR6Y~HKj-Cfwf01onlwTBZDKFA2hR4qXWHAtTIj9Vc8Rsn-fMecRqfH2QMFRiby1fgdbnanYLi6uvJaLiUGG4z3pPEBoiF~rdEwTL0US6KRIHh6mvP16CqWiVP-XrFb2BA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/texture_0_normal.png?Expires=1793745919&Signature=m8mMsSTijB7KAI~wPn-4AyJ~f32wZkxXEJkTDSJUD-MlxvULl7LSMQtVOSPBsYyuJhI3m4dORdIDFgc0UrY8ufHU4Rbbq5kV~XqfXJ4Bpo3lTlg6hbb5j99mRKSvc29JljX28vo7zEp5eOjIUqPJJuLcTq9P4UIiD6ToGnbvP5QfDIkm1-oo2zCYVlCQ3gpv0Tla-NJ4rMlQV8weVt6j~9GZmzdflzenhCn1IKuiCBeL63E2dKibZbCwfNC0MLruJIWxeNqs11mvt0-Sz2S8PkOTN3m96yyysMKJfhzeRGn~Ix0J4OS94JFU4~qnlO~bqS10xrOcLtb7uN9jciabxw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/texture_0_roughness.png?Expires=1793745919&Signature=Ec9DWkG3qGjYgasdKq0hIHIdjrUZB~h9HfrgJ3VSivdd~ILIroQswiN~Kv0cyqWItkZ~f-PDCuDzSAShwtL1UEnDnukokevdbqG0RqQXZHYu1FPkEplTTvWi3CjAtUtGXLkrcFFhZyY1Eg8qCQ0eXK6F2hd3aYQrAMV~VA25mviQxh9-TRim23zzvsHjSXWTNc-X9WrTbcyup83zBWMZ4Dag-3YyZUPNDpwT-7RMLD8F1Lf95txKWTuuzcXKvC26D06GBlRyGulq4DBWrLE39cSGFr9CdqVmfW43h2pzt4fZvEkum2DsRA3kj6mhXLzUTNINX9vlNZewFsBq0SpCAQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/preview.png?Expires=1793745919&Signature=Tjv3OosNFlEeNVzUgGjK7bysXEIUtQCr7jbG0gNDqY9uWVs6iS2~5UvvxJMzHgFbbCmEqV~b0KrYnVZBFwXrJHQUKQtSU791~BrisRCwD9Awslt97xeH62keY5hlqhcUho2HX8WkBjsVNET4NQ2rl0pdmdRCnpJDAfFs7T66zBs9jJ5S-4VjLnhWHXSS3tlfmCoVpJ3c5G4yaB3~dy7k7EFJ1SOfZ6xMtcpTwr2xxc4XadQjqEfGjp9C3J8vBvnv9Llp3Iz0iT8GRgj14pZtM9XwF~M5kUPQlzeOrw0xNyREMmLqR0Kayvyyh7SNcHnuQcW3zYpX1Dz3zD8PMMg2qg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "text_style_prompt": "Glossy obsidian black armored sports car body panels with brushed chrome trim edges. Bright saturated hot-magenta neon light strips (color #ff2bd6) painted as thin glowing lines: along every armor panel seam on the hood, around the rectangular headlights, along both flanks and doors, outlining the rear spoiler edge, and as rings around the rims of the four cylindrical turbine pods. Small cyan (#19e6ff) accents inside the turbine fans and the three rear exhaust nozzles. Strong, clearly visible magenta lines on a dark black body, cyberpunk neon racer.",
+    "image_style_url": "",
+    "art_style": "realistic",
+    "object_prompt": "",
+    "style_prompt": "",
+    "negative_prompt": "",
+    "model_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a19422-c409-756c-b9c1-1bc7c6572909/output/model.glb?Expires=1793745919&Signature=dvDIYfoPkTdoKm3qz97RdN9Vrvtj9cLJdH~Vm1x3Fvyo8dZLv0a44XZkhVVdI3LcPR1q7XvjfoBh-p7PeGGwQAKv1ncCPdavZfxVF9s7PVJVmHg0qDsMbdbnaVmdwCwgAhsqESHH19VUvskfV~~Uba-AF2n7VKpt5fvMfdgszXABuU41XdqETLy-zc-c~A~uugN8UAcYR8RHbf9j9kryVW~A~~TlwqTPwfi4oIZbrbyxJHJaUk6OHnb1vNlPmDGdpT8cuiEZz6CCm3huM5~5BzWbVcA15gqA1~FVCcRA4qtXD3sAicVbOmCxw9PeBi4moNWHS9YbMvSAkhfgeMQU1A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "car03\\retex2\\model.glb",
+    "car03\\retex2\\thumbnail.png",
+    "car03\\retex2\\texture_0_base_color.png",
+    "car03\\retex2\\texture_0_metallic.png",
+    "car03\\retex2\\texture_0_normal.png",
+    "car03\\retex2\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-10-31T22:45:26.382Z"
+}

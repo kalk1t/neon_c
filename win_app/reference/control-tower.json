@@ -1,0 +1,76 @@
+{
+  "captured_utc": "2026-11-02T19:16:00.254Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/skyprops.js",
+      "sha256": "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+    },
+    {
+      "path": "src/props.js",
+      "sha256": "9d1a97df6f0988eec60c91490c58a789da20c337c110df97f5ab58affa9a2033"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    },
+    {
+      "path": "src/car.js",
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "public/models/props/control_tower.glb",
+      "sha256": "12516829ad2502f263bc3e515e693ad635b0b45429f503245a8509db914b9c7f"
+    },
+    {
+      "path": "public/models/props/city_tower.glb",
+      "sha256": "826abd2193747f62159b9528b39ca8351e17bbbbeed69f6e6876269cd1b7f30b"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "placement_cases": 12,
+  "fallback_bounds": {
+    "min": [
+      -95.39999961853027,
+      -349,
+      -5.399999618530273
+    ],
+    "max": [
+      -50,
+      194.1999969482422,
+      25.399999618530273
+    ]
+  },
+  "model_size": [
+    0.48775726556777954,
+    0.9893424855545163,
+    0.539262056350708
+  ],
+  "glow": 2.6,
+  "city_inventory": {
+    "source": "public/models/props/city_tower.glb",
+    "bytes": 898516,
+    "vertices": 14357,
+    "bounds": {
+      "min": [
+        -0.16935884952545166,
+        0,
+        -0.16718833148479462
+      ],
+      "max": [
+        0.16935884952545166,
+        1,
+        0.16718833148479462
+      ]
+    },
+    "remaining": "Canonical city RNG/layout/shaft geometry must precede crowns; no arbitrary crowns added to native prototype buildings."
+  },
+  "scope": "Actual dressScenery control-tower replacement transforms; no city layout, accounts, scene renderer or paid generation."
+}

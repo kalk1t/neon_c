@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a1949f-ef2d-7474-af27-ce1af4ee7491",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494871909,
+    "started_at": 1793494871924,
+    "finished_at": 1793494916415,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/model.glb?Expires=4947091200&Signature=o~cLuvLBdWFRrjkzA~C1bK7~NPkoBJN5XTOSIAY9uONhWv7AdGJ~T1zpLW4XAbYNax-TtkcIwec36neRaNnkTCYrTvVYtumRXEZVgwOtd7XVbMCNPDOzUomqtk~3I2cvEEKI6y-qJz3FSMb5aNPdWLcorgphYx1bN4oUbw9JC8NdHNzT2uc5nZH7QKA3JCQyuVHCxH2~cJbkSFCWKgapZOX~w5tDnxzEdDrE3rUNRsBK2DHYuWyQCLSXgmnPegQDhNNdnwJjQLN8KFJ0aQTEJMMXDotHuLpVcGYft-sqntgCEqUnubZYB7JllwMfm-spWdR0sFljff~zwz-6ZZ8Jwg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/texture_0.png?Expires=4947091200&Signature=CIp5cv6wqZKOZ4BOmu0XtLQ44HKLisIopDTzyV4bxhbRlOWIMJmjmqxLV59-D2tn-NqnsIgH6LFo8U2DS~9HQhwwfDu9wjbY~u9RncfKZGljL1ur6uqeZSN7xOsISwa4qstGjELQ977WlPkoi7z7aIF-9HxpBqgdA4FCTSM-6sQ~seyt2hbOQyk50UCk4vcTGDGm5nKelxi~n5qGAWDrQgplS2fl6PglP4jKAuaWFhIp58o44QB9VUUZ2GAMdlDc~xzl2J-mpZOfNtut5rk8vwsh3KBiFLh9GyckIyMo927phvM2Y-H3-AUPOmlbZqjqnVHmZ6XFAWQfIxczQFNXeQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/texture_0_metallic.png?Expires=4947091200&Signature=UzUC4TvFx35e5zWZRG7kQ7S6Mb2vLFqtSt6Yy1pk39fFWXT07O7Sg6H08quJ0BjlQxAzPWXkwZ4~j6k885ShMB4OSXDjKaz4NNuoUcxwEBAY6tG9ahIuT0SYCoUhwcI-ZeOJ8xsGfq~SjCxne4-w1xsLeBBlwJ2nNiLgd-sLhZuijcM2j5s9uLWYhkDcHC0cEPzLTOslc8~42cTNn3TLH679R~ibHYleHHqLEL9uN8JlEyVaj7LzHCGm7b3URTjk6DxBZL~LgqTkeHfJcyLYaYbmc4RDZye38bvZE0lMYZFz1OQHO0lEeffaqEZsrYEJ4lwTKYKGept1ovYGOrg1Aw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/texture_0_normal.png?Expires=4947091200&Signature=UWj8aqKm6ZS55AKtjdmlz~oQNCzvpHZoj-wZdjampw30g-hRO3~NHwBLGKGIVKWgGwXazDkof9K17k6wxJtmxbb8L-54khtnSHXD2e1vAl6iQ4MUQs2c0mjuj6g8~9zQmRNPnQc7qZ8a-dxwtJeUZWWHU6cWCDX8NPOn~xhtchHpcqHJk6wKXuh25Zvy6~E7xf1inSNmViH3uxsAsUji1HZq3vsNSH2j10OyqHUJ7pgECM5mEpbEkNyddLuyTMZgXNjlB9swUe3TGukNq088Jc4vGX2EQSmGvF5wYIvcMrwT~U~oFUPhtp5dQMKsxLjBFf450vrL7rogNb8kkhV4jA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/texture_0_roughness.png?Expires=4947091200&Signature=MsklDR7Rmoymsv7ab2Td0rcW6e8oBORenECkCKTzYFCb9l3QMC9YMfTmp1KSwsqMo7pK6FpESwEMSVCM4xJyZDGqF2q8bErisMwFjFDsdkWfRBQKMVA2ca3Z4pBz0TNwdaG3QJaiDz1e2cc-vKqx1zyPlCYnbXrdtNmWsj7ffmukI2DRX87hoRqgF7RLrPsei57vHpxYhmCZrjIMvZg7kPZqXORpSFN~NCN52jI10XKI75sHmQXqpUFEYUwTu85c2F6DRKpqljDk5sq1TKkmAXIRua9RPD1alEcAeq4jVvyVYj7ScOt1yW5RGFfBOQgWD~8vVnzO-dOqyMnVcXmTFw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-ef2d-7474-af27-ce1af4ee7491/output/preview.png?Expires=4947091200&Signature=fTXRRypGqAKP~p0hsre5VVrS1Z1ZlbdpBMdx6NHoPZo1Oh0sJwuMgFBpwu~ONnBt-n0as2vp7DUFMD~fxnR1a0H12KidgrFdEPq0MqariVRh1srj-v0A78fClEMWh38MGxZQtJAuJ5-nUBd1TLfGHu1mhMxj1SLlLpIYKMjPDgXFaVUfg-cl5qTSNFbNgsqt9CtFei3croqdUkyaEW8hBAb4L-jlp91rgEp1lWOGTbYT1Fy8o1aNxLdYA-JmX1C5OQcp2aK109S2ayYabJVeI1hKITLIWI-LkALJzZaIeo9vz7nGct2clApGczTQ~6ST8a1XcXeG3CIZAlnAbgqq-g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "futuristic cyberpunk courier drone with four ducted fans, sleek dark gunmetal body, glowing cyan light strips, single object, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 858401033,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "drone\\model.glb",
+    "drone\\thumbnail.png",
+    "drone\\texture_0_base_color.png",
+    "drone\\texture_0_metallic.png",
+    "drone\\texture_0_normal.png",
+    "drone\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:02:00.737Z"
+}

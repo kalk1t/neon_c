@@ -1,0 +1,76 @@
+{
+  "reference\\verification-20261102\\city-repacking-native-twenty-tests.log": "be473054fa10fd68cf57111dc12f03214202fb5114d56a6a3bd6db5e16026686",
+  "reference\\verification-20261102\\city-repacking-wasm-twenty-tests.log": "188a4d5233581e04733364ac6362fc0f5b3de64c5ea1469cbf7728da45092d3e",
+  "build/city-repacking-native/bin/RoadstersRace.exe": {
+    "sha256": "a7ed753c6caddbc6641d7295ba11b3e72a1ed99d8169d3f504d15d98926195d8",
+    "bytes": 879616
+  },
+  "build/city-repacking-native/rr_city_repacking_tests.exe": {
+    "sha256": "5135bdd1ce5705ea2510ac11c7bd53d6c38063dc6ca1ac134a657878feda28ba",
+    "bytes": 2607616
+  },
+  "build/city-repacking-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/city-repacking-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/city-repacking-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/city-repacking-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "133f583951d724a469a63d171578f2a33c3f0de8927eb3fd36de90aa33279b65",
+    "tools/race-rules-check/CMakeLists.txt": "5866bbedd1a54b30981249a681f3c40c9f5c3317ba3ef9b91b96841f83fcf2de",
+    "src/experimental/rr_city_repacking.h": "94abae6b675acfe250e75a3338729f03c1a5a941b627a26b07d0b55692f45d93",
+    "src/experimental/rr_city_repacking.c": "c5afc23e16e18b3d2cb32716fb5d9c1289749c18310c93a097b571c6b3eb17b7",
+    "src/experimental/generated_city_repacking.h": "57895b51390f8b4fe158ed468eb69b9dc3dde7ef8d6b0b57113de6a5ea45602f",
+    "tests/test_city_repacking.c": "4b12f7508eac09aa35203752ae23885916218f75875b8e7b1afd23404dc7be16",
+    "tests/generated_city_repacking_reference.h": "e4f922e2698b57feae795cc96bf8b6048320a0d585f012600dd745412eb5d2f2",
+    "tools/capture-city-repacking.mjs": "c23a8f06991159f9279d397637770aa7d2dfbcf887475ee56cac2f2d74d36fad",
+    "reference/city-repacking.json": "9584922ee766ddf855c7499a4ff5f3dcd32a121a7fe9c3d9277d95fcdee3df21",
+    "reference/city-repacking-geometry.bin": "1f912789fc48aa1eca8d31e07ad6fb8426fe929cf07c992467e5c59b92215fae"
+  },
+  "source_geometry_verified_byte_exact_by_material": [
+    "74c33b92e1b10e9dd1fe4273c3fc281d7699be1291a7730216e383fe412cceae",
+    "02dd5f32b2a7ae578ffd56119bc1d432d011e07df7e54a9ddac742c646e1923a",
+    "6e332b1c99f34edfeda9f25b720ec5e143dd4bd9458776ed6847f16dec86f04f",
+    "9939147f2225e2970ea8ff74fa1f3202528187a5d653f1200b43a3bda64d0aa1",
+    "9648b5eeb7afb7aed07677f17ff0e504c0bfa10b8f4365446928ce43180cb1d0"
+  ],
+  "runtime_preload_and_game_sources_unchanged": true,
+  "source_hashes_rechecked": true,
+  "scope": {
+    "primitive_records": 38352,
+    "source_geometry_fixture_bytes": 54247104,
+    "test_only_metadata_bytes": 2454528,
+    "representative_poses": 264,
+    "near_max_vertices": 76434,
+    "material_draws_max": 5,
+    "source_max_vertices": 1674882,
+    "near_distance_omission_cases": 262,
+    "source_vertex_budget_rejections": 246,
+    "ideal_worst_view_union_vertices": 147432,
+    "union_pair": [
+      136,
+      172
+    ],
+    "runtime_unrepresented_grid_towers": 1897
+  },
+  "bounds": {
+    "vertices": 141312,
+    "draws": 64,
+    "uploads_per_step": 2,
+    "output_float_attribute_bytes": 4521984,
+    "legacy_rgba_attribute_charge_bytes": 5087232,
+    "source_fixture_shipped_in_game": false
+  },
+  "integration": "STOPPED for this strategy:near packet is diagnostic distance subset,246 full-source requests exceed bound,arbitrary view-pair union can exceed it. No runtime integration or cap/fidelity change.",
+  "graphics": "Unrun;window3148188 state unresolved,no desktop/log retry or new graphics instance,its executable/bin assets untouched."
+}

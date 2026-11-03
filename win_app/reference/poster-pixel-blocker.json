@@ -1,0 +1,298 @@
+{
+  "action": "Obtain exact 512x1024 source billboardTexture Canvas RGBA raster for decoding/pixel comparison",
+  "target": "game/src/materials.js: billboardTexture() procedural CanvasTexture, source hash in poster-reference.json",
+  "state": "Pending; no supplied source-owned raster file, no browser/graphics execution authorized while window3148188 remains unresolved. Not attempted or denied again.",
+  "completed": "Actual-source UV transform, base-level bilinear addresses, clamping, quadrant orientation and material binding parameters qualified headlessly; previous PNG decoder/auditor exists for a future raster.",
+  "pixels_verified": false,
+  "project_image_inventory": [
+    {
+      "path": "game/public/og-image.jpg",
+      "bytes": 187891
+    },
+    {
+      "path": "game/public/brand/logo-120.png",
+      "bytes": 5769
+    },
+    {
+      "path": "game/public/brand/logo-512.png",
+      "bytes": 37552
+    },
+    {
+      "path": "game/public/cockpit/attack.webp",
+      "bytes": 4994
+    },
+    {
+      "path": "game/public/cockpit/boost.webp",
+      "bytes": 9350
+    },
+    {
+      "path": "game/public/cockpit/reticle.webp",
+      "bytes": 4870
+    },
+    {
+      "path": "game/public/cockpit/warning.webp",
+      "bytes": 6770
+    },
+    {
+      "path": "game/public/fx/killeraura_01.webp",
+      "bytes": 63282
+    },
+    {
+      "path": "game/public/fx/killeraura_02.webp",
+      "bytes": 109010
+    },
+    {
+      "path": "game/public/fx/killeraura_03.webp",
+      "bytes": 106314
+    },
+    {
+      "path": "game/public/fx/voidaura_01.webp",
+      "bytes": 61362
+    },
+    {
+      "path": "game/public/fx/voidaura_02.webp",
+      "bytes": 107904
+    },
+    {
+      "path": "game/public/fx/voidaura_03.webp",
+      "bytes": 92926
+    },
+    {
+      "path": "game/public/fx/voidaura_crown.webp",
+      "bytes": 48328
+    },
+    {
+      "path": "game/public/tex/attack.png",
+      "bytes": 1789973
+    },
+    {
+      "path": "game/public/tex/impact.png",
+      "bytes": 1543103
+    },
+    {
+      "path": "game/public/tex/projectile.png",
+      "bytes": 848559
+    },
+    {
+      "path": "game/public/tex/skyline.png",
+      "bytes": 2541444
+    },
+    {
+      "path": "game/public/tex/smoke.png",
+      "bytes": 1121696
+    },
+    {
+      "path": "game/public/tex/trail.png",
+      "bytes": 909066
+    },
+    {
+      "path": "game/public/ui/car-roadster.png",
+      "bytes": 98938
+    },
+    {
+      "path": "game/public/ui/car-titan.png",
+      "bytes": 96954
+    },
+    {
+      "path": "game/public/ui/car-viper.png",
+      "bytes": 87616
+    },
+    {
+      "path": "game/public/ui/coin-256.png",
+      "bytes": 113065
+    },
+    {
+      "path": "game/public/ui/coin-32.png",
+      "bytes": 2970
+    },
+    {
+      "path": "game/public/ui/coin-64.png",
+      "bytes": 9992
+    },
+    {
+      "path": "game/public/cockpit/car01/base.webp",
+      "bytes": 215568
+    },
+    {
+      "path": "game/public/cockpit/car01/control.webp",
+      "bytes": 83776
+    },
+    {
+      "path": "game/public/cockpit/car02/base.webp",
+      "bytes": 215798
+    },
+    {
+      "path": "game/public/cockpit/car02/control_left.webp",
+      "bytes": 26498
+    },
+    {
+      "path": "game/public/cockpit/car02/control_right.webp",
+      "bytes": 28190
+    },
+    {
+      "path": "game/public/cockpit/car03/base.webp",
+      "bytes": 228954
+    },
+    {
+      "path": "game/public/cockpit/car03/control.webp",
+      "bytes": 211386
+    },
+    {
+      "path": "game/dist/og-image.jpg",
+      "bytes": 187891
+    },
+    {
+      "path": "game/dist/brand/logo-120.png",
+      "bytes": 5769
+    },
+    {
+      "path": "game/dist/brand/logo-512.png",
+      "bytes": 37552
+    },
+    {
+      "path": "game/dist/cockpit/attack.webp",
+      "bytes": 4994
+    },
+    {
+      "path": "game/dist/cockpit/boost.webp",
+      "bytes": 9350
+    },
+    {
+      "path": "game/dist/cockpit/reticle.webp",
+      "bytes": 4870
+    },
+    {
+      "path": "game/dist/cockpit/warning.webp",
+      "bytes": 6770
+    },
+    {
+      "path": "game/dist/fx/killeraura_01.webp",
+      "bytes": 63282
+    },
+    {
+      "path": "game/dist/fx/killeraura_02.webp",
+      "bytes": 109010
+    },
+    {
+      "path": "game/dist/fx/killeraura_03.webp",
+      "bytes": 106314
+    },
+    {
+      "path": "game/dist/fx/voidaura_01.webp",
+      "bytes": 61362
+    },
+    {
+      "path": "game/dist/fx/voidaura_02.webp",
+      "bytes": 107904
+    },
+    {
+      "path": "game/dist/fx/voidaura_03.webp",
+      "bytes": 92926
+    },
+    {
+      "path": "game/dist/fx/voidaura_crown.webp",
+      "bytes": 48328
+    },
+    {
+      "path": "game/dist/tex/attack.png",
+      "bytes": 1789973
+    },
+    {
+      "path": "game/dist/tex/impact.png",
+      "bytes": 1543103
+    },
+    {
+      "path": "game/dist/tex/projectile.png",
+      "bytes": 848559
+    },
+    {
+      "path": "game/dist/tex/skyline.png",
+      "bytes": 2541444
+    },
+    {
+      "path": "game/dist/tex/smoke.png",
+      "bytes": 1121696
+    },
+    {
+      "path": "game/dist/tex/trail.png",
+      "bytes": 909066
+    },
+    {
+      "path": "game/dist/ui/car-roadster.png",
+      "bytes": 98938
+    },
+    {
+      "path": "game/dist/ui/car-titan.png",
+      "bytes": 96954
+    },
+    {
+      "path": "game/dist/ui/car-viper.png",
+      "bytes": 87616
+    },
+    {
+      "path": "game/dist/ui/coin-256.png",
+      "bytes": 113065
+    },
+    {
+      "path": "game/dist/ui/coin-32.png",
+      "bytes": 2970
+    },
+    {
+      "path": "game/dist/ui/coin-64.png",
+      "bytes": 9992
+    },
+    {
+      "path": "game/dist/cockpit/car01/base.webp",
+      "bytes": 215568
+    },
+    {
+      "path": "game/dist/cockpit/car01/control.webp",
+      "bytes": 83776
+    },
+    {
+      "path": "game/dist/cockpit/car02/base.webp",
+      "bytes": 215798
+    },
+    {
+      "path": "game/dist/cockpit/car02/control_left.webp",
+      "bytes": 26498
+    },
+    {
+      "path": "game/dist/cockpit/car02/control_right.webp",
+      "bytes": 28190
+    },
+    {
+      "path": "game/dist/cockpit/car03/base.webp",
+      "bytes": 228954
+    },
+    {
+      "path": "game/dist/cockpit/car03/control.webp",
+      "bytes": 211386
+    },
+    {
+      "path": "win_app/assets/brand/logo.png",
+      "bytes": 37552
+    },
+    {
+      "path": "win_app/assets/models/city-crown-base.png",
+      "bytes": 2437177
+    },
+    {
+      "path": "win_app/assets/models/control-tower-base.png",
+      "bytes": 2327865
+    },
+    {
+      "path": "win_app/assets/models/cyan-tree-base.png",
+      "bytes": 2299856
+    },
+    {
+      "path": "win_app/reference/graphics-20261102/finish-final-results-fixture.png",
+      "bytes": 50989
+    },
+    {
+      "path": "win_app/reference/graphics-20261102/finish-first-fixture-finish-frame.png",
+      "bytes": 91150
+    }
+  ],
+  "next": "Reconcile old Roadsters window/input state, then allow bounded source Canvas raster capture (or supply exact raster tied to source hash); decode/CRC/pixel/glyph/alpha/mip checks before isolated native material graphics."
+}

@@ -1,0 +1,58 @@
+Start testing: Nov 03 01:50 Eastern Standard Time
+----------------------------------------------------------
+1/38 Testing: browser_race_ui_state_layout
+1/38 Test: browser_race_ui_state_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/build/race-ui-native/rr_race_ui_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/race-ui-native
+"browser_race_ui_state_layout" start time: Nov 03 01:50 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Race UI: 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: 0 failures
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"browser_race_ui_state_layout" end time: Nov 03 01:50 Eastern Standard Time
+"browser_race_ui_state_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/38 Testing: browser_ui_layout_and_hit_regions
+2/38 Test: browser_ui_layout_and_hit_regions
+Command: "C:/Users/User/Projects/neon_c/win_app/build/race-ui-native/rr_ui_layout_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/race-ui-native
+"browser_ui_layout_and_hit_regions" start time: Nov 03 01:50 Eastern Standard Time
+Output:
+----------------------------------------------------------
+UI layout: viewport containment, focus scroll, clipped hit regions passed (4 viewports).
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_layout_and_hit_regions" end time: Nov 03 01:50 Eastern Standard Time
+"browser_ui_layout_and_hit_regions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/38 Testing: browser_ui_font_cpu_atlas
+38/38 Test: browser_ui_font_cpu_atlas
+Command: "C:/Users/User/Projects/neon_c/win_app/build/race-ui-native/rr_ui_font_tests.exe" "C:/Users/User/Projects/neon_c/win_app/assets/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/race-ui-native
+"browser_ui_font_cpu_atlas" start time: Nov 03 01:50 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-700.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=12449561
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-900.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=14122856
+Rajdhani-Medium.ttf CPU atlas 512x256, conservative RGBA8=524288 bytes, glyph coverage=1197097
+CPU font rasterization/atlas passed; RGBA8 total=6815744; no window/GPU initialized.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_font_cpu_atlas" end time: Nov 03 01:50 Eastern Standard Time
+"browser_ui_font_cpu_atlas" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 01:50 Eastern Standard Time

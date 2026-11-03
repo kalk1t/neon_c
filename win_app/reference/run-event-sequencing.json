@@ -1,0 +1,14 @@
+{
+  "initial_native_focused": {
+    "frames": 640,
+    "failures": 0,
+    "sequence_draws": 5667,
+    "max_error": 5.186961971048731e-13,
+    "reported_respawns": 2,
+    "reported_manual": 2,
+    "reported_smoke": 0
+  },
+  "reason": "Review identified outer current_events |= player_step(...) could overwrite flags set inside player_step. Split function call from compound assignment. Physics/RNG state was already matching; add actual-source event hooks and assert every frame event bitmask.",
+  "reference_change": "Instrument actual checkpoint/lap/finish/respawn/smoke calls and phase/nitro/impact outputs; explicitly keep HP40 smoke probe alive. Preserve prior reference/test/core versions.",
+  "production_active": false
+}

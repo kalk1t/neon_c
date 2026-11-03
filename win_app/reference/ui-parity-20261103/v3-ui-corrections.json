@@ -1,0 +1,103 @@
+{
+  "utc": "2026-11-03T07:31:44.815858+00:00",
+  "scope": "Source-defined 400ms pause-key guard and cockpit palette correction; garage next-step review, no new screen",
+  "targets": {
+    "native": {
+      "build": "passed",
+      "fresh_headless_suites": 41,
+      "cockpit": "OFF",
+      "artifacts": {
+        "build/v3-ui-corrections-native/bin/RoadstersRace.exe": {
+          "bytes": 941568,
+          "sha256": "1b11c991ed52bd1414ecb154109abc81027cc73af6df4abb483378564295f442"
+        }
+      },
+      "log_sha256": "1a401207aabd82fe9f7d26fbc8b48e40ac1ca78a668baedaf439790c3965ffa7"
+    },
+    "web": {
+      "build": "passed",
+      "fresh_headless_suites": 41,
+      "cockpit": "OFF",
+      "artifacts": {
+        "build/v3-ui-corrections-web/bin/RoadstersRace.data": {
+          "bytes": 38894385,
+          "sha256": "ecd19d627503ffb72ba45050f865cbe15add28b636c7b1c492f47c279abc79e5"
+        },
+        "build/v3-ui-corrections-web/bin/RoadstersRace.html": {
+          "bytes": 1136,
+          "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+        },
+        "build/v3-ui-corrections-web/bin/RoadstersRace.js": {
+          "bytes": 180545,
+          "sha256": "0dddecc8b4ccbc8a53fa7e3b32e11cb02192c1b92f233893ae8612896f66c7ef"
+        },
+        "build/v3-ui-corrections-web/bin/RoadstersRace.wasm": {
+          "bytes": 593905,
+          "sha256": "1580c5e238af6d6ddea5bccf414708d54b321b16d9c6378c428dded256d0b722"
+        }
+      },
+      "log_sha256": "d2a43648c405fcbeeb8b8fda9741d3771ba620b4f64142104440726ffd9f3c1d"
+    }
+  },
+  "v3_verified_files": 695,
+  "existing_cockpit_pngs_identical_to_v3": 5,
+  "runtime_asset_imports": 0,
+  "new_graphics_allocations": 0,
+  "source_release": "28a4e302e63d2e797db65f62d042025b97a7de84",
+  "source_snapshots_sha256": {
+    "game/src/main.js": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307",
+    "game/src/shop.js": "9280a5fe4c2a6a3c3322f82e19a7d20b06eb63e7b80086b1a4a12d972b484761",
+    "game/src/online/index.js": "d82b544cf09cc332b3151ea4089b6a262262147c0d1700387a764d7f824c246f",
+    "game/src/car.js": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af",
+    "game/src/style.css": "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e",
+    "game/index.html": "06380033a8aa5a19ee6a22e0e665945be8613233776ffb34000bb6591f558a85"
+  },
+  "changed_paths_sha256": {
+    "CMakeLists.txt": "2a4c1fc4d8added09471f88b9f2bee15f6e29611c655292aa5604816fdf3755b",
+    "src/app/main.c": "917f5f4184e0788d0e33b5766cd725892eedd0c8b421031da75a7882c06c1c8b",
+    "src/presentation/rr_pause_ui.h": "7545579316cec939a18d605ff974e60349eabbd5245c858b98638fffb8cfc7aa",
+    "src/presentation/rr_cockpit.c": "f228b411b72fe14f673d0af06e002895f07242682c5a772e2cd03406fd5b7f85",
+    "src/presentation/rr_cockpit_plan.h": "eeb18fd115fd76f82ad3fe9f85b96d20b3b93847f5502b270720a28fd5aef56e",
+    "tests/test_pause_ui.c": "a170718178f78eaa393cc0e66a74de0d215775d4e5cfc48e0a96200eea7f5100",
+    "docs/GARAGE-NEXT-AND-V3-REVIEW-2026-11-03.md": "da1806d94372e89e09a2a550d338953c91417550f4fd8b0f0c07356339df54ae",
+    "reference/ui-parity-20261103/asset-v3-compatibility-review.json": "5177cf91f946b7a9728cb8711b58b99a84aa57422efa3411875482b9919ddbea"
+  },
+  "pre_slice_originals_sha256": {
+    "reference/pre-v3-ui-corrections-20261103/CMakeLists.txt": "071760ef993cf4fd50de2b47dd00c2328c0ba7a80539abeaac70c66c254d65ed",
+    "reference/pre-v3-ui-corrections-20261103/main.c": "0e054f9ec10cbbafa3e28f0ed2473933904e6e9f92b96f73e0519950f94ac99d",
+    "reference/pre-v3-ui-corrections-20261103/rr_cockpit.c": "dd0def371a644622617e8b5fd88ca44f446650963f65004bcf5443dd896eaeba",
+    "reference/pre-v3-ui-corrections-20261103/rr_cockpit_plan.h": "b74b84e71b9573a6d07909c19831f3086cfafac5afb716f15bed73647a9ac166"
+  },
+  "prior_artifacts_verified_unchanged": [
+    "build/cockpit-native/bin/RoadstersRace.exe",
+    "build/cockpit-web/bin/RoadstersRace.data",
+    "build/cockpit-web/bin/RoadstersRace.html",
+    "build/cockpit-web/bin/RoadstersRace.js",
+    "build/cockpit-web/bin/RoadstersRace.wasm",
+    "build/cockpit-default-native/bin/RoadstersRace.exe",
+    "build/cockpit-default-web/bin/RoadstersRace.data",
+    "build/cockpit-default-web/bin/RoadstersRace.html",
+    "build/cockpit-default-web/bin/RoadstersRace.js",
+    "build/cockpit-default-web/bin/RoadstersRace.wasm",
+    "build/race-ui-native/bin/RoadstersRace.exe",
+    "build/race-ui-web/bin/RoadstersRace.data",
+    "build/race-ui-web/bin/RoadstersRace.html",
+    "build/race-ui-web/bin/RoadstersRace.js",
+    "build/race-ui-web/bin/RoadstersRace.wasm",
+    "build/ui-theme-native/bin/RoadstersRace.exe",
+    "build/ui-theme-web/bin/RoadstersRace.data",
+    "build/ui-theme-web/bin/RoadstersRace.html",
+    "build/ui-theme-web/bin/RoadstersRace.js",
+    "build/ui-theme-web/bin/RoadstersRace.wasm"
+  ],
+  "progression": "Unchanged; no account, wallet, equip, unlock or network writes; production combat/rivals/coins inactive",
+  "graphics": "Unrun; no desktop/process lookup or retry, launch, termination, security change or publication",
+  "boundary": {
+    "action": "Native UI and resource qualification before extending to live garage preview",
+    "target": "Existing isolated menu/HUD/results/cockpit builds, then view-only garage",
+    "state": "pending supported process-absence resolution",
+    "reason": "Earlier higher-integrity Task Manager input did not establish process absence; absent window and owner-reported closure are not independent PID verification. No new relevant evidence supplied for retry.",
+    "next": "Resolve exact process identity/absence through allowed means or fresh explicit owner evidence, verify intended test shutdown, then one controlled instance; preserve safeguards.",
+    "garage_product_decision": "None needed for canonical view-only browsing; keep equip/buy/account disabled until shared service plan. No third hidden prototype added."
+  }
+}

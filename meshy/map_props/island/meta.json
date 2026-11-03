@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a194a0-0ccb-732e-ac64-7da7a955bce9",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494879447,
+    "started_at": 1793494879453,
+    "finished_at": 1793494918190,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/model.glb?Expires=4947091200&Signature=cxIUJyfK~qnh9D4cZo2nBuWvn~nJBfmNaDJomPj9CgIXDgMaPKtDnXcYD9r3ARGqydVlyBanYYM-MmK0YWfpF4Rdqx2ZZJhqu7EH5nACX~~wb68Tgqem3bN7zMxKXnWSFRjajrupXlhyiUB4tX-LvSsEH2yzASMoAuue8ewldh0n4PKZ5b1CDdQhnKAdya9i5IT~BM-9PT6-kK8BHnxtdMaLZjprrIvpUg3sASNpBDr1txKmxsvEnr3Qq898p0aekMXvrkf5o-1Wfm8iDrjUP8l9zSohJgc30XpfPCxqZ~69ou~zX1oFJLkJ5NPynVB1fPlVVcdBwteg3CaPj38LgQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/texture_0.png?Expires=4947091200&Signature=S8Y5-uGgOfKzDdelr~mG4xQQtIzZ0wqM~LmcyxPK8~WpUX8yPoZJ6gMTM54XjdVF5lP2MgzC0oVhADixP8R8MID~h8a8-DZnO46YIvYnvsZ4enkbUcNpSefs2BI6dyin~SlTUTRlyQuLiKCdFQYnja0PJeszGJQ5-mJLf1yeX13U5vgdtCAqAu1Jr25UOt3WnWf59SYXkvJ4vCTUUwZ6RDDdj19Gb5lEl4w5qF7~N~ceJ-KyWn~O3~RQYylL9Wh7BJJCfkD~DH0GAGoFwn-Bg3BPgkON0yizUFdYLkJ3Cpqy7CoDzblZr8PCOL8LLk7rAixjhxzcUT-9xn~eqw7pnw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/texture_0_metallic.png?Expires=4947091200&Signature=q0sSzPo8t5o6YgqQAoa8U~DgeJbj0C-FTum7zRuBylJeea4-ivftsf44SXio0bhIrDX3~t3Lqu2LauXhyV0GZA-~np-MM-PXgIPlj2NylXax8a6DfVYo4sIcs5kmTPKqkCKC81XZhofxmyNKE659lX5HsdAVupyBoOoE7DqjazwO5oE5TwUVRH8j4ka863I~FufL3bVS2o7AIAjZ2CabYNF~gwNcrCB3odWhpU364zI6CCGJ4QQ8S6r~QQQtsVkatMjm4qhBiRotIHgY6Dtlkx~ohpCGp31XvwH5P9gM9a4ZrEqxhAN0UqiNvjMN4AjPWrvVm1jdaYSDlYc9h4289g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/texture_0_normal.png?Expires=4947091200&Signature=YDHl1wfOWXznspcCiHvx5QUffe7F7qy4Dmc9BvqsPEcAIPrOo9FPDycqWP2Hu7mH0LFl~rygwig844HHARvn6FdbmJYmLNeXCy0SeeytfsWiVdCU71Du4D0-2JT4UAxLNCXm~6j3c2qSRDiZcdTumbjfz5u8VPAFYR8ZLu0pSVT4OW242GZ8L4VOPsG6hcJ2LwnwWAHgNIpUMzWuv4cr5DP6bihsNukX0weMMu-GKi2KJl3C1iPMrd3uTzCv48iDxvhuZ9-CxKWm3fp-a6TgcY~7zh4VeU1zfKH40tuZ7uP~Wdx18v3ygcv9~kUvuhrEbSAKiFvp4tJlBunMj4SOJA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/texture_0_roughness.png?Expires=4947091200&Signature=nrfiVFkENQvxSTkpk-1DNucK6fMd5THqTWdUt4u1IQnMZx4EE7jbEOc0VfbcFSun1SKvFvjtDuS6JYnHRh664M9-BANqbu4sH9oCCjpJUguMGaWXR4EtFNzhnGfvbajIgu6XiY3MN47vYoJigrOy4NgFuPljoFls4xu3nT8MqxHB4~AvBwHRnTg0~JYoz5u-x2jwOzEatFa1XhnEFbjFtKfJSalkZmEmAUPFGHRZIBMIsp~eFPBIeYCzN5A9ctEagyQwCvX01Hvqh4A6PZgpn8-SoWnmaJt4BF7v96ocIycw7GNJCJA1XjcJQnlOULExzXxqWALwRDkpmAaKeOP7qA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0ccb-732e-ac64-7da7a955bce9/output/preview.png?Expires=4947091200&Signature=Ig697Q7nOWsyrfvQPAFSTzSFRPYhi4ovBKSY~zwzZjkP6H7WxsoEClC2D71J9rKWTVuZxSlAeJ9evOq~v-vKV-7h068pn2KGnL8INvBMFeO0EyoxIT4Kouo4sj0Qvi-x4msLxCn3t46QLX~IgZnPqeh0RenAg15iwcXQhbFGXHBFVDYya-0lk-eQwTiCoytvRxSersZqWe0dhNvN3g2IDEnbW5HR9zN-bYkJyt9xRYztrf1lIejKp~63WQBQ6xjAX~Tzfro3OnBlCJUZQn0kSjgnHDdPi-jyPt6Nh9-WoEkqvpM7y07n67Tv7p6UezeLMUFzUiD8HeOcube8Sy5FWg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "floating rock sky island with a slim futuristic neon spire tower on top, cyberpunk, glowing cyan windows, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 511212563,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "island\\model.glb",
+    "island\\thumbnail.png",
+    "island\\texture_0_base_color.png",
+    "island\\texture_0_metallic.png",
+    "island\\texture_0_normal.png",
+    "island\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:02:03.573Z"
+}

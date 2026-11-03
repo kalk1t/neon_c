@@ -1,0 +1,135 @@
+{
+  "captured_utc": "2026-11-02T21:00:38.780Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "src/skyprops.js",
+      "sha256": "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "0dc42968a942ff3bdd8740e367c0fb5805c017c418473d839cb3a3a79e651db8"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "node_modules/three/src/renderers/WebGLRenderer.js",
+      "sha256": "9e8740aad691246b31b3704014e8f3bbd38a8e7bf4b1b4d23868541b023cc63a"
+    }
+  ],
+  "grid_towers": 2360,
+  "hero_crowns": 450,
+  "skyways": 1,
+  "city_colliders_grid_ring_skyways": 2741,
+  "city_only_collision_cells": 2692,
+  "max_city_only_shapes_per_cell": 6,
+  "geometry": {
+    "body": {
+      "parts": 17227,
+      "vertices": 795072,
+      "chunk_vertices": [
+        41784,
+        41556,
+        42348,
+        42072,
+        40800,
+        39948,
+        41172,
+        41808,
+        40188,
+        40788,
+        41436,
+        41436,
+        40620,
+        40584,
+        40932,
+        41496,
+        43044,
+        44328,
+        42684,
+        6048
+      ],
+      "merged_chunks_of_900": 20,
+      "max_chunk_vertices": 44328,
+      "position_normal_uv_bytes": 25442304
+    },
+    "neonC": {
+      "parts": 11457,
+      "vertices": 521532,
+      "chunk_vertices": [
+        39420,
+        41040,
+        41580,
+        38880,
+        41580,
+        41040,
+        41040,
+        42120,
+        41040,
+        39420,
+        39420,
+        45900,
+        29052
+      ],
+      "merged_chunks_of_900": 13,
+      "max_chunk_vertices": 45900,
+      "position_normal_uv_bytes": 16689024
+    },
+    "tip": {
+      "parts": 3229,
+      "vertices": 116244,
+      "chunk_vertices": [
+        32400,
+        32400,
+        32400,
+        19044
+      ],
+      "merged_chunks_of_900": 4,
+      "max_chunk_vertices": 32400,
+      "position_normal_uv_bytes": 3719808
+    },
+    "neonM": {
+      "parts": 6090,
+      "vertices": 260280,
+      "chunk_vertices": [
+        38880,
+        39960,
+        38340,
+        37260,
+        38340,
+        38880,
+        28620
+      ],
+      "merged_chunks_of_900": 7,
+      "max_chunk_vertices": 39960,
+      "position_normal_uv_bytes": 8328960
+    },
+    "board": {
+      "parts": 349,
+      "vertices": 2094,
+      "chunk_vertices": [
+        2094
+      ],
+      "merged_chunks_of_900": 1,
+      "max_chunk_vertices": 2094,
+      "position_normal_uv_bytes": 67008
+    }
+  },
+  "total_vertices": 1695222,
+  "total_merged_meshes": 45,
+  "geometry_scope": "Actual buildCity grid, distant ring and skyways source executed with geometry-count sink. Traffic/material constructors omitted from this count; transformed vertex topology unchanged. No source edits, renderer, network or GPU.",
+  "loading_model": "Map build constructs city/colliders once. CH900 groups by material parts for frustum culling, not residency streaming. GLTF loadAsync substitutes scenery asynchronously; map rebuild disposes prior map. Global traffic instance mesh disables frustum culling."
+}

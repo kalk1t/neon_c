@@ -1,0 +1,1420 @@
+{
+  "source": "C:/Users/User/Projects/neon_c/game/src/cockpit.js",
+  "sha256": "8c042b086134026f23b4471c58576df0ac5d3e3bc8267a3a3f89d3e3c3932a97",
+  "layouts": {
+    "roadster": {
+      "pack": "car01",
+      "controls": [
+        {
+          "path": "car01/control.webp",
+          "box": [
+            0.25,
+            0.61,
+            0.5,
+            0.486
+          ],
+          "rotation": 16,
+          "origin": "50% 58%"
+        }
+      ],
+      "panels": {
+        "speed": {
+          "box": [
+            0.438,
+            0.517,
+            0.124,
+            0.079
+          ]
+        },
+        "boost": {
+          "box": [
+            0.264,
+            0.544,
+            0.073,
+            0.09
+          ],
+          "font": 1.2
+        },
+        "attack": {
+          "box": [
+            0.67,
+            0.54,
+            0.073,
+            0.1
+          ],
+          "font": 1.1
+        },
+        "race": {
+          "box": [
+            0.432,
+            0.611,
+            0.14,
+            0.029
+          ],
+          "font": 1.15
+        }
+      }
+    },
+    "viper": {
+      "pack": "car02",
+      "controls": [
+        {
+          "path": "car02/control_left.webp",
+          "box": [
+            0.18,
+            0.59,
+            0.104,
+            0.26
+          ],
+          "rotation": 8,
+          "origin": "50% 90%"
+        },
+        {
+          "path": "car02/control_right.webp",
+          "box": [
+            0.716,
+            0.59,
+            0.108,
+            0.26
+          ],
+          "rotation": 8,
+          "origin": "50% 90%"
+        }
+      ],
+      "panels": {
+        "speed": {
+          "box": [
+            0.416,
+            0.463,
+            0.168,
+            0.085
+          ],
+          "font": 1.05
+        },
+        "boost": {
+          "box": [
+            0.654,
+            0.49,
+            0.102,
+            0.069
+          ],
+          "font": 1.1
+        },
+        "attack": {
+          "box": [
+            0.65,
+            0.563,
+            0.12,
+            0.027
+          ],
+          "font": 1.05
+        },
+        "race": {
+          "box": [
+            0.263,
+            0.506,
+            0.1,
+            0.065
+          ],
+          "font": 1.4
+        }
+      }
+    },
+    "titan": {
+      "pack": "car03",
+      "controls": [
+        {
+          "path": "car03/control.webp",
+          "box": [
+            0.215,
+            0.645,
+            0.57,
+            0.45
+          ],
+          "rotation": 16,
+          "origin": "50% 39%"
+        }
+      ],
+      "panels": {
+        "speed": {
+          "box": [
+            0.435,
+            0.537,
+            0.13,
+            0.086
+          ],
+          "font": 1.1
+        },
+        "boost": {
+          "box": [
+            0.617,
+            0.536,
+            0.08,
+            0.095
+          ],
+          "font": 1.2
+        },
+        "attack": {
+          "box": [
+            0.768,
+            0.628,
+            0.104,
+            0.103
+          ],
+          "font": 1.1
+        },
+        "race": {
+          "box": [
+            0.43,
+            0.492,
+            0.14,
+            0.03
+          ],
+          "font": 1.15
+        }
+      },
+      "decorations": [
+        {
+          "path": "reticle.webp",
+          "box": [
+            0.314,
+            0.528,
+            0.06,
+            0.107
+          ],
+          "opacity": 0.45
+        }
+      ]
+    }
+  },
+  "fit": [
+    {
+      "car": 0,
+      "W": 960,
+      "H": 720,
+      "w": 1279.3198724760894,
+      "h": 720,
+      "bottom": -144,
+      "font": 12.793198724760893
+    },
+    {
+      "car": 0,
+      "W": 1280,
+      "H": 720,
+      "w": 1280,
+      "h": 720.3827751196172,
+      "bottom": -144.07655502392345,
+      "font": 12.8
+    },
+    {
+      "car": 0,
+      "W": 1920,
+      "H": 1080,
+      "w": 1920,
+      "h": 1080.5741626794259,
+      "bottom": -216.11483253588517,
+      "font": 19.2
+    },
+    {
+      "car": 0,
+      "W": 1440,
+      "H": 960,
+      "w": 1705.759829968119,
+      "h": 960,
+      "bottom": -192,
+      "font": 17.05759829968119
+    },
+    {
+      "car": 0,
+      "W": 844,
+      "H": 390,
+      "w": 844,
+      "h": 475.0023923444976,
+      "bottom": -95.00047846889953,
+      "font": 8.44
+    },
+    {
+      "car": 0,
+      "W": 390,
+      "H": 844,
+      "w": 1499.6471838469713,
+      "h": 844,
+      "bottom": -168.8,
+      "font": 14.996471838469713
+    },
+    {
+      "car": 1,
+      "W": 960,
+      "H": 720,
+      "w": 1279.3198724760894,
+      "h": 720,
+      "bottom": -144,
+      "font": 12.793198724760893
+    },
+    {
+      "car": 1,
+      "W": 1280,
+      "H": 720,
+      "w": 1280,
+      "h": 720.3827751196172,
+      "bottom": -144.07655502392345,
+      "font": 12.8
+    },
+    {
+      "car": 1,
+      "W": 1920,
+      "H": 1080,
+      "w": 1920,
+      "h": 1080.5741626794259,
+      "bottom": -216.11483253588517,
+      "font": 19.2
+    },
+    {
+      "car": 1,
+      "W": 1440,
+      "H": 960,
+      "w": 1705.759829968119,
+      "h": 960,
+      "bottom": -192,
+      "font": 17.05759829968119
+    },
+    {
+      "car": 1,
+      "W": 844,
+      "H": 390,
+      "w": 844,
+      "h": 475.0023923444976,
+      "bottom": -95.00047846889953,
+      "font": 8.44
+    },
+    {
+      "car": 1,
+      "W": 390,
+      "H": 844,
+      "w": 1499.6471838469713,
+      "h": 844,
+      "bottom": -168.8,
+      "font": 14.996471838469713
+    },
+    {
+      "car": 2,
+      "W": 960,
+      "H": 720,
+      "w": 1279.3198724760894,
+      "h": 720,
+      "bottom": -144,
+      "font": 12.793198724760893
+    },
+    {
+      "car": 2,
+      "W": 1280,
+      "H": 720,
+      "w": 1280,
+      "h": 720.3827751196172,
+      "bottom": -144.07655502392345,
+      "font": 12.8
+    },
+    {
+      "car": 2,
+      "W": 1920,
+      "H": 1080,
+      "w": 1920,
+      "h": 1080.5741626794259,
+      "bottom": -216.11483253588517,
+      "font": 19.2
+    },
+    {
+      "car": 2,
+      "W": 1440,
+      "H": 960,
+      "w": 1705.759829968119,
+      "h": 960,
+      "bottom": -192,
+      "font": 17.05759829968119
+    },
+    {
+      "car": 2,
+      "W": 844,
+      "H": 390,
+      "w": 844,
+      "h": 475.0023923444976,
+      "bottom": -95.00047846889953,
+      "font": 8.44
+    },
+    {
+      "car": 2,
+      "W": 390,
+      "H": 844,
+      "w": 1499.6471838469713,
+      "h": 844,
+      "bottom": -168.8,
+      "font": 14.996471838469713
+    }
+  ],
+  "states": [
+    {
+      "car": 0,
+      "input": {
+        "speed": 0,
+        "boost": 0,
+        "lap": 1,
+        "laps": 0,
+        "time": 0,
+        "heat": 0,
+        "overheated": true,
+        "steer": -1
+      },
+      "speed": "0",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "OVERHEAT",
+      "charge": "empty",
+      "hot": true,
+      "angle": -16
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.004,
+        "lap": 2,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "1",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 2",
+      "heat": "READY",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.005,
+        "lap": 3,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "2",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 3/2",
+      "heat": "HEAT 60%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.555,
+        "lap": 4,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "121",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 100%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.32
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 0,
+        "boost": 0.999,
+        "lap": 5,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0.031
+      },
+      "speed": "0",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 5",
+      "heat": "READY",
+      "charge": "full",
+      "hot": false,
+      "angle": 0.64
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.49,
+        "boost": 1,
+        "lap": 6,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.6,
+        "overheated": true,
+        "steer": 1
+      },
+      "speed": "1",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 6/2",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 16
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.5,
+        "boost": 0,
+        "lap": 7,
+        "laps": 0,
+        "time": 0,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": -1
+      },
+      "speed": "2",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 60%",
+      "charge": "empty",
+      "hot": false,
+      "angle": -16
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.004,
+        "lap": 8,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "121",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 8",
+      "heat": "HEAT 100%",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 0,
+        "boost": 0.005,
+        "lap": 9,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "0",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 9/2",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.555,
+        "lap": 10,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "1",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.32
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.999,
+        "lap": 11,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0.60001,
+        "overheated": true,
+        "steer": 0.031
+      },
+      "speed": "2",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 11",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 0.64
+    },
+    {
+      "car": 0,
+      "input": {
+        "speed": 120.51,
+        "boost": 1,
+        "lap": 12,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 1
+      },
+      "speed": "121",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 12/2",
+      "heat": "HEAT 100%",
+      "charge": "full",
+      "hot": false,
+      "angle": 16
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 0,
+        "boost": 0,
+        "lap": 1,
+        "laps": 0,
+        "time": 0,
+        "heat": 0,
+        "overheated": true,
+        "steer": -1
+      },
+      "speed": "0",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "OVERHEAT",
+      "charge": "empty",
+      "hot": true,
+      "angle": -8
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.004,
+        "lap": 2,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "1",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 2",
+      "heat": "READY",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.005,
+        "lap": 3,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "2",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 3/2",
+      "heat": "HEAT 60%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.555,
+        "lap": 4,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "121",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 100%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.16
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 0,
+        "boost": 0.999,
+        "lap": 5,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0.031
+      },
+      "speed": "0",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 5",
+      "heat": "READY",
+      "charge": "full",
+      "hot": false,
+      "angle": 0.32
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.49,
+        "boost": 1,
+        "lap": 6,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.6,
+        "overheated": true,
+        "steer": 1
+      },
+      "speed": "1",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 6/2",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 8
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.5,
+        "boost": 0,
+        "lap": 7,
+        "laps": 0,
+        "time": 0,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": -1
+      },
+      "speed": "2",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 60%",
+      "charge": "empty",
+      "hot": false,
+      "angle": -8
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.004,
+        "lap": 8,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "121",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 8",
+      "heat": "HEAT 100%",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 0,
+        "boost": 0.005,
+        "lap": 9,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "0",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 9/2",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.555,
+        "lap": 10,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "1",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.16
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.999,
+        "lap": 11,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0.60001,
+        "overheated": true,
+        "steer": 0.031
+      },
+      "speed": "2",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 11",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 0.32
+    },
+    {
+      "car": 1,
+      "input": {
+        "speed": 120.51,
+        "boost": 1,
+        "lap": 12,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 1
+      },
+      "speed": "121",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 12/2",
+      "heat": "HEAT 100%",
+      "charge": "full",
+      "hot": false,
+      "angle": 8
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 0,
+        "boost": 0,
+        "lap": 1,
+        "laps": 0,
+        "time": 0,
+        "heat": 0,
+        "overheated": true,
+        "steer": -1
+      },
+      "speed": "0",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "OVERHEAT",
+      "charge": "empty",
+      "hot": true,
+      "angle": -16
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.004,
+        "lap": 2,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "1",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 2",
+      "heat": "READY",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.005,
+        "lap": 3,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "2",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 3/2",
+      "heat": "HEAT 60%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.555,
+        "lap": 4,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "121",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 100%",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.32
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 0,
+        "boost": 0.999,
+        "lap": 5,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0.031
+      },
+      "speed": "0",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 5",
+      "heat": "READY",
+      "charge": "full",
+      "hot": false,
+      "angle": 0.64
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.49,
+        "boost": 1,
+        "lap": 6,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.6,
+        "overheated": true,
+        "steer": 1
+      },
+      "speed": "1",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 6/2",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 16
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.5,
+        "boost": 0,
+        "lap": 7,
+        "laps": 0,
+        "time": 0,
+        "heat": 0.60001,
+        "overheated": false,
+        "steer": -1
+      },
+      "speed": "2",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "FREE ROAM",
+      "heat": "HEAT 60%",
+      "charge": "empty",
+      "hot": false,
+      "angle": -16
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 120.51,
+        "boost": 0.004,
+        "lap": 8,
+        "laps": -1,
+        "time": 0.005,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": -0.01
+      },
+      "speed": "121",
+      "boost": "0%",
+      "time": "00:00.00",
+      "lap": "LAP 8",
+      "heat": "HEAT 100%",
+      "charge": "empty",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 0,
+        "boost": 0.005,
+        "lap": 9,
+        "laps": 2,
+        "time": 1.125,
+        "heat": 0,
+        "overheated": false,
+        "steer": 0
+      },
+      "speed": "0",
+      "boost": "1%",
+      "time": "00:01.12",
+      "lap": "LAP 9/2",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.49,
+        "boost": 0.555,
+        "lap": 10,
+        "laps": 0,
+        "time": 59.999,
+        "heat": 0.6,
+        "overheated": false,
+        "steer": 0.01
+      },
+      "speed": "1",
+      "boost": "56%",
+      "time": "00:59.99",
+      "lap": "FREE ROAM",
+      "heat": "READY",
+      "charge": "partial",
+      "hot": false,
+      "angle": 0.32
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 1.5,
+        "boost": 0.999,
+        "lap": 11,
+        "laps": -1,
+        "time": 60.015,
+        "heat": 0.60001,
+        "overheated": true,
+        "steer": 0.031
+      },
+      "speed": "2",
+      "boost": "100%",
+      "time": "01:00.01",
+      "lap": "LAP 11",
+      "heat": "OVERHEAT",
+      "charge": "full",
+      "hot": true,
+      "angle": 0.64
+    },
+    {
+      "car": 2,
+      "input": {
+        "speed": 120.51,
+        "boost": 1,
+        "lap": 12,
+        "laps": 2,
+        "time": 119.995,
+        "heat": 0.995,
+        "overheated": false,
+        "steer": 1
+      },
+      "speed": "121",
+      "boost": "100%",
+      "time": "01:59.99",
+      "lap": "LAP 12/2",
+      "heat": "HEAT 100%",
+      "charge": "full",
+      "hot": false,
+      "angle": 16
+    }
+  ],
+  "seats": [
+    {
+      "fwd": [
+        0,
+        -0.43496553411123023,
+        -0.9004471023526769
+      ],
+      "position": [
+        3,
+        101.23902067953327,
+        3.4597317385883937
+      ],
+      "direction": [
+        0,
+        -0.6051864057360394,
+        -0.7960837985490559
+      ]
+    },
+    {
+      "fwd": [
+        0,
+        0,
+        -1
+      ],
+      "position": [
+        3,
+        101.5,
+        3.4
+      ],
+      "direction": [
+        0,
+        -0.19866933079506122,
+        -0.9800665778412416
+      ]
+    },
+    {
+      "fwd": [
+        0,
+        0.3894183423086505,
+        -0.9210609940028851
+      ],
+      "position": [
+        3,
+        101.73365100538518,
+        3.4473634035982688
+      ],
+      "direction": [
+        0,
+        0.19866933079506108,
+        -0.9800665778412418
+      ]
+    },
+    {
+      "fwd": [
+        -0.9004471023526769,
+        -0.43496553411123023,
+        -5.5136483084885744e-17
+      ],
+      "position": [
+        2.4597317385883937,
+        101.23902067953327,
+        4
+      ],
+      "direction": [
+        -0.7960837985490559,
+        -0.6051864057360398,
+        0
+      ]
+    },
+    {
+      "fwd": [
+        -1,
+        0,
+        -6.123233995736766e-17
+      ],
+      "position": [
+        2.4,
+        101.5,
+        4
+      ],
+      "direction": [
+        -0.9800665778412416,
+        -0.19866933079506127,
+        -3.3306690738754706e-16
+      ]
+    },
+    {
+      "fwd": [
+        -0.9210609940028851,
+        0.3894183423086505,
+        -5.639871990625564e-17
+      ],
+      "position": [
+        2.4473634035982688,
+        101.73365100538518,
+        4
+      ],
+      "direction": [
+        -0.9800665778412417,
+        0.198669330795061,
+        -3.3306690738754706e-16
+      ]
+    },
+    {
+      "fwd": [
+        -1.1027296616977149e-16,
+        -0.43496553411123023,
+        0.9004471023526769
+      ],
+      "position": [
+        3,
+        101.23902067953327,
+        4.540268261411606
+      ],
+      "direction": [
+        -9.815463455553974e-17,
+        -0.60518640573604,
+        0.7960837985490556
+      ]
+    },
+    {
+      "fwd": [
+        -1.2246467991473532e-16,
+        0,
+        1
+      ],
+      "position": [
+        3,
+        101.5,
+        4.6
+      ],
+      "direction": [
+        -1.3057109764619157e-16,
+        -0.19866933079506127,
+        0.9800665778412416
+      ]
+    },
+    {
+      "fwd": [
+        -1.1279743981251128e-16,
+        0.3894183423086505,
+        0.9210609940028851
+      ],
+      "position": [
+        3,
+        101.73365100538518,
+        4.552636596401731
+      ],
+      "direction": [
+        -1.1813468244444206e-16,
+        0.19866933079506113,
+        0.9800665778412416
+      ]
+    },
+    {
+      "fwd": [
+        0.8392518942386265,
+        -0.43496553411123023,
+        -0.32628399003354347
+      ],
+      "position": [
+        3.5035511365431757,
+        101.23902067953327,
+        3.8042296059798737
+      ],
+      "direction": [
+        0.7419812159529794,
+        -0.6051864057360397,
+        -0.2884671376174967
+      ]
+    },
+    {
+      "fwd": [
+        0.9320390859672263,
+        0,
+        -0.3623577544766736
+      ],
+      "position": [
+        3.5592234515803356,
+        101.5,
+        3.782585347313996
+      ],
+      "direction": [
+        0.9134603573981784,
+        -0.19866933079506127,
+        -0.35513472438419036
+      ]
+    },
+    {
+      "fwd": [
+        0.858464846970514,
+        0.3894183423086505,
+        -0.3337535935229384
+      ],
+      "position": [
+        3.5150789081823084,
+        101.73365100538518,
+        3.799747843886237
+      ],
+      "direction": [
+        0.9134603573981784,
+        0.19866933079506102,
+        -0.35513472438419086
+      ]
+    },
+    {
+      "fwd": [
+        -0.6459412134055188,
+        -0.43496553411123023,
+        -0.6273475376213238
+      ],
+      "position": [
+        2.612435271956689,
+        101.23902067953327,
+        3.6235914774272056
+      ],
+      "direction": [
+        -0.5710755617555937,
+        -0.6051864057360397,
+        -0.5546369236517045
+      ]
+    },
+    {
+      "fwd": [
+        -0.7173560908995228,
+        0,
+        -0.6967067093471654
+      ],
+      "position": [
+        2.5695863454602863,
+        101.5,
+        3.5819759743917006
+      ],
+      "direction": [
+        -0.703056729101466,
+        -0.1986693307950612,
+        -0.682818960388909
+      ]
+    },
+    {
+      "fwd": [
+        -0.6607287141379384,
+        0.3894183423086505,
+        -0.6417093742397794
+      ],
+      "position": [
+        2.603562771517237,
+        101.73365100538518,
+        3.6149743754561325
+      ],
+      "direction": [
+        -0.703056729101466,
+        0.19866933079506108,
+        -0.682818960388909
+      ]
+    },
+    {
+      "fwd": [
+        -0.38483297476038614,
+        -0.43496553411123023,
+        0.8140691405970405
+      ],
+      "position": [
+        2.7691002151437685,
+        101.23902067953327,
+        4.4884414843582245
+      ],
+      "direction": [
+        -0.3402301984799878,
+        -0.6051864057360398,
+        0.7197171849793235
+      ]
+    },
+    {
+      "fwd": [
+        -0.4273798802338298,
+        0,
+        0.9040721420170612
+      ],
+      "position": [
+        2.743572071859702,
+        101.5,
+        4.542443285210236
+      ],
+      "direction": [
+        -0.4188607366589694,
+        -0.19866933079506127,
+        0.8860508903482622
+      ]
+    },
+    {
+      "fwd": [
+        -0.39364293730500527,
+        0.3894183423086505,
+        0.8327055857765518
+      ],
+      "position": [
+        2.7638142376169967,
+        101.73365100538518,
+        4.499623351465931
+      ],
+      "direction": [
+        -0.41886073665896933,
+        0.19866933079506108,
+        0.8860508903482622
+      ]
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "project": "ROADSTERS RACE",
+  "collection": "A / Neon Circuit",
+  "currency": "approved second option \u2014 gold five-spoke wheel",
+  "reference_canvases": {
+    "28_shop_screen_desktop.png": {
+      "size": [
+        1920,
+        1080
+      ],
+      "mode": "RGBA",
+      "sha256": "004daa52a4d059aac7de3eb9b751ec9bf4a5126bc2454d76b11f50b91e526987"
+    },
+    "29_shop_screen_phone.png": {
+      "size": [
+        2340,
+        1080
+      ],
+      "mode": "RGBA",
+      "sha256": "e62239937ba00ee6883fab717f34cb808e345fd783d979742763fb22aacdcec4"
+    },
+    "30_shop_car_card_states.png": {
+      "size": [
+        1600,
+        900
+      ],
+      "mode": "RGBA",
+      "sha256": "33a0e4b3c20213715b9d1f9b678e4ffefa3e1f7b7f337af228fc00b15f51a50d"
+    },
+    "31_shop_buy_dialog.png": {
+      "size": [
+        1200,
+        800
+      ],
+      "mode": "RGBA",
+      "sha256": "83d803da166539f2e33724d1b640bfeb0786f8ba3997e8a4d5bbaf804af6a992"
+    },
+    "32_shop_menu_button.png": {
+      "size": [
+        1200,
+        500
+      ],
+      "mode": "RGBA",
+      "sha256": "20ab1041ff0f03c3ff76f819404fe99d83f1dafadb3cdf1a249117543c8c4082"
+    },
+    "33_coin_currency_icon.png": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "21948413364b571fe74f78fc131fbee02af53a13748978ea7121f32e47415978"
+    }
+  },
+  "components": [
+    {
+      "file": "components/car_card_equipped.png",
+      "canvas": [
+        344,
+        184
+      ],
+      "content_rect": [
+        32,
+        32,
+        280,
+        120
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/car_card_owned.png",
+      "canvas": [
+        344,
+        184
+      ],
+      "content_rect": [
+        32,
+        32,
+        280,
+        120
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/car_card_sale.png",
+      "canvas": [
+        344,
+        184
+      ],
+      "content_rect": [
+        32,
+        32,
+        280,
+        120
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/car_card_expensive.png",
+      "canvas": [
+        344,
+        184
+      ],
+      "content_rect": [
+        32,
+        32,
+        280,
+        120
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/car_card_locked.png",
+      "canvas": [
+        344,
+        184
+      ],
+      "content_rect": [
+        32,
+        32,
+        280,
+        120
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/menu_shop_normal.png",
+      "canvas": [
+        534,
+        116
+      ],
+      "content_rect": [
+        32,
+        32,
+        470,
+        52
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/menu_shop_hover.png",
+      "canvas": [
+        534,
+        116
+      ],
+      "content_rect": [
+        32,
+        32,
+        470,
+        52
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/menu_shop_new.png",
+      "canvas": [
+        534,
+        116
+      ],
+      "content_rect": [
+        32,
+        32,
+        470,
+        52
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/menu_world_ranking.png",
+      "canvas": [
+        534,
+        116
+      ],
+      "content_rect": [
+        32,
+        32,
+        470,
+        52
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/dialog_buy_viper.png",
+      "canvas": [
+        784,
+        454
+      ],
+      "content_rect": [
+        32,
+        32,
+        720,
+        390
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/dialog_viper_success.png",
+      "canvas": [
+        664,
+        309
+      ],
+      "content_rect": [
+        32,
+        32,
+        600,
+        245
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_buy.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_equip_now.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_cancel.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_later.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_equip.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_buy_price.png",
+      "canvas": [
+        548,
+        140
+      ],
+      "content_rect": [
+        32,
+        32,
+        484,
+        76
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_buy_price_disabled.png",
+      "canvas": [
+        548,
+        140
+      ],
+      "content_rect": [
+        32,
+        32,
+        484,
+        76
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_primary_blank.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_secondary_blank.png",
+      "canvas": [
+        364,
+        130
+      ],
+      "content_rect": [
+        32,
+        32,
+        300,
+        66
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/button_close.png",
+      "canvas": [
+        136,
+        136
+      ],
+      "content_rect": [
+        32,
+        32,
+        72,
+        72
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/wallet_650.png",
+      "canvas": [
+        414,
+        136
+      ],
+      "content_rect": [
+        32,
+        32,
+        350,
+        72
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/car_silhouette_placeholder.png",
+      "canvas": [
+        204,
+        114
+      ],
+      "content_rect": [
+        12,
+        12,
+        180,
+        90
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_close.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_check.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_lock.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_crown.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_arrow.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_left.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_right.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    },
+    {
+      "file": "components/icon_rotate.png",
+      "canvas": [
+        64,
+        64
+      ],
+      "content_rect": [
+        8,
+        8,
+        48,
+        48
+      ],
+      "format": "RGBA PNG",
+      "role": "reference/component artwork; live text and controls remain application-owned"
+    }
+  ],
+  "palette": {
+    "navy": "#05061a",
+    "cyan": "#19e6ff",
+    "magenta": "#ff2bd6",
+    "gold": "#ffd25a",
+    "text": "#eaf6ff",
+    "muted": "#7f91ac",
+    "error": "#ff729b"
+  },
+  "constraints": {
+    "phone_safe_area": "4% minimum; final layout uses greater insets",
+    "phone_frame": false,
+    "stage_car": false,
+    "card_count_in_shop": 3,
+    "cosmetic_only": true,
+    "wallet_shop": 650,
+    "viper_price": 2500,
+    "shortfall": 1850,
+    "confirm_wallet_before": 3100,
+    "confirm_wallet_after": 600
+  },
+  "notes": [
+    "Reference screenshots are not an implemented shop.",
+    "The source mockups explicitly show ROADSTER equipped/selected while VIPER appears in details. This relationship is preserved in the references.",
+    "Desktop and phone references retain the requested BUY display with wallet 650. A real purchase flow must reject insufficient balance. A disabled buy component is included as an implementation supplement.",
+    "The confirmation panel is a separate affordable-balance example: 3,100 minus 2,500 equals 600.",
+    "The selected wheel coin replaces the earlier unselected glyph/coin options.",
+    "Raster text uses installed Inter; source prompts request an Orbitron/Rajdhani-like system. Fonts are not bundled."
+  ]
+}

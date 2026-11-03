@@ -1,0 +1,147 @@
+Start testing: Nov 02 13:15 Eastern Standard Time
+----------------------------------------------------------
+1/9 Testing: browser_flight_and_skyline_parity
+1/9 Test: browser_flight_and_skyline_parity
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_core_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"browser_flight_and_skyline_parity" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+2940 browser flight steps; 81 spline/arc/tangent samples; 8 gates. Worst absolute error 2.61e-12.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_flight_and_skyline_parity" end time: Nov 02 13:15 Eastern Standard Time
+"browser_flight_and_skyline_parity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/9 Testing: bounded_rendering_policy
+2/9 Test: bounded_rendering_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_render_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"bounded_rendering_policy" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Render bounds, camera culling, and overload policy checked without graphics.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"bounded_rendering_policy" end time: Nov 02 13:15 Eastern Standard Time
+"bounded_rendering_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/9 Testing: current_browser_race_rules
+3/9 Test: current_browser_race_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_race_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"current_browser_race_rules" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1262 actual browser race-rule steps, 32 scenarios; worst error 0; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"current_browser_race_rules" end time: Nov 02 13:15 Eastern Standard Time
+"current_browser_race_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/9 Testing: race_session_lifecycle
+4/9 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_session_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"race_session_lifecycle" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 02 13:15 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/9 Testing: menu_activation_policy
+5/9 Test: menu_activation_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_menu_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"menu_activation_policy" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Menu release, focus, consumption and simultaneous-input policy passed.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"menu_activation_policy" end time: Nov 02 13:15 Eastern Standard Time
+"menu_activation_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/9 Testing: browser_route_recovery
+6/9 Test: browser_route_recovery
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_recovery_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"browser_route_recovery" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+357 actual browser recovery steps; 83 tangent and 28 nearest cases; worst error 2.3e-13; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_route_recovery" end time: Nov 02 13:15 Eastern Standard Time
+"browser_route_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/9 Testing: all_browser_road_geometry
+7/9 Test: all_browser_road_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_all_roads_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"all_browser_road_geometry" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+9 browser roads; 18052 sample/tangent pairs; 117 gates; 729 curve and 189 nearest cases; two-lap integration on every road; worst error 4.55e-12; 0 failures.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"all_browser_road_geometry" end time: Nov 02 13:15 Eastern Standard Time
+"all_browser_road_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/9 Testing: browser_road_picker
+8/9 Test: browser_road_picker
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_road_picker_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"browser_road_picker" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+20 actual browser picker cases, 36 minimap cases; initialization/restart on 9 roads; no progression writes; 0 failures.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"browser_road_picker" end time: Nov 02 13:15 Eastern Standard Time
+"browser_road_picker" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/9 Testing: browser_city_clearance
+9/9 Test: browser_city_clearance
+Command: "C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native/rr_city_clearance_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/city-clearance-native
+"browser_city_clearance" start time: Nov 02 13:15 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1534 browser corridor queries; 651 fitting cases; city 404 buildings (104 lowered, 221 rejected); 0 sampled route/AABB intersections; all-road independence; worst error 3.87e-12; 0 failures.
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"browser_city_clearance" end time: Nov 02 13:15 Eastern Standard Time
+"browser_city_clearance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 02 13:15 Eastern Standard Time

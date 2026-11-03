@@ -1,0 +1,15 @@
+{
+  "name": "raylib",
+  "version": "6.2",
+  "source_commit": "02566453880e06bec97f5b8160fa6fe1e98397ca",
+  "release_url": "https://github.com/raysan5/raylib/releases/tag/6.2",
+  "verified_metadata_date": "2026-11-02",
+  "license": "zlib",
+  "windows_msvc_x64": {
+    "archive": "raylib-6.2_win64_msvc16.zip",
+    "url": "https://github.com/raysan5/raylib/releases/download/6.2/raylib-6.2_win64_msvc16.zip",
+    "sha256": "8467b5dd6db4d7ab942f3148a3d30d93be6ed9b2fab88069d177e59604268ebd",
+    "size_bytes": 2598891
+  },
+  "metadata_status": "official release metadata verified"
+}

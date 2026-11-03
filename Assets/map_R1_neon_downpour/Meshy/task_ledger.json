@@ -1,0 +1,19 @@
+{
+  "map_id": "R1",
+  "status": "No Meshy tasks executed in pack preparation",
+  "tasks": [],
+  "required_fields_per_future_task": [
+    "asset_id",
+    "input_sha256",
+    "resource_type",
+    "task_id",
+    "submitted_options",
+    "estimated_credits",
+    "consumed_credits",
+    "status",
+    "downloaded_glb",
+    "measured_triangles",
+    "cleanup_notes",
+    "accepted_by"
+  ]
+}

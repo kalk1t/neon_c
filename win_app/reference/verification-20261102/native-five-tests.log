@@ -1,0 +1,83 @@
+Start testing: Nov 02 12:05 Eastern Standard Time
+----------------------------------------------------------
+1/5 Testing: browser_flight_and_skyline_parity
+1/5 Test: browser_flight_and_skyline_parity
+Command: "C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native/rr_core_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native
+"browser_flight_and_skyline_parity" start time: Nov 02 12:05 Eastern Standard Time
+Output:
+----------------------------------------------------------
+2940 browser flight steps; 81 spline/arc/tangent samples; 8 gates. Worst absolute error 2.61e-12.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_flight_and_skyline_parity" end time: Nov 02 12:05 Eastern Standard Time
+"browser_flight_and_skyline_parity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: bounded_rendering_policy
+2/5 Test: bounded_rendering_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native/rr_render_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native
+"bounded_rendering_policy" start time: Nov 02 12:05 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Render bounds, camera culling, and overload policy checked without graphics.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"bounded_rendering_policy" end time: Nov 02 12:05 Eastern Standard Time
+"bounded_rendering_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: current_browser_race_rules
+3/5 Test: current_browser_race_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native/rr_race_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native
+"current_browser_race_rules" start time: Nov 02 12:05 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1262 actual browser race-rule steps, 32 scenarios; worst error 0; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"current_browser_race_rules" end time: Nov 02 12:05 Eastern Standard Time
+"current_browser_race_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: race_session_lifecycle
+4/5 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native/rr_session_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native
+"race_session_lifecycle" start time: Nov 02 12:05 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 02 12:05 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: menu_activation_policy
+5/5 Test: menu_activation_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native/rr_menu_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/menu-diagnostics-native
+"menu_activation_policy" start time: Nov 02 12:05 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Menu release, focus, consumption and simultaneous-input policy passed.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"menu_activation_policy" end time: Nov 02 12:05 Eastern Standard Time
+"menu_activation_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 02 12:05 Eastern Standard Time

@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a1949f-f2d1-75a9-8f64-28ac1bff8f2a",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494872807,
+    "started_at": 1793494872814,
+    "finished_at": 1793494909745,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/model.glb?Expires=4947091200&Signature=KHwSy6Rdg2YhW5fgWJe3s-l8es6u2BT0MPmW1iIGS8uoHG0DiCCCRVU7nU2Hfg0VjgU314hMZ0vg8V2C0kXLWo-lGoOZMNyrj0wXD6fFkBcRyg-q~Fj0vm0HDGlp4jA9aw57CIUf2sb9bpUyk0WlRW4~tVjeDIp4rJ0eDMnU9JXGwLGL2dTUemfTaKftC4LGwchjDD4er~xyAGH2MudzaE6CjyMpCKVUiliyTq4JZkBa3XdlMrWAR6r6OZhxs3BoYD2BDOHPjT-bsgdyO~QvqTUjKrRf5lJzmq-1rRMQFziRF6mpYwpHq9h6Tk97FPcMdt5Ss8JZ1eVgpSRSdFggMg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/texture_0.png?Expires=4947091200&Signature=Fl4bj5VFvxcAw0wLRO0Io2WjIrYzJo0GOFzjc8Av6bgI4EGE25F1YS-8P80qytjDZdbobrsEkgC-M6Q3sfjOQmcLeSGRzDQVu-w1Cx1PODXKaJhGdSnNC~MiTlCmsWwxOcoEajltYHaHckBh5XK2hNayTIbETXHMPLJlBJ9Y97jOODimN7e47KDcims0Tp9OsKD4OYJbbMdhFhHQh4AOJ5Vz9B5w9~OjCQ9aW6Q0DAOtMBRijNBXoE7rDZaJ03zZp74Viw4ce5rvAbDGAhMp9iWaaOQ1CaCvnaQz52J4ONtS1MKBLNgKFzFx2QZQMLkckKGAQ2BmVGGcxxFP9aZlXw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/texture_0_metallic.png?Expires=4947091200&Signature=f0BZNc5MyZNzcWmF008oOFjPFZJAhjLv6FINuCTBBUv8Kjkejp0~jKWXtY3gOA5r1fnELKUvVN2aVpZuzLmGecxdFrNNo~HmBlSWW5ui04gVZOEx40Z6wNU5FDvLSOkEkXIAHX9VAJbbFZKOqNaX1HrJOu6ZRABIhv6D3kH69TIzdvjfREBsYen1mc57kuS7Nu9TV~97WJUlQLgHeIBhh4qvknWUnXVdB80mDQvMlficGfkoyd2IyPL1tgTacZ4OoTL69BDKvh8IIptGvEhH7QNElUyJ3DWUvUTqmXdXeLLtS1MN5Ok~ZTxej6YVNGe15FIr6dfXKfXT9qsXdqpiAw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/texture_0_normal.png?Expires=4947091200&Signature=b3i0yHPm4~2ETw7UNXfICZywjuoKfMFol~g3QvURRWOOMDubeyOx3evkBi4ERkHhp09TJfakUBv~LBBs9LsSUgzgfmh2UfgMIb76y~BSlUiZgqsF3yrwKLT1gqQGzxKvl9P86UkfDW8AwiWOur8-NOjPNES5oLQGI~sSKSDDRVOurkK1oUhnJrzXLuSwcOYc36N6p56H8HUbqHtZnANGlO7w83V-HCIA2KYNJfAUhCbmGgb7hYjOdAz30FCrMYUAtAoEP8mbFysO3xYNvRu29KKL~RI1pYZNXHqlGlASaPHvAWEbZht1g5zRo25RAhFm59fz~W6PWBTZKoeGsMA78g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/texture_0_roughness.png?Expires=4947091200&Signature=ARFFw7m1kHLJ7MqjiWAEpvBTXiKG-mSJcmivn9UOe4ex0s-svvLl2svY6j3bX~flvnPPJAPUUajyzPuSu85vKT2ECVQEUnvkyDb-ykRwDfovRR7H7IHeJMnlVaYRcnniovEpimDk7DVpAG8zkH2uIXXblQ8Hhj2EcavrKEJXcrS~qz3q-Q6jyoD-~ZB3O5nm4p5PaYAfTB1YJJc9JfH71WaCXw2jB9lOKYUxB~F3hpLBzwQCRPlQN7vqeSLrdIF0I~EWZfE4Fw5LxtXMHwJtyMGahFNYGu7pHvnxxezew5WJ0xYjxD3EGhrkihgHpfu7qwX2hhgJ04zYXFsufEiTpA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a1949f-f2d1-75a9-8f64-28ac1bff8f2a/output/preview.png?Expires=4947091200&Signature=bQcSk4F3N9DqeK62OGRKocJoaaMiB47pxe-7k~Lv7HnCpzN4UbUH~uAcAjvSM~Sjc3TiT1T1UDkGHIHmkF2o0l-KXQmmO6~tMyXHeCl9ddlL~t58g-hJdicC2Wkcx0immjwjSGMm92k~ruuimuQcYsN~DpP5DqiT7wXvHan9OwIMDe3A9JXkKKJy2eZlg6CGKL3Z4QYSw4-s8Tpr6av4Dm0-Kxo0~ND8-7beQQipW6QSkytOM3xu1kByq2SpwGAXU80AuOnU-Uzrd1BAQu34sBfz81H29ByY9Aby2c-bc1WBgY3KrgOMyz9wcV1cFO1qcRP5PilEU7yh2RJnnSzOvg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "sleek futuristic advertising airship blimp, dark glossy hull, large flat billboard screen panel on its side, magenta neon trim lights, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 2544594659,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "blimp\\model.glb",
+    "blimp\\thumbnail.png",
+    "blimp\\texture_0_base_color.png",
+    "blimp\\texture_0_metallic.png",
+    "blimp\\texture_0_normal.png",
+    "blimp\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:01:54.225Z"
+}

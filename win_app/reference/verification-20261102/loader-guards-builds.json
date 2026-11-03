@@ -1,0 +1,60 @@
+{
+  "reference\\verification-20261102\\loader-guards-native-seventeen-tests.log": "670886c75babee9f63af80501a859fc7c79dc8b11606c20157167184f02b489e",
+  "reference\\verification-20261102\\loader-guards-wasm-seventeen-tests.log": "eddf92e11406d4da3bb0cb76e4ec9232a47833826f7794b12e0eb911414c8f24",
+  "build/loader-guards-native/bin/RoadstersRace.exe": {
+    "sha256": "4bcdf40bdf4d6a5501f77776dbfd2ee77cbb4c5388bcca861b88bf28e2442bdc",
+    "bytes": 879616
+  },
+  "build/loader-guards-native/rr_mesh_loader_tests.exe": {
+    "sha256": "6f37a23e4ed6d68d5e7e034a09a5b2b472da0d45d095ecc788297348f9d44542",
+    "bytes": 94208
+  },
+  "build/loader-guards-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/loader-guards-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/loader-guards-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/loader-guards-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "renderer_support_sources": {
+    "node_modules/three/src/renderers/webgl/WebGLObjects.js": "60829abba98579b02a84177ce86b3eea127a7decac487b69c70f0e3e83a1d923",
+    "node_modules/three/src/renderers/webgl/WebGLGeometries.js": "d04c0ef5e4ccf862867be3a00d5c4a12de1f0939f81e7d5c50c5c4dcb3bc0eff"
+  },
+  "changed_paths": {
+    "src/core/rr_mesh_asset.h": "8cd188ed725e784783c897308f62d8b1aa176e4c9c7b9362147f6356c63ea3a1",
+    "src/presentation/rr_scene.c": "2941b5b5e593cb4434a629645d0439adec716f25a8e3765ecd263035afa4e0a8",
+    "CMakeLists.txt": "837574ae342f1c9c39867d44f7cbccd27d7be66a747c3b8477e7dc623eb14876",
+    "tools/race-rules-check/CMakeLists.txt": "15860ee1c7bf8cff76f0c0d290e44e53c1c1eb991df2516929966247dfcff1c3",
+    "tests/test_mesh_loader.c": "d35c5429d93a504a6f8aea968aee111b61b3278c8514c0939ae099011ee91799",
+    "tests/generated_mesh_loader_fixture.h": "4bb2cc62ad56448194a91e95afe91c20a9c4199facc3e167d7deaceaa47ebcb0",
+    "tools/audit-browser-city.mjs": "7e0725a0962cbf61c746c9795c2205d6119112ebbeba3aaf320382a82fcebb8a",
+    "reference/browser-city-loading-audit.json": "52d24362b03cb97cc0a179c17e09f23ed288434397fc4df5dba3f6da4d14509f"
+  },
+  "native_all_asset_check": {
+    "command": "build/loader-guards-native/rr_mesh_loader_tests.exe assets/city-core",
+    "observed_exit_code": 0,
+    "assets_checked": 413,
+    "failures": 0,
+    "evidence": "Combined native build/test tool command completed successfully and printed 413 installed assets checked;0 failures. No rerun solely to recreate stdout."
+  },
+  "all_runtime_assets_and_prior_evidence_unchanged": true,
+  "browser_version": "0.2.3",
+  "source_hashes_rechecked": true,
+  "coverage": {
+    "represented_grid_towers": 413,
+    "unrepresented_grid_towers": 1897,
+    "prototype_buildings": 266,
+    "total_planned": 679,
+    "max_active_shapes": 991
+  },
+  "graphics": "No launch/control/log retry. Window3148188 last observed in prior camera trial; current state unresolved. Its executable/assets unchanged."
+}

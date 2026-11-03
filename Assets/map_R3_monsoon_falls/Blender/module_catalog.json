@@ -1,0 +1,204 @@
+{
+  "note": "The complete asset package supplies individual PNG references and VFX sprite images plus this procedural source kit. Final meshes, production PBR atlases, and runtime effect implementations still need to be built. This source kit uses editable procedural placeholders.",
+  "shared": [
+    {
+      "asset_id": "C01",
+      "name": "straight deck",
+      "production_method": "Blender swept deck"
+    },
+    {
+      "asset_id": "C02",
+      "name": "curved deck",
+      "production_method": "Blender swept deck"
+    },
+    {
+      "asset_id": "C03",
+      "name": "climb ramp",
+      "production_method": "Blender swept deck"
+    },
+    {
+      "asset_id": "C04",
+      "name": "checkpoint ring",
+      "production_method": "Blender precise 22 m inner opening"
+    },
+    {
+      "asset_id": "C05",
+      "name": "start/finish arch",
+      "production_method": "Blender precise opening; starter uses circular ring proxy"
+    },
+    {
+      "asset_id": "C06",
+      "name": "support column",
+      "production_method": "Blender"
+    },
+    {
+      "asset_id": "C07",
+      "name": "barrier",
+      "production_method": "Blender"
+    },
+    {
+      "asset_id": "C08",
+      "name": "chevron sign",
+      "production_method": "Blender; starter panel is blank"
+    },
+    {
+      "asset_id": "C09",
+      "name": "beacon",
+      "production_method": "Blender"
+    },
+    {
+      "asset_id": "C10",
+      "name": "start platform",
+      "production_method": "Blender slope-following 24 x 48 m starter"
+    },
+    {
+      "asset_id": "C11",
+      "name": "rain streak sprite",
+      "production_method": "Runtime VFX"
+    },
+    {
+      "asset_id": "C12",
+      "name": "splash sprite",
+      "production_method": "Runtime VFX"
+    },
+    {
+      "asset_id": "C13",
+      "name": "mist sprite",
+      "production_method": "Runtime VFX"
+    },
+    {
+      "asset_id": "C14",
+      "name": "dotted route light",
+      "production_method": "Blender/instanced runtime markers"
+    },
+    {
+      "asset_id": "C15",
+      "name": "service platform",
+      "production_method": "Blender"
+    }
+  ],
+  "R1": [
+    {
+      "asset_id": "N01",
+      "name": "cyan tower",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N02",
+      "name": "stepped tower",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N03",
+      "name": "twin towers and skybridge",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N04",
+      "name": "midrise",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N05",
+      "name": "rooftop platform",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N06",
+      "name": "canal wall",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N07",
+      "name": "canal bridge",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N08",
+      "name": "roof vent",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N09",
+      "name": "antenna",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N10",
+      "name": "blank billboard",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N11",
+      "name": "energy cabinet",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    },
+    {
+      "asset_id": "N12",
+      "name": "distant skyline cluster",
+      "production_method": "Blender precision modeling; Meshy optional only for decorative details"
+    }
+  ],
+  "R3": [
+    {
+      "asset_id": "F01",
+      "name": "basalt cliff",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F02",
+      "name": "natural arch",
+      "production_method": "Blender precision geometry"
+    },
+    {
+      "asset_id": "F03",
+      "name": "mesa",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F04",
+      "name": "dam segment",
+      "production_method": "Blender precision geometry"
+    },
+    {
+      "asset_id": "F05",
+      "name": "spillway",
+      "production_method": "Blender precision geometry"
+    },
+    {
+      "asset_id": "F06",
+      "name": "observation pod",
+      "production_method": "Blender precision geometry"
+    },
+    {
+      "asset_id": "F07",
+      "name": "broadleaf tree",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F08",
+      "name": "palm",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F09",
+      "name": "fern",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F10",
+      "name": "moss boulder",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    },
+    {
+      "asset_id": "F11",
+      "name": "waterfall curtain",
+      "production_method": "Runtime animated plane and particles"
+    },
+    {
+      "asset_id": "F12",
+      "name": "hanging vine",
+      "production_method": "Meshy optional for organic mesh, then Blender cleanup/scale/LOD"
+    }
+  ]
+}

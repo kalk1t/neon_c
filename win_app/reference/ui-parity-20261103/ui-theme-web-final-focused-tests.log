@@ -1,0 +1,42 @@
+Start testing: Nov 03 01:35 Eastern Standard Time
+----------------------------------------------------------
+1/37 Testing: browser_ui_layout_and_hit_regions
+1/37 Test: browser_ui_layout_and_hit_regions
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web/rr_ui_layout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web
+"browser_ui_layout_and_hit_regions" start time: Nov 03 01:35 Eastern Standard Time
+Output:
+----------------------------------------------------------
+UI layout: viewport containment, focus scroll, clipped hit regions passed (4 viewports).
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_layout_and_hit_regions" end time: Nov 03 01:35 Eastern Standard Time
+"browser_ui_layout_and_hit_regions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/37 Testing: browser_ui_font_cpu_atlas
+37/37 Test: browser_ui_font_cpu_atlas
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web/rr_ui_font_tests.js" "/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/ui-theme-web
+"browser_ui_font_cpu_atlas" start time: Nov 03 01:35 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-700.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=12449562
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-900.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=14122856
+Rajdhani-Medium.ttf CPU atlas 512x256, conservative RGBA8=524288 bytes, glyph coverage=1197097
+CPU font rasterization/atlas passed; RGBA8 total=6815744; no window/GPU initialized.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_font_cpu_atlas" end time: Nov 03 01:35 Eastern Standard Time
+"browser_ui_font_cpu_atlas" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 01:35 Eastern Standard Time

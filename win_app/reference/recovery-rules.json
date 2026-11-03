@@ -1,0 +1,76 @@
+{
+  "captured_utc": "2026-11-02T17:15:32.455Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "0dc42968a942ff3bdd8740e367c0fb5805c017c418473d839cb3a3a79e651db8"
+    },
+    {
+      "path": "src/car.js",
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/maps.js",
+      "sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3"
+    },
+    {
+      "path": "node_modules/three/package.json",
+      "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "scenarios": [
+    {
+      "name": "safe",
+      "steps": 40
+    },
+    {
+      "name": "off-distance-boundary",
+      "steps": 34
+    },
+    {
+      "name": "floor-boundary",
+      "steps": 33
+    },
+    {
+      "name": "signal-lost-strict-threshold",
+      "steps": 32
+    },
+    {
+      "name": "reverse-threshold-and-reset",
+      "steps": 62
+    },
+    {
+      "name": "reverse-message-suppression",
+      "steps": 41
+    },
+    {
+      "name": "roam-no-warnings-or-recovery",
+      "steps": 40
+    },
+    {
+      "name": "intermittent-signal-reset",
+      "steps": 47
+    },
+    {
+      "name": "simultaneous-warnings",
+      "steps": 28
+    }
+  ],
+  "steps": 357,
+  "tangent_samples": 83,
+  "nearest_cases": 28,
+  "scope": "Actual player warning/recovery conditions and respawn placement; actual Skyline local/global nearest and arc-mapped tangents. No graphics, services, collisions, UI execution or AI."
+}

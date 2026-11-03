@@ -1,0 +1,13 @@
+{
+  "reference\\verification-20261102\\finish-native-ten-tests.log": "7fc9026d1b1acf6d9671fc518f2089d3578dedb0855c0ff2e1c6e24499965f76",
+  "reference\\verification-20261102\\finish-wasm-ten-tests.log": "4611e23851966e8dbeeba5f58c572254f6abea7c25b6ce5d6eee73e02603c0e4",
+  "reference/graphics-20261102/finish-final-182413-original.log": "0991dac731ffcedbc8aaceaca33db2b0e907f3f3af13c2a23b01ea852e63ed74",
+  "reference/graphics-20261102/finish-final-results-fixture.png": "cac9964e7873c6428340766453c3235d4de98e866bf1817f8ed9be47bc1c0613",
+  "build/finish-native/bin/RoadstersRace.exe": "afab690387a52e68fbb1110e908c6136901eae01221c854425ebc329ab847f9e",
+  "build/finish-visual-final/bin/RoadstersRace.exe": "04bfa4e3a74bf20d12049dfe908e8d9c86c2101d7a138db22cf596fc4c8c7fb4",
+  "build/finish-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/finish-web/bin/RoadstersRace.js": "ace44c352e209685b191d43635abf49ca96169e1034772b9968e8013e20f1e7d",
+  "build/finish-web/bin/RoadstersRace.wasm": "d0981df2b4d49f79e5989ca4407f8e6216a26fd84e95cbbaa64da17d63da9c54",
+  "build/finish-web/bin/RoadstersRace.data": "3a6b53c74017ee76562212606ef00f38e68612707ec42d5ac0c9ddcbabdeb0cf",
+  "reference_sources_still_match": true
+}

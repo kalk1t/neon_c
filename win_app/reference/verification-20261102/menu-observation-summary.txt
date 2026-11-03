@@ -1,0 +1,22 @@
+Observation summary only, not a reconstructed original log.
+
+Normal 2D menu test, 2026-11-02 17:06:01Z to 17:06:27Z.
+Executable: build/menu-diagnostics-native/bin/RoadstersRace.exe
+SHA256: b3a8cb4eafe96f938be58bb47195f7fd86ec18f5f74cdaaa71df1393bcf9c81e
+Launch flags from native log: smoke=0 fallback=0 glow=0.
+Window: 960x720, observed twice with menu screenshot.
+Action: blank-area click, then Alt-F4; no start action selected in this test.
+Native heartbeats at 17:06:06Z, 11Z, 16Z, 21Z, 26Z:
+  mode=0, target=0x0, focused=1.
+No scene load or menu-start input event occurred in the completed session log.
+Log ended 17:06:27Z: Window closed successfully; SESSION: clean shutdown.
+Window absence was confirmed by computer-use window inventory.
+
+At that closure, the log SHA256 was:
+31ba339d5324a6d078a493fa53eb2081f16ecb39d9017abfbc39007733164fe4
+The application subsequently appended a separate flight session to the same
+file. Its closure is unresolved; its log must be reconciled after release.
+
+This is a short successful menu/OpenGL observation on the earlier executable.
+It is not flight/stability/performance or complete-parity certification, and
+does not validate the later recovery-integration build graphically.

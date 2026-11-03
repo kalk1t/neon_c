@@ -1,0 +1,35 @@
+{
+  "source_sha256": "328943be0a989f024d2566308fe79c8e957cf4d7b4fcdd490f14da0923b37056",
+  "output_sha256": "c2e8a412fed57eb94a8c3cefbd2080b0dab43cd9555507692f54838323f598de",
+  "conversion": "embedded WebP decoded to PNG by Chrome canvas; geometry/node transforms unchanged; unused original image bytes retained",
+  "converted": [
+    {
+      "index": 0,
+      "source_bytes": 66564,
+      "png_bytes": 1120381
+    },
+    {
+      "index": 1,
+      "source_bytes": 285954,
+      "png_bytes": 3733879
+    },
+    {
+      "index": 2,
+      "source_bytes": 301536,
+      "png_bytes": 4068953
+    }
+  ],
+  "hi_mesh_mask": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "output_bytes": 14579268
+}

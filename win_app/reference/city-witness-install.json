@@ -1,0 +1,14 @@
+{
+  "modified": {
+    "CMakeLists.txt": "6addf277e8365027a762673bf50e0058f2918d3971e0faea7c9e0f26490be0c6",
+    "tools/race-rules-check/CMakeLists.txt": "7432b4973efc27090ef8af77c3e609db8f6dc35f6cd54a417e78169014b46193"
+  },
+  "added": [
+    "src/experimental/rr_city_witness.h",
+    "src/experimental/rr_city_witness.c",
+    "tests/test_city_witness.c"
+  ],
+  "runtime_changes": false,
+  "existing_source_fixture_reused": true,
+  "current_window_files_touched": false
+}

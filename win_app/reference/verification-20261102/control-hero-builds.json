@@ -1,0 +1,15 @@
+{
+  "reference\\verification-20261102\\control-hero-native-fourteen-tests.log": "bce6f11219a8b136d0faa70720d5099c9a86d257afef65267f55caa4d1e958fa",
+  "reference\\verification-20261102\\control-hero-wasm-fourteen-tests.log": "bda57e4ccac9525f579e623f84c0049bcf8d5843851f5f5743b1f26cb8202884",
+  "reference\\graphics-20261102\\control-hero-normal-192106-original.log": "df3c9919dcfb1978b4bc4333f92acdd383f3572fac381d86f147a80936df85cb",
+  "reference\\graphics-20261102\\control-hero-view-192213-original.log": "a6a16f987a8f019b8cc223f260f4ae553b2c58975aa7c81d9762d793a45e5b61",
+  "build/control-hero-native/bin/RoadstersRace.exe": "8b1819d2db04de5ba91303d3615209fef6aef8600eb7ea269ef773094bbc3b8b",
+  "build/control-hero-view/bin/RoadstersRace.exe": "a955947082fe1ff2e205292034b0bd0078f4932be0e2f08bd1f23fb7aebb2cfc",
+  "build/control-hero-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/control-hero-web/bin/RoadstersRace.js": "013d82d50691646848a498a2de9b3c2e09df0bc598851091e8c82a0344144cdb",
+  "build/control-hero-web/bin/RoadstersRace.wasm": "8d1e02f60b7b57f0e17a140bf30c28d39ef8418ccf3d889266810b8a3b5e29a3",
+  "build/control-hero-web/bin/RoadstersRace.data": "761c211f51ad18755525a4dfbdd89040a6536f68667a97ebd3094ba8f3113e19",
+  "reference_sources_runtime_assets_and_native_staging_match": true,
+  "browser_package_version": "0.2.3",
+  "preserved_library_receipt_sha256": "f9c3e0647e32c7eaaa9fdc860616c5c33860d992f7947d911b943d494022c2ee"
+}

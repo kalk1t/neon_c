@@ -1,0 +1,14 @@
+:root {
+  --rr-navy: #05061a;
+  --rr-panel: rgba(4,8,30,.85);
+  --rr-cyan: #19e6ff;
+  --rr-magenta: #ff2bd6;
+  --rr-gold: #ffd25a;
+  --rr-text: #eaf6ff;
+  --rr-muted: #7f91ac;
+  --rr-error: #ff729b;
+  --rr-font-heading: Orbitron, Inter, system-ui, sans-serif;
+  --rr-font-body: Rajdhani, Inter, system-ui, sans-serif;
+  --rr-coin: url("currency/coin_wheel_64.png");
+}
+/* Theme tokens only; this file does not implement shop behavior. */

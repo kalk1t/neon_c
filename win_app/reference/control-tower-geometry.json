@@ -1,0 +1,27 @@
+{
+  "source": "../game/public/models/props/control_tower.glb",
+  "converted": "reference/converted-assets/control-tower-png.glb",
+  "converted_sha256": "caa607377383529331995852649a783cd6d0a128e053bd4726658fcb7fc65848",
+  "mesh": {
+    "path": "assets/course/control-sculpt.rrmesh",
+    "sha256": "46b3d7ed8784ecc8ab5bc7402bf9ab73459413303e59646a30229ca47b6481ff",
+    "vertices": 27000,
+    "source_vertices": 12746,
+    "source_height": 0.9893424855545163,
+    "unit_height_scale": 1.0107723206079746
+  },
+  "texture": {
+    "path": "assets/models/control-tower-base.png",
+    "sha256": "a4791c65c341406f4d42974652eb4064f9dd4c64eaa5c19eb876fc961efeb262",
+    "width": 1024,
+    "height": 1024
+  },
+  "double_sided": true,
+  "scope": "Original first mesh/node identity, original indexed triangle order flattened losslessly, same UV/normals; decoded base-color map only. Normal/roughness/PBR environment remain unported; no new generation.",
+  "sampler": {
+    "magFilter": 9729,
+    "minFilter": 9987,
+    "wrapS_default": 10497,
+    "wrapT_default": 10497
+  }
+}

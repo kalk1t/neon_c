@@ -1,0 +1,131 @@
+Start testing: Nov 02 12:48 Eastern Standard Time
+----------------------------------------------------------
+1/8 Testing: browser_flight_and_skyline_parity
+1/8 Test: browser_flight_and_skyline_parity
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_core_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"browser_flight_and_skyline_parity" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+2940 browser flight steps; 81 spline/arc/tangent samples; 8 gates. Worst absolute error 2.61e-12.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_flight_and_skyline_parity" end time: Nov 02 12:48 Eastern Standard Time
+"browser_flight_and_skyline_parity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: bounded_rendering_policy
+2/8 Test: bounded_rendering_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_render_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"bounded_rendering_policy" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Render bounds, camera culling, and overload policy checked without graphics.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"bounded_rendering_policy" end time: Nov 02 12:48 Eastern Standard Time
+"bounded_rendering_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: current_browser_race_rules
+3/8 Test: current_browser_race_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_race_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"current_browser_race_rules" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1262 actual browser race-rule steps, 32 scenarios; worst error 0; 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"current_browser_race_rules" end time: Nov 02 12:48 Eastern Standard Time
+"current_browser_race_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: race_session_lifecycle
+4/8 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_session_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"race_session_lifecycle" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 02 12:48 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: menu_activation_policy
+5/8 Test: menu_activation_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_menu_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"menu_activation_policy" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Menu release, focus, consumption and simultaneous-input policy passed.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"menu_activation_policy" end time: Nov 02 12:48 Eastern Standard Time
+"menu_activation_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: browser_route_recovery
+6/8 Test: browser_route_recovery
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_recovery_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"browser_route_recovery" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+357 actual browser recovery steps; 83 tangent and 28 nearest cases; worst error 2.3e-13; 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_route_recovery" end time: Nov 02 12:48 Eastern Standard Time
+"browser_route_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: all_browser_road_geometry
+7/8 Test: all_browser_road_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_all_roads_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"all_browser_road_geometry" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+9 browser roads; 18052 sample/tangent pairs; 117 gates; 729 curve and 189 nearest cases; two-lap integration on every road; worst error 4.55e-12; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"all_browser_road_geometry" end time: Nov 02 12:48 Eastern Standard Time
+"all_browser_road_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: browser_road_picker
+8/8 Test: browser_road_picker
+Command: "C:/Users/User/Projects/neon_c/win_app/build/road-picker-native/rr_road_picker_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/road-picker-native
+"browser_road_picker" start time: Nov 02 12:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+20 actual browser picker cases, 36 minimap cases; initialization/restart on 9 roads; no progression writes; 0 failures.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"browser_road_picker" end time: Nov 02 12:48 Eastern Standard Time
+"browser_road_picker" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 02 12:48 Eastern Standard Time

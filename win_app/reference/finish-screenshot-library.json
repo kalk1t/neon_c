@@ -1,0 +1,14 @@
+{
+  "operation": "create_library_file",
+  "status": "succeeded",
+  "path": "/finish-final-results-fixture.png",
+  "file_name": "finish-final-results-fixture.png",
+  "library_file_id": "libfile_8394bf2ba83881918ce52c17307b27ec",
+  "file_id": "file_00000000c11c81f5a752defd7fb93fdb",
+  "current_version_number": 0,
+  "file_size_bytes": 50989,
+  "source": "reference/graphics-20261102/finish-final-results-fixture.png",
+  "sha256": "cac9964e7873c6428340766453c3235d4de98e866bf1817f8ed9be47bc1c0613",
+  "metadata_persistence": "Bundled apply-xattrs helper failed on Windows: Python os has no setxattr. Upload succeeded; local Library extended attributes were not persisted. No bypass or duplicate upload.",
+  "label": "SCRIPTED GATES / NO PROGRESS; artificial 0.600-second trial, not human-driven completion."
+}

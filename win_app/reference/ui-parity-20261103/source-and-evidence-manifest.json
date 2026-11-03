@@ -1,0 +1,350 @@
+{
+  "created_utc": "2026-11-03T06:21:00.681977+00:00",
+  "scope": "Targeted metadata inventory only; no runtime extraction, conversions or generation. Separate asset team owns broad extraction.",
+  "live_reference": "https://roadstersrace.com/; displayed v0.2.3; deployed bytes not verified identical to working tree",
+  "assets": [
+    {
+      "path": "game/public/brand/logo-120.png",
+      "bytes": 5769,
+      "sha256": "9adad01f985a032872aea123892145f5d32d2a9198235b48659389c99721938a",
+      "width": 120,
+      "height": 120,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/brand/logo-512.png",
+      "bytes": 37552,
+      "sha256": "f20defac0774b799ab784d3612798a47063007c01126058a1b64243af15db3d1",
+      "width": 512,
+      "height": 512,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/favicon.svg",
+      "bytes": 450,
+      "sha256": "79ee03575c4c8e3e6a7b5ed5956d22b6d58d69b357e7e51ab8728a404b5b61f5"
+    },
+    {
+      "path": "game/public/ui/coin-32.png",
+      "bytes": 2970,
+      "sha256": "c60e0861fc80e485c2de348954138cffb6dd6a3fb6945ac0c884f96a19f6b857",
+      "width": 32,
+      "height": 32,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/ui/coin-64.png",
+      "bytes": 9992,
+      "sha256": "36aabe179179fadb6cc9ff38b9f44a16705e670376af3b976e8f199cd86d8d82",
+      "width": 64,
+      "height": 64,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/ui/coin-256.png",
+      "bytes": 113065,
+      "sha256": "f433a024821a5c16877573421040d671f05357e2b8d4c09221c841496e8f13bc",
+      "width": 256,
+      "height": 256,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/ui/car-roadster.png",
+      "bytes": 98938,
+      "sha256": "4625189b9ab8f018b9753dc074a36d308975dbbc46e8ba17118510a1ecedc308",
+      "width": 400,
+      "height": 200,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/ui/car-viper.png",
+      "bytes": 87616,
+      "sha256": "9c181e19d994c3982602a80dbb2ae3601f8bbb8e10d3a6538005c6bbc714bd2e",
+      "width": 400,
+      "height": 200,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/ui/car-titan.png",
+      "bytes": 96954,
+      "sha256": "5492859e745cf669dcbea74967884bd3b96e0962f23bbf38c056dcf39ea1a3da",
+      "width": 400,
+      "height": 200,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/tex/attack.png",
+      "bytes": 1789973,
+      "sha256": "894495fb88a4aec26ea890de7198c0b836f473158d27c0a808607cad6251fd63",
+      "width": 1254,
+      "height": 1254,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/tex/impact.png",
+      "bytes": 1543103,
+      "sha256": "7bb4da52b7fc073605028e9afd87959bb225b5d7e561bfd95e50d1e3290044b3",
+      "width": 1254,
+      "height": 1254,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/tex/projectile.png",
+      "bytes": 848559,
+      "sha256": "3d81b8ab9bea8e4bebf5a23bd00d1d5f9da70bfbb2625a82e03eb80ab9f68fd3",
+      "width": 2172,
+      "height": 724,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/tex/skyline.png",
+      "bytes": 2541444,
+      "sha256": "5ad44b334f61f733ce6b70c0321de7d16af78bc5c249013ca3e98e2605947b76",
+      "width": 1774,
+      "height": 887,
+      "bit_depth": 8,
+      "png_color_type": 2,
+      "alpha_channel": false
+    },
+    {
+      "path": "game/public/tex/smoke.png",
+      "bytes": 1121696,
+      "sha256": "24f29d2c4f65896061336aa6aa8fc119e26904b1800d66305bdefca0f1e2191b",
+      "width": 1254,
+      "height": 1254,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/tex/trail.png",
+      "bytes": 909066,
+      "sha256": "9a27a850f40019f3932bcb4d38d196931a7ffc932d0a1332955aab3f456bc11f",
+      "width": 2172,
+      "height": 724,
+      "bit_depth": 8,
+      "png_color_type": 6,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/models/car.glb",
+      "bytes": 5656068,
+      "sha256": "328943be0a989f024d2566308fe79c8e957cf4d7b4fcdd490f14da0923b37056"
+    },
+    {
+      "path": "game/public/models/car02.glb",
+      "bytes": 7955484,
+      "sha256": "b1a42a4f9414e1e55bb22424d9caf590c7c8c3069e4b9704fc46106491e77ad1"
+    },
+    {
+      "path": "game/public/models/car03.glb",
+      "bytes": 7337548,
+      "sha256": "08dd47acf487f7bc4f1d5e1702f0109a315b8c8c61c2d7537ff06f8723d96116"
+    },
+    {
+      "path": "game/public/cockpit/attack.webp",
+      "bytes": 4994,
+      "sha256": "b658316a8954aaabff8491bc8abbce2d5088191199024a77480efe9015ce04de",
+      "width": 128,
+      "height": 110,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/boost.webp",
+      "bytes": 9350,
+      "sha256": "9ebc195505ad1658170dc0de4d01e5e4c25c754392311e194fc7916c8da83c38",
+      "width": 128,
+      "height": 134,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car01/base.webp",
+      "bytes": 215568,
+      "sha256": "9c1992189311906c18535d1ec0afc74a7d69c33a3328f87c2a8ed34c6b7a51a2",
+      "width": 1672,
+      "height": 941,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car01/control.webp",
+      "bytes": 83776,
+      "sha256": "3e964ad1890ea79d7223973121ca4b0fabda651b3df61bb2f7390d27e3644dbb",
+      "width": 900,
+      "height": 492,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car02/base.webp",
+      "bytes": 215798,
+      "sha256": "78dc5ab491b40ef6f85883af95f5af47d226fec448ee6473a2f702bd11443216",
+      "width": 1672,
+      "height": 941,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car02/control_left.webp",
+      "bytes": 26498,
+      "sha256": "9b669915f116e16c4dd985af0805013b1c5f77c68d18b643b577ce881bdbf3ca",
+      "width": 260,
+      "height": 367,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car02/control_right.webp",
+      "bytes": 28190,
+      "sha256": "6b2abd98e314d4f9c957fb4f2120f337cea22f9d4b6c72306140471c5fe3788a",
+      "width": 260,
+      "height": 353,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car03/base.webp",
+      "bytes": 228954,
+      "sha256": "6d93e0e1f750a24c43b6c3434f4b276920d419937be7d0fed2b6169aa36d7b0a",
+      "width": 1672,
+      "height": 941,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/car03/control.webp",
+      "bytes": 211386,
+      "sha256": "b7cb8ec8ae57ea997973ea5b95a28f66c6b416f18b9540760e914289efc336df",
+      "width": 1000,
+      "height": 696,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/reticle.webp",
+      "bytes": 4870,
+      "sha256": "2b73321740b23ee13ecff09587cf339b0b0e3effc1aa5d559416ba9108dfb2cd",
+      "width": 128,
+      "height": 129,
+      "alpha_channel": true
+    },
+    {
+      "path": "game/public/cockpit/warning.webp",
+      "bytes": 6770,
+      "sha256": "32638bf8b503a378ef04db0236ce3148cbe37562fe52c9aae297481bee430749",
+      "width": 128,
+      "height": 111,
+      "alpha_channel": true
+    }
+  ],
+  "source_snapshots": [
+    {
+      "path": "game/index.html",
+      "bytes": 15616,
+      "sha256": "06380033a8aa5a19ee6a22e0e665945be8613233776ffb34000bb6591f558a85"
+    },
+    {
+      "path": "game/src/style.css",
+      "bytes": 54523,
+      "sha256": "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e"
+    },
+    {
+      "path": "game/src/cockpit.js",
+      "bytes": 7951,
+      "sha256": "8c042b086134026f23b4471c58576df0ac5d3e3bc8267a3a3f89d3e3c3932a97"
+    },
+    {
+      "path": "game/src/car.js",
+      "bytes": 37663,
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "game/src/env.js",
+      "bytes": 10681,
+      "sha256": "5403bbe8aa1c65a9bbd10e2ae97a30cc4e3b00d393a07926199a01d19d2ce0a1"
+    },
+    {
+      "path": "game/src/hud.js",
+      "bytes": 16004,
+      "sha256": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b"
+    },
+    {
+      "path": "game/src/shop.js",
+      "bytes": 10456,
+      "sha256": "9280a5fe4c2a6a3c3322f82e19a7d20b06eb63e7b80086b1a4a12d972b484761"
+    },
+    {
+      "path": "game/src/main.js",
+      "bytes": 83257,
+      "sha256": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307"
+    },
+    {
+      "path": "win_app/src/app/main.c",
+      "bytes": 34233,
+      "sha256": "642c94c75f207f8067afafd049ba90e4b9142cbbbcbd3bb074c5963f2c333344"
+    },
+    {
+      "path": "win_app/AGENTS.md",
+      "bytes": 2182,
+      "sha256": "cce23abfa34d176085318b17b59ec1f618d7b0b516e4446c2d12a444ecaa698f"
+    }
+  ],
+  "native_logo": {
+    "path": "win_app/assets/brand/logo.png",
+    "bytes": 37552,
+    "sha256": "f20defac0774b799ab784d3612798a47063007c01126058a1b64243af15db3d1",
+    "width": 512,
+    "height": 512,
+    "bit_depth": 8,
+    "png_color_type": 6,
+    "alpha_channel": true
+  },
+  "native_logo_matches_browser_512": true,
+  "screenshots": [
+    {
+      "path": "reference/ui-parity-20261103/browser-menu-live.png",
+      "sha256": "41f7ec1576b598779956de512d712a5ed5044b622aed8bec58c3ed7a6ff045c9",
+      "bytes": 201877,
+      "scope": "Live browser v0.2.3; internal reference; contains account and browser chrome; not publication-ready"
+    },
+    {
+      "path": "reference/ui-parity-20261103/browser-ranking-live.png",
+      "sha256": "0ad23fbc6d0bda77b1f2f44dd781d6c8e66dc0b50410ec8c9352508a8ac69597",
+      "bytes": 134979,
+      "scope": "Live browser v0.2.3; internal reference; contains account and browser chrome; not publication-ready"
+    },
+    {
+      "path": "reference/ui-parity-20261103/browser-roads-live.png",
+      "sha256": "d5fb423d1e1be48184c3903c3311aa67b6551cd04add239c397765fc95dc3c8d",
+      "bytes": 155827,
+      "scope": "Live browser v0.2.3; internal reference; contains account and browser chrome; not publication-ready"
+    },
+    {
+      "path": "reference/ui-parity-20261103/browser-roads-scroll-live.png",
+      "sha256": "7795bff421434195773bd9c930ecffcd17acfc95140aef6bf83ec6a5785f2bda",
+      "bytes": 156318,
+      "scope": "Live browser v0.2.3; internal reference; contains account and browser chrome; not publication-ready"
+    },
+    {
+      "path": "reference/ui-parity-20261103/browser-shop-live.png",
+      "sha256": "0d86ca5df206b02794e4c614091f318e10bcb0d2c651547cec0cd820df6a2ed6",
+      "bytes": 168540,
+      "scope": "Live browser v0.2.3; internal reference; contains account and browser chrome; not publication-ready"
+    }
+  ]
+}

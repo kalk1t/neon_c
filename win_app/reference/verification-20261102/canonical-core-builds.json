@@ -1,0 +1,53 @@
+{
+  "reference\\verification-20261102\\canonical-core-native-fifteen-tests.log": "4718bd684e2642feb4e4d143f0201fef1b1861fe156f474949ef44fad78eae9a",
+  "reference\\verification-20261102\\canonical-core-wasm-fifteen-tests.log": "5181ecd42f2b98ef44cb144c3b19995e4d44ede2e6ecb108ef3d4fbb03d13398",
+  "reference\\graphics-20261102\\canonical-core-native-original.log": "ff66d7b02810dada1474af6acd32f5eca5d23efa8ae08fcca928af283c41163c",
+  "reference\\graphics-20261102\\canonical-core-view-original.log": "470514a190efe18aed79dc8289b2e13143f814e39c88044cc0a39ce6d4fc05ea",
+  "build/canonical-core-native/bin/RoadstersRace.exe": {
+    "sha256": "a4979a7eed7f06f8a3576e039c2cdaf5b37f90ba8b888500ff4fa730e61a06d5",
+    "bytes": 855552
+  },
+  "build/canonical-core-view/bin/RoadstersRace.exe": {
+    "sha256": "0bc25f5f78839a56a8b60b9613afd4cd64f883ef4f6850fac65ce2cbf8f1fa0a",
+    "bytes": 856064
+  },
+  "build/canonical-core-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/canonical-core-web/bin/RoadstersRace.js": {
+    "sha256": "192d2d4de002040ba06d113f30ec14cd38c86b4150454dfc5830f30f688dcada",
+    "bytes": 171093
+  },
+  "build/canonical-core-web/bin/RoadstersRace.wasm": {
+    "sha256": "4982e8a21db301bb06a0cdf2432c8e0b8229d70837065b25ccf5ea335e129277",
+    "bytes": 520127
+  },
+  "build/canonical-core-web/bin/RoadstersRace.data": {
+    "sha256": "d8c1a68f04419896ce392bca4d65cac6b9bce17d5c1b9ae5e95e253165bf394b",
+    "bytes": 33231974
+  },
+  "browser_package_version": "0.2.3",
+  "source_and_runtime_asset_hashes_rechecked": true,
+  "preserved_library_receipt_and_fixture": true,
+  "new_city_mesh_bytes": 7090184,
+  "new_crown_runtime_bytes": 3409185,
+  "modified_existing_code": [
+    "src/core/rr_city_plan.h",
+    "src/core/rr_city_plan.c",
+    "src/core/rr_world_plan.c",
+    "src/app/main.c",
+    "src/presentation/rr_scene.c",
+    "src/presentation/rr_scene.h",
+    "CMakeLists.txt",
+    "tools/race-rules-check/CMakeLists.txt"
+  ],
+  "new_core_and_render_headers": [
+    "src/core/rr_canonical_city.h",
+    "src/core/rr_canonical_city.c",
+    "src/core/rr_canonical_city_data.h",
+    "src/core/rr_city_crown_data.h",
+    "src/presentation/city_crown_asset.h"
+  ],
+  "installed_paths": 323
+}

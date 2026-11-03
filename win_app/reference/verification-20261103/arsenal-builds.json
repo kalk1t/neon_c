@@ -1,0 +1,49 @@
+{
+  "reference\\verification-20261103\\arsenal-native-thirtyone-tests.log": "d94b73632916a593f39b4d9b5d63011ce45f7b49e76f15ce1a03af6cdf5bc5a7",
+  "reference\\verification-20261103\\arsenal-wasm-thirtyone-tests.log": "83f9c03068b1d4faa5813a5f0ee71380ca817e5bc016683c809bd7e57f179c8d",
+  "build/arsenal-native/bin/RoadstersRace.exe": {
+    "sha256": "a7e3fa675299ec89ff72de709e6604d3f9f4bcce3591d08f8448f4a81ade9bec",
+    "bytes": 879616
+  },
+  "build/arsenal-native/rr_arsenal_tests.exe": {
+    "sha256": "62fadf4d430568cdba948f1e07e5d936dc10ff71344af2849f0b46a2e3c5ed0f",
+    "bytes": 948736
+  },
+  "build/arsenal-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/arsenal-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/arsenal-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/arsenal-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "943c2b8a348d9bd645ec436cf55373b2d32e1d3c4784c218be3a7bae2afdda51",
+    "tools/race-rules-check/CMakeLists.txt": "bd2449506adf37b3dbc25d6efd4fa8e9176a3a044ac79504407f659820268d3e",
+    "src/core/rr_arsenal.h": "ff4648492b376e50cbcfb24ac11aebe9dcf7c5bec3d53b59699544d23acbb7eb",
+    "src/core/rr_arsenal.c": "85209cfb7ae01f5759547628e97d7641d99e527778864f28e93be62781d8e567",
+    "tests/test_arsenal.c": "156fb9a5b6d23bfaf1a818758e09a233e9c285dfa3db1789cd38ae5d7a99cd5b",
+    "tests/generated_arsenal_reference.h": "b9005bb9db3026c9d0cdb5f16f08753968f3f22c64e06fefb1e58fd77e89b578",
+    "tools/capture-arsenal.mjs": "9f60c285e7b12ac7d8fb9caeea730ac3385f0bdd12fd4f4e957152b2bb75a5f5",
+    "tools/prepare-arsenal-reference.py": "ae1bcf210eef69d7dbdd6c70d41133a394c112de1509a9aafb650a9404f5a9cb",
+    "reference/arsenal-reference.json": "494692b4ef9e54ed1ca92ddcc1699b86b441ae275a830c784178d5c797258e36",
+    "reference/arsenal-results.json": "be5e750f8704b40f2e82c593a0d243328348eaf14183510384827806c3398536",
+    "docs/PLAYER-ARSENAL-RULES-2026-11-03.md": "c3460ebe7692b3a3a227f1282fed9730f0f947507832abf3daabe1ca937fc421",
+    "README.md": "26e7b84626c7d522774f53b971d47677bd1c9e1963750f5aa9284c972b14cbb6",
+    "docs/PARITY.md": "8965681c0e677fd9569e880122bae4ac3ccc0a829391df3a05c036670beb2fc9"
+  },
+  "suites_each": 31,
+  "prior_pack_and_targeting_unchanged": true,
+  "preexisting_source_assets_evidence_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "desktop": "No call/retry; prior app approval timeout and process-unverified evidence preserved."
+}

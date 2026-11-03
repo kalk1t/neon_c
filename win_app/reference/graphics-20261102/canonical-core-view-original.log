@@ -1,0 +1,384 @@
+2026-11-02T20:34:56Z [3] SESSION: bounded renderer, 2D startup, 30 FPS, MSAA off, smoke=0 fallback=0 glow=0
+2026-11-02T20:34:56Z [3] Initializing raylib 6.2
+2026-11-02T20:34:56Z [3] Platform backend: DESKTOP (GLFW)
+2026-11-02T20:34:56Z [3] Supported raylib modules:
+2026-11-02T20:34:56Z [3]     > rcore:..... loaded (mandatory)
+2026-11-02T20:34:56Z [3]     > rlgl:...... loaded (mandatory)
+2026-11-02T20:34:56Z [3]     > rshapes:... loaded (optional)
+2026-11-02T20:34:56Z [3]     > rtextures:. loaded (optional)
+2026-11-02T20:34:56Z [3]     > rtext:..... loaded (optional)
+2026-11-02T20:34:56Z [3]     > rmodels:... loaded (optional)
+2026-11-02T20:34:56Z [3]     > raudio:.... loaded (optional)
+2026-11-02T20:34:56Z [3] DISPLAY: Trying to enable VSYNC
+2026-11-02T20:34:56Z [3] DISPLAY: Device initialized successfully 
+2026-11-02T20:34:56Z [3]     > Display size: 1920 x 1080
+2026-11-02T20:34:56Z [3]     > Screen size:  960 x 720
+2026-11-02T20:34:56Z [3]     > Render size:  960 x 720
+2026-11-02T20:34:56Z [3]     > Viewport offsets: 0, 0
+2026-11-02T20:34:56Z [3] GLAD: OpenGL extensions loaded successfully
+2026-11-02T20:34:56Z [3] GL: Supported extensions count: 404
+2026-11-02T20:34:56Z [3] GL: OpenGL device information:
+2026-11-02T20:34:56Z [3]     > Vendor:   NVIDIA Corporation
+2026-11-02T20:34:56Z [3]     > Renderer: NVIDIA GeForce RTX 5080/PCIe/SSE2
+2026-11-02T20:34:56Z [3]     > Version:  3.3.0 NVIDIA 610.88
+2026-11-02T20:34:56Z [3]     > GLSL:     3.30 NVIDIA via Cg compiler
+2026-11-02T20:34:56Z [3] GL: VAO extension detected, VAO functions loaded successfully
+2026-11-02T20:34:56Z [3] GL: NPOT textures extension detected, full NPOT textures supported
+2026-11-02T20:34:56Z [3] GL: DXT compressed textures supported
+2026-11-02T20:34:56Z [3] GL: ETC2/EAC compressed textures supported
+2026-11-02T20:34:56Z [3] PLATFORM: DESKTOP (GLFW - Win32): Initialized successfully
+2026-11-02T20:34:56Z [3] TEXTURE: [ID 1] Texture loaded successfully (1x1 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:34:56Z [3] TEXTURE: [ID 1] Default texture loaded successfully
+2026-11-02T20:34:56Z [3] SHADER: [ID 1] Vertex shader compiled successfully
+2026-11-02T20:34:56Z [3] SHADER: [ID 2] Fragment shader compiled successfully
+2026-11-02T20:34:56Z [3] SHADER: [ID 3] Program shader loaded successfully
+2026-11-02T20:34:56Z [3] SHADER: [ID 3] Default shader loaded successfully
+2026-11-02T20:34:56Z [3] RLGL: Render batch vertex buffers loaded successfully in RAM (CPU)
+2026-11-02T20:34:56Z [3] RLGL: Render batch vertex buffers loaded successfully in VRAM (GPU)
+2026-11-02T20:34:56Z [3] RLGL: Default OpenGL state initialized successfully
+2026-11-02T20:34:56Z [3] TEXTURE: [ID 2] Texture loaded successfully (128x128 | GRAY_ALPHA | 1 mipmaps)
+2026-11-02T20:34:56Z [3] FONT: Default font loaded successfully (224 glyphs)
+2026-11-02T20:34:56Z [3] SYSTEM: Working Directory: C:\Users\User\projects\neon_c\win_app\build\canonical-core-view\bin
+2026-11-02T20:34:56Z [4] VALIDATION: camera-only hero inspection
+2026-11-02T20:34:56Z [3] TIMER: Target time per frame: 33.333 milliseconds
+2026-11-02T20:34:56Z [3] SHARED: platforms=18 columns=9 trees=21 props=39 colliders=48
+2026-11-02T20:34:56Z [3] CITY_CORE: prototype kept=308 removed=96 canonical=295 total=603
+2026-11-02T20:34:56Z [3] WORLD: union ready points=18052 coarse=3615 gates=117 cells=337
+2026-11-02T20:34:56Z [3] STARTUP: 2D menu ready; track 5638.166 m, 1410 samples; nine-road picker ready; offline open=1; scene deferred
+2026-11-02T20:35:01Z [3] HEARTBEAT: frame=135 mode=0 window=960x720 target=0x0 worst-frame=158.2ms focused=1
+2026-11-02T20:35:01Z [3] CITY_CACHE: resident=0 canonical=0 cap=64
+2026-11-02T20:35:01Z [3] INPUT: queued enter=1 pause=0 escape=0 reset=0 phase=0
+2026-11-02T20:35:01Z [3] INPUT: menu frame=155 action=1 trial-mouse=0 time-mouse=0 enter=1 pad=0 focused=1
+2026-11-02T20:35:01Z [3] STATE: road picker mode=0 open=1 current=1
+2026-11-02T20:35:06Z [3] HEARTBEAT: frame=283 mode=0 window=960x720 target=0x0 worst-frame=158.8ms focused=1
+2026-11-02T20:35:06Z [3] CITY_CACHE: resident=0 canonical=0 cap=64
+2026-11-02T20:35:07Z [3] INPUT: queued enter=1 pause=0 escape=0 reset=0 phase=0
+2026-11-02T20:35:07Z [3] STATE: selected road=1 mode=0
+2026-11-02T20:35:07Z [3] STATE: scene load requested; fallback=0 glow=0
+2026-11-02T20:35:07Z [3] SHADER: [ID 4] Vertex shader compiled successfully
+2026-11-02T20:35:07Z [3] SHADER: [ID 5] Fragment shader compiled successfully
+2026-11-02T20:35:07Z [3] SHADER: [ID 6] Program shader loaded successfully
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 3] Texture loaded successfully (800x600 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 1] Depth renderbuffer loaded successfully (32 bits)
+2026-11-02T20:35:07Z [3] FBO: [ID 1] Framebuffer object created successfully
+2026-11-02T20:35:07Z [3] VAO: [ID 2] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/beacon.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/barrier.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/sign-pos.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/sign-neg.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/chevron.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/ring-station.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/platform.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/platform-column.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/tree-magenta.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/tree-cyan.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] COURSE: ten existing browser fallback prefab meshes decoded; deferred uploads
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/cyan-sculpt.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/models/cyan-tree-base.png] File loaded successfully
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 4] Texture loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] SCENERY: existing cyan tree loaded=1 vertices=15000 fit=13.024755023 texture=1024x1024; fallback retained
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/control-sculpt.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/models/control-tower-base.png] File loaded successfully
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 5] Texture loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 5] Mipmaps generated automatically, total: 11
+2026-11-02T20:35:07Z [3] HERO: source sampler linear/trilinear/repeat, mipmaps=11
+2026-11-02T20:35:07Z [3] HERO: control loaded=1 vertices=27000 texture=1024x1024 pos=-72.700000,-349.000000,10.000000 scale=576.504097543 yaw=1.570796327 glow=2.6
+2026-11-02T20:35:07Z [3] FILEIO: [assets/course/city-crown.rrmesh] File loaded successfully
+2026-11-02T20:35:07Z [3] FILEIO: [assets/models/city-crown-base.png] File loaded successfully
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 6] Texture loaded successfully (1024x1024 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 6] Mipmaps generated automatically, total: 11
+2026-11-02T20:35:07Z [3] CITY_CROWN: loaded=1 vertices=27000 texture=1024x1024 mipmaps=11 anchors=86 draw-cap=4 glow=2.6
+2026-11-02T20:35:07Z [3] FILEIO: [assets/models/roadster.glb] File loaded successfully
+2026-11-02T20:35:07Z [3] MODEL: [assets/models/roadster.glb] Model basic data (glb) loaded successfully
+2026-11-02T20:35:07Z [3]     > Meshes count: 10
+2026-11-02T20:35:07Z [3]     > Materials count: 1 (+1 default)
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 7] Texture loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 8] Texture loaded successfully (2048x2048 | GRAYSCALE | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 9] Texture loaded successfully (2048x2048 | GRAYSCALE | 1 mipmaps)
+2026-11-02T20:35:07Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] TEXTURE: [ID 10] Texture loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T20:35:07Z [3] VAO: [ID 3] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 4] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 5] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 6] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 7] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 8] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 9] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 10] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 11] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] VAO: [ID 12] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] ROADSTER: 10 meshes, bounds 3.97 x 2.00 x 5.60
+2026-11-02T20:35:07Z [3] CITY_CORE: prototype kept=308 removed=96 canonical=295
+2026-11-02T20:35:07Z [3] CITY: shared all-route corridor points=18052 coarse=3615 gates=117; buildings=603 lowered=104 rejected=221
+2026-11-02T20:35:07Z [3] STATE: start offline session mode=0
+2026-11-02T20:35:07Z [3] COURSE: road=1 dots=805 items=131 colliders=114 beacons=64 barriers=8 signs=2 chevrons=57
+2026-11-02T20:35:07Z [3] COLLISION: native city/start/road world ready shapes=774 road=1
+2026-11-02T20:35:07Z [3] VALIDATION: camera-only control-tower inspection; no actor/progress changes
+2026-11-02T20:35:07Z [3] VAO: [ID 13] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] COURSE: prefab mesh=0 vertices=3576 uploaded=1
+2026-11-02T20:35:07Z [3] VAO: [ID 14] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:07Z [3] COURSE: prefab mesh=1 vertices=3108 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 15] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=2 vertices=1860 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 16] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=3 vertices=1860 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 17] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=4 vertices=120 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 18] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=5 vertices=21360 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 19] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=6 vertices=5148 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 20] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=7 vertices=5280 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 21] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=8 vertices=6288 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 22] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=9 vertices=6288 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 23] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=10 vertices=15000 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 24] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=11 vertices=27000 uploaded=1
+2026-11-02T20:35:08Z [3] VAO: [ID 25] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] COURSE: prefab mesh=12 vertices=27000 uploaded=1
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0092.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 26] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0077.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 27] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0079.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 28] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0078.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 29] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0115.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 30] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0114.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 31] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0103.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 32] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0032.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 33] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0033.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 34] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0081.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 35] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0059.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 36] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0124.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 37] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0102.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 38] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0123.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 39] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0030.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 40] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0034.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 41] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0091.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 42] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0112.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 43] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0113.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 44] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0076.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 45] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0122.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 46] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0075.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 47] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0058.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 48] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0111.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 49] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0090.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 50] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0101.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 51] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0130.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 52] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0074.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 53] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0057.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 54] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0044.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 55] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0121.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 56] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0073.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 57] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0089.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 58] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0100.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 59] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0129.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 60] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0146.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 61] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0056.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 62] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0120.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 63] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0153.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 64] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0099.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 65] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0072.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 66] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0164.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 67] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0145.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 68] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0128.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 69] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0165.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 70] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0152.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 71] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0098.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 72] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0163.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 73] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:08Z [3] FILEIO: [assets/city-core/b0119.rrmesh] File loaded successfully
+2026-11-02T20:35:08Z [3] VAO: [ID 74] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0071.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 75] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0127.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 76] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0088.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 77] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0144.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 78] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0178.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 79] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0162.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 80] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0161.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 81] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0143.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 82] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0087.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 83] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0118.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 84] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0070.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 85] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0151.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 86] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0110.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 87] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0177.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 88] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:09Z [3] FILEIO: [assets/city-core/b0160.rrmesh] File loaded successfully
+2026-11-02T20:35:09Z [3] VAO: [ID 89] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T20:35:11Z [3] HEARTBEAT: frame=426 mode=3 window=960x720 target=800x600 worst-frame=270.7ms focused=1
+2026-11-02T20:35:11Z [3] CITY_CACHE: resident=64 canonical=64 cap=64
+2026-11-02T20:35:11Z [3] STATE: GO
+2026-11-02T20:35:16Z [3] HEARTBEAT: frame=577 mode=1 window=960x720 target=800x600 worst-frame=33.7ms focused=1
+2026-11-02T20:35:16Z [3] CITY_CACHE: resident=64 canonical=64 cap=64
+2026-11-02T20:35:19Z [3] INPUT: queued enter=0 pause=1 escape=0 reset=0 phase=1
+2026-11-02T20:35:19Z [3] VAO: [ID 13] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 14] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 15] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 16] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 17] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 18] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 19] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 20] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 21] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 22] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 23] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 24] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 25] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 40] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 33] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 34] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 41] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 55] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 62] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 54] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 48] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 36] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 85] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 75] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 66] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 57] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 53] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 47] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 45] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 27] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 29] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 28] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 35] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 83] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 77] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 58] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 50] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 42] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 26] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 72] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 65] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 59] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 51] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 38] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 32] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 87] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 49] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 43] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 44] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 31] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 30] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 84] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 74] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 63] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 56] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 46] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 39] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 37] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 76] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 69] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 60] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 52] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 82] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 78] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 68] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 61] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 86] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 71] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 64] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 89] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 81] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 80] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 73] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 67] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 70] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 88] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 79] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 2] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 6] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 5] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 4] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 3] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 4] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 5] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 6] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 7] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 8] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 9] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 10] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 11] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] VAO: [ID 12] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] MODEL: Unloaded model (and meshes) from RAM and VRAM
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 7] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 9] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 10] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 8] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] FBO: [ID 1] Unloaded framebuffer from VRAM (GPU)
+2026-11-02T20:35:19Z [3] SHADER: [ID 6] Unloaded shader program data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 2] Unloaded texture data from VRAM (GPU)
+2026-11-02T20:35:19Z [3] SHADER: [ID 3] Default shader unloaded successfully
+2026-11-02T20:35:19Z [3] TEXTURE: [ID 1] Default texture unloaded successfully
+2026-11-02T20:35:19Z [3] Window closed successfully
+2026-11-02T20:35:19Z [3] SESSION: clean shutdown

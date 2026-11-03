@@ -1,0 +1,41 @@
+/* Scoped to the overlay; all gameplay text is live HTML. */
+.rr-cockpit { position: relative; isolation: isolate; }
+.rr-cockpit__layer { position: absolute; inset: 0; overflow: hidden; pointer-events: none; color: #f6f9ff; font-family: Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; }
+.rr-cockpit__layer *, .rr-cockpit__layer *::before, .rr-cockpit__layer *::after { box-sizing: border-box; }
+.rr-cockpit__canvas { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+.rr-cockpit__canvas[hidden], .rr-cockpit__icon[hidden] { display: none !important; }
+.rr-cockpit__art { position: absolute; }
+.rr-cockpit__image-holder { position: absolute; inset: 0; }
+.rr-cockpit__image-holder > img { display: block; width: 100%; height: 100%; object-fit: contain; user-select: none; }
+.rr-cockpit__image-holder--trimmed { overflow: hidden; }
+.rr-cockpit__image-holder--trimmed > img { position: absolute; max-width: none; object-fit: fill; }
+.rr-cockpit__image-holder--missing > img { visibility: hidden; }
+.rr-cockpit__base { z-index: 10; }
+.rr-cockpit__control { z-index: 30; will-change: transform; }
+.rr-cockpit__reticle { z-index: 5; opacity: .72; }
+.rr-cockpit__panel { z-index: 20; }
+.rr-cockpit__decoration { z-index: 20; }
+.rr-cockpit__panel-content { position: absolute; left: 16%; top: 15%; width: 68%; height: 70%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: .14em; text-align: center; text-shadow: 0 1px 3px #000, 0 0 8px #000; line-height: 1.08; }
+.rr-cockpit__speed { font-size: 3em; font-weight: 800; font-style: italic; letter-spacing: .035em; }
+.rr-cockpit__unit { color: #dce6f7; font-size: .9em; font-weight: 700; letter-spacing: .14em; }
+.rr-cockpit__label { font-size: .72em; font-weight: 700; letter-spacing: .08em; display: flex; align-items: center; gap: .3em; }
+.rr-cockpit__value { font-size: 1.45em; font-weight: 750; }
+.rr-cockpit__meter { height: .42em; min-height: 3px; width: 75%; overflow: hidden; background: #14202c; border: 1px solid #688a9f66; margin-top: .12em; transform: skew(-8deg); }
+.rr-cockpit__meter-fill { display: block; height: 100%; background: #36e7ff; box-shadow: 0 0 5px #36e7ff66; }
+.rr-cockpit__panel--boost [data-charge="empty"] .rr-cockpit__value { color: #c4ccd7; }
+.rr-cockpit__attack-value { color: #ff5ade; font-size: .9em; font-weight: 750; letter-spacing: .04em; }
+.rr-cockpit__panel-content[data-state="cooldown"] .rr-cockpit__attack-value { color: #b8cbeb; }
+.rr-cockpit__panel-content[data-state="disabled"] .rr-cockpit__attack-value { color: #d9b883; font-size: .72em; }
+.rr-cockpit__lap, .rr-cockpit__time { font-size: .84em; font-weight: 700; white-space: nowrap; }
+.rr-cockpit__panel--race .rr-cockpit__panel-content { flex-direction: row; gap: .85em; left: 10%; width: 80%; }
+.rr-cockpit__icon { display: inline-block; position: relative; width: auto; height: 1.15em; aspect-ratio: var(--rr-icon-ratio, 1); flex-shrink: 0; vertical-align: middle; }
+.rr-cockpit__panel--attack .rr-cockpit__icon { height: 1.5em; }
+.rr-cockpit__toggle { position: absolute; z-index: 40; right: 1.5%; bottom: 2.5%; pointer-events: auto; color: #f1f7ff; background: #07121edb; border: 1px solid #769bb07d; border-radius: 5px; padding: .6em .8em; font: 600 clamp(9px, 1vw, 13px) Arial, sans-serif; letter-spacing: .05em; display: flex; align-items: center; gap: .55em; cursor: pointer; }
+.rr-cockpit__toggle:hover { border-color: var(--rr-primary); background: #122335ee; }
+.rr-cockpit__toggle:focus-visible { outline: 2px solid var(--rr-primary); outline-offset: 3px; }
+.rr-cockpit__toggle kbd { font: inherit; border: 1px solid #9cb0c9; border-radius: 3px; padding: .16em .4em; }
+.rr-cockpit--car02 .rr-cockpit__panel--attack .rr-cockpit__panel-content { flex-direction: row; gap: .35em; font-size: .85em; }
+.rr-cockpit--car02 .rr-cockpit__panel--boost .rr-cockpit__panel-content { gap: .05em; font-size: .85em; }
+.rr-cockpit--car02 .rr-cockpit__panel--boost .rr-cockpit__value { font-size: 1.15em; }
+.rr-cockpit--car02 .rr-cockpit__panel--race .rr-cockpit__panel-content { flex-direction: column; gap: .3em; }
+@media (prefers-reduced-motion: reduce) { .rr-cockpit__control { will-change: auto; } }

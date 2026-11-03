@@ -1,0 +1,15 @@
+{
+  "png_count": 16,
+  "reusable_png_count": 12,
+  "png_decode": "PASS",
+  "source_byte_identity": "PASS",
+  "reusable_real_alpha": "PASS",
+  "windshield_center_alpha": 0,
+  "required_files": "PASS",
+  "prompt_links": "PASS",
+  "base_dimensions": [
+    1672,
+    941
+  ],
+  "browser_rendered_layout": "NOT_RUN — browser executable unavailable; source artwork visually reviewed and layout measured"
+}

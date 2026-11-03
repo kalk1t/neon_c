@@ -1,0 +1,53 @@
+{
+  "reference\\verification-20261103\\combat-native-thirtytwo-tests.log": "e02a1730920deeb398a8a4f0d40304af213f1f4f0b3b16b1bded0acab19cbd1c",
+  "reference\\verification-20261103\\combat-wasm-thirtytwo-tests.log": "beb74eacd13e8552b5a7e7b4389a865382d35600ea94e26b4a2e54fe625d21e5",
+  "reference\\verification-20261103\\combat-initial-native-emp-failure.log": "acf8b687f1f539c2d0b39a3beb5ccafce18c8d9e5b40a9ee91d9a17f541b3086",
+  "reference\\verification-20261103\\combat-initial-web-emp-failure.log": "141c56c2fc3e10877c4d50c73ec540d6ca7c33570b75cc074246ec6ef0578717",
+  "build/combat-native/bin/RoadstersRace.exe": {
+    "sha256": "7001870a2b47af9f6cfff8b89bd14226dc268214b6c4ce8276ef932c75125adc",
+    "bytes": 879616
+  },
+  "build/combat-native/rr_combat_tests.exe": {
+    "sha256": "267cf7768c1e95c1c5f7ed8a31c6340eb19f6ad79cfcc620df045af0ef5c6990",
+    "bytes": 1417216
+  },
+  "build/combat-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/combat-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/combat-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/combat-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "76516493dd5f8f91575ce61f5fe2ad4c9ccdbe7578d298e9ac5b1c4530e23455",
+    "tools/race-rules-check/CMakeLists.txt": "609e40b89560ee67d3489d93a509bb3ff213c4225431911dd60e6427d020b4dc",
+    "src/core/rr_combat.h": "ab6cf537799e47bd9ba2a141b4b1eda71daabdc47961be18739c13357cca0687",
+    "src/core/rr_combat.c": "24f89d046511e92f461a03b5cdd95284185fc65136aa96a27c0383b565249bfa",
+    "tests/test_combat.c": "0ada7a33910d36a8722a83a9725a782795e721d90b02aa3345a03f3b1e2923f0",
+    "tests/generated_combat_reference.h": "42a36501dad31f63ffe2ce84f97a61f0f614da543ab674185de4feea99722423",
+    "tools/capture-combat.mjs": "20a67636acbc2c915f9dc0b069d337dc10cefcf40ccb9835d4600ce59598bd8a",
+    "tools/prepare-combat-reference.py": "4fe45868d5422ad97e6bd369f9f18e95fc96489df0711ed4f04db12eac383346",
+    "reference/combat-reference.json": "26653e3b55895fcccf68248e7a49107251ec011a9f8866ad604d74c0eb99552a",
+    "reference/combat-results.json": "e2968bf5689285e3d2764de74e5417cedb4c279bcd8c902a852ea954893615cf",
+    "reference/combat-emp-correction.json": "f68ed7e79d2f3fd737edcc36d1c70eb22d580c50163251675cf0e9fc0b7025b3",
+    "reference/combat-bounded-dodge-fixture.json": "4a74becad659fd02fa8f212015c98ed0070a2c205273a0ba6a382cab9fbb035a",
+    "docs/OFFLINE-PROJECTILE-DAMAGE-2026-11-03.md": "ee7badc8b0c0f2ca8b5ce11958f894701fac7bd74367965fc844eda5cdb378ef",
+    "README.md": "3a2894edcd5bd54ccd4aac5052f1840c6d5df32bad411c288be5e7a7bb7642a2",
+    "docs/PARITY.md": "bd0a26af98ac334e4990794eee7285fe1dddd89964420aa735ef9f0f1f42a20d"
+  },
+  "suites_each": 32,
+  "prior_pack_targeting_arsenal_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "desktop": "No retry; prior approval timeout/process-unverified evidence preserved.",
+  "visual_rng_equivalence": false
+}

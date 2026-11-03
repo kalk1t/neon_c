@@ -1,0 +1,14 @@
+{
+  "reference\\verification-20261102\\course-furniture-native-twelve-tests.log": "250327c507538a038f11fc1cc6d432f4b6ae9d14e93d5515b6daea67dbd777d9",
+  "reference\\verification-20261102\\course-furniture-wasm-twelve-tests.log": "722f445cccde953093cbe0cd7e9617508f788fe52ca549b5ad7b8145b8aaa3af",
+  "reference\\graphics-20261102\\course-furniture-normal-184803-original.log": "bfb98cf6bc9d7418462dfced955018d7ca69d1312cf35aec084d98de66a58331",
+  "build/course-furniture-native/bin/RoadstersRace.exe": "d7047780aedf805d77f346d89c4b21270675f3f29196c85bb2590acb3fd70eea",
+  "build/course-furniture-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/course-furniture-web/bin/RoadstersRace.js": "336a3c8ddc1c98edc86b7e3cf8bfc43817dece3c831ff95c0cf248775f8734d8",
+  "build/course-furniture-web/bin/RoadstersRace.wasm": "76d188055e162e18012dc333ea1f6276ea8772fe0b293ec31cc8c406ad1773a2",
+  "build/course-furniture-web/bin/RoadstersRace.data": "25b86db53b967db10d62165b53f0be2692bf7ff89c183945b192de3679fe5acd",
+  "reference_sources_and_staged_assets_match": true,
+  "three_version": "0.186.1",
+  "three_package_sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de",
+  "preserved_library_receipt_sha256": "f9c3e0647e32c7eaaa9fdc860616c5c33860d992f7947d911b943d494022c2ee"
+}

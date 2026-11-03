@@ -1,0 +1,44 @@
+image-to-3d 01a18dfc-d2c6-71dd-ad47-695bd3e94240
+[image-to-3d] IN_PROGRESS 1%
+[image-to-3d] IN_PROGRESS 9%
+[image-to-3d] IN_PROGRESS 18%
+[image-to-3d] IN_PROGRESS 24%
+[image-to-3d] IN_PROGRESS 45%
+[image-to-3d] IN_PROGRESS 52%
+[image-to-3d] IN_PROGRESS 59%
+[image-to-3d] IN_PROGRESS 67%
+[image-to-3d] IN_PROGRESS 74%
+[image-to-3d] IN_PROGRESS 84%
+[image-to-3d] IN_PROGRESS 99%
+[image-to-3d] SUCCEEDED 100%
+      ok in 89s
+{
+  "resource": "image-to-3d",
+  "id": "01a18dfc-d2c6-71dd-ad47-695bd3e94240",
+  "status": "SUCCEEDED",
+  "type": "image-to-3d",
+  "progress": 100,
+  "created_at": 1793383522302,
+  "finished_at": 1793383615514,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/model.glb?Expires=1793642815&Signature=PhaR40nJbM7g8ZqrdQqfBnkZDDoNdY26iaFGYo-q4vP33jR49eMCPe7YezPgwaROx2leSnhKTp4Bm1VguMUhlRXzIFUS3jROdkYGIquKuKSYjgvIP4BaZ7Gcw55k52-vsZFtBhxCb3eqs9nc7GILzPcHkr9XOcYmpBmNXdvFSrw638D9hbVk51NrKN2~g7~Ee1QdjNExxEQkCVzICNlhNWNCRnNcJAjlUvzN4L-pPNnV7oOCWteLvIH6FGv0n~lJGSoy4T6GHA-WZdNeFkhobU9S3rFossnIzqw9nGA9ii2E~soZatquC1dtpUIiFIjaPSm3voyEYsBmS4ofjJHC5g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/texture_0.png?Expires=1793642815&Signature=Vcbj~azqHuGp~9osGXj0zHOs23s2i8Dpw75Qr7Q0T2nLbRsqHFxNmMjpCcXR0-vMMybhLh3APOyRq2xGR9MFNzV8BpWcFjdVp2mPkbJ6sJaCsFn425T3sL8wvSGG2ql1qCZAaE8Xdd9LFvC-TvnO7mZH3B3LMws7RnED55pEFAXiz5ezmiuCZXX8Qi0UGyZvufMHp4xCyDM7qh-lrZ17kDXH-ep-XJFZC9znvewQX-m2KgocK6Y6FsGsphXCg0lgu3CSityWPe7pkDPlGBdGqtuLbYrOHjYAGZaA7A2YJ1UifLYpnk2Yk0rWV01Syw0qcIUx2dMtAEOwflbrMQBNoQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/texture_0_metallic.png?Expires=1793642815&Signature=MZ3ZejsQUTPL5nA2HMDGHJcZYNthweZq7YgYqPpCARJ4A8QyY2M7WFAzUdKuO4ILgY-GQNPDzb~HdFsxxp9lfarjqhHu~yHAPM1MnsEcfOAeoeJtxPOjyVbOQYcxEsSqz~lt3pPkN0ZZBcTkXVTvIffGhKFpuVLvFHHvmg5MZnputU~BFD3-PElhb35D-NZQ-Rrtp1LeOJljEdp6jaKxkgNxlviF56WZIuMGY8JrqlagYOqqJSwHL28zmpw6OZ4rf7rp51lCHzGokOdfnkoWpZfrkMnRRhPFLaFyNEauFOvAYe9b4jJ6Emu7BL2TcBkDCcQCfgv0h92b0z4rBP7Fvg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/texture_0_normal.png?Expires=1793642815&Signature=pPOYRGR7NmZkaPqQuRNQrDGEEBViRKPBAiTLJcgzkw2pWX~GUKp942eNF0MpBArXrHm0SMN792KFCm8rxHhOhFMQuNPC10Uf8yQolfnS2bzFxvnJCjde7bvLKVgwRAV6UIOpT2gsO1F3pDmJWqtUP1GSmiB2YU2YM99rwffHASkeIG0VNh9CIVONe6CX8lkxjPX4zAE1~S9DX2WHBNItEERVX1HUbXWAOwLY5Gu86Y-fSpU5gKePhpmMK1MOu5OWVZvdkB-ij6NgS9eS9sPRWhwJMZucruhO2BW4Nd~RR0qLsTHHUMj5jgamcB-53cVKsriYvAzGKQIHpU45PfDrlQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/texture_0_roughness.png?Expires=1793642815&Signature=c5HMdmt3E9-AG16qAKFlo0NcraTvl3Fc0yFZ6t6ffBdRevirCQUl~W5tbrKgWreER80umhxJti4ICoI1DT01Gi4sdqDlOMaaxGxeWPknpKskD5o35vVZe2uCGhC0jflKJUgheIe1LIK9Rqh2RqcfBFWQQVgBmKX9jvZcLEaUjXSgW-k6CstR2qzoN-R8APw12hh7sn9aP1h9TKhliMdp8v1wYbzcQxUhKzLhhviTNmvv56gfxAMTxwi6IDgX4QbmoOEiOnVW5YBa-9ae7hFrGDf44xVqomZapUdZcXLcJ-X0gF7ka6a88bUj~GG34ZOeXaBDwCGjIAxHvZVWyubr5Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18dfc-d2c6-71dd-ad47-695bd3e94240/output/preview.png?Expires=1793642815&Signature=MOV5jCm8fwS4kum2JLlUwWP4Y-E-KO6KxL1vunhhUByKA9YDa6PJw-261q58l8gMIwkGDZg6tZLyiIur5fvifHxBLB3flDwegRj7doqcUydm6NjHupvs9V0Jpr332pTGwcsgxC05q7dYT0SW9UHJKAgLTcOX8q~BqzoOXN4AqaVTLI6~HZCFL6G4wKZ1Oy1rwdcQHRZ2~L6zyFTkyMzd3us6Zry8Ew42Zj8kp7plu95i0BLpFTuOOaolCQoaHPTiRWGQ7EX2KhEz15VjuMDwA~1xp0Xs6xgw9ZRf--cbx4C50aeISopCuR1HTz-4boFYxygAjjj0HTRmTtdqoity7g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "elapsed_seconds": 88.96,
+  "_notice": {
+    "update": {
+      "current": "0.4.4",
+      "latest": "0.7.0",
+      "message": "meshy-cli 0.7.0 available (current 0.4.4), run: npm i -g meshy-cli@latest",
+      "command": "npm i -g meshy-cli@latest"
+    }
+  }
+}

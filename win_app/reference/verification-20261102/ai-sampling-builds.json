@@ -1,0 +1,63 @@
+{
+  "reference\\verification-20261102\\ai-sampling-native-twentysix-tests.log": "623dde81b5d9073e5c45c8f6fd29cb82e41788f6d31ee891c69075bae7638152",
+  "reference\\verification-20261102\\ai-sampling-wasm-twentysix-tests.log": "c4d2f673479aee1036dd5c0309d8fb203a7f14625a9aba08cba56bc174dff26b",
+  "build/ai-sampling-native/bin/RoadstersRace.exe": {
+    "sha256": "212f0481c00d243a9bf204dc88b399e485a011637cc5d2ba98e36e1302e5309d",
+    "bytes": 879616
+  },
+  "build/ai-sampling-native/rr_ai_tests.exe": {
+    "sha256": "edbfcaf8c50a11afd01956ec0b7d9d5eced0f0dd6236b55cf52fef1cd4ae7327",
+    "bytes": 1249792
+  },
+  "build/ai-sampling-native/rr_poster_tests.exe": {
+    "sha256": "d2b60f07c6975c603bc942cc15371a8ed9347ab1a9ca6f0e4e8e7c38ce77fe73",
+    "bytes": 135168
+  },
+  "build/ai-sampling-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/ai-sampling-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/ai-sampling-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/ai-sampling-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "8a464526e5aa3695ea6178a1c9e3e5f7ee2a50955b597504cefed6120ee13077",
+    "tools/race-rules-check/CMakeLists.txt": "e170cc1b2f23a83f4c02bf0798719be1b7b03ffd21dfe8e48087dc018c06a528",
+    "src/experimental/rr_posters.h": "b73f3af92db66e24ebbabdc9afc733c2db7a6a2431ea5400bf1d0bf0adeaf68c",
+    "src/experimental/rr_posters.c": "dd8c270468a817ad08cef1c104b9b9ef290d5db6ad85617036338ddc7c74374c",
+    "tests/test_posters.c": "df35d8f35609b345005d1b8be9289943c851cb971865e259b828678667009cab",
+    "src/core/rr_ai.h": "18afca8eb3f66c8b46d7b1c2a58b0c03707d2429429b646b56b6db97428f44bd",
+    "src/core/rr_ai.c": "72918fb0f975da3ab22c8b7460d2b0facd7b8a1fbb9b8aa9ace3ef5871c81112",
+    "src/core/rr_ai_liveries.h": "2411a4e80e4ce7522fa866203f6e15e34596d9b970e75259397f92aaf6b8703b",
+    "tests/test_ai.c": "e615b58636e7ec5b60473f939e07d1c8ed8391bfb7bcc848c902e66996e0c8a8",
+    "tests/generated_ai_reference.h": "b6da96d7bafeb9c7654c54b673ff6bf41fe57f883e9d6f2ca31d17f5fc2388a8",
+    "tests/generated_poster_sampling.h": "3b16dbb3af7d80b66700039c9b48a3a9bd51d09db6400d325730ba9510807ff7",
+    "tools/capture-ai.mjs": "4b70179dba4f52b691410b1e52be6f54b05a828943c57bf71f216c56752e1251",
+    "tools/capture-poster-sampling.mjs": "d2124d356f319e4ed33b61b25d75173d3276979510094f1369bf5a1ab48a2f8d",
+    "tools/prepare-ai-reference.py": "6042e82e594eb761096ae09f51ef407c4f24d17c70c961ceed7a1b4b8eb08750",
+    "reference/ai-reference.json": "dffcab663962e23861317b8ec9e1f2004faa8404ed6dcfc17ee503f744b05d5d",
+    "reference/poster-sampling-reference.json": "bf652c1c0889f605b7d31ad2936b97ab511a1cc768cffeb16d63410ce880d6e8",
+    "reference/ai-sampling-results.json": "9b1dac0d64e80e6bb598f6825b5118866b853a62f83acc613594a3179362c3e5",
+    "reference/poster-pixel-blocker.json": "7d56d5feef86ccc374cdcf0e02bf6ed2132d31afc994d32bfdaa582984be8cd9",
+    "docs/AI-CONTROLLER-AND-POSTER-SAMPLING-2026-11-02.md": "122f9a4685ff014217035425358d664040c3e251203a6d6c14aae75a66fb7f11",
+    "README.md": "d277e40d8aababf2a7ae535aabb023806af63218f92ea8af1b964fd9d03af818",
+    "docs/PARITY.md": "704646ad62bbfd039781b40c12341d8bbe692f8045346fd14ddab057723c02e8"
+  },
+  "summaries_identical": true,
+  "suites_each": 26,
+  "source_hashes_rechecked": true,
+  "existing_runtime_sources_assets_and_preload_unchanged": true,
+  "new_shared_core_module": "src/core/rr_ai.c (no app activation)",
+  "graphics": "Unrun; window3148188 unresolved, no denied retry or active files modified.",
+  "pixel_decode": "Pending exact source raster; sampling/address/material metadata passed, pixels not claimed.",
+  "next_independent_gap": "Review source car-car contacts and rival race/reset/respawn lifecycle; no account/product decision required."
+}

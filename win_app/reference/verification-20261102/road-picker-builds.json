@@ -1,0 +1,32 @@
+{
+  "artifacts": [
+    {
+      "bytes": 774656,
+      "sha256": "0AACFF678EAB1C9D3582ADB37597715456D785980F4E7780C1B8A8186118688A",
+      "path": "build\\road-picker-native\\bin\\RoadstersRace.exe"
+    },
+    {
+      "bytes": 1136,
+      "sha256": "707D1FA1A413C17ED00D3848C89C4140F57565AB627A3FAE5225A984D974CBB0",
+      "path": "build\\road-picker-web\\bin\\RoadstersRace.html"
+    },
+    {
+      "bytes": 149143,
+      "sha256": "5A4426653BA87CD730121E9B259814AE9FB97124FCE8D8A73EE810A87B126784",
+      "path": "build\\road-picker-web\\bin\\RoadstersRace.js"
+    },
+    {
+      "bytes": 429547,
+      "sha256": "85DBA60BDBC6247EB476A611047708805223DB8825B6CF4E826A76E088D946CD",
+      "path": "build\\road-picker-web\\bin\\RoadstersRace.wasm"
+    },
+    {
+      "bytes": 14616820,
+      "sha256": "3A6B53C74017EE76562212606EF00F38E68612707EC42D5AC0C9DDCBABDEB0CF",
+      "path": "build\\road-picker-web\\bin\\RoadstersRace.data"
+    }
+  ],
+  "native_graphics": "Scoped functional menu/picker/Skyline start/pause/resume/reset and clean shutdown only",
+  "saved_utc": "2026-11-02T17:57:40.9939530Z",
+  "wasm_graphics_executed": false
+}

@@ -1,0 +1,54 @@
+{
+  "reference\\verification-20261103\\offline-coins-native-twentyeight-tests.log": "8f9c03b50bf7a7cd8b9e7f2159af760658c5735669525ca055a8dcb7857ac1e9",
+  "reference\\verification-20261103\\offline-coins-wasm-twentyeight-tests.log": "802afcb39798eea64254ccc64abd618a8925d4f96f8356545840b09d94379b24",
+  "reference\\verification-20261103\\offline-coins-initial-wasm-fixture-failure.log": "0fab99d587ea197c0500f271a68e733ddb7a5e9fdd4194208467159845c8fd3c",
+  "build/offline-coins-native/bin/RoadstersRace.exe": {
+    "sha256": "c9be960f86d6e3252e310a85cd6c0f1bfd077af2abae098e5aca9155534b246e",
+    "bytes": 879616
+  },
+  "build/offline-coins-native/rr_coin_tests.exe": {
+    "sha256": "307f537065461d9aec72169cb7b2431899723665717d989d7353a19f8c5da3b2",
+    "bytes": 10991616
+  },
+  "build/offline-coins-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/offline-coins-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/offline-coins-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/offline-coins-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "preserved_desktop_reconciliation_sha256": "8355ff99c6ac588ec0e0c98846cded91ef216c8ad9a899ac771491d9fd4119dc",
+  "changed_paths": {
+    "CMakeLists.txt": "b2fb10f41b426c1b4231d1ce87f4ca40818da3ed0aad552838195382662ef055",
+    "tools/race-rules-check/CMakeLists.txt": "75bcfc0f9fcd8c295f28509ab2391bf742dda1fe644bab3e2ed9e687bed3cbce",
+    "src/core/rr_coins.h": "e19bd7a5c62195a1a102661fb1fa846c8fb4cc22e2940755c2b7fd93fd4c578f",
+    "src/core/rr_coins.c": "76d1a1e53aead7dfedbbd1863d85b49f72aa40cda7b0eb869f3c873198bb7402",
+    "tests/test_coins.c": "03ee63e28897331289607e95baa8027b95e97e37e6836e530b1a91c4dc400798",
+    "tests/generated_coin_reference.h": "ee38fb1f89097bf25f2803a6ebd99f222ac28e1ece3bc1452c53e7c89093a712",
+    "tools/capture-coins.mjs": "07f065e3c5e808020581c6391b726009bca3ba1e41b1d9cbfe1eb21c8b867a27",
+    "tools/prepare-coins-reference.py": "659df15805a70b0303ec493ef35ce96a9ae96414046384f1f9d69168f0bf5f7d",
+    "reference/coin-reference.json": "a61d560ec67a29437c1a86487f35d6dc32dd92345fd92747345de9f0623b053f",
+    "reference/offline-coins-results.json": "39f161e63e6a14d8801202a9e8bb3e6cee3f6fcbef1bbb5b7abcda5ad337bffb",
+    "docs/OFFLINE-COIN-RULES-2026-11-03.md": "26e22d40b4cd3151cc9480a9823f1c2542c062950a7f042929fe568eddb55b4d",
+    "README.md": "fcebd273c5a7fb46b006f37cfff7141f42d1931647b61132cfb84332cc54354a",
+    "docs/PARITY.md": "a514181bf7b86cac8d4fa01159dff3d69f64896b682fc150e7b06d089ceab159"
+  },
+  "suites_each": 28,
+  "summaries_identical": true,
+  "reference_hashes_rechecked": true,
+  "existing_runtime_sources_assets_and_preload_unchanged": true,
+  "new_shared_module": "rr_coins.c, no app activation",
+  "wallet_account_progression_writes": false,
+  "desktop": "No fresh call. Last window absent; process unverified; previous Task Manager approval timeout preserved.",
+  "graphics": "Unrun, no control retry/new launch",
+  "human_race_acceptance": false
+}

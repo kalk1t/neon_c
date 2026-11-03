@@ -1,0 +1,492 @@
+﻿{
+    "schema_version":  1,
+    "captured_utc":  "2026-11-02T15:04:18.4313086Z",
+    "source_directory":  "../game",
+    "git_commit":  "71c030227d4148d2853a0f7d93dec18bd03bf3d0",
+    "working_tree_clean":  false,
+    "working_tree_status":  " M .gitignore\n M docs/changelog.md\n M docs/technical/10-operations.md\n M package.json\n?? .github/\n?? tests/browser/",
+    "content_hashes_verified_twice":  true,
+    "package_version":  "0.2.2",
+    "user_stated_baseline":  "0.2.1",
+    "purpose":  "Observed source reference for planning and initial parity work; not confirmation of the deployed version or a frozen product release.",
+    "excludes":  [
+                     ".env*",
+                     "credentials",
+                     "node_modules",
+                     "dist",
+                     "Git internal files",
+                     "live deployment"
+                 ],
+    "files":  [
+                  {
+                      "path":  "docs/feature-inventory.md",
+                      "bytes":  7893,
+                      "sha256":  "2fed9b8d8a8b1aab2a5070b9bc9ca524c8513e4a6f6b35963018d04e6211e7f0"
+                  },
+                  {
+                      "path":  "firestore.rules",
+                      "bytes":  7346,
+                      "sha256":  "4d7fd49822291e10be0bad723ade7910025c5ed5fad8541d5480d61a9f3d4ef8"
+                  },
+                  {
+                      "path":  "functions/index.js",
+                      "bytes":  6201,
+                      "sha256":  "f6a8683f9d5e44e2e8d7dce40cbd5e49dae5c130e68b486b0729e9735d58e9f4"
+                  },
+                  {
+                      "path":  "functions/rules.js",
+                      "bytes":  1287,
+                      "sha256":  "4fc88aed160c9ade7c033cf95c9abfdb1fe89ff0c69d6a6e7d8e8b0f7b8350b5"
+                  },
+                  {
+                      "path":  "index.html",
+                      "bytes":  15670,
+                      "sha256":  "7e97a4445b80d8ec3ff154b3fdca9e61c4bf85b5e466461a83bc4cc1e73cb6e1"
+                  },
+                  {
+                      "path":  "package.json",
+                      "bytes":  1200,
+                      "sha256":  "69d21a5dae3637e27ce6c43d750d508d0a9fdebed20d18a502762dd401fbc7fc"
+                  },
+                  {
+                      "path":  "package-lock.json",
+                      "bytes":  333793,
+                      "sha256":  "ab3495d50ca8d8e779ced7017ffa6c20fafc2bf489ae44afc0584b586c98330e"
+                  },
+                  {
+                      "path":  "public/brand/logo-120.png",
+                      "bytes":  5769,
+                      "sha256":  "9adad01f985a032872aea123892145f5d32d2a9198235b48659389c99721938a"
+                  },
+                  {
+                      "path":  "public/brand/logo-512.png",
+                      "bytes":  37552,
+                      "sha256":  "f20defac0774b799ab784d3612798a47063007c01126058a1b64243af15db3d1"
+                  },
+                  {
+                      "path":  "public/cockpit/attack.webp",
+                      "bytes":  4994,
+                      "sha256":  "b658316a8954aaabff8491bc8abbce2d5088191199024a77480efe9015ce04de"
+                  },
+                  {
+                      "path":  "public/cockpit/boost.webp",
+                      "bytes":  9350,
+                      "sha256":  "9ebc195505ad1658170dc0de4d01e5e4c25c754392311e194fc7916c8da83c38"
+                  },
+                  {
+                      "path":  "public/cockpit/car01/base.webp",
+                      "bytes":  215568,
+                      "sha256":  "9c1992189311906c18535d1ec0afc74a7d69c33a3328f87c2a8ed34c6b7a51a2"
+                  },
+                  {
+                      "path":  "public/cockpit/car01/control.webp",
+                      "bytes":  83776,
+                      "sha256":  "3e964ad1890ea79d7223973121ca4b0fabda651b3df61bb2f7390d27e3644dbb"
+                  },
+                  {
+                      "path":  "public/cockpit/car02/base.webp",
+                      "bytes":  215798,
+                      "sha256":  "78dc5ab491b40ef6f85883af95f5af47d226fec448ee6473a2f702bd11443216"
+                  },
+                  {
+                      "path":  "public/cockpit/car02/control_left.webp",
+                      "bytes":  26498,
+                      "sha256":  "9b669915f116e16c4dd985af0805013b1c5f77c68d18b643b577ce881bdbf3ca"
+                  },
+                  {
+                      "path":  "public/cockpit/car02/control_right.webp",
+                      "bytes":  28190,
+                      "sha256":  "6b2abd98e314d4f9c957fb4f2120f337cea22f9d4b6c72306140471c5fe3788a"
+                  },
+                  {
+                      "path":  "public/cockpit/car03/base.webp",
+                      "bytes":  228954,
+                      "sha256":  "6d93e0e1f750a24c43b6c3434f4b276920d419937be7d0fed2b6169aa36d7b0a"
+                  },
+                  {
+                      "path":  "public/cockpit/car03/control.webp",
+                      "bytes":  211386,
+                      "sha256":  "b7cb8ec8ae57ea997973ea5b95a28f66c6b416f18b9540760e914289efc336df"
+                  },
+                  {
+                      "path":  "public/cockpit/reticle.webp",
+                      "bytes":  4870,
+                      "sha256":  "2b73321740b23ee13ecff09587cf339b0b0e3effc1aa5d559416ba9108dfb2cd"
+                  },
+                  {
+                      "path":  "public/cockpit/warning.webp",
+                      "bytes":  6770,
+                      "sha256":  "32638bf8b503a378ef04db0236ce3148cbe37562fe52c9aae297481bee430749"
+                  },
+                  {
+                      "path":  "public/favicon.svg",
+                      "bytes":  450,
+                      "sha256":  "79ee03575c4c8e3e6a7b5ed5956d22b6d58d69b357e7e51ab8728a404b5b61f5"
+                  },
+                  {
+                      "path":  "public/fx/killeraura_01.webp",
+                      "bytes":  63282,
+                      "sha256":  "7940f081926eff5da2e599f503c9cb58f49eaaf28aa7c20fec8a324d22b9b551"
+                  },
+                  {
+                      "path":  "public/fx/killeraura_02.webp",
+                      "bytes":  109010,
+                      "sha256":  "64dfc08f62c8f046238fe14621aab0b9e7c0ff7c98178341e50441a4859a9abc"
+                  },
+                  {
+                      "path":  "public/fx/killeraura_03.webp",
+                      "bytes":  106314,
+                      "sha256":  "ebca2d0fb3e824fe04cb321025494fe39ecf9ce45a5ca20134a25b17c24948b0"
+                  },
+                  {
+                      "path":  "public/fx/voidaura_01.webp",
+                      "bytes":  61362,
+                      "sha256":  "5b3a7b04fbdf7ff02bd9dac12a8169a9c1483fa038eb57145b39471f2a2450c6"
+                  },
+                  {
+                      "path":  "public/fx/voidaura_02.webp",
+                      "bytes":  107904,
+                      "sha256":  "b6bf262f801cc441708cf0fdaa16fa561573f38aafaac9cbbe2a07984d94bc8d"
+                  },
+                  {
+                      "path":  "public/fx/voidaura_03.webp",
+                      "bytes":  92926,
+                      "sha256":  "933c01243babd059571d7b906470d4394197f3c9fbe5d6610542697d5c4f4291"
+                  },
+                  {
+                      "path":  "public/fx/voidaura_crown.webp",
+                      "bytes":  48328,
+                      "sha256":  "6fc035c565b7d27a7cac01593c004cef6d127201bf01bfd027bc6f9f13b48515"
+                  },
+                  {
+                      "path":  "public/legal.css",
+                      "bytes":  1405,
+                      "sha256":  "129834faba663e87035eee72d4a75dfee0212a2f9d031aff72f8340cd0e5858b"
+                  },
+                  {
+                      "path":  "public/models/car.glb",
+                      "bytes":  5656068,
+                      "sha256":  "328943be0a989f024d2566308fe79c8e957cf4d7b4fcdd490f14da0923b37056"
+                  },
+                  {
+                      "path":  "public/models/car02.glb",
+                      "bytes":  7955484,
+                      "sha256":  "b1a42a4f9414e1e55bb22424d9caf590c7c8c3069e4b9704fc46106491e77ad1"
+                  },
+                  {
+                      "path":  "public/models/car03.glb",
+                      "bytes":  7337548,
+                      "sha256":  "08dd47acf487f7bc4f1d5e1702f0109a315b8c8c61c2d7537ff06f8723d96116"
+                  },
+                  {
+                      "path":  "public/models/props/antenna.glb",
+                      "bytes":  461784,
+                      "sha256":  "b772d0cefd26596c2360f582c6c01f84a617c0f80727d4ead0712ecc3669adcf"
+                  },
+                  {
+                      "path":  "public/models/props/blimp.glb",
+                      "bytes":  364580,
+                      "sha256":  "bd0c7ba21e36869e817f7ab6a84a5670332a60ff06c161d29884d1f5accedd15"
+                  },
+                  {
+                      "path":  "public/models/props/city_tower.glb",
+                      "bytes":  898516,
+                      "sha256":  "826abd2193747f62159b9528b39ca8351e17bbbbeed69f6e6876269cd1b7f30b"
+                  },
+                  {
+                      "path":  "public/models/props/control_tower.glb",
+                      "bytes":  942116,
+                      "sha256":  "12516829ad2502f263bc3e515e693ad635b0b45429f503245a8509db914b9c7f"
+                  },
+                  {
+                      "path":  "public/models/props/cyan_tree.glb",
+                      "bytes":  639396,
+                      "sha256":  "875d9c7da38f8f541bcfa746c5fd73932969a8b860aa726092e3ff05f97ea0fc"
+                  },
+                  {
+                      "path":  "public/models/props/drone.glb",
+                      "bytes":  280304,
+                      "sha256":  "3fb260efe1403bf908c6268645c9dd71a19d629b4b24716c4153d1ede6847fe6"
+                  },
+                  {
+                      "path":  "public/models/props/island.glb",
+                      "bytes":  446984,
+                      "sha256":  "a96f980eaf8766afd489e6670c5b5ad22d05a61520302c6824e91460b5799bca"
+                  },
+                  {
+                      "path":  "public/models/props/koi.glb",
+                      "bytes":  522896,
+                      "sha256":  "e9348f4b2b68f435795e744227bc3bd43aa7b4e30951c689310cda0c54dabfe8"
+                  },
+                  {
+                      "path":  "public/models/props/taxi.glb",
+                      "bytes":  147060,
+                      "sha256":  "39d7a4026576a38776eeec4cce2d013d989a255ef026a8f1830d5bb1623ff65e"
+                  },
+                  {
+                      "path":  "public/og-image.jpg",
+                      "bytes":  187891,
+                      "sha256":  "6adbc63ec80ea24d5fe11be6327a63ceeb813540dde48a7889b4098739e7b67e"
+                  },
+                  {
+                      "path":  "public/privacy.html",
+                      "bytes":  4558,
+                      "sha256":  "2952aeb637517f2a11698af0aa513434d5d20a8d1431ac3a0ca9e52092953e64"
+                  },
+                  {
+                      "path":  "public/terms.html",
+                      "bytes":  2963,
+                      "sha256":  "1dc26fa54ba5beedb95435ac0d6a590b2c50a2a6a403e079beedf4d9022413a2"
+                  },
+                  {
+                      "path":  "public/tex/attack.png",
+                      "bytes":  1789973,
+                      "sha256":  "894495fb88a4aec26ea890de7198c0b836f473158d27c0a808607cad6251fd63"
+                  },
+                  {
+                      "path":  "public/tex/impact.png",
+                      "bytes":  1543103,
+                      "sha256":  "7bb4da52b7fc073605028e9afd87959bb225b5d7e561bfd95e50d1e3290044b3"
+                  },
+                  {
+                      "path":  "public/tex/projectile.png",
+                      "bytes":  848559,
+                      "sha256":  "3d81b8ab9bea8e4bebf5a23bd00d1d5f9da70bfbb2625a82e03eb80ab9f68fd3"
+                  },
+                  {
+                      "path":  "public/tex/skyline.png",
+                      "bytes":  2541444,
+                      "sha256":  "5ad44b334f61f733ce6b70c0321de7d16af78bc5c249013ca3e98e2605947b76"
+                  },
+                  {
+                      "path":  "public/tex/smoke.png",
+                      "bytes":  1121696,
+                      "sha256":  "24f29d2c4f65896061336aa6aa8fc119e26904b1800d66305bdefca0f1e2191b"
+                  },
+                  {
+                      "path":  "public/tex/trail.png",
+                      "bytes":  909066,
+                      "sha256":  "9a27a850f40019f3932bcb4d38d196931a7ffc932d0a1332955aab3f456bc11f"
+                  },
+                  {
+                      "path":  "public/ui/car-roadster.png",
+                      "bytes":  98938,
+                      "sha256":  "4625189b9ab8f018b9753dc074a36d308975dbbc46e8ba17118510a1ecedc308"
+                  },
+                  {
+                      "path":  "public/ui/car-titan.png",
+                      "bytes":  96954,
+                      "sha256":  "5492859e745cf669dcbea74967884bd3b96e0962f23bbf38c056dcf39ea1a3da"
+                  },
+                  {
+                      "path":  "public/ui/car-viper.png",
+                      "bytes":  87616,
+                      "sha256":  "9c181e19d994c3982602a80dbb2ae3601f8bbb8e10d3a6538005c6bbc714bd2e"
+                  },
+                  {
+                      "path":  "public/ui/coin-256.png",
+                      "bytes":  113065,
+                      "sha256":  "f433a024821a5c16877573421040d671f05357e2b8d4c09221c841496e8f13bc"
+                  },
+                  {
+                      "path":  "public/ui/coin-32.png",
+                      "bytes":  2970,
+                      "sha256":  "c60e0861fc80e485c2de348954138cffb6dd6a3fb6945ac0c884f96a19f6b857"
+                  },
+                  {
+                      "path":  "public/ui/coin-64.png",
+                      "bytes":  9992,
+                      "sha256":  "36aabe179179fadb6cc9ff38b9f44a16705e670376af3b976e8f199cd86d8d82"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  4847,
+                      "sha256":  "f45d294e30835766ef87176ea8e8ebc147aaa746641367a9c8b7d676d88cb2cf"
+                  },
+                  {
+                      "path":  "server/live.js",
+                      "bytes":  18097,
+                      "sha256":  "a085ecf494d13cfbab90f7e10694f7e01a5bbe6f0fbcb19efecb8d5e991c23b6"
+                  },
+                  {
+                      "path":  "src/account.js",
+                      "bytes":  22291,
+                      "sha256":  "892031ff8ca3f716dc75e7fc4bd800950698dfd15d8c60ea5e091c66672db9c5"
+                  },
+                  {
+                      "path":  "src/ads.js",
+                      "bytes":  16483,
+                      "sha256":  "6e9e3ca7875da2192d46cd160b61ee989be646f7cf0da5a4a42ada1f2789fdb7"
+                  },
+                  {
+                      "path":  "src/ai.js",
+                      "bytes":  4386,
+                      "sha256":  "605d347d733ee3ef20d7247beb47153c0151d8ce6ab103678e6a957a58aced2b"
+                  },
+                  {
+                      "path":  "src/audio.js",
+                      "bytes":  8643,
+                      "sha256":  "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506"
+                  },
+                  {
+                      "path":  "src/car.js",
+                      "bytes":  37663,
+                      "sha256":  "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+                  },
+                  {
+                      "path":  "src/chat.js",
+                      "bytes":  2779,
+                      "sha256":  "c9fb1ec74b811652199c2c6a9cbaf1ad3c23df79d0893887bfce65bdcdf27ab4"
+                  },
+                  {
+                      "path":  "src/city.js",
+                      "bytes":  16027,
+                      "sha256":  "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+                  },
+                  {
+                      "path":  "src/cockpit.js",
+                      "bytes":  7951,
+                      "sha256":  "8c042b086134026f23b4471c58576df0ac5d3e3bc8267a3a3f89d3e3c3932a97"
+                  },
+                  {
+                      "path":  "src/coins.js",
+                      "bytes":  5365,
+                      "sha256":  "edf8249a51b2abad4c4b6d8e9c2180535c60565f25741b1eb5461373d54da69a"
+                  },
+                  {
+                      "path":  "src/course.js",
+                      "bytes":  11535,
+                      "sha256":  "1740e742c04677f1481cafdba5afd64997d9d56639ff2530df9d398bdb16e70e"
+                  },
+                  {
+                      "path":  "src/env.js",
+                      "bytes":  10681,
+                      "sha256":  "5403bbe8aa1c65a9bbd10e2ae97a30cc4e3b00d393a07926199a01d19d2ce0a1"
+                  },
+                  {
+                      "path":  "src/fx.js",
+                      "bytes":  14002,
+                      "sha256":  "890d29ba5087538a1c276fed80aea5244ed3959540b38375c3e977ee28411716"
+                  },
+                  {
+                      "path":  "src/geo.js",
+                      "bytes":  3489,
+                      "sha256":  "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+                  },
+                  {
+                      "path":  "src/hud.js",
+                      "bytes":  16004,
+                      "sha256":  "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b"
+                  },
+                  {
+                      "path":  "src/input.js",
+                      "bytes":  5284,
+                      "sha256":  "835bff688cd8afa1f4d958ad003dec0429cade1f8f2d0c1fdff2ee3ca088c753"
+                  },
+                  {
+                      "path":  "src/killer.js",
+                      "bytes":  18736,
+                      "sha256":  "8c8c66dce905b420c4d7582abdd736dd0e67110e21d3b8b8dd137f781d3d1b40"
+                  },
+                  {
+                      "path":  "src/main.js",
+                      "bytes":  82204,
+                      "sha256":  "33c8a53395a346178a6159102ebc2f873f576094675047b555cb74970ae01af2"
+                  },
+                  {
+                      "path":  "src/maps.js",
+                      "bytes":  916,
+                      "sha256":  "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3"
+                  },
+                  {
+                      "path":  "src/materials.js",
+                      "bytes":  13521,
+                      "sha256":  "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+                  },
+                  {
+                      "path":  "src/nitro.js",
+                      "bytes":  8958,
+                      "sha256":  "2f3b94f1c2e57885568c6c36867acba0d62273176140675fc57f306114593991"
+                  },
+                  {
+                      "path":  "src/online/analytics.js",
+                      "bytes":  1919,
+                      "sha256":  "1bcf6a5ab01c07fa0a58f852a6fe64f88c5db3166bc68628647ddd9df76c6225"
+                  },
+                  {
+                      "path":  "src/online/firebase.js",
+                      "bytes":  10907,
+                      "sha256":  "c8dacb57cfa90d6af391d686177bece4cdd0d8d38580285fcbe072ec4fc402fa"
+                  },
+                  {
+                      "path":  "src/online/index.js",
+                      "bytes":  2803,
+                      "sha256":  "2322281594ea56e68fe6760992f0c486bb2624db02ec421ddfa3f28e7363d495"
+                  },
+                  {
+                      "path":  "src/online/live.js",
+                      "bytes":  10871,
+                      "sha256":  "f2767330a2e67d95d3c01e829e4df6aed13f6ed8e9398bbacc85197e3153527a"
+                  },
+                  {
+                      "path":  "src/online/mock.js",
+                      "bytes":  6368,
+                      "sha256":  "18d6a705430b490656aacb421cfa4a90c13ecf0c22c3b1c8db0f872fc6ee03f2"
+                  },
+                  {
+                      "path":  "src/online/protocol.js",
+                      "bytes":  784,
+                      "sha256":  "cdf380e0fddf2f8d636e9a437e55cafd259c410f01d04b1f45e5117b4761ba8c"
+                  },
+                  {
+                      "path":  "src/physics.js",
+                      "bytes":  5831,
+                      "sha256":  "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+                  },
+                  {
+                      "path":  "src/props.js",
+                      "bytes":  14523,
+                      "sha256":  "9d1a97df6f0988eec60c91490c58a789da20c337c110df97f5ab58affa9a2033"
+                  },
+                  {
+                      "path":  "src/roads.js",
+                      "bytes":  9298,
+                      "sha256":  "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+                  },
+                  {
+                      "path":  "src/shop.js",
+                      "bytes":  10456,
+                      "sha256":  "9280a5fe4c2a6a3c3322f82e19a7d20b06eb63e7b80086b1a4a12d972b484761"
+                  },
+                  {
+                      "path":  "src/skyprops.js",
+                      "bytes":  11599,
+                      "sha256":  "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+                  },
+                  {
+                      "path":  "src/style.css",
+                      "bytes":  54523,
+                      "sha256":  "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e"
+                  },
+                  {
+                      "path":  "src/sysreq.js",
+                      "bytes":  4404,
+                      "sha256":  "19812ded3ef554a812aaecedeef6ef84b2ac3672af9d798e470bff880a3eba97"
+                  },
+                  {
+                      "path":  "src/touch.js",
+                      "bytes":  8105,
+                      "sha256":  "577e724233730fe3ed5a1c1be73c24c15bbdb04be21be6076f183665e84f975b"
+                  },
+                  {
+                      "path":  "src/track.js",
+                      "bytes":  6336,
+                      "sha256":  "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+                  },
+                  {
+                      "path":  "vite.config.js",
+                      "bytes":  1321,
+                      "sha256":  "78197f0d3301472fe131194fcf9bfc5734776eea4c334dfb03442a18b90d235f"
+                  }
+              ]
+}

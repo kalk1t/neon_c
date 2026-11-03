@@ -1,0 +1,31 @@
+[1/1] image-to-3d (geometry + textures)  01a194b0-5297-7397-bbb8-89d9bf58c68b
+[image-to-3d] IN_PROGRESS 1%
+[image-to-3d] IN_PROGRESS 3%
+[image-to-3d] IN_PROGRESS 9%
+[image-to-3d] IN_PROGRESS 18%
+[image-to-3d] IN_PROGRESS 24%
+[image-to-3d] IN_PROGRESS 33%
+[image-to-3d] IN_PROGRESS 42%
+[image-to-3d] IN_PROGRESS 45%
+[image-to-3d] IN_PROGRESS 50%
+[image-to-3d] IN_PROGRESS 52%
+[image-to-3d] IN_PROGRESS 59%
+[image-to-3d] IN_PROGRESS 67%
+[image-to-3d] IN_PROGRESS 74%
+[image-to-3d] IN_PROGRESS 84%
+[image-to-3d] IN_PROGRESS 93%
+[image-to-3d] IN_PROGRESS 99%
+[image-to-3d] SUCCEEDED 100%
+      ok in 372s
+Status: SUCCESS
+Task Id: 01a194b0-5297-7397-bbb8-89d9bf58c68b
+Generated image-to-3d
+Saved to:
+- 14_cyan_tree\model.glb
+- 14_cyan_tree\thumbnail.png
+- 14_cyan_tree\texture_0_base_color.png
+- 14_cyan_tree\texture_0_metallic.png
+- 14_cyan_tree\texture_0_normal.png
+- 14_cyan_tree\texture_0_roughness.png
+Metadata path: 14_cyan_tree\meta.json
+meshy-cli 0.7.3 available (current 0.4.4), run: npm i -g meshy-cli@latest

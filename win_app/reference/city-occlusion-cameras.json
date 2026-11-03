@@ -1,0 +1,7 @@
+{
+  "cameras": 264,
+  "far": 22000,
+  "max_plane_error": 0,
+  "source_repacking_fixture_sha256": "e4f922e2698b57feae795cc96bf8b6048320a0d585f012600dd745412eb5d2f2",
+  "scope": "Headless continuous geometric camera model only. Runtime/GPU float rounding,driver depth/MSAA and production image qualification remain untested."
+}

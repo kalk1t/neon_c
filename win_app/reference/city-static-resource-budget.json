@@ -1,0 +1,218 @@
+{
+  "scope": "Logical resource accounting from completed normal trial log and unchanged runtime GLB/RRC1 source; reused evidence, no graphics run. Not actual allocation or total application memory.",
+  "source_hashes": {
+    "car": "c2e8a412fed57eb94a8c3cefbd2080b0dab43cd9555507692f54838323f598de",
+    "completed_log": "f60613fcc074c32998f010a4f85a4ece9fbdc8a215f776cb1dc26f745de6bf60"
+  },
+  "car_primitives": [
+    {
+      "vertices": 47057,
+      "index_entries": 187566,
+      "attribute_bytes": 1505824,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 9306,
+      "index_entries": 38007,
+      "attribute_bytes": 297792,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 9173,
+      "index_entries": 37380,
+      "attribute_bytes": 293536,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 11800,
+      "index_entries": 49134,
+      "attribute_bytes": 377600,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 11484,
+      "index_entries": 47913,
+      "attribute_bytes": 367488,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 20399,
+      "index_entries": 64455,
+      "attribute_bytes": 652768,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 3787,
+      "index_entries": 12342,
+      "attribute_bytes": 121184,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 3636,
+      "index_entries": 12009,
+      "attribute_bytes": 116352,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 4730,
+      "index_entries": 15714,
+      "attribute_bytes": 151360,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    },
+    {
+      "vertices": 4630,
+      "index_entries": 15480,
+      "attribute_bytes": 148160,
+      "semantics": [
+        "POSITION",
+        "NORMAL",
+        "TEXCOORD_0"
+      ]
+    }
+  ],
+  "car_attribute_bytes": 4032064,
+  "car_uint16_index_bytes": 960000,
+  "course_mesh_count": 13,
+  "course_vertices": 123888,
+  "course_attribute_bytes": 4459968,
+  "textures": [
+    {
+      "id": 1,
+      "width": 1,
+      "height": 1,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 4
+    },
+    {
+      "id": 2,
+      "width": 128,
+      "height": 128,
+      "format": "GRAY_ALPHA",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 32768
+    },
+    {
+      "id": 3,
+      "width": 800,
+      "height": 600,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 1920000
+    },
+    {
+      "id": 4,
+      "width": 256,
+      "height": 512,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 10,
+      "logical_bytes": 699052
+    },
+    {
+      "id": 5,
+      "width": 1024,
+      "height": 1024,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 11,
+      "logical_bytes": 5592404
+    },
+    {
+      "id": 6,
+      "width": 1024,
+      "height": 1024,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 11,
+      "logical_bytes": 5592404
+    },
+    {
+      "id": 7,
+      "width": 1024,
+      "height": 1024,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 11,
+      "logical_bytes": 5592404
+    },
+    {
+      "id": 8,
+      "width": 2048,
+      "height": 2048,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 16777216
+    },
+    {
+      "id": 9,
+      "width": 2048,
+      "height": 2048,
+      "format": "GRAYSCALE",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 4194304
+    },
+    {
+      "id": 10,
+      "width": 2048,
+      "height": 2048,
+      "format": "GRAYSCALE",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 4194304
+    },
+    {
+      "id": 11,
+      "width": 2048,
+      "height": 2048,
+      "format": "R8G8B8A8",
+      "levels_from_source_load_path": 1,
+      "logical_bytes": 16777216
+    }
+  ],
+  "texture_and_depth_logical_bytes": 63292076,
+  "other_mesh_nominal_bytes": 9452032,
+  "known_gpu_without_city_buildings": 72744108,
+  "known_cpu_mesh_arrays_without_city_buildings": 9452032,
+  "current_city_attribute_bound_bytes_per_copy": 5087232,
+  "known_gpu_with_current_city_bound": 77831340,
+  "exclusions": [
+    "driver layout/padding/compression,shader/program memory",
+    "default swapchain,MSAA/window system storage",
+    "raylib default dynamic render batches,cube template,mesh/object/map/bone structures",
+    "core tracks,corridor,physics,other CPU state and transient loader allocations",
+    "experimental source fixture/hash analysis workspace (not app linked)",
+    "full source props/crowns/material parity costs not yet ported"
+  ]
+}

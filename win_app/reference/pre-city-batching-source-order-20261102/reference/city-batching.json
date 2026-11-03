@@ -1,0 +1,452 @@
+{
+  "captured_utc": "2026-11-02T21:20:29.392Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "src/skyprops.js",
+      "sha256": "fc7ee8bddc7adebe0f8172675e09c7ca935a26abba275da333b3ca6d32f1d23e"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+    },
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/geo.js",
+      "sha256": "d67f82f920d98acf6fb0ffce1d791d2ec95360cbf82e54c754b617e675fda4f5"
+    }
+  ],
+  "pose_count": 264,
+  "frustum_cases": 528,
+  "scheme_count": 5,
+  "part_count": 38352,
+  "source_vertices": 1695222,
+  "schemes": [
+    {
+      "name": "browser-material-CH900",
+      "batches": 45,
+      "max_batch_vertices": 45900
+    },
+    {
+      "name": "exact-material-cell128",
+      "batches": 6274,
+      "max_batch_vertices": 2496
+    },
+    {
+      "name": "exact-material-cell256",
+      "batches": 2816,
+      "max_batch_vertices": 4848
+    },
+    {
+      "name": "exact-material-cell512",
+      "batches": 1212,
+      "max_batch_vertices": 12996
+    },
+    {
+      "name": "per-structure-body",
+      "batches": 2741,
+      "max_batch_vertices": 2250
+    }
+  ],
+  "stats": [
+    {
+      "far": 1000,
+      "scheme": "browser-material-CH900",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 262,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "sphere",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "landmark-fixture",
+        "pose": 263
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "browser-material-CH900",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "box",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "roam-center",
+        "pose": 260
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell128",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 364,
+      "max_vertices": 144960,
+      "over_64_draws": 253,
+      "over_141312_vertices": 1,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "sphere",
+        "count": 352,
+        "vertices": 144960,
+        "hash": 3617732454,
+        "category": "route",
+        "pose": 110
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell128",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 265,
+      "max_vertices": 92676,
+      "over_64_draws": 253,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "box",
+        "count": 239,
+        "vertices": 92676,
+        "hash": 1648633615,
+        "category": "route",
+        "pose": 136
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell256",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 161,
+      "max_vertices": 175140,
+      "over_64_draws": 253,
+      "over_141312_vertices": 113,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "sphere",
+        "count": 155,
+        "vertices": 175140,
+        "hash": 4155231883,
+        "category": "route",
+        "pose": 110
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell256",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 126,
+      "max_vertices": 139308,
+      "over_64_draws": 251,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "box",
+        "count": 126,
+        "vertices": 139308,
+        "hash": 2873210267,
+        "category": "roam-grid",
+        "pose": 235
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell512",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 74,
+      "max_vertices": 246876,
+      "over_64_draws": 75,
+      "over_141312_vertices": 251,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "sphere",
+        "count": 68,
+        "vertices": 246876,
+        "hash": 2967530236,
+        "category": "route",
+        "pose": 197
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "exact-material-cell512",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 69,
+      "max_vertices": 218700,
+      "over_64_draws": 4,
+      "over_141312_vertices": 158,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "box",
+        "count": 66,
+        "vertices": 218700,
+        "hash": 3167124640,
+        "category": "route",
+        "pose": 109
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "per-structure-body",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 245,
+      "max_vertices": 178374,
+      "over_64_draws": 253,
+      "over_141312_vertices": 68,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "sphere",
+        "count": 238,
+        "vertices": 178374,
+        "hash": 1226879175,
+        "category": "roam-grid",
+        "pose": 240
+      }
+    },
+    {
+      "far": 1000,
+      "scheme": "per-structure-body",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 124,
+      "max_vertices": 89634,
+      "over_64_draws": 227,
+      "over_141312_vertices": 0,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "box",
+        "count": 118,
+        "vertices": 89634,
+        "hash": 3185837608,
+        "category": "route",
+        "pose": 136
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "browser-material-CH900",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 264,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "sphere",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "landmark-fixture",
+        "pose": 263
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "browser-material-CH900",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 45,
+      "max_vertices": 1695222,
+      "over_64_draws": 0,
+      "over_141312_vertices": 264,
+      "worst_vertices": {
+        "scheme": 0,
+        "bound": "box",
+        "count": 45,
+        "vertices": 1695222,
+        "hash": 67360591,
+        "category": "roam-center",
+        "pose": 260
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell128",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 5897,
+      "max_vertices": 1676790,
+      "over_64_draws": 262,
+      "over_141312_vertices": 256,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "sphere",
+        "count": 5897,
+        "vertices": 1676790,
+        "hash": 511452325,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell128",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 5871,
+      "max_vertices": 1675242,
+      "over_64_draws": 262,
+      "over_141312_vertices": 248,
+      "worst_vertices": {
+        "scheme": 1,
+        "bound": "box",
+        "count": 5871,
+        "vertices": 1675242,
+        "hash": 1132643347,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell256",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 2465,
+      "max_vertices": 1676826,
+      "over_64_draws": 262,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "sphere",
+        "count": 2465,
+        "vertices": 1676826,
+        "hash": 3197274030,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell256",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 2442,
+      "max_vertices": 1675386,
+      "over_64_draws": 262,
+      "over_141312_vertices": 254,
+      "worst_vertices": {
+        "scheme": 2,
+        "bound": "box",
+        "count": 2442,
+        "vertices": 1675386,
+        "hash": 508590302,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell512",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 939,
+      "max_vertices": 1677402,
+      "over_64_draws": 262,
+      "over_141312_vertices": 261,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "sphere",
+        "count": 939,
+        "vertices": 1677402,
+        "hash": 874648496,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "exact-material-cell512",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 919,
+      "max_vertices": 1675782,
+      "over_64_draws": 262,
+      "over_141312_vertices": 260,
+      "worst_vertices": {
+        "scheme": 3,
+        "bound": "box",
+        "count": 919,
+        "vertices": 1675782,
+        "hash": 1176494087,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "per-structure-body",
+      "bound": "sphere",
+      "views": 264,
+      "max_draws": 2600,
+      "max_vertices": 1677942,
+      "over_64_draws": 262,
+      "over_141312_vertices": 259,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "sphere",
+        "count": 2600,
+        "vertices": 1677942,
+        "hash": 4049971400,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    },
+    {
+      "far": 22000,
+      "scheme": "per-structure-body",
+      "bound": "box",
+      "views": 264,
+      "max_draws": 2581,
+      "max_vertices": 1675710,
+      "over_64_draws": 262,
+      "over_141312_vertices": 246,
+      "worst_vertices": {
+        "scheme": 4,
+        "bound": "box",
+        "count": 2581,
+        "vertices": 1675710,
+        "hash": 3739195709,
+        "category": "roam-ring",
+        "pose": 255
+      }
+    }
+  ],
+  "scope": "Exact geometry/material grouping metadata only; every source vertex retained in every scheme. Primary browser grouping is900 parts/material with exact transformed-vertex bounding sphere. Alternatives preserve topology/materials but change grouping/culling granularity; no runtime integration. Views are representative synthetic route/free-roam poses, not human traces. Excludes crowns/props/traffic/material memory."
+}

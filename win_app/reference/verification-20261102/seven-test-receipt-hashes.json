@@ -1,0 +1,15 @@
+{
+  "receipts": [
+    {
+      "sha256": "0D708D6909B16FF320BEEB9F7BE5451C3A31259437514780B3329E277FEA3DF6",
+      "source": "build\\all-roads-native\\Testing\\Temporary\\LastTest.log",
+      "file": "native-seven-tests.log"
+    },
+    {
+      "sha256": "2F33D26A5E0D9C3252BAB1872D152BAA7F7809A5CB5D00ABEA14A3CAB955FEE9",
+      "source": "build\\all-roads-web\\Testing\\Temporary\\LastTest.log",
+      "file": "wasm-seven-tests.log"
+    }
+  ],
+  "saved_utc": "2026-11-02T17:33:59.1074954Z"
+}

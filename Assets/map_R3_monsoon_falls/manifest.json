@@ -1,0 +1,466 @@
+{
+  "schema_version": "1.0",
+  "package": "map_R3_monsoon_falls",
+  "description": "Individual PNG references, route data, Claude guides and Blender source. No prebuilt 3D map or Meshy models.",
+  "generated_at_date": "2026-10-31",
+  "item_pngs": 27,
+  "total_pngs": 29,
+  "payload_files": 90,
+  "hash_algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "ASSET_INDEX.md",
+      "bytes": 4725,
+      "sha256": "4e3cf31d2b71bc57d831dff941939b1e0081436ef6e810cffc4ad74526a476ef"
+    },
+    {
+      "path": "Assets/Course/C01_straight_deck.png",
+      "bytes": 1806270,
+      "sha256": "4e89d496cef818935cc07a37591b662fa3589f61da78290e6f02fdbd939f75a9"
+    },
+    {
+      "path": "Assets/Course/C02_curved_deck.png",
+      "bytes": 2155438,
+      "sha256": "f0d8d23ee8edccfbff7a11e1f23524d0a39342c8f4dcaacfb6e12c5edaeaee5a"
+    },
+    {
+      "path": "Assets/Course/C03_climbing_ramp.png",
+      "bytes": 1141547,
+      "sha256": "be46ba1712205fe5b26d7ab9c98f3462f8881067f7dc75bc02bd7644f6e38f66"
+    },
+    {
+      "path": "Assets/Course/C04_checkpoint_ring.png",
+      "bytes": 1423695,
+      "sha256": "373c55be761ab79b1573acaad64e6413fd2a7699fdbb735f4e86f4d3074a1e89"
+    },
+    {
+      "path": "Assets/Course/C05_start_finish_arch.png",
+      "bytes": 1121205,
+      "sha256": "9a8378909f940ffdc6a5e9704b99a06a4cc63d2ba244c0dd44804a1387d1e34f"
+    },
+    {
+      "path": "Assets/Course/C06_support_column.png",
+      "bytes": 1614462,
+      "sha256": "71d179498417670c68095b9e457e28c3bb250208a7d4726fa4518538522a70db"
+    },
+    {
+      "path": "Assets/Course/C07_safety_barrier.png",
+      "bytes": 1018037,
+      "sha256": "94dcc1e0f2a0f77dd976eba3735df1b6612d548c114cad24e10c616249c37d09"
+    },
+    {
+      "path": "Assets/Course/C08_turn_chevron.png",
+      "bytes": 1349527,
+      "sha256": "6276e577d83e163806c06d1b2331f9c7c396bef03fdfc19101b55f9a7703a2f4"
+    },
+    {
+      "path": "Assets/Course/C09_route_beacon.png",
+      "bytes": 832972,
+      "sha256": "214dbc671ad4355e780cf8b9e72ede4fb6a16ece14eee3d53b27ec743089cfb8"
+    },
+    {
+      "path": "Assets/Course/C10_start_platform.png",
+      "bytes": 2155219,
+      "sha256": "915fc9b762838e98baa3b2b5d9e50022a1bccfa8f07823c69e235dccc770f61e"
+    },
+    {
+      "path": "Assets/Course/C14_dotted_route_lights.png",
+      "bytes": 832954,
+      "sha256": "4a14738219d734c5cd69435066a04d0e82ebedb839f1c61cd5528687b731e444"
+    },
+    {
+      "path": "Assets/Course/C15_service_platform.png",
+      "bytes": 1175758,
+      "sha256": "e88f6abbf48395b68036517bd56eed5f5c4aa9db8bf67ec05db5f7bfc96b4efe"
+    },
+    {
+      "path": "Assets/Effects/C11_rain_streak.png",
+      "bytes": 127381,
+      "sha256": "353974e40ca471b0faa9c85f619f7c2556786f4e0d3ec8913924be98add04913"
+    },
+    {
+      "path": "Assets/Effects/C12_rain_splash.png",
+      "bytes": 1325566,
+      "sha256": "993581655d3574a3ffc15e646d6f93973bb6b72fe8162e87da05a0f47291d121"
+    },
+    {
+      "path": "Assets/Effects/C13_soft_mist.png",
+      "bytes": 1179317,
+      "sha256": "c3038d2ba9ea1c66b76c37bda6e077e91457f0742c1ef06b14748d527df91743"
+    },
+    {
+      "path": "Assets/Environment/F01_basalt_cliff.png",
+      "bytes": 3573678,
+      "sha256": "d600f8e5660cb59ee9993ee37856e1eb65bd99251a3663e923979a4f7d52db29"
+    },
+    {
+      "path": "Assets/Environment/F02_natural_arch.png",
+      "bytes": 3049424,
+      "sha256": "e7702e3bd2cc9739b1a2f5facdef0088214f0223cfd9768d2a32eaf3b5161b42"
+    },
+    {
+      "path": "Assets/Environment/F03_flat_top_mesa.png",
+      "bytes": 3085682,
+      "sha256": "2eee41b811a0cbcd3a8c1c116e1e8bfbdc81c8178b088ecc740e6e1954c1f008"
+    },
+    {
+      "path": "Assets/Environment/F04_dam_section.png",
+      "bytes": 2646105,
+      "sha256": "99a95ab07bd1c134014f1ec2a5300d2a045ecddaf4f30f485f0a502b99a5bb63"
+    },
+    {
+      "path": "Assets/Environment/F05_spillway_gate.png",
+      "bytes": 2915994,
+      "sha256": "72aa5f406594686edd85d1656b4633140637e015516936c9c8de32d33948a7df"
+    },
+    {
+      "path": "Assets/Environment/F06_observation_pod.png",
+      "bytes": 2001823,
+      "sha256": "e1c7c3d4ebed59503c1043fd7e4d574f434b60b526f76d1212a1688fb8e8cb88"
+    },
+    {
+      "path": "Assets/Environment/F07_tropical_tree.png",
+      "bytes": 2743452,
+      "sha256": "4499d20f83d6688ffa6fcbbc4ec5eacd85c0b1a0c3d2b85f04e614a13824f8d5"
+    },
+    {
+      "path": "Assets/Environment/F08_palm_tree.png",
+      "bytes": 2298005,
+      "sha256": "cb1820ecdb5bc22396c9ba7b2ce90904deecf13c29f21279c6070d0897e703b6"
+    },
+    {
+      "path": "Assets/Environment/F09_fern.png",
+      "bytes": 2332533,
+      "sha256": "44693fe07839eb1cf36fe8462a2e87f3998bc0b996d7b0046439027a4894d5f5"
+    },
+    {
+      "path": "Assets/Environment/F10_moss_boulder.png",
+      "bytes": 3213528,
+      "sha256": "5cc2878b958d14c672d40328be266a772e7a28c43f3d03ba1eac59b0856dd9ad"
+    },
+    {
+      "path": "Assets/Environment/F11_waterfall_curtain.png",
+      "bytes": 2623656,
+      "sha256": "25b833210398f6785cc6cae8b13fdfc05840dcd84c8531e3a2ee8b832f907ecc"
+    },
+    {
+      "path": "Assets/Environment/F12_hanging_vines.png",
+      "bytes": 2186972,
+      "sha256": "2f90cc378d7b6fcf403abac55e3d74760ebb1ca8ad4ad5184c85ceb0de1410b7"
+    },
+    {
+      "path": "Blender/README.md",
+      "bytes": 15066,
+      "sha256": "2ab7a4a5fc2adcd462193e192025a6f8bfb4edd593e1d2c249c54ea4063894e7"
+    },
+    {
+      "path": "Blender/author_routes.py",
+      "bytes": 18787,
+      "sha256": "755bd235d6419f0a4ec9ea5a2a54a03999f25cb6f676e746dbc197eb743ebb23"
+    },
+    {
+      "path": "Blender/build_map.py",
+      "bytes": 23017,
+      "sha256": "bb19fe343eada8084d79d71195b205e994589f4860c20deb85b104a9c9829137"
+    },
+    {
+      "path": "Blender/mesh_geometry.py",
+      "bytes": 5396,
+      "sha256": "10388cbc68e2a56991b5f72972c34f4ef43fff56ebe6d007394eab325701489c"
+    },
+    {
+      "path": "Blender/module_catalog.json",
+      "bytes": 5898,
+      "sha256": "9c79be5bc546c99bfe7f05cf71390201926a8b8121a94d593a253069145f6032"
+    },
+    {
+      "path": "Blender/route_tools.py",
+      "bytes": 14356,
+      "sha256": "3678c86b7e53f5635f7234a37e716229cae687f415231781123e7d4c017309c8"
+    },
+    {
+      "path": "Blender/test_layout.py",
+      "bytes": 8723,
+      "sha256": "5b7bd8b87512fd9a80c8c053a4894d86ca4d14e8cfaa5dffa00f32a8ee139175"
+    },
+    {
+      "path": "Blender/validate_routes.py",
+      "bytes": 953,
+      "sha256": "26bd299475fcd5f93db86f0d8168dd5f38eb15b65c3a9b6c5dcbff123d203fcc"
+    },
+    {
+      "path": "Build/README.md",
+      "bytes": 358,
+      "sha256": "e8bfa1f3af924f3d36a2f33f9c4354e93bba1b179450f87e44a3eaa0d0df9e3d"
+    },
+    {
+      "path": "CLAUDE_START_HERE.md",
+      "bytes": 4068,
+      "sha256": "f29b6ec1bf3c7cae9f561b23426aa33571f0a594c07ef72e592a103e432d0415"
+    },
+    {
+      "path": "Guides/01_art_direction.md",
+      "bytes": 2387,
+      "sha256": "48579f65f85f77f58b06751eb5d7dd0d03880df84a3f763bb76194b07c833f34"
+    },
+    {
+      "path": "Guides/02_blender_build.md",
+      "bytes": 6263,
+      "sha256": "56e3759f32051a4c7b3baed1fe41f1cb363f4f0c4636f5d1296e94f4b1cfad40"
+    },
+    {
+      "path": "Guides/03_meshy_workflow.md",
+      "bytes": 4637,
+      "sha256": "49f79221aa6291dc0070fa33e83f0409b8ad559efeeead6ba50141fb0f1e831e"
+    },
+    {
+      "path": "Guides/04_materials_weather.md",
+      "bytes": 4133,
+      "sha256": "df467fe1103446555a03561a50870af50429133c75f275ad81fb8b1557f27723"
+    },
+    {
+      "path": "Guides/05_game_integration.md",
+      "bytes": 4959,
+      "sha256": "9d162551f967983c515d79b490c42f7758e40a712d9bdd577aee7bec4211dc6e"
+    },
+    {
+      "path": "Guides/06_validation_performance.md",
+      "bytes": 2992,
+      "sha256": "7c3329ce04ee7d1564786d46d75639f01a8d89f8a705baeb0926bb0e86751788"
+    },
+    {
+      "path": "Guides/SOURCES.md",
+      "bytes": 2286,
+      "sha256": "26425dc135a477a21a5b6913ed88ae4fff8b016b7d979f6036a945b19ed2f672"
+    },
+    {
+      "path": "Layout/placements.json",
+      "bytes": 11586,
+      "sha256": "318976841c55470c2056c035096f64e24ca1faa78767b1802d1ba5181da019da"
+    },
+    {
+      "path": "Layout/placements.schema.json",
+      "bytes": 3872,
+      "sha256": "718b81ffef0c2ae8626e027f7587324fb80ea5fcf2ba34f9e0e565a9567df4b5"
+    },
+    {
+      "path": "Layout/route.json",
+      "bytes": 25804,
+      "sha256": "d773c22f336210077f44b2d88f2872c270674ae97d488546accb7b23dc356a05"
+    },
+    {
+      "path": "Layout/route.schema.json",
+      "bytes": 9036,
+      "sha256": "e43fe1278df4496d8fd60ac4898292e80ab1c20ebb940b5eadfc5b2a35294486"
+    },
+    {
+      "path": "Layout/route_plan.png",
+      "bytes": 243095,
+      "sha256": "9b77fbd6ad251de7536f5e411d126a0062b96cac22a4c4666396ea3d0f31f8fe"
+    },
+    {
+      "path": "Layout/route_plan.svg",
+      "bytes": 100486,
+      "sha256": "b83400a57de7ba5feb98e186fcf3608e1fa14d68bd2560c945d268a03df8edfc"
+    },
+    {
+      "path": "Layout/validation_report.json",
+      "bytes": 837,
+      "sha256": "032fd185440a517b5c928ba7f49a9286719f5b2dc89f9a9afccf2dfcd040f002"
+    },
+    {
+      "path": "Materials/material_recipes.json",
+      "bytes": 1767,
+      "sha256": "f3d995b1fc64381a3bc8d47935ea81be46f825c1ae1f27214cd07b8666244460"
+    },
+    {
+      "path": "Meshy/task_ledger.json",
+      "bytes": 386,
+      "sha256": "29b2449393924754267c638a809c76aa99124904b4864bfba4f8467a05fdbd1e"
+    },
+    {
+      "path": "Prompts/Items/C01_straight_deck.md",
+      "bytes": 3394,
+      "sha256": "3ad19dd736290fd0d2e377bffcbad12735cf66338743c182ada99a78f695bfd5"
+    },
+    {
+      "path": "Prompts/Items/C02_curved_deck.md",
+      "bytes": 3193,
+      "sha256": "ede97df8b473dd05cf7ba88848ea850031ee61ad0757ce9afaa17b81cc594e22"
+    },
+    {
+      "path": "Prompts/Items/C03_climbing_ramp.md",
+      "bytes": 3436,
+      "sha256": "51af2e2cdd5bdeac904259ec17705f430efe78aa8b9cc136b0a95a462296e7ea"
+    },
+    {
+      "path": "Prompts/Items/C04_checkpoint_ring.md",
+      "bytes": 3597,
+      "sha256": "2e57087c1d44df228c5c3dd2cc2367a15caa4764b5a5fad47a7a76671f06edc7"
+    },
+    {
+      "path": "Prompts/Items/C05_start_finish_arch.md",
+      "bytes": 3756,
+      "sha256": "588c9949fb975ce0a2af96c26acfc52a7a14d9f0c53072d0f2e2bd9c3e83da17"
+    },
+    {
+      "path": "Prompts/Items/C06_support_column.md",
+      "bytes": 3037,
+      "sha256": "5bd8b0ce764307278551b40f702fba6ab577a28e50b092d5c62b3a47a9b7a56d"
+    },
+    {
+      "path": "Prompts/Items/C07_safety_barrier.md",
+      "bytes": 3446,
+      "sha256": "f1fe786dd3cbfc419059d2375d99b2c30e456ffd9b5d6561424f1001ebd411ac"
+    },
+    {
+      "path": "Prompts/Items/C08_turn_chevron.md",
+      "bytes": 3316,
+      "sha256": "d495c0af2b0a424e965f37b9d74adeb0916f7fd4f725bc53b1a78a73b185b3c0"
+    },
+    {
+      "path": "Prompts/Items/C09_route_beacon.md",
+      "bytes": 3287,
+      "sha256": "c3bf8faa3394276648f40df2ffc990e2aba51b60255f65c37ec4d3ddcd225039"
+    },
+    {
+      "path": "Prompts/Items/C10_start_platform.md",
+      "bytes": 3404,
+      "sha256": "e858647da18059c8705633c62bb5927be1e005bf5eead4b88c9d804d21d8f150"
+    },
+    {
+      "path": "Prompts/Items/C11_rain_streak.md",
+      "bytes": 2433,
+      "sha256": "2020699dd9084d02136ea9aa2dac44937e317fecfb13eeecfd54b69f99f25047"
+    },
+    {
+      "path": "Prompts/Items/C12_rain_splash.md",
+      "bytes": 2417,
+      "sha256": "b05e608d88f43d74993f4e046758894d826d15800833c71da08ab14e7a917426"
+    },
+    {
+      "path": "Prompts/Items/C13_soft_mist.md",
+      "bytes": 2357,
+      "sha256": "dd7a3d47dc2ab4cff92757600e86b51e2f23b9ada1363dfc5956c808ad0cf55f"
+    },
+    {
+      "path": "Prompts/Items/C14_dotted_route_lights.md",
+      "bytes": 2848,
+      "sha256": "8389f3fd6c5c3ffa3a2212b0de671328d01ee55a0b51c7d1d4ecc0b86d308335"
+    },
+    {
+      "path": "Prompts/Items/C15_service_platform.md",
+      "bytes": 3575,
+      "sha256": "723e551b83726c8d07c22d84f6e7447682c8a2dc1db4cf672bcc4e5a56d3bd3b"
+    },
+    {
+      "path": "Prompts/Items/F01_basalt_cliff.md",
+      "bytes": 5880,
+      "sha256": "5b9c45353688e3d577e43b1c7fc2ae294b261521c8399cf62eaad4163737e17f"
+    },
+    {
+      "path": "Prompts/Items/F02_natural_arch.md",
+      "bytes": 6056,
+      "sha256": "125f199cfd5c44814c57c793d21756717f251ea4e7dc4d144c6daf9d7333de09"
+    },
+    {
+      "path": "Prompts/Items/F03_flat_top_mesa.md",
+      "bytes": 5906,
+      "sha256": "823fb8edd7b5bec279fb36e15f2d8d65395b1bd2ef5abcd6e9adb0ca0cc7b9ae"
+    },
+    {
+      "path": "Prompts/Items/F04_dam_section.md",
+      "bytes": 5937,
+      "sha256": "c743fb01c57c2efee230cc166ffe51eee3f8927c023be7dbf55520b062585de7"
+    },
+    {
+      "path": "Prompts/Items/F05_spillway_gate.md",
+      "bytes": 5821,
+      "sha256": "0aae5fb0df070ea7b217bfac08c46a353f9626191236327efc3608611f9e0da8"
+    },
+    {
+      "path": "Prompts/Items/F06_observation_pod.md",
+      "bytes": 5941,
+      "sha256": "31f9a12e5b0d80be0001ebb949d3a7b7e8e91de02270a52e0def0d2aa6bb1ff8"
+    },
+    {
+      "path": "Prompts/Items/F07_tropical_tree.md",
+      "bytes": 5882,
+      "sha256": "d7346e8a7afaa12a6fff79935f40884f2fd7b2e86cc07ef7b32bf1fd32ea0f89"
+    },
+    {
+      "path": "Prompts/Items/F08_palm_tree.md",
+      "bytes": 5692,
+      "sha256": "b2a11077f769e0b30ee17ca39aab8863d7ed9b213f894ca7ce16a8ea2ea8b1b9"
+    },
+    {
+      "path": "Prompts/Items/F09_fern.md",
+      "bytes": 5655,
+      "sha256": "781117ba3ed221f0df5433ccd273d847674d59f7f35d4fe70202074ee7069f05"
+    },
+    {
+      "path": "Prompts/Items/F10_moss_boulder.md",
+      "bytes": 5707,
+      "sha256": "fa5a546e2d66b47a0f8bbfe720e4e05f01dd5b03932c7cfeb616a4278d018b50"
+    },
+    {
+      "path": "Prompts/Items/F11_waterfall_curtain.md",
+      "bytes": 5873,
+      "sha256": "9f6795f79c54ed60eb0663e32663423651db78ac9f818f7900ac8d462ceefff4"
+    },
+    {
+      "path": "Prompts/Items/F12_hanging_vines.md",
+      "bytes": 5849,
+      "sha256": "225736b7a4784f1aabdbd3d8cf0a0f56c3ce7e3983014cb25f1214bb58058f95"
+    },
+    {
+      "path": "Prompts/selected_map_prompt.md",
+      "bytes": 2611,
+      "sha256": "c6e8978d4c088acf2349eab7dffe714943cbd54c982287d71639fbe7ce3d28b1"
+    },
+    {
+      "path": "QA/image_provenance.json",
+      "bytes": 14294,
+      "sha256": "119a62e2793d64827301a26f0db5ad55814d91be4e219e42cf657477bb08f61d"
+    },
+    {
+      "path": "QA/pack_validation.json",
+      "bytes": 10726,
+      "sha256": "84a06d7b5e7040e19a6f4c0ad6274ebc4edf2088d40bebfe214d1d2e711a3ba9"
+    },
+    {
+      "path": "QA/verify_pack.py",
+      "bytes": 630,
+      "sha256": "c6544bd3130a569df398dabe4aad3d4a8c418917bb33ae44599315ad39a6335a"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1841,
+      "sha256": "457ad960a9b73731f93235ca01f306361a95c699dced851bb42cafbc336f3b9b"
+    },
+    {
+      "path": "References/selected_map.png",
+      "bytes": 3216940,
+      "sha256": "82585289880477574ed3bdd742ddd5245a4c6719d2d8e4e3f3f3a9e47e6a3d07"
+    },
+    {
+      "path": "START_HERE.html",
+      "bytes": 41992,
+      "sha256": "d0360cf91e25601491f5f042b0861d451f54f5d9f2ee46ad4ccc67f6aaac5d07"
+    },
+    {
+      "path": "Weather/weather_recipe.json",
+      "bytes": 1359,
+      "sha256": "3f7a8ca15d3936bab05184fe6a69d58d210f2a1289fabb0d92a977368b5f749d"
+    },
+    {
+      "path": "asset_catalog.json",
+      "bytes": 41975,
+      "sha256": "4bd8e5ed88750a67d87a3ac6e023de9d2d302af0b08f6df81ede97ac4269ec50"
+    }
+  ],
+  "excluded_from_self_hash": [
+    "manifest.json",
+    "SHA256SUMS.txt"
+  ]
+}

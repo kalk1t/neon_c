@@ -1,0 +1,25 @@
+﻿node.exe : retexture 01a19422-c409-756c-b9c1-1bc7c6572909
+At C:\Users\User\AppData\Roaming\npm\meshy.ps1:24 char:5
++     & "node$exe"  "$basedir/node_modules/meshy-cli/dist/index.js" $ar ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (retexture 01a19...c1-1bc7c6572909:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[retexture] IN_PROGRESS 0%
+[retexture] IN_PROGRESS 34%
+[retexture] IN_PROGRESS 49%
+[retexture] IN_PROGRESS 69%
+[retexture] IN_PROGRESS 99%
+[retexture] SUCCEEDED 100%
+      ok in 51s
+Status: SUCCESS
+Task Id: 01a19422-c409-756c-b9c1-1bc7c6572909
+Generated retexture
+Saved to:
+- car03\retex2\model.glb
+- car03\retex2\thumbnail.png
+- car03\retex2\texture_0_base_color.png
+- car03\retex2\texture_0_metallic.png
+- car03\retex2\texture_0_normal.png
+- car03\retex2\texture_0_roughness.png
+Metadata path: car03\retex2\meta.json

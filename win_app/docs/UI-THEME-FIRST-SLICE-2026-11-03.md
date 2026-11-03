@@ -1,0 +1,33 @@
+# Native UI theme/menu/road picker — first slice, 2026-11-03
+
+Implemented the first bounded native UI slice from the preceding browser audit. This is C/raylib UI implementation, not new artwork or a replacement browser. Browser and asset-team directories remain read-only.
+
+## Changes
+
+- Added `src/presentation/rr_ui.{h,c}` and pure `rr_ui_layout.h`: browser cyan/magenta palette, exact derived font weights, tracking, text halo approximation, gradient/chamfer buttons, disabled styling, bounded hover transition, modal panel, skewed difficulty pips and clipped hit regions.
+- Main menu now uses the browser's two-line wordmark with magenta RACE, 7vw left anchor, 470px card and compact ≤820px-height sizing. Five action positions match the browser hierarchy. Offline trial/time attack remain functional; Free Roam/Ranking/Shop are explicitly disabled until service/game integration qualifies. Controls and the offline status remain truthful. No paint/settings/account interaction was fabricated. QUIT remains a Windows-specific control.
+- Road picker is a centered 640px modal with source-style index/name/metadata/difficulty/lock rows and BACK. The list is clipped/scrollable; wheel scroll is bounded, and keyboard focus movement keeps the selected row visible. Long titles/metadata use measured ellipsis to avoid difficulty/status overlap. Existing selection/start/restart/session rules and locked-road rejection are retained; open road count remains1, with no persistence/profile writes or unlock grants.
+- Four bounded runtime font atlases: static weights500/700/900 derived from the verified Orbitron variable TTF, plus the supplied Rajdhani Medium. Original OFL/copyright notices are retained. The derivative primary family is renamed RoadstersUI to respect upstream's Reserved Font Name, while source lineage/weights are recorded in `assets/ui-theme/provenance.json`. `tools/prepare-ui-fonts.py` reproduces the conversion with FontTools4.61.1. The interpolation does not invent or redraw glyphs. Orbitron has94/95 ASCII characters (unused caret absent); the current menu/road strings are covered. This pack is not yet a multilingual/chat font solution.
+- Font load failure logs an explicit error, unloads partial custom resources, and displays a visible unqualified-fallback warning. Custom fonts unload before window shutdown. World/city assets are not loaded for the theme test and existing renderer caps/safety settings remain unchanged.
+
+## Verification
+
+See the machine-readable `reference/ui-parity-20261103/ui-theme-implementation.json` and associated build/test logs for final counts/hashes. Build outputs are isolated in `build/ui-theme-native` and `build/ui-theme-web`. Existing potentially in-use executables/output folders were not targeted. Originals are preserved under `reference/pre-ui-theme-20261103`.
+
+New headless layout tests cover960×720,1280×720,1920×1080 and1440×960: menu action containment/non-overlap, modal/list/back containment, scrolling all nine rows into view and back, clamping, and rejection of clipped button corners. Checks remain active in Release builds.
+
+New headless raylib font tests use `LoadFontData`/`GenImageFontAtlas`, never `InitWindow`: actual glyph bitmap decoding, nonempty glyphs, advancing metrics, static-weight coverage increasing500→700→900, atlas size bounds, allocation/free and total resource accounting. Three Orbitron atlases are1024×512 each, Rajdhani512×256. Conservative RGBA8 total6,815,744 bytes (6.5MiB), excluding glyph metadata/temporary CPU data; actual GPU format/allocation/upload and displayed raster quality are unmeasured. This is an additive bounded UI resource cost, not a city budget increase. No MSAA, glow postprocess or world-cap changes.
+
+Native and WASM full regression suites each passed37/37. After font primary-family metadata/packaging was finalized, both isolated artifacts were rebuilt and the two affected UI suites rerun successfully. Font inputs are explicit link dependencies to avoid stale embedded/copied bundles. The full-suite and final focused logs are preserved separately. Initial compiler failures (explicit numeric conversion, missing include and current raylib7-argument `LoadFontData` signature) are retained as separate logs, then corrected; final status is distinguished in the receipt. Font static verification initially required allASCII, discovered the source's absent unused caret, and was narrowed explicitly to the actual supported character set rather than silently substituting another font.
+
+## Deliberate remaining gaps
+
+**No fresh native graphics test.** Outstanding process state remains unverified independently: the owner says closed and no native window is listed, but prior higher-integrity Task Manager input could not establish PID absence. No desktop/process retry or new graphics instance was attempted. Native font texture uploads, appearance, mouse/keyboard/gamepad behavior, animation and shutdown remain unobserved for this build. CPU atlas/layout tests are not visual acceptance.
+
+This slice does not reproduce full CSS: glow/clip/gradient rasterization, text metrics, DPI/focus states and responsive alignment need matched native/browser views. The wordmark still lacks browser's complete showcase scene, rotating camera/material/lighting appearance. Paint swatches/settings/account/footer and functional garage/ranking remain open. Road modal wording remains offline-specific, preserving policy; exact browser title wrapping and locked shake animation are not complete. HUD, pause and results have not yet been migrated to the new font/theme renderer (palette constants are shared); cockpit/live services/gameplay production activation remain gated.
+
+## Asset-team handoff
+
+First package consumed only for verified font inputs/notices; existing thumbs/coins/cockpit conversions were not re-extracted or re-generated. Notify the separate asset team via parent that native static500/700/900 instances now exist with manifest/provenance. Further asset requests are component state/spacing/transition metadata from their versioned menu/road package, not duplicate fonts or full-screen baked labels. Current instance filenames retain `Orbitron-*` lineage; primary family inside is RoadstersUI under OFL. Do not overwrite the asset team's original variable font.
+
+Next actionable step: resolve process absence through a supported means, then perform a conservative menu/road-picker-only native check of font loading, clipping, hover/focus, wheel/keyboard selection, lock rejection and return/QUIT, recording atlas logs and clean shutdown. No automatic transition into world/race rendering is needed for that first visual check.

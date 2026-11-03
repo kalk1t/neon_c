@@ -1,0 +1,311 @@
+{
+  "reference\\verification-20261102\\city-triangle-native-21-tests.log": "23c9cb28b3e96aa9f5a2a00f2724a6511ea616131cca35a558970ba5c7d1c7f9",
+  "reference\\verification-20261102\\city-visibility-native-22-tests.log": "190b35f6258f6c689ffde4e5d6d76ba175bb31ccb75feaaccfcb414d694bc1b3",
+  "reference\\verification-20261102\\city-triangle-wasm-21-tests.log": "bdb6482313b09b7b40139843cafc1df2c016e2dec7fe8a413cf3f89828131485",
+  "reference\\verification-20261102\\city-visibility-wasm-22-tests.log": "8d96f164d8f4a3f76b6d0059c674788b548c0049bfa2daa10199e9fc3c1c2272",
+  "build/city-occlusion-native/bin/RoadstersRace.exe": {
+    "sha256": "a68b3cc120dfaa6d33f6818ebe643b90cf143a4c508b30d45beb6c858a4ada3d",
+    "bytes": 879616
+  },
+  "build/city-occlusion-native/rr_city_occlusion_tests.exe": {
+    "sha256": "aa52ef8523820078e7c5a1c110626bd900c762b0c2d1e89b071feef0e03fa750",
+    "bytes": 2703360
+  },
+  "build/city-occlusion-native/rr_city_triangle_tests.exe": {
+    "sha256": "7181ec3e1953199460abf91089c53e0c73407cd46a220992f91f0990eb1adf5c",
+    "bytes": 2659840
+  },
+  "build/city-occlusion-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/city-occlusion-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/city-occlusion-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/city-occlusion-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "6addf277e8365027a762673bf50e0058f2918d3971e0faea7c9e0f26490be0c6",
+    "reference/city-occlusion-cameras.json": "444e5d917086e0333b521dfdc4a67c5d52f970e69d97dcf3923eaaadecb9a9a7",
+    "reference/city-static-resource-budget.json": "6e143292a9ea38ac6cb6b493638c1b3a318f9d6f5b167418c1fe8a06154d7d22",
+    "reference/city-triangle-reference.json": "d89cd8f009aea9d2055ad843dafdb08544473154ecb4511934255c9b169072cc",
+    "reference/city-visibility-results.json": "a9a863614dbbbbc01db9733bad305f701f6c3d252d683febf37442e1e6652f6a",
+    "src/experimental/rr_city_occlusion.c": "761e92b078c60f46c32922fa7ddf7d87173c3107d862605855a766f2267ae393",
+    "src/experimental/rr_city_occlusion.h": "62a7535bb55f68303d4249b9b5c30a2c2731e14a838f5fd898145d658115a729",
+    "src/experimental/rr_city_triangle.c": "e58d03ec49da792c4fbc51c25b925af49730a2266cb047ad5b15a0e8a9b5e8c1",
+    "src/experimental/rr_city_triangle.h": "9a135c4fd0be39c3b66ad082fbd0db5fca402019c54cd67a2a88b728f0d92c21",
+    "tests/generated_city_occlusion_cameras.h": "dcd428f74023e54ba7811b67a76d901056e5347c26ba21bb18a3720fad368dd7",
+    "tests/generated_city_triangle_reference.h": "19f5ac9fe939d3421d6ab3d7f53547ae0b7f0a94175406592f5c8c2360031784",
+    "tests/test_city_occlusion.c": "a0ca0580596beaee592c40978ad42be31b061555d26d35be865b37aaf68f7b6b",
+    "tests/test_city_triangle.c": "3ddfc24e4f408f9aea3ef1148a6095cb91fd15917c5e2445634d79b49165b465",
+    "tools/capture-occlusion-cameras.mjs": "d44c4d674632269ef9f9640f09403a9bdd393c495eae7bf1d2a653499c9600e3",
+    "tools/capture-triangle-reference.mjs": "c3fe3e5aaa02770c016012edcb83137b16fa5b667c6f27e3a1ab125436d284e0",
+    "tools/measure-city-budget.py": "48302318342912b7c4eb6ce2615dc178446020b2f14069f29e67c86f2c4af98c",
+    "tools/race-rules-check/CMakeLists.txt": "7432b4973efc27090ef8af77c3e609db8f6dc35f6cd54a417e78169014b46193"
+  },
+  "native_wasm_all_per_view_results_identical": true,
+  "runtime_preload_and_game_sources_unchanged": true,
+  "source_and_runtime_asset_hashes_rechecked": true,
+  "triangle_summary": {
+    "cases": 264,
+    "goldens": 600,
+    "margin": 0.02,
+    "worst_view": 255,
+    "max_retained_vertices": 833484,
+    "within_bound": 86,
+    "unique_vertices_worst": 489086,
+    "index_entries_worst": 833484,
+    "unique_materials": [
+      219384,
+      151982,
+      78524,
+      37800,
+      1396
+    ],
+    "attribute_bytes32_worst": 15650752,
+    "indices_bytes32_worst": 3333936,
+    "analysis_hash_workspace": 25165824,
+    "failures": 0
+  },
+  "occlusion_summary": {
+    "cases": 264,
+    "width": 128,
+    "height": 96,
+    "screen_guard": 0.01,
+    "depth_guard_ulp_factor": 32,
+    "source_far": 22000,
+    "worst_view": 255,
+    "max_retained_vertices": 833265,
+    "within_bound": 94,
+    "max_occluded_vertices": 424947,
+    "depth_buffer_bytes": 98312,
+    "failures": 0
+  },
+  "logical_baseline_accounting": {
+    "scope": "Logical resource accounting from completed normal trial log and unchanged runtime GLB/RRC1 source; reused evidence, no graphics run. Not actual allocation or total application memory.",
+    "source_hashes": {
+      "car": "c2e8a412fed57eb94a8c3cefbd2080b0dab43cd9555507692f54838323f598de",
+      "completed_log": "f60613fcc074c32998f010a4f85a4ece9fbdc8a215f776cb1dc26f745de6bf60"
+    },
+    "car_primitives": [
+      {
+        "vertices": 47057,
+        "index_entries": 187566,
+        "attribute_bytes": 1505824,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 9306,
+        "index_entries": 38007,
+        "attribute_bytes": 297792,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 9173,
+        "index_entries": 37380,
+        "attribute_bytes": 293536,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 11800,
+        "index_entries": 49134,
+        "attribute_bytes": 377600,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 11484,
+        "index_entries": 47913,
+        "attribute_bytes": 367488,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 20399,
+        "index_entries": 64455,
+        "attribute_bytes": 652768,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 3787,
+        "index_entries": 12342,
+        "attribute_bytes": 121184,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 3636,
+        "index_entries": 12009,
+        "attribute_bytes": 116352,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 4730,
+        "index_entries": 15714,
+        "attribute_bytes": 151360,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      },
+      {
+        "vertices": 4630,
+        "index_entries": 15480,
+        "attribute_bytes": 148160,
+        "semantics": [
+          "POSITION",
+          "NORMAL",
+          "TEXCOORD_0"
+        ]
+      }
+    ],
+    "car_attribute_bytes": 4032064,
+    "car_uint16_index_bytes": 960000,
+    "course_mesh_count": 13,
+    "course_vertices": 123888,
+    "course_attribute_bytes": 4459968,
+    "textures": [
+      {
+        "id": 1,
+        "width": 1,
+        "height": 1,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 4
+      },
+      {
+        "id": 2,
+        "width": 128,
+        "height": 128,
+        "format": "GRAY_ALPHA",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 32768
+      },
+      {
+        "id": 3,
+        "width": 800,
+        "height": 600,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 1920000
+      },
+      {
+        "id": 4,
+        "width": 256,
+        "height": 512,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 10,
+        "logical_bytes": 699052
+      },
+      {
+        "id": 5,
+        "width": 1024,
+        "height": 1024,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 11,
+        "logical_bytes": 5592404
+      },
+      {
+        "id": 6,
+        "width": 1024,
+        "height": 1024,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 11,
+        "logical_bytes": 5592404
+      },
+      {
+        "id": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 11,
+        "logical_bytes": 5592404
+      },
+      {
+        "id": 8,
+        "width": 2048,
+        "height": 2048,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 16777216
+      },
+      {
+        "id": 9,
+        "width": 2048,
+        "height": 2048,
+        "format": "GRAYSCALE",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 4194304
+      },
+      {
+        "id": 10,
+        "width": 2048,
+        "height": 2048,
+        "format": "GRAYSCALE",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 4194304
+      },
+      {
+        "id": 11,
+        "width": 2048,
+        "height": 2048,
+        "format": "R8G8B8A8",
+        "levels_from_source_load_path": 1,
+        "logical_bytes": 16777216
+      }
+    ],
+    "texture_and_depth_logical_bytes": 63292076,
+    "other_mesh_nominal_bytes": 9452032,
+    "known_gpu_without_city_buildings": 72744108,
+    "known_cpu_mesh_arrays_without_city_buildings": 9452032,
+    "current_city_attribute_bound_bytes_per_copy": 5087232,
+    "known_gpu_with_current_city_bound": 77831340,
+    "exclusions": [
+      "driver layout/padding/compression,shader/program memory",
+      "default swapchain,MSAA/window system storage",
+      "raylib default dynamic render batches,cube template,mesh/object/map/bone structures",
+      "core tracks,corridor,physics,other CPU state and transient loader allocations",
+      "experimental source fixture/hash analysis workspace (not app linked)",
+      "full source props/crowns/material parity costs not yet ported"
+    ]
+  },
+  "conclusion": "Tested frustum/backface and guarded coarse occlusion methods do not meet bounds for all sampled views. Counts are conservative upper bounds,not an irreducible visibility lower bound; no proof every faithful culler must exceed caps. No larger budget or fidelity loss justified/applied. Runtime integration remains gated.",
+  "graphics": "Unrun;window3148188 current state unresolved. No desktop/log retries,launch,termination or active-window-file modifications."
+}

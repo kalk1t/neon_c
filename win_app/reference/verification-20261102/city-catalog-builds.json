@@ -1,0 +1,73 @@
+{
+  "reference\\verification-20261102\\city-catalog-native-eighteen-tests.log": "2a8db274daa682296d7184682eec2199888b959426fd0f1c245c3f63032d8c3b",
+  "reference\\verification-20261102\\city-catalog-wasm-eighteen-tests.log": "ecceda31fedcecabfae07d12d4c9706db8d9be26596ebe97c70fbafb067e12fc",
+  "build/city-catalog-native/bin/RoadstersRace.exe": {
+    "sha256": "08605d882119040732391379098ceb2c33562f5924f2a563e8539f19bcba4c2c",
+    "bytes": 879616
+  },
+  "build/city-catalog-native/rr_city_catalog_tests.exe": {
+    "sha256": "c875e976f960952b72ddbf236de2949d400c451a5d83e36798e3f8cf876d4724",
+    "bytes": 1141248
+  },
+  "build/city-catalog-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/city-catalog-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/city-catalog-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/city-catalog-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "7d2aa7358ee3726b0e8ae040e0cb38b7fccfd54ab01dd1a3ec8bcadfcb93dd63",
+    "tools/race-rules-check/CMakeLists.txt": "768e6d6aa1c2544cfa33129e781c4cb69a0c9d7a74500448137c8433f5ad06ba",
+    "src/experimental/rr_city_catalog.h": "396bea8caf5cf55e248048f41cd11592cbb294da936c0878706e898f84ecf6c6",
+    "src/experimental/rr_city_catalog.c": "f4cde899b30605d7179872f3aabbb1b15e985c6faa87d48a26d3c2fb0c53acd1",
+    "src/experimental/generated_city_catalog.h": "37794a2c6fd826aa24e585f9469026c887168918e5c9746dec0ee3c82d2c86fc",
+    "tools/capture-city-catalog.mjs": "1190073ae108f53f5b6d576fe84d30680945debacf257e0f1c88dbe16ebe1609",
+    "tests/test_city_catalog.c": "b3a8b1079388e55b9606f5955e0b3921db073b0c89a07b6ac24316d64fccb25d",
+    "tests/generated_city_catalog_reference.h": "f9cc36ee8ec314b053f45923143ff03fb18ec8e36978d99ad9472484048b2c25",
+    "reference/city-catalog.json": "4d72ee7d3e54058cdf73e55191067bd4e0bdc30d645702f3196d1c0ccef693f8",
+    "tools/analyze-catalog-budget.py": "cd1d0333c96b31f748f55604d0c785bc72b209e71f8f17527c785834d899d3e3",
+    "reference/city-catalog-budget.json": "de8adfda0655ee064bbe00bb07e9175fa3b1c1c917d13f31ae32d6e053e0274e"
+  },
+  "metadata_bytes_headless_only": 610056,
+  "runtime_app_catalog_linkage": false,
+  "runtime_assets_and_loader_sources_unchanged": true,
+  "source_hashes_rechecked": true,
+  "three_frustum_source_sha256": "01f5cbf405d14f9e201af070c1593b9bcf40573130a1c541ae33519174de6c99",
+  "coverage": {
+    "catalog_city_records": 2741,
+    "catalog_grid_towers": 2360,
+    "catalog_ring": 380,
+    "catalog_skyways": 1,
+    "catalog_crowns": 450,
+    "installed_grid_meshes": 413,
+    "installed_geometry_without_missing_poster_planes": 316,
+    "installed_geometry_missing_poster_planes": 97,
+    "unrepresented_runtime_grid_towers": 1897,
+    "runtime_city_plan": 679,
+    "runtime_world_max": 991
+  },
+  "headless_bounds": {
+    "resident_records": 64,
+    "vertex_budget": 141312,
+    "uploads_per_step": 2,
+    "max_city_query_candidates": 6,
+    "source_city_collision_queries": 5482,
+    "three_visibility_cases": 108,
+    "blocked_real_view_plans": 108,
+    "max_source_logical_visible_records": 235,
+    "max_source_logical_visible_vertices": 171546,
+    "max_source_logical_attribute_bytes": 6175656,
+    "views_over_vertex_budget": 21
+  },
+  "graphics": "Unrun. Prior window3148188 unresolved; no desktop/log retry, launch, termination or modification of facade-windows-view executable/bin assets."
+}

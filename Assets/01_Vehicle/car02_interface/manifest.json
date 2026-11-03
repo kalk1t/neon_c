@@ -1,0 +1,256 @@
+{
+  "pack": "car02_interface",
+  "selection": "2B",
+  "style": "Twin Controls",
+  "png_count": 17,
+  "reusable_png_count": 13,
+  "entry": "START_HERE.html",
+  "preview": "preview/index.html",
+  "files": [
+    {
+      "path": "FILE_INDEX.md",
+      "bytes": 1335,
+      "sha256": "39704d1bf1794cc008879e0b4e5924d23a42fb78daec2d5b5ad3d139b1461406"
+    },
+    {
+      "path": "IMPLEMENT_WITH_CODEX.md",
+      "bytes": 2893,
+      "sha256": "ec839fcddb8ddf338ac89489bbe90de3d5eb9a3e66ab231c32e119cf93a4700a"
+    },
+    {
+      "path": "INTEGRATION.md",
+      "bytes": 9771,
+      "sha256": "cc28e9cdcb31091ca64781b0c9690fde8405f480d0a415b434fb88ddd4836e5e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5007,
+      "sha256": "4aabebf1f3d73ebb020f9d63ae8d69cb701d26ac15d263e035cb20930ca0e587"
+    },
+    {
+      "path": "START_HERE.html",
+      "bytes": 1406,
+      "sha256": "b1e47aae00b07429b068cdec581a0ddd64ad9634b88c7e0af4394c4404d4f9b1"
+    },
+    {
+      "path": "artwork/cockpit_base.png",
+      "bytes": 1843655,
+      "sha256": "fbee7e4e6014c6207cc0d823380f4d6a3ff3c93dbe76b431d3184c2c91584d2b"
+    },
+    {
+      "path": "artwork/control_left.png",
+      "bytes": 1306409,
+      "sha256": "f6b00381f3a9daa28ad028671ccf92a561725e631e29554ddbae5d63d8268a91"
+    },
+    {
+      "path": "artwork/control_right.png",
+      "bytes": 1298984,
+      "sha256": "6389252a2866985542278ada5c2e8c748e6bb9549230b056a47e0d9078e2cf21"
+    },
+    {
+      "path": "asset_records.json",
+      "bytes": 15893,
+      "sha256": "e6884094dc440cb3175f05c9bf82fd462c89e176663f1a1113fb85c3c28395ff"
+    },
+    {
+      "path": "design_notes.md",
+      "bytes": 3439,
+      "sha256": "524d534db5dc8b5c54e5c26990dbb21ad7f1d28cb518a38f3cfae1c1a6f89395"
+    },
+    {
+      "path": "docs/asset_validation.json",
+      "bytes": 402,
+      "sha256": "63aab63c2b99052d5ade70f2ed432d84be8c3bab7c4213b227b32ebd14ae6583"
+    },
+    {
+      "path": "docs/preview_validation.json",
+      "bytes": 1473,
+      "sha256": "b579a31c485d12421d1d29c765951959c9922e1b869d332759aa06c0c9b90b22"
+    },
+    {
+      "path": "panels/attack_panel.png",
+      "bytes": 1244442,
+      "sha256": "8a05a0f7f36d9456967f9dfcfed5e379a30b251c58e7c8f295b9f7dae1cca7ba"
+    },
+    {
+      "path": "panels/boost_panel.png",
+      "bytes": 749399,
+      "sha256": "ca84d4229235d6c2320d3c7677ba94e2a97806f5ca5dfd2725740a183e7a476c"
+    },
+    {
+      "path": "panels/race_panel.png",
+      "bytes": 1185881,
+      "sha256": "f23d0e53e4ec47e4b184d9c0b64be1935f19cae7430458269b88b2ceb24fb32c"
+    },
+    {
+      "path": "panels/speed_panel.png",
+      "bytes": 1293298,
+      "sha256": "38bc801fb4821c1d604930a4adbae70a3090e27f74754ad8e13a6a6141ae3951"
+    },
+    {
+      "path": "preview/cockpit-ui.css",
+      "bytes": 4227,
+      "sha256": "a31219b3bb3d5ae3c8db50a0bf9c93ae5379d66ed8f7d4f1f8a451dacd3fd20d"
+    },
+    {
+      "path": "preview/cockpit-ui.js",
+      "bytes": 16188,
+      "sha256": "3e493a49f754f2538b003a07fa92f051136534774a40895d59fe2e9dafacd78e"
+    },
+    {
+      "path": "preview/gallery.html",
+      "bytes": 703,
+      "sha256": "ec4c4753801771944a75b366bf365d33a99b97cc80de1438bc625be6f2644b05"
+    },
+    {
+      "path": "preview/gallery.js",
+      "bytes": 2780,
+      "sha256": "4b5070908b055aa7dd983541f0c046045f795acdc63c66f5c2c79067f09a4025"
+    },
+    {
+      "path": "preview/index.html",
+      "bytes": 2677,
+      "sha256": "2d546fb2f081dff73b43aa0574bd323f5c775c918e2acfdd9e80628590cfe0e3"
+    },
+    {
+      "path": "preview/pack-config.js",
+      "bytes": 212,
+      "sha256": "39066e5ce6e5c1562a6f851191dcfcc080794d5732fe8edae5ac46425386fdd6"
+    },
+    {
+      "path": "preview/preview.css",
+      "bytes": 5349,
+      "sha256": "f31ca98f4a19e7cc82af655924796dfde24eeecca6f79724411c0db83aa1d1a9"
+    },
+    {
+      "path": "preview/preview.js",
+      "bytes": 2183,
+      "sha256": "770a969dea049ce0ac775d595c71e952776044f30beae43050d6f663b0f5e60b"
+    },
+    {
+      "path": "prompts/01_cockpit_preview.md",
+      "bytes": 3619,
+      "sha256": "9ef7c2a9e8415a3c1338fbe5a6a19939da5ad7d6e9deef9b70d7ccc6cea34b06"
+    },
+    {
+      "path": "prompts/02_cockpit_base.md",
+      "bytes": 2176,
+      "sha256": "8aa4a8669cbcc8de1008bc4a9d38830edff497b4cc89b77ce1c81dffdf059b71"
+    },
+    {
+      "path": "prompts/03_control_left.md",
+      "bytes": 1722,
+      "sha256": "c0ffe32a2b87470500cac0a0df1e095001c96e756d2d13d49987635d4452176b"
+    },
+    {
+      "path": "prompts/04_control_right.md",
+      "bytes": 1723,
+      "sha256": "74c7f2b57d4309f2d7ae68bd9303e5e9a45460076abb49739fe9a470731af6e2"
+    },
+    {
+      "path": "prompts/05_speed_panel.md",
+      "bytes": 1731,
+      "sha256": "fbfe57f5f66772e91c65c0f1d1b09d88ae952a3e03a3d85e11cdd54fa79952f2"
+    },
+    {
+      "path": "prompts/06_boost_panel.md",
+      "bytes": 1808,
+      "sha256": "31a049e0a22917be86cf837423a01e58645c10a7933bd6b54e9207ed895df9e3"
+    },
+    {
+      "path": "prompts/07_attack_panel.md",
+      "bytes": 1732,
+      "sha256": "fc9acc6ef83ecf4acdef6f7e8ea608cfd3007d52c1aaa2f16bb8a7a8ccea1aa7"
+    },
+    {
+      "path": "prompts/08_race_panel.md",
+      "bytes": 1559,
+      "sha256": "d28e19f461689c8221f6f34854bcbbfe5b5ac1b99c69dea3ef3e5a0a16959c1d"
+    },
+    {
+      "path": "prompts/09_interior_modeling_reference.md",
+      "bytes": 2102,
+      "sha256": "110b13c066b0ce06c09b263a33ce9b4691325d9f2292c49ba530e465b7999a7d"
+    },
+    {
+      "path": "prompts/icon_attack.md",
+      "bytes": 857,
+      "sha256": "618d46c9c98e52adc3cd27aaa42412ce307d97a088d48167d2b7a88760ed58d6"
+    },
+    {
+      "path": "prompts/icon_boost.md",
+      "bytes": 821,
+      "sha256": "176bb10d46dd37c5f9b72769172b1ddf6be9ad35a060dbadf91262f72d745281"
+    },
+    {
+      "path": "prompts/icon_camera.md",
+      "bytes": 757,
+      "sha256": "b31dee98763bceb2441936c2bb08c7061c59292a924307296189108e516ac5dd"
+    },
+    {
+      "path": "prompts/icon_warning.md",
+      "bytes": 730,
+      "sha256": "eb0d9f79fcd439632e3188d09e8cc8f5279f8bfafd33f6596eafbd25a08b6462"
+    },
+    {
+      "path": "prompts/keycap_i.md",
+      "bytes": 788,
+      "sha256": "a6befd7eb75eb7422e4952ce0dfe74fc791cf47d3836bc4ceb30a38b0e272980"
+    },
+    {
+      "path": "prompts/reticle.md",
+      "bytes": 750,
+      "sha256": "e1d8a313475f2d58def2f0fbe8484f398ec0052baea3fb78ddeb34597bd493a4"
+    },
+    {
+      "path": "references/car_exterior.png",
+      "bytes": 1270852,
+      "sha256": "013f962fce6321d71903dc2433a341ca9a1506d1a64318de7fb30e9cb46c47a6"
+    },
+    {
+      "path": "references/cockpit_preview.png",
+      "bytes": 2528018,
+      "sha256": "a9f6edf109d4915106828c7063e30156c6549268aa531d068aacd3eec2717bbe"
+    },
+    {
+      "path": "references/interior_modeling_reference.png",
+      "bytes": 2177283,
+      "sha256": "262ac00c900a889c6d1acfea2bb74663f265fb8da90165c34f9b078738d9156c"
+    },
+    {
+      "path": "references/selection_board.png",
+      "bytes": 2755426,
+      "sha256": "b6443ec4d52c3c5d6cfff690b9bc294c4b44eaaaf61ac6a8178896444dc5aa8a"
+    },
+    {
+      "path": "ui/icon_attack.png",
+      "bytes": 679848,
+      "sha256": "560e9c685a056ad5b23d9bd0e64f2f347a9c53550c70b863ecdb4e7ad523d750"
+    },
+    {
+      "path": "ui/icon_boost.png",
+      "bytes": 693100,
+      "sha256": "83a3f12946b6ec7ee434220ba8bad1ece725d9e482dea0573b9e3dbde2a55dc2"
+    },
+    {
+      "path": "ui/icon_camera.png",
+      "bytes": 769400,
+      "sha256": "89515fa2937f5aa0593d82923d49f5ecdbe2267db6aa5bb8c134aa091649e4f6"
+    },
+    {
+      "path": "ui/icon_warning.png",
+      "bytes": 627120,
+      "sha256": "fda4d927f860b58cbdad04cb3ec7686a55a70cfc50c227ae4126590832449a73"
+    },
+    {
+      "path": "ui/keycap_i.png",
+      "bytes": 1253319,
+      "sha256": "a29efa90f205106b8413fbfb6fe5623e02d3a601bb4e826c847c7238c6b36c82"
+    },
+    {
+      "path": "ui/reticle.png",
+      "bytes": 118192,
+      "sha256": "ab307b5b8f8628c0d453013a188e79aa3fa727e2890ab30f947aabb05f855690"
+    }
+  ]
+}

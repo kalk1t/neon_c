@@ -1,0 +1,166 @@
+{
+  "utc": "2026-11-03T07:19:31.933129+00:00",
+  "scope": "Opt-in Roadster cockpit candidate; default OFF; no graphics launched",
+  "targets": {
+    "cockpit-native": {
+      "build": "passed",
+      "cockpit_flag": "ON",
+      "test_scope": "40/40 full native; WASM40/40 full plus final2/2 cockpit fixtures",
+      "artifacts": {
+        "build/cockpit-native/bin/RoadstersRace.exe": {
+          "bytes": 949760,
+          "sha256": "805ee7e3545ad94eba2f8ce66b39c0c746d6108db314e40044de1ac0e4c87af3"
+        }
+      },
+      "log_sha256": "e1b6489f679c2798a77a4fb7eacd0c9b735591ff5c9b6d56b34e67d7cef0a22d"
+    },
+    "cockpit-web": {
+      "build": "passed",
+      "cockpit_flag": "ON",
+      "test_scope": "40/40 full native; WASM40/40 full plus final2/2 cockpit fixtures",
+      "artifacts": {
+        "build/cockpit-web/bin/RoadstersRace.data": {
+          "bytes": 38894385,
+          "sha256": "ecd19d627503ffb72ba45050f865cbe15add28b636c7b1c492f47c279abc79e5"
+        },
+        "build/cockpit-web/bin/RoadstersRace.html": {
+          "bytes": 1136,
+          "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+        },
+        "build/cockpit-web/bin/RoadstersRace.js": {
+          "bytes": 180545,
+          "sha256": "5fdf007a9877b617941de9e8724e1fcbf094f334829e00c12557c5eb5d3cd593"
+        },
+        "build/cockpit-web/bin/RoadstersRace.wasm": {
+          "bytes": 599511,
+          "sha256": "fc8da45b9520a10763de3f1f388a27e25bb3ad5b34045773caa13bf7afb7faf3"
+        }
+      },
+      "log_sha256": "16e6c224316007c9f5d464c28c82a602e9c186a4f214ef56ca951d8a20529b8f"
+    },
+    "cockpit-default-native": {
+      "build": "passed",
+      "cockpit_flag": "OFF",
+      "test_scope": "compile/package only, tests OFF",
+      "artifacts": {
+        "build/cockpit-default-native/bin/RoadstersRace.exe": {
+          "bytes": 941568,
+          "sha256": "172145419b443e200ce2639e5bd0b2acbc0f3e02f542a495f9e5e019087ece03"
+        }
+      },
+      "log_sha256": "b02466bd0057ec097be0c26d80751f2887ddbfc858e5e3d4e2f54159bb4745c6"
+    },
+    "cockpit-default-web": {
+      "build": "passed",
+      "cockpit_flag": "OFF",
+      "test_scope": "compile/package only, tests OFF",
+      "artifacts": {
+        "build/cockpit-default-web/bin/RoadstersRace.data": {
+          "bytes": 38894385,
+          "sha256": "ecd19d627503ffb72ba45050f865cbe15add28b636c7b1c492f47c279abc79e5"
+        },
+        "build/cockpit-default-web/bin/RoadstersRace.html": {
+          "bytes": 1136,
+          "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+        },
+        "build/cockpit-default-web/bin/RoadstersRace.js": {
+          "bytes": 180545,
+          "sha256": "91441809025c0c12fdef609f78f5ec620c73a1eddb3e25f440313c95e7232c3e"
+        },
+        "build/cockpit-default-web/bin/RoadstersRace.wasm": {
+          "bytes": 593720,
+          "sha256": "7f1fd205d60e9e884f59163e4a36686159bdd5e7a6ba632939934f596bfbc006"
+        }
+      },
+      "log_sha256": "5e77c5af0ed986ba7df0b5da56be901fd1ab44b3fcdf4ddd2f795a2ee4cd86d3"
+    }
+  },
+  "source_fixtures": {
+    "fits": 18,
+    "readouts": 36,
+    "three_seat_poses": 18,
+    "layout_scalars": 99,
+    "cars_in_fixtures": 3,
+    "runtime_car": "Roadster only; no unlock/equip"
+  },
+  "resource_bounds": {
+    "rgba8_cockpit_bytes": 8246368,
+    "largest_cpu_image_bytes": 6293408,
+    "pack_limit_bytes": 9437184,
+    "existing_font_rgba8_bytes": 6815744,
+    "combined_ui_rgba8_bytes": 15062112,
+    "uploads": "At most one cockpit texture per focused menu/paused frame without pending world load; no city/world render uploads in those phases",
+    "gpu_memory_upload_latency_frame_time": "Unmeasured",
+    "new_render_targets": 0,
+    "world_caps": "unchanged"
+  },
+  "failures_preserved": [
+    "first-invalid-cockpit-reference.h: DOM string stub correction",
+    "cockpit-native-first-failure.log: invalid fixture string pointer, headless test segfault",
+    "cockpit-web-first-failure.log: same invalid fixture caught at compile",
+    "cockpit-native-threshold-test-failure.log: over-strict assertion at floating-point orbit boundary"
+  ],
+  "limits": [
+    "No native visual/input/GL upload/shutdown acceptance",
+    "Readout italics/flex spacing/kerning/alpha/DPI need visual matching",
+    "Camera shake/punch and raw third camera mode pending",
+    "Free-look input remains inherited active-flight-only; countdown/finished look input parity pending",
+    "Exact threshold can differ one floating-point rounding step across math libraries",
+    "No native Viper/Titan renderer activation or ownership changes",
+    "Combat readout explicitly not connected"
+  ],
+  "graphics_blocker": {
+    "action": "Graphical qualification of isolated cockpit candidate",
+    "state": "pending supported process absence verification",
+    "reason": "Earlier higher-integrity/input limitation not resolved by new evidence; no retry, graphics launch, termination or bypass attempted"
+  },
+  "prior_artifacts_verified_unchanged": [
+    "build/race-ui-native/bin/RoadstersRace.exe",
+    "build/race-ui-web/bin/RoadstersRace.data",
+    "build/race-ui-web/bin/RoadstersRace.html",
+    "build/race-ui-web/bin/RoadstersRace.js",
+    "build/race-ui-web/bin/RoadstersRace.wasm",
+    "build/ui-theme-native/bin/RoadstersRace.exe",
+    "build/ui-theme-web/bin/RoadstersRace.data",
+    "build/ui-theme-web/bin/RoadstersRace.html",
+    "build/ui-theme-web/bin/RoadstersRace.js",
+    "build/ui-theme-web/bin/RoadstersRace.wasm"
+  ],
+  "changed_paths_sha256": {
+    "CMakeLists.txt": "071760ef993cf4fd50de2b47dd00c2328c0ba7a80539abeaac70c66c254d65ed",
+    "src/app/main.c": "0e054f9ec10cbbafa3e28f0ed2473933904e6e9f92b96f73e0519950f94ac99d",
+    "src/presentation/rr_scene.h": "0f36c9122d3df6a7a53528ba1f347b0182cc0ef7c8ad16dab0bd47898b47eb6a",
+    "src/presentation/rr_scene.c": "76bd90a7fa04d1c55d0d9ebf32400fc2ba50bbd0892ccba88650efbbea64095c",
+    "src/presentation/rr_cockpit.h": "ec400a77a3e1669a83906a932f24df160d70de140be50cfe533803ace98298ea",
+    "src/presentation/rr_cockpit.c": "dd0def371a644622617e8b5fd88ca44f446650963f65004bcf5443dd896eaeba",
+    "src/presentation/rr_cockpit_plan.h": "b74b84e71b9573a6d07909c19831f3086cfafac5afb716f15bed73647a9ac166",
+    "tests/test_cockpit.c": "4b535d012e62fb19f8e6b87689c941a4dea9a1b6c69ba0546a0727e8f94477b6",
+    "tests/test_cockpit_images.c": "d580ef6f595dd96d261f760b50e9260c90ae15751008769f8323e36f7a084645",
+    "tests/cockpit-reference.h": "fd1a43ba0ecd7a4bdecfc51acbf17e95f851fb90b96df61ceb9c67556d2ea098",
+    "tools/capture-cockpit.mjs": "abfa7c85e54e4c64d81e17b366747499f0c648a281053f4b691e699c075df433",
+    "docs/COCKPIT-CANDIDATE-2026-11-03.md": "e3df6b4cf1c51dd076c078ce6399a7bf205ff77cd8ef877d054c9ba81b1d2572",
+    "reference/ui-parity-20261103/cockpit-source-reference.json": "e79ed5baeff992cdbbecc1acc37b94c2d87228afb12963f4b1076bbaa6b6c628",
+    "assets/cockpit-roadster/attack.png": "bb9df38ab8479b438dde9b8935df634f1d4f6142c2fba78f9a853f1e2ee33ff0",
+    "assets/cockpit-roadster/base.png": "dc1b6075e51a91124efb14bb6c11fd9c61c1515c2a717b1af35e20ebb98fddd6",
+    "assets/cockpit-roadster/boost.png": "75daca40e00256652fc1dea2ca108a75f51eb4a8ece43b7ab88883609df01620",
+    "assets/cockpit-roadster/control.png": "3d74769ad5ef0d6aa7ab342ad259febce9ba0948faa4071b6844e55a961e8a7b",
+    "assets/cockpit-roadster/provenance.json": "0cca6476c23610073d6c51b4b99cbf6e90fa2f9cbe328d0d50ec10edb8717108",
+    "assets/cockpit-roadster/warning.png": "aed5fcd42a3fc68cdaef99b142853f2f5e8e3f7b2afb76d6dd10567a4b3ea29b"
+  },
+  "source_hashes": {
+    "game/src/cockpit.js": "8c042b086134026f23b4471c58576df0ac5d3e3bc8267a3a3f89d3e3c3932a97",
+    "game/src/main.js": "4dd0cc4594c6849c6b1031520ecfba5eda17fc3c3635f8eba059358aa1a61307",
+    "game/src/style.css": "13a0c4f08650997cd891f3f35e8824208f357a642b921797e48666e1326f118e",
+    "game/node_modules/three/package.json": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de"
+  },
+  "backups": {
+    "reference/pre-cockpit-20261103/CMakeLists.txt": "c6ff71e3f06559292bfdddb1cec787da18ec4d1e7125499070fcc87def69585d",
+    "reference/pre-cockpit-20261103/first-invalid-cockpit-reference.h": "d0dfa4a801b5284decb57b2aad24ea5712222d9f88b48f54d8b8f67809508d1b",
+    "reference/pre-cockpit-20261103/first-invalid-cockpit-source-reference.json": "a6e3c7ab6be24bcb419b18b107b3e7e546046b9683bed5ca12f7bcfcf0a2e017",
+    "reference/pre-cockpit-20261103/main.c": "1f482e3c0d01b753f142c42994ee65d09e3e3200df3afc4a0a098d9feb27f820",
+    "reference/pre-cockpit-20261103/rr_scene.c": "2941b5b5e593cb4434a629645d0439adec716f25a8e3765ecd263035afa4e0a8",
+    "reference/pre-cockpit-20261103/rr_scene.h": "70ffd19ac352de4a142b044b656100b9bad1e64a24438bc238fed37c3eeb2cca"
+  },
+  "no_progress_or_network_writes": true,
+  "asset_team": "Five verified v1 PNG compatibility exports reused unchanged; v2 static fonts retained; no incomplete v3 package imported."
+}

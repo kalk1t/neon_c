@@ -1,0 +1,28 @@
+﻿node.exe : multi-image-to-3d 01a193e8-6b87-72c0-90b2-b377bb8c8cc2
+At C:\Users\User\AppData\Roaming\npm\meshy.ps1:24 char:5
++     & "node$exe"  "$basedir/node_modules/meshy-cli/dist/index.js" $ar ...
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (multi-image-to-...b2-b377bb8c8cc2:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[multi-image-to-3d] IN_PROGRESS 1%
+[multi-image-to-3d] IN_PROGRESS 14%
+[multi-image-to-3d] IN_PROGRESS 23%
+[multi-image-to-3d] IN_PROGRESS 50%
+[multi-image-to-3d] IN_PROGRESS 58%
+[multi-image-to-3d] IN_PROGRESS 67%
+[multi-image-to-3d] IN_PROGRESS 80%
+[multi-image-to-3d] IN_PROGRESS 99%
+[multi-image-to-3d] SUCCEEDED 100%
+      ok in 81s
+Status: SUCCESS
+Task Id: 01a193e8-6b87-72c0-90b2-b377bb8c8cc2
+Generated multi-image-to-3d
+Saved to:
+- meshy\car02\raw\model.glb
+- meshy\car02\raw\thumbnail.png
+- meshy\car02\raw\texture_0_base_color.png
+- meshy\car02\raw\texture_0_metallic.png
+- meshy\car02\raw\texture_0_normal.png
+- meshy\car02\raw\texture_0_roughness.png
+Metadata path: meshy\car02\raw\meta.json

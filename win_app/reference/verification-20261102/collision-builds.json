@@ -1,0 +1,12 @@
+{
+  "reference\\verification-20261102\\collision-native-eleven-tests.log": "8f40fbd1d40bae4a0781e13ebb3d79238d9f9a13a2d522fe7f60633ac6e15ef9",
+  "reference\\verification-20261102\\collision-wasm-eleven-tests.log": "e7b4ec415ef4821c8bc81e855470389ea8bb0cca475ab8699f9352c59d3d93a2",
+  "reference\\graphics-20261102\\collision-fixture-183513-original.log": "b5d9e089bf4d19d39e1e5b7fde78e8db0605fb060a7aa3b091cca5fbac165032",
+  "build/collision-native/bin/RoadstersRace.exe": "f6d1531ae63b0b100c70f40ee86aca93fdab699c0d061735183a06af03d281bb",
+  "build/collision-visual-fixture/bin/RoadstersRace.exe": "7b44f16547b717cbbe6d7f6efd6e658a3c0099834fedcf1089f7e7ee2febbf6a",
+  "build/collision-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/collision-web/bin/RoadstersRace.js": "cb26bd4f6b5fb0771f3004f82e4b701c9029dd38ec9fd7a38bb74ec38289cc31",
+  "build/collision-web/bin/RoadstersRace.wasm": "84dc6d85e8f6d825684bcbc2d44c5a70301869dfb2028a93950d7560bbec5e37",
+  "build/collision-web/bin/RoadstersRace.data": "3a6b53c74017ee76562212606ef00f38e68612707ec42d5ac0c9ddcbabdeb0cf",
+  "reference_sources_still_match": true
+}

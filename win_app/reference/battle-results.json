@@ -1,0 +1,43 @@
+{
+  "native": {
+    "roads": 3,
+    "frames": 720,
+    "rival_probes": 192,
+    "probe_fires": 13,
+    "restarts": 3,
+    "respawns": 12,
+    "smoke": 753,
+    "contacts": 118,
+    "collections": 14,
+    "paused": 15,
+    "countdown": 12,
+    "sequence_draws": 25504,
+    "max_shots": 17,
+    "max_fx": 112,
+    "max_error": 2.5934809855243657e-13,
+    "failures": 0
+  },
+  "wasm": {
+    "roads": 3,
+    "frames": 720,
+    "rival_probes": 192,
+    "probe_fires": 13,
+    "restarts": 3,
+    "respawns": 12,
+    "smoke": 753,
+    "contacts": 118,
+    "collections": 14,
+    "paused": 15,
+    "countdown": 12,
+    "sequence_draws": 25504,
+    "max_shots": 17,
+    "max_fx": 112,
+    "max_error": 2.398081733190338e-13,
+    "failures": 0
+  },
+  "prior_pack_targeting_arsenal_combat_fire_summaries_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "player_phase": "Supplied post-player boundary",
+  "rng_profile": "Pinned warm Three/cached texture stand-in; Sound ctx=null; vehicle updateFX/render/loading excluded"
+}

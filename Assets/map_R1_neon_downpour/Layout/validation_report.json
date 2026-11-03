@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "errors": [],
+  "scope": "Authored source layout math; not Blender execution or game collision verification",
+  "computed": {
+    "length_m": 2464.88,
+    "bounds_min_game": [
+      -450.0,
+      46.001,
+      -349.213
+    ],
+    "bounds_max_game": [
+      450.0,
+      133.999,
+      349.213
+    ],
+    "footprint_xz_m": [
+      900.0,
+      698.425
+    ],
+    "elevation_range_m": [
+      46.001,
+      133.999
+    ],
+    "maximum_grade_degrees": 7.39,
+    "minimum_horizontal_turn_radius_m": 130.302,
+    "arc_table_segments": 3072
+  },
+  "control_count": 24,
+  "checkpoint_count": 14,
+  "checkpoint_spacing_range_m": [
+    176.063,
+    176.063
+  ],
+  "projected_self_intersections": [],
+  "placeholder_collision_parts_checked": 15,
+  "placeholder_clearance_collisions": [],
+  "coordinate_roundtrip_error": 0.0
+}

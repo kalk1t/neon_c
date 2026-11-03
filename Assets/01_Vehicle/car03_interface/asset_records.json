@@ -1,0 +1,541 @@
+{
+  "pack": "car03_interface",
+  "selected_option": "3A — Armored Sport",
+  "assets": [
+    {
+      "id": "cockpit_base",
+      "file": "artwork/cockpit_base.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "bytes": 1985794,
+      "sha256": "1be1624ad06c472d2661740ddcce47450dbe73e8008d002e729816b1d9045a13",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "solid_alpha_bbox": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "fully_transparent_fraction": 0.337423,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-0caba2ea-2202-41ad-807c-414b6e93afc4.png",
+      "prompt_file": "prompts/cockpit_base.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-938e78f6-f4f0-493d-b736-293fa3bf94bb.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "control_neutral",
+      "file": "artwork/control_neutral.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 2043569,
+      "sha256": "86783b1514dfe6b03a07c65929c30fbc6f5b9ffdb537f05556ec5d9a06bb840e",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        33,
+        1252,
+        1230
+      ],
+      "solid_alpha_bbox": [
+        18,
+        228,
+        1236,
+        1076
+      ],
+      "fully_transparent_fraction": 0.481432,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-e4f2b69e-6ee0-408b-8d50-2b302457c533.png",
+      "prompt_file": "prompts/control_neutral.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-938e78f6-f4f0-493d-b736-293fa3bf94bb.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "attack_panel",
+      "file": "panels/attack_panel.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "bytes": 1153117,
+      "sha256": "b8669cd5d1cf4f63e870b3f4b2b188def124a5b8d0a9018ed76bb5e094d08c9d",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1722,
+        869
+      ],
+      "solid_alpha_bbox": [
+        116,
+        192,
+        1687,
+        680
+      ],
+      "fully_transparent_fraction": 0.548381,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-1f1b2de2-1e82-4e18-b455-f4c22e4ab872.png",
+      "prompt_file": "prompts/attack_panel.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "boost_panel",
+      "file": "panels/boost_panel.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 2013958,
+      "sha256": "c23e9db846ef07a59e7871ed5d2ead5d0f530cf8c7b2f0cb806819c8a6ca7fca",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        25,
+        45,
+        1226,
+        1254
+      ],
+      "solid_alpha_bbox": [
+        31,
+        51,
+        1223,
+        1206
+      ],
+      "fully_transparent_fraction": 0.300471,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-02f0dc29-0c56-4d14-a186-de9e14c5bbea.png",
+      "prompt_file": "prompts/boost_panel.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "race_panel",
+      "file": "panels/race_panel.png",
+      "role": "reusable_art",
+      "dimensions": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bytes": 1415548,
+      "sha256": "95059187e87b1374ab12848e05e53fc471a49edcc2e8b4a70b4de2c0c80acd1c",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        23,
+        2140,
+        716
+      ],
+      "solid_alpha_bbox": [
+        55,
+        126,
+        2117,
+        584
+      ],
+      "fully_transparent_fraction": 0.425918,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-e68f6b7e-2b64-4f73-9382-a9dc806de861.png",
+      "prompt_file": "prompts/race_panel.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "speed_panel",
+      "file": "panels/speed_panel.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1775,
+        886
+      ],
+      "mode": "RGBA",
+      "bytes": 1344550,
+      "sha256": "64dc5ae93468914e4246c254d835d18beff1925f0e53741ee59776ddaa0c5676",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        57,
+        0,
+        1709,
+        862
+      ],
+      "solid_alpha_bbox": [
+        75,
+        126,
+        1700,
+        760
+      ],
+      "fully_transparent_fraction": 0.386006,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-d41082c8-3939-4a45-ac90-466efa310e71.png",
+      "prompt_file": "prompts/speed_panel.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "car_exterior",
+      "file": "references/car_exterior.png",
+      "role": "reference",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "bytes": 784225,
+      "sha256": "9880e2436ba60ca90483839e78f2cbe0c02b1eea2e81fc17e058a57b59509aad",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        273,
+        31,
+        1516,
+        999
+      ],
+      "solid_alpha_bbox": [
+        278,
+        305,
+        1268,
+        732
+      ],
+      "fully_transparent_fraction": 0.823723,
+      "source": "/workspace/scratch/5b522c3b440a/Assets/01_Vehicle/car03/concept.png",
+      "prompt_file": null,
+      "references": [],
+      "generation_method": "previously approved source reference"
+    },
+    {
+      "id": "cockpit_preview",
+      "file": "references/cockpit_preview.png",
+      "role": "reference",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "bytes": 2838563,
+      "sha256": "f027da83124797bcd855983f6631862e17c6b2faf36c953603ad1b56d363fe65",
+      "has_real_transparency": false,
+      "alpha_extrema": null,
+      "alpha_bbox": null,
+      "solid_alpha_bbox": null,
+      "fully_transparent_fraction": 0,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-938e78f6-f4f0-493d-b736-293fa3bf94bb.png",
+      "prompt_file": "prompts/cockpit_preview.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png",
+        "/workspace/scratch/5b522c3b440a/Assets/01_Vehicle/car03/concept.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "interior_modeling_reference",
+      "file": "references/interior_modeling_reference.png",
+      "role": "reference",
+      "dimensions": [
+        1671,
+        941
+      ],
+      "mode": "RGB",
+      "bytes": 2639734,
+      "sha256": "adb1f0c731acb8e14b4037d3b8903af63dd8c28fb9e5e10586b4b3a554badd1d",
+      "has_real_transparency": false,
+      "alpha_extrema": null,
+      "alpha_bbox": null,
+      "solid_alpha_bbox": null,
+      "fully_transparent_fraction": 0,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-7d894311-22f8-4236-a46d-15a6ab64c8f6.png",
+      "prompt_file": "prompts/interior_modeling_reference.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-938e78f6-f4f0-493d-b736-293fa3bf94bb.png",
+        "/workspace/scratch/5b522c3b440a/Assets/01_Vehicle/car03/concept.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "selection_board",
+      "file": "references/selection_board.png",
+      "role": "reference",
+      "dimensions": [
+        1086,
+        1448
+      ],
+      "mode": "RGB",
+      "bytes": 2916049,
+      "sha256": "5ddb8dd462f648aa40737efa7b40b743cadfa13d232ee97afab3ae98cb2fb04b",
+      "has_real_transparency": false,
+      "alpha_extrema": null,
+      "alpha_bbox": null,
+      "solid_alpha_bbox": null,
+      "fully_transparent_fraction": 0,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-07ff4ab8-5835-4c3c-8649-88308bfd9556.png",
+      "prompt_file": null,
+      "references": [],
+      "generation_method": "previously approved source reference"
+    },
+    {
+      "id": "icon_attack",
+      "file": "ui/icon_attack.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 679848,
+      "sha256": "560e9c685a056ad5b23d9bd0e64f2f347a9c53550c70b863ecdb4e7ad523d750",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        49,
+        64,
+        1218,
+        1230
+      ],
+      "solid_alpha_bbox": [
+        82,
+        159,
+        1172,
+        1097
+      ],
+      "fully_transparent_fraction": 0.800929,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-a68236f0-2f34-463b-b76f-5048606a85aa.png",
+      "prompt_file": "prompts/icon_attack.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "icon_boost",
+      "file": "ui/icon_boost.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 693100,
+      "sha256": "83a3f12946b6ec7ee434220ba8bad1ece725d9e482dea0573b9e3dbde2a55dc2",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        119,
+        1204,
+        1230
+      ],
+      "solid_alpha_bbox": [
+        269,
+        258,
+        985,
+        1008
+      ],
+      "fully_transparent_fraction": 0.789313,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-3950973c-d035-4fa5-9498-b3a68d2f7128.png",
+      "prompt_file": "prompts/icon_boost.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "icon_camera",
+      "file": "ui/icon_camera.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 769400,
+      "sha256": "89515fa2937f5aa0593d82923d49f5ecdbe2267db6aa5bb8c134aa091649e4f6",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        31,
+        1240,
+        1254
+      ],
+      "solid_alpha_bbox": [
+        214,
+        239,
+        1052,
+        1009
+      ],
+      "fully_transparent_fraction": 0.76543,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-f757ff75-2de1-4515-9786-deb1f53e0195.png",
+      "prompt_file": "prompts/icon_camera.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "icon_warning",
+      "file": "ui/icon_warning.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 627120,
+      "sha256": "fda4d927f860b58cbdad04cb3ec7686a55a70cfc50c227ae4126590832449a73",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        0,
+        29,
+        1204,
+        1235
+      ],
+      "solid_alpha_bbox": [
+        180,
+        241,
+        1073,
+        1015
+      ],
+      "fully_transparent_fraction": 0.815109,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-f181664a-431c-481b-bbaf-ef364289a698.png",
+      "prompt_file": "prompts/icon_warning.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "keycap_i",
+      "file": "ui/keycap_i.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1328,
+        1184
+      ],
+      "mode": "RGBA",
+      "bytes": 1253319,
+      "sha256": "a29efa90f205106b8413fbfb6fe5623e02d3a601bb4e826c847c7238c6b36c82",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bbox": [
+        0,
+        35,
+        1274,
+        1168
+      ],
+      "solid_alpha_bbox": [
+        341,
+        283,
+        987,
+        898
+      ],
+      "fully_transparent_fraction": 0.751036,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-c12036bb-06bc-4114-a5d6-7f23f2f1305a.png",
+      "prompt_file": "prompts/keycap_i.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    },
+    {
+      "id": "reticle",
+      "file": "ui/reticle.png",
+      "role": "reusable_art",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "bytes": 118192,
+      "sha256": "ab307b5b8f8628c0d453013a188e79aa3fa727e2890ab30f947aabb05f855690",
+      "has_real_transparency": true,
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        132,
+        374,
+        1072,
+        853
+      ],
+      "solid_alpha_bbox": [
+        401,
+        396,
+        853,
+        850
+      ],
+      "fully_transparent_fraction": 0.981083,
+      "source": "/workspace/scratch/5b522c3b440a/generated_images/exec-e96939d5-e6de-4bac-aed8-b6a72153b977.png",
+      "prompt_file": "prompts/reticle.md",
+      "references": [
+        "/workspace/scratch/5b522c3b440a/generated_images/exec-11540868-db7c-4aff-811e-caa48df3f9a9.png"
+      ],
+      "generation_method": "built-in image generation"
+    }
+  ]
+}

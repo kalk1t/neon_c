@@ -1,0 +1,26 @@
+{
+  "source": "../game/public/models/props/cyan_tree.glb",
+  "source_sha256": "875d9c7da38f8f541bcfa746c5fd73932969a8b860aa726092e3ff05f97ea0fc",
+  "output": "reference/converted-assets/cyan-tree-png.glb",
+  "output_sha256": "c6268340b3a51bdf8f1904a5be0a29bbfa8916e2cb91943ddb5182f868a8d3a3",
+  "converted": [
+    {
+      "index": 0,
+      "source_bytes": 10918,
+      "png_bytes": 332088
+    },
+    {
+      "index": 1,
+      "source_bytes": 184874,
+      "png_bytes": 2299856
+    },
+    {
+      "index": 2,
+      "source_bytes": 66580,
+      "png_bytes": 1444378
+    }
+  ],
+  "geometry": "Original BIN payload retained byte-for-byte; PNG image views appended; mesh/accessor/node transforms unchanged.",
+  "source_images": 3,
+  "scope": "Existing asset, installed Chrome lossless WebP-to-PNG decode only; no generation or rendering of game."
+}

@@ -1,0 +1,40 @@
+ROADSTERS RACE - FIRST FLIGHT
+
+2026-11-02: A previous build caused a reported whole-PC freeze. The revised
+renderer has compiled and passed headless checks only; graphics stability
+and performance are unverified. No rerun is requested.
+
+This is the first native C flight prototype, not the complete browser game.
+Launch RoadstersRace.exe, then click START FLIGHT or press Enter.
+
+W thrust              S brake / reverse
+Mouse aim             A/D or left/right arrows steer
+E/Q or up/down arrows climb / dive
+Shift boost           F spin dodge
+R reset to last gate  C switch near/far chase camera
+Hold right mouse to look around
+Esc or P pause/resume F11 fullscreen
+
+An Xbox-layout gamepad is wired for left-stick steering/climb, RT thrust,
+LT brake, A boost, B spin, Y camera, View reset and Menu pause/start.
+Physical controller behavior has not yet been verified.
+
+Fly the green guidance dots through the highlighted checkpoints in order.
+This prototype counts practice checkpoints. It does not yet validate a full
+race, award coins, or save progression.
+
+Included: original Roadster model, fallback car, Skyline Loop route, a
+temporary procedural city, checkpoint practice, HUD/minimap and pause.
+Still to port: complete city/art/lighting, world collision response, rivals,
+combat, audio, race results/progression, settings saves, accounts and online.
+
+Startup and pause now use a 2D screen. The city/model load only after START
+FLIGHT. Default rendering is capped at 960x600 internally, 30 FPS, no MSAA,
+and glow off. --glow opts into glow at the bounded internal resolution.
+Flight pauses after ten consecutive frames taking over 150 ms. This cannot
+interrupt a blocked GPU/driver call or guarantee protection against a freeze.
+Native diagnostics append to logs/roadsters.log beside the executable.
+
+This x64 development build uses the Microsoft Visual C runtime (/MD).
+The revised graphics have not been run or tested on a clean installation.
+Keep the assets and licenses folders alongside the executable.

@@ -1,0 +1,26 @@
+{
+  "source": "../game/public/models/props/city_tower.glb",
+  "source_sha256": "826abd2193747f62159b9528b39ca8351e17bbbbeed69f6e6876269cd1b7f30b",
+  "output": "reference/converted-assets/city-crown-png.glb",
+  "output_sha256": "9bce7dbbb600431f050acc857a7d2fccef8421782179dc2bdddaaab40de55393",
+  "converted": [
+    {
+      "index": 0,
+      "source_bytes": 45784,
+      "png_bytes": 1075059
+    },
+    {
+      "index": 1,
+      "source_bytes": 256388,
+      "png_bytes": 2437177
+    },
+    {
+      "index": 2,
+      "source_bytes": 81060,
+      "png_bytes": 1551623
+    }
+  ],
+  "geometry": "Original BIN payload retained byte-for-byte; PNG image views appended; mesh/accessor/node transforms unchanged.",
+  "source_images": 3,
+  "scope": "Existing asset, installed Chrome lossless WebP-to-PNG decode only; no generation or rendering of game."
+}

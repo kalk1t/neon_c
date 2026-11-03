@@ -1,0 +1,48 @@
+{
+  "reference\\verification-20261102\\city-coverage-native-twentyfour-tests.log": "76e222caa165e5423789e4f8ce41c0950fddfd11044b8e78325c23ae0189eb36",
+  "reference\\verification-20261102\\city-coverage-wasm-twentyfour-tests.log": "dbcbd24f0ddff49a22bd6a5d06cc419f4859e0a6957de4e6d5483dc0eca7816d",
+  "build/city-coverage-native/bin/RoadstersRace.exe": {
+    "bytes": 879616,
+    "sha256": "256f1c35d1ab96833edd196bbc03cacca8cb0a99ddc216d54e9c9d9ea3a2dacc"
+  },
+  "build/city-coverage-native/rr_city_coverage_tests.exe": {
+    "bytes": 2723328,
+    "sha256": "eea8d656738f37bcbe1f82bf86269be095b4a7ee07e4ac75fd40a43c75ca870b"
+  },
+  "build/city-coverage-web/bin/RoadstersRace.html": {
+    "bytes": 1136,
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0"
+  },
+  "build/city-coverage-web/bin/RoadstersRace.js": {
+    "bytes": 179363,
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a"
+  },
+  "build/city-coverage-web/bin/RoadstersRace.wasm": {
+    "bytes": 542673,
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8"
+  },
+  "build/city-coverage-web/bin/RoadstersRace.data": {
+    "bytes": 36063814,
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690"
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "20df782f60ebc591bb2868fd91b76decb8c447ee0ef58f54d3cf0a82bf3b6e23",
+    "tools/race-rules-check/CMakeLists.txt": "b011d604b0061178ae2698ada5430b7c5b0000930a14a9d2189a991d0b3fd962",
+    "src/experimental/rr_city_coverage.h": "0cb1b4c96ddb3cd553fcdcd2ce83203e8b76ebcbd51750c08e8e3048c109519e",
+    "src/experimental/rr_city_coverage.c": "472d362bc36bf005a4f6d0e39a3f59e713f905920329ffc1dea1b10888f868d0",
+    "tests/test_city_coverage.c": "df01c92579a56b8aaffe4a464d5d7ac938ba2e1e14273a3160a1d2416ddd9a67",
+    "reference/city-coverage-results.json": "d8a368668862d8b83a6721698a0cfb51eb0e9f9462920f4f17f538f9364c5ae8",
+    "tools/audit-city-mesh-parity.py": "8b05bc327cb5b92bb1243e219ebfbf18da36e0f10ad7a7847f972cdeb8d8523d",
+    "reference/city-mesh-parity-audit.json": "5a7199f0c646b20c30950841071561875074da485b93643692a7de35ff6f7cb8",
+    "docs/CITY-BLOCKER-COVERAGE-FEASIBILITY-2026-11-02.md": "8a7e18b202b92a0b15135f37c910b88e30972ead35b07e47823f2d1c241fb74e",
+    "README.md": "9579d3cd5178a0dfd9b1a2efcb0261881ddbe55b5ec4fddc08b09c9314b525e9",
+    "docs/PARITY.md": "49176f9174711d5c6d0990d38da48716181432d89a2588bd032e6d8b95dea7c2"
+  },
+  "native_wasm_rows_identical": true,
+  "runtime_sources_assets_and_preload_unchanged": true,
+  "reference_source_hashes_rechecked": true,
+  "previous_evidence_and_library_receipt_preserved": true,
+  "suites_each": 24,
+  "graphics": "Unrun; window3148188 unresolved. No denied retry or alteration of its build.",
+  "conclusion": "Bounded combined-blocker path measurably improves retention but fails stress-view resource qualification. Not an irreducible lower bound. Pause speculative culling pending GPU visibility/performance measurement; continue independent poster/material parity QA."
+}

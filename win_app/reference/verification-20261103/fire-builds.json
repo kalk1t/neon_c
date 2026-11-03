@@ -1,0 +1,53 @@
+{
+  "reference\\verification-20261103\\fire-native-thirtythree-tests.log": "5d9520856c27dbef34e1ee6c7a46cd4fa01736c4b93aa274640a5d541445dd3a",
+  "reference\\verification-20261103\\fire-wasm-thirtythree-tests.log": "493a8d95e041dfdb3917d13426e70655301acbac482dc89a5989373774b8ff78",
+  "build/fire-native/bin/RoadstersRace.exe": {
+    "sha256": "5d5122f2a07dd921eb1fe9231d4af4042d3dcc09da648c12f861a425f3a95f47",
+    "bytes": 879616
+  },
+  "build/fire-native/rr_fire_tests.exe": {
+    "sha256": "eef6fd0cf83eda2e6386c4566d1f73c9febb78df437e79f13c55ffbfda4e779d",
+    "bytes": 1826816
+  },
+  "build/fire-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/fire-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/fire-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/fire-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "e1310f11c73f1f96776d17e074bb8c3f5afbd524a26768d7aba35e1476a44809",
+    "tools/race-rules-check/CMakeLists.txt": "f3e6ac6c6f8bec1dea267adb94c965f499df0392ac59799885adc1c0ba8564be",
+    "src/core/rr_arsenal.h": "2e5f74f052439768c3fb40eb982edd082770e9beddc07b33ebb4662532f5c93c",
+    "src/core/rr_arsenal.c": "55cec05f2eceaf389b85c6921a0786fb06640036e4a1fdad7c5be1c033e0a857",
+    "src/core/rr_fire.h": "f25cc29ebecabe258f0e95a0596ea4ffcebce969adfacbbd8bdc09af537dc743",
+    "src/core/rr_fire.c": "55215fa0b8ded01dff422a2b7083a693f232be3699bb71014951f582fb331155",
+    "tests/test_fire.c": "ea69b79d2a3c0722090c6d5d08fe86960c8dfb8876b5e1d5192c83f3107d6716",
+    "tests/generated_fire_reference.h": "51d880912c9d3de90b44f1094b7aba33c4f7d78bff1c66a77cf5e9dd5df006d7",
+    "tools/capture-fire.mjs": "c0cd45021e0055db8e2f1cb4153594ccdafc4a56b1577dae0529f493f010495c",
+    "tools/prepare-fire-reference.py": "f6463cd644e8f7b5d582a8fca753a3b1383ad1f342934a22cbf1d23289abf788",
+    "reference/fire-reference.json": "224f66a57694129dbc465b77845afc18a1a3c124aa43356be96d5f7bb5f31787",
+    "reference/fire-results.json": "af2c963c396806e318b08de9c3f3e5c3180a818ae500fbc23857ad0393960969",
+    "reference/fire-test-initialization.json": "eb9a6c4fb53a3cd56ce76125a891c652bc0c1a2d7f2396bf69a42c88244ced68",
+    "reference/fire-roster-reference-correction.json": "2eaa090e145a0eec3a125585c34db09b0192f33609fa8b2e5845ff435a29a44f",
+    "docs/FIRE-DISPATCH-RNG-2026-11-03.md": "688df7fbb70faf2fb70959ed083a4840ea7d654676d38075017cd72a425a94da",
+    "README.md": "4bbc49922e0c9d168471b936f578da30b941be0fa28286919df27673bc1ae7fd",
+    "docs/PARITY.md": "ec0650ab1ee0361db9c0811bba4023bdcfced4c76e1a3a3e960153b3ca2ba0c3"
+  },
+  "suites_each": 33,
+  "previous_pack_targeting_arsenal_combat_summaries_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "desktop": "No retry; prior app approval timeout/process-unverified evidence preserved.",
+  "rng_profile": "Explicit pinned-Three warm resources and audio ctx=null; not cold/live-render/audio qualification"
+}

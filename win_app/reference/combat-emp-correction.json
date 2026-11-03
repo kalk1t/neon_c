@@ -1,0 +1,10 @@
+{
+  "reason": "Source-equivalence caught an erroneous extra stun2 in the first C EMP implementation. Source delays fire and applies impulse before damage; damage alone supplies stun unless dodged.",
+  "initial_focused_native_failures": 442,
+  "initial_focused_max_error": 2,
+  "original_sha256": {
+    "rr_combat.c": "77d8c53dcdffabdd628c260a2b5d81298ce766aec0c848e139243ae5967c9834",
+    "rr_combat.h": "3b4b641d706fd656dc5a63516643789f1065106caa747afdb98546fbc3ab1c82"
+  },
+  "source_fixture_unchanged": true
+}

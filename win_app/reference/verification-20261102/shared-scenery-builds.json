@@ -1,0 +1,12 @@
+{
+  "reference\\verification-20261102\\shared-scenery-native-thirteen-tests.log": "a44229475e8ca95436306cedae1f2123fe1887d589b23a091650c728991ed025",
+  "reference\\verification-20261102\\shared-scenery-wasm-thirteen-tests.log": "2a3ca142080e7271e7d23a835d99b47033577d4dd52fa8e41e15bdb0dbcaebac",
+  "reference\\graphics-20261102\\shared-scenery-normal-190548-original.log": "5388d5e82760e3b3928145e07b734638c7c010a62043542203340762946151b7",
+  "build/shared-scenery-native/bin/RoadstersRace.exe": "8d73e36751692a605006f810fb05f59e4ad799f1db2e7af112ac577e4876957c",
+  "build/shared-scenery-web/bin/RoadstersRace.html": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+  "build/shared-scenery-web/bin/RoadstersRace.js": "af9050b99fc1becfbced25b2490b1a66d96c545af646d498a9f3a0d5aff48505",
+  "build/shared-scenery-web/bin/RoadstersRace.wasm": "0843b56990ae93547875a17d4c40d88083de60222e189c50cb684fce5f12ae9f",
+  "build/shared-scenery-web/bin/RoadstersRace.data": "810f6d680f83f9e60a76bb66d8ce912dc4a3c987a4acc11812168a9494a81123",
+  "reference_sources_runtime_assets_and_native_staging_match": true,
+  "preserved_library_receipt_sha256": "f9c3e0647e32c7eaaa9fdc860616c5c33860d992f7947d911b943d494022c2ee"
+}

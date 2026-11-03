@@ -1,0 +1,57 @@
+{
+  "native": {
+    "AI_SUMMARY": {
+      "roads": 9,
+      "drivers": 10,
+      "input_cases": 288,
+      "coupled_traces": 18,
+      "coupled_steps": 3240,
+      "progress_cases": 108,
+      "rubber_band_cases": 45,
+      "max_input_error": 8.94839757848e-14,
+      "max_car_error": 2.54211497293e-13,
+      "runtime_rivals": false,
+      "failures": 0
+    },
+    "POSTER_SAMPLING": {
+      "samples": 121,
+      "canvas_panels_for_uv_quadrants": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "pixels_verified": false,
+      "failures": 0
+    }
+  },
+  "wasm": {
+    "AI_SUMMARY": {
+      "roads": 9,
+      "drivers": 10,
+      "input_cases": 288,
+      "coupled_traces": 18,
+      "coupled_steps": 3240,
+      "progress_cases": 108,
+      "rubber_band_cases": 45,
+      "max_input_error": 8.94839757848e-14,
+      "max_car_error": 2.54211497293e-13,
+      "runtime_rivals": false,
+      "failures": 0
+    },
+    "POSTER_SAMPLING": {
+      "samples": 121,
+      "canvas_panels_for_uv_quadrants": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "pixels_verified": false,
+      "failures": 0
+    }
+  },
+  "summaries_identical": true,
+  "active_rivals": false,
+  "poster_pixels_verified": false
+}

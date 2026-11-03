@@ -1,0 +1,31 @@
+{
+  "native": {
+    "damage_cases": 1600,
+    "default_cases": 8,
+    "emp_cases": 64,
+    "dodge_cases": 150,
+    "projectile_cases": 308,
+    "events": 316,
+    "world_queries": 228,
+    "purged": 32,
+    "max_error": 0.0,
+    "shot_bytes": 144,
+    "failures": 0
+  },
+  "wasm": {
+    "damage_cases": 1600,
+    "default_cases": 8,
+    "emp_cases": 64,
+    "dodge_cases": 150,
+    "projectile_cases": 308,
+    "events": 316,
+    "world_queries": 228,
+    "purged": 32,
+    "max_error": 0.0,
+    "shot_bytes": 136,
+    "failures": 0
+  },
+  "prior_pack_targeting_arsenal_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun"
+}

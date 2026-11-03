@@ -1,0 +1,15 @@
+{
+  "saved_utc": "2026-11-02T17:57:40.9078408Z",
+  "receipts": [
+    {
+      "file": "native-eight-tests.log",
+      "source": "build\\road-picker-native\\Testing\\Temporary\\LastTest.log",
+      "sha256": "578740E879ECEE62B8B94D3D52C5CD476D1713FD2C989547062690FDCD6B2548"
+    },
+    {
+      "file": "wasm-eight-tests.log",
+      "source": "build\\road-picker-web\\Testing\\Temporary\\LastTest.log",
+      "sha256": "157B7CFAC139EB01AC6BC33D4CC9C1158F4C3BC1DC4FB2B24E6312558A1BC714"
+    }
+  ]
+}

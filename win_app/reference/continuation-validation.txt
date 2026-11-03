@@ -1,0 +1,64 @@
+Roadsters Windows continuation, 2026-11-02
+
+Installed project: C:\Users\User\Projects\neon_c\win_app
+
+PASSED: scripts/Test-Headless.ps1
+MSVC 19.51.36260 C17, Release; /W4 /WX for new race code and existing core.
+3/3 CTest tests passed, 0.12 seconds.
+build/parity-headless-native/Testing/Temporary/LastTest.log:
+  current_browser_race_rules: 1262 actual browser steps, 32 scenarios,
+    all nine roads and synthetic boundaries, worst absolute error 0, 0 failures.
+  recorded_browser_flight_and_track: 2940 recorded flight steps,
+    81 spline/arc/tangent samples, eight Skyline gates, worst error 2.61e-12.
+  bounded_render_policy: render sizes, camera culling and overload policy.
+
+PASSED: scripts/Test-Headless.ps1 -Web
+Pinned Emscripten 6.0.13 and Node 24.19.0; pure C WebAssembly, no graphics.
+3/3 CTest tests passed, 0.61 seconds.
+build/parity-headless-web/Testing/Temporary/LastTest.log:
+  Same 1262 race steps and 2940 flight steps; race worst error 0,
+  flight/track worst error 2.61e-12; render policy passes.
+
+PASSED: JS syntax and PowerShell parser checks.
+PASSED: all seven current race-source input hashes still match capture.
+PASSED: ten copied pre-existing core/test/policy inputs remain unchanged.
+PASSED: installed new source/fixture/report files matched staged hashes.
+
+Resolved build-only issues:
+  Initial MSVC CMake Debug compiler probe failed C1902 (PDB manager mismatch).
+  CMAKE_C_FLAGS_DEBUG=/Z7 /Od /RTC1 passed without system changes.
+  Initial staging WebAssembly link failed writing generated JS in sandbox temp.
+  EMCC_TEMP_DIR was moved to an allowed build directory. The denied temp paths
+  were not read, retried, repaired, or assigned broader permissions.
+  Installed helper uses build/headless-web-temp and passed.
+
+Not run / not established:
+  Native game, launcher, raylib/OpenGL window, graphics smoke tests, graphics
+  WebAssembly artifact, UI, input devices, audio, FPS/GPU/stability, sign-in,
+  services, economy, multiplayer, deployment and packaging.
+  New race module is not yet wired into the application or root CMake target.
+  Graphics execution remains restricted by win_app/AGENTS.md after reported freeze.
+
+Unresolved read restrictions:
+  CIM process command-line enumeration: denied (Access to a CIM resource was
+  not available to the client); no retry. Name-only query had no matching writer,
+  which does not prove writer inactivity. Existing-source edits were avoided.
+  git -C game status --short and log -1: Permission denied; no retry/workaround.
+  Reference is content hashes, not a verified Git/deployed release.
+
+New files added (relative to win_app; existing files not replaced):
+  src/core/rr_race.c
+  src/core/rr_race.h
+  tests/test_race.c
+  tests/generated_race_reference.h
+  tools/capture-race-rules.mjs
+  tools/race-rules-check/CMakeLists.txt
+  scripts/Test-Headless.ps1
+  reference/race-rules.json
+  reference/baseline-drift.json
+  reference/continuation-validation.txt
+  docs/CONTINUATION-2026-11-02.md
+
+Generated native/web outputs are limited to build/parity-headless-native,
+build/parity-headless-web and build/headless-web-temp. Existing Emscripten cache
+was used. Original dist package, launcher, browser and shared/root files untouched.

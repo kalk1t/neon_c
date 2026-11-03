@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R3 — Monsoon Falls asset pack</title><style>
+:root{color-scheme:dark;--bg:#0a1119;--panel:#111d29;--line:#243747;--ink:#e8f0f6;--muted:#94aabd;--cyan:#43dbe6;--magenta:#e972ce}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}
+a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}button,input{font:inherit}
+.wrap{max-width:1480px;margin:auto;padding:32px}.eyebrow{letter-spacing:.16em;font-size:12px;color:var(--cyan);font-weight:750}
+.hero{display:grid;grid-template-columns:1fr 1.12fr;gap:34px;align-items:center;margin:18px 0 30px}
+h1{font-size:clamp(32px,4.3vw,60px);line-height:1.05;letter-spacing:-.04em;margin:12px 0 18px}h1 small{display:block;color:var(--muted);font-size:16px;letter-spacing:.08em;margin-bottom:12px}
+h2{font-size:26px;letter-spacing:-.02em;margin:0 0 12px}h3{font-size:17px;line-height:1.25;margin:10px 0}.hero p{color:var(--muted);max-width:56ch}.hero img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.pills span{border:1px solid var(--line);background:var(--panel);padding:5px 11px;border-radius:30px;font-size:13px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.actions a{padding:10px 15px;border:1px solid var(--line);border-radius:8px;font-weight:650;font-size:14px}.actions a.primary{background:var(--cyan);color:#08212c;border-color:var(--cyan)}
+.notice{border-left:3px solid var(--magenta);background:#16202d;padding:16px 20px;color:#c8d6df;font-size:14px;margin:25px 0 36px}
+.tools{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;margin:18px 0 22px}.filters{display:flex;gap:7px;flex-wrap:wrap}.filters button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:24px;padding:7px 14px;cursor:pointer}.filters button.active{background:#12424c;color:var(--cyan);border-color:#287281}
+input{background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:9px 12px;border-radius:8px;min-width:250px;max-width:100%}input:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}.card{border:1px solid var(--line);border-radius:12px;background:var(--panel);overflow:hidden}.card[hidden]{display:none}.asset-view{height:230px;display:flex;align-items:center;justify-content:center;background-color:#17232e;background-image:linear-gradient(45deg,#1c2b38 25%,transparent 25%),linear-gradient(-45deg,#1c2b38 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#1c2b38 75%),linear-gradient(-45deg,transparent 75%,#1c2b38 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-view img{width:100%;height:100%;object-fit:contain;padding:14px}.card-copy{padding:17px}.item-meta{display:flex;justify-content:space-between;font-size:12px}.item-meta b{color:var(--cyan);letter-spacing:.08em}.item-meta span,.scale,.kind{color:var(--muted)}.scale{font-size:13px;margin:8px 0 3px}.kind{font-size:11px;margin:0 0 13px;text-transform:uppercase;letter-spacing:.05em}
+.card-links{display:flex;gap:13px;font-size:13px;font-weight:650}.card details{font-size:12px;margin-top:16px;border-top:1px solid var(--line);padding-top:10px;color:var(--muted)}summary{cursor:pointer;color:#c7d7e5}details p{margin:9px 0}
+.section{margin-top:48px}.route img{width:100%;max-height:920px;object-fit:contain;border:1px solid var(--line);background:#0f1721;border-radius:12px}.guide-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.guide-grid a{padding:16px;border:1px solid var(--line);background:var(--panel);border-radius:9px}.quiet{font-size:13px;color:var(--muted)}footer{border-top:1px solid var(--line);padding-top:22px;margin-top:45px;font-size:12px;color:var(--muted)}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.wrap{padding:22px}.hero img{order:-1}h1{font-size:42px}}@media print{body{background:white;color:black}.tools{display:none}.card{break-inside:avoid}.card img{max-height:180px}.notice{color:black}.quiet{color:#555}}
+</style></head>
+<body><main class="wrap">
+ <div class="eyebrow">NEON CIRCUIT / MAP ASSET PACK</div>
+ <header class="hero"><div><h1><small>R3 / RAINY MAP</small>Monsoon Falls</h1><p>A rainy tropical ravine with wet basalt cliffs, abundant green vegetation, a large hydro dam and reservoir, a natural rock arch, broad waterfalls and a glass observation outpost.</p>
+ <div class="pills"><span>27 individual items</span><span>3.11 km proposed loop</span><span>16 gates</span><span>Blender + Meshy guide</span></div>
+ <div class="actions"><a class="primary" href="CLAUDE_START_HERE.md">Claude: start here ↗</a><a href="#assets">Browse items ↓</a><a href="ASSET_INDEX.md">Asset index</a></div></div>
+ <a href="References/selected_map.png" target="_blank" rel="noopener"><img src="References/selected_map.png" alt="User-selected Monsoon Falls map concept"></a></header>
+ <div class="notice"><strong>Build handoff.</strong> The images are individual modeling references and VFX sources. The route and Blender scripts provide an authored starter. Production meshes, Blender execution and game integration remain the implementation stage. All dimensions and LOD budgets are design targets.</div>
+ <section id="assets"><h2>Individual items</h2><p class="quiet">Open any PNG at full resolution. Each item has its own exact prompt and construction notes. Size tuples use local Blender width / depth / height.</p>
+ <div class="tools"><div class="filters" role="group" aria-label="Asset category"><button class="active" aria-pressed="true" data-filter="All">All 27</button><button aria-pressed="false" data-filter="Environment">Environment 12</button><button aria-pressed="false" data-filter="Course">Course 12</button><button aria-pressed="false" data-filter="Effects">Effects 3</button></div><label><span class="quiet">Find an item </span><input id="search" type="search" placeholder="Name or asset ID"></label></div>
+ <p id="result-count" class="quiet" aria-live="polite"></p><div class="grid">
+<article class="card" data-group="Course" data-search="c01 straight aerial deck course">
+  <a class="asset-view" href="Assets/Course/C01_straight_deck.png" target="_blank" rel="noopener" aria-label="Open C01 Straight aerial deck PNG"><img loading="lazy" src="Assets/Course/C01_straight_deck.png" alt="C01 — Straight aerial deck"></a>
+  <div class="card-copy"><div class="item-meta"><b>C01</b><span>Course</span></div><h3>Straight aerial deck</h3>
+    <p class="scale">18 × 24 × 2 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C01_straight_deck.png" download>PNG</a><a href="Prompts/Items/C01_straight_deck.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: build a dimensioned repeatable mesh or sweep a cross-section along the route.</p><p><strong>Origin:</strong> Center of the upper driving deck, Z=0; travel along local -Y.</p><p><strong>Collision:</strong> Simple deck slab; keep bolts and decorative underbody non-colliding.</p><p>LOD triangle targets: 2,400 / 900 / 240</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c02 curved aerial deck course">
+  <a class="asset-view" href="Assets/Course/C02_curved_deck.png" target="_blank" rel="noopener" aria-label="Open C02 Curved aerial deck PNG"><img loading="lazy" src="Assets/Course/C02_curved_deck.png" alt="C02 — Curved aerial deck"></a>
+  <div class="card-copy"><div class="item-meta"><b>C02</b><span>Course</span></div><h3>Curved aerial deck</h3>
+    <p class="scale">Parametric / effect scale</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C02_curved_deck.png" download>PNG</a><a href="Prompts/Items/C02_curved_deck.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: generate from a curve with a shared cross-section.</p><p><strong>Origin:</strong> Centerline at the entrance on the deck surface; local -Y is the entrance tangent.</p><p><strong>Collision:</strong> Simplified curved deck strip; separate outer curb collision.</p><p>LOD triangle targets: 3,600 / 1,200 / 320</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c03 climbing transition ramp course">
+  <a class="asset-view" href="Assets/Course/C03_climbing_ramp.png" target="_blank" rel="noopener" aria-label="Open C03 Climbing transition ramp PNG"><img loading="lazy" src="Assets/Course/C03_climbing_ramp.png" alt="C03 — Climbing transition ramp"></a>
+  <div class="card-copy"><div class="item-meta"><b>C03</b><span>Course</span></div><h3>Climbing transition ramp</h3>
+    <p class="scale">18 × 24 × 8 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C03_climbing_ramp.png" download>PNG</a><a href="Prompts/Items/C03_climbing_ramp.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: control both end heights and tangents; generate an eased climb profile.</p><p><strong>Origin:</strong> Center of lower entrance on the upper deck surface, Z=0; travel local -Y.</p><p><strong>Collision:</strong> Low-poly sloped deck with eased transitions, never a full bounding box across the air space.</p><p>LOD triangle targets: 3,000 / 1,000 / 280</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c04 checkpoint ring course">
+  <a class="asset-view" href="Assets/Course/C04_checkpoint_ring.png" target="_blank" rel="noopener" aria-label="Open C04 Checkpoint ring PNG"><img loading="lazy" src="Assets/Course/C04_checkpoint_ring.png" alt="C04 — Checkpoint ring"></a>
+  <div class="card-copy"><div class="item-meta"><b>C04</b><span>Course</span></div><h3>Checkpoint ring</h3>
+    <p class="scale">26 × 2.2 × 26 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C04_checkpoint_ring.png" download>PNG</a><a href="Prompts/Items/C04_checkpoint_ring.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: torus or segmented extruded ring with separate emissive bands.</p><p><strong>Origin:</strong> Center of the empty ring opening; local -Y points through the gate.</p><p><strong>Collision:</strong> Optional ring rim segments only. The opening is a trigger volume and must remain empty.</p><p>LOD triangle targets: 3,200 / 1,200 / 384</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c05 start / finish arch course">
+  <a class="asset-view" href="Assets/Course/C05_start_finish_arch.png" target="_blank" rel="noopener" aria-label="Open C05 Start / finish arch PNG"><img loading="lazy" src="Assets/Course/C05_start_finish_arch.png" alt="C05 — Start / finish arch"></a>
+  <div class="card-copy"><div class="item-meta"><b>C05</b><span>Course</span></div><h3>Start / finish arch</h3>
+    <p class="scale">28 × 3 × 26 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C05_start_finish_arch.png" download>PNG</a><a href="Prompts/Items/C05_start_finish_arch.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: three structural beams with instanced decorative panels and a separate sign.</p><p><strong>Origin:</strong> Center of the clear passage at the route flight height; local -Y forward.</p><p><strong>Collision:</strong> Separate posts and lintel only; no collider filling the opening.</p><p>LOD triangle targets: 4,500 / 1,600 / 400</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c06 deck support column course">
+  <a class="asset-view" href="Assets/Course/C06_support_column.png" target="_blank" rel="noopener" aria-label="Open C06 Deck support column PNG"><img loading="lazy" src="Assets/Course/C06_support_column.png" alt="C06 — Deck support column"></a>
+  <div class="card-copy"><div class="item-meta"><b>C06</b><span>Course</span></div><h3>Deck support column</h3>
+    <p class="scale">8 × 8 × 40 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C06_support_column.png" download>PNG</a><a href="Prompts/Items/C06_support_column.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: reusable shaft with independently adjustable height and a fixed top cap.</p><p><strong>Origin:</strong> Center of the base at local Z=0.</p><p><strong>Collision:</strong> One shaft box plus cap box, placed below/outside the flight corridor.</p><p>LOD triangle targets: 2,200 / 800 / 160</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c07 floating safety barrier course">
+  <a class="asset-view" href="Assets/Course/C07_safety_barrier.png" target="_blank" rel="noopener" aria-label="Open C07 Floating safety barrier PNG"><img loading="lazy" src="Assets/Course/C07_safety_barrier.png" alt="C07 — Floating safety barrier"></a>
+  <div class="card-copy"><div class="item-meta"><b>C07</b><span>Course</span></div><h3>Floating safety barrier</h3>
+    <p class="scale">8 × 1.2 × 2.2 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C07_safety_barrier.png" download>PNG</a><a href="Prompts/Items/C07_safety_barrier.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: bevelled box, thin trim meshes and a reusable chevron decal.</p><p><strong>Origin:</strong> Center at base of the barrier; long dimension local X.</p><p><strong>Collision:</strong> One simple box along the outside of the deck; keep the 18 m usable corridor clear.</p><p>LOD triangle targets: 1,600 / 600 / 120</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c08 turn chevron sign course">
+  <a class="asset-view" href="Assets/Course/C08_turn_chevron.png" target="_blank" rel="noopener" aria-label="Open C08 Turn chevron sign PNG"><img loading="lazy" src="Assets/Course/C08_turn_chevron.png" alt="C08 — Turn chevron sign"></a>
+  <div class="card-copy"><div class="item-meta"><b>C08</b><span>Course</span></div><h3>Turn chevron sign</h3>
+    <p class="scale">6 × 0.5 × 3 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C08_turn_chevron.png" download>PNG</a><a href="Prompts/Items/C08_turn_chevron.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: shallow sign housing and emissive chevron geometry.</p><p><strong>Origin:</strong> Center of the sign face; face normal local -Y.</p><p><strong>Collision:</strong> None unless the housing is reachable; then one simple box outside the corridor.</p><p>LOD triangle targets: 900 / 320 / 64</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c09 route beacon pylon course">
+  <a class="asset-view" href="Assets/Course/C09_route_beacon.png" target="_blank" rel="noopener" aria-label="Open C09 Route beacon pylon PNG"><img loading="lazy" src="Assets/Course/C09_route_beacon.png" alt="C09 — Route beacon pylon"></a>
+  <div class="card-copy"><div class="item-meta"><b>C09</b><span>Course</span></div><h3>Route beacon pylon</h3>
+    <p class="scale">2.5 × 2.5 × 8 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C09_route_beacon.png" download>PNG</a><a href="Prompts/Items/C09_route_beacon.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: low-sided tapered column, cap, and narrow emissive insets.</p><p><strong>Origin:</strong> Base center at Z=0.</p><p><strong>Collision:</strong> One simple column proxy if near the route; otherwise none.</p><p>LOD triangle targets: 1,400 / 480 / 96</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c10 start platform course">
+  <a class="asset-view" href="Assets/Course/C10_start_platform.png" target="_blank" rel="noopener" aria-label="Open C10 Start platform PNG"><img loading="lazy" src="Assets/Course/C10_start_platform.png" alt="C10 — Start platform"></a>
+  <div class="card-copy"><div class="item-meta"><b>C10</b><span>Course</span></div><h3>Start platform</h3>
+    <p class="scale">24 × 48 × 3 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C10_start_platform.png" download>PNG</a><a href="Prompts/Items/C10_start_platform.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: broad deck with spawn markings, thin light strips, and separate underbody.</p><p><strong>Origin:</strong> Center of upper deck; travel local -Y.</p><p><strong>Collision:</strong> Deck slab only, plus explicit edge barriers. Spawn volumes stay clear.</p><p>LOD triangle targets: 5,000 / 1,800 / 480</p></details>
+  </div>
+</article>
+<article class="card" data-group="Effects" data-search="c11 rain streak sprite effects">
+  <a class="asset-view" href="Assets/Effects/C11_rain_streak.png" target="_blank" rel="noopener" aria-label="Open C11 Rain streak sprite PNG"><img loading="lazy" src="Assets/Effects/C11_rain_streak.png" alt="C11 — Rain streak sprite"></a>
+  <div class="card-copy"><div class="item-meta"><b>C11</b><span>Effects</span></div><h3>Rain streak sprite</h3>
+    <p class="scale">Parametric / effect scale</p><p class="kind">vfx sprite source</p>
+    <div class="card-links"><a href="Assets/Effects/C11_rain_streak.png" download>PNG</a><a href="Prompts/Items/C11_rain_streak.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Runtime VFX: textured instanced quads or the engine&#x27;s existing particle system.</p><p><strong>Origin:</strong> Texture center; animate in a camera-centered particle volume.</p><p><strong>Collision:</strong> None.</p><p>LOD triangle targets: 2 / 2 / 0</p></details>
+  </div>
+</article>
+<article class="card" data-group="Effects" data-search="c12 rain splash / ripple sprite effects">
+  <a class="asset-view" href="Assets/Effects/C12_rain_splash.png" target="_blank" rel="noopener" aria-label="Open C12 Rain splash / ripple sprite PNG"><img loading="lazy" src="Assets/Effects/C12_rain_splash.png" alt="C12 — Rain splash / ripple sprite"></a>
+  <div class="card-copy"><div class="item-meta"><b>C12</b><span>Effects</span></div><h3>Rain splash / ripple sprite</h3>
+    <p class="scale">Parametric / effect scale</p><p class="kind">vfx sprite source</p>
+    <div class="card-links"><a href="Assets/Effects/C12_rain_splash.png" download>PNG</a><a href="Prompts/Items/C12_rain_splash.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Runtime VFX: pooled small quads or decals with short scale-and-fade animation.</p><p><strong>Origin:</strong> Texture center; place just above a receiving surface.</p><p><strong>Collision:</strong> None.</p><p>LOD triangle targets: 2 / 2 / 0</p></details>
+  </div>
+</article>
+<article class="card" data-group="Effects" data-search="c13 soft water mist sprite effects">
+  <a class="asset-view" href="Assets/Effects/C13_soft_mist.png" target="_blank" rel="noopener" aria-label="Open C13 Soft water mist sprite PNG"><img loading="lazy" src="Assets/Effects/C13_soft_mist.png" alt="C13 — Soft water mist sprite"></a>
+  <div class="card-copy"><div class="item-meta"><b>C13</b><span>Effects</span></div><h3>Soft water mist sprite</h3>
+    <p class="scale">Parametric / effect scale</p><p class="kind">vfx sprite source</p>
+    <div class="card-links"><a href="Assets/Effects/C13_soft_mist.png" download>PNG</a><a href="Prompts/Items/C13_soft_mist.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Runtime VFX: sparse translucent cards with distance fading and depth testing.</p><p><strong>Origin:</strong> Texture center; camera-facing particle or oriented mist card.</p><p><strong>Collision:</strong> None.</p><p>LOD triangle targets: 2 / 2 / 0</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c14 dotted route light sequence course">
+  <a class="asset-view" href="Assets/Course/C14_dotted_route_lights.png" target="_blank" rel="noopener" aria-label="Open C14 Dotted route light sequence PNG"><img loading="lazy" src="Assets/Course/C14_dotted_route_lights.png" alt="C14 — Dotted route light sequence"></a>
+  <div class="card-copy"><div class="item-meta"><b>C14</b><span>Course</span></div><h3>Dotted route light sequence</h3>
+    <p class="scale">Parametric / effect scale</p><p class="kind">placement look reference</p>
+    <div class="card-links"><a href="Assets/Course/C14_dotted_route_lights.png" download>PNG</a><a href="Prompts/Items/C14_dotted_route_lights.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender/runtime: repeated small emissive discs or sprites along a curve.</p><p><strong>Origin:</strong> Each light instance uses its own center; positions are sampled from the route.</p><p><strong>Collision:</strong> None.</p><p>LOD triangle targets: 16 / 8 / 2</p></details>
+  </div>
+</article>
+<article class="card" data-group="Course" data-search="c15 floating service platform course">
+  <a class="asset-view" href="Assets/Course/C15_service_platform.png" target="_blank" rel="noopener" aria-label="Open C15 Floating service platform PNG"><img loading="lazy" src="Assets/Course/C15_service_platform.png" alt="C15 — Floating service platform"></a>
+  <div class="card-copy"><div class="item-meta"><b>C15</b><span>Course</span></div><h3>Floating service platform</h3>
+    <p class="scale">24 × 24 × 3 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Course/C15_service_platform.png" download>PNG</a><a href="Prompts/Items/C15_service_platform.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Blender: simple octagonal platform and low-poly service console.</p><p><strong>Origin:</strong> Center of upper deck; central service console separate if modeled.</p><p><strong>Collision:</strong> Deck slab plus separate console proxy, only if players can visit it.</p><p>LOD triangle targets: 3,200 / 1,200 / 256</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f01 mossy basalt cliff module environment">
+  <a class="asset-view" href="Assets/Environment/F01_basalt_cliff.png" target="_blank" rel="noopener" aria-label="Open F01 Mossy basalt cliff module PNG"><img loading="lazy" src="Assets/Environment/F01_basalt_cliff.png" alt="F01 — Mossy basalt cliff module"></a>
+  <div class="card-copy"><div class="item-meta"><b>F01</b><span>Environment</span></div><h3>Mossy basalt cliff module</h3>
+    <p class="scale">60 × 40 × 100 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F01_basalt_cliff.png" download>PNG</a><a href="Prompts/Items/F01_basalt_cliff.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> Base center; Z=0 is the placement plane. The large flatter rear face points toward local +Y for burying into terrain.</p><p><strong>Collision:</strong> Several coarse convex boxes/hulls for exposed walls; keep gaps and ledges navigable where the course requires them. No triangle collider derived from moss.</p><p>LOD triangle targets: 12,000 / 5,000 / 1,500</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f02 natural basalt arch environment">
+  <a class="asset-view" href="Assets/Environment/F02_natural_arch.png" target="_blank" rel="noopener" aria-label="Open F02 Natural basalt arch PNG"><img loading="lazy" src="Assets/Environment/F02_natural_arch.png" alt="F02 — Natural basalt arch"></a>
+  <div class="card-copy"><div class="item-meta"><b>F02</b><span>Environment</span></div><h3>Natural basalt arch</h3>
+    <p class="scale">80 × 25 × 65 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F02_natural_arch.png" download>PNG</a><a href="Prompts/Items/F02_natural_arch.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At ground level centered beneath the aperture. Opening runs along local Y; local X spans the opening.</p><p><strong>Collision:</strong> Separate coarse left-foot, right-foot, and overhead bridge hulls; never use one convex hull across the entire arch because it would close the opening. Enforce the 30 × 30 m clear aperture during Blender blockout.</p><p>LOD triangle targets: 18,000 / 7,000 / 2,500</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f03 flat-top basalt mesa environment">
+  <a class="asset-view" href="Assets/Environment/F03_flat_top_mesa.png" target="_blank" rel="noopener" aria-label="Open F03 Flat-top basalt mesa PNG"><img loading="lazy" src="Assets/Environment/F03_flat_top_mesa.png" alt="F03 — Flat-top basalt mesa"></a>
+  <div class="card-copy"><div class="item-meta"><b>F03</b><span>Environment</span></div><h3>Flat-top basalt mesa</h3>
+    <p class="scale">60 × 55 × 75 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F03_flat_top_mesa.png" download>PNG</a><a href="Prompts/Items/F03_flat_top_mesa.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> Base center at Z=0; preserve a separate top-plane anchor at Z=75 m for dressing or structure placement.</p><p><strong>Collision:</strong> One low-sided convex hull or a small set of hulls, plus a broad top placement surface; use coarser geometry than visible rock. Keep silhouette overhangs visually plausible but avoid hidden race-line collision traps.</p><p>LOD triangle targets: 14,000 / 5,500 / 1,800</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f04 modular hydrodam segment environment">
+  <a class="asset-view" href="Assets/Environment/F04_dam_section.png" target="_blank" rel="noopener" aria-label="Open F04 Modular hydrodam segment PNG"><img loading="lazy" src="Assets/Environment/F04_dam_section.png" alt="F04 — Modular hydrodam segment"></a>
+  <div class="card-copy"><div class="item-meta"><b>F04</b><span>Environment</span></div><h3>Modular hydrodam segment</h3>
+    <p class="scale">40 × 15 × 100 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F04_dam_section.png" download>PNG</a><a href="Prompts/Items/F04_dam_section.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> Base center at Z=0. X is width/repetition axis; planar snap ends at X=−20 and +20 m. Water-facing plane is local +Y.</p><p><strong>Collision:</strong> A simple solid box or a few coarse convex wall/buttress hulls. Keep decorative rails and service detail out of collision unless reachable. Course collision stays separate.</p><p>LOD triangle targets: 9,000 / 3,500 / 900</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f05 hydrodam spillway gate environment">
+  <a class="asset-view" href="Assets/Environment/F05_spillway_gate.png" target="_blank" rel="noopener" aria-label="Open F05 Hydrodam spillway gate PNG"><img loading="lazy" src="Assets/Environment/F05_spillway_gate.png" alt="F05 — Hydrodam spillway gate"></a>
+  <div class="card-copy"><div class="item-meta"><b>F05</b><span>Environment</span></div><h3>Hydrodam spillway gate</h3>
+    <p class="scale">25 × 12 × 80 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F05_spillway_gate.png" download>PNG</a><a href="Prompts/Items/F05_spillway_gate.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At center of the bottom sill; Z=0. +Y faces reservoir. Put a distinct gate_panel pivot at its upper hoist attachment if later animation is desired.</p><p><strong>Collision:</strong> Static boxes for the frame and, only when needed, one box for the closed gate panel. The waterfall is a separate non-solid VFX asset. Do not derive collision from cable/bolt details.</p><p>LOD triangle targets: 8,000 / 3,000 / 800</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f06 cantilever observation pod environment">
+  <a class="asset-view" href="Assets/Environment/F06_observation_pod.png" target="_blank" rel="noopener" aria-label="Open F06 Cantilever observation pod PNG"><img loading="lazy" src="Assets/Environment/F06_observation_pod.png" alt="F06 — Cantilever observation pod"></a>
+  <div class="card-copy"><div class="item-meta"><b>F06</b><span>Environment</span></div><h3>Cantilever observation pod</h3>
+    <p class="scale">20 × 16 × 12 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F06_observation_pod.png" download>PNG</a><a href="Prompts/Items/F06_observation_pod.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> Center of rear bracket mounting plate; local +Y points out from the cliff toward the cabin, local Z is up. Add a separate balcony center anchor.</p><p><strong>Collision:</strong> Coarse cylinder/box hull for cabin plus a bracket box if reachable; omit the small rail tubes from collision. Treat glass as opaque proxy collision if players can approach it.</p><p>LOD triangle targets: 10,000 / 4,000 / 1,200</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f07 broadleaf rainforest tree environment">
+  <a class="asset-view" href="Assets/Environment/F07_tropical_tree.png" target="_blank" rel="noopener" aria-label="Open F07 Broadleaf rainforest tree PNG"><img loading="lazy" src="Assets/Environment/F07_tropical_tree.png" alt="F07 — Broadleaf rainforest tree"></a>
+  <div class="card-copy"><div class="item-meta"><b>F07</b><span>Environment</span></div><h3>Broadleaf rainforest tree</h3>
+    <p class="scale">14 × 14 × 18 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F07_tropical_tree.png" download>PNG</a><a href="Prompts/Items/F07_tropical_tree.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At ground contact under trunk center; Z=0. Root tips should intersect terrain after placement; keep the canopy centered approximately over the origin.</p><p><strong>Collision:</strong> One tapered trunk capsule or 2–3 coarse trunk hulls if players can reach it. Canopy and leaves have no collision. Background trees may have no collider.</p><p>LOD triangle targets: 10,000 / 3,500 / 500</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f08 tall rainforest palm environment">
+  <a class="asset-view" href="Assets/Environment/F08_palm_tree.png" target="_blank" rel="noopener" aria-label="Open F08 Tall rainforest palm PNG"><img loading="lazy" src="Assets/Environment/F08_palm_tree.png" alt="F08 — Tall rainforest palm"></a>
+  <div class="card-copy"><div class="item-meta"><b>F08</b><span>Environment</span></div><h3>Tall rainforest palm</h3>
+    <p class="scale">10 × 10 × 22 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F08_palm_tree.png" download>PNG</a><a href="Prompts/Items/F08_palm_tree.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At trunk ground-contact center, Z=0. Preserve the natural lean while ensuring bounding dimensions include the full frond spread.</p><p><strong>Collision:</strong> One or two capsules following the trunk if reachable. Fronds have no collision; distant palms are decorative only.</p><p>LOD triangle targets: 6,000 / 2,000 / 300</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f09 rainforest fern environment">
+  <a class="asset-view" href="Assets/Environment/F09_fern.png" target="_blank" rel="noopener" aria-label="Open F09 Rainforest fern PNG"><img loading="lazy" src="Assets/Environment/F09_fern.png" alt="F09 — Rainforest fern"></a>
+  <div class="card-copy"><div class="item-meta"><b>F09</b><span>Environment</span></div><h3>Rainforest fern</h3>
+    <p class="scale">2 × 2 × 2 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F09_fern.png" download>PNG</a><a href="Prompts/Items/F09_fern.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At root crown ground-contact center, Z=0. Local Z aligns with the average upright direction; keep frond tips above the placement surface.</p><p><strong>Collision:</strong> No collision by default. Use a tiny root proxy only if the game explicitly needs interaction; do not block vehicles with foliage.</p><p>LOD triangle targets: 2,500 / 900 / 200</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f10 mossy basalt boulder environment">
+  <a class="asset-view" href="Assets/Environment/F10_moss_boulder.png" target="_blank" rel="noopener" aria-label="Open F10 Mossy basalt boulder PNG"><img loading="lazy" src="Assets/Environment/F10_moss_boulder.png" alt="F10 — Mossy basalt boulder"></a>
+  <div class="card-copy"><div class="item-meta"><b>F10</b><span>Environment</span></div><h3>Mossy basalt boulder</h3>
+    <p class="scale">8 × 6 × 5 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F10_moss_boulder.png" download>PNG</a><a href="Prompts/Items/F10_moss_boulder.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> At center of the ground footprint, Z=0. Bottom may be sunk 0.2–0.5 m into terrain to hide the seam.</p><p><strong>Collision:</strong> One simple convex hull only when close enough to affect gameplay. Background boulders have no collider; moss and small plants never add collision.</p><p>LOD triangle targets: 4,000 / 1,500 / 400</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f11 waterfall curtain look reference environment">
+  <a class="asset-view" href="Assets/Environment/F11_waterfall_curtain.png" target="_blank" rel="noopener" aria-label="Open F11 Waterfall curtain look reference PNG"><img loading="lazy" src="Assets/Environment/F11_waterfall_curtain.png" alt="F11 — Waterfall curtain look reference"></a>
+  <div class="card-copy"><div class="item-meta"><b>F11</b><span>Environment</span></div><h3>Waterfall curtain look reference</h3>
+    <p class="scale">25 × 3 × 80 m</p><p class="kind">vfx look reference</p>
+    <div class="card-links"><a href="Assets/Environment/F11_waterfall_curtain.png" download>PNG</a><a href="Prompts/Items/F11_waterfall_curtain.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Runtime shader and VFX geometry; do not generate solid water in Meshy.</p><p><strong>Origin:</strong> Top lip center at local origin. The sheet descends along −Z; X is width and Y is shallow depth. Document this upper-origin exception before placement in the scene.</p><p><strong>Collision:</strong> No physical collider for the visual sheet, foam or spray. If gameplay needs a waterfall interaction, create a separate named trigger volume in the course code.</p><p>LOD triangle targets: 600 / 120 / 2</p></details>
+  </div>
+</article>
+<article class="card" data-group="Environment" data-search="f12 hanging vine clump environment">
+  <a class="asset-view" href="Assets/Environment/F12_hanging_vines.png" target="_blank" rel="noopener" aria-label="Open F12 Hanging vine clump PNG"><img loading="lazy" src="Assets/Environment/F12_hanging_vines.png" alt="F12 — Hanging vine clump"></a>
+  <div class="card-copy"><div class="item-meta"><b>F12</b><span>Environment</span></div><h3>Hanging vine clump</h3>
+    <p class="scale">2.5 × 1.2 × 5 m</p><p class="kind">modeling reference</p>
+    <div class="card-links"><a href="Assets/Environment/F12_hanging_vines.png" download>PNG</a><a href="Prompts/Items/F12_hanging_vines.md" target="_blank" rel="noopener">Prompt &amp; build notes ↗</a></div>
+    <details><summary>Construction details</summary><p>Use the item guide for the preferred Blender/Meshy workflow, cleanup and construction details.</p><p><strong>Origin:</strong> Top attachment-cluster center at local origin. Vines hang along −Z; X is lateral spread and Y is depth. This is an upper-origin dressing asset.</p><p><strong>Collision:</strong> No collision by default. Vines must not snag or block flying cars; any gameplay rope interaction would require a separate system.</p><p>LOD triangle targets: 2,200 / 700 / 100</p></details>
+  </div>
+</article></div></section>
+ <section class="section route"><h2>Authored route and height profile</h2><p class="quiet">A new closed-loop blockout inspired by the scene. Exact control points and checkpoint data are in Layout/route.json.</p><a href="Layout/route_plan.png" target="_blank" rel="noopener"><img loading="lazy" src="Layout/route_plan.png" alt="Precise R3 route plan and elevation profile"></a><div class="actions"><a href="Layout/route.json">Route JSON</a><a href="Layout/placements.json">Scenery placements</a><a href="Layout/validation_report.json">Layout check report</a><a href="Layout/route_plan.svg">Vector diagram</a></div></section>
+ <section class="section"><h2>Implementation guides</h2><div class="guide-grid">
+ <a href="Guides/01_art_direction.md">01 — Art direction &amp; assembly</a><a href="Guides/02_blender_build.md">02 — Blender build workflow</a><a href="Guides/03_meshy_workflow.md">03 — Meshy item workflow</a><a href="Guides/04_materials_weather.md">04 — Materials &amp; weather</a><a href="Guides/05_game_integration.md">05 — Game integration</a><a href="Guides/06_validation_performance.md">06 — Validation &amp; performance</a>
+ </div><div class="actions"><a href="Blender/README.md">Blender source kit</a><a href="asset_catalog.json">Machine-readable catalog</a><a href="QA/pack_validation.json">Package QA</a></div></section>
+ <footer>Prepared for the selected R3 map. Shared Neon Circuit course assets are included in both standalone ZIPs. No network access is needed for this gallery. Open Markdown/JSON files in an editor for Claude.</footer>
+</main><script>
+(()=>{let group='All';const search=document.querySelector('#search');const cards=[...document.querySelectorAll('.card')];const status=document.querySelector('#result-count');
+function update(){const q=search.value.toLowerCase().trim();let n=0;for(const card of cards){const show=(group==='All'||card.dataset.group===group)&&card.dataset.search.includes(q);card.hidden=!show;if(show)n++;}status.textContent=n+' individual items shown';}
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{group=b.dataset.filter;document.querySelectorAll('.filters button').forEach(x=>{const on=x===b;x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));});update();}));
+search.addEventListener('input',update);update();})();
+</script></body></html>

@@ -1,0 +1,17 @@
+{
+  "modified": {
+    "CMakeLists.txt": "7d2aa7358ee3726b0e8ae040e0cb38b7fccfd54ab01dd1a3ec8bcadfcb93dd63",
+    "tools/race-rules-check/CMakeLists.txt": "768e6d6aa1c2544cfa33129e781c4cb69a0c9d7a74500448137c8433f5ad06ba"
+  },
+  "added": [
+    "src/experimental/rr_city_batching.h",
+    "src/experimental/rr_city_batching.c",
+    "src/experimental/generated_city_batches.h",
+    "tests/test_city_batching.c",
+    "tests/generated_city_batch_reference.h",
+    "tools/capture-city-batching.mjs",
+    "reference/city-batching.json"
+  ],
+  "runtime_app_or_assets_changed": false,
+  "current_window_output_changed": false
+}

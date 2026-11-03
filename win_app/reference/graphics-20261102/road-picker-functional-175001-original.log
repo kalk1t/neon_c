@@ -1,0 +1,221 @@
+2026-11-02T17:50:01Z [3] SESSION: bounded renderer, 2D startup, 30 FPS, MSAA off, smoke=0 fallback=0 glow=0
+2026-11-02T17:50:01Z [3] Initializing raylib 6.2
+2026-11-02T17:50:01Z [3] Platform backend: DESKTOP (GLFW)
+2026-11-02T17:50:01Z [3] Supported raylib modules:
+2026-11-02T17:50:01Z [3]     > rcore:..... loaded (mandatory)
+2026-11-02T17:50:01Z [3]     > rlgl:...... loaded (mandatory)
+2026-11-02T17:50:01Z [3]     > rshapes:... loaded (optional)
+2026-11-02T17:50:01Z [3]     > rtextures:. loaded (optional)
+2026-11-02T17:50:01Z [3]     > rtext:..... loaded (optional)
+2026-11-02T17:50:01Z [3]     > rmodels:... loaded (optional)
+2026-11-02T17:50:01Z [3]     > raudio:.... loaded (optional)
+2026-11-02T17:50:01Z [3] DISPLAY: Trying to enable VSYNC
+2026-11-02T17:50:01Z [3] DISPLAY: Device initialized successfully 
+2026-11-02T17:50:01Z [3]     > Display size: 1920 x 1080
+2026-11-02T17:50:01Z [3]     > Screen size:  960 x 720
+2026-11-02T17:50:01Z [3]     > Render size:  960 x 720
+2026-11-02T17:50:01Z [3]     > Viewport offsets: 0, 0
+2026-11-02T17:50:01Z [3] GLAD: OpenGL extensions loaded successfully
+2026-11-02T17:50:01Z [3] GL: Supported extensions count: 404
+2026-11-02T17:50:01Z [3] GL: OpenGL device information:
+2026-11-02T17:50:01Z [3]     > Vendor:   NVIDIA Corporation
+2026-11-02T17:50:01Z [3]     > Renderer: NVIDIA GeForce RTX 5080/PCIe/SSE2
+2026-11-02T17:50:01Z [3]     > Version:  3.3.0 NVIDIA 610.88
+2026-11-02T17:50:01Z [3]     > GLSL:     3.30 NVIDIA via Cg compiler
+2026-11-02T17:50:01Z [3] GL: VAO extension detected, VAO functions loaded successfully
+2026-11-02T17:50:01Z [3] GL: NPOT textures extension detected, full NPOT textures supported
+2026-11-02T17:50:01Z [3] GL: DXT compressed textures supported
+2026-11-02T17:50:01Z [3] GL: ETC2/EAC compressed textures supported
+2026-11-02T17:50:01Z [3] PLATFORM: DESKTOP (GLFW - Win32): Initialized successfully
+2026-11-02T17:50:01Z [3] TEXTURE: [ID 1] Texture loaded successfully (1x1 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:01Z [3] TEXTURE: [ID 1] Default texture loaded successfully
+2026-11-02T17:50:01Z [3] SHADER: [ID 1] Vertex shader compiled successfully
+2026-11-02T17:50:01Z [3] SHADER: [ID 2] Fragment shader compiled successfully
+2026-11-02T17:50:01Z [3] SHADER: [ID 3] Program shader loaded successfully
+2026-11-02T17:50:01Z [3] SHADER: [ID 3] Default shader loaded successfully
+2026-11-02T17:50:01Z [3] RLGL: Render batch vertex buffers loaded successfully in RAM (CPU)
+2026-11-02T17:50:01Z [3] RLGL: Render batch vertex buffers loaded successfully in VRAM (GPU)
+2026-11-02T17:50:01Z [3] RLGL: Default OpenGL state initialized successfully
+2026-11-02T17:50:01Z [3] TEXTURE: [ID 2] Texture loaded successfully (128x128 | GRAY_ALPHA | 1 mipmaps)
+2026-11-02T17:50:01Z [3] FONT: Default font loaded successfully (224 glyphs)
+2026-11-02T17:50:01Z [3] SYSTEM: Working Directory: C:\Users\User\projects\neon_c\win_app\build\road-picker-native\bin
+2026-11-02T17:50:01Z [3] TIMER: Target time per frame: 33.333 milliseconds
+2026-11-02T17:50:01Z [3] STARTUP: 2D menu ready; track 5638.166 m, 1410 samples; nine-road picker ready; offline open=1; scene deferred
+2026-11-02T17:50:06Z [3] HEARTBEAT: frame=137 mode=0 window=960x720 target=0x0 worst-frame=94.0ms focused=1
+2026-11-02T17:50:10Z [3] INPUT: queued enter=1 pause=0 escape=0 reset=0 phase=0
+2026-11-02T17:50:10Z [3] INPUT: menu frame=267 action=1 trial-mouse=0 time-mouse=0 enter=1 pad=0 focused=1
+2026-11-02T17:50:10Z [3] STATE: road picker mode=0 open=1 current=1
+2026-11-02T17:50:11Z [3] HEARTBEAT: frame=288 mode=0 window=960x720 target=0x0 worst-frame=34.7ms focused=1
+2026-11-02T17:50:16Z [3] HEARTBEAT: frame=439 mode=0 window=960x720 target=0x0 worst-frame=33.7ms focused=1
+2026-11-02T17:50:21Z [3] HEARTBEAT: frame=590 mode=0 window=960x720 target=0x0 worst-frame=33.5ms focused=1
+2026-11-02T17:50:26Z [3] HEARTBEAT: frame=740 mode=0 window=960x720 target=0x0 worst-frame=33.7ms focused=1
+2026-11-02T17:50:31Z [3] HEARTBEAT: frame=891 mode=0 window=960x720 target=0x0 worst-frame=35.1ms focused=1
+2026-11-02T17:50:32Z [3] INPUT: queued enter=1 pause=0 escape=0 reset=0 phase=0
+2026-11-02T17:50:32Z [3] STATE: locked road refused id=2 open=1
+2026-11-02T17:50:36Z [3] HEARTBEAT: frame=1042 mode=0 window=960x720 target=0x0 worst-frame=34.3ms focused=1
+2026-11-02T17:50:41Z [3] HEARTBEAT: frame=1192 mode=0 window=960x720 target=0x0 worst-frame=36.1ms focused=1
+2026-11-02T17:50:46Z [3] HEARTBEAT: frame=1343 mode=0 window=960x720 target=0x0 worst-frame=33.9ms focused=1
+2026-11-02T17:50:46Z [3] INPUT: queued enter=1 pause=0 escape=0 reset=0 phase=0
+2026-11-02T17:50:46Z [3] STATE: selected road=1 mode=0
+2026-11-02T17:50:46Z [3] STATE: scene load requested; fallback=0 glow=0
+2026-11-02T17:50:46Z [3] SHADER: [ID 4] Vertex shader compiled successfully
+2026-11-02T17:50:46Z [3] SHADER: [ID 5] Fragment shader compiled successfully
+2026-11-02T17:50:46Z [3] SHADER: [ID 6] Program shader loaded successfully
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 3] Texture loaded successfully (800x600 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 1] Depth renderbuffer loaded successfully (32 bits)
+2026-11-02T17:50:46Z [3] FBO: [ID 1] Framebuffer object created successfully
+2026-11-02T17:50:46Z [3] VAO: [ID 2] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] FILEIO: [assets/models/roadster.glb] File loaded successfully
+2026-11-02T17:50:46Z [3] MODEL: [assets/models/roadster.glb] Model basic data (glb) loaded successfully
+2026-11-02T17:50:46Z [3]     > Meshes count: 10
+2026-11-02T17:50:46Z [3]     > Materials count: 1 (+1 default)
+2026-11-02T17:50:46Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 4] Texture loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 5] Texture loaded successfully (2048x2048 | GRAYSCALE | 1 mipmaps)
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 6] Texture loaded successfully (2048x2048 | GRAYSCALE | 1 mipmaps)
+2026-11-02T17:50:46Z [3] IMAGE: Data loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] TEXTURE: [ID 7] Texture loaded successfully (2048x2048 | R8G8B8A8 | 1 mipmaps)
+2026-11-02T17:50:46Z [3] VAO: [ID 3] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 4] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 5] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 6] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 7] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 8] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 9] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 10] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 11] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 12] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] ROADSTER: 10 meshes, bounds 3.97 x 2.00 x 5.60
+2026-11-02T17:50:46Z [3] STATE: start offline session mode=0
+2026-11-02T17:50:46Z [3] VAO: [ID 13] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 14] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 15] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 16] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 17] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 18] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 19] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 20] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 21] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 22] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 23] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 24] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 25] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 26] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 27] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 28] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 29] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 30] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 31] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 32] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 33] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 34] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 35] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:46Z [3] VAO: [ID 36] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 37] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 38] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 39] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 40] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 41] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 42] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 43] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:47Z [3] VAO: [ID 44] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:50:50Z [3] STATE: GO
+2026-11-02T17:50:51Z [3] HEARTBEAT: frame=1490 mode=1 window=960x720 target=800x600 worst-frame=160.5ms focused=1
+2026-11-02T17:50:56Z [3] HEARTBEAT: frame=1640 mode=1 window=960x720 target=800x600 worst-frame=34.1ms focused=1
+2026-11-02T17:50:59Z [3] INPUT: queued enter=0 pause=1 escape=0 reset=0 phase=1
+2026-11-02T17:51:01Z [3] HEARTBEAT: frame=1791 mode=2 window=960x720 target=800x600 worst-frame=36.6ms focused=1
+2026-11-02T17:51:06Z [3] HEARTBEAT: frame=1941 mode=2 window=960x720 target=800x600 worst-frame=34.0ms focused=1
+2026-11-02T17:51:11Z [3] HEARTBEAT: frame=2091 mode=2 window=960x720 target=800x600 worst-frame=34.8ms focused=1
+2026-11-02T17:51:16Z [3] HEARTBEAT: frame=2242 mode=2 window=960x720 target=800x600 worst-frame=34.1ms focused=1
+2026-11-02T17:51:19Z [3] INPUT: queued enter=0 pause=1 escape=0 reset=0 phase=2
+2026-11-02T17:51:21Z [3] HEARTBEAT: frame=2393 mode=1 window=960x720 target=800x600 worst-frame=33.8ms focused=1
+2026-11-02T17:51:26Z [3] HEARTBEAT: frame=2544 mode=1 window=960x720 target=800x600 worst-frame=33.7ms focused=1
+2026-11-02T17:51:31Z [3] HEARTBEAT: frame=2695 mode=1 window=960x720 target=800x600 worst-frame=34.1ms focused=1
+2026-11-02T17:51:36Z [3] INPUT: queued enter=0 pause=0 escape=0 reset=1 phase=1
+2026-11-02T17:51:36Z [3] VAO: [ID 45] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:51:36Z [3] HEARTBEAT: frame=2846 mode=1 window=960x720 target=800x600 worst-frame=33.8ms focused=1
+2026-11-02T17:51:37Z [3] VAO: [ID 46] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:51:38Z [3] VAO: [ID 47] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:51:39Z [3] VAO: [ID 48] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:51:41Z [3] HEARTBEAT: frame=2997 mode=1 window=960x720 target=800x600 worst-frame=34.0ms focused=1
+2026-11-02T17:51:46Z [3] HEARTBEAT: frame=3148 mode=1 window=960x720 target=800x600 worst-frame=33.8ms focused=1
+2026-11-02T17:51:51Z [3] HEARTBEAT: frame=3298 mode=1 window=960x720 target=800x600 worst-frame=35.1ms focused=1
+2026-11-02T17:51:56Z [3] HEARTBEAT: frame=3449 mode=1 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:01Z [3] VAO: [ID 49] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:52:01Z [3] HEARTBEAT: frame=3600 mode=1 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:06Z [3] VAO: [ID 50] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:52:06Z [3] HEARTBEAT: frame=3751 mode=1 window=960x720 target=800x600 worst-frame=33.4ms focused=1
+2026-11-02T17:52:11Z [3] HEARTBEAT: frame=3902 mode=1 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:16Z [3] HEARTBEAT: frame=4053 mode=1 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:21Z [3] VAO: [ID 51] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:52:21Z [3] HEARTBEAT: frame=4204 mode=1 window=960x720 target=800x600 worst-frame=33.5ms focused=1
+2026-11-02T17:52:26Z [3] HEARTBEAT: frame=4355 mode=1 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:27Z [3] VAO: [ID 52] Mesh uploaded successfully to VRAM (GPU)
+2026-11-02T17:52:27Z [3] INPUT: queued enter=0 pause=1 escape=0 reset=0 phase=1
+2026-11-02T17:52:31Z [3] HEARTBEAT: frame=4505 mode=2 window=960x720 target=800x600 worst-frame=33.9ms focused=1
+2026-11-02T17:52:36Z [3] HEARTBEAT: frame=4656 mode=2 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:42Z [3] HEARTBEAT: frame=4807 mode=2 window=960x720 target=800x600 worst-frame=33.6ms focused=1
+2026-11-02T17:52:42Z [3] VAO: [ID 43] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 45] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 44] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 40] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 31] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 30] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 41] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 34] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 28] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 22] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 19] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 48] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 39] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 32] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 27] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 21] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 15] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 14] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 47] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 37] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 46] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 25] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 20] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 16] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 13] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 35] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 29] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 24] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 18] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 17] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 38] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 33] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 26] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 23] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 51] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 42] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 36] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 49] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 52] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 50] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 2] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 3] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 4] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 5] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 6] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 7] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 8] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 9] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 10] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 11] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] VAO: [ID 12] Unloaded vertex array data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] MODEL: Unloaded model (and meshes) from RAM and VRAM
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 4] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 6] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 7] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 5] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] FBO: [ID 1] Unloaded framebuffer from VRAM (GPU)
+2026-11-02T17:52:42Z [3] SHADER: [ID 6] Unloaded shader program data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 2] Unloaded texture data from VRAM (GPU)
+2026-11-02T17:52:42Z [3] SHADER: [ID 3] Default shader unloaded successfully
+2026-11-02T17:52:42Z [3] TEXTURE: [ID 1] Default texture unloaded successfully
+2026-11-02T17:52:42Z [3] Window closed successfully
+2026-11-02T17:52:42Z [3] SESSION: clean shutdown

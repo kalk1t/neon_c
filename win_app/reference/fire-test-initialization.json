@@ -1,0 +1,5 @@
+{
+  "stage": "Initial focused MSVC test compile",
+  "result": "failed C4701 under /WX: compiler cannot infer first fixture initializes arsenal/lock",
+  "correction": "Explicitly zero-initialize test locals; core and fixtures unchanged"
+}

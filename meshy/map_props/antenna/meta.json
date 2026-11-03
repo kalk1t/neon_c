@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a194a0-077d-757f-b10e-5c7accce4a80",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494878088,
+    "started_at": 1793494878094,
+    "finished_at": 1793494955827,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/model.glb?Expires=4947091200&Signature=SGsHXUtTLq4QZW3XxLU2VdlIMaRNz6QdEt3o5xAJVSdRV0aOXWDm2k9uRubUOOz6idd9VZK6iYoJCvoidHe5PUH1PFNjprw0UZaZyqi21oPDfxi3sM63E8Q~RqOzFMSCjHtynkipA3Hd8Q9f4KItOWi50dGKRGlXZgsrtslncNLtCy9beKIdIA~kB8XFibmcWFrTS9rshy54D9jX9rXR3JSjcsaHXl6emDwnARbOBQvX7GMJC~na0XG5H-mkVwiUfFU7tEZC1GmSxF21mc-4cw~l-iQ421S6V3d0zoFQLuekYq3Eom1HHzhC5zc5xrpivLYoySsgB4Jd7UuhNhzruw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/texture_0.png?Expires=4947091200&Signature=Rd9Agoma29sA8laefqk8o7aI~RruczbIQgmQsZx68WAI4rHu3qOXtr-d1V0Am3DHNRg-aLRiwb6ZbDDLB52SdfW4aGc3hNTfGEGPeow6INLXY4msDupLohdIt7cNIfOaT8eHJ-0-OO6cGlEP8gpTXmQWJwScNx3hDg7MBe2rf3VXlKa3pb0HrsUYBQzyYcAa4BTLGEd5xq6ZlUwTJyrH-wVunU1IEcKIMnTAWSiJZ8NRzg8VvILszAFRIhyLuHRLyHeVsZlMe3CiJP0XUxjJ7sMDsZ8fJt3rvHdLXj0Ycj3yBBi5yJcN8z8YnIQLGG4NK2esUhzFnhhfkookTRyYEA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/texture_0_metallic.png?Expires=4947091200&Signature=McZuqCVYy3q57QXAEhkkZM6d2ZkHq4ZxOICgXckNLIf6nkquxm96UbXiDG8UhyaJw-FSrPVr9Rf-5Ul1HhfL72M1MtKrAn0UAx9VPdMAsgV2wjuLMxk4rM18uLn~mqG8z1upZWSkiuPuPcv-I-CG6hiu9oEXJAVgTrVoxLodusK1LEp1bcGF5VrRMe2SP5US07UcUwtFozzPVRvu3-h0IPomai0lkLkT3otkBlXzSzYDmDsZmalEERr31mYnfSfJ5eycih62jADEaY2AtwTj5OlfQTjGmRQoxWumx515WWXVN7irm89izrM8i9r~FR3Ugk82OuGsubY2oGhGjyrHIw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/texture_0_normal.png?Expires=4947091200&Signature=QsZ6R-PFgRQI-LAO5022wTspLxl2XI3LPWNQIqPx~aVIqE0z3dPs9qqS0Ad07BjGn5ojfAjqEYTbw4rmS1h1hPnYxp-PpH7IKcrEEHWKOCbkvOM-L0Q8DrMYpck2rGBWZpacfaq02gxbolWyzaTaxMFOtMgGMVjFgA5YQo9jiKO0vqMNqaMUXLgeF9PfO235uXzEzYB5PLbWshZU5JhnF4MkmciqF8-pcro~ms1xouTrECIJfj7T3HGyJRUh0Vu9MYLHLaTYgXNrKYd7AlgvynpTqWX6AmEpQ9D6W4Ujx2TVAB-FjgG3cxWLLWa4tXDDX-0qxStUfKihmoMe3P~WoQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/texture_0_roughness.png?Expires=4947091200&Signature=lBnEhWx4C-zfBa2T2Ms21yQtctNcPZXmgIJkuT5j4~RTV0vz3xtbVqzCl1VwkODru~upffF3XfjqqQemSbsGYNKdk9ZxYb1J3wEf7BUwUUpiMiYr4bWCa3-Tvrw3enbXl-SNMfIZDYIj~9vkRQsb8JFWxpE5fvh19lawUM4AqM7qacpqFZH2bRODzw78Xfq~7IwUHnFIcPF8v8JMUEEOO22e6G5i6RHhVuK5VpeagIXtwXZpUMEdPzTXUicF9zo1NqeDIAzMCFfj7NXK2yNcju1O6U2LbdZid93Qm772Bq6HIoTbc0AcrNuVVHRjfbqbHlCIjiel7r4UsjYp8nli7w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-077d-757f-b10e-5c7accce4a80/output/preview.png?Expires=4947091200&Signature=UlV7PdQnqK2WgHWvHYGv0y97WsASJ395rXwB7b9veF4u9qWDnIIeJMks00sSYTYQivvS2cdHrb-Q2YwzUkevoeq~MUqaNqY~87sgsaL7W7anETy1mkpMfsjAS584Fj2G3GFYf2SuCur8YAIoNIxkUxBC2uIcF8ivK3jI7HBkk5gFH7CrniPV9Bp1bcaVrdvaJzSkerd5k61nJkmLsLS~FhryGKnm83K4Qh2-Ll-Z6XMl9~g59hDe4xOXgj7VYERseNLVGgYEoF29xU5I4J3f9qrY9HtfjZvNyw-1lu2Bnr3vT4tiEp8NSCn9IddEiMWj~djaYqJ~AfOi0BBzzvS5zQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "cyberpunk rooftop communication antenna mast with satellite dishes, cables and red beacon lights, dark metal, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 1936238765,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "antenna\\model.glb",
+    "antenna\\thumbnail.png",
+    "antenna\\texture_0_base_color.png",
+    "antenna\\texture_0_metallic.png",
+    "antenna\\texture_0_normal.png",
+    "antenna\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:02:43.203Z"
+}

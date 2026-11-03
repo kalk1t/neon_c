@@ -1,0 +1,72 @@
+{
+  "native": {
+    "TARGETING_SUMMARY": {
+      "geometry_cases": 576,
+      "angle_branch_cases": 384,
+      "live_lock_frames": 480,
+      "lead_cases": 256,
+      "late_coin_probes": 4,
+      "max_error": 0,
+      "production_combat": false,
+      "damage_rewards_network": false,
+      "failures": 0
+    },
+    "PACK_SUMMARY": {
+      "roads": 9,
+      "traces": 18,
+      "ticks": 4320,
+      "restarts": 9,
+      "countdown_ticks": 2376,
+      "playing_ticks": 1899,
+      "paused_ticks": 45,
+      "rng_pairs": 288,
+      "respawns": 18,
+      "contact_pairs": 633,
+      "coin_collections": 58,
+      "max_state_error": 2.82440737465e-13,
+      "pack_bytes": 14336,
+      "event_bytes": 3408,
+      "player_phase": "caller",
+      "combat": false,
+      "production_activation": false,
+      "failures": 0
+    }
+  },
+  "wasm": {
+    "TARGETING_SUMMARY": {
+      "geometry_cases": 576,
+      "angle_branch_cases": 384,
+      "live_lock_frames": 480,
+      "lead_cases": 256,
+      "late_coin_probes": 4,
+      "max_error": 0,
+      "production_combat": false,
+      "damage_rewards_network": false,
+      "failures": 0
+    },
+    "PACK_SUMMARY": {
+      "roads": 9,
+      "traces": 18,
+      "ticks": 4320,
+      "restarts": 9,
+      "countdown_ticks": 2376,
+      "playing_ticks": 1899,
+      "paused_ticks": 45,
+      "rng_pairs": 288,
+      "respawns": 18,
+      "contact_pairs": 633,
+      "coin_collections": 58,
+      "max_state_error": 2.81552559045e-13,
+      "pack_bytes": 14168,
+      "event_bytes": 3408,
+      "player_phase": "caller",
+      "combat": false,
+      "production_activation": false,
+      "failures": 0
+    }
+  },
+  "targeting_summaries_identical": true,
+  "legacy_pack_functional_counts_unchanged": true,
+  "production_combat": false,
+  "damage_rewards_network": false
+}

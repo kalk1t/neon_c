@@ -1,0 +1,137 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\race-ui-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (9.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/race-ui-web
+[0/2] Re-checking globbed directories...
+[1/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[2/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[3/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[4/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[5/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[6/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[7/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[8/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[9/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[10/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[11/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[12/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[13/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[14/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[15/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[16/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[17/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[18/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[19/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[20/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[21/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[22/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[23/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[24/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[25/137] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[26/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[27/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[28/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[29/137] Linking C static library librr_core.a
+[30/137] Building C object CMakeFiles/rr_race_ui_tests.dir/tests/test_race_ui.c.o
+[31/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[32/137] Building C object CMakeFiles/rr_ui_layout_tests.dir/tests/test_ui_layout.c.o
+[33/137] Building C object CMakeFiles/rr_facade_tests.dir/tests/test_facade.c.o
+[34/137] Building C object CMakeFiles/rr_mesh_loader_tests.dir/tests/test_mesh_loader.c.o
+[35/137] Building C object CMakeFiles/rr_city_catalog_tests.dir/tests/test_city_catalog.c.o
+[36/137] Building C object CMakeFiles/rr_city_catalog_tests.dir/src/experimental/rr_city_catalog.c.o
+[37/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[38/137] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[39/137] Building C object CMakeFiles/rr_city_batching_tests.dir/tests/test_city_batching.c.o
+[40/137] Building C object CMakeFiles/rr_city_batching_tests.dir/src/experimental/rr_city_batching.c.o
+[41/137] Building C object CMakeFiles/rr_city_repacking_tests.dir/tests/test_city_repacking.c.o
+[42/137] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_batching.c.o
+[43/137] Building C object CMakeFiles/rr_city_triangle_tests.dir/tests/test_city_triangle.c.o
+[44/137] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_triangle.c.o
+[45/137] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_repacking.c.o
+[46/137] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_batching.c.o
+[47/137] Building C object CMakeFiles/rr_city_occlusion_tests.dir/tests/test_city_occlusion.c.o
+[48/137] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_occlusion.c.o
+[49/137] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_triangle.c.o
+[50/137] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_repacking.c.o
+[51/137] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_batching.c.o
+[52/137] Building C object CMakeFiles/rr_city_witness_tests.dir/tests/test_city_witness.c.o
+[53/137] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_witness.c.o
+[54/137] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_repacking.c.o
+[55/137] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_triangle.c.o
+[56/137] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_occlusion.c.o
+[57/137] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_batching.c.o
+[58/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/tests/test_city_coverage.c.o
+[59/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_coverage.c.o
+[60/137] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_repacking.c.o
+[61/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_witness.c.o
+[62/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_triangle.c.o
+[63/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_batching.c.o
+[64/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_occlusion.c.o
+[65/137] Building C object CMakeFiles/rr_poster_tests.dir/src/experimental/rr_posters.c.o
+[66/137] Building C object CMakeFiles/rr_poster_tests.dir/tests/test_posters.c.o
+[67/137] Building C object CMakeFiles/rr_ai_tests.dir/tests/test_ai.c.o
+[68/137] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_repacking.c.o
+[69/137] Building C object CMakeFiles/rr_rival_tests.dir/tests/test_rival.c.o
+[70/137] Building C object CMakeFiles/rr_targeting_tests.dir/tests/test_targeting.c.o
+[71/137] Building C object CMakeFiles/rr_coin_tests.dir/tests/test_coins.c.o
+[72/137] Building C object CMakeFiles/rr_arsenal_tests.dir/tests/test_arsenal.c.o
+[73/137] Building C object CMakeFiles/rr_combat_tests.dir/tests/test_combat.c.o
+[74/137] Building C object CMakeFiles/rr_fire_tests.dir/tests/test_fire.c.o
+[75/137] Building C object CMakeFiles/rr_core_tests.dir/tests/test_core.c.o
+[76/137] Building C object CMakeFiles/rr_render_policy_tests.dir/tests/test_render_policy.c.o
+[77/137] Building C object CMakeFiles/rr_local_run_tests.dir/tests/test_local_run.c.o
+[78/137] Building C object CMakeFiles/rr_battle_tests.dir/tests/test_battle.c.o
+[79/137] Building C object CMakeFiles/rr_race_tests.dir/tests/test_race.c.o
+[80/137] Building C object CMakeFiles/rr_session_tests.dir/tests/test_session.c.o
+[81/137] Building C object CMakeFiles/rr_menu_policy_tests.dir/tests/test_menu_policy.c.o
+[82/137] Building C object CMakeFiles/rr_recovery_tests.dir/tests/test_recovery.c.o
+[83/137] Building C object CMakeFiles/rr_road_picker_tests.dir/tests/test_road_picker.c.o
+[84/137] Building C object CMakeFiles/rr_all_roads_tests.dir/tests/test_all_roads.c.o
+[85/137] Building C object CMakeFiles/rr_pack_tests.dir/tests/test_pack.c.o
+[86/137] Building C object CMakeFiles/rr_city_clearance_tests.dir/tests/test_city_clearance.c.o
+[87/137] Building C object CMakeFiles/rr_finish_tests.dir/tests/test_finish.c.o
+[88/137] Building C object CMakeFiles/rr_shared_scenery_tests.dir/tests/test_shared_scenery.c.o
+[89/137] Building C object CMakeFiles/rr_physics_tests.dir/tests/test_physics.c.o
+[90/137] Building C object CMakeFiles/rr_course_tests.dir/tests/test_course_furniture.c.o
+[91/137] Building C object CMakeFiles/rr_hero_asset_tests.dir/tests/test_hero_asset.c.o
+[92/137] Building C object CMakeFiles/rr_canonical_city_tests.dir/tests/test_canonical_city.c.o
+[93/137] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.o
+[94/137] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+FAILED: [code=1] CMakeFiles/RoadstersRace.dir/src/app/main.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe -DGRAPHICS_API_OPENGL_ES3 -DPLATFORM_WEB -IC:/Users/User/Projects/neon_c/win_app/src/presentation -IC:/Users/User/Projects/neon_c/win_app/src/core -IC:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src -O3 -DNDEBUG -std=gnu17 -MD -MT CMakeFiles/RoadstersRace.dir/src/app/main.c.o -MF CMakeFiles\RoadstersRace.dir\src\app\main.c.o.d -o CMakeFiles/RoadstersRace.dir/src/app/main.c.o -c C:/Users/User/Projects/neon_c/win_app/src/app/main.c
+C:/Users/User/Projects/neon_c/win_app/src/app/main.c:293:81: error: too many arguments to function call, expected 4, have 5
+  293 |     DrawCircleGradient((int)center.x,(int)center.y,radius,(Color){10,20,70,205},(Color){3,5,22,220});
+      |     ~~~~~~~~~~~~~~~~~~                                                          ^~~~~~~~~~~~~~~~~~~
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\raylib.h:1308:12: note: 'DrawCircleGradient' declared here
+ 1308 | RLAPI void DrawCircleGradient(Vector2 center, float radius, Color inner, Color outer);                   // Draw a gradient-filled circle
+      |            ^                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+[95/137] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[96/137] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.o
+[97/137] Linking C static library raylib\raylib\libraylib.a
+ninja: build stopped: subcommand failed.

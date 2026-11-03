@@ -1,0 +1,287 @@
+{
+  "map_id": "R3",
+  "assets": [
+    {
+      "asset_id": "C01",
+      "source_generated_filename": "29_straight_aerial_deck.png",
+      "packaged_path": "Assets/Course/C01_straight_deck.png",
+      "source_sha256": "4e89d496cef818935cc07a37591b662fa3589f61da78290e6f02fdbd939f75a9",
+      "packaged_sha256": "4e89d496cef818935cc07a37591b662fa3589f61da78290e6f02fdbd939f75a9",
+      "image_generation_prompt": "Prompts/Items/C01_straight_deck.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C02",
+      "source_generated_filename": "30_curved_aerial_deck.png",
+      "packaged_path": "Assets/Course/C02_curved_deck.png",
+      "source_sha256": "f0d8d23ee8edccfbff7a11e1f23524d0a39342c8f4dcaacfb6e12c5edaeaee5a",
+      "packaged_sha256": "f0d8d23ee8edccfbff7a11e1f23524d0a39342c8f4dcaacfb6e12c5edaeaee5a",
+      "image_generation_prompt": "Prompts/Items/C02_curved_deck.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C03",
+      "source_generated_filename": "exec-f3a2ebd5-b5f2-43c2-a007-84f75b19d63b.png",
+      "packaged_path": "Assets/Course/C03_climbing_ramp.png",
+      "source_sha256": "be46ba1712205fe5b26d7ab9c98f3462f8881067f7dc75bc02bd7644f6e38f66",
+      "packaged_sha256": "be46ba1712205fe5b26d7ab9c98f3462f8881067f7dc75bc02bd7644f6e38f66",
+      "image_generation_prompt": "Prompts/Items/C03_climbing_ramp.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C04",
+      "source_generated_filename": "06_checkpoint_ring.png",
+      "packaged_path": "Assets/Course/C04_checkpoint_ring.png",
+      "source_sha256": "373c55be761ab79b1573acaad64e6413fd2a7699fdbb735f4e86f4d3074a1e89",
+      "packaged_sha256": "373c55be761ab79b1573acaad64e6413fd2a7699fdbb735f4e86f4d3074a1e89",
+      "image_generation_prompt": "Prompts/Items/C04_checkpoint_ring.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C05",
+      "source_generated_filename": "05_start_finish_gate.png",
+      "packaged_path": "Assets/Course/C05_start_finish_arch.png",
+      "source_sha256": "9a8378909f940ffdc6a5e9704b99a06a4cc63d2ba244c0dd44804a1387d1e34f",
+      "packaged_sha256": "9a8378909f940ffdc6a5e9704b99a06a4cc63d2ba244c0dd44804a1387d1e34f",
+      "image_generation_prompt": "Prompts/Items/C05_start_finish_arch.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C06",
+      "source_generated_filename": "31_platform_support_column.png",
+      "packaged_path": "Assets/Course/C06_support_column.png",
+      "source_sha256": "71d179498417670c68095b9e457e28c3bb250208a7d4726fa4518538522a70db",
+      "packaged_sha256": "71d179498417670c68095b9e457e28c3bb250208a7d4726fa4518538522a70db",
+      "image_generation_prompt": "Prompts/Items/C06_support_column.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C07",
+      "source_generated_filename": "08_floating_barrier.png",
+      "packaged_path": "Assets/Course/C07_safety_barrier.png",
+      "source_sha256": "94dcc1e0f2a0f77dd976eba3735df1b6612d548c114cad24e10c616249c37d09",
+      "packaged_sha256": "94dcc1e0f2a0f77dd976eba3735df1b6612d548c114cad24e10c616249c37d09",
+      "image_generation_prompt": "Prompts/Items/C07_safety_barrier.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C08",
+      "source_generated_filename": "09_turn_arrow_sign.png",
+      "packaged_path": "Assets/Course/C08_turn_chevron.png",
+      "source_sha256": "6276e577d83e163806c06d1b2331f9c7c396bef03fdfc19101b55f9a7703a2f4",
+      "packaged_sha256": "6276e577d83e163806c06d1b2331f9c7c396bef03fdfc19101b55f9a7703a2f4",
+      "image_generation_prompt": "Prompts/Items/C08_turn_chevron.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C09",
+      "source_generated_filename": "07_route_beacon_pylon.png",
+      "packaged_path": "Assets/Course/C09_route_beacon.png",
+      "source_sha256": "214dbc671ad4355e780cf8b9e72ede4fb6a16ece14eee3d53b27ec743089cfb8",
+      "packaged_sha256": "214dbc671ad4355e780cf8b9e72ede4fb6a16ece14eee3d53b27ec743089cfb8",
+      "image_generation_prompt": "Prompts/Items/C09_route_beacon.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C10",
+      "source_generated_filename": "28_start_platform.png",
+      "packaged_path": "Assets/Course/C10_start_platform.png",
+      "source_sha256": "915fc9b762838e98baa3b2b5d9e50022a1bccfa8f07823c69e235dccc770f61e",
+      "packaged_sha256": "915fc9b762838e98baa3b2b5d9e50022a1bccfa8f07823c69e235dccc770f61e",
+      "image_generation_prompt": "Prompts/Items/C10_start_platform.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C11",
+      "source_generated_filename": "exec-90f86b01-d431-43d2-9bbf-631ed13ed40e.png",
+      "packaged_path": "Assets/Effects/C11_rain_streak.png",
+      "source_sha256": "353974e40ca471b0faa9c85f619f7c2556786f4e0d3ec8913924be98add04913",
+      "packaged_sha256": "353974e40ca471b0faa9c85f619f7c2556786f4e0d3ec8913924be98add04913",
+      "image_generation_prompt": "Prompts/Items/C11_rain_streak.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C12",
+      "source_generated_filename": "exec-da74754b-ff7e-42a0-866e-8840464c0e38.png",
+      "packaged_path": "Assets/Effects/C12_rain_splash.png",
+      "source_sha256": "993581655d3574a3ffc15e646d6f93973bb6b72fe8162e87da05a0f47291d121",
+      "packaged_sha256": "993581655d3574a3ffc15e646d6f93973bb6b72fe8162e87da05a0f47291d121",
+      "image_generation_prompt": "Prompts/Items/C12_rain_splash.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C13",
+      "source_generated_filename": "exec-1c8dac81-7baf-4e77-bd89-fea719682b12.png",
+      "packaged_path": "Assets/Effects/C13_soft_mist.png",
+      "source_sha256": "c3038d2ba9ea1c66b76c37bda6e077e91457f0742c1ef06b14748d527df91743",
+      "packaged_sha256": "c3038d2ba9ea1c66b76c37bda6e077e91457f0742c1ef06b14748d527df91743",
+      "image_generation_prompt": "Prompts/Items/C13_soft_mist.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C14",
+      "source_generated_filename": "32_dotted_route_light_segment.png",
+      "packaged_path": "Assets/Course/C14_dotted_route_lights.png",
+      "source_sha256": "4a14738219d734c5cd69435066a04d0e82ebedb839f1c61cd5528687b731e444",
+      "packaged_sha256": "4a14738219d734c5cd69435066a04d0e82ebedb839f1c61cd5528687b731e444",
+      "image_generation_prompt": "Prompts/Items/C14_dotted_route_lights.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "C15",
+      "source_generated_filename": "10_floating_service_platform.png",
+      "packaged_path": "Assets/Course/C15_service_platform.png",
+      "source_sha256": "e88f6abbf48395b68036517bd56eed5f5c4aa9db8bf67ec05db5f7bfc96b4efe",
+      "packaged_sha256": "e88f6abbf48395b68036517bd56eed5f5c4aa9db8bf67ec05db5f7bfc96b4efe",
+      "image_generation_prompt": "Prompts/Items/C15_service_platform.md",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F01",
+      "source_generated_filename": "exec-580c2086-9216-4ccd-91f4-acde3ec66693.png",
+      "packaged_path": "Assets/Environment/F01_basalt_cliff.png",
+      "source_sha256": "d600f8e5660cb59ee9993ee37856e1eb65bd99251a3663e923979a4f7d52db29",
+      "packaged_sha256": "d600f8e5660cb59ee9993ee37856e1eb65bd99251a3663e923979a4f7d52db29",
+      "image_generation_prompt": "Prompts/Items/F01_basalt_cliff.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F02",
+      "source_generated_filename": "exec-1d57a0f8-0343-4a35-8bb8-903fa7ed4a51.png",
+      "packaged_path": "Assets/Environment/F02_natural_arch.png",
+      "source_sha256": "e7702e3bd2cc9739b1a2f5facdef0088214f0223cfd9768d2a32eaf3b5161b42",
+      "packaged_sha256": "e7702e3bd2cc9739b1a2f5facdef0088214f0223cfd9768d2a32eaf3b5161b42",
+      "image_generation_prompt": "Prompts/Items/F02_natural_arch.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F03",
+      "source_generated_filename": "exec-fb66d4f3-2f01-461f-9e43-db1bf008fe23.png",
+      "packaged_path": "Assets/Environment/F03_flat_top_mesa.png",
+      "source_sha256": "2eee41b811a0cbcd3a8c1c116e1e8bfbdc81c8178b088ecc740e6e1954c1f008",
+      "packaged_sha256": "2eee41b811a0cbcd3a8c1c116e1e8bfbdc81c8178b088ecc740e6e1954c1f008",
+      "image_generation_prompt": "Prompts/Items/F03_flat_top_mesa.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F04",
+      "source_generated_filename": "exec-dcc6c287-152b-45dc-99bb-7a858b8bb9c8.png",
+      "packaged_path": "Assets/Environment/F04_dam_section.png",
+      "source_sha256": "99a95ab07bd1c134014f1ec2a5300d2a045ecddaf4f30f485f0a502b99a5bb63",
+      "packaged_sha256": "99a95ab07bd1c134014f1ec2a5300d2a045ecddaf4f30f485f0a502b99a5bb63",
+      "image_generation_prompt": "Prompts/Items/F04_dam_section.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F05",
+      "source_generated_filename": "exec-6ae512d2-83cc-41c4-b406-458960c0ae26.png",
+      "packaged_path": "Assets/Environment/F05_spillway_gate.png",
+      "source_sha256": "72aa5f406594686edd85d1656b4633140637e015516936c9c8de32d33948a7df",
+      "packaged_sha256": "72aa5f406594686edd85d1656b4633140637e015516936c9c8de32d33948a7df",
+      "image_generation_prompt": "Prompts/Items/F05_spillway_gate.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F06",
+      "source_generated_filename": "exec-8afd2490-7866-4b88-b597-b7e7e970d9d6.png",
+      "packaged_path": "Assets/Environment/F06_observation_pod.png",
+      "source_sha256": "e1c7c3d4ebed59503c1043fd7e4d574f434b60b526f76d1212a1688fb8e8cb88",
+      "packaged_sha256": "e1c7c3d4ebed59503c1043fd7e4d574f434b60b526f76d1212a1688fb8e8cb88",
+      "image_generation_prompt": "Prompts/Items/F06_observation_pod.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F07",
+      "source_generated_filename": "exec-3d1da07e-a904-4c4e-a673-cf5daeac1172.png",
+      "packaged_path": "Assets/Environment/F07_tropical_tree.png",
+      "source_sha256": "4499d20f83d6688ffa6fcbbc4ec5eacd85c0b1a0c3d2b85f04e614a13824f8d5",
+      "packaged_sha256": "4499d20f83d6688ffa6fcbbc4ec5eacd85c0b1a0c3d2b85f04e614a13824f8d5",
+      "image_generation_prompt": "Prompts/Items/F07_tropical_tree.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F08",
+      "source_generated_filename": "exec-a1d94de9-61d1-4b3d-99ec-dbf0af3b8f96.png",
+      "packaged_path": "Assets/Environment/F08_palm_tree.png",
+      "source_sha256": "cb1820ecdb5bc22396c9ba7b2ce90904deecf13c29f21279c6070d0897e703b6",
+      "packaged_sha256": "cb1820ecdb5bc22396c9ba7b2ce90904deecf13c29f21279c6070d0897e703b6",
+      "image_generation_prompt": "Prompts/Items/F08_palm_tree.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F09",
+      "source_generated_filename": "exec-8819e08d-aac2-4fb9-b31c-131dc90bf330.png",
+      "packaged_path": "Assets/Environment/F09_fern.png",
+      "source_sha256": "44693fe07839eb1cf36fe8462a2e87f3998bc0b996d7b0046439027a4894d5f5",
+      "packaged_sha256": "44693fe07839eb1cf36fe8462a2e87f3998bc0b996d7b0046439027a4894d5f5",
+      "image_generation_prompt": "Prompts/Items/F09_fern.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F10",
+      "source_generated_filename": "exec-069e0885-232e-4b6f-8443-a593c3f3f9ba.png",
+      "packaged_path": "Assets/Environment/F10_moss_boulder.png",
+      "source_sha256": "5cc2878b958d14c672d40328be266a772e7a28c43f3d03ba1eac59b0856dd9ad",
+      "packaged_sha256": "5cc2878b958d14c672d40328be266a772e7a28c43f3d03ba1eac59b0856dd9ad",
+      "image_generation_prompt": "Prompts/Items/F10_moss_boulder.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F11",
+      "source_generated_filename": "exec-b6403823-203a-492e-ad89-e782ca12bc70.png",
+      "packaged_path": "Assets/Environment/F11_waterfall_curtain.png",
+      "source_sha256": "25b833210398f6785cc6cae8b13fdfc05840dcd84c8531e3a2ee8b832f907ecc",
+      "packaged_sha256": "25b833210398f6785cc6cae8b13fdfc05840dcd84c8531e3a2ee8b832f907ecc",
+      "image_generation_prompt": "Prompts/Items/F11_waterfall_curtain.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    },
+    {
+      "asset_id": "F12",
+      "source_generated_filename": "exec-a50c4318-7118-4239-a8e7-0f739e4c8006.png",
+      "packaged_path": "Assets/Environment/F12_hanging_vines.png",
+      "source_sha256": "2f90cc378d7b6fcf403abac55e3d74760ebb1ca8ad4ad5184c85ceb0de1410b7",
+      "packaged_sha256": "2f90cc378d7b6fcf403abac55e3d74760ebb1ca8ad4ad5184c85ceb0de1410b7",
+      "image_generation_prompt": "Prompts/Items/F12_hanging_vines.md",
+      "style_reference": "References/selected_map.png",
+      "visually_reviewed": true,
+      "source_bytes_preserved": true
+    }
+  ]
+}

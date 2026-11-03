@@ -1,0 +1,31 @@
+{
+  "result": "PASS",
+  "method": "Node EventTarget plus a minimal DOM behavior harness; not browser rendering",
+  "checks": [
+    "existing host canvas preserved",
+    "initial callback",
+    "partial data updates",
+    "I toggle",
+    "repeat/modifier/editable/consumed-event suppression",
+    "accessible button toggle",
+    "clamping",
+    "ready/cooldown/disabled states",
+    "gameplay-owned cooldown transition",
+    "invalid view rejection",
+    "no duplicate callbacks",
+    "missing-asset reporting",
+    "fitted aspect ratio",
+    "one/two control layouts",
+    "keyboard opt-out",
+    "idempotent destruction",
+    "listener and observer teardown",
+    "preexisting class preservation",
+    "7 timer boundary cases"
+  ],
+  "syntax_check": "PASS: cockpit-ui.js, preview.js, pack-config.js, gallery.js",
+  "browser_rendered_validation": false,
+  "visual_review": "All three source cockpit bases, all steering/grip source PNGs, and the boost/attack icons were visually inspected; layout positions use actual image dimensions and alpha bounds. No rendered browser screenshot was available.",
+  "browser_test_blocker": "Installed Playwright has no usable Chromium binary. The initial download was denied by sandbox network policy; the approved retry produced invalid archives. No successful browser-rendered test is claimed.",
+  "game_integration_validation": false,
+  "game_integration_note": "No existing game repository or running game was modified or tested."
+}

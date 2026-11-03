@@ -1,0 +1,71 @@
+{
+  "destination_boundary": "All final Windows imports must be made by sole win_app writer, inside win_app. Asset team coordinates through parent. Browser/game stays read-only.",
+  "do_not_generate": "No new artwork currently justified by UI audit. Do not flatten complete dynamic screens into bitmaps.",
+  "requests": [
+    {
+      "priority": "P0",
+      "id": "fonts",
+      "sources": [
+        "game/index.html Google Fonts import: Orbitron 500/700/900; Rajdhani 500/700"
+      ],
+      "deliver": "Offline original TTF/OTF files, matching family and weights, license/provenance and hashes. Do not relabel WOFF as TTF. Include supported glyphs for menu, HUD, crown/coin substitutes if needed.",
+      "native_owner": "Atlas size, font metrics, letter spacing, text glow and rasterization validation."
+    },
+    {
+      "priority": "P0",
+      "id": "existing-ui-png",
+      "sources": [
+        "game/public/ui/coin-32.png",
+        "game/public/ui/coin-64.png",
+        "game/public/ui/coin-256.png",
+        "game/public/ui/car-roadster.png",
+        "game/public/ui/car-viper.png",
+        "game/public/ui/car-titan.png"
+      ],
+      "deliver": "Original PNGs unchanged, SHA256/dimensions/alpha/sRGB and source-role manifest. Existing logo already byte-identical to browser 512; do not duplicate/reinvent.",
+      "native_owner": "Selective runtime packaging and deferred shop UI; no purchase/equip/account integration."
+    },
+    {
+      "priority": "P1",
+      "id": "cockpit",
+      "sources": [
+        "game/public/cockpit/**/*.webp",
+        "game/src/cockpit.js",
+        "game/src/style.css cockpit rules"
+      ],
+      "deliver": "Lossless decoded RGBA PNGs for all 11 current WebP files, preserving decoded dimensions, alpha and existing cropped bounds. Manifest original hash, decoded pixel equivalence, normalized boxes, pivot/origin and design reference 1672x941. No additional trimming, scaling or baked readouts.",
+      "native_owner": "Drop 0.2, fit/resize, yoke animation and native dynamic speed/boost/attack/race readouts. Verify composition and resource costs before activation."
+    },
+    {
+      "priority": "P2",
+      "id": "icons-and-fx",
+      "sources": [
+        "game/public/favicon.svg",
+        "game/public/tex/attack.png",
+        "game/public/tex/impact.png",
+        "game/public/tex/projectile.png",
+        "game/public/tex/smoke.png",
+        "game/public/tex/trail.png"
+      ],
+      "deliver": "Reuse originals and exact source usage/blend/filter/color roles. If SVG export is needed provide deterministic transparent PNG with viewBox and pixel size, retain original. Avoid whole-screen generated substitutes.",
+      "native_owner": "Procedural rings, cooldown arcs, heat pips, reticles, bars and hitboxes remain native C drawing."
+    },
+    {
+      "priority": "P2",
+      "id": "showcase-cars",
+      "sources": [
+        "game/public/models/car.glb",
+        "game/public/models/car02.glb",
+        "game/public/models/car03.glb",
+        "game/src/car.js"
+      ],
+      "deliver": "Existing model/material resource manifest and compatible conversion only when requested; preserve normals/UVs/material groups, texture color-space and source fit transforms. Do not redesign.",
+      "native_owner": "Roadster already ported; Viper/Titan preview compatibility, PBR/environment/shader differences require separate tests and budgets; do not equip/unlock."
+    }
+  ],
+  "first_package_review": {
+    "root": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets",
+    "status": "Verified existing first package; consume supplied files rather than re-extract. See asset-package-review.json.",
+    "remaining_request": "Orbitron native 500/700/900 weight compatibility (variable font default is not automatically the requested CSS weight), component states/chrome/layout metadata and native composition tests. Existing thumbs/coins, cockpit PNG exports, layouts and font family files already supplied."
+  }
+}

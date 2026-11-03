@@ -1,0 +1,38 @@
+retexture 01a18e19-4a84-71bf-a5d6-88feb35b014d
+[retexture] IN_PROGRESS 0%
+[retexture] IN_PROGRESS 34%
+[retexture] IN_PROGRESS 49%
+[retexture] IN_PROGRESS 69%
+[retexture] IN_PROGRESS 99%
+[retexture] SUCCEEDED 100%
+      ok in 42s
+{
+  "resource": "retexture",
+  "id": "01a18e19-4a84-71bf-a5d6-88feb35b014d",
+  "status": "SUCCEEDED",
+  "type": "retexture",
+  "progress": 100,
+  "created_at": 1793385386580,
+  "finished_at": 1793385432560,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/model.glb?Expires=1793644632&Signature=emJd4nDD7vrDEH9c791POj7NcatwvLLki6hT9Boi2tcWyFG3Cn-vc~QVz1gY69Eknhbm6Za6PB2qAMDiU06ULiAL8PANmNJtgAL0d8y8QuK0FhaAJhoU4FEmunmY6L-g-RofSdh1nDoAi90Tf0d-Qx3VISZ2PYaRS2IkJTmGhH0L~RubKeqQYvJC~FYH3O8THD5eIvQAfZBE40AJiGmpKRTxNqU7Greu4gvs8VjfuI3YiP84g6Ek~55HYbBPUtEHeEli5Rt1O5srzt~cx0lv26YlOAMLnn8PVOszg8tL-yJwO8jYLB2Z6T32Qt~8ANgTffdwsOwZo-X9u9WwfYhd8g__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/texture_0.png?Expires=1793644632&Signature=luOjWMm6ofUQgKNOaC2~3bo7HJw3WYR3qWlX49SyahKu5VZTGXqnatY7uM5BCN-T1gwyOmcQWdIC5A038KWLlzbB6X0mWdObvNGJFcwCqg5q6Sg8o0XxVNvvbMK6UlPByotxQZpTGDDjd5yPrv2S-zTxCOrdgAGxjDmFjSy~PLdTI1YAYFhsg3J8Sx-3zNeKE-Rh7XJWvhmXHiWuRg1FSdUWER14YmVRA3zBwRFUGkiLBM15-nHq5VumM1Tt~tkayPpUEAK3gvt3QX5wXw-a9wr~Gf4~GgGQs5JO3wBgkEwKQi4kHb5dMRvdc5eDSIY8dRqWtVPmgBFVnLMdEzfFZg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/texture_0_metallic.png?Expires=1793644632&Signature=Vay7GxS0bOqxaSSjgaVEeeGkOa~rIQlFJY6To8e3khR6xGfv2vDbkUKs9X47gzLkb62LkqiDK~lbOiYU5h7JnhyKm5qzqvHg~K9nb~Eja9PUZeIrX2MTULxzpsE9Bp52F~bLv4H1tXSQB7zMsCsJfj0CGwI5J4tPs5F84AI8-SvDDYeMnfL4fOr~~gO07b2wDkDOvtoGWGeltwaQSemsR6~lJRWRJkj6muHhM1avSRUyRrrqwxZeLbBfFJ-ATJgfogm00no6y9CiBwi-UkCv1pmKvJ79W5onShFd0UWJHjSEI6QPuA3bwbCz4s6iFRF3Or1Df2klv4J5QvVvMT2mSw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/texture_0_normal.png?Expires=1793644632&Signature=jUKkDqC~2cTVpEQsa4GQEIJAhT5xUIZAlWiBGiPvoFOF2MU3L4UmvZgD5v3oIcG-A4IKfj4NiEWWqtK3lEMs0eC~enioerfjQ-hjFg7Wmqkg9nF5o7MEqwYB27drQA-et-a1KciGe7W8Ty88bdQv-XzV9tyBAAa-ZoT9tA~~sSYqaZFwOCQ7gI-mvhDgijKf3PV2SvCkFxFuQkfQNqkCHbJyVjjN133DgmDu8XMv55w9LAvyGVKQ1If6eQ6vC~ScSbGREAB6BhGUa2GKy4y4qdR6NOrPVHseXky7nenKCbxuhE1Cmwl965QK9TY7aXOZ02NePAvn0wJFpXJzjbO4EA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/texture_0_roughness.png?Expires=1793644632&Signature=EryNFYNgjhn8fhetlqXhVuYZQO8Se~J7rxwmouvfXFMCeqFCNarMwCttsgkCt2MYyF0Di76jwctSnV6kRthZqXESuOle~hKaANdeoblxwA~-o~9XAZJaI7v44oihPo~J40I5T5GDl0EbErTigDn~c3kPeVnjRF5gKYjuRphFRIvUg356R1QVgo5GIQGWKVXgayqOEZBZigiXFD59Wak~Kgfhe-4KJM3K0F7RUh6Fe74kQ~1tdk~7FldqibtaGEzcbj-luR1Af55Op9gRhcWpei30--km0hU64p6o3clm04FpAF62WB3d581GcQyZ5zycJSXMtzJ4yIA~PUPCED9Jdg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a18e19-4a84-71bf-a5d6-88feb35b014d/output/preview.png?Expires=1793644632&Signature=BVsvK4FjxwId~9d75zpaHHB2pLzF6u~3-J7lRkQflxgHLlowsWzPf6IT~QY5Y5EEE7Lra0y~7iYPoI4EfKv984n4B92yGz2dwuWoa6G-ZrRB4XDS8jkB0fr44Fuwszg8yX1Davur4Gu3nOKOS0za2D3HnZF6ZAGCmv--Er5gbmmSy6DLwm6wt7uGBwt4ljZBZvRatzLQwF8BLRX12-CTUl1TUv6NDNR8agCjEUuC-GKrr4trL3f6A5T0LGyeRg2FdBPdq-Al1TOi6BzyVST1g-K6QbrImH-oTccu9lZZpuauAh3GtHsQ7q24qiKnFyFFC2oBz3DbI2c5~MP7kSWD~A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "elapsed_seconds": 42.08,
+  "_notice": {
+    "update": {
+      "current": "0.4.4",
+      "latest": "0.7.0",
+      "message": "meshy-cli 0.7.0 available (current 0.4.4), run: npm i -g meshy-cli@latest",
+      "command": "npm i -g meshy-cli@latest"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "reference\\verification-20261102\\facade-windows-native-sixteen-tests.log": "1be3c63bddd0275ff120f325b064c8203f9f7f7a222159576dc383f8335356b7",
+  "reference\\verification-20261102\\facade-windows-wasm-sixteen-tests.log": "d9518ea8f5eb5fee9f82c475ca2a098a0125918c18589b35dc46e6ec76459f39",
+  "reference\\graphics-20261102\\facade-windows-normal-original.log": "f60613fcc074c32998f010a4f85a4ece9fbdc8a215f776cb1dc26f745de6bf60",
+  "camera_log_read_blocker": "OS PermissionError13 reading active build/facade-windows-view/bin/logs/roadsters.log; not retried, no snapshot or clean-shutdown claim.",
+  "build/facade-windows-native/bin/RoadstersRace.exe": {
+    "sha256": "df3f066f84fd4c9996058e300c0ff9c2a8dee7fcf85152970356d0af2deea6b3",
+    "bytes": 858112
+  },
+  "build/facade-windows-view/bin/RoadstersRace.exe": {
+    "sha256": "f2909056e282184722f3cce75c9bb27bc997652e9530f2f3cf361c029d8495c3",
+    "bytes": 858112
+  },
+  "build/facade-windows-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/facade-windows-web/bin/RoadstersRace.js": {
+    "sha256": "9c193519695f5e379dc9782c9b0130990502a767ad022261e24fa057c993939e",
+    "bytes": 171093
+  },
+  "build/facade-windows-web/bin/RoadstersRace.wasm": {
+    "sha256": "cd1c10532e5a17830ffe6dd72e7adffcf7bcc0117e8a5346cb54791c16b2ef53",
+    "bytes": 522482
+  },
+  "build/facade-windows-web/bin/RoadstersRace.data": {
+    "sha256": "d8c1a68f04419896ce392bca4d65cac6b9bce17d5c1b9ae5e95e253165bf394b",
+    "bytes": 33231974
+  },
+  "changed_paths": {
+    "src/presentation/rr_scene.h": "70ffd19ac352de4a142b044b656100b9bad1e64a24438bc238fed37c3eeb2cca",
+    "src/presentation/rr_scene.c": "e38f3bf83942aa5d9d115b3cca281bbe3406cfd19aea1566cb61cd202422a6c1",
+    "src/presentation/rr_shaders.h": "88173d3d46f5be335d0bd8f4cc05d0065af406c26323cd1c1848c88552c0131c",
+    "CMakeLists.txt": "f86b9c14c088b53431d156910b39b4a695a33e22dd77f282e62ae4e3fd5866b4",
+    "tools/race-rules-check/CMakeLists.txt": "53ab3638f79e47fddf2c4b109707523265709474331d403452674a6a43613a39",
+    "src/core/rr_facade.h": "bf51f9c87943daa61ea4664ddc5a50723e335bea4bf0462e5f5249114dd9b379",
+    "src/core/rr_facade.c": "61ee9544d6149f6d72cd2432670e8d8db2e8598a0940fb6c8f77b71e7ecdb960",
+    "tools/capture-facade.mjs": "653b44824b82146d541d791843bd529f71d401c0cd07244b47a6931afc27eda1",
+    "tests/test_facade.c": "b4c39441ff5facdf55f5b73d45422cd77ede326a6dcb05442eee9ffb563d6abf",
+    "tests/generated_facade_reference.h": "3c0ac3f2b247d16d14276e0b4f9ad3b20ab3dec73e729c19952c5d810c14434d",
+    "reference/facade-browser-rgba.bin": "eeb408674dcedd2643af25d0832f5f61431dab6ae002d710a67ca78f6ce6afe2",
+    "reference/facade-windows.json": "cf3602c2444f0e18147a66aa4cf40e034fc3a69be0efad8b385f864d55bd2f1c"
+  },
+  "browser_version": "0.2.3",
+  "source_hashes_and_295_geometry_assets_rechecked": true,
+  "graphics": {
+    "normal": "observed windows/start/pause; clean shutdown confirmed",
+    "camera": "interrupted at road picker; Enter blocked by user-input protection, refreshed state, no retry/close",
+    "open_window_id": 3148188,
+    "open_executable": "build/facade-windows-view/bin/RoadstersRace.exe",
+    "open_state": "menu; not graphics-qualified"
+  },
+  "city_comparison_transfer": "No persisted city comparison PNG found; only older finish fixtures exist locally. No reporting-only render, upload or duplicate upload.",
+  "window_texture_bytes_rgba8_mips": 699052
+}

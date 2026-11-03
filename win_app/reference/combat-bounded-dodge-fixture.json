@@ -1,0 +1,5 @@
+{
+  "reason": "Initial timer fixture incorrectly passed dt>.05 into existing rr_car_step, which intentionally rejects it. Use equal repeated <=.05 ticks in actual source timer statements and unchanged C flight API; do not weaken production safeguard.",
+  "after_emp_correction_focused_failures": 330,
+  "production_core_flight_unchanged": true
+}

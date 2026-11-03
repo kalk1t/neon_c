@@ -1,0 +1,21 @@
+{
+  "modified": {
+    "CMakeLists.txt": "8127bfcf15f7e38b6a625cacba83b0e2649cc1f2a2b06e9cb923cbc1646b77b4",
+    "tools/race-rules-check/CMakeLists.txt": "c0a108c3727366ff225c940a3d940b53d279c3ec17b09da9ba5831a98b56c02f"
+  },
+  "added": [
+    "src/experimental/rr_city_repacking.h",
+    "src/experimental/rr_city_repacking.c",
+    "src/experimental/generated_city_repacking.h",
+    "tests/test_city_repacking.c",
+    "tests/generated_city_repacking_reference.h",
+    "tools/capture-city-repacking.mjs",
+    "reference/city-repacking.json",
+    "reference/city-repacking-geometry.bin"
+  ],
+  "runtime_app_changes": false,
+  "new_runtime_assets": false,
+  "fixture_bytes": 54247104,
+  "source_geometry_blob_is_headless_only": true,
+  "current_window_files_touched": false
+}

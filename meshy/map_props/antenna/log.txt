@@ -1,0 +1,30 @@
+[1/2] text-to-3d preview (geometry)  01a1949f-796b-779d-b333-9709419d02ab
+[text-to-3d] IN_PROGRESS 1%
+[text-to-3d] IN_PROGRESS 20%
+[text-to-3d] IN_PROGRESS 25%
+[text-to-3d] IN_PROGRESS 44%
+[text-to-3d] IN_PROGRESS 55%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 35s
+[2/2] text-to-3d refine (textures)  01a194a0-077d-757f-b10e-5c7accce4a80
+[text-to-3d] IN_PROGRESS 0%
+[text-to-3d] IN_PROGRESS 19%
+[text-to-3d] IN_PROGRESS 34%
+[text-to-3d] IN_PROGRESS 49%
+[text-to-3d] IN_PROGRESS 69%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 79s
+Status: SUCCESS
+Task Id: 01a194a0-077d-757f-b10e-5c7accce4a80
+Generated text-to-3d-refine
+Saved to:
+- antenna\model.glb
+- antenna\thumbnail.png
+- antenna\texture_0_base_color.png
+- antenna\texture_0_metallic.png
+- antenna\texture_0_normal.png
+- antenna\texture_0_roughness.png
+Metadata path: antenna\meta.json
+meshy-cli 0.7.3 available (current 0.4.4), run: npm i -g meshy-cli@latest

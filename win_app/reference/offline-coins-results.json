@@ -1,0 +1,40 @@
+{
+  "native": {
+    "roads": 9,
+    "placements": 756,
+    "max_selected_road_coins": 120,
+    "pool_bound": 198,
+    "ahead_cases": 324,
+    "update_cases": 108,
+    "replay_frames": 1440,
+    "reset_cases": 9,
+    "collection_events": 81,
+    "max_error": 5.91171556152e-12,
+    "pool_bytes": 9512,
+    "event_bytes": 1588,
+    "runtime_activation": false,
+    "wallet_writes": false,
+    "failures": 0
+  },
+  "wasm": {
+    "roads": 9,
+    "placements": 756,
+    "max_selected_road_coins": 120,
+    "pool_bound": 198,
+    "ahead_cases": 324,
+    "update_cases": 108,
+    "replay_frames": 1440,
+    "reset_cases": 9,
+    "collection_events": 81,
+    "max_error": 5.91171556152e-12,
+    "pool_bytes": 9512,
+    "event_bytes": 1588,
+    "runtime_activation": false,
+    "wallet_writes": false,
+    "failures": 0
+  },
+  "summaries_identical": true,
+  "runtime_activation": false,
+  "wallet_account_writes": false,
+  "prior_fixture_failure_preserved": true
+}

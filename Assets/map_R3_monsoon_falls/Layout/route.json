@@ -1,0 +1,976 @@
+{
+  "schema_version": "1.0",
+  "map_id": "R3",
+  "map_name": "Monsoon Falls",
+  "authored_layout_note": "New authored playable blockout inspired by the selected concept; not a reconstruction or measurement of image geometry.",
+  "coordinate_system": "game_x_right_y_up_z_forward_meters",
+  "closed": true,
+  "interpolation": {
+    "type": "closed_uniform_catmull_rom",
+    "samples_per_span": 128,
+    "length_method": "Sum of 3072 spline-sampling chords; approximate arc length in meters"
+  },
+  "route_width_m": 18,
+  "deck_below_route_m": 3,
+  "deck_thickness_m": 1.2,
+  "nominal_vehicle": {
+    "length_m": 5.6,
+    "width_m": 3.92,
+    "assumed_height_for_blockout_m": 2.4,
+    "height_note": "Placeholder clearance assumption; measure the actual imported car colliders before final gameplay integration."
+  },
+  "design_limits": {
+    "footprint_target_xz_m": [
+      1100,
+      900
+    ],
+    "minimum_elevation_m": 30,
+    "maximum_elevation_m": 180,
+    "maximum_grade_degrees": 18,
+    "minimum_horizontal_turn_radius_m": 100
+  },
+  "environment": {
+    "weather": "rain",
+    "water_level_y_m": 0,
+    "water_extent_xz_m": [
+      1850,
+      1650
+    ],
+    "water_center_xz": [
+      0,
+      0
+    ],
+    "palette": {
+      "body": "#233C39",
+      "route_light": "#54E5DC",
+      "accent": "#A3C45A"
+    },
+    "rain_note": "Runtime camera-local rain particles; no rain mesh in this starter. Waterfall flow is a runtime material/particle effect."
+  },
+  "control_points": [
+    {
+      "id": "P00",
+      "position_game": [
+        550.0,
+        128.659949,
+        0.0
+      ]
+    },
+    {
+      "id": "P01",
+      "position_game": [
+        526.082824,
+        144.629556,
+        126.950932
+      ]
+    },
+    {
+      "id": "P02",
+      "position_game": [
+        458.993464,
+        157.898475,
+        243.052559
+      ]
+    },
+    {
+      "id": "P03",
+      "position_game": [
+        360.624458,
+        167.56245,
+        338.783838
+      ]
+    },
+    {
+      "id": "P04",
+      "position_game": [
+        245.0,
+        172.962898,
+        407.03194
+      ]
+    },
+    {
+      "id": "P05",
+      "position_game": [
+        123.031958,
+        173.731786,
+        443.73477
+      ]
+    },
+    {
+      "id": "P06",
+      "position_game": [
+        0.0,
+        169.816717,
+        448.0
+      ]
+    },
+    {
+      "id": "P07",
+      "position_game": [
+        -123.031958,
+        161.484496,
+        421.73477
+      ]
+    },
+    {
+      "id": "P08",
+      "position_game": [
+        -245.0,
+        149.302949,
+        368.926822
+      ]
+    },
+    {
+      "id": "P09",
+      "position_game": [
+        -360.624458,
+        134.10223,
+        294.783838
+      ]
+    },
+    {
+      "id": "P10",
+      "position_game": [
+        -458.993464,
+        116.918242,
+        204.947441
+      ]
+    },
+    {
+      "id": "P11",
+      "position_game": [
+        -526.082824,
+        98.922045,
+        104.950932
+      ]
+    },
+    {
+      "id": "P12",
+      "position_game": [
+        -550.0,
+        81.340051,
+        0.0
+      ]
+    },
+    {
+      "id": "P13",
+      "position_game": [
+        -526.082824,
+        65.370444,
+        -104.950932
+      ]
+    },
+    {
+      "id": "P14",
+      "position_game": [
+        -458.993464,
+        52.101525,
+        -204.947441
+      ]
+    },
+    {
+      "id": "P15",
+      "position_game": [
+        -360.624458,
+        42.43755,
+        -294.783838
+      ]
+    },
+    {
+      "id": "P16",
+      "position_game": [
+        -245.0,
+        37.037102,
+        -368.926822
+      ]
+    },
+    {
+      "id": "P17",
+      "position_game": [
+        -123.031958,
+        36.268214,
+        -421.73477
+      ]
+    },
+    {
+      "id": "P18",
+      "position_game": [
+        -0.0,
+        40.183283,
+        -448.0
+      ]
+    },
+    {
+      "id": "P19",
+      "position_game": [
+        123.031958,
+        48.515504,
+        -443.73477
+      ]
+    },
+    {
+      "id": "P20",
+      "position_game": [
+        245.0,
+        60.697051,
+        -407.03194
+      ]
+    },
+    {
+      "id": "P21",
+      "position_game": [
+        360.624458,
+        75.89777,
+        -338.783838
+      ]
+    },
+    {
+      "id": "P22",
+      "position_game": [
+        458.993464,
+        93.081758,
+        -243.052559
+      ]
+    },
+    {
+      "id": "P23",
+      "position_game": [
+        526.082824,
+        111.077955,
+        -126.950932
+      ]
+    }
+  ],
+  "computed": {
+    "length_m": 3109.631,
+    "bounds_min_game": [
+      -550.0,
+      36.006,
+      -450.062
+    ],
+    "bounds_max_game": [
+      550.0,
+      173.994,
+      450.062
+    ],
+    "footprint_xz_m": [
+      1100.0,
+      900.125
+    ],
+    "elevation_range_m": [
+      36.006,
+      173.994
+    ],
+    "maximum_grade_degrees": 9.297,
+    "minimum_horizontal_turn_radius_m": 209.818,
+    "arc_table_segments": 3072
+  },
+  "checkpoints": [
+    {
+      "id": "CP00",
+      "sequence": 0,
+      "asset_id": "C05",
+      "distance_m": 0.0,
+      "position_game": [
+        550.0,
+        128.659949,
+        0.0
+      ],
+      "forward_game": [
+        0.0,
+        0.131005,
+        0.991382
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 3091.631368,
+        "position_game": [
+          549.493667,
+          126.289565,
+          -17.833692
+        ],
+        "forward_game": [
+          0.055605,
+          0.132315,
+          0.989647
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP00"
+      }
+    },
+    {
+      "id": "CP01",
+      "sequence": 1,
+      "asset_id": "C04",
+      "distance_m": 194.35196,
+      "position_game": [
+        498.955772,
+        151.310304,
+        183.908466
+      ],
+      "forward_game": [
+        -0.495648,
+        0.098711,
+        0.862896
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 176.35196,
+        "position_game": [
+          507.559913,
+          149.501385,
+          168.203296
+        ],
+        "forward_game": [
+          -0.459765,
+          0.102299,
+          0.882129
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP01"
+      }
+    },
+    {
+      "id": "CP02",
+      "sequence": 2,
+      "asset_id": "C04",
+      "distance_m": 388.703921,
+      "position_game": [
+        372.674005,
+        166.681145,
+        329.311591
+      ],
+      "forward_game": [
+        -0.77712,
+        0.059,
+        0.626581
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 370.703921,
+        "position_game": [
+          386.495139,
+          165.586032,
+          317.833074
+        ],
+        "forward_game": [
+          -0.758411,
+          0.062666,
+          0.648757
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP02"
+      }
+    },
+    {
+      "id": "CP03",
+      "sequence": 3,
+      "asset_id": "C04",
+      "distance_m": 583.055881,
+      "position_game": [
+        203.757032,
+        173.749509,
+        423.18196
+      ],
+      "forward_game": [
+        -0.945765,
+        0.011704,
+        0.324642
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 565.055881,
+        "position_game": [
+          220.675931,
+          173.494355,
+          417.045706
+        ],
+        "forward_game": [
+          -0.93392,
+          0.016635,
+          0.357094
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP03"
+      }
+    },
+    {
+      "id": "CP04",
+      "sequence": 4,
+      "asset_id": "C04",
+      "distance_m": 777.407842,
+      "position_game": [
+        12.502491,
+        170.417203,
+        448.968704
+      ],
+      "forward_game": [
+        -0.9968,
+        -0.04613,
+        -0.065277
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 759.407842,
+        "position_game": [
+          30.463725,
+          171.202718,
+          449.831024
+        ],
+        "forward_game": [
+          -0.998693,
+          -0.041118,
+          -0.030344
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP04"
+      }
+    },
+    {
+      "id": "CP05",
+      "sequence": 5,
+      "asset_id": "C04",
+      "distance_m": 971.759802,
+      "position_game": [
+        -174.796926,
+        156.781074,
+        402.46378
+      ],
+      "forward_game": [
+        -0.918484,
+        -0.089753,
+        -0.385139
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 953.759802,
+        "position_game": [
+          -158.177035,
+          158.36941,
+          409.189919
+        ],
+        "forward_game": [
+          -0.928184,
+          -0.08669,
+          -0.361883
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP05"
+      }
+    },
+    {
+      "id": "CP06",
+      "sequence": 6,
+      "asset_id": "C04",
+      "distance_m": 1166.111763,
+      "position_game": [
+        -342.947173,
+        136.710383,
+        307.9204
+      ],
+      "forward_game": [
+        -0.805624,
+        -0.115977,
+        -0.580964
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 1148.111763,
+        "position_game": [
+          -328.328908,
+          138.775382,
+          318.217476
+        ],
+        "forward_game": [
+          -0.818447,
+          -0.11349,
+          -0.563262
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP06"
+      }
+    },
+    {
+      "id": "CP07",
+      "sequence": 7,
+      "asset_id": "C04",
+      "distance_m": 1360.463723,
+      "position_game": [
+        -482.58125,
+        111.613426,
+        176.110976
+      ],
+      "forward_game": [
+        -0.600335,
+        -0.14361,
+        -0.786749
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 1342.463723,
+        "position_game": [
+          -471.536869,
+          114.17511,
+          190.090611
+        ],
+        "forward_game": [
+          -0.62621,
+          -0.141041,
+          -0.766791
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP07"
+      }
+    },
+    {
+      "id": "CP08",
+      "sequence": 8,
+      "asset_id": "C04",
+      "distance_m": 1554.815684,
+      "position_game": [
+        -549.999997,
+        81.34596,
+        0.036965
+      ],
+      "forward_game": [
+        -0.000174,
+        -0.157847,
+        -0.987464
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 1536.815684,
+        "position_game": [
+          -549.262259,
+          84.211049,
+          17.787173
+        ],
+        "forward_game": [
+          -0.080771,
+          -0.160264,
+          -0.983764
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP08"
+      }
+    },
+    {
+      "id": "CP09",
+      "sequence": 9,
+      "asset_id": "C04",
+      "distance_m": 1749.167644,
+      "position_game": [
+        -482.239478,
+        55.641383,
+        -176.558361
+      ],
+      "forward_game": [
+        0.604369,
+        -0.101397,
+        -0.790225
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 1731.167644,
+        "position_game": [
+          -492.852627,
+          57.51522,
+          -162.142751
+        ],
+        "forward_game": [
+          0.574096,
+          -0.106841,
+          -0.811787
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP09"
+      }
+    },
+    {
+      "id": "CP10",
+      "sequence": 10,
+      "asset_id": "C04",
+      "distance_m": 1943.519605,
+      "position_game": [
+        -341.61836,
+        41.187436,
+        -308.876567
+      ],
+      "forward_game": [
+        0.811296,
+        -0.049799,
+        -0.58251
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 1925.519605,
+        "position_game": [
+          -356.097605,
+          42.124064,
+          -298.224778
+        ],
+        "forward_game": [
+          0.79727,
+          -0.05431,
+          -0.601174
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP10"
+      }
+    },
+    {
+      "id": "CP11",
+      "sequence": 11,
+      "asset_id": "C04",
+      "distance_m": 2137.871565,
+      "position_game": [
+        -172.402292,
+        36.016723,
+        -403.462913
+      ],
+      "forward_game": [
+        0.92357,
+        -0.002379,
+        -0.383423
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 2119.871565,
+        "position_game": [
+          -188.941321,
+          36.101759,
+          -396.360944
+        ],
+        "forward_game": [
+          0.914111,
+          -0.007052,
+          -0.405402
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP11"
+      }
+    },
+    {
+      "id": "CP12",
+      "sequence": 12,
+      "asset_id": "C04",
+      "distance_m": 2332.223526,
+      "position_game": [
+        15.495247,
+        40.99309,
+        -449.156035
+      ],
+      "forward_game": [
+        0.996737,
+        0.054537,
+        -0.059505
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 2314.223526,
+        "position_game": [
+          -2.426757,
+          40.063315,
+          -447.776349
+        ],
+        "forward_game": [
+          0.994339,
+          0.04882,
+          -0.094369
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP12"
+      }
+    },
+    {
+      "id": "CP13",
+      "sequence": 13,
+      "asset_id": "C04",
+      "distance_m": 2526.575486,
+      "position_game": [
+        206.051496,
+        56.396661,
+        -422.388381
+      ],
+      "forward_game": [
+        0.939647,
+        0.099213,
+        0.327446
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 2508.575486,
+        "position_game": [
+          189.037351,
+          54.636298,
+          -427.990882
+        ],
+        "forward_game": [
+          0.950641,
+          0.096332,
+          0.294961
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP13"
+      }
+    },
+    {
+      "id": "CP14",
+      "sequence": 14,
+      "asset_id": "C04",
+      "distance_m": 2720.927447,
+      "position_game": [
+        373.744371,
+        77.911703,
+        -328.44661
+      ],
+      "forward_game": [
+        0.771453,
+        0.120156,
+        0.624839
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 2702.927447,
+        "position_game": [
+          359.697307,
+          75.757655,
+          -339.492613
+        ],
+        "forward_game": [
+          0.78948,
+          0.119145,
+          0.602101
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP14"
+      }
+    },
+    {
+      "id": "CP15",
+      "sequence": 15,
+      "asset_id": "C04",
+      "distance_m": 2915.279407,
+      "position_game": [
+        499.167066,
+        102.582133,
+        -183.540216
+      ],
+      "forward_game": [
+        0.49288,
+        0.132597,
+        0.859935
+      ],
+      "inner_diameter_m": 22,
+      "ring_outer_diameter_m": 26,
+      "trigger_center_radius_m": 9,
+      "trigger_radius_note": "Provisional center trigger: 11 m inner radius minus half the nominal 3.92 m width, rounded down. It does not account for rotated length, height, collider shape, banking, or swept collision; validate the actual car in the host game.",
+      "required_crossing": "negative_to_positive_signed_distance_along_forward_normal",
+      "respawn": {
+        "distance_m": 2897.279407,
+        "position_game": [
+          489.9997,
+          100.20301,
+          -198.845845
+        ],
+        "forward_game": [
+          0.525242,
+          0.131762,
+          0.84069
+        ],
+        "behind_checkpoint_m": 18,
+        "zero_linear_velocity": true,
+        "next_required_checkpoint": "CP15"
+      }
+    }
+  ],
+  "spawns": [
+    {
+      "id": "PLAYER_START",
+      "distance_m": 3081.631368,
+      "position_game": [
+        548.790256,
+        124.963367,
+        -27.719991
+      ],
+      "forward_game": [
+        0.084903,
+        0.132911,
+        0.987485
+      ],
+      "next_required_checkpoint": "CP00",
+      "initial_lap_state": "not_started"
+    }
+  ],
+  "race_order": {
+    "start_gate": "CP00",
+    "after_start_required_sequence": [
+      "CP01",
+      "CP02",
+      "CP03",
+      "CP04",
+      "CP05",
+      "CP06",
+      "CP07",
+      "CP08",
+      "CP09",
+      "CP10",
+      "CP11",
+      "CP12",
+      "CP13",
+      "CP14",
+      "CP15",
+      "CP00"
+    ],
+    "first_cp00_crossing": "Start lap; do not increment completed laps",
+    "reset_checkpoint_policy": "Respawn before the required checkpoint, so that gate must be crossed again in the forward direction"
+  },
+  "sectors": [
+    {
+      "id": "S01",
+      "name": "Reservoir run",
+      "start_distance_m": 0.0,
+      "end_distance_m": 497.541019,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    },
+    {
+      "id": "S02",
+      "name": "Dam ledge",
+      "start_distance_m": 497.541019,
+      "end_distance_m": 995.082038,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    },
+    {
+      "id": "S03",
+      "name": "Waterfall traverse",
+      "start_distance_m": 995.082038,
+      "end_distance_m": 1492.623057,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    },
+    {
+      "id": "S04",
+      "name": "Basalt arch",
+      "start_distance_m": 1492.623057,
+      "end_distance_m": 1990.164075,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    },
+    {
+      "id": "S05",
+      "name": "Ravine low run",
+      "start_distance_m": 1990.164075,
+      "end_distance_m": 2549.897722,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    },
+    {
+      "id": "S06",
+      "name": "Return climb",
+      "start_distance_m": 2549.897722,
+      "end_distance_m": 3109.631368,
+      "note": "Art-direction zone; replace placeholders after route clearance is verified."
+    }
+  ],
+  "hazards": [
+    {
+      "id": "RAIN_VISIBILITY",
+      "kind": "weather",
+      "collision": false,
+      "note": "Keep near-camera rain sparse and race gates readable."
+    },
+    {
+      "id": "RESERVOIR_WATER",
+      "kind": "out_of_bounds",
+      "water_y_m": 0,
+      "collision": false,
+      "note": "Route is above water. Reuse the host reset rules."
+    },
+    {
+      "id": "WATERFALL_SPRAY",
+      "kind": "vfx_zone",
+      "placement_id": "F11_01",
+      "collision": false,
+      "note": "Do not make the transparent waterfall plane a solid collider."
+    },
+    {
+      "id": "BASALT_ARCH_OPENING",
+      "kind": "clearance",
+      "placement_id": "F02_01",
+      "minimum_opening_width_m": 44,
+      "collision": true
+    }
+  ]
+}

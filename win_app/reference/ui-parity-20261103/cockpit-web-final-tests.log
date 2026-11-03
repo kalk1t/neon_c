@@ -1,0 +1,40 @@
+Start testing: Nov 03 02:13 Eastern Standard Time
+----------------------------------------------------------
+1/40 Testing: browser_cockpit_fit_and_readouts
+1/40 Test: browser_cockpit_fit_and_readouts
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/cockpit-web/rr_cockpit_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/cockpit-web
+"browser_cockpit_fit_and_readouts" start time: Nov 03 02:13 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Cockpit: 18 source fits, 36 source readouts, 3 car layouts, visibility/easing/seat: 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_cockpit_fit_and_readouts" end time: Nov 03 02:13 Eastern Standard Time
+"browser_cockpit_fit_and_readouts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/40 Testing: browser_cockpit_cpu_png_decode
+39/40 Test: browser_cockpit_cpu_png_decode
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/cockpit-web/rr_cockpit_image_tests.js" "/cockpit-roadster"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/cockpit-web
+"browser_cockpit_cpu_png_decode" start time: Nov 03 02:13 Eastern Standard Time
+Output:
+----------------------------------------------------------
+base.png 1672x941 RGBA8=6293408 alpha_sum=262218394
+control.png 900x492 RGBA8=1771200 alpha_sum=53447730
+boost.png 128x134 RGBA8=68608 alpha_sum=2565870
+attack.png 128x110 RGBA8=56320 alpha_sum=1049984
+warning.png 128x111 RGBA8=56832 alpha_sum=1400416
+CPU cockpit PNG decode passed; resident RGBA8=8246368, largest single image=6293408; no window/GPU initialized.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_cockpit_cpu_png_decode" end time: Nov 03 02:13 Eastern Standard Time
+"browser_cockpit_cpu_png_decode" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 02:13 Eastern Standard Time

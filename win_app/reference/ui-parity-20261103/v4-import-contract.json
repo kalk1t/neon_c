@@ -1,0 +1,52 @@
+{
+  "package_manifest_sha256": "882a496cd86be227ad123092ebaa3a2e2a5b41ec9eae28388c6744b7afe61b60",
+  "source_release": "28a4e302e63d2e797db65f62d042025b97a7de84",
+  "native_target": {
+    "window": [
+      960,
+      720
+    ],
+    "card_width_from_source_css_analysis": 294,
+    "action_min_width_from_source_css_analysis": 300,
+    "note": "Analytic CSS expectation; fresh browser/native pixel measurement pending."
+  },
+  "supplied_components": {
+    "card_logical": [
+      410,
+      120
+    ],
+    "card_example_png": [
+      522,
+      248
+    ],
+    "card_example_content_offset": [
+      48,
+      64
+    ],
+    "action_logical": [
+      400,
+      76
+    ]
+  },
+  "use": "Chrome shells plus native dynamic thumbnails/text/state; reference layers are synthetic comparison samples",
+  "reject": [
+    "Importing all247 states/scales/previews as resident textures",
+    "Stretching410px cards to294px and claiming unchanged clips/borders",
+    "Using padded PNG dimensions as hitboxes",
+    "Double-applying baked opacity",
+    "Promoting synthetic wallet/profile/rank fixtures to production",
+    "Inventing inactive car-soon.png or optimistic transaction completion"
+  ],
+  "source_behavior_notes": [
+    "Opening shop from equipped Roadster chooses first unowned paid preview on every opening; not only first visit",
+    "Arrows focus only; click/Enter selects preview; closing restores equipped car",
+    "Active matrix14 combinations; inactive null/soon branch is not a supported product",
+    "Buy/equip/sign-in stay inactive pending actual shared service integration"
+  ],
+  "requested_followup_via_parent": [
+    "Source-sized960x720 native-target component exports/content rectangles where confirmed, or native source-recipe drawing instead of arbitrary resizing",
+    "Renderer/model preview memory/upload/swap/input checks after existing UI graphical qualification"
+  ],
+  "runtime_imports": [],
+  "backend_writes": false
+}

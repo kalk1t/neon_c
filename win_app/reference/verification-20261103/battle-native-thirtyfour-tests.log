@@ -1,0 +1,1144 @@
+Start testing: Nov 02 20:47 Eastern Standard Time
+----------------------------------------------------------
+1/34 Testing: browser_facade_window_pixels
+1/34 Test: browser_facade_window_pixels
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_facade_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_facade_window_pixels" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser facade: 131072 RGBA pixels,512 source window colors/rectangles, short-buffer/null/guard checks, FNV=1762891081; 0 failures.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"browser_facade_window_pixels" end time: Nov 02 20:47 Eastern Standard Time
+"browser_facade_window_pixels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/34 Testing: canonical_mesh_loader_guards
+2/34 Test: canonical_mesh_loader_guards
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_mesh_loader_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"canonical_mesh_loader_guards" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Mesh loader: source fixture, finite-but-displaced/wrong-count rejection, invalid bounds and raw file-size budget; 0 installed assets checked; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"canonical_mesh_loader_guards" end time: Nov 02 20:47 Eastern Standard Time
+"canonical_mesh_loader_guards" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/34 Testing: experimental_city_catalog_paging
+3/34 Test: experimental_city_catalog_paging
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_catalog_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_city_catalog_paging" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+HEADLESS catalog only:2741 bodies/450 crowns;2360grid+380ring+1skyway;413 existing meshes,316 complete geometry/97 missing posters;5482 browser collision queries,max city candidates=6,error=1.11e-16;108 Three sphere-view sets,max visible=235,blocked=108,max budget skipped=171,max unavailable=235; deterministic planning,64 meshes/141312 vertices/2 uploads,transactional rejection; metadata=610056 bytes; 0 failures.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_city_catalog_paging" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_city_catalog_paging" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/34 Testing: experimental_exact_city_batching
+4/34 Test: experimental_exact_city_batching
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_batching_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_exact_city_batching" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+HEADLESS batching:528 route/roam frusta x5 exact-topology schemes x2 source Three bounds;5280 visible counts/vertex sums/set hashes;1695222 vertices/material totals conserved per scheme; original45 source batches; near128/AABB max92676 vertices,265 draws; full source sphere max1695222; metadata=1151744B; 0 failures.
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_exact_city_batching" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_exact_city_batching" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/34 Testing: experimental_material_repacking
+5/34 Test: experimental_material_repacking
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_repacking_tests.exe" "C:/Users/User/Projects/neon_c/win_app/reference/city-repacking-geometry.bin"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_material_repacking" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+HEADLESS repack only:38352 exact source parts,54247104B source fixture;264 source/near view pairs; exact per-material position/normal/UV byte checksums;near max76434 vertices/5 draws;262 distance-omission cases explicit;source max1674882 vertices,18 fit/246 budget-rejected before reads;ideal two-view union147432 exceeds141312;output bound141312 vertices/4521984B plus guards;metadata=2454528B; 0 failures.
+<end of output>
+Test time =   1.40 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_material_repacking" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_material_repacking" time elapsed: 00:00:01
+----------------------------------------------------------
+
+6/34 Testing: experimental_triangle_visibility
+6/34 Test: experimental_triangle_visibility
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_triangle_tests.exe" "C:/Users/User/Projects/neon_c/win_app/reference/city-repacking-geometry.bin"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_triangle_visibility" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+TRIANGLE_VIEW {"view":0,"candidate":399150,"strict_vertices":185661,"padded_vertices":185664,"back_rejected_vertices":212862,"triangle_set_hash":773044985}
+TRIANGLE_VIEW {"view":1,"candidate":334614,"strict_vertices":155883,"padded_vertices":155883,"back_rejected_vertices":178272,"triangle_set_hash":3440795759}
+TRIANGLE_VIEW {"view":2,"candidate":306402,"strict_vertices":142392,"padded_vertices":142392,"back_rejected_vertices":163626,"triangle_set_hash":2291530229}
+TRIANGLE_VIEW {"view":3,"candidate":296580,"strict_vertices":138072,"padded_vertices":138075,"back_rejected_vertices":158208,"triangle_set_hash":2732787365}
+TRIANGLE_VIEW {"view":4,"candidate":294654,"strict_vertices":137583,"padded_vertices":137586,"back_rejected_vertices":156456,"triangle_set_hash":935221306}
+TRIANGLE_VIEW {"view":5,"candidate":290394,"strict_vertices":136296,"padded_vertices":136299,"back_rejected_vertices":152859,"triangle_set_hash":1289587550}
+TRIANGLE_VIEW {"view":6,"candidate":382914,"strict_vertices":180765,"padded_vertices":180765,"back_rejected_vertices":201561,"triangle_set_hash":3039102056}
+TRIANGLE_VIEW {"view":7,"candidate":409374,"strict_vertices":192246,"padded_vertices":192249,"back_rejected_vertices":216303,"triangle_set_hash":4174083714}
+TRIANGLE_VIEW {"view":8,"candidate":428856,"strict_vertices":199932,"padded_vertices":199932,"back_rejected_vertices":227964,"triangle_set_hash":1861843142}
+TRIANGLE_VIEW {"view":9,"candidate":416862,"strict_vertices":194151,"padded_vertices":194157,"back_rejected_vertices":221946,"triangle_set_hash":1250657281}
+TRIANGLE_VIEW {"view":10,"candidate":409302,"strict_vertices":189918,"padded_vertices":189921,"back_rejected_vertices":218814,"triangle_set_hash":1422631764}
+TRIANGLE_VIEW {"view":11,"candidate":433956,"strict_vertices":201804,"padded_vertices":201807,"back_rejected_vertices":231621,"triangle_set_hash":353123173}
+TRIANGLE_VIEW {"view":12,"candidate":441342,"strict_vertices":204636,"padded_vertices":204648,"back_rejected_vertices":236019,"triangle_set_hash":1217892466}
+TRIANGLE_VIEW {"view":13,"candidate":405450,"strict_vertices":188559,"padded_vertices":188559,"back_rejected_vertices":216369,"triangle_set_hash":1948660556}
+TRIANGLE_VIEW {"view":14,"candidate":351060,"strict_vertices":163674,"padded_vertices":163674,"back_rejected_vertices":187098,"triangle_set_hash":94788615}
+TRIANGLE_VIEW {"view":15,"candidate":329634,"strict_vertices":153588,"padded_vertices":153591,"back_rejected_vertices":174705,"triangle_set_hash":1587478185}
+TRIANGLE_VIEW {"view":16,"candidate":341028,"strict_vertices":160782,"padded_vertices":160791,"back_rejected_vertices":179526,"triangle_set_hash":3133922349}
+TRIANGLE_VIEW {"view":17,"candidate":374010,"strict_vertices":177048,"padded_vertices":177048,"back_rejected_vertices":196542,"triangle_set_hash":2910015828}
+TRIANGLE_VIEW {"view":18,"candidate":405534,"strict_vertices":190095,"padded_vertices":190095,"back_rejected_vertices":214905,"triangle_set_hash":65583208}
+TRIANGLE_VIEW {"view":19,"candidate":449310,"strict_vertices":209322,"padded_vertices":209322,"back_rejected_vertices":239610,"triangle_set_hash":4101208583}
+TRIANGLE_VIEW {"view":20,"candidate":528216,"strict_vertices":245115,"padded_vertices":245115,"back_rejected_vertices":282636,"triangle_set_hash":4278165652}
+TRIANGLE_VIEW {"view":21,"candidate":463632,"strict_vertices":215982,"padded_vertices":215991,"back_rejected_vertices":246900,"triangle_set_hash":4186910215}
+TRIANGLE_VIEW {"view":22,"candidate":530784,"strict_vertices":247485,"padded_vertices":247488,"back_rejected_vertices":282957,"triangle_set_hash":3931785410}
+TRIANGLE_VIEW {"view":23,"candidate":475146,"strict_vertices":221208,"padded_vertices":221208,"back_rejected_vertices":253623,"triangle_set_hash":1492159426}
+TRIANGLE_VIEW {"view":24,"candidate":384498,"strict_vertices":178257,"padded_vertices":178257,"back_rejected_vertices":205050,"triangle_set_hash":2679182380}
+TRIANGLE_VIEW {"view":25,"candidate":326094,"strict_vertices":151374,"padded_vertices":151380,"back_rejected_vertices":173949,"triangle_set_hash":4223643754}
+TRIANGLE_VIEW {"view":26,"candidate":296418,"strict_vertices":137868,"padded_vertices":137871,"back_rejected_vertices":158229,"triangle_set_hash":3763656085}
+TRIANGLE_VIEW {"view":27,"candidate":243366,"strict_vertices":113256,"padded_vertices":113256,"back_rejected_vertices":129738,"triangle_set_hash":4279215019}
+TRIANGLE_VIEW {"view":28,"candidate":213780,"strict_vertices":99591,"padded_vertices":99591,"back_rejected_vertices":113994,"triangle_set_hash":656846920}
+TRIANGLE_VIEW {"view":29,"candidate":334572,"strict_vertices":156135,"padded_vertices":156138,"back_rejected_vertices":177771,"triangle_set_hash":3691921117}
+TRIANGLE_VIEW {"view":30,"candidate":184464,"strict_vertices":85059,"padded_vertices":85059,"back_rejected_vertices":98859,"triangle_set_hash":3206591489}
+TRIANGLE_VIEW {"view":31,"candidate":148680,"strict_vertices":68319,"padded_vertices":68319,"back_rejected_vertices":80061,"triangle_set_hash":1066639684}
+TRIANGLE_VIEW {"view":32,"candidate":375318,"strict_vertices":174369,"padded_vertices":174369,"back_rejected_vertices":200739,"triangle_set_hash":3456619290}
+TRIANGLE_VIEW {"view":33,"candidate":268368,"strict_vertices":124998,"padded_vertices":124998,"back_rejected_vertices":142938,"triangle_set_hash":1117780379}
+TRIANGLE_VIEW {"view":34,"candidate":268002,"strict_vertices":124839,"padded_vertices":124839,"back_rejected_vertices":142887,"triangle_set_hash":3086497009}
+TRIANGLE_VIEW {"view":35,"candidate":362370,"strict_vertices":169515,"padded_vertices":169515,"back_rejected_vertices":192456,"triangle_set_hash":2321273301}
+TRIANGLE_VIEW {"view":36,"candidate":488862,"strict_vertices":228447,"padded_vertices":228456,"back_rejected_vertices":259722,"triangle_set_hash":2737565322}
+TRIANGLE_VIEW {"view":37,"candidate":409674,"strict_vertices":190968,"padded_vertices":190968,"back_rejected_vertices":217785,"triangle_set_hash":2677193212}
+TRIANGLE_VIEW {"view":38,"candidate":276504,"strict_vertices":128841,"padded_vertices":128847,"back_rejected_vertices":146952,"triangle_set_hash":2175247327}
+TRIANGLE_VIEW {"view":39,"candidate":473394,"strict_vertices":221064,"padded_vertices":221067,"back_rejected_vertices":251787,"triangle_set_hash":3224508978}
+TRIANGLE_VIEW {"view":40,"candidate":396282,"strict_vertices":186258,"padded_vertices":186258,"back_rejected_vertices":209532,"triangle_set_hash":766424201}
+TRIANGLE_VIEW {"view":41,"candidate":211212,"strict_vertices":99480,"padded_vertices":99480,"back_rejected_vertices":111237,"triangle_set_hash":2783991243}
+TRIANGLE_VIEW {"view":42,"candidate":644292,"strict_vertices":310395,"padded_vertices":310395,"back_rejected_vertices":333534,"triangle_set_hash":1904110098}
+TRIANGLE_VIEW {"view":43,"candidate":666246,"strict_vertices":320427,"padded_vertices":320427,"back_rejected_vertices":344862,"triangle_set_hash":3873088470}
+TRIANGLE_VIEW {"view":44,"candidate":605544,"strict_vertices":287220,"padded_vertices":287223,"back_rejected_vertices":317085,"triangle_set_hash":685741471}
+TRIANGLE_VIEW {"view":45,"candidate":594156,"strict_vertices":277062,"padded_vertices":277062,"back_rejected_vertices":315765,"triangle_set_hash":2425198963}
+TRIANGLE_VIEW {"view":46,"candidate":537594,"strict_vertices":248421,"padded_vertices":248439,"back_rejected_vertices":288255,"triangle_set_hash":3446560812}
+TRIANGLE_VIEW {"view":47,"candidate":475284,"strict_vertices":221004,"padded_vertices":221004,"back_rejected_vertices":254067,"triangle_set_hash":2153121463}
+TRIANGLE_VIEW {"view":48,"candidate":383850,"strict_vertices":177945,"padded_vertices":177951,"back_rejected_vertices":204678,"triangle_set_hash":2863865667}
+TRIANGLE_VIEW {"view":49,"candidate":375258,"strict_vertices":174408,"padded_vertices":174408,"back_rejected_vertices":200586,"triangle_set_hash":1640834260}
+TRIANGLE_VIEW {"view":50,"candidate":277764,"strict_vertices":128895,"padded_vertices":128895,"back_rejected_vertices":148215,"triangle_set_hash":2214488452}
+TRIANGLE_VIEW {"view":51,"candidate":227496,"strict_vertices":105144,"padded_vertices":105150,"back_rejected_vertices":121572,"triangle_set_hash":2131274414}
+TRIANGLE_VIEW {"view":52,"candidate":302802,"strict_vertices":140565,"padded_vertices":140565,"back_rejected_vertices":161166,"triangle_set_hash":2073687711}
+TRIANGLE_VIEW {"view":53,"candidate":197550,"strict_vertices":91830,"padded_vertices":91830,"back_rejected_vertices":105336,"triangle_set_hash":3820292658}
+TRIANGLE_VIEW {"view":54,"candidate":188142,"strict_vertices":87762,"padded_vertices":87765,"back_rejected_vertices":100134,"triangle_set_hash":1602192120}
+TRIANGLE_VIEW {"view":55,"candidate":274680,"strict_vertices":129030,"padded_vertices":129030,"back_rejected_vertices":145443,"triangle_set_hash":708679126}
+TRIANGLE_VIEW {"view":56,"candidate":354978,"strict_vertices":167829,"padded_vertices":167832,"back_rejected_vertices":186777,"triangle_set_hash":390826494}
+TRIANGLE_VIEW {"view":57,"candidate":194442,"strict_vertices":92652,"padded_vertices":92655,"back_rejected_vertices":101502,"triangle_set_hash":3569056133}
+TRIANGLE_VIEW {"view":58,"candidate":298752,"strict_vertices":142578,"padded_vertices":142584,"back_rejected_vertices":155466,"triangle_set_hash":2919842977}
+TRIANGLE_VIEW {"view":59,"candidate":514554,"strict_vertices":243399,"padded_vertices":243399,"back_rejected_vertices":270414,"triangle_set_hash":4213811361}
+TRIANGLE_VIEW {"view":60,"candidate":489090,"strict_vertices":227967,"padded_vertices":227970,"back_rejected_vertices":260121,"triangle_set_hash":3003788506}
+TRIANGLE_VIEW {"view":61,"candidate":286902,"strict_vertices":133071,"padded_vertices":133071,"back_rejected_vertices":153363,"triangle_set_hash":1536980770}
+TRIANGLE_VIEW {"view":62,"candidate":283680,"strict_vertices":132273,"padded_vertices":132273,"back_rejected_vertices":151011,"triangle_set_hash":2106874315}
+TRIANGLE_VIEW {"view":63,"candidate":482406,"strict_vertices":224325,"padded_vertices":224331,"back_rejected_vertices":257550,"triangle_set_hash":3945351525}
+TRIANGLE_VIEW {"view":64,"candidate":480714,"strict_vertices":224652,"padded_vertices":224661,"back_rejected_vertices":255648,"triangle_set_hash":3131035847}
+TRIANGLE_VIEW {"view":65,"candidate":341790,"strict_vertices":159594,"padded_vertices":159597,"back_rejected_vertices":181938,"triangle_set_hash":3842704247}
+TRIANGLE_VIEW {"view":66,"candidate":649734,"strict_vertices":302616,"padded_vertices":302625,"back_rejected_vertices":346203,"triangle_set_hash":1449519825}
+TRIANGLE_VIEW {"view":67,"candidate":660240,"strict_vertices":306351,"padded_vertices":306357,"back_rejected_vertices":352917,"triangle_set_hash":2342853012}
+TRIANGLE_VIEW {"view":68,"candidate":410520,"strict_vertices":190863,"padded_vertices":190863,"back_rejected_vertices":219279,"triangle_set_hash":1604405176}
+TRIANGLE_VIEW {"view":69,"candidate":604080,"strict_vertices":281637,"padded_vertices":281637,"back_rejected_vertices":321987,"triangle_set_hash":1417989230}
+TRIANGLE_VIEW {"view":70,"candidate":466536,"strict_vertices":217701,"padded_vertices":217704,"back_rejected_vertices":248007,"triangle_set_hash":4131207875}
+TRIANGLE_VIEW {"view":71,"candidate":449112,"strict_vertices":208146,"padded_vertices":208155,"back_rejected_vertices":240360,"triangle_set_hash":649026778}
+TRIANGLE_VIEW {"view":72,"candidate":383928,"strict_vertices":178290,"padded_vertices":178296,"back_rejected_vertices":204774,"triangle_set_hash":2436937479}
+TRIANGLE_VIEW {"view":73,"candidate":331800,"strict_vertices":154083,"padded_vertices":154089,"back_rejected_vertices":177438,"triangle_set_hash":2056497649}
+TRIANGLE_VIEW {"view":74,"candidate":276138,"strict_vertices":128220,"padded_vertices":128220,"back_rejected_vertices":147468,"triangle_set_hash":861109194}
+TRIANGLE_VIEW {"view":75,"candidate":222936,"strict_vertices":104781,"padded_vertices":104781,"back_rejected_vertices":117867,"triangle_set_hash":1488387253}
+TRIANGLE_VIEW {"view":76,"candidate":207582,"strict_vertices":99255,"padded_vertices":99264,"back_rejected_vertices":108009,"triangle_set_hash":776366349}
+TRIANGLE_VIEW {"view":77,"candidate":152688,"strict_vertices":72888,"padded_vertices":72888,"back_rejected_vertices":79320,"triangle_set_hash":1918431724}
+TRIANGLE_VIEW {"view":78,"candidate":327492,"strict_vertices":157956,"padded_vertices":157965,"back_rejected_vertices":169158,"triangle_set_hash":2861583311}
+TRIANGLE_VIEW {"view":79,"candidate":321666,"strict_vertices":154494,"padded_vertices":154497,"back_rejected_vertices":166605,"triangle_set_hash":2194247502}
+TRIANGLE_VIEW {"view":80,"candidate":524172,"strict_vertices":248661,"padded_vertices":248661,"back_rejected_vertices":274029,"triangle_set_hash":2302914710}
+TRIANGLE_VIEW {"view":81,"candidate":86292,"strict_vertices":39774,"padded_vertices":39777,"back_rejected_vertices":46206,"triangle_set_hash":3251199016}
+TRIANGLE_VIEW {"view":82,"candidate":382110,"strict_vertices":178221,"padded_vertices":178221,"back_rejected_vertices":203325,"triangle_set_hash":443147405}
+TRIANGLE_VIEW {"view":83,"candidate":272208,"strict_vertices":126894,"padded_vertices":126894,"back_rejected_vertices":144891,"triangle_set_hash":10375149}
+TRIANGLE_VIEW {"view":84,"candidate":254208,"strict_vertices":117819,"padded_vertices":117819,"back_rejected_vertices":135516,"triangle_set_hash":1393510502}
+TRIANGLE_VIEW {"view":85,"candidate":349800,"strict_vertices":163248,"padded_vertices":163257,"back_rejected_vertices":186090,"triangle_set_hash":415937665}
+TRIANGLE_VIEW {"view":86,"candidate":179814,"strict_vertices":84966,"padded_vertices":84966,"back_rejected_vertices":94569,"triangle_set_hash":1245652366}
+TRIANGLE_VIEW {"view":87,"candidate":157782,"strict_vertices":73737,"padded_vertices":73740,"back_rejected_vertices":83115,"triangle_set_hash":3405599475}
+TRIANGLE_VIEW {"view":88,"candidate":794748,"strict_vertices":381957,"padded_vertices":381966,"back_rejected_vertices":412236,"triangle_set_hash":2318938909}
+TRIANGLE_VIEW {"view":89,"candidate":482472,"strict_vertices":227421,"padded_vertices":227421,"back_rejected_vertices":254055,"triangle_set_hash":1669249424}
+TRIANGLE_VIEW {"view":90,"candidate":751398,"strict_vertices":348960,"padded_vertices":348960,"back_rejected_vertices":401361,"triangle_set_hash":103949072}
+TRIANGLE_VIEW {"view":91,"candidate":511686,"strict_vertices":238539,"padded_vertices":238539,"back_rejected_vertices":272157,"triangle_set_hash":668378535}
+TRIANGLE_VIEW {"view":92,"candidate":718734,"strict_vertices":334662,"padded_vertices":334662,"back_rejected_vertices":383631,"triangle_set_hash":189639231}
+TRIANGLE_VIEW {"view":93,"candidate":577938,"strict_vertices":269265,"padded_vertices":269265,"back_rejected_vertices":307578,"triangle_set_hash":2460894381}
+TRIANGLE_VIEW {"view":94,"candidate":546810,"strict_vertices":253884,"padded_vertices":253884,"back_rejected_vertices":292248,"triangle_set_hash":1959418307}
+TRIANGLE_VIEW {"view":95,"candidate":482604,"strict_vertices":223467,"padded_vertices":223476,"back_rejected_vertices":257916,"triangle_set_hash":3328598009}
+TRIANGLE_VIEW {"view":96,"candidate":384498,"strict_vertices":178260,"padded_vertices":178260,"back_rejected_vertices":205044,"triangle_set_hash":3765119254}
+TRIANGLE_VIEW {"view":97,"candidate":312474,"strict_vertices":145014,"padded_vertices":145017,"back_rejected_vertices":166764,"triangle_set_hash":988347491}
+TRIANGLE_VIEW {"view":98,"candidate":240888,"strict_vertices":111615,"padded_vertices":111621,"back_rejected_vertices":128952,"triangle_set_hash":140040552}
+TRIANGLE_VIEW {"view":99,"candidate":239118,"strict_vertices":111912,"padded_vertices":111921,"back_rejected_vertices":126762,"triangle_set_hash":3338004008}
+TRIANGLE_VIEW {"view":100,"candidate":224598,"strict_vertices":106740,"padded_vertices":106743,"back_rejected_vertices":117729,"triangle_set_hash":1827042312}
+TRIANGLE_VIEW {"view":101,"candidate":234240,"strict_vertices":109971,"padded_vertices":109977,"back_rejected_vertices":123294,"triangle_set_hash":289235136}
+TRIANGLE_VIEW {"view":102,"candidate":435792,"strict_vertices":202350,"padded_vertices":202353,"back_rejected_vertices":232458,"triangle_set_hash":1012664047}
+TRIANGLE_VIEW {"view":103,"candidate":168972,"strict_vertices":78702,"padded_vertices":78702,"back_rejected_vertices":89910,"triangle_set_hash":1418615369}
+TRIANGLE_VIEW {"view":104,"candidate":592194,"strict_vertices":275247,"padded_vertices":275250,"back_rejected_vertices":316059,"triangle_set_hash":571542161}
+TRIANGLE_VIEW {"view":105,"candidate":118458,"strict_vertices":54954,"padded_vertices":54963,"back_rejected_vertices":63288,"triangle_set_hash":1707139626}
+TRIANGLE_VIEW {"view":106,"candidate":548202,"strict_vertices":255276,"padded_vertices":255276,"back_rejected_vertices":292281,"triangle_set_hash":3580277959}
+TRIANGLE_VIEW {"view":107,"candidate":256740,"strict_vertices":119157,"padded_vertices":119169,"back_rejected_vertices":136632,"triangle_set_hash":225902695}
+TRIANGLE_VIEW {"view":108,"candidate":270192,"strict_vertices":125760,"padded_vertices":125763,"back_rejected_vertices":144123,"triangle_set_hash":3381712991}
+TRIANGLE_VIEW {"view":109,"candidate":483696,"strict_vertices":226014,"padded_vertices":226014,"back_rejected_vertices":257172,"triangle_set_hash":529092262}
+TRIANGLE_VIEW {"view":110,"candidate":192150,"strict_vertices":90201,"padded_vertices":90204,"back_rejected_vertices":101484,"triangle_set_hash":1629933129}
+TRIANGLE_VIEW {"view":111,"candidate":232080,"strict_vertices":109410,"padded_vertices":109416,"back_rejected_vertices":121260,"triangle_set_hash":717512977}
+TRIANGLE_VIEW {"view":112,"candidate":444342,"strict_vertices":212697,"padded_vertices":212697,"back_rejected_vertices":230691,"triangle_set_hash":3960334350}
+TRIANGLE_VIEW {"view":113,"candidate":150690,"strict_vertices":69246,"padded_vertices":69252,"back_rejected_vertices":80802,"triangle_set_hash":1044113502}
+TRIANGLE_VIEW {"view":114,"candidate":766506,"strict_vertices":356883,"padded_vertices":356889,"back_rejected_vertices":408684,"triangle_set_hash":4054923581}
+TRIANGLE_VIEW {"view":115,"candidate":394326,"strict_vertices":184458,"padded_vertices":184458,"back_rejected_vertices":209472,"triangle_set_hash":1757496668}
+TRIANGLE_VIEW {"view":116,"candidate":654114,"strict_vertices":309384,"padded_vertices":309390,"back_rejected_vertices":344226,"triangle_set_hash":2288355520}
+TRIANGLE_VIEW {"view":117,"candidate":609942,"strict_vertices":290988,"padded_vertices":290994,"back_rejected_vertices":318171,"triangle_set_hash":3021395087}
+TRIANGLE_VIEW {"view":118,"candidate":510546,"strict_vertices":238014,"padded_vertices":238014,"back_rejected_vertices":271668,"triangle_set_hash":785780866}
+TRIANGLE_VIEW {"view":119,"candidate":488256,"strict_vertices":226863,"padded_vertices":226863,"back_rejected_vertices":260934,"triangle_set_hash":2130823833}
+TRIANGLE_VIEW {"view":120,"candidate":384498,"strict_vertices":178260,"padded_vertices":178263,"back_rejected_vertices":205050,"triangle_set_hash":3876047908}
+TRIANGLE_VIEW {"view":121,"candidate":310920,"strict_vertices":144408,"padded_vertices":144411,"back_rejected_vertices":166143,"triangle_set_hash":464878106}
+TRIANGLE_VIEW {"view":122,"candidate":268914,"strict_vertices":125160,"padded_vertices":125169,"back_rejected_vertices":143352,"triangle_set_hash":3364563299}
+TRIANGLE_VIEW {"view":123,"candidate":183576,"strict_vertices":85431,"padded_vertices":85440,"back_rejected_vertices":97776,"triangle_set_hash":3761833074}
+TRIANGLE_VIEW {"view":124,"candidate":199656,"strict_vertices":91854,"padded_vertices":91863,"back_rejected_vertices":107286,"triangle_set_hash":3271659475}
+TRIANGLE_VIEW {"view":125,"candidate":122628,"strict_vertices":56793,"padded_vertices":56793,"back_rejected_vertices":65400,"triangle_set_hash":3861896941}
+TRIANGLE_VIEW {"view":126,"candidate":128106,"strict_vertices":59907,"padded_vertices":59910,"back_rejected_vertices":68091,"triangle_set_hash":3854474664}
+TRIANGLE_VIEW {"view":127,"candidate":533700,"strict_vertices":247662,"padded_vertices":247683,"back_rejected_vertices":285558,"triangle_set_hash":3615255886}
+TRIANGLE_VIEW {"view":128,"candidate":131910,"strict_vertices":60645,"padded_vertices":60651,"back_rejected_vertices":70821,"triangle_set_hash":340335334}
+TRIANGLE_VIEW {"view":129,"candidate":480534,"strict_vertices":223200,"padded_vertices":223200,"back_rejected_vertices":256560,"triangle_set_hash":2990950778}
+TRIANGLE_VIEW {"view":130,"candidate":335412,"strict_vertices":156603,"padded_vertices":156603,"back_rejected_vertices":178614,"triangle_set_hash":819083517}
+TRIANGLE_VIEW {"view":131,"candidate":368844,"strict_vertices":172170,"padded_vertices":172170,"back_rejected_vertices":196047,"triangle_set_hash":2130525433}
+TRIANGLE_VIEW {"view":132,"candidate":272250,"strict_vertices":128103,"padded_vertices":128103,"back_rejected_vertices":143214,"triangle_set_hash":2884886372}
+TRIANGLE_VIEW {"view":133,"candidate":357654,"strict_vertices":170616,"padded_vertices":170619,"back_rejected_vertices":186597,"triangle_set_hash":2192766651}
+TRIANGLE_VIEW {"view":134,"candidate":200310,"strict_vertices":96126,"padded_vertices":96126,"back_rejected_vertices":103854,"triangle_set_hash":1670043927}
+TRIANGLE_VIEW {"view":135,"candidate":354744,"strict_vertices":167820,"padded_vertices":167829,"back_rejected_vertices":185640,"triangle_set_hash":2859054837}
+TRIANGLE_VIEW {"view":136,"candidate":112818,"strict_vertices":51783,"padded_vertices":51792,"back_rejected_vertices":60438,"triangle_set_hash":754391091}
+TRIANGLE_VIEW {"view":137,"candidate":794646,"strict_vertices":369678,"padded_vertices":369678,"back_rejected_vertices":424332,"triangle_set_hash":523976107}
+TRIANGLE_VIEW {"view":138,"candidate":541080,"strict_vertices":251955,"padded_vertices":251958,"back_rejected_vertices":288627,"triangle_set_hash":331856097}
+TRIANGLE_VIEW {"view":139,"candidate":631422,"strict_vertices":294366,"padded_vertices":294375,"back_rejected_vertices":335880,"triangle_set_hash":3952661240}
+TRIANGLE_VIEW {"view":140,"candidate":781860,"strict_vertices":370932,"padded_vertices":370932,"back_rejected_vertices":410082,"triangle_set_hash":197520800}
+TRIANGLE_VIEW {"view":141,"candidate":628512,"strict_vertices":300174,"padded_vertices":300177,"back_rejected_vertices":327723,"triangle_set_hash":2559157947}
+TRIANGLE_VIEW {"view":142,"candidate":602022,"strict_vertices":279981,"padded_vertices":279981,"back_rejected_vertices":320520,"triangle_set_hash":3493106318}
+TRIANGLE_VIEW {"view":143,"candidate":497916,"strict_vertices":231204,"padded_vertices":231213,"back_rejected_vertices":266151,"triangle_set_hash":3588742009}
+TRIANGLE_VIEW {"view":144,"candidate":384534,"strict_vertices":178260,"padded_vertices":178260,"back_rejected_vertices":205068,"triangle_set_hash":3506009563}
+TRIANGLE_VIEW {"view":145,"candidate":342492,"strict_vertices":159375,"padded_vertices":159375,"back_rejected_vertices":182742,"triangle_set_hash":3122945156}
+TRIANGLE_VIEW {"view":146,"candidate":285180,"strict_vertices":132144,"padded_vertices":132147,"back_rejected_vertices":152196,"triangle_set_hash":362466564}
+TRIANGLE_VIEW {"view":147,"candidate":183990,"strict_vertices":84768,"padded_vertices":84768,"back_rejected_vertices":98628,"triangle_set_hash":4100883475}
+TRIANGLE_VIEW {"view":148,"candidate":277674,"strict_vertices":128922,"padded_vertices":128922,"back_rejected_vertices":148311,"triangle_set_hash":2249568544}
+TRIANGLE_VIEW {"view":149,"candidate":230958,"strict_vertices":107160,"padded_vertices":107160,"back_rejected_vertices":123354,"triangle_set_hash":2677252201}
+TRIANGLE_VIEW {"view":150,"candidate":132576,"strict_vertices":61311,"padded_vertices":61311,"back_rejected_vertices":71022,"triangle_set_hash":2008803380}
+TRIANGLE_VIEW {"view":151,"candidate":487710,"strict_vertices":232155,"padded_vertices":232155,"back_rejected_vertices":255231,"triangle_set_hash":688532687}
+TRIANGLE_VIEW {"view":152,"candidate":552006,"strict_vertices":264912,"padded_vertices":264918,"back_rejected_vertices":286065,"triangle_set_hash":98747851}
+TRIANGLE_VIEW {"view":153,"candidate":101574,"strict_vertices":48147,"padded_vertices":48147,"back_rejected_vertices":53094,"triangle_set_hash":3436098204}
+TRIANGLE_VIEW {"view":154,"candidate":461982,"strict_vertices":217212,"padded_vertices":217212,"back_rejected_vertices":243852,"triangle_set_hash":3909331844}
+TRIANGLE_VIEW {"view":155,"candidate":571122,"strict_vertices":266631,"padded_vertices":266634,"back_rejected_vertices":303582,"triangle_set_hash":2113510832}
+TRIANGLE_VIEW {"view":156,"candidate":184362,"strict_vertices":85740,"padded_vertices":85743,"back_rejected_vertices":98190,"triangle_set_hash":3837276827}
+TRIANGLE_VIEW {"view":157,"candidate":234054,"strict_vertices":108822,"padded_vertices":108831,"back_rejected_vertices":125067,"triangle_set_hash":3999279563}
+TRIANGLE_VIEW {"view":158,"candidate":613776,"strict_vertices":286134,"padded_vertices":286137,"back_rejected_vertices":326856,"triangle_set_hash":34040557}
+TRIANGLE_VIEW {"view":159,"candidate":220650,"strict_vertices":102423,"padded_vertices":102438,"back_rejected_vertices":117870,"triangle_set_hash":1866425287}
+TRIANGLE_VIEW {"view":160,"candidate":131544,"strict_vertices":60660,"padded_vertices":60660,"back_rejected_vertices":70638,"triangle_set_hash":597378548}
+TRIANGLE_VIEW {"view":161,"candidate":839766,"strict_vertices":389865,"padded_vertices":389865,"back_rejected_vertices":449304,"triangle_set_hash":2886039329}
+TRIANGLE_VIEW {"view":162,"candidate":314544,"strict_vertices":146691,"padded_vertices":146691,"back_rejected_vertices":167571,"triangle_set_hash":431784614}
+TRIANGLE_VIEW {"view":163,"candidate":493704,"strict_vertices":229308,"padded_vertices":229308,"back_rejected_vertices":264285,"triangle_set_hash":2033633315}
+TRIANGLE_VIEW {"view":164,"candidate":713106,"strict_vertices":332802,"padded_vertices":332802,"back_rejected_vertices":379983,"triangle_set_hash":4140674799}
+TRIANGLE_VIEW {"view":165,"candidate":359664,"strict_vertices":167217,"padded_vertices":167217,"back_rejected_vertices":192213,"triangle_set_hash":3205087403}
+TRIANGLE_VIEW {"view":166,"candidate":575688,"strict_vertices":266877,"padded_vertices":266877,"back_rejected_vertices":307821,"triangle_set_hash":1248420637}
+TRIANGLE_VIEW {"view":167,"candidate":487566,"strict_vertices":226263,"padded_vertices":226266,"back_rejected_vertices":260700,"triangle_set_hash":1871053410}
+TRIANGLE_VIEW {"view":168,"candidate":384498,"strict_vertices":178260,"padded_vertices":178263,"back_rejected_vertices":205050,"triangle_set_hash":3876047908}
+TRIANGLE_VIEW {"view":169,"candidate":304938,"strict_vertices":141762,"padded_vertices":141762,"back_rejected_vertices":162774,"triangle_set_hash":3200295613}
+TRIANGLE_VIEW {"view":170,"candidate":225978,"strict_vertices":104793,"padded_vertices":104793,"back_rejected_vertices":120621,"triangle_set_hash":2943768625}
+TRIANGLE_VIEW {"view":171,"candidate":196788,"strict_vertices":91101,"padded_vertices":91125,"back_rejected_vertices":105429,"triangle_set_hash":2383378083}
+TRIANGLE_VIEW {"view":172,"candidate":123942,"strict_vertices":57390,"padded_vertices":57390,"back_rejected_vertices":66108,"triangle_set_hash":268610002}
+TRIANGLE_VIEW {"view":173,"candidate":212988,"strict_vertices":98469,"padded_vertices":98472,"back_rejected_vertices":114132,"triangle_set_hash":290436905}
+TRIANGLE_VIEW {"view":174,"candidate":94362,"strict_vertices":43824,"padded_vertices":43824,"back_rejected_vertices":50421,"triangle_set_hash":400988151}
+TRIANGLE_VIEW {"view":175,"candidate":85686,"strict_vertices":39399,"padded_vertices":39405,"back_rejected_vertices":45870,"triangle_set_hash":1528335608}
+TRIANGLE_VIEW {"view":176,"candidate":593646,"strict_vertices":275859,"padded_vertices":275862,"back_rejected_vertices":317301,"triangle_set_hash":3521236603}
+TRIANGLE_VIEW {"view":177,"candidate":54060,"strict_vertices":24516,"padded_vertices":24516,"back_rejected_vertices":29178,"triangle_set_hash":1007667696}
+TRIANGLE_VIEW {"view":178,"candidate":519984,"strict_vertices":242061,"padded_vertices":242061,"back_rejected_vertices":277566,"triangle_set_hash":3973877315}
+TRIANGLE_VIEW {"view":179,"candidate":334710,"strict_vertices":155964,"padded_vertices":155964,"back_rejected_vertices":178362,"triangle_set_hash":2085957037}
+TRIANGLE_VIEW {"view":180,"candidate":344268,"strict_vertices":161148,"padded_vertices":161148,"back_rejected_vertices":182727,"triangle_set_hash":2187056011}
+TRIANGLE_VIEW {"view":181,"candidate":253104,"strict_vertices":118695,"padded_vertices":118704,"back_rejected_vertices":133704,"triangle_set_hash":2045969135}
+TRIANGLE_VIEW {"view":182,"candidate":226044,"strict_vertices":105846,"padded_vertices":105846,"back_rejected_vertices":119637,"triangle_set_hash":777890107}
+TRIANGLE_VIEW {"view":183,"candidate":431634,"strict_vertices":200853,"padded_vertices":200853,"back_rejected_vertices":230040,"triangle_set_hash":2277702335}
+TRIANGLE_VIEW {"view":184,"candidate":145734,"strict_vertices":67857,"padded_vertices":67863,"back_rejected_vertices":77559,"triangle_set_hash":3665369278}
+TRIANGLE_VIEW {"view":185,"candidate":238368,"strict_vertices":110769,"padded_vertices":110769,"back_rejected_vertices":127290,"triangle_set_hash":425117667}
+TRIANGLE_VIEW {"view":186,"candidate":899226,"strict_vertices":431871,"padded_vertices":431871,"back_rejected_vertices":466686,"triangle_set_hash":3545672308}
+TRIANGLE_VIEW {"view":187,"candidate":217884,"strict_vertices":103272,"padded_vertices":103272,"back_rejected_vertices":113997,"triangle_set_hash":1909820628}
+TRIANGLE_VIEW {"view":188,"candidate":800346,"strict_vertices":378675,"padded_vertices":378681,"back_rejected_vertices":420783,"triangle_set_hash":1647029160}
+TRIANGLE_VIEW {"view":189,"candidate":722112,"strict_vertices":335823,"padded_vertices":335823,"back_rejected_vertices":385734,"triangle_set_hash":3522137062}
+TRIANGLE_VIEW {"view":190,"candidate":572646,"strict_vertices":266382,"padded_vertices":266382,"back_rejected_vertices":305748,"triangle_set_hash":588893306}
+TRIANGLE_VIEW {"view":191,"candidate":519594,"strict_vertices":241113,"padded_vertices":241113,"back_rejected_vertices":277605,"triangle_set_hash":922020733}
+TRIANGLE_VIEW {"view":192,"candidate":384498,"strict_vertices":178260,"padded_vertices":178263,"back_rejected_vertices":205044,"triangle_set_hash":2641653898}
+TRIANGLE_VIEW {"view":193,"candidate":297306,"strict_vertices":138330,"padded_vertices":138342,"back_rejected_vertices":158523,"triangle_set_hash":1367908240}
+TRIANGLE_VIEW {"view":194,"candidate":232356,"strict_vertices":107499,"padded_vertices":107499,"back_rejected_vertices":124353,"triangle_set_hash":2418355747}
+TRIANGLE_VIEW {"view":195,"candidate":148560,"strict_vertices":68238,"padded_vertices":68244,"back_rejected_vertices":79626,"triangle_set_hash":1781490422}
+TRIANGLE_VIEW {"view":196,"candidate":84348,"strict_vertices":39108,"padded_vertices":39108,"back_rejected_vertices":45069,"triangle_set_hash":2186370205}
+TRIANGLE_VIEW {"view":197,"candidate":556362,"strict_vertices":259239,"padded_vertices":259239,"back_rejected_vertices":296814,"triangle_set_hash":3550751743}
+TRIANGLE_VIEW {"view":198,"candidate":143220,"strict_vertices":66756,"padded_vertices":66756,"back_rejected_vertices":76239,"triangle_set_hash":602680444}
+TRIANGLE_VIEW {"view":199,"candidate":108420,"strict_vertices":50208,"padded_vertices":50208,"back_rejected_vertices":57783,"triangle_set_hash":1821886766}
+TRIANGLE_VIEW {"view":200,"candidate":636342,"strict_vertices":295659,"padded_vertices":295659,"back_rejected_vertices":340203,"triangle_set_hash":3189859595}
+TRIANGLE_VIEW {"view":201,"candidate":310704,"strict_vertices":145503,"padded_vertices":145503,"back_rejected_vertices":165033,"triangle_set_hash":2458210114}
+TRIANGLE_VIEW {"view":202,"candidate":527814,"strict_vertices":246489,"padded_vertices":246492,"back_rejected_vertices":280986,"triangle_set_hash":385669875}
+TRIANGLE_VIEW {"view":203,"candidate":251244,"strict_vertices":117636,"padded_vertices":117648,"back_rejected_vertices":133299,"triangle_set_hash":676505713}
+TRIANGLE_VIEW {"view":204,"candidate":355260,"strict_vertices":165606,"padded_vertices":165606,"back_rejected_vertices":189276,"triangle_set_hash":4056152740}
+TRIANGLE_VIEW {"view":205,"candidate":231138,"strict_vertices":107598,"padded_vertices":107601,"back_rejected_vertices":122973,"triangle_set_hash":3216116378}
+TRIANGLE_VIEW {"view":206,"candidate":556326,"strict_vertices":265623,"padded_vertices":265629,"back_rejected_vertices":290235,"triangle_set_hash":152259318}
+TRIANGLE_VIEW {"view":207,"candidate":143358,"strict_vertices":67728,"padded_vertices":67731,"back_rejected_vertices":75048,"triangle_set_hash":2668576370}
+TRIANGLE_VIEW {"view":208,"candidate":123330,"strict_vertices":57006,"padded_vertices":57006,"back_rejected_vertices":65268,"triangle_set_hash":13761756}
+TRIANGLE_VIEW {"view":209,"candidate":723378,"strict_vertices":339333,"padded_vertices":339345,"back_rejected_vertices":382983,"triangle_set_hash":3639273824}
+TRIANGLE_VIEW {"view":210,"candidate":243618,"strict_vertices":113289,"padded_vertices":113289,"back_rejected_vertices":130389,"triangle_set_hash":1854299254}
+TRIANGLE_VIEW {"view":211,"candidate":194742,"strict_vertices":90795,"padded_vertices":90795,"back_rejected_vertices":103449,"triangle_set_hash":3771585077}
+TRIANGLE_VIEW {"view":212,"candidate":854166,"strict_vertices":397905,"padded_vertices":397905,"back_rejected_vertices":455538,"triangle_set_hash":2463151023}
+TRIANGLE_VIEW {"view":213,"candidate":630198,"strict_vertices":295650,"padded_vertices":295650,"back_rejected_vertices":334107,"triangle_set_hash":2472642361}
+TRIANGLE_VIEW {"view":214,"candidate":636090,"strict_vertices":295743,"padded_vertices":295746,"back_rejected_vertices":339417,"triangle_set_hash":3215481381}
+TRIANGLE_VIEW {"view":215,"candidate":496986,"strict_vertices":230451,"padded_vertices":230451,"back_rejected_vertices":265692,"triangle_set_hash":3588693442}
+TRIANGLE_VIEW {"view":216,"candidate":1516650,"strict_vertices":708105,"padded_vertices":708105,"back_rejected_vertices":807681,"triangle_set_hash":440480432}
+TRIANGLE_VIEW {"view":217,"candidate":1529640,"strict_vertices":755232,"padded_vertices":755232,"back_rejected_vertices":771771,"triangle_set_hash":194210728}
+TRIANGLE_VIEW {"view":218,"candidate":1180980,"strict_vertices":550560,"padded_vertices":550560,"back_rejected_vertices":629826,"triangle_set_hash":99711030}
+TRIANGLE_VIEW {"view":219,"candidate":1187820,"strict_vertices":586689,"padded_vertices":586692,"back_rejected_vertices":599892,"triangle_set_hash":2785556701}
+TRIANGLE_VIEW {"view":220,"candidate":1224984,"strict_vertices":571803,"padded_vertices":571803,"back_rejected_vertices":652419,"triangle_set_hash":4098696143}
+TRIANGLE_VIEW {"view":221,"candidate":1232334,"strict_vertices":608388,"padded_vertices":608388,"back_rejected_vertices":622284,"triangle_set_hash":2215200508}
+TRIANGLE_VIEW {"view":222,"candidate":1551042,"strict_vertices":724515,"padded_vertices":724515,"back_rejected_vertices":825906,"triangle_set_hash":1775928006}
+TRIANGLE_VIEW {"view":223,"candidate":1560036,"strict_vertices":771084,"padded_vertices":771096,"back_rejected_vertices":786987,"triangle_set_hash":1221648182}
+TRIANGLE_VIEW {"view":224,"candidate":1168320,"strict_vertices":545094,"padded_vertices":545097,"back_rejected_vertices":622173,"triangle_set_hash":1258270742}
+TRIANGLE_VIEW {"view":225,"candidate":1171848,"strict_vertices":578124,"padded_vertices":578124,"back_rejected_vertices":591606,"triangle_set_hash":1867649042}
+TRIANGLE_VIEW {"view":226,"candidate":723012,"strict_vertices":336810,"padded_vertices":336810,"back_rejected_vertices":385605,"triangle_set_hash":2898924866}
+TRIANGLE_VIEW {"view":227,"candidate":735276,"strict_vertices":362028,"padded_vertices":362028,"back_rejected_vertices":371475,"triangle_set_hash":3292562733}
+TRIANGLE_VIEW {"view":228,"candidate":732300,"strict_vertices":341280,"padded_vertices":341283,"back_rejected_vertices":390351,"triangle_set_hash":133397434}
+TRIANGLE_VIEW {"view":229,"candidate":742680,"strict_vertices":365409,"padded_vertices":365418,"back_rejected_vertices":374769,"triangle_set_hash":4286547713}
+TRIANGLE_VIEW {"view":230,"candidate":1179540,"strict_vertices":550431,"padded_vertices":550440,"back_rejected_vertices":628413,"triangle_set_hash":2614274141}
+TRIANGLE_VIEW {"view":231,"candidate":1189806,"strict_vertices":588168,"padded_vertices":588168,"back_rejected_vertices":600153,"triangle_set_hash":7439866}
+TRIANGLE_VIEW {"view":232,"candidate":1133748,"strict_vertices":528759,"padded_vertices":528759,"back_rejected_vertices":603543,"triangle_set_hash":3699500722}
+TRIANGLE_VIEW {"view":233,"candidate":1136892,"strict_vertices":561657,"padded_vertices":561672,"back_rejected_vertices":573840,"triangle_set_hash":1306467338}
+TRIANGLE_VIEW {"view":234,"candidate":691074,"strict_vertices":322683,"padded_vertices":322695,"back_rejected_vertices":367683,"triangle_set_hash":3756094825}
+TRIANGLE_VIEW {"view":235,"candidate":702360,"strict_vertices":346416,"padded_vertices":346416,"back_rejected_vertices":354336,"triangle_set_hash":1424658512}
+TRIANGLE_VIEW {"view":236,"candidate":686076,"strict_vertices":319938,"padded_vertices":319938,"back_rejected_vertices":365814,"triangle_set_hash":3780652146}
+TRIANGLE_VIEW {"view":237,"candidate":702702,"strict_vertices":346752,"padded_vertices":346752,"back_rejected_vertices":354477,"triangle_set_hash":3626294646}
+TRIANGLE_VIEW {"view":238,"candidate":1155006,"strict_vertices":538491,"padded_vertices":538509,"back_rejected_vertices":615585,"triangle_set_hash":4188118003}
+TRIANGLE_VIEW {"view":239,"candidate":1168512,"strict_vertices":576732,"padded_vertices":576759,"back_rejected_vertices":589425,"triangle_set_hash":1842369346}
+TRIANGLE_VIEW {"view":240,"candidate":1430910,"strict_vertices":666690,"padded_vertices":666702,"back_rejected_vertices":763224,"triangle_set_hash":809623717}
+TRIANGLE_VIEW {"view":241,"candidate":1440690,"strict_vertices":712188,"padded_vertices":712191,"back_rejected_vertices":727176,"triangle_set_hash":573373220}
+TRIANGLE_VIEW {"view":242,"candidate":1090824,"strict_vertices":508263,"padded_vertices":508272,"back_rejected_vertices":581907,"triangle_set_hash":1745879049}
+TRIANGLE_VIEW {"view":243,"candidate":1105326,"strict_vertices":545376,"padded_vertices":545385,"back_rejected_vertices":557946,"triangle_set_hash":435900562}
+TRIANGLE_VIEW {"view":244,"candidate":1131588,"strict_vertices":527946,"padded_vertices":527946,"back_rejected_vertices":603117,"triangle_set_hash":3182519644}
+TRIANGLE_VIEW {"view":245,"candidate":1136580,"strict_vertices":562089,"padded_vertices":562089,"back_rejected_vertices":573381,"triangle_set_hash":2108452055}
+TRIANGLE_VIEW {"view":246,"candidate":1475814,"strict_vertices":688341,"padded_vertices":688341,"back_rejected_vertices":786822,"triangle_set_hash":81297064}
+TRIANGLE_VIEW {"view":247,"candidate":1484634,"strict_vertices":734097,"padded_vertices":734097,"back_rejected_vertices":749247,"triangle_set_hash":3467868042}
+TRIANGLE_VIEW {"view":248,"candidate":1636362,"strict_vertices":813717,"padded_vertices":813720,"back_rejected_vertices":822114,"triangle_set_hash":2458690815}
+TRIANGLE_VIEW {"view":249,"candidate":1672650,"strict_vertices":832347,"padded_vertices":832347,"back_rejected_vertices":840183,"triangle_set_hash":2324621758}
+TRIANGLE_VIEW {"view":250,"candidate":1638102,"strict_vertices":814740,"padded_vertices":814740,"back_rejected_vertices":822918,"triangle_set_hash":2827069801}
+TRIANGLE_VIEW {"view":251,"candidate":1671030,"strict_vertices":831684,"padded_vertices":831684,"back_rejected_vertices":839241,"triangle_set_hash":1257513358}
+TRIANGLE_VIEW {"view":252,"candidate":1624638,"strict_vertices":807717,"padded_vertices":807717,"back_rejected_vertices":816264,"triangle_set_hash":4053474251}
+TRIANGLE_VIEW {"view":253,"candidate":1672974,"strict_vertices":832494,"padded_vertices":832494,"back_rejected_vertices":840357,"triangle_set_hash":1403299364}
+TRIANGLE_VIEW {"view":254,"candidate":1620342,"strict_vertices":805533,"padded_vertices":805539,"back_rejected_vertices":814104,"triangle_set_hash":3462056469}
+TRIANGLE_VIEW {"view":255,"candidate":1674882,"strict_vertices":833484,"padded_vertices":833484,"back_rejected_vertices":841299,"triangle_set_hash":334109013}
+TRIANGLE_VIEW {"view":256,"candidate":480576,"strict_vertices":232701,"padded_vertices":232707,"back_rejected_vertices":239877,"triangle_set_hash":3266389982}
+TRIANGLE_VIEW {"view":257,"candidate":467412,"strict_vertices":217296,"padded_vertices":217296,"back_rejected_vertices":249033,"triangle_set_hash":606136324}
+TRIANGLE_VIEW {"view":258,"candidate":388134,"strict_vertices":179145,"padded_vertices":179145,"back_rejected_vertices":207798,"triangle_set_hash":2249520714}
+TRIANGLE_VIEW {"view":259,"candidate":354912,"strict_vertices":164562,"padded_vertices":164562,"back_rejected_vertices":189375,"triangle_set_hash":2627863768}
+TRIANGLE_VIEW {"view":260,"candidate":383130,"strict_vertices":178206,"padded_vertices":178206,"back_rejected_vertices":204174,"triangle_set_hash":3278827040}
+TRIANGLE_VIEW {"view":261,"candidate":4512,"strict_vertices":1983,"padded_vertices":1983,"back_rejected_vertices":2385,"triangle_set_hash":3103254921}
+TRIANGLE_VIEW {"view":262,"candidate":1980,"strict_vertices":636,"padded_vertices":636,"back_rejected_vertices":1230,"triangle_set_hash":1386107123}
+TRIANGLE_VIEW {"view":263,"candidate":559734,"strict_vertices":260361,"padded_vertices":260361,"back_rejected_vertices":298743,"triangle_set_hash":2790733890}
+TRIANGLE_SUMMARY {"cases":264,"goldens":600,"margin":0.02,"worst_view":255,"max_retained_vertices":833484,"within_bound":86,"unique_vertices_worst":489086,"index_entries_worst":833484,"unique_materials":[219384,151982,78524,37800,1396],"attribute_bytes32_worst":15650752,"indices_bytes32_worst":3333936,"analysis_hash_workspace":25165824,"failures":0}
+<end of output>
+Test time =   0.72 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_triangle_visibility" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_triangle_visibility" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/34 Testing: experimental_conservative_city_occlusion
+7/34 Test: experimental_conservative_city_occlusion
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_occlusion_tests.exe" "C:/Users/User/Projects/neon_c/win_app/reference/city-repacking-geometry.bin"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_conservative_city_occlusion" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+OCCLUSION_VIEW {"view":0,"retained_vertices":164484,"occluded_vertices":21180,"covered_tiles":2347,"triangle_set_hash":3751487779}
+OCCLUSION_VIEW {"view":1,"retained_vertices":153606,"occluded_vertices":2277,"covered_tiles":1076,"triangle_set_hash":3875446383}
+OCCLUSION_VIEW {"view":2,"retained_vertices":138690,"occluded_vertices":3702,"covered_tiles":1089,"triangle_set_hash":2907153373}
+OCCLUSION_VIEW {"view":3,"retained_vertices":132195,"occluded_vertices":5880,"covered_tiles":717,"triangle_set_hash":3051853704}
+OCCLUSION_VIEW {"view":4,"retained_vertices":134781,"occluded_vertices":2805,"covered_tiles":941,"triangle_set_hash":1882127021}
+OCCLUSION_VIEW {"view":5,"retained_vertices":135633,"occluded_vertices":666,"covered_tiles":809,"triangle_set_hash":2315717936}
+OCCLUSION_VIEW {"view":6,"retained_vertices":175977,"occluded_vertices":4788,"covered_tiles":1483,"triangle_set_hash":1207629730}
+OCCLUSION_VIEW {"view":7,"retained_vertices":178959,"occluded_vertices":13290,"covered_tiles":2592,"triangle_set_hash":4144081439}
+OCCLUSION_VIEW {"view":8,"retained_vertices":186048,"occluded_vertices":13884,"covered_tiles":2974,"triangle_set_hash":1198226289}
+OCCLUSION_VIEW {"view":9,"retained_vertices":176052,"occluded_vertices":18105,"covered_tiles":3104,"triangle_set_hash":3404783978}
+OCCLUSION_VIEW {"view":10,"retained_vertices":166560,"occluded_vertices":23361,"covered_tiles":3295,"triangle_set_hash":2278560587}
+OCCLUSION_VIEW {"view":11,"retained_vertices":194403,"occluded_vertices":7404,"covered_tiles":2201,"triangle_set_hash":1594057541}
+OCCLUSION_VIEW {"view":12,"retained_vertices":196581,"occluded_vertices":8067,"covered_tiles":1561,"triangle_set_hash":3235156924}
+OCCLUSION_VIEW {"view":13,"retained_vertices":187554,"occluded_vertices":1005,"covered_tiles":931,"triangle_set_hash":3896068759}
+OCCLUSION_VIEW {"view":14,"retained_vertices":162126,"occluded_vertices":1548,"covered_tiles":643,"triangle_set_hash":3725220369}
+OCCLUSION_VIEW {"view":15,"retained_vertices":147537,"occluded_vertices":6054,"covered_tiles":1220,"triangle_set_hash":712655266}
+OCCLUSION_VIEW {"view":16,"retained_vertices":154719,"occluded_vertices":6072,"covered_tiles":965,"triangle_set_hash":3606007836}
+OCCLUSION_VIEW {"view":17,"retained_vertices":169767,"occluded_vertices":7281,"covered_tiles":1913,"triangle_set_hash":1636862128}
+OCCLUSION_VIEW {"view":18,"retained_vertices":169950,"occluded_vertices":20145,"covered_tiles":3546,"triangle_set_hash":223833210}
+OCCLUSION_VIEW {"view":19,"retained_vertices":164307,"occluded_vertices":45015,"covered_tiles":4871,"triangle_set_hash":1356102553}
+OCCLUSION_VIEW {"view":20,"retained_vertices":222636,"occluded_vertices":22479,"covered_tiles":2892,"triangle_set_hash":2007070431}
+OCCLUSION_VIEW {"view":21,"retained_vertices":210747,"occluded_vertices":5244,"covered_tiles":1426,"triangle_set_hash":284817233}
+OCCLUSION_VIEW {"view":22,"retained_vertices":239727,"occluded_vertices":7761,"covered_tiles":1320,"triangle_set_hash":2790369615}
+OCCLUSION_VIEW {"view":23,"retained_vertices":198942,"occluded_vertices":22266,"covered_tiles":2280,"triangle_set_hash":3557167601}
+OCCLUSION_VIEW {"view":24,"retained_vertices":158712,"occluded_vertices":19545,"covered_tiles":2109,"triangle_set_hash":3532743959}
+OCCLUSION_VIEW {"view":25,"retained_vertices":147639,"occluded_vertices":3741,"covered_tiles":1277,"triangle_set_hash":1201009286}
+OCCLUSION_VIEW {"view":26,"retained_vertices":123396,"occluded_vertices":14475,"covered_tiles":2864,"triangle_set_hash":1688132764}
+OCCLUSION_VIEW {"view":27,"retained_vertices":109032,"occluded_vertices":4224,"covered_tiles":2095,"triangle_set_hash":4152386823}
+OCCLUSION_VIEW {"view":28,"retained_vertices":94761,"occluded_vertices":4830,"covered_tiles":1252,"triangle_set_hash":3079667128}
+OCCLUSION_VIEW {"view":29,"retained_vertices":138621,"occluded_vertices":17517,"covered_tiles":2063,"triangle_set_hash":175231336}
+OCCLUSION_VIEW {"view":30,"retained_vertices":72660,"occluded_vertices":12399,"covered_tiles":2483,"triangle_set_hash":106108989}
+OCCLUSION_VIEW {"view":31,"retained_vertices":57516,"occluded_vertices":10803,"covered_tiles":3280,"triangle_set_hash":764808396}
+OCCLUSION_VIEW {"view":32,"retained_vertices":152511,"occluded_vertices":21858,"covered_tiles":2750,"triangle_set_hash":2486550055}
+OCCLUSION_VIEW {"view":33,"retained_vertices":116742,"occluded_vertices":8256,"covered_tiles":1951,"triangle_set_hash":2872080569}
+OCCLUSION_VIEW {"view":34,"retained_vertices":122130,"occluded_vertices":2709,"covered_tiles":861,"triangle_set_hash":3975185841}
+OCCLUSION_VIEW {"view":35,"retained_vertices":161463,"occluded_vertices":8052,"covered_tiles":1663,"triangle_set_hash":3601423847}
+OCCLUSION_VIEW {"view":36,"retained_vertices":215310,"occluded_vertices":13146,"covered_tiles":2244,"triangle_set_hash":1902238679}
+OCCLUSION_VIEW {"view":37,"retained_vertices":177456,"occluded_vertices":13512,"covered_tiles":2595,"triangle_set_hash":2414954239}
+OCCLUSION_VIEW {"view":38,"retained_vertices":117507,"occluded_vertices":11340,"covered_tiles":2744,"triangle_set_hash":2743859010}
+OCCLUSION_VIEW {"view":39,"retained_vertices":214443,"occluded_vertices":6624,"covered_tiles":1589,"triangle_set_hash":360099606}
+OCCLUSION_VIEW {"view":40,"retained_vertices":180054,"occluded_vertices":6204,"covered_tiles":1148,"triangle_set_hash":1317578489}
+OCCLUSION_VIEW {"view":41,"retained_vertices":97788,"occluded_vertices":1692,"covered_tiles":613,"triangle_set_hash":2160955901}
+OCCLUSION_VIEW {"view":42,"retained_vertices":309678,"occluded_vertices":717,"covered_tiles":362,"triangle_set_hash":515470726}
+OCCLUSION_VIEW {"view":43,"retained_vertices":311697,"occluded_vertices":8730,"covered_tiles":1360,"triangle_set_hash":395233252}
+OCCLUSION_VIEW {"view":44,"retained_vertices":287019,"occluded_vertices":204,"covered_tiles":895,"triangle_set_hash":3009649416}
+OCCLUSION_VIEW {"view":45,"retained_vertices":268083,"occluded_vertices":8979,"covered_tiles":1601,"triangle_set_hash":2363437219}
+OCCLUSION_VIEW {"view":46,"retained_vertices":228201,"occluded_vertices":20238,"covered_tiles":3038,"triangle_set_hash":3782541536}
+OCCLUSION_VIEW {"view":47,"retained_vertices":193821,"occluded_vertices":27183,"covered_tiles":3001,"triangle_set_hash":2472514219}
+OCCLUSION_VIEW {"view":48,"retained_vertices":159327,"occluded_vertices":18624,"covered_tiles":2209,"triangle_set_hash":2724146235}
+OCCLUSION_VIEW {"view":49,"retained_vertices":156069,"occluded_vertices":18339,"covered_tiles":2281,"triangle_set_hash":1339035000}
+OCCLUSION_VIEW {"view":50,"retained_vertices":127200,"occluded_vertices":1695,"covered_tiles":644,"triangle_set_hash":819298376}
+OCCLUSION_VIEW {"view":51,"retained_vertices":101172,"occluded_vertices":3978,"covered_tiles":1410,"triangle_set_hash":986715677}
+OCCLUSION_VIEW {"view":52,"retained_vertices":135357,"occluded_vertices":5208,"covered_tiles":2189,"triangle_set_hash":1250766387}
+OCCLUSION_VIEW {"view":53,"retained_vertices":91647,"occluded_vertices":183,"covered_tiles":996,"triangle_set_hash":347991567}
+OCCLUSION_VIEW {"view":54,"retained_vertices":87126,"occluded_vertices":639,"covered_tiles":1374,"triangle_set_hash":3708705053}
+OCCLUSION_VIEW {"view":55,"retained_vertices":127938,"occluded_vertices":1092,"covered_tiles":824,"triangle_set_hash":3421135647}
+OCCLUSION_VIEW {"view":56,"retained_vertices":167451,"occluded_vertices":381,"covered_tiles":316,"triangle_set_hash":1390820206}
+OCCLUSION_VIEW {"view":57,"retained_vertices":92649,"occluded_vertices":6,"covered_tiles":433,"triangle_set_hash":3337954122}
+OCCLUSION_VIEW {"view":58,"retained_vertices":142128,"occluded_vertices":456,"covered_tiles":749,"triangle_set_hash":2087082737}
+OCCLUSION_VIEW {"view":59,"retained_vertices":242469,"occluded_vertices":930,"covered_tiles":1007,"triangle_set_hash":3731146140}
+OCCLUSION_VIEW {"view":60,"retained_vertices":215445,"occluded_vertices":12525,"covered_tiles":2594,"triangle_set_hash":3879206843}
+OCCLUSION_VIEW {"view":61,"retained_vertices":126810,"occluded_vertices":6261,"covered_tiles":2474,"triangle_set_hash":3657972687}
+OCCLUSION_VIEW {"view":62,"retained_vertices":128499,"occluded_vertices":3774,"covered_tiles":2409,"triangle_set_hash":202064507}
+OCCLUSION_VIEW {"view":63,"retained_vertices":190716,"occluded_vertices":33615,"covered_tiles":2501,"triangle_set_hash":3913790983}
+OCCLUSION_VIEW {"view":64,"retained_vertices":214752,"occluded_vertices":9909,"covered_tiles":1686,"triangle_set_hash":1261710430}
+OCCLUSION_VIEW {"view":65,"retained_vertices":154992,"occluded_vertices":4605,"covered_tiles":1493,"triangle_set_hash":2654474997}
+OCCLUSION_VIEW {"view":66,"retained_vertices":284043,"occluded_vertices":18582,"covered_tiles":2609,"triangle_set_hash":783391216}
+OCCLUSION_VIEW {"view":67,"retained_vertices":253302,"occluded_vertices":53055,"covered_tiles":2983,"triangle_set_hash":2455649512}
+OCCLUSION_VIEW {"view":68,"retained_vertices":182910,"occluded_vertices":7953,"covered_tiles":1479,"triangle_set_hash":3304356783}
+OCCLUSION_VIEW {"view":69,"retained_vertices":280761,"occluded_vertices":876,"covered_tiles":554,"triangle_set_hash":2115776716}
+OCCLUSION_VIEW {"view":70,"retained_vertices":214587,"occluded_vertices":3117,"covered_tiles":1346,"triangle_set_hash":575977405}
+OCCLUSION_VIEW {"view":71,"retained_vertices":196161,"occluded_vertices":11994,"covered_tiles":2452,"triangle_set_hash":3412759174}
+OCCLUSION_VIEW {"view":72,"retained_vertices":159282,"occluded_vertices":19014,"covered_tiles":2101,"triangle_set_hash":3426964983}
+OCCLUSION_VIEW {"view":73,"retained_vertices":137790,"occluded_vertices":16299,"covered_tiles":3221,"triangle_set_hash":1295623267}
+OCCLUSION_VIEW {"view":74,"retained_vertices":120423,"occluded_vertices":7797,"covered_tiles":1851,"triangle_set_hash":1356599496}
+OCCLUSION_VIEW {"view":75,"retained_vertices":104022,"occluded_vertices":759,"covered_tiles":361,"triangle_set_hash":1440794538}
+OCCLUSION_VIEW {"view":76,"retained_vertices":97866,"occluded_vertices":1398,"covered_tiles":393,"triangle_set_hash":2664713110}
+OCCLUSION_VIEW {"view":77,"retained_vertices":72840,"occluded_vertices":48,"covered_tiles":504,"triangle_set_hash":4187424460}
+OCCLUSION_VIEW {"view":78,"retained_vertices":157194,"occluded_vertices":771,"covered_tiles":730,"triangle_set_hash":4119659868}
+OCCLUSION_VIEW {"view":79,"retained_vertices":151803,"occluded_vertices":2694,"covered_tiles":1879,"triangle_set_hash":1605848919}
+OCCLUSION_VIEW {"view":80,"retained_vertices":221547,"occluded_vertices":27114,"covered_tiles":1776,"triangle_set_hash":1000944043}
+OCCLUSION_VIEW {"view":81,"retained_vertices":38877,"occluded_vertices":900,"covered_tiles":1504,"triangle_set_hash":3247903802}
+OCCLUSION_VIEW {"view":82,"retained_vertices":169875,"occluded_vertices":8346,"covered_tiles":2820,"triangle_set_hash":1157015419}
+OCCLUSION_VIEW {"view":83,"retained_vertices":99696,"occluded_vertices":27198,"covered_tiles":4416,"triangle_set_hash":3048299150}
+OCCLUSION_VIEW {"view":84,"retained_vertices":102669,"occluded_vertices":15150,"covered_tiles":3024,"triangle_set_hash":2198068680}
+OCCLUSION_VIEW {"view":85,"retained_vertices":143010,"occluded_vertices":20247,"covered_tiles":1130,"triangle_set_hash":796489025}
+OCCLUSION_VIEW {"view":86,"retained_vertices":84684,"occluded_vertices":282,"covered_tiles":776,"triangle_set_hash":1939347849}
+OCCLUSION_VIEW {"view":87,"retained_vertices":73515,"occluded_vertices":225,"covered_tiles":1134,"triangle_set_hash":2599257664}
+OCCLUSION_VIEW {"view":88,"retained_vertices":373698,"occluded_vertices":8268,"covered_tiles":773,"triangle_set_hash":3173372779}
+OCCLUSION_VIEW {"view":89,"retained_vertices":201858,"occluded_vertices":25563,"covered_tiles":2128,"triangle_set_hash":2935296530}
+OCCLUSION_VIEW {"view":90,"retained_vertices":306771,"occluded_vertices":42189,"covered_tiles":3410,"triangle_set_hash":2965234641}
+OCCLUSION_VIEW {"view":91,"retained_vertices":206364,"occluded_vertices":32175,"covered_tiles":3162,"triangle_set_hash":3151686039}
+OCCLUSION_VIEW {"view":92,"retained_vertices":327408,"occluded_vertices":7254,"covered_tiles":1763,"triangle_set_hash":2536981261}
+OCCLUSION_VIEW {"view":93,"retained_vertices":267228,"occluded_vertices":2037,"covered_tiles":389,"triangle_set_hash":2931579018}
+OCCLUSION_VIEW {"view":94,"retained_vertices":251022,"occluded_vertices":2862,"covered_tiles":2064,"triangle_set_hash":417766531}
+OCCLUSION_VIEW {"view":95,"retained_vertices":195636,"occluded_vertices":27840,"covered_tiles":3083,"triangle_set_hash":3912312353}
+OCCLUSION_VIEW {"view":96,"retained_vertices":159060,"occluded_vertices":19200,"covered_tiles":2101,"triangle_set_hash":1553036156}
+OCCLUSION_VIEW {"view":97,"retained_vertices":143343,"occluded_vertices":1674,"covered_tiles":1124,"triangle_set_hash":1748907405}
+OCCLUSION_VIEW {"view":98,"retained_vertices":104757,"occluded_vertices":6864,"covered_tiles":994,"triangle_set_hash":3498751107}
+OCCLUSION_VIEW {"view":99,"retained_vertices":111786,"occluded_vertices":135,"covered_tiles":336,"triangle_set_hash":2135792284}
+OCCLUSION_VIEW {"view":100,"retained_vertices":106317,"occluded_vertices":426,"covered_tiles":758,"triangle_set_hash":2759147778}
+OCCLUSION_VIEW {"view":101,"retained_vertices":108063,"occluded_vertices":1914,"covered_tiles":1505,"triangle_set_hash":1217202929}
+OCCLUSION_VIEW {"view":102,"retained_vertices":170484,"occluded_vertices":31869,"covered_tiles":3674,"triangle_set_hash":403814395}
+OCCLUSION_VIEW {"view":103,"retained_vertices":63321,"occluded_vertices":15381,"covered_tiles":3267,"triangle_set_hash":2947758407}
+OCCLUSION_VIEW {"view":104,"retained_vertices":239487,"occluded_vertices":35763,"covered_tiles":2866,"triangle_set_hash":2955989539}
+OCCLUSION_VIEW {"view":105,"retained_vertices":52974,"occluded_vertices":1989,"covered_tiles":1892,"triangle_set_hash":2236189066}
+OCCLUSION_VIEW {"view":106,"retained_vertices":227496,"occluded_vertices":27780,"covered_tiles":3153,"triangle_set_hash":3053490619}
+OCCLUSION_VIEW {"view":107,"retained_vertices":106230,"occluded_vertices":12939,"covered_tiles":2744,"triangle_set_hash":2453411059}
+OCCLUSION_VIEW {"view":108,"retained_vertices":122793,"occluded_vertices":2970,"covered_tiles":1870,"triangle_set_hash":685896179}
+OCCLUSION_VIEW {"view":109,"retained_vertices":213354,"occluded_vertices":12660,"covered_tiles":1025,"triangle_set_hash":1776279879}
+OCCLUSION_VIEW {"view":110,"retained_vertices":83388,"occluded_vertices":6816,"covered_tiles":1137,"triangle_set_hash":3419271758}
+OCCLUSION_VIEW {"view":111,"retained_vertices":109104,"occluded_vertices":312,"covered_tiles":493,"triangle_set_hash":3347708161}
+OCCLUSION_VIEW {"view":112,"retained_vertices":208260,"occluded_vertices":4437,"covered_tiles":1170,"triangle_set_hash":2045366461}
+OCCLUSION_VIEW {"view":113,"retained_vertices":67029,"occluded_vertices":2223,"covered_tiles":2607,"triangle_set_hash":3063074581}
+OCCLUSION_VIEW {"view":114,"retained_vertices":343164,"occluded_vertices":13725,"covered_tiles":2164,"triangle_set_hash":3891943591}
+OCCLUSION_VIEW {"view":115,"retained_vertices":179901,"occluded_vertices":4557,"covered_tiles":1325,"triangle_set_hash":1239896340}
+OCCLUSION_VIEW {"view":116,"retained_vertices":307917,"occluded_vertices":1473,"covered_tiles":440,"triangle_set_hash":4207152851}
+OCCLUSION_VIEW {"view":117,"retained_vertices":288831,"occluded_vertices":2163,"covered_tiles":473,"triangle_set_hash":740077371}
+OCCLUSION_VIEW {"view":118,"retained_vertices":234651,"occluded_vertices":3363,"covered_tiles":1141,"triangle_set_hash":1974859743}
+OCCLUSION_VIEW {"view":119,"retained_vertices":196530,"occluded_vertices":30333,"covered_tiles":3469,"triangle_set_hash":699081190}
+OCCLUSION_VIEW {"view":120,"retained_vertices":159228,"occluded_vertices":19035,"covered_tiles":2088,"triangle_set_hash":752496690}
+OCCLUSION_VIEW {"view":121,"retained_vertices":142182,"occluded_vertices":2229,"covered_tiles":1256,"triangle_set_hash":3900143500}
+OCCLUSION_VIEW {"view":122,"retained_vertices":117774,"occluded_vertices":7395,"covered_tiles":1413,"triangle_set_hash":2018813700}
+OCCLUSION_VIEW {"view":123,"retained_vertices":82461,"occluded_vertices":2979,"covered_tiles":1279,"triangle_set_hash":2770890845}
+OCCLUSION_VIEW {"view":124,"retained_vertices":68301,"occluded_vertices":23562,"covered_tiles":3507,"triangle_set_hash":3179215950}
+OCCLUSION_VIEW {"view":125,"retained_vertices":52719,"occluded_vertices":4074,"covered_tiles":3238,"triangle_set_hash":2918927695}
+OCCLUSION_VIEW {"view":126,"retained_vertices":58893,"occluded_vertices":1017,"covered_tiles":2180,"triangle_set_hash":2653344246}
+OCCLUSION_VIEW {"view":127,"retained_vertices":198969,"occluded_vertices":48714,"covered_tiles":3607,"triangle_set_hash":440832818}
+OCCLUSION_VIEW {"view":128,"retained_vertices":59004,"occluded_vertices":1647,"covered_tiles":2019,"triangle_set_hash":73840850}
+OCCLUSION_VIEW {"view":129,"retained_vertices":210153,"occluded_vertices":13047,"covered_tiles":2239,"triangle_set_hash":2687861397}
+OCCLUSION_VIEW {"view":130,"retained_vertices":154179,"occluded_vertices":2424,"covered_tiles":1965,"triangle_set_hash":901628252}
+OCCLUSION_VIEW {"view":131,"retained_vertices":161958,"occluded_vertices":10212,"covered_tiles":1824,"triangle_set_hash":3896475292}
+OCCLUSION_VIEW {"view":132,"retained_vertices":126138,"occluded_vertices":1965,"covered_tiles":1210,"triangle_set_hash":424208622}
+OCCLUSION_VIEW {"view":133,"retained_vertices":170424,"occluded_vertices":195,"covered_tiles":556,"triangle_set_hash":828059446}
+OCCLUSION_VIEW {"view":134,"retained_vertices":95118,"occluded_vertices":1008,"covered_tiles":909,"triangle_set_hash":2704014167}
+OCCLUSION_VIEW {"view":135,"retained_vertices":167187,"occluded_vertices":642,"covered_tiles":1494,"triangle_set_hash":2021463725}
+OCCLUSION_VIEW {"view":136,"retained_vertices":50055,"occluded_vertices":1737,"covered_tiles":2953,"triangle_set_hash":243519958}
+OCCLUSION_VIEW {"view":137,"retained_vertices":298134,"occluded_vertices":71544,"covered_tiles":3157,"triangle_set_hash":1113746690}
+OCCLUSION_VIEW {"view":138,"retained_vertices":229587,"occluded_vertices":22371,"covered_tiles":3200,"triangle_set_hash":3811693711}
+OCCLUSION_VIEW {"view":139,"retained_vertices":292173,"occluded_vertices":2202,"covered_tiles":655,"triangle_set_hash":651708679}
+OCCLUSION_VIEW {"view":140,"retained_vertices":353151,"occluded_vertices":17781,"covered_tiles":952,"triangle_set_hash":207482543}
+OCCLUSION_VIEW {"view":141,"retained_vertices":296346,"occluded_vertices":3831,"covered_tiles":915,"triangle_set_hash":3926183058}
+OCCLUSION_VIEW {"view":142,"retained_vertices":273897,"occluded_vertices":6084,"covered_tiles":1721,"triangle_set_hash":2845491452}
+OCCLUSION_VIEW {"view":143,"retained_vertices":209814,"occluded_vertices":21399,"covered_tiles":2782,"triangle_set_hash":4239154550}
+OCCLUSION_VIEW {"view":144,"retained_vertices":158856,"occluded_vertices":19404,"covered_tiles":2110,"triangle_set_hash":1655845974}
+OCCLUSION_VIEW {"view":145,"retained_vertices":155439,"occluded_vertices":3936,"covered_tiles":1390,"triangle_set_hash":463198329}
+OCCLUSION_VIEW {"view":146,"retained_vertices":122079,"occluded_vertices":10068,"covered_tiles":1488,"triangle_set_hash":1889380041}
+OCCLUSION_VIEW {"view":147,"retained_vertices":82290,"occluded_vertices":2478,"covered_tiles":1808,"triangle_set_hash":1398037777}
+OCCLUSION_VIEW {"view":148,"retained_vertices":124404,"occluded_vertices":4518,"covered_tiles":2877,"triangle_set_hash":3277318335}
+OCCLUSION_VIEW {"view":149,"retained_vertices":104235,"occluded_vertices":2925,"covered_tiles":1064,"triangle_set_hash":981136975}
+OCCLUSION_VIEW {"view":150,"retained_vertices":61053,"occluded_vertices":258,"covered_tiles":1103,"triangle_set_hash":2497008889}
+OCCLUSION_VIEW {"view":151,"retained_vertices":231423,"occluded_vertices":732,"covered_tiles":606,"triangle_set_hash":2413005598}
+OCCLUSION_VIEW {"view":152,"retained_vertices":264288,"occluded_vertices":630,"covered_tiles":508,"triangle_set_hash":3130763241}
+OCCLUSION_VIEW {"view":153,"retained_vertices":47763,"occluded_vertices":384,"covered_tiles":1702,"triangle_set_hash":64459568}
+OCCLUSION_VIEW {"view":154,"retained_vertices":216516,"occluded_vertices":696,"covered_tiles":994,"triangle_set_hash":2837558705}
+OCCLUSION_VIEW {"view":155,"retained_vertices":263103,"occluded_vertices":3531,"covered_tiles":1431,"triangle_set_hash":3042267253}
+OCCLUSION_VIEW {"view":156,"retained_vertices":78318,"occluded_vertices":7425,"covered_tiles":2653,"triangle_set_hash":3547215191}
+OCCLUSION_VIEW {"view":157,"retained_vertices":103623,"occluded_vertices":5208,"covered_tiles":2808,"triangle_set_hash":189738500}
+OCCLUSION_VIEW {"view":158,"retained_vertices":272772,"occluded_vertices":13365,"covered_tiles":1672,"triangle_set_hash":844293717}
+OCCLUSION_VIEW {"view":159,"retained_vertices":81180,"occluded_vertices":21258,"covered_tiles":3553,"triangle_set_hash":1154391147}
+OCCLUSION_VIEW {"view":160,"retained_vertices":52902,"occluded_vertices":7758,"covered_tiles":4098,"triangle_set_hash":3270403041}
+OCCLUSION_VIEW {"view":161,"retained_vertices":340602,"occluded_vertices":49263,"covered_tiles":3781,"triangle_set_hash":2428167835}
+OCCLUSION_VIEW {"view":162,"retained_vertices":115356,"occluded_vertices":31335,"covered_tiles":3082,"triangle_set_hash":1979829346}
+OCCLUSION_VIEW {"view":163,"retained_vertices":206700,"occluded_vertices":22608,"covered_tiles":3459,"triangle_set_hash":3488463616}
+OCCLUSION_VIEW {"view":164,"retained_vertices":309003,"occluded_vertices":23799,"covered_tiles":1839,"triangle_set_hash":655538104}
+OCCLUSION_VIEW {"view":165,"retained_vertices":157551,"occluded_vertices":9666,"covered_tiles":1866,"triangle_set_hash":3963779637}
+OCCLUSION_VIEW {"view":166,"retained_vertices":257022,"occluded_vertices":9855,"covered_tiles":1804,"triangle_set_hash":1244723772}
+OCCLUSION_VIEW {"view":167,"retained_vertices":201060,"occluded_vertices":25206,"covered_tiles":3371,"triangle_set_hash":3851428711}
+OCCLUSION_VIEW {"view":168,"retained_vertices":159228,"occluded_vertices":19035,"covered_tiles":2088,"triangle_set_hash":752496690}
+OCCLUSION_VIEW {"view":169,"retained_vertices":139266,"occluded_vertices":2496,"covered_tiles":1130,"triangle_set_hash":3999810410}
+OCCLUSION_VIEW {"view":170,"retained_vertices":101049,"occluded_vertices":3744,"covered_tiles":1405,"triangle_set_hash":2452139708}
+OCCLUSION_VIEW {"view":171,"retained_vertices":80268,"occluded_vertices":10857,"covered_tiles":2695,"triangle_set_hash":2821639598}
+OCCLUSION_VIEW {"view":172,"retained_vertices":51588,"occluded_vertices":5802,"covered_tiles":3744,"triangle_set_hash":1419392901}
+OCCLUSION_VIEW {"view":173,"retained_vertices":92736,"occluded_vertices":5736,"covered_tiles":1215,"triangle_set_hash":1291097692}
+OCCLUSION_VIEW {"view":174,"retained_vertices":39780,"occluded_vertices":4044,"covered_tiles":3500,"triangle_set_hash":1353121173}
+OCCLUSION_VIEW {"view":175,"retained_vertices":36066,"occluded_vertices":3339,"covered_tiles":3553,"triangle_set_hash":4215023617}
+OCCLUSION_VIEW {"view":176,"retained_vertices":242142,"occluded_vertices":33720,"covered_tiles":2911,"triangle_set_hash":3692495743}
+OCCLUSION_VIEW {"view":177,"retained_vertices":21930,"occluded_vertices":2586,"covered_tiles":3996,"triangle_set_hash":46340726}
+OCCLUSION_VIEW {"view":178,"retained_vertices":235803,"occluded_vertices":6258,"covered_tiles":2987,"triangle_set_hash":3016082264}
+OCCLUSION_VIEW {"view":179,"retained_vertices":144408,"occluded_vertices":11556,"covered_tiles":2372,"triangle_set_hash":180451765}
+OCCLUSION_VIEW {"view":180,"retained_vertices":152370,"occluded_vertices":8778,"covered_tiles":2063,"triangle_set_hash":2175754467}
+OCCLUSION_VIEW {"view":181,"retained_vertices":116814,"occluded_vertices":1890,"covered_tiles":1608,"triangle_set_hash":2915481897}
+OCCLUSION_VIEW {"view":182,"retained_vertices":103767,"occluded_vertices":2079,"covered_tiles":2624,"triangle_set_hash":3814503239}
+OCCLUSION_VIEW {"view":183,"retained_vertices":160695,"occluded_vertices":40158,"covered_tiles":3371,"triangle_set_hash":2881173854}
+OCCLUSION_VIEW {"view":184,"retained_vertices":59751,"occluded_vertices":8112,"covered_tiles":4382,"triangle_set_hash":3977441137}
+OCCLUSION_VIEW {"view":185,"retained_vertices":110676,"occluded_vertices":93,"covered_tiles":620,"triangle_set_hash":2782725309}
+OCCLUSION_VIEW {"view":186,"retained_vertices":430362,"occluded_vertices":1509,"covered_tiles":536,"triangle_set_hash":1282426071}
+OCCLUSION_VIEW {"view":187,"retained_vertices":101631,"occluded_vertices":1641,"covered_tiles":1471,"triangle_set_hash":3139292380}
+OCCLUSION_VIEW {"view":188,"retained_vertices":358707,"occluded_vertices":19974,"covered_tiles":2145,"triangle_set_hash":3503103807}
+OCCLUSION_VIEW {"view":189,"retained_vertices":309489,"occluded_vertices":26334,"covered_tiles":2252,"triangle_set_hash":3897036681}
+OCCLUSION_VIEW {"view":190,"retained_vertices":265710,"occluded_vertices":672,"covered_tiles":964,"triangle_set_hash":1310190591}
+OCCLUSION_VIEW {"view":191,"retained_vertices":218499,"occluded_vertices":22614,"covered_tiles":2934,"triangle_set_hash":2712885543}
+OCCLUSION_VIEW {"view":192,"retained_vertices":159030,"occluded_vertices":19233,"covered_tiles":2103,"triangle_set_hash":509102628}
+OCCLUSION_VIEW {"view":193,"retained_vertices":133647,"occluded_vertices":4695,"covered_tiles":1163,"triangle_set_hash":2653923521}
+OCCLUSION_VIEW {"view":194,"retained_vertices":92148,"occluded_vertices":15351,"covered_tiles":2377,"triangle_set_hash":1256967679}
+OCCLUSION_VIEW {"view":195,"retained_vertices":56424,"occluded_vertices":11820,"covered_tiles":3704,"triangle_set_hash":778969850}
+OCCLUSION_VIEW {"view":196,"retained_vertices":37059,"occluded_vertices":2049,"covered_tiles":3441,"triangle_set_hash":581947709}
+OCCLUSION_VIEW {"view":197,"retained_vertices":242646,"occluded_vertices":16593,"covered_tiles":2602,"triangle_set_hash":3229674883}
+OCCLUSION_VIEW {"view":198,"retained_vertices":54315,"occluded_vertices":12441,"covered_tiles":4738,"triangle_set_hash":4013225307}
+OCCLUSION_VIEW {"view":199,"retained_vertices":46149,"occluded_vertices":4059,"covered_tiles":4114,"triangle_set_hash":2784137870}
+OCCLUSION_VIEW {"view":200,"retained_vertices":251283,"occluded_vertices":44376,"covered_tiles":3396,"triangle_set_hash":525156805}
+OCCLUSION_VIEW {"view":201,"retained_vertices":134346,"occluded_vertices":11157,"covered_tiles":3055,"triangle_set_hash":880698989}
+OCCLUSION_VIEW {"view":202,"retained_vertices":225042,"occluded_vertices":21450,"covered_tiles":1589,"triangle_set_hash":3632795088}
+OCCLUSION_VIEW {"view":203,"retained_vertices":114732,"occluded_vertices":2916,"covered_tiles":1800,"triangle_set_hash":3443783671}
+OCCLUSION_VIEW {"view":204,"retained_vertices":164361,"occluded_vertices":1245,"covered_tiles":959,"triangle_set_hash":488134452}
+OCCLUSION_VIEW {"view":205,"retained_vertices":105009,"occluded_vertices":2592,"covered_tiles":1454,"triangle_set_hash":1706132652}
+OCCLUSION_VIEW {"view":206,"retained_vertices":265089,"occluded_vertices":540,"covered_tiles":303,"triangle_set_hash":1510249326}
+OCCLUSION_VIEW {"view":207,"retained_vertices":66738,"occluded_vertices":993,"covered_tiles":916,"triangle_set_hash":250828737}
+OCCLUSION_VIEW {"view":208,"retained_vertices":51612,"occluded_vertices":5394,"covered_tiles":2591,"triangle_set_hash":3886243767}
+OCCLUSION_VIEW {"view":209,"retained_vertices":303882,"occluded_vertices":35463,"covered_tiles":3630,"triangle_set_hash":701993354}
+OCCLUSION_VIEW {"view":210,"retained_vertices":88773,"occluded_vertices":24516,"covered_tiles":4261,"triangle_set_hash":1727310350}
+OCCLUSION_VIEW {"view":211,"retained_vertices":86052,"occluded_vertices":4743,"covered_tiles":3377,"triangle_set_hash":2544307012}
+OCCLUSION_VIEW {"view":212,"retained_vertices":385176,"occluded_vertices":12729,"covered_tiles":1401,"triangle_set_hash":2716723271}
+OCCLUSION_VIEW {"view":213,"retained_vertices":271113,"occluded_vertices":24537,"covered_tiles":2655,"triangle_set_hash":2456160469}
+OCCLUSION_VIEW {"view":214,"retained_vertices":293220,"occluded_vertices":2526,"covered_tiles":1189,"triangle_set_hash":116325754}
+OCCLUSION_VIEW {"view":215,"retained_vertices":214194,"occluded_vertices":16257,"covered_tiles":2739,"triangle_set_hash":3846383759}
+OCCLUSION_VIEW {"view":216,"retained_vertices":497688,"occluded_vertices":210417,"covered_tiles":5918,"triangle_set_hash":4173088657}
+OCCLUSION_VIEW {"view":217,"retained_vertices":663516,"occluded_vertices":91716,"covered_tiles":2839,"triangle_set_hash":2588312963}
+OCCLUSION_VIEW {"view":218,"retained_vertices":398139,"occluded_vertices":152421,"covered_tiles":5170,"triangle_set_hash":3272997519}
+OCCLUSION_VIEW {"view":219,"retained_vertices":583926,"occluded_vertices":2766,"covered_tiles":305,"triangle_set_hash":4132199971}
+OCCLUSION_VIEW {"view":220,"retained_vertices":305184,"occluded_vertices":266619,"covered_tiles":7016,"triangle_set_hash":3428232276}
+OCCLUSION_VIEW {"view":221,"retained_vertices":607899,"occluded_vertices":489,"covered_tiles":307,"triangle_set_hash":1708358670}
+OCCLUSION_VIEW {"view":222,"retained_vertices":299568,"occluded_vertices":424947,"covered_tiles":8402,"triangle_set_hash":2074678963}
+OCCLUSION_VIEW {"view":223,"retained_vertices":703062,"occluded_vertices":68034,"covered_tiles":2656,"triangle_set_hash":704979013}
+OCCLUSION_VIEW {"view":224,"retained_vertices":403176,"occluded_vertices":141921,"covered_tiles":4405,"triangle_set_hash":343638297}
+OCCLUSION_VIEW {"view":225,"retained_vertices":577146,"occluded_vertices":978,"covered_tiles":316,"triangle_set_hash":2578746667}
+OCCLUSION_VIEW {"view":226,"retained_vertices":194517,"occluded_vertices":142293,"covered_tiles":6348,"triangle_set_hash":516786609}
+OCCLUSION_VIEW {"view":227,"retained_vertices":361845,"occluded_vertices":183,"covered_tiles":763,"triangle_set_hash":382941703}
+OCCLUSION_VIEW {"view":228,"retained_vertices":244308,"occluded_vertices":96975,"covered_tiles":4482,"triangle_set_hash":870184975}
+OCCLUSION_VIEW {"view":229,"retained_vertices":362577,"occluded_vertices":2841,"covered_tiles":545,"triangle_set_hash":77293614}
+OCCLUSION_VIEW {"view":230,"retained_vertices":401367,"occluded_vertices":149073,"covered_tiles":4777,"triangle_set_hash":646811387}
+OCCLUSION_VIEW {"view":231,"retained_vertices":588150,"occluded_vertices":18,"covered_tiles":464,"triangle_set_hash":3281584143}
+OCCLUSION_VIEW {"view":232,"retained_vertices":399924,"occluded_vertices":128835,"covered_tiles":3763,"triangle_set_hash":2090495082}
+OCCLUSION_VIEW {"view":233,"retained_vertices":561003,"occluded_vertices":669,"covered_tiles":471,"triangle_set_hash":558790773}
+OCCLUSION_VIEW {"view":234,"retained_vertices":146769,"occluded_vertices":175926,"covered_tiles":7195,"triangle_set_hash":391722084}
+OCCLUSION_VIEW {"view":235,"retained_vertices":346089,"occluded_vertices":327,"covered_tiles":562,"triangle_set_hash":995508556}
+OCCLUSION_VIEW {"view":236,"retained_vertices":274092,"occluded_vertices":45846,"covered_tiles":3913,"triangle_set_hash":1316752780}
+OCCLUSION_VIEW {"view":237,"retained_vertices":346194,"occluded_vertices":558,"covered_tiles":750,"triangle_set_hash":1102834152}
+OCCLUSION_VIEW {"view":238,"retained_vertices":245646,"occluded_vertices":292863,"covered_tiles":7801,"triangle_set_hash":3949907293}
+OCCLUSION_VIEW {"view":239,"retained_vertices":575820,"occluded_vertices":939,"covered_tiles":512,"triangle_set_hash":1492626813}
+OCCLUSION_VIEW {"view":240,"retained_vertices":420603,"occluded_vertices":246099,"covered_tiles":6988,"triangle_set_hash":2755692521}
+OCCLUSION_VIEW {"view":241,"retained_vertices":711423,"occluded_vertices":768,"covered_tiles":563,"triangle_set_hash":3834898883}
+OCCLUSION_VIEW {"view":242,"retained_vertices":359697,"occluded_vertices":148575,"covered_tiles":5521,"triangle_set_hash":2696338922}
+OCCLUSION_VIEW {"view":243,"retained_vertices":545325,"occluded_vertices":60,"covered_tiles":366,"triangle_set_hash":1522050042}
+OCCLUSION_VIEW {"view":244,"retained_vertices":292650,"occluded_vertices":235296,"covered_tiles":7094,"triangle_set_hash":550267904}
+OCCLUSION_VIEW {"view":245,"retained_vertices":562038,"occluded_vertices":51,"covered_tiles":357,"triangle_set_hash":1878358699}
+OCCLUSION_VIEW {"view":246,"retained_vertices":589425,"occluded_vertices":98916,"covered_tiles":3693,"triangle_set_hash":1541532164}
+OCCLUSION_VIEW {"view":247,"retained_vertices":733542,"occluded_vertices":555,"covered_tiles":470,"triangle_set_hash":3776856591}
+OCCLUSION_VIEW {"view":248,"retained_vertices":813720,"occluded_vertices":0,"covered_tiles":117,"triangle_set_hash":2458690815}
+OCCLUSION_VIEW {"view":249,"retained_vertices":832341,"occluded_vertices":6,"covered_tiles":57,"triangle_set_hash":3195934865}
+OCCLUSION_VIEW {"view":250,"retained_vertices":814740,"occluded_vertices":0,"covered_tiles":160,"triangle_set_hash":2827069801}
+OCCLUSION_VIEW {"view":251,"retained_vertices":831684,"occluded_vertices":0,"covered_tiles":144,"triangle_set_hash":1257513358}
+OCCLUSION_VIEW {"view":252,"retained_vertices":807717,"occluded_vertices":0,"covered_tiles":53,"triangle_set_hash":4053474251}
+OCCLUSION_VIEW {"view":253,"retained_vertices":830409,"occluded_vertices":2085,"covered_tiles":221,"triangle_set_hash":3945144161}
+OCCLUSION_VIEW {"view":254,"retained_vertices":805425,"occluded_vertices":114,"covered_tiles":80,"triangle_set_hash":3491898358}
+OCCLUSION_VIEW {"view":255,"retained_vertices":833265,"occluded_vertices":219,"covered_tiles":151,"triangle_set_hash":1350078624}
+OCCLUSION_VIEW {"view":256,"retained_vertices":232707,"occluded_vertices":0,"covered_tiles":0,"triangle_set_hash":3266389982}
+OCCLUSION_VIEW {"view":257,"retained_vertices":157926,"occluded_vertices":59370,"covered_tiles":5695,"triangle_set_hash":3959970612}
+OCCLUSION_VIEW {"view":258,"retained_vertices":127545,"occluded_vertices":51600,"covered_tiles":5056,"triangle_set_hash":3572043255}
+OCCLUSION_VIEW {"view":259,"retained_vertices":154416,"occluded_vertices":10146,"covered_tiles":1401,"triangle_set_hash":1898455261}
+OCCLUSION_VIEW {"view":260,"retained_vertices":160944,"occluded_vertices":17262,"covered_tiles":2242,"triangle_set_hash":630584172}
+OCCLUSION_VIEW {"view":261,"retained_vertices":1956,"occluded_vertices":27,"covered_tiles":756,"triangle_set_hash":504062477}
+OCCLUSION_VIEW {"view":262,"retained_vertices":636,"occluded_vertices":0,"covered_tiles":1634,"triangle_set_hash":1386107123}
+OCCLUSION_VIEW {"view":263,"retained_vertices":111453,"occluded_vertices":148908,"covered_tiles":9704,"triangle_set_hash":3098770294}
+OCCLUSION_SUMMARY {"cases":264,"width":128,"height":96,"screen_guard":0.01,"depth_guard_ulp_factor":32,"source_far":22000,"worst_view":255,"max_retained_vertices":833265,"within_bound":94,"max_occluded_vertices":424947,"depth_buffer_bytes":98312,"failures":0}
+<end of output>
+Test time =  10.93 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_conservative_city_occlusion" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_conservative_city_occlusion" time elapsed: 00:00:10
+----------------------------------------------------------
+
+8/34 Testing: experimental_city_visibility_witness
+8/34 Test: experimental_city_visibility_witness
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_witness_tests.exe" "C:/Users/User/Projects/neon_c/win_app/reference/city-repacking-geometry.bin"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_city_visibility_witness" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":0,"blockers":[348813,349098,349098,349308,349098],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":3,"blockers":[275799,349128,1663329,1663326,275979],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":12,"blockers":[1663326,1663326,275769,1663326,276156],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":15,"blockers":[349098,349098,349098,275769,349098],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":30,"blockers":[1663329,1663326,1663329,1663326,1663329],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":33,"blockers":[1663329,1663329,1663329,1663329,1663329],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":36,"blockers":[275946,275946,349173,275946,275946],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":39,"blockers":[275796,275766,1663326,1663326,275769],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":48,"blockers":[1663326,1663326,275946,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":51,"blockers":[275946,275946,275946,275946,275946],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":66,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":69,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":72,"blockers":[349458,349458,349458,349458,349458],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":349458}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":75,"blockers":[349458,349458,349458,349458,349458],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":349458}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":84,"blockers":[349461,349461,349461,349461,349461],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":87,"blockers":[349458,349461,349458,349458,349458],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":102,"blockers":[349461,349458,349458,349461,349458],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":105,"blockers":[349461,349461,349461,349461,349461],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":108,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":111,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":120,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":123,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":138,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":141,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":144,"blockers":[349098,349098,349098,349308,349098],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":147,"blockers":[275796,349137,1663326,1663326,275976],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":156,"blockers":[275796,1663326,349137,1663326,275976],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":159,"blockers":[349098,349098,349098,349308,349098],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":174,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":177,"blockers":[1663326,1663326,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":180,"blockers":[349098,349098,349098,275979,349098],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":255,"triangle_first_vertex":183,"blockers":[1663326,275949,1663326,1663326,1663326],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":1663326}
+WITNESS_SUMMARY {"view":255,"candidate_triangles":277828,"city_only_witnessed_triangles":64097,"all_five_samples_blocked_not_proven_hidden":212981,"unresolved_triangles":750,"rays":1148618,"witness_set_hash":3104131292,"exact_attribute_tuples":127924,"attribute_bytes32":4093568,"ordinary_triangle_index_bytes32":769164,"bounded_proof_examples":32,"whole_polygon_proved_examples":16,"new_whole_polygon_proofs_beyond_coarse":16,"bvh_nodes":27551,"bvh_capacity_bytes":4909056,"node_bytes_used":1763264,"failures":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141948,"blockers":[735561,735558,735561,735561,735561],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141951,"blockers":[735561,735561,735561,735561,735561],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141972,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141975,"blockers":[735561,735558,735561,735558,735561],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141984,"blockers":[735558,735558,735561,735558,735558],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":141987,"blockers":[735561,735561,735561,735561,735561],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142008,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142011,"blockers":[735561,735561,735561,735558,735561],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142020,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142023,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142038,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142041,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142044,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142047,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142056,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142059,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142080,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142083,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":false,"coarse_already_occluded":false,"new_proof_beyond_coarse":false,"proof_blocker":0}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142092,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142095,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142110,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142113,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142116,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142119,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142128,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142131,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142134,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142137,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142158,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142161,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142182,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_BLOCKERS {"view":0,"triangle_first_vertex":142185,"blockers":[735558,735558,735558,735558,735558],"whole_polygon_single_blocker_proof":true,"coarse_already_occluded":false,"new_proof_beyond_coarse":true,"proof_blocker":735558}
+WITNESS_SUMMARY {"view":0,"candidate_triangles":61888,"city_only_witnessed_triangles":6146,"all_five_samples_blocked_not_proven_hidden":55622,"unresolved_triangles":120,"rays":286445,"witness_set_hash":1942607551,"exact_attribute_tuples":12510,"attribute_bytes32":400320,"ordinary_triangle_index_bytes32":73752,"bounded_proof_examples":32,"whole_polygon_proved_examples":22,"new_whole_polygon_proofs_beyond_coarse":22,"bvh_nodes":27551,"bvh_capacity_bytes":4909056,"node_bytes_used":1763264,"failures":0}
+<end of output>
+Test time =  18.34 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_city_visibility_witness" end time: Nov 02 20:47 Eastern Standard Time
+"experimental_city_visibility_witness" time elapsed: 00:00:18
+----------------------------------------------------------
+
+9/34 Testing: experimental_city_blocker_coverage
+9/34 Test: experimental_city_blocker_coverage
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_coverage_tests.exe" "C:/Users/User/Projects/neon_c/win_app/reference/city-repacking-geometry.bin"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_city_blocker_coverage" start time: Nov 02 20:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+COVERAGE_SUMMARY {"view":255,"candidate_triangles":277828,"coarse_retained_vertices":833265,"coarse_hash":1350078624,"city_only_witnessed_triangles":64097,"all_five_samples_blocked":212981,"unresolved":750,"rays":1148618,"single_blocker_proofs":80875,"combined_blocker_proofs":82467,"combined_only_proofs":1592,"new_single_proofs_beyond_coarse":80802,"new_combined_proofs_beyond_coarse":82394,"retained_vertices":586083,"retained_exact_tuples":362134,"retained_indexed32_bytes":13932620,"vertex_bound":141312,"vertices_over_bound":444771,"maximum_uncovered_pieces":31,"failures":0}
+COVERAGE_SUMMARY {"view":249,"candidate_triangles":277449,"coarse_retained_vertices":832341,"coarse_hash":3195934865,"city_only_witnessed_triangles":60561,"all_five_samples_blocked":216257,"unresolved":631,"rays":1160375,"single_blocker_proofs":83418,"combined_blocker_proofs":85110,"combined_only_proofs":1692,"new_single_proofs_beyond_coarse":83416,"new_combined_proofs_beyond_coarse":85108,"retained_vertices":577017,"retained_exact_tuples":359681,"retained_indexed32_bytes":13817860,"vertex_bound":141312,"vertices_over_bound":435705,"maximum_uncovered_pieces":29,"failures":0}
+COVERAGE_SUMMARY {"view":251,"candidate_triangles":277228,"coarse_retained_vertices":831684,"coarse_hash":1257513358,"city_only_witnessed_triangles":63812,"all_five_samples_blocked":212713,"unresolved":703,"rays":1145846,"single_blocker_proofs":85610,"combined_blocker_proofs":87149,"combined_only_proofs":1539,"new_single_proofs_beyond_coarse":85610,"new_combined_proofs_beyond_coarse":87149,"retained_vertices":570237,"retained_exact_tuples":356815,"retained_indexed32_bytes":13699028,"vertex_bound":141312,"vertices_over_bound":428925,"maximum_uncovered_pieces":29,"failures":0}
+COVERAGE_SUMMARY {"view":0,"candidate_triangles":61888,"coarse_retained_vertices":164484,"coarse_hash":3751487779,"city_only_witnessed_triangles":6146,"all_five_samples_blocked":55622,"unresolved":120,"rays":286445,"single_blocker_proofs":38132,"combined_blocker_proofs":38607,"combined_only_proofs":475,"new_single_proofs_beyond_coarse":31503,"new_combined_proofs_beyond_coarse":31963,"retained_vertices":68595,"retained_exact_tuples":44740,"retained_indexed32_bytes":1706060,"vertex_bound":141312,"vertices_over_bound":0,"maximum_uncovered_pieces":27,"failures":0}
+<end of output>
+Test time =  68.02 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_city_blocker_coverage" end time: Nov 02 20:48 Eastern Standard Time
+"experimental_city_blocker_coverage" time elapsed: 00:01:08
+----------------------------------------------------------
+
+10/34 Testing: experimental_browser_poster_plan
+10/34 Test: experimental_browser_poster_plan
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_poster_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"experimental_browser_poster_plan" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+POSTER_SAMPLING {"samples":121,"canvas_panels_for_uv_quadrants":[2,3,0,1],"pixels_verified":false,"failures":0}
+POSTER_SUMMARY {"posters":97,"source_vertices":582,"double_sided_vertices":1164,"byte_exact_hashes":97,"source_colliders_unchanged":97,"within_existing_mesh_bounds":97,"glyph_paths":28,"merged_top64_vertices":112668,"vertex_bound":141312,"atlas_mip_bytes":2796204,"quadrants":[23,23,24,27],"worst_plane_error":8.58306885e-05,"failures":0}
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"experimental_browser_poster_plan" end time: Nov 02 20:48 Eastern Standard Time
+"experimental_browser_poster_plan" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/34 Testing: browser_ai_controller
+11/34 Test: browser_ai_controller
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_ai_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_ai_controller" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+AI_SUMMARY {"roads":9,"drivers":10,"input_cases":288,"coupled_traces":18,"coupled_steps":3240,"progress_cases":108,"rubber_band_cases":45,"max_input_error":8.94839757848e-14,"max_car_error":2.54211497293e-13,"runtime_rivals":false,"failures":0}
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ai_controller" end time: Nov 02 20:48 Eastern Standard Time
+"browser_ai_controller" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/34 Testing: browser_rival_contacts_lifecycle
+12/34 Test: browser_rival_contacts_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_rival_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_rival_contacts_lifecycle" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+RIVAL_SUMMARY {"roads":9,"resets":54,"respawns":72,"recovery_rule_cases":108,"two_lap_rule_frames":252,"mixed_dt_steps":1296,"contact_cases":84,"contact_pairs":843,"player_hit_cues":8,"max_state_error":4.09272615798e-12,"runtime_rivals":false,"network_account_behavior":false,"failures":0}
+<end of output>
+Test time =   0.29 sec
+----------------------------------------------------------
+Test Passed.
+"browser_rival_contacts_lifecycle" end time: Nov 02 20:48 Eastern Standard Time
+"browser_rival_contacts_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/34 Testing: browser_offline_coin_rules
+13/34 Test: browser_offline_coin_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_coin_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_offline_coin_rules" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+COINS_SUMMARY {"roads":9,"placements":756,"max_selected_road_coins":120,"pool_bound":198,"ahead_cases":324,"update_cases":108,"replay_frames":1440,"reset_cases":9,"collection_events":81,"max_error":5.91171556152e-12,"pool_bytes":9512,"event_bytes":1588,"runtime_activation":false,"wallet_writes":false,"failures":0}
+<end of output>
+Test time =   0.14 sec
+----------------------------------------------------------
+Test Passed.
+"browser_offline_coin_rules" end time: Nov 02 20:48 Eastern Standard Time
+"browser_offline_coin_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/34 Testing: browser_local_pack_ordering
+14/34 Test: browser_local_pack_ordering
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_pack_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_local_pack_ordering" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+PACK_SUMMARY {"roads":9,"traces":18,"ticks":4320,"restarts":9,"countdown_ticks":2376,"playing_ticks":1899,"paused_ticks":45,"rng_pairs":288,"respawns":18,"contact_pairs":633,"coin_collections":58,"max_state_error":2.82440737465e-13,"pack_bytes":14336,"event_bytes":3408,"player_phase":"caller","combat":false,"production_activation":false,"failures":0}
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_local_pack_ordering" end time: Nov 02 20:48 Eastern Standard Time
+"browser_local_pack_ordering" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/34 Testing: browser_targeting_and_late_coin_phase
+15/34 Test: browser_targeting_and_late_coin_phase
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_targeting_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_targeting_and_late_coin_phase" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+TARGETING_SUMMARY {"geometry_cases":576,"angle_branch_cases":384,"live_lock_frames":480,"lead_cases":256,"late_coin_probes":4,"max_error":0,"production_combat":false,"damage_rewards_network":false,"failures":0}
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_targeting_and_late_coin_phase" end time: Nov 02 20:48 Eastern Standard Time
+"browser_targeting_and_late_coin_phase" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/34 Testing: browser_player_arsenal_rules
+16/34 Test: browser_player_arsenal_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_arsenal_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_player_arsenal_rules" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+ARSENAL_SUMMARY cases=4324 draws=1727 events=2870 overheats=39 denies=908 restarts=6 max_error=0 state_bytes=48 event_bytes=64
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_arsenal_rules" end time: Nov 02 20:48 Eastern Standard Time
+"browser_player_arsenal_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/34 Testing: browser_player_combat_rules
+17/34 Test: browser_player_combat_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_combat_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_player_combat_rules" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+COMBAT_SUMMARY damage_cases=1600 default_cases=8 emp_cases=64 dodge_cases=150 projectile_cases=308 events=316 world_queries=228 purged=32 max_error=0 shot_bytes=144 failures=0
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_combat_rules" end time: Nov 02 20:48 Eastern Standard Time
+"browser_player_combat_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/34 Testing: browser_fire_dispatch_rng
+18/34 Test: browser_fire_dispatch_rng
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_fire_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_fire_dispatch_rng" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+FIRE_SUMMARY init_cases=96 fx_cases=35 seeded_frames=480 restarts=4 fx_probe_draws=1209 sequence_draws=7828 max_shots=10 max_fx=48 max_error=0 failures=0
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_fire_dispatch_rng" end time: Nov 02 20:48 Eastern Standard Time
+"browser_fire_dispatch_rng" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/34 Testing: browser_local_pack_combat_rng
+19/34 Test: browser_local_pack_combat_rng
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_battle_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_local_pack_combat_rng" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+BATTLE_SUMMARY roads=3 frames=720 rival_probes=192 probe_fires=13 restarts=3 respawns=12 smoke=753 contacts=118 collections=14 paused=15 countdown=12 sequence_draws=25504 max_shots=17 max_fx=112 max_error=2.5934809855243657e-13 failures=0
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"browser_local_pack_combat_rng" end time: Nov 02 20:48 Eastern Standard Time
+"browser_local_pack_combat_rng" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/34 Testing: browser_flight_and_skyline_parity
+20/34 Test: browser_flight_and_skyline_parity
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_core_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_flight_and_skyline_parity" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+2940 browser flight steps; 81 spline/arc/tangent samples; 8 gates. Worst absolute error 2.61e-12.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_flight_and_skyline_parity" end time: Nov 02 20:48 Eastern Standard Time
+"browser_flight_and_skyline_parity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/34 Testing: bounded_rendering_policy
+21/34 Test: bounded_rendering_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_render_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"bounded_rendering_policy" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Render bounds, camera culling, and overload policy checked without graphics.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"bounded_rendering_policy" end time: Nov 02 20:48 Eastern Standard Time
+"bounded_rendering_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/34 Testing: current_browser_race_rules
+22/34 Test: current_browser_race_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_race_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"current_browser_race_rules" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1262 actual browser race-rule steps, 32 scenarios; worst error 0; 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"current_browser_race_rules" end time: Nov 02 20:48 Eastern Standard Time
+"current_browser_race_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/34 Testing: race_session_lifecycle
+23/34 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_session_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"race_session_lifecycle" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 02 20:48 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/34 Testing: menu_activation_policy
+24/34 Test: menu_activation_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_menu_policy_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"menu_activation_policy" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Menu release, focus, consumption and simultaneous-input policy passed.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"menu_activation_policy" end time: Nov 02 20:48 Eastern Standard Time
+"menu_activation_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/34 Testing: browser_route_recovery
+25/34 Test: browser_route_recovery
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_recovery_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_route_recovery" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+357 actual browser recovery steps; 83 tangent and 28 nearest cases; worst error 2.3e-13; 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_route_recovery" end time: Nov 02 20:48 Eastern Standard Time
+"browser_route_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/34 Testing: all_browser_road_geometry
+26/34 Test: all_browser_road_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_all_roads_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"all_browser_road_geometry" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+9 browser roads; 18052 sample/tangent pairs; 117 gates; 729 curve and 189 nearest cases; two-lap integration on every road; worst error 4.55e-12; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"all_browser_road_geometry" end time: Nov 02 20:48 Eastern Standard Time
+"all_browser_road_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/34 Testing: browser_road_picker
+27/34 Test: browser_road_picker
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_road_picker_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_road_picker" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+20 actual browser picker cases, 36 minimap cases; initialization/restart on 9 roads; no progression writes; 0 failures.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"browser_road_picker" end time: Nov 02 20:48 Eastern Standard Time
+"browser_road_picker" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/34 Testing: browser_city_clearance
+28/34 Test: browser_city_clearance
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_city_clearance_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_city_clearance" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+1534 browser corridor queries; 651 fitting cases; city 404 buildings (104 lowered, 221 rejected); 0 sampled route/AABB intersections; all-road independence; worst error 3.87e-12; 0 failures.
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"browser_city_clearance" end time: Nov 02 20:48 Eastern Standard Time
+"browser_city_clearance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/34 Testing: browser_finish_results
+29/34 Test: browser_finish_results
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_finish_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_finish_results" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+270 browser autopilot controls; 6 solo summaries; nine-road session completion/motion/results/restart/cancellation; worst 6.22e-15; 0 failures.
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"browser_finish_results" end time: Nov 02 20:48 Eastern Standard Time
+"browser_finish_results" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/34 Testing: browser_collision_primitives
+30/34 Test: browser_collision_primitives
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_physics_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_collision_primitives" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser collision: 1344 shapes, 400 ordered cell queries, 120 segments, 720 car steps, 432 course shapes across nine roads; finite torus-center guard; worst 3.87e-12; 0 failures.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_collision_primitives" end time: Nov 02 20:48 Eastern Standard Time
+"browser_collision_primitives" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/34 Testing: browser_course_furniture
+31/34 Test: browser_course_furniture
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_course_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_course_furniture" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Nine-road furniture: 10307 Float32 dot matrices, 1782 prefab transforms, 1650 ordered colliders; road replacement/roam/contact; worst 1.63e-11, dot quantization 0.000122; 0 failures.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_course_furniture" end time: Nov 02 20:48 Eastern Standard Time
+"browser_course_furniture" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/34 Testing: browser_shared_scenery
+32/34 Test: browser_shared_scenery
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_shared_scenery_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_shared_scenery" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Shared scenery: 39 browser transforms, 48 ordered solid shapes, all-road clearance/independence/roam; 10 actual FogExp2 and 15 source sculpt-mask cases; worst 1.81e-11; 0 failures.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_shared_scenery" end time: Nov 02 20:48 Eastern Standard Time
+"browser_shared_scenery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/34 Testing: browser_hero_asset
+33/34 Test: browser_hero_asset
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_hero_asset_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_hero_asset" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Control hero: 12 actual browser replacement transforms/world bounds; invalid-size and mesh resource/finite-payload guards; source glow=2.6; worst 5.68e-14; 0 failures.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_hero_asset" end time: Nov 02 20:48 Eastern Standard Time
+"browser_hero_asset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/34 Testing: browser_canonical_city_core
+34/34 Test: browser_canonical_city_core
+Command: "C:/Users/User/Projects/neon_c/win_app/build/battle-native/rr_canonical_city_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/battle-native
+"browser_canonical_city_core" start time: Nov 02 20:48 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Canonical fixed core: kept=266 removed=138 source=413 total=679; 1239 browser collision queries, 18052 route samples (0 contacts), 115 source crown matrices; max world=991/1024, city=679/700; resident mesh worst 64*2208*36 bytes; errors 4.44e-16 / Float32 crown 6.05e-05; 0 failures.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"browser_canonical_city_core" end time: Nov 02 20:48 Eastern Standard Time
+"browser_canonical_city_core" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 02 20:48 Eastern Standard Time

@@ -1,0 +1,18 @@
+{
+  "modified": {
+    "CMakeLists.txt": "837574ae342f1c9c39867d44f7cbccd27d7be66a747c3b8477e7dc623eb14876",
+    "tools/race-rules-check/CMakeLists.txt": "15860ee1c7bf8cff76f0c0d290e44e53c1c1eb991df2516929966247dfcff1c3"
+  },
+  "added": [
+    "src/experimental/rr_city_catalog.h",
+    "src/experimental/rr_city_catalog.c",
+    "src/experimental/generated_city_catalog.h",
+    "tools/capture-city-catalog.mjs",
+    "tests/test_city_catalog.c",
+    "tests/generated_city_catalog_reference.h",
+    "reference/city-catalog.json"
+  ],
+  "app_runtime_changes": false,
+  "new_runtime_assets": false,
+  "current_window_files_touched": false
+}

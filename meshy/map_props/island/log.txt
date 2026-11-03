@@ -1,0 +1,30 @@
+[1/2] text-to-3d preview (geometry)  01a1949f-7992-7588-b8ac-001d5ae54ba7
+[text-to-3d] IN_PROGRESS 1%
+[text-to-3d] IN_PROGRESS 3%
+[text-to-3d] IN_PROGRESS 7%
+[text-to-3d] IN_PROGRESS 20%
+[text-to-3d] IN_PROGRESS 35%
+[text-to-3d] IN_PROGRESS 51%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 36s
+[2/2] text-to-3d refine (textures)  01a194a0-0ccb-732e-ac64-7da7a955bce9
+[text-to-3d] IN_PROGRESS 0%
+[text-to-3d] IN_PROGRESS 34%
+[text-to-3d] IN_PROGRESS 49%
+[text-to-3d] IN_PROGRESS 69%
+[text-to-3d] IN_PROGRESS 99%
+[text-to-3d] SUCCEEDED 100%
+      ok in 40s
+Status: SUCCESS
+Task Id: 01a194a0-0ccb-732e-ac64-7da7a955bce9
+Generated text-to-3d-refine
+Saved to:
+- island\model.glb
+- island\thumbnail.png
+- island\texture_0_base_color.png
+- island\texture_0_metallic.png
+- island\texture_0_normal.png
+- island\texture_0_roughness.png
+Metadata path: island\meta.json
+meshy-cli 0.7.3 available (current 0.4.4), run: npm i -g meshy-cli@latest

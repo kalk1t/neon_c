@@ -1,0 +1,60 @@
+-- Configuring done (0.0s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/ui-theme-native
+[ 20%] Built target rr_core
+[ 22%] Built target rr_ui_layout_tests
+[ 24%] Built target rr_facade_tests
+[ 25%] Built target rr_mesh_loader_tests
+[ 27%] Built target rr_city_catalog_tests
+[ 29%] Built target rr_city_batching_tests
+[ 32%] Built target rr_city_repacking_tests
+[ 36%] Built target rr_city_triangle_tests
+[ 41%] Built target rr_city_occlusion_tests
+[ 46%] Built target rr_city_witness_tests
+[ 52%] Built target rr_city_coverage_tests
+[ 55%] Built target rr_poster_tests
+[ 56%] Built target rr_ai_tests
+[ 58%] Built target rr_rival_tests
+[ 60%] Built target rr_coin_tests
+[ 62%] Built target rr_pack_tests
+[ 63%] Built target rr_targeting_tests
+[ 64%] Built target rr_arsenal_tests
+[ 66%] Built target rr_combat_tests
+[ 68%] Built target rr_fire_tests
+[ 70%] Built target rr_battle_tests
+[ 71%] Built target rr_local_run_tests
+[ 73%] Built target rr_core_tests
+[ 74%] Built target rr_render_policy_tests
+[ 75%] Built target rr_race_tests
+[ 76%] Built target rr_session_tests
+[ 78%] Built target rr_menu_policy_tests
+[ 80%] Built target rr_recovery_tests
+[ 82%] Built target rr_all_roads_tests
+[ 84%] Built target rr_road_picker_tests
+[ 86%] Built target rr_city_clearance_tests
+[ 87%] Built target rr_finish_tests
+[ 88%] Built target rr_physics_tests
+[ 89%] Built target rr_course_tests
+[ 91%] Built target rr_shared_scenery_tests
+[ 93%] Built target rr_hero_asset_tests
+[ 95%] Built target rr_canonical_city_tests
+[ 96%] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.obj
+test_ui_fonts.c
+[ 97%] Linking C executable rr_ui_font_tests.exe
+[ 97%] Built target rr_ui_font_tests
+[ 97%] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.obj
+main.c
+[ 98%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.obj
+rr_scene.c
+[ 99%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.obj
+rr_ui.c
+C:\Users\User\Projects\neon_c\win_app\src\presentation\rr_ui.c(31): error C2220: the following warning is treated as an error
+C:\Users\User\Projects\neon_c\win_app\src\presentation\rr_ui.c(31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Projects\neon_c\win_app\src\presentation\rr_ui.c(31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Projects\neon_c\win_app\src\presentation\rr_ui.c(71): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+NMAKE : fatal error U1077: '"C:\Program Files\CMake\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\RoadstersRace.dir\src\presentation\rr_ui.c.obj.d --working-dir=C:\Users\User\Projects\neon_c\win_app\build\ui-theme-native --filter-prefix="Note: including file: " -- "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe" @C:\Users\User\AppData\Local\Temp\nm410C.tmp' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\RoadstersRace.dir\build.make /nologo -SL                 CMakeFiles\RoadstersRace.dir\build' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\Makefile2 /nologo -LS                 all' : return code '0x2'
+Stop.

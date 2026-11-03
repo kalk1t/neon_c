@@ -1,0 +1,28 @@
+image-to-image 01a18e13-9685-756b-9303-ae33e7de4cb2
+[image-to-image] IN_PROGRESS 30%
+[image-to-image] IN_PROGRESS 90%
+[image-to-image] SUCCEEDED 100%
+      ok in 25s
+{
+  "resource": "image-to-image",
+  "id": "01a18e13-9685-756b-9303-ae33e7de4cb2",
+  "status": "SUCCEEDED",
+  "type": "image-to-image",
+  "progress": 100,
+  "created_at": 1793385011633,
+  "finished_at": 1793385041684,
+  "image_urls": [
+    "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a18e14-0ba1-7149-be59-aff999a17fe0_part_0.png?Expires=1793644241&Signature=QYo~Uqt-lHw~ZW9ENKaVaExEGqPU-11AYQBlxP4wKEAnOu1bUsNxpknCf0wp2sRwEuEid4q1aZ5hv6hC2gDZg3zPMXgOwrYHQw4TBDQAy5EXkII8Ak5t1rIYPIkVLJePIraPQfOBzw9HWURxXM-ItYF6dqIEcaamQsXD1ACxWtNogxKRLQfcIXINz4M6vlxXbNnXsSqpsLqqSKGZoXL-JGn0jsCyuEpqNTPjjUJ6PuROlDHsrn4ep5vESrIH6FvTjscUMQhYTcp9aC3w-cOighKfe~oepXQ0W83RZjxe-YxKpAClOH9u7akvh5gsQ3~FrzeeZUL6CeEyG-Mc39Upjw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a18e14-0ba1-7149-be59-aff999a17fe0_part_1.png?Expires=1793644241&Signature=MMhoHypXGexvPiLTheSm9sikFx92cX7CFcbJ~-ALQynG797qopJCp0o6301AKhT8BfhrhROfLSTI3eJKahzpdaHmTXzwNc~grvRGK-plIHTJKECOk6O1OxpImvTH74rjpAAQM0bOl5qSW-jjTrvVWsmqBSbdfe0DXsRCW7MRuPM55xZ5QghaA5aejYyqikap-zdFzZw2p6YMCkcv5XIGA5Z8C~NSQP9PVBQaf0WRCLD7aOcjncSofBu~vZeiz0Xi-aSZDwfM~tauTnRh2vxCCYbrXUq6zSoI-wYnPO3XrssK-Q1jamZce~nGE5j2H9T68pOaAYGqyq2w0J8T966j6A__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a18e14-0ba1-7149-be59-aff999a17fe0_part_2.png?Expires=1793644241&Signature=bj52nRq7gQxh0qLFj4jP~GvNrgkvc8HyZqVOfQ0xugN4eSkcqUCOV2WNdX5VQs7QtYSj-ISwPhpzOiAVtIInCchhJrKFPlSoxfHLeLjznMyLrfQb8CJ0uVJzV0MUN1GQq0VlL0YqqlJ5af7AXraJyQAQRKjpBxJZkDz8SRpLaR2VPBZVCOGM5UTC~6kBTbXP3Pm61LgcLIBF0uU6YBB~8vpgLjtnFxA~hnZHV~9xUsdblCIOGvEEDbwhPiiZUeMyfnqmcrJblPnx7sF3XMJcJXEL1OuZIp5RInpGesNtKUSZz2vzuFaDVbv443QBmpM6F-dFVihMoSdcVudQ2M~4DQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  ],
+  "elapsed_seconds": 25.32,
+  "_notice": {
+    "update": {
+      "current": "0.4.4",
+      "latest": "0.7.0",
+      "message": "meshy-cli 0.7.0 available (current 0.4.4), run: npm i -g meshy-cli@latest",
+      "command": "npm i -g meshy-cli@latest"
+    }
+  }
+}

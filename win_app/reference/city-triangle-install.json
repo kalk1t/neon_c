@@ -1,0 +1,18 @@
+{
+  "modified": {
+    "CMakeLists.txt": "133f583951d724a469a63d171578f2a33c3f0de8927eb3fd36de90aa33279b65",
+    "tools/race-rules-check/CMakeLists.txt": "5866bbedd1a54b30981249a681f3c40c9f5c3317ba3ef9b91b96841f83fcf2de"
+  },
+  "added": [
+    "src/experimental/rr_city_triangle.h",
+    "src/experimental/rr_city_triangle.c",
+    "tests/test_city_triangle.c",
+    "tests/generated_city_triangle_reference.h",
+    "tools/capture-triangle-reference.mjs",
+    "reference/city-triangle-reference.json"
+  ],
+  "runtime_changes": false,
+  "new_runtime_assets": false,
+  "existing_source_fixture_reused": true,
+  "current_window_output_changed": false
+}

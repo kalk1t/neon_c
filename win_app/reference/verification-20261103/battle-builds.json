@@ -1,0 +1,55 @@
+{
+  "reference\\verification-20261103\\battle-native-thirtyfour-tests.log": "4bf55795421856add3bb34f25681ab5bcb2cb59bc883a8875b8c2e3d1fd6aab9",
+  "reference\\verification-20261103\\battle-wasm-thirtyfour-tests.log": "6bda7d9eca0e4199fee0c89caade0024d220acff9a5abcd5da6911cf5732460b",
+  "build/battle-native/bin/RoadstersRace.exe": {
+    "sha256": "6a23e87045550beba655d0d672cf780633868a3832e3e1cdc872589ef6b37879",
+    "bytes": 879616
+  },
+  "build/battle-native/rr_battle_tests.exe": {
+    "sha256": "33659e61d6112e5aba7cfc0b97e87420fbb334d86ed8849e19ee672bb91087d1",
+    "bytes": 12798976
+  },
+  "build/battle-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/battle-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/battle-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/battle-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "d18e1f9c4508c731cf0b7172b9fe81c43e915cf261ea980207183e5b48786f88",
+    "tools/race-rules-check/CMakeLists.txt": "afa3f7397ca6ff5782fbb8397d842c94e76f7a7f19a121e8c548ce7c85ad3cfb",
+    "src/core/rr_pack.h": "00fecb31492423f3b0c5d30f0f11732278986cef231df8b211c0d28d2894e80e",
+    "src/core/rr_pack.c": "b8070fc7718b5a933f997fc6d95b5dc1f440c759bcfdae47be2df0486efe92c9",
+    "src/core/rr_coins.h": "bab08d0054ea9e9df1330426a3da2ca2d9de79bee1a0e27141c510a6f3bfe5fc",
+    "src/core/rr_coins.c": "b852b31116f578cb07ad33ad9a91f923d8b626b264742a70b8a3ab3938f13ac2",
+    "src/core/rr_fire.h": "74ac05706f2663c180e3fdaf46294a572850193b453cfd8fc359327fda9a3b00",
+    "src/core/rr_fire.c": "1b54c762206b4354a35f52bae9cb697895f0d56354c8c5c57a11a7e4053b439a",
+    "src/core/rr_battle.h": "2c6ac769c0893a7c28f609da17fb9483d9f9ce4b195157ae5e44e39cc7f6f09d",
+    "src/core/rr_battle.c": "a775d405df50bc06b50e79af0c84bc70a76b04c1de37ed37a6cc4ab61cf67782",
+    "tests/test_battle.c": "918ba19d97f60d475192f243ececbf751871e153a2a31d50bcae0693680f2a37",
+    "tests/generated_battle_reference.h": "b4fad6747cb2e43444abd4c4c99de87151e17f0ab0fcbbd41150cc7c06b30f52",
+    "tools/capture-battle.mjs": "70d9185d914888f6ab4e1b3621ddd9598c5f695ed9a8c13f0e4b549eb7ef0afa",
+    "tools/prepare-battle-reference.py": "d281240ce4a3c0e158c10a0082c9551c061106b783d6b9d2574879de7192d302",
+    "reference/battle-reference.json": "a376d09dc272449a8a5c7d1bcbe029585f4b2b79167c9a7685978559cec61d07",
+    "reference/battle-results.json": "6209a3b68366ff903dea0f1d70c2fb7d6b9af284062e6b67ed6fb5683a966065",
+    "docs/LOCAL-PACK-COMBAT-2026-11-03.md": "d9f131c4d8c5a389361fd8a46b8eff61bfd90df08278d379fce2a585a6a31cee",
+    "README.md": "6f3f4634bcf22e07e5df7e2914c339a05a7e8b1113f2a435940499c34f9176da",
+    "docs/PARITY.md": "df41e1fd30c889742d21db57705cf717d632db480eb174420f4f71bf5e29b5c3"
+  },
+  "suites_each": 34,
+  "previous_pack_targeting_arsenal_combat_fire_summaries_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "desktop": "No retry; prior approval timeout/process-unverified evidence preserved.",
+  "scope": "Full local roster post-player phase; actual player prefix and world/renderer/audio/reward qualification remain open"
+}

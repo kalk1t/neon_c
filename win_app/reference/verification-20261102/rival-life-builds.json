@@ -1,0 +1,52 @@
+{
+  "reference\\verification-20261102\\rival-life-native-twentyseven-tests.log": "8556f2ada11b0a7eeea2f6dc253a1b1e4f4683252366367e578389976c048664",
+  "reference\\verification-20261102\\rival-life-wasm-twentyseven-tests.log": "9d44ad938c04bd4ce8ac884e5f4b2b2f99e75d19b509bb28b38296b41ae1b994",
+  "build/rival-life-native/bin/RoadstersRace.exe": {
+    "sha256": "d54abb785c909fd9ed4e55e53e83b445a5a3b166d5539653044e500b2ddd5af3",
+    "bytes": 879616
+  },
+  "build/rival-life-native/rr_rival_tests.exe": {
+    "sha256": "c1c9c0a8d2a63cca9113d41c46a7d13b635cdd75cf3c6e3904c12da1c0704c81",
+    "bytes": 2442240
+  },
+  "build/rival-life-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/rival-life-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/rival-life-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/rival-life-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "changed_paths": {
+    "CMakeLists.txt": "18b4b069755d7671b0a83a1aadb9e7d06ba0beb60d521fa0f8d223b132d1bf82",
+    "tools/race-rules-check/CMakeLists.txt": "08629123eb0f45133a5006a6c05617c374bb3058d0be625a6990395b48ba60d7",
+    "src/core/rr_rival.h": "408d31207a257a16fb1cd4b3a57052b4b766418468d047c156ba916c9cec60a4",
+    "src/core/rr_rival.c": "bedfa0d989f8e29237c727d390144006b9873401b858e82d3ba58163d62fe1b6",
+    "tests/test_rival.c": "97be0200fc1a2687e7469658b4d56da2f9600b60a64eda84672700d4211244fa",
+    "tests/generated_rival_reference.h": "2c99a1daa5328d900f6ab51a1af116257a0c85c9351bcc1528df97b0ae15d893",
+    "tools/capture-rivals.mjs": "dfea4b7fb7165d6d63fdde75831f6dd86b3a74205653a148306fd7448edaeb3f",
+    "tools/prepare-rival-reference.py": "7b948a7e29a7963bad3439172a6bea014ed35ee82beac78691f8dd9e46f41e8e",
+    "reference/rival-reference.json": "af25e89f45ea03daf29cb6c7ba8434dc0a23a73aa520ea7d19cbe33a649b83cb",
+    "reference/rival-life-results.json": "80186ab673925cf39222609540c057ad8d91cd96565ca96bd30ec04eb153208b",
+    "reference/desktop-reconciliation-20261102.json": "8355ff99c6ac588ec0e0c98846cded91ef216c8ad9a899ac771491d9fd4119dc",
+    "docs/RIVAL-CONTACTS-AND-LIFECYCLE-2026-11-02.md": "0484d97599a5fc88b7995de2da24d59d9429039eb76e4d05048424942968dd6c",
+    "README.md": "17454f9b3274a14971bf584f05d463fb86ead909d2576743b7b8392c920c61a3",
+    "docs/PARITY.md": "3a8022cdaff712437196a013e7787869db531293584a02bf1b4408af3772d51b"
+  },
+  "suites_each": 27,
+  "summaries_identical": true,
+  "reference_hashes_rechecked": true,
+  "existing_runtime_sources_assets_and_preload_unchanged": true,
+  "new_shared_module": "rr_rival.c; live rivals inactive",
+  "desktop": "Window3148188 absent in supported inventory; Task Manager approval timed out; process shutdown unverified. No input/launch/denied retry.",
+  "graphics": "Unrun, no visual/performance qualification.",
+  "human_race_acceptance": false
+}

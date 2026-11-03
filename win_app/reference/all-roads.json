@@ -1,0 +1,131 @@
+{
+  "captured_utc": "2026-11-02T17:24:16.477Z",
+  "package_version": "0.2.3",
+  "source_identity": "Current working file hashes; not a verified Git/deployed/frozen release.",
+  "content_hashes_verified_twice": true,
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "node_modules/three/package.json",
+      "sha256": "f9c474a27c920b9435353a6235968f4453436bee0444fac7e5fd289c8fa463de"
+    },
+    {
+      "path": "node_modules/three/src/extras/curves/CatmullRomCurve3.js",
+      "sha256": "768ef1d2e91fbf024bfe5d97ddeadc7c41764689a3e7a775340824d05b1c9281"
+    },
+    {
+      "path": "node_modules/three/src/extras/core/Curve.js",
+      "sha256": "e15b70663608e578e693813d88e46d1da9e4103b56b457334f6858613690bda2"
+    }
+  ],
+  "roads": [
+    {
+      "id": 1,
+      "name": "SKYLINE LOOP",
+      "control_points": 18,
+      "length": 5638.1664156270135,
+      "samples": 1410,
+      "gates": 8,
+      "ai": 1,
+      "fire": 1
+    },
+    {
+      "id": 2,
+      "name": "VIOLET RUN",
+      "control_points": 39,
+      "length": 6234.937935145902,
+      "samples": 1559,
+      "gates": 9,
+      "ai": 1.009,
+      "fire": 0.95
+    },
+    {
+      "id": 3,
+      "name": "GLASS CANYON",
+      "control_points": 40,
+      "length": 6842.8886084712685,
+      "samples": 1711,
+      "gates": 10,
+      "ai": 1.018,
+      "fire": 0.9
+    },
+    {
+      "id": 4,
+      "name": "HALO DRIFT",
+      "control_points": 43,
+      "length": 7424.60149105539,
+      "samples": 1857,
+      "gates": 11,
+      "ai": 1.027,
+      "fire": 0.85
+    },
+    {
+      "id": 5,
+      "name": "NEON SPIRAL",
+      "control_points": 45,
+      "length": 8020.423805634269,
+      "samples": 2006,
+      "gates": 13,
+      "ai": 1.036,
+      "fire": 0.8
+    },
+    {
+      "id": 6,
+      "name": "STORM LINE",
+      "control_points": 47,
+      "length": 8614.16032688517,
+      "samples": 2154,
+      "gates": 14,
+      "ai": 1.045,
+      "fire": 0.75
+    },
+    {
+      "id": 7,
+      "name": "RAZOR CROWN",
+      "control_points": 49,
+      "length": 9206.84601691539,
+      "samples": 2302,
+      "gates": 16,
+      "ai": 1.054,
+      "fire": 0.7
+    },
+    {
+      "id": 8,
+      "name": "VOID SPRINT",
+      "control_points": 51,
+      "length": 9805.003630494663,
+      "samples": 2452,
+      "gates": 17,
+      "ai": 1.063,
+      "fire": 0.65
+    },
+    {
+      "id": 9,
+      "name": "APEX OVERDRIVE",
+      "control_points": 53,
+      "length": 10400.310317175385,
+      "samples": 2601,
+      "gates": 19,
+      "ai": 1.072,
+      "fire": 0.6
+    }
+  ],
+  "totals": {
+    "samples": 18052,
+    "gates": 117,
+    "curve_cases": 729,
+    "nearest_cases": 189
+  },
+  "scope": "Road metadata, control data, centripetal curves, arc-length mapping, track samples/tangents, ring placement/selection, gate transforms/samples and nearest searches. No graphics, city corridor, road picker/unlocks, AI execution or services."
+}

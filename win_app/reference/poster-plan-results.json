@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "posters": 97,
+    "source_vertices": 582,
+    "double_sided_vertices": 1164,
+    "byte_exact_hashes": 97,
+    "source_colliders_unchanged": 97,
+    "within_existing_mesh_bounds": 97,
+    "glyph_paths": 28,
+    "merged_top64_vertices": 112668,
+    "vertex_bound": 141312,
+    "atlas_mip_bytes": 2796204,
+    "quadrants": [
+      23,
+      23,
+      24,
+      27
+    ],
+    "worst_plane_error": 8.58306885e-05,
+    "failures": 0
+  },
+  "native_wasm_identical": true,
+  "runtime_integration": false
+}

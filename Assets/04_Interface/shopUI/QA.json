@@ -1,0 +1,16 @@
+{
+  "reference_sizes": "PASS",
+  "coin_rgba": "PASS",
+  "coin_transparent_corners": "PASS",
+  "arithmetic": "PASS",
+  "components_count": 32,
+  "runtime_integration": "NOT IMPLEMENTED",
+  "visual_review": "Completed: layouts, wording, selected wheel coin, empty stages, and separate states checked.",
+  "checks": {
+    "reference_pngs": 6,
+    "all_expected_dimensions": true,
+    "coin_corner_alpha": 0,
+    "all_pngs_decodable": true,
+    "no_font_files_in_package": true
+  }
+}

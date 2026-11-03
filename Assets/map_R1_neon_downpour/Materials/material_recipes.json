@@ -1,0 +1,61 @@
+{
+  "status": "proposed starting values; not PBR texture files",
+  "color_encoding": "Hex colors are display/sRGB colors. Convert appropriately for the target shader's numeric color inputs.",
+  "recipes": [
+    {
+      "id": "deck_graphite",
+      "base_color_hex": "#202630",
+      "metallic": 0.65,
+      "roughness_dry": 0.42,
+      "roughness_wet": 0.24,
+      "notes": "Keep broad structure neutral; add wear with authored masks."
+    },
+    {
+      "id": "brushed_chrome",
+      "base_color_hex": "#9DA4AB",
+      "metallic": 1.0,
+      "roughness": 0.3,
+      "notes": "Use as trim, not every panel."
+    },
+    {
+      "id": "route_cyan",
+      "emissive_hex": "#26DDF5",
+      "emission_strength_start": 1.0,
+      "notes": "Narrow strips; tune with the game's exposure and bloom."
+    },
+    {
+      "id": "accent_magenta",
+      "emissive_hex": "#EF30BA",
+      "emission_strength_start": 0.8,
+      "notes": "Secondary navigation/accent material."
+    },
+    {
+      "id": "dark_glass",
+      "base_color_hex": "#152732",
+      "metallic": 0.1,
+      "roughness": 0.16,
+      "notes": "Opaque/tinted fallback first; transparency only when beneficial."
+    },
+    {
+      "id": "wet_basalt",
+      "base_color_hex": "#35413D",
+      "metallic": 0.0,
+      "roughness_wet": 0.34,
+      "notes": "Add moss and local roughness variation for R3."
+    },
+    {
+      "id": "foliage",
+      "base_color_hex": "#28523C",
+      "metallic": 0.0,
+      "roughness": 0.7,
+      "notes": "Prefer alpha-tested cards or simple silhouettes; test backfaces."
+    },
+    {
+      "id": "water",
+      "base_color_hex": "#102837",
+      "metallic": 0.0,
+      "roughness": 0.12,
+      "notes": "Runtime water shader or inexpensive fallback; visual surface only."
+    }
+  ]
+}

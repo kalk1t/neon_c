@@ -1,0 +1,25 @@
+{
+  "source": "../game/public/models/props/city_tower.glb",
+  "converted": "reference/converted-assets/city-crown-png.glb",
+  "converted_sha256": "9bce7dbbb600431f050acc857a7d2fccef8421782179dc2bdddaaab40de55393",
+  "mesh": {
+    "path": "assets/course/city-crown.rrmesh",
+    "sha256": "aa55ac901771d625fa68be64616263e79103e21e8a1988a865ac2d7fe5e65709",
+    "vertices": 27000,
+    "source_vertices": 14357,
+    "source_height": 1,
+    "unit_height_scale": 1
+  },
+  "texture": {
+    "path": "assets/models/city-crown-base.png",
+    "sha256": "d8badab0ddaa980dd0461087a95fb14a7311215d6f7b7f0d2266cbc3318ec3b8",
+    "width": 1024,
+    "height": 1024
+  },
+  "double_sided": true,
+  "sampler": {
+    "magFilter": 9729,
+    "minFilter": 9987
+  },
+  "scope": "Original first mesh/node identity, original indexed triangle order flattened losslessly, same UV/normals; decoded base-color map only. Normal/roughness/PBR environment remain unported; no new generation."
+}

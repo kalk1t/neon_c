@@ -1,0 +1,41 @@
+{
+  "captured_utc": "2026-11-02T18:33:42.388Z",
+  "sources": [
+    {
+      "path": "package.json",
+      "sha256": "0fce878c98e5d5efd86e67daa02dc9503a142095010314b5c83b977d52d0d4aa"
+    },
+    {
+      "path": "src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b"
+    },
+    {
+      "path": "src/car.js",
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "src/course.js",
+      "sha256": "1740e742c04677f1481cafdba5afd64997d9d56639ff2530df9d398bdb16e70e"
+    },
+    {
+      "path": "src/props.js",
+      "sha256": "9d1a97df6f0988eec60c91490c58a789da20c337c110df97f5ab58affa9a2033"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    }
+  ],
+  "content_hashes_verified_twice": true,
+  "shape_cases": 1344,
+  "nonfinite_browser_cases": 5,
+  "world_cases": 400,
+  "segment_cases": 120,
+  "flight_steps": 720,
+  "course_shapes": 432,
+  "scope": "Actual browser shape resolution, cell-list order, segment sampling, Car.update collision response and extracted start/ring collider construction. Native prototype city layout remains distinct; no rendering, accounts or progress."
+}

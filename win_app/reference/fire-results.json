@@ -1,0 +1,30 @@
+{
+  "native": {
+    "init_cases": 96,
+    "fx_cases": 35,
+    "seeded_frames": 480,
+    "restarts": 4,
+    "fx_probe_draws": 1209,
+    "sequence_draws": 7828,
+    "max_shots": 10,
+    "max_fx": 48,
+    "max_error": 0.0,
+    "failures": 0
+  },
+  "wasm": {
+    "init_cases": 96,
+    "fx_cases": 35,
+    "seeded_frames": 480,
+    "restarts": 4,
+    "fx_probe_draws": 1209,
+    "sequence_draws": 7828,
+    "max_shots": 10,
+    "max_fx": 48,
+    "max_error": 0.0,
+    "failures": 0
+  },
+  "legacy_pack_targeting_arsenal_combat_unchanged": true,
+  "production_active": false,
+  "graphics": "Unrun",
+  "rng_profile": "Pinned Three warm shared Sprite geometry/cached textures; Sound ctx=null; explicit math/FX/UUID/audio-blaster draws"
+}

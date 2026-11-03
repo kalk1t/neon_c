@@ -1,0 +1,35 @@
+{
+  "native": {
+    "roads": 9,
+    "resets": 54,
+    "respawns": 72,
+    "recovery_rule_cases": 108,
+    "two_lap_rule_frames": 252,
+    "mixed_dt_steps": 1296,
+    "contact_cases": 84,
+    "contact_pairs": 843,
+    "player_hit_cues": 8,
+    "max_state_error": 4.09272615798e-12,
+    "runtime_rivals": false,
+    "network_account_behavior": false,
+    "failures": 0
+  },
+  "wasm": {
+    "roads": 9,
+    "resets": 54,
+    "respawns": 72,
+    "recovery_rule_cases": 108,
+    "two_lap_rule_frames": 252,
+    "mixed_dt_steps": 1296,
+    "contact_cases": 84,
+    "contact_pairs": 843,
+    "player_hit_cues": 8,
+    "max_state_error": 4.09272615798e-12,
+    "runtime_rivals": false,
+    "network_account_behavior": false,
+    "failures": 0
+  },
+  "summaries_identical": true,
+  "active_rivals": false,
+  "human_race_acceptance": false
+}

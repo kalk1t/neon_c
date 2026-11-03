@@ -1,0 +1,46 @@
+{
+  "resource": "text-to-3d",
+  "task": {
+    "id": "01a194a0-0611-7518-9fc1-eb90d8a652f5",
+    "type": "text-to-3d-refine",
+    "name": "",
+    "status": "SUCCEEDED",
+    "progress": 100,
+    "preceding_tasks": 0,
+    "created_at": 1793494877734,
+    "started_at": 1793494877740,
+    "finished_at": 1793494930899,
+    "expires_at": 0,
+    "task_error": null,
+    "model_urls": {
+      "glb": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/model.glb?Expires=4947091200&Signature=fDg9IwSHh1yNl02hPoeQ~WIjboSJtR~f8J5djW7ZOvZNihDQuzzLOy27b7Dic7UJWU9fesVtuVtnT~ZZg30e8HMcNFEVlvkakZUOJMDwORGMXLS2Av7KMZ56UBLZqX6OtVM0TLNeyZ-Tu-HmV3G1Ei-6FEmNhvPVZjXpPBGvM-BVtqF6F7C-u8ekXu13AuLiZa6-b8LHZIv-XMXaJmPImDO0MHbGI~zewUDWOmNLXLHOtdzdMb6ib5f8sHx1A4wNEXIEqDZ10gHXTR53k13lkgXT-lEXyPdHYoRHwtVSBoJ1xi47tRAGzDtPGIo2Cf9RaXsx6Uxqp12kzxywW3Izqg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    },
+    "texture_urls": [
+      {
+        "base_color": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/texture_0.png?Expires=4947091200&Signature=hBD2lFuKMnZJfs9mQXYia7hW9CrYi73kXL5iWRpNY3a-MpFoscpuqAtWL5ogkJrnpWquAZ8OnhTXgQiAd-Q53ps6IULUTk9IKEsVXnNJcjUnCZMB393pxtZWIQ3St0jl48gvfKW5j4e-C9oxOlvS0dZDuDLRN7LGnjS27jGuSvWcvI5Udz-oOb6Z6ZgtfmNbSiGlLU0VxY6y~SGlN6ABpwi7i0yZfsxYG0A7fMKeAHXp2IATFkrhTzMp1wrLL8sBwre8jfUcWUFoQZ-s8F-FTZR8xR5gvanNW6nCul0dsRTo~lmC5OG4frU4E3UZ5zNfPSyNqua7za8C~hj3Bh-oWw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "metallic": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/texture_0_metallic.png?Expires=4947091200&Signature=E~yB1aFXboKQKr4cfsh1H8LBFnudK1xFBvQLd09jHSlZqKBNQRTDA9XvE0LkqRyjFyipD8ccPCxp6Xu2N9UeczmcbE8yjS2lP6dmm44UTx4FHlb9UpkXS3iGLeM01kf-DgNK1OZeRTFv8uhHY4zlglUDudhVuFmJq6J1ubWAaH2LhEWP6Qe~VT2CP9eoTMYhwEtesaXpmLoHLV2y01~1S~V5OnM51f3gGvVRA4oYbWtBS50BbbyKHla8kxyH7n5pWSDfiV9ZbWLVgqeX9zZnBWJHwsaKPlGIooRQCe7GDAkwVy9370fXxC50UKsxkvw8Kb2oeVn4kx2ysKk7xfkG6Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "normal": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/texture_0_normal.png?Expires=4947091200&Signature=fucfq98exCnBxxBZrO9SGXdWuVMTBcgLwR0utqiJDgqE5TSyQ9fr2U3kxAl--ej4C0y6SV6mj791nIpxC7VQ2HOz~WIQ1huApaCf3wsGuhn9xwTpkgZTyzdqmshPkO-toSLVIUeXi7QqEqIjkIdZNmLwF-AZ~skXUlbzXYl-J3blb5-zJJJEX6WLanKHP0ofc5C5XW8eKwuOcY~GDYXN6OBmBO~qiH9MpkMLW5LFr7HbE7tFRKZccQInjgRx-X3siGRFOHfXsQD26NArKBBQb2H1bNVs5TM3TJgt8Fe7qwqvskpikdZtkfUaRsgT0VBENj70jjbUdrA9JOEnP6LqAw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+        "roughness": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/texture_0_roughness.png?Expires=4947091200&Signature=BlwV~K1Aon5exGMQI7q9fVXUWOHHIvZ8j-KeHwoaVddXTj9ab9OYDsQVME-q5JgKk99FLQrBOaW0tbphFs4WSU1F7cYGlEOSFepQ~vuDVnK8pTeHNS7paE44DQD5GAci15A4~YGbKXWUqkWKPKZEpG1WVOIuTICqrysXWE~f-~42vsnIOXhpLx1T0MM2y190LnAx23eoIf8v71FOisNVier8pFkiRzqpM7l4dm3kx269EZjoyE4pJWgPW2eebLngDQxC0Rye5XNO3iDyTpYA0FY1eTmg1Y2o28Rf8q8YJ0zgAoP5PCiYcfrr6mwWSjOxQJU~4GX~pu6EZeBNDmHyzA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+      }
+    ],
+    "thumbnail_url": "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/tasks/01a194a0-0611-7518-9fc1-eb90d8a652f5/output/preview.png?Expires=4947091200&Signature=YlMsGPc4eBWSZk~m-Djx97gZi6PO5M3ejqmuz67keCecIqZ4aObaWgzGf4RcYDcF9dZ19wH6Rj0KI9yCN2LTthdg466~r~sIrb~viXink1TJiwa8wjpKNBJXS0MILzsxfooEeWDdE1ZtBC--dI-jV1OqRx1tuHU72Dx0po0AE8lYTcdMqSVQ694yi2vSlskLV037OOXHAfOCS2Y6CX~hc7cw9Rb8xMpLuXbvTiPn933t5XuCJarJxnBzUXzIOghl96cSS~anVGhX~7As9c~urxofQ6R57Z1Cr3rfIAG5WqFIIzvs-kR0BPXKijyI4rJs4~dZxRSMeofXyT7IhWc4lg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+    "consumed_credits": 10,
+    "prompt": "giant stylized koi fish sculpture, chrome body with glowing magenta and cyan fins, futuristic art installation, game asset",
+    "texture_prompt": "",
+    "texture_image_url": "",
+    "mode": "refine",
+    "model_type": "standard",
+    "seed": 2772224168,
+    "hd_texture": true,
+    "texture_resolution": "4k"
+  },
+  "saved_files": [
+    "koi\\model.glb",
+    "koi\\thumbnail.png",
+    "koi\\texture_0_base_color.png",
+    "koi\\texture_0_metallic.png",
+    "koi\\texture_0_normal.png",
+    "koi\\texture_0_roughness.png"
+  ],
+  "downloaded_at": "2026-11-01T01:02:16.965Z"
+}

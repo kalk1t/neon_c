@@ -1,0 +1,15 @@
+{
+  "views": [
+    255,
+    0
+  ],
+  "occluded_triangle_counts": {
+    "0": 7060,
+    "255": 73
+  },
+  "mask_sha256": "c9ff77dc492119dd5a64a01d1708eb4f3ab87610ae824806962fa38bec26ae6d",
+  "geometry_sha256": "1f912789fc48aa1eca8d31e07ad6fb8426fe929cf07c992467e5c59b92215fae",
+  "source_test_sha256": "21c49c7790163a9407669f0a8a0a4ab88a7849aae26dc0eff810d3e923f842bc",
+  "kernel_sha256": "761e92b078c60f46c32922fa7ddf7d87173c3107d862605855a766f2267ae393",
+  "scope": "Only targeted0/255 native mask run; bit population matches preserved coarse model. Source far/guards unchanged; no new camera sampling or runtime integration."
+}

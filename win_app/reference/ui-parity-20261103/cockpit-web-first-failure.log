@@ -1,0 +1,126 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\cockpit-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=ON -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (9.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/cockpit-web
+[0/2] Re-checking globbed directories...
+[1/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[2/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[3/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[4/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[5/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[6/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[7/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[8/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[9/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[10/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[11/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[12/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[13/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[14/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[15/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[16/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[17/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[18/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[19/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[20/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[21/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[22/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[23/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[24/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[25/142] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[26/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[27/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[28/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[29/142] Linking C static library librr_core.a
+[30/142] Building C object CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o
+FAILED: [code=1] CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe  -IC:/Users/User/Projects/neon_c/win_app/src/presentation -IC:/Users/User/Projects/neon_c/win_app/src/core -O3 -DNDEBUG -std=c17 -MD -MT CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o -MF CMakeFiles\rr_cockpit_tests.dir\tests\test_cockpit.c.o.d -o CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o -c C:/Users/User/Projects/neon_c/win_app/tests/test_cockpit.c
+In file included from C:/Users/User/Projects/neon_c/win_app/tests/test_cockpit.c:2:
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:23:38: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   23 | {0,1.49,0.004,0.005,0.6,-0.01,2,-1,0,1,"0%","00:00.00","LAP 2","READY","empty",0},
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:24:36: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   24 | {0,1.5,0.005,1.125,0.60001,0,3,2,0,2,"1%","00:01.12","LAP 3/2","HEAT 60%","partial",0},
+      |                                    ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:25:41: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   25 | {0,120.51,0.555,59.999,0.995,0.01,4,0,0,121,"56%","00:59.99","FREE ROAM","HEAT 100%","partial",0.32},
+      |                                         ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:27:31: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   27 | {0,1.49,1,119.995,0.6,1,6,2,1,1,"100%","01:59.99","LAP 6/2","OVERHEAT","full",16},
+      |                               ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:28:29: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   28 | {0,1.5,0,0,0.60001,-1,7,0,0,2,"0%","00:00.00","FREE ROAM","HEAT 60%","empty",-16},
+      |                             ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:29:42: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   29 | {0,120.51,0.004,0.005,0.995,-0.01,8,-1,0,121,"0%","00:00.00","LAP 8","HEAT 100%","empty",0},
+      |                                          ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:31:38: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   31 | {0,1.49,0.555,59.999,0.6,0.01,10,0,0,1,"56%","00:59.99","FREE ROAM","READY","partial",0.32},
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:32:43: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   32 | {0,1.5,0.999,60.015,0.60001,0.031,11,-1,1,2,"100%","01:00.01","LAP 11","OVERHEAT","full",0.64},
+      |                                           ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:33:36: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   33 | {0,120.51,1,119.995,0.995,1,12,2,0,121,"100%","01:59.99","LAP 12/2","HEAT 100%","full",16},
+      |                                    ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:35:38: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   35 | {1,1.49,0.004,0.005,0.6,-0.01,2,-1,0,1,"0%","00:00.00","LAP 2","READY","empty",0},
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:36:36: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   36 | {1,1.5,0.005,1.125,0.60001,0,3,2,0,2,"1%","00:01.12","LAP 3/2","HEAT 60%","partial",0},
+      |                                    ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:37:41: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   37 | {1,120.51,0.555,59.999,0.995,0.01,4,0,0,121,"56%","00:59.99","FREE ROAM","HEAT 100%","partial",0.16},
+      |                                         ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:39:31: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   39 | {1,1.49,1,119.995,0.6,1,6,2,1,1,"100%","01:59.99","LAP 6/2","OVERHEAT","full",8},
+      |                               ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:40:29: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   40 | {1,1.5,0,0,0.60001,-1,7,0,0,2,"0%","00:00.00","FREE ROAM","HEAT 60%","empty",-8},
+      |                             ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:41:42: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   41 | {1,120.51,0.004,0.005,0.995,-0.01,8,-1,0,121,"0%","00:00.00","LAP 8","HEAT 100%","empty",0},
+      |                                          ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:43:38: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   43 | {1,1.49,0.555,59.999,0.6,0.01,10,0,0,1,"56%","00:59.99","FREE ROAM","READY","partial",0.16},
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:44:43: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   44 | {1,1.5,0.999,60.015,0.60001,0.031,11,-1,1,2,"100%","01:00.01","LAP 11","OVERHEAT","full",0.32},
+      |                                           ^
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:45:36: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   45 | {1,120.51,1,119.995,0.995,1,12,2,0,121,"100%","01:59.99","LAP 12/2","HEAT 100%","full",8},
+      |                                    ^~~
+C:/Users/User/Projects/neon_c/win_app/tests\cockpit-reference.h:47:38: error: incompatible integer to pointer conversion initializing 'const char *' with an expression of type 'int' [-Wint-conversion]
+   47 | {2,1.49,0.004,0.005,0.6,-0.01,2,-1,0,1,"0%","00:00.00","LAP 2","READY","empty",0},
+      |                                      ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+[31/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[32/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[33/142] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+ninja: build stopped: subcommand failed.

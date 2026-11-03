@@ -1,0 +1,8 @@
+{
+  "src/core/rr_track.c": "39a93bab632f29d087f7ac440d35cf0b6703106700c23120e8683e4afd6bae3a",
+  "src/core/rr_track.h": "acfc1dc4d7713a6fe886d8d72c97eb691bf61fd78af108055b9a61851e7d10c1",
+  "src/app/main.c": "8de4dfdd1a81057425a42c40124415103eb888dc1285cf4170acb7e7d9990e7d",
+  "src/presentation/rr_scene.c": "4c500c770409e4d85027ef82507f9e37364f70b07224604deb4e533f43fc757e",
+  "CMakeLists.txt": "ff3ab731c7fb43e9b12798cfa19117126a73f68c191ad34e4ccee22b43c7f433",
+  "tools/race-rules-check/CMakeLists.txt": "b4c0669af012ee820383bf0e26522c9be83c4ef39598c80b35d124e21cff12a8"
+}

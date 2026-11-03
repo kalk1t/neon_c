@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "path": "src/materials.js",
+      "sha256": "2fdb1b83476a508f01054340bafbee7876afcc6e7153b786ca8d0bcdb16138fd"
+    },
+    {
+      "path": "src/city.js",
+      "sha256": "e33e70822487357caa4506c4b578c7a82963b9b89dddedc44a4a4ad2477a0694"
+    },
+    {
+      "path": "src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "src/roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "node_modules/three/src/math/Box3.js",
+      "sha256": "382b33a3b235b3f5a37a8949d8f8a9efdf056c62ce5ed79692b54944a80487e1"
+    },
+    {
+      "path": "node_modules/three/src/math/Ray.js",
+      "sha256": "4c88adbbefe35fefdeef8f971ce90220d44fa1699c39fc17d1c584a0c012b648"
+    }
+  ],
+  "triangle_cases": 600,
+  "camera_eyes": 264,
+  "max_eye_plane_error": 9.094947017729282e-13,
+  "scope": "Independent Three SAT triangle-box and ray backface goldens; source FrontSide body/neonC/neonM/tip and DoubleSide board. Full-scene analysis remains headless, city-only, no pixel/occlusion qualification."
+}

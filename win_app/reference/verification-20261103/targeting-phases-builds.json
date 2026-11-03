@@ -1,0 +1,57 @@
+{
+  "reference\\verification-20261103\\targeting-phases-native-thirty-tests.log": "0a5a2304406fbf2a9a3a40ea9cb9951e75e130cb5a42d9e9f218f84bf727cd8d",
+  "reference\\verification-20261103\\targeting-phases-wasm-thirty-tests.log": "dd79c7b0f22fb29af5f0f3940186108a5c0aafb41b8e3d985103044a389ed833",
+  "build/targeting-phases-native/bin/RoadstersRace.exe": {
+    "sha256": "100455d970b428fa89bcc8d800d62132f48665eacc517673628028767069798e",
+    "bytes": 879616
+  },
+  "build/targeting-phases-native/rr_targeting_tests.exe": {
+    "sha256": "0df73e99e5a2c8a2fabc865b34fd20b89a5afb28ecdbe52e9a0847a960be811b",
+    "bytes": 294912
+  },
+  "build/targeting-phases-web/bin/RoadstersRace.html": {
+    "sha256": "707d1fa1a413c17ed00d3848c89c4140f57565ab627a3fae5225a984d974cbb0",
+    "bytes": 1136
+  },
+  "build/targeting-phases-web/bin/RoadstersRace.js": {
+    "sha256": "22c63398c2c5361c0860e98fb544bbcda8126e971225a21d252bee0f0c69302a",
+    "bytes": 179363
+  },
+  "build/targeting-phases-web/bin/RoadstersRace.wasm": {
+    "sha256": "9eb55dd8f277cf9001fb741253294db2bba1344866cf4dd85eaa399889f948c8",
+    "bytes": 542673
+  },
+  "build/targeting-phases-web/bin/RoadstersRace.data": {
+    "sha256": "146aef1dc0d33d228370d363a743ad42d4d439145fe8fe3db012eb20e21e9690",
+    "bytes": 36063814
+  },
+  "preserved_desktop_reconciliation_sha256": "8355ff99c6ac588ec0e0c98846cded91ef216c8ad9a899ac771491d9fd4119dc",
+  "changed_paths": {
+    "CMakeLists.txt": "0c8f3e39f28b9c52c7b3fb2b0976392d88d1c264f4a06d154d56521a97dbc68f",
+    "tools/race-rules-check/CMakeLists.txt": "c94a81ceeb89e60a384cab751cca212887fdb37f967d08fd7fb91b30af095066",
+    "src/core/rr_pack.h": "a58a9b32ea2379512613ce036e27cb53756fef6c9e1f53e4e210bb7103fc5358",
+    "src/core/rr_pack.c": "4079b0c58732b67250e568c296337bbcc63bbec6ac2873268045803d4700e098",
+    "src/core/rr_targeting.h": "354c0a6cf6ba4ad93d15b779fda1908fd7ee9b67458b4bc88955de52fe2b664f",
+    "src/core/rr_targeting.c": "51c1fb21968836563157248d1f862176a5bdfcf7bb1b426f063a44e6915e812d",
+    "tests/test_targeting.c": "a148e332e3ec9d70186fb86724eb3e48a0653dcd00c4ed49882ade954e65e023",
+    "tests/generated_targeting_reference.h": "5db13e41b2897e36e595de900ad8047ba2155420a31695371923f96f16098510",
+    "tools/capture-targeting.mjs": "739adea96e78485f938326fc7f7c6da47c128c6d683af0eb385d1575042a64ed",
+    "tools/prepare-targeting-reference.py": "62d75a08c50a3668d4104f31573ca07371ecf7375be27c41b6ce9bbda3818241",
+    "reference/targeting-reference.json": "f34a44735d6cf5f99e7ba5100193dddc838d27a48d0324f69f808faf350a5aa8",
+    "reference/targeting-phases-results.json": "87c2093f613080fb95ad6f923d9948d952f625e6394fdbb13166c815ef07cb5c",
+    "docs/TARGETING-AND-WEAPON-PHASES-2026-11-03.md": "77920cadb2a14686fc42b7344718e8a6e48f6a8990ff95b7535b2bc01793b4c5",
+    "README.md": "ac3a74a845dd56c65f501f56d63189d1fe0469c5ea5592288d75dbf6c72322ed",
+    "docs/PARITY.md": "4d28c5b45362dee506eb508b46837c22f04f4333e5ce4023ce2f6dcae1b0cf7d"
+  },
+  "suites_each": 30,
+  "targeting_summaries_identical": true,
+  "prior_pack_functional_counts_unchanged": true,
+  "reference_hashes_rechecked": true,
+  "existing_app_presentation_assets_and_preload_unchanged": true,
+  "adapted_existing_core": "rr_pack.h/c explicit after-player rival and after-weapons coin phases; old wrapper retained",
+  "production_combat_rivals_coins": false,
+  "wallet_progression_network_writes": false,
+  "desktop": "No fresh call/retry; previous process-unverified/approval-timeout evidence preserved.",
+  "graphics": "Unrun",
+  "human_race_acceptance": false
+}
