@@ -78,7 +78,7 @@ the owner's Windows PC runs `server/serve.mjs` (`vite preview` before v0.2.4) on
 | Fonts | Google Fonts (Orbitron, Rajdhani), loaded at runtime | — | `index.html` |
 | 3D assets | GLB models (Meshy-generated), WebP/PNG textures | — | `public/models`, `public/tex`, `public/fx` |
 
-There is no framework (no React or Vue). The UI is DOM plus CSS (`src/style.css`) driven from `src/main.js` and `src/hud.js`. There is no TypeScript and no linter config [confirmed: no `tsconfig`, `.eslintrc` or `prettier` files in the repo root].
+There is no framework (no React or Vue). The UI is DOM plus CSS (`src/style.css`) driven from `src/main.js`, `src/race.js`, `src/roam.js` and `src/hud.js`. There is no TypeScript and no linter config [confirmed: no `tsconfig`, `.eslintrc` or `prettier` files in the repo root].
 
 ## 3. Repository structure
 
@@ -95,7 +95,11 @@ neon_c/
 │  ├─ .firebaserc(.example)   Firebase project alias (real file git-ignored)
 │  ├─ DEPLOY.md               set-up: Firebase project, npm run deploy, serving from the PC
 │  ├─ src/
-│  │  ├─ main.js              ~1,850 lines: boot, game states, loop, race/roam logic, menus, window.NEON (dev)
+│  │  ├─ main.js              ~700 lines: boot, game states, loop, menus, settings, window.NEON (dev)
+│  │  ├─ render.js, world.js  renderer + post-processing; map, roads, coins (D1, v0.2.6)
+│  │  ├─ race.js, aim.js      race rules, results; aim, lock-on, player weapons
+│  │  ├─ camera.js, roam.js   cameras; FREE ROAM
+│  │  ├─ clock.js             the game clock
 │  │  ├─ car.js  ai.js  physics.js  track.js  roads.js  maps.js  course.js  coins.js
 │  │  ├─ city.js  env.js  skyprops.js  props.js  ads.js  materials.js  geo.js  fx.js  nitro.js
 │  │  ├─ killer.js            Killer auras (CRIMSON FLAME, VOID CROWN)

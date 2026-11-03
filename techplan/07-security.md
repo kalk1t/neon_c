@@ -29,7 +29,7 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 | # | Finding | Evidence | Severity | Notes |
 |---|---|---|---|---|
 | C1 | ~~`window.NEON` debug handle is exposed in production~~ **Fixed in v0.2.4 (D9):** only dev builds define it (`import.meta.env.DEV`) | `src/main.js` | — | — |
-| C2 | `hud.sub()` sets `innerHTML`; FREE ROAM messages interpolate remote names (`${p.name} JOINED`, `BY ${from.name}`) | `src/hud.js:56`, `src/main.js:790,804,953,993` | Low | Names come from the relay, which reads `users/{uid}.nickname`; rules restrict nicknames to `[A-Za-z0-9_-]{3,16}`. Safe as long as that regex holds |
+| C2 | `hud.sub()` sets `innerHTML`; FREE ROAM messages interpolate remote names (`${p.name} JOINED`, `BY ${from.name}`) | `src/hud.js:56`, `src/roam.js` (`join`, `roamHit`, `roamKill`) | Low | Names come from the relay, which reads `users/{uid}.nickname`; rules restrict nicknames to `[A-Za-z0-9_-]{3,16}`. Safe as long as that regex holds |
 | C3 | No Content-Security-Policy (no meta tag; `server/serve.mjs` sets no CSP header, only `X-Content-Type-Options`) | `index.html` | Low/medium | A CSP header in `serve.mjs` or Cloudflare |
 | C4 | Race results, `place`, coins are client-claimed | `src/account.js:401` | Medium | By design; see 10.1 |
 | C5 | The Firebase auth helper is proxied through the site (`/__` → `roadsters-race.firebaseapp.com`) | `vite.config.js` | Info | Required for first-party sign-in; trusts that host |

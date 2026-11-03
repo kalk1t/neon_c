@@ -39,7 +39,7 @@ Sources: `src/online/firebase.js:57-127`, `firestore.rules:22-65`, `src/online/i
 ```mermaid
 sequenceDiagram
   actor P as Player
-  participant G as main.js + account.js
+  participant G as main.js / race.js + account.js
   participant F as Cloud Functions
   participant FS as Firestore
   P->>G: start RACE on road N
@@ -137,7 +137,7 @@ sequenceDiagram
   R->>FS: relayKills {kc 0, killer false}
 ```
 
-Sources: `server/live.js:136-262`, `src/online/live.js:7-171`, `src/account.js:224-248`, `src/main.js:932-1087`, `src/online/protocol.js`.
+Sources: `server/live.js:136-262`, `src/online/live.js:7-171`, `src/account.js:224-248`, `src/roam.js`, `src/online/protocol.js`.
 
 Kill saving detail (v0.2.4, R7) [confirmed: `server/live.js` `queueSave` / `save`, `functions/index.js` `relayKills`]: the relay queues each change per player and saves 3 s later in one batch (≤ 50 players, ≤ 60 kills each); a failed save is kept and retried every 30 s; a player rejoining before it lands gets the unsaved status. The browser can't write these fields (rules). The game only shows unsaved kills (`account.pendingKills`).
 

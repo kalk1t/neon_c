@@ -26,7 +26,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 
 | # | Item | Evidence | Effect |
 |---|---|---|---|
-| D1 | `main.js` is 1,817 lines mixing state machine, race, roam, menus and settings | `src/main.js` | Hard to test; most game logic has no tests |
+| D1 | ~~`main.js` is 1,850 lines mixing state machine, race, roam, menus and settings~~ **Fixed in v0.2.6 (2026-11-03):** split into `render.js`, `world.js`, `race.js`, `aim.js`, `camera.js`, `roam.js`, `clock.js`; `main.js` keeps start-up, the state machine, menus, settings and the loop (~700 lines). Pure move (no behaviour change), checked by the browser tests | `src/*.js` | Next for testability: unit tests for `race.js` rules |
 | D2 | ~~Constants duplicated~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** one definition where code can share it (`DECK_Y` in `course.js`; `NICK_RE`, `CHAT_MAX`, `CAR_IDS` in `src/online/protocol.js`); the copies that must stay separate (functions, rules, relay limits, road minimum times) are compared by `tests/constants.test.mjs`, so drift fails the tests | `tests/constants.test.mjs` | — |
 | D3 | ~~`finishRace` 'too-soon' fell into `RETRYABLE`: a generic error with TRY AGAIN~~ **Fixed in v0.2.1:** the race is kept and saved automatically when the gap passes, with a countdown | `src/account.js` `flushPending` | — |
 | D4 | ~~Magic `raceTime >= 90` for the PB rank display~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** TIME RANK shows when `finishRace` says the time became the new best (`newTime`) | `src/account.js` `recordRace` | — |
@@ -36,7 +36,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D8 | ~~`milestones/README.md` status column stale~~ **Fixed 2026-11-03:** M6 and M7 in progress, M8 done | `neon_c/milestones/README.md` | — |
 | D9 | ~~`window.NEON` in production~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** defined only in dev builds (`import.meta.env.DEV`) | `src/main.js` | — |
 | D10 | ~~888 KB main chunk, no code splitting~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** three.js is its own chunk, cached across releases: an update downloads ~80 KB gzipped of game code instead of ~250 KB | `vite.config.js` | — |
-| D11 | ~~FREE ROAM shows every remote player as a ROADSTER~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** `hi.car` / `join.car` (owned cars only, checked against the profile), models load on first sight | `server/live.js`, `src/main.js` `takeAvatar` | — |
+| D11 | ~~FREE ROAM shows every remote player as a ROADSTER~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** `hi.car` / `join.car` (owned cars only, checked against the profile), models load on first sight | `server/live.js`, `src/roam.js` `takeAvatar` | — |
 | D12 | ~~Abandoned `raceTickets` docs are never cleaned up~~ **Fixed in v0.2.4 (2026-11-03, code; goes live with the release):** the daily `cleanRaceTickets` function deletes tickets older than 45 min | `functions/tickets.js` | — |
 | D13 | ~~Browser tests live outside the repo~~ **Fixed 2026-11-02:** `game/tests/browser/` + `npm run test:browser` (starts its own dev server), run in CI | `game/tests/browser/` | — |
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
@@ -45,7 +45,6 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 ## 13.3 Status 2026-11-03 (v0.2.5 live)
 v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
 glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotates the secret (version 2), disables version 1 and adds a build
-guard (`vite.config.js` `secretGuard`). Fixed: R2-R8, R10-R13, D2-D15. Still open:
+guard (`vite.config.js` `secretGuard`). Fixed: R2-R8, R10-R13, D1-D15 (D1 in v0.2.6). Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05 (check first that v0.2.5's App Check key works).
-- **D1** `main.js` split: the next step (a pure refactor).
 - **R1** single home PC: postponed by the owner until the Windows app's server needs are known.

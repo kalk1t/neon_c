@@ -64,7 +64,7 @@
 | `LIVE_PROTOCOL` | 7 | version | Client/relay compatibility (7: relay-saved kills, shop cars) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
-## C. FREE ROAM client (`src/online/live.js`, `src/main.js`)
+## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
 
 | Name | Value | Units | Purpose | Def | Config? | Limits / dependencies |
 |---|---|---|---|---|---|---|
@@ -75,15 +75,15 @@
 | Welcome timeout | 12,000 | ms | Give up joining | `src/online/live.js:71` | code | |
 | Reconnect backoff | min(15,000, 500·2ⁿ) | ms | Retry | `src/online/live.js:93` | code | |
 | Reload-on-old guard | 60,000 | ms | At most one reload per minute | `src/online/live.js:171` | code | |
-| `ROAM_HUB` | (0, 175, 70) | m | Spawn hub | `src/main.js:745` | code | |
-| `ROAM_SLOTS` | 24 | slots | Spawn slots | `src/main.js:746` | code | ≥ `MAX_PLAYERS` |
+| `ROAM_HUB` | (0, 175, 70) | m | Spawn hub | `src/roam.js:745` | code | |
+| `ROAM_SLOTS` | 24 | slots | Spawn slots | `src/roam.js:746` | code | ≥ `MAX_PLAYERS` |
 | `ROAM_KNOCK` | bolt [0.9, 0.25, 6, 6], missile [0.45, 1.0, 26, 48], emp [0.6, 1.2, 34, 25] | mixed: [speed keep factor, ?, impulse m/s?, damage hp] | Hit reaction | `src/main.js:932-934` | code | **Meaning of the first three per-element values: unknown** (no comment); last = `WEAPON.*_DMG` |
-| `ROAM_WRECK` | 3 | s | Down time after wreck | `src/main.js:935` | code | > relay `DIE_MS` |
-| `ROAM_SAFE` | 3 | s | Spawn protection | `src/main.js:936` | code | |
-| `ROAM_REGEN` | [5, 8] | [s, hp/s] | Regen delay and rate | `src/main.js:937` | code | |
-| `ROAM_CEIL` / `ROAM_RADIUS` | 1,600 / 9,000 | m | Flight bounds | `src/main.js:1007` | code | < relay `LIMIT` |
-| Car contact radius | 4.6 | m | Car-to-car collision | `src/main.js:1050,1265` | code | ≈ 2 × `CAR.RADIUS` (2.1) + margin [inferred] |
-| Online count refresh | 10,000 | ms | Menu count | `src/main.js:1087` | code | |
+| `ROAM_WRECK` | 3 | s | Down time after wreck | `src/roam.js` | code | > relay `DIE_MS` |
+| `ROAM_SAFE` | 3 | s | Spawn protection | `src/roam.js:936` | code | |
+| `ROAM_REGEN` | [5, 8] | [s, hp/s] | Regen delay and rate | `src/roam.js:937` | code | |
+| `ROAM_CEIL` / `ROAM_RADIUS` | 1,600 / 9,000 | m | Flight bounds | `src/roam.js:1007` | code | < relay `LIMIT` |
+| Car contact radius | 4.6 | m | Car-to-car collision | `src/roam.js` `updateRoam`, `src/race.js` `carContacts` | code | ≈ 2 × `CAR.RADIUS` (2.1) + margin [inferred] |
+| Online count refresh | 10,000 | ms | Menu count | `src/roam.js` `refreshOnlineCount` | code | |
 
 ## D. Race, cars, weapons
 
@@ -100,15 +100,15 @@
 | `WEAPON` | BOLT_DMG 6, BOLT_RATE 0.09 s, BOLT_SPEED 430 m/s, HEAT_PER_BOLT 0.06, COOL_RATE 0.45 /s, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s, EMP_DMG 25, EMP_RADIUS 95 m, EMP_COOLDOWN 11 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
 | `COIN` | PER_GATE_GAP 6, VALUE 1, RESPAWN 6 s, RADIUS 6.5 m | | Track coins | `src/ai.js:23` | code | |
 | `AI_FIRE_INTERVAL` | [4, 8] ([6, 12] ÷ `RIVAL_POWER`) | s | Rival shot interval | `src/ai.js:27` | code | × road `fire` factor |
-| Race wreck | 2.4 | s | Down time in races | `src/main.js:1140` | code | |
-| Loot on wreck | 25 % | of coins | Coins dropped | `src/main.js:1153` | code | |
-| Podium coin bonus | [0, 15, 8, 4] | coins | Bonus for 1st/2nd/3rd in the coin race (`multi` = a RACE with AI rivals) | `src/main.js:1333` | code | Counts toward the 200 cap |
-| Rubber band | clamp(gap·0.05, −0.05, 0.07) | speed factor | AI catch-up | `src/main.js:1302` | code | |
-| Lock-on | acquire < 0.3 rad within 400 m, keep < 0.5 rad within 460 m, min 8 m | rad, m | Seeker lock | `src/main.js:1386-1395` | code | |
-| `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], emp [0.65, 1.6], shot [0.6, 0.7] | **unknown** units | Race hit reaction | `src/main.js:1116` | code | No comment; likely [speed factor, kick] [inferred] |
-| `CAMS` | {d 9, h 2.7}, {d 15, h 4.8}, cockpit | m | Camera presets | `src/main.js:1523` | device (`neon.view`) | |
-| `MOUSE_RAD_PER_PX` | 0.0021 | rad / px | Mouse look | `src/main.js:465` | × device `neon.sens` | |
-| `PLAYER_SLOT` | 7 | grid slot | Player's start slot | `src/main.js:410` | code | `GRID` has 12 (`src/track.js:8`) |
+| Race wreck | 2.4 | s | Down time in races | `src/race.js:1140` | code | |
+| Loot on wreck | 25 % | of coins | Coins dropped | `src/race.js:1153` | code | |
+| Podium coin bonus | [0, 15, 8, 4] | coins | Bonus for 1st/2nd/3rd in the coin race (`multi` = a RACE with AI rivals) | `src/race.js` `showResults` | code | Counts toward the 200 cap |
+| Rubber band | clamp(gap·0.05, −0.05, 0.07) | speed factor | AI catch-up | `src/race.js` `updateRanking` | code | |
+| Lock-on | acquire < 0.3 rad within 400 m, keep < 0.5 rad within 460 m, min 8 m | rad, m | Seeker lock | `src/aim.js` `updateLock` | code | |
+| `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], emp [0.65, 1.6], shot [0.6, 0.7] | **unknown** units | Race hit reaction | `src/race.js:1116` | code | No comment; likely [speed factor, kick] [inferred] |
+| `CAMS` | {d 9, h 2.7}, {d 15, h 4.8}, cockpit | m | Camera presets | `src/camera.js:1523` | device (`neon.view`) | |
+| `MOUSE_RAD_PER_PX` | 0.0021 | rad / px | Mouse look | `src/aim.js:465` | × device `neon.sens` | |
+| `PLAYER_SLOT` | 7 | grid slot | Player's start slot | `src/main.js` | code | `GRID` has 12 (`src/track.js:8`) |
 | `MAPS` laps / floor / roamFloor | 2 / 34 / 40 | laps, m, m | Race length, fall-out height | `src/maps.js:13-15` | code | `MIN_RACE_S` assumes 2 laps |
 | `ROADS` | 9 entries, `ai` ≈ 1–1.0x, `fire`, rings 9–19 | | Road set | `src/roads.js:11` | code (tools/roadgen) | Must match functions `ROADS` |
 | `RING` | R 15.5, tube 2.3, H 22 | m | Ring geometry | `src/props.js:5` | code | |
@@ -117,13 +117,13 @@
 
 | Name | Value | Units | Purpose | Def | Config? |
 |---|---|---|---|---|---|
-| `FOG_DENSITY` | 0.00062 | 1/m (exp²) | Fog | `src/main.js:35` | code |
-| `DECK_Y` | 111 | m | Start deck height | `src/main.js:36`, duplicate `src/course.js:10` | code (two copies) |
-| `GATE` | pos (0,126,0), halfW 23, y 109..142 | m | Start/finish gate | `src/main.js:37` | code |
-| `GFX.high` | ratio min(dpr, 1.5), 4 samples, blur | | High quality | `src/main.js:129` | device (`neon.gfx`) |
-| `GFX.low` | ratio 0.75, 0 samples, no blur | | Low quality | `src/main.js:130` | device |
-| Auto-gfx | skip 40 frames, 3 s sample, < 40 fps → low | frames, s, fps | Auto quality (menu, no saved choice, not touch) | `src/main.js:150-156` | code |
-| `sculptReady` timeout | 20,000 | ms | Stop waiting for the car GLB | `src/main.js:409` | code |
+| `FOG_DENSITY` | 0.00062 | 1/m (exp²) | Fog | `src/render.js:35` | code |
+| `DECK_Y` | 111 | m | Start deck height | `src/course.js` (one definition since v0.2.4) | code (two copies) |
+| `GATE` | pos (0,126,0), halfW 23, y 109..142 | m | Start/finish gate | `src/race.js:37` | code |
+| `GFX.high` | ratio min(dpr, 1.5), 4 samples, blur | | High quality | `src/render.js:129` | device (`neon.gfx`) |
+| `GFX.low` | ratio 0.75, 0 samples, no blur | | Low quality | `src/render.js:130` | device |
+| Auto-gfx | skip 40 frames, 3 s sample, < 40 fps → low | frames, s, fps | Auto quality (menu, no saved choice, not touch) | `src/render.js` `measureGfx` | code |
+| `sculptReady` timeout | 20,000 | ms | Stop waiting for the car GLB | `src/main.js` `sculptReady` | code |
 | `physics CELL` | 120 | m | Collider grid | `src/physics.js:3` | code |
 | `SAMPLE_STEP` | 4 | m | Spline sampling | `src/track.js:6` | code |
 | `Corridor CELL` | 160 | m | Road corridor grid | `src/track.js:116` | code |

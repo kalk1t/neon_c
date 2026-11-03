@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-11-03T16:07:35.730172+00:00",
+  "browser_package_version": "0.2.6",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\input.js",
+    "sourceSHA256": "835bff688cd8afa1f4d958ad003dec0429cade1f8f2d0c1fdff2ee3ca088c753",
+    "caseCount": 8192,
+    "keyboardMasks": 4096,
+    "padProfiles": [
+      {
+        "connected": false,
+        "x": 1,
+        "y": -1,
+        "throttle": 1,
+        "brake": 1,
+        "boost": true
+      },
+      {
+        "connected": true,
+        "x": 0,
+        "y": 0,
+        "throttle": 0,
+        "brake": 0,
+        "boost": false
+      },
+      {
+        "connected": true,
+        "x": 0.149999999,
+        "y": -0.149999999,
+        "throttle": 0.4,
+        "brake": 0.7,
+        "boost": false
+      },
+      {
+        "connected": true,
+        "x": 0.15,
+        "y": -0.15,
+        "throttle": 1,
+        "brake": 0,
+        "boost": true
+      },
+      {
+        "connected": true,
+        "x": -0.15,
+        "y": 0.15,
+        "throttle": 0,
+        "brake": 1,
+        "boost": false
+      },
+      {
+        "connected": true,
+        "x": 1,
+        "y": -1,
+        "throttle": 0.5,
+        "brake": 0.5,
+        "boost": true
+      },
+      {
+        "connected": true,
+        "x": -1,
+        "y": 1,
+        "throttle": 0.01,
+        "brake": 0.99,
+        "boost": false
+      },
+      {
+        "connected": true,
+        "x": 0.72,
+        "y": 0.33,
+        "throttle": 0.2,
+        "brake": 0.8,
+        "boost": false
+      }
+    ],
+    "method": "Actual Input.state with inert event registration and navigator gamepad data; no graphics or real devices.",
+    "limits": "State mixing only. Native controller mapping/hotplug/input delivery, mouse capture/filtering and hardware latency not validated."
+  },
+  "fresh_builds_and_tests": [
+    {
+      "target": "native",
+      "suite_passed": 42,
+      "suite_failed": 0,
+      "log": "reference\\ui-parity-20261103\\input-mix-v025-native-build.log",
+      "log_sha256": "99ec88b43e6451d4996d0cc91d4d728aba6dad983f1c80f302dd36b56ae7e089"
+    },
+    {
+      "target": "web",
+      "suite_passed": 42,
+      "suite_failed": 0,
+      "log": "reference\\ui-parity-20261103\\input-mix-v025-web-build.log",
+      "log_sha256": "6f4ea52e0d2bcbb57d86c5c4ef56ab4be86f1108c321aa8b4dbd882a70a08db0"
+    }
+  ],
+  "changed_implementation_files": [
+    {
+      "path": "src/core/rr_input_mix.h",
+      "sha256": "c019fce6b8dafbbe9ea6fb203ba2199431e465e048735b29c8d096d4562957bd"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "c63ca5776bbb821a35dd2e65ce57a11df437e392588fa9e43a3a5715ea02ac90"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "c305d076c878a17d4326677235011bbde624911944f840131eca33532c58591b"
+    },
+    {
+      "path": "tests/test_input_mix.c",
+      "sha256": "9f45ca14ce29a0d02ec0e8e4c9f2f9ff998e36328e6722496f2f7114c612633b"
+    },
+    {
+      "path": "tests/input_state_fixture.h",
+      "sha256": "18bfe5f41c07c6dfa6d6de1f36ef6955ca4002caf3a966306b1d6b24986131e6"
+    },
+    {
+      "path": "tools/capture-input-state.mjs",
+      "sha256": "ad093f9da5ee32e21199258c10919c2a616b5569e2ecd3e406b085351b86278f"
+    },
+    {
+      "path": "reference/ui-parity-20261103/input-state-oracle.json",
+      "sha256": "3b787ad2f264a2836d47bfd1d37bf6d826acf0af3f32d0790360499cd92f3a4f"
+    }
+  ],
+  "graphics": "Not run. Prior automatic approval rejection remains pending separate explicit authorization. No retry.",
+  "scope": "State mixer and first native available gamepad adapter only. Not hardware input/visual or whole-game acceptance; no account, progression, asset or browser writes."
+}

@@ -51,10 +51,10 @@ sequenceDiagram
 ## 5.3 Client boot [confirmed: `src/main.js`, `src/online/index.js:31-42`]
 
 1. `index.html` loads `src/main.js` (Vite module) and Google Fonts.
-2. `main.js` builds the renderer and scene, starts loading the car GLB (`sculptReady`, which gives up waiting after 20 s, `src/main.js:409`), and builds the map (`maps.js` → city, environment, roads, course, props).
+2. `main.js` builds the renderer and scene, starts loading the car GLB (`sculptReady`, which gives up waiting after 20 s, `src/main.js`), and builds the map (`maps.js` → city, environment, roads, course, props).
 3. `loadBackend()` picks `mock.js` when `import.meta.env.DEV && ?mock`, otherwise `firebase.js` with `FIREBASE_CONFIG` from the `VITE_FIREBASE_*` variables (`src/online/index.js:31-42`).
 4. `account` subscribes to auth state; on sign-in it records the visit (`players/{uid}`) and listens to `users/{uid}` (`onSnapshot`).
-5. The menu shows `v${__APP_VERSION__}` and the FREE ROAM online count (`GET /live/count`, refreshed every 10 s, `src/main.js:1087`).
+5. The menu shows `v${__APP_VERSION__}` and the FREE ROAM online count (`GET /live/count`, refreshed every 10 s, `refreshOnlineCount` in `src/roam.js`).
 
 ## 5.4 Configuration inventory
 

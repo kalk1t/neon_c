@@ -10,6 +10,7 @@
 #include "rr_recovery.h"
 #include "rr_road_picker.h"
 #include "rr_key_events.h"
+#include "rr_input_mix.h"
 #include "rr_minimap.h"
 #include "rr_render_policy.h"
 #include "rr_ui.h"
@@ -105,23 +106,23 @@ static void start_flight(RRRaceMode mode)
     /* Existing diagnostic smoke path remains distinct from normal countdown. */
     if(app.smoke){app.session.phase=RR_SESSION_ACTIVE;center_aim();}else capture();
 }
-static bool pad_pressed(int button){return IsGamepadAvailable(0) && IsGamepadButtonPressed(0,button);}
-static bool pad_down(int button){return IsGamepadAvailable(0) && IsGamepadButtonDown(0,button);}
-static double axis(int id){double v=GetGamepadAxisMovement(0,id);return fabs(v)<.15?0:v;}
+/* Browser selects the first non-null controller, not necessarily slot zero. */
+static int input_pad(void){for(int p=0;p<4;p++)if(IsGamepadAvailable(p))return p;return -1;}
+static bool pad_pressed(int button){int p=input_pad();return p>=0&&IsGamepadButtonPressed(p,button);}
+static bool pad_down(int button){int p=input_pad();return p>=0&&IsGamepadButtonDown(p,button);}
 
 static RRInput controls(double dt)
 {
-    RRInput in={0};
-    in.throttle=IsKeyDown(KEY_W)?1:0;in.brake=IsKeyDown(KEY_S)?1:0;
-    in.steer=(IsKeyDown(KEY_D)||IsKeyDown(KEY_RIGHT)?1:0)-(IsKeyDown(KEY_A)||IsKeyDown(KEY_LEFT)?1:0);
-    in.climb=(IsKeyDown(KEY_E)||IsKeyDown(KEY_UP)?1:0)-(IsKeyDown(KEY_Q)||IsKeyDown(KEY_DOWN)?1:0);
-    in.boost=IsKeyDown(KEY_LEFT_SHIFT)||IsKeyDown(KEY_RIGHT_SHIFT)||pad_down(GAMEPAD_BUTTON_RIGHT_FACE_DOWN);
-    if(IsGamepadAvailable(0)){
-        double sx=axis(GAMEPAD_AXIS_LEFT_X),sy=-axis(GAMEPAD_AXIS_LEFT_Y);
-        if(sx)in.steer=sx;if(sy)in.climb=sy;
-        in.throttle=fmax(in.throttle,rr_clamp((GetGamepadAxisMovement(0,GAMEPAD_AXIS_RIGHT_TRIGGER)+1)*.5,0,1));
-        in.brake=fmax(in.brake,rr_clamp((GetGamepadAxisMovement(0,GAMEPAD_AXIS_LEFT_TRIGGER)+1)*.5,0,1));
+    const int codes[]={KEY_W,KEY_S,KEY_D,KEY_RIGHT,KEY_A,KEY_LEFT,KEY_UP,KEY_DOWN,KEY_E,KEY_Q,KEY_LEFT_SHIFT,KEY_RIGHT_SHIFT};
+    unsigned held=0;for(unsigned i=0;i<sizeof(codes)/sizeof(codes[0]);i++)if(IsKeyDown(codes[i]))held|=1u<<i;
+    RRInputPad pad={0};int p=input_pad();
+    if(p>=0){
+        pad.connected=true;pad.x=GetGamepadAxisMovement(p,GAMEPAD_AXIS_LEFT_X);pad.y=GetGamepadAxisMovement(p,GAMEPAD_AXIS_LEFT_Y);
+        pad.throttle=rr_clamp((GetGamepadAxisMovement(p,GAMEPAD_AXIS_RIGHT_TRIGGER)+1)*.5,0,1);
+        pad.brake=rr_clamp((GetGamepadAxisMovement(p,GAMEPAD_AXIS_LEFT_TRIGGER)+1)*.5,0,1);
+        pad.boost=IsGamepadButtonDown(p,GAMEPAD_BUTTON_RIGHT_FACE_DOWN);
     }
+    RRInput in=rr_input_mix(held,pad);
     Vector2 delta=GetMouseDelta();
     if(IsMouseButtonDown(MOUSE_BUTTON_RIGHT)){
         app.look_yaw-=delta.x*.0021*1.6;app.look_pitch=rr_clamp(app.look_pitch+delta.y*.0021*1.6,-.45,1.15);

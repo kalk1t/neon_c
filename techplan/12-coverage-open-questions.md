@@ -13,7 +13,7 @@
 | `server/*.ps1`, `start-live.cmd`, `release.mjs` (`start-server.cmd` deleted 2026-11-02) | Full | read; `release.mjs` written and rehearsed 2026-11-02 |
 | `src/online/*` | Full | read |
 | `src/account.js` | Most (save, kill, killer, errors, ranks) | read |
-| `src/main.js` | Constants, roam / race / lock-on / wreck paths, `window.NEON` (dev only since v0.2.4), boot | partly read and grepped (~1,850 lines) |
+| `src/race.js` | Constants, roam / race / lock-on / wreck paths, `window.NEON` (dev only since v0.2.4), boot | partly read and grepped (~1,850 lines) |
 | `car.js`, `ai.js`, `physics.js`, `track.js`, `roads.js`, `maps.js`, `killer.js`, `chat.js`, `shop.js`, `touch.js`, `input.js`, `audio.js` | Constants and public API | grepped headers, exports, constants |
 | `city.js`, `env.js`, `skyprops.js`, `props.js`, `ads.js`, `materials.js`, `geo.js`, `fx.js`, `nitro.js`, `cockpit.js`, `coins.js`, `sysreq.js`, `hud.js` | Headers, exports, constants | skimmed |
 | `index.html`, `style.css` | External resources, CSP | skimmed; DOM structure not documented in detail |
@@ -37,7 +37,7 @@ Not examined: GLB/texture assets, `docs/media`, the Cloudflare dashboard, the Fi
 | Q7 | Value of `VITE_FIREBASE_AUTH_DOMAIN` in production: `roadstersrace.com` (via the `/__` proxy) or `roadsters-race.firebaseapp.com`? | Sign-in behaviour in Safari/Firefox | `.env.local` (owner) |
 | Q8 | ~~Why `raceTime >= 90` for PB rank display (D4), and why +10 per killer write?~~ Both gone in v0.2.4 (D4 replaced by the server's `newTime`; the killer rule was removed with R7) | — | answered |
 | Q9 | Meaning of the `KNOCK` / `ROAM_KNOCK` tuple elements | Undocumented tuning | code author |
-| Q10 | ~~When is `multi` true?~~ Answered: `multi = g.racers.length > 1`, i.e. a RACE with AI rivals (`src/main.js:1316`); TIME ATTACK is alone | — | — |
+| Q10 | ~~When is `multi` true?~~ Answered: `multi = g.racers.length > 1`, i.e. a RACE with AI rivals (`src/race.js` `showResults`); TIME ATTACK is alone | — | — |
 | Q11 | Is there a process for privacy requests (deleting `players` / `users` docs)? | Rules forbid client deletion | owner; `public/privacy.html` |
 | Q12 | PC uptime expectations: sleep settings, UPS, Windows Update restart windows | R1 | owner |
 

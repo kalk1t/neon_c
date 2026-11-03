@@ -8,9 +8,16 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 
 | Module | Lines | Key exports | Responsibility |
 |---|---|---|---|
-| `src/main.js` | ~1,850 | (entry) `window.NEON` (dev builds only since v0.2.4) | Renderer and scene setup; game state machine (menu, race, roam, shop, pause, results); main loop; race logic; FREE ROAM glue (avatars wear each player's shop car since v0.2.4); camera; menus. Splitting it is tech debt D1 |
+| `src/main.js` | ~700 | (entry) `window.NEON` (dev builds only since v0.2.4) | Start-up; game state machine (menu, roads, countdown, race, pause, results, shop); menus and settings; car paint and loading; KILLER STATUS sync; main loop. Split in v0.2.6 (D1) |
+| `src/render.js` | ~150 | `initRender`, `renderer`, `scene`, `camera`, `lens`, `GFX`, `setQuality`, `measureGfx`, `applyAtmosphere`, `volAt`, `panAt` | Renderer, post-processing, graphics quality, map atmosphere |
+| `src/world.js` | ~95 | `initWorld`, `buildWorld`, `setRoad`, `bestKey`, live bindings `map`, `road`, `track`, `course`, `coins`… | The map and its nine roads |
+| `src/race.js` | ~290 | `initRace`, `GATE`, `raceRules`, `respawn`, `damage`, `wreck`, `rivalCombat`, `carContacts`, `updateRanking`, `showResults` | Race rules and results |
+| `src/aim.js` | ~190 | `initAim`, `centreAim`, `updateAim`, `updateLock`, `playerWeapons`, `autopilot` | Mouse aim, lock-on, the player's weapons |
+| `src/camera.js` | ~150 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras |
+| `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
+| `src/clock.js` | 7 | `time`, `advance` | The game clock |
 | `src/car.js` | 818 | `Car`, `CAR`, `SPIN`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll), spin dodge, GLB model loading and livery shader, nitro and ribbons, killer aura attachment |
-| `src/ai.js` | 117 | `Racer`, `aiInput`, `LIVERIES`, `RIVAL_POWER`, `DAMAGE`, `WEAPON`, `COIN`, `AI_FIRE_INTERVAL` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `main.js`), weapon and coin constants |
+| `src/ai.js` | 117 | `Racer`, `aiInput`, `LIVERIES`, `RIVAL_POWER`, `DAMAGE`, `WEAPON`, `COIN`, `AI_FIRE_INTERVAL` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `race.js`), weapon and coin constants |
 | `src/physics.js` | 162 | `OBB`, `Cyl`, `Torus`, `Colliders` | Static collision world: uniform grid (`CELL` 120 m), swept segment tests (3 m steps) |
 | `src/track.js` | 155 | `Track`, `Corridor`, `SAMPLE_STEP`, `GRID` | Road spline (sampled every 4 m), start grid (12 slots), corridor grid (`CELL` 160) used to keep scenery off the road |
 | `src/roads.js` | 128 | `ROADS` | 9 roads: id, name, control points, AI speed factor `ai`, fire factor `fire`, ring count |

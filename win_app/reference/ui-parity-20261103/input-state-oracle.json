@@ -1,0 +1,74 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\input.js",
+  "sourceSHA256": "835bff688cd8afa1f4d958ad003dec0429cade1f8f2d0c1fdff2ee3ca088c753",
+  "caseCount": 8192,
+  "keyboardMasks": 4096,
+  "padProfiles": [
+    {
+      "connected": false,
+      "x": 1,
+      "y": -1,
+      "throttle": 1,
+      "brake": 1,
+      "boost": true
+    },
+    {
+      "connected": true,
+      "x": 0,
+      "y": 0,
+      "throttle": 0,
+      "brake": 0,
+      "boost": false
+    },
+    {
+      "connected": true,
+      "x": 0.149999999,
+      "y": -0.149999999,
+      "throttle": 0.4,
+      "brake": 0.7,
+      "boost": false
+    },
+    {
+      "connected": true,
+      "x": 0.15,
+      "y": -0.15,
+      "throttle": 1,
+      "brake": 0,
+      "boost": true
+    },
+    {
+      "connected": true,
+      "x": -0.15,
+      "y": 0.15,
+      "throttle": 0,
+      "brake": 1,
+      "boost": false
+    },
+    {
+      "connected": true,
+      "x": 1,
+      "y": -1,
+      "throttle": 0.5,
+      "brake": 0.5,
+      "boost": true
+    },
+    {
+      "connected": true,
+      "x": -1,
+      "y": 1,
+      "throttle": 0.01,
+      "brake": 0.99,
+      "boost": false
+    },
+    {
+      "connected": true,
+      "x": 0.72,
+      "y": 0.33,
+      "throttle": 0.2,
+      "brake": 0.8,
+      "boost": false
+    }
+  ],
+  "method": "Actual Input.state with inert event registration and navigator gamepad data; no graphics or real devices.",
+  "limits": "State mixing only. Native controller mapping/hotplug/input delivery, mouse capture/filtering and hardware latency not validated."
+}

@@ -71,12 +71,12 @@ State vector `s` (`server/live.js:153-162`): `[x, y, z, yaw, pitch(±1.6), roll(
 
 | Key | Value | Written by |
 |---|---|---|
-| `neon.gfx` | `high` / `low` | `main.js` (settings, auto-gfx) |
-| `neon.road` | last road id | `main.js:209` |
-| `neon.roadsOpen` | locally unlocked roads | `main.js:634` |
-| `neon.best`, `neon.best.r<N>` | local best times | `main.js` |
+| `neon.gfx` | `high` / `low` | `main.js` (settings), `render.js` (auto-gfx) |
+| `neon.road` | last road id | `world.js` `ROAD_PICK` |
+| `neon.roadsOpen` | locally unlocked roads | `main.js` `ROAD_OPEN` |
+| `neon.best`, `neon.best.r<N>` | local best times | `world.js` `bestKey`, `race.js` `completeLap` |
 | `neon.paint` | livery index | `main.js` |
-| `neon.sens`, `neon.invert`, `neon.vol`, `neon.view` | mouse sensitivity, invert, volume, camera / cockpit | `main.js` |
+| `neon.sens`, `neon.invert`, `neon.vol`, `neon.view` | mouse sensitivity, invert, volume, camera / cockpit | `main.js`; `neon.view` in `camera.js` |
 | `neon.car` | equipped car | `shop.js:9` |
 | `neon.shopSeen` | NEW badge seen | `shop.js` |
 | `neon.kills.<uid>` | unsaved FREE ROAM kills | `account.js:45` |
