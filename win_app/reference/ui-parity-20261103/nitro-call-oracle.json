@@ -1,0 +1,41 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "selected_directory_and_archive_files_verified": [
+    {
+      "file": "assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "file": "source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    }
+  ],
+  "current_css": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+  "current_css_sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2",
+  "nitro_css_block_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_css_block_matches_packaged_chromium_reference": true,
+  "samples": [
+    {
+      "id": "hud/callouts/nitro-135ms",
+      "seconds": 0.135,
+      "opacity": 1.0,
+      "scale": 1.0,
+      "spacing": 14.0,
+      "translation_y": -50.0,
+      "source_matrix": "matrix(1, 0, 0, 1, -97.6094, -22.5)",
+      "css_line_height": 45.0
+    },
+    {
+      "id": "hud/callouts/nitro-525ms",
+      "seconds": 0.525,
+      "opacity": 0.9,
+      "scale": 0.959195,
+      "spacing": 14.0,
+      "translation_y": -58.160888888888884,
+      "source_matrix": "matrix(0.959195, 0, 0, 0.959195, -97.6094, -26.1724)",
+      "css_line_height": 45.0
+    }
+  ],
+  "scope": "Reused measured Chromium135/525ms computed styles from v3 package; current selected CSS block identical. No fresh graphics/browser run, intermediate CSS timing or native pixels not engine-verified."
+}

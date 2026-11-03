@@ -4,6 +4,7 @@
 #include "rr_scene.h"
 #include "rr_session.h"
 #include "rr_finish.h"
+#include "rr_race_warning.h"
 #include "rr_world_plan.h"
 #include "rr_canonical_city.h"
 #include "rr_menu_policy.h"
@@ -14,12 +15,21 @@
 #include "rr_first_person.h"
 #include "rr_chase_camera.h"
 #include "rr_camera_motion.h"
+#include "rr_camera_fx.h"
 #include "rr_minimap.h"
 #include "rr_render_policy.h"
 #include "rr_ui.h"
 #include "rr_race_ui.h"
 #include "rr_cockpit.h"
 #include "rr_pause_ui.h"
+#include "rr_start_cue.h"
+#include "rr_sub_notice.h"
+#include "rr_subtext.h"
+#include "rr_target_guidance.h"
+#include "rr_hud_message.h"
+#include "rr_mouse_aim.h"
+#include "rr_spin_control.h"
+#include "rr_nitro_call.h"
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -29,10 +39,10 @@
 
 typedef struct RRApp {
     RRTrack track; RRCorridor corridor; RRWorld world; RRCityPlan city_plan; RRCourse course; RRSharedScenery shared; RRCar car; RRScene scene; RRSession session; RRRaceMode selected_mode; RRMenuPolicy menu_policy; RRRecovery recovery; RRRoadPicker picker; RRKeyEvents key_events; RRMinimap minimap;
-    Camera3D camera; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
+    Camera3D camera; RRNitroCall nitro_call; RRMouseSettings mouse_settings; bool mouse_sens_drag; RRHUDMessage message; RRSubNotice sub_notice; RRSubArt sub_art; RRCameraFX camera_fx; RRStartCue start_cue; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
     bool interior_requested,cockpit_visible,first_person_visible,camera_looking; double cockpit_steer,cockpit_control;
     double aim_yaw,aim_pitch,look_yaw,look_pitch,camera_yaw,camera_pitch,camera_fov;
-    double spin_cooldown,message_time,warning_time,picker_notice;
+    double spin_cooldown,warning_time,picker_notice;
     unsigned warning;
     int camera_mode,frame; size_t ui_best_lap;
     bool smoke,fallback,failed,scene_ready,load_requested,glow,quit,overloaded;
@@ -103,8 +113,8 @@ static void start_flight(RRRaceMode mode)
     TraceLog(LOG_INFO,"COLLISION: native city/start/road world ready shapes=%d road=%d",app.world.count,app.track.road->id);
     rr_minimap_init(&app.minimap,&app.track);
     rr_recovery_init(&app.recovery,&app.track,app.car.pos);app.warning_time=0;app.warning=0;
-    app.spin_cooldown=0;app.message_time=0;app.ui_best_lap=0;
-    app.look_yaw=0;app.look_pitch=0;app.camera_looking=false;app.camera_fov=68;
+    app.spin_cooldown=0;app.ui_best_lap=0;rr_start_cue_restart(&app.start_cue);
+    app.look_yaw=0;app.look_pitch=0;app.camera_looking=false;rr_camera_fx_restart(&app.camera_fx);
     app.camera_yaw=0;app.camera_pitch=0;app.slow_frames=0;app.overloaded=false;
     /* Existing diagnostic smoke path remains distinct from normal countdown. */
     if(app.smoke){app.session.phase=RR_SESSION_ACTIVE;center_aim();}else capture();
@@ -127,21 +137,19 @@ static RRInput controls(void)
     }
     RRInput in=rr_input_mix(held,pad);
     Vector2 delta=GetMouseDelta();
-    app.camera_looking=IsMouseButtonDown(MOUSE_BUTTON_RIGHT);
-    if(app.camera_looking){
-        app.look_yaw-=delta.x*.0021*1.6;app.look_pitch=rr_clamp(app.look_pitch+delta.y*.0021*1.6,-.45,1.15);
-    }else{
-        app.aim_yaw-=delta.x*.0021;app.aim_pitch-=delta.y*.0021;
-    }
-    bool key_steer=in.steer!=0,key_climb=in.climb!=0;
-    if(key_steer)app.aim_yaw=app.car.yaw;
-    if(key_climb)app.aim_pitch=app.car.pitch;
-    double difference=atan2(sin(app.aim_yaw-app.car.yaw),cos(app.aim_yaw-app.car.yaw));
-    difference=rr_clamp(difference,-1.1,1.1);app.aim_yaw=app.car.yaw+difference;
-    app.aim_pitch=rr_clamp(app.aim_pitch,-.62,.62);
-    if(!key_steer)in.steer=rr_clamp(-difference*2.8,-1,1);
-    if(!key_climb)in.climb=rr_clamp(app.aim_pitch/.62*1.25,-1,1);
+    RRMouseAim aim={app.aim_yaw,app.aim_pitch,app.look_yaw,app.look_pitch,false,{0}};
+    in=rr_mouse_aim_step(&aim,app.mouse_settings,app.car.yaw,app.car.pitch,in,delta.x,delta.y,IsMouseButtonDown(MOUSE_BUTTON_RIGHT));
+    app.aim_yaw=aim.yaw;app.aim_pitch=aim.pitch;app.look_yaw=aim.look_yaw;app.look_pitch=aim.look_pitch;app.camera_looking=aim.looking;
     return in;
+}
+
+/* Native fair side choice only; not a claim of browser-global RNG identity. */
+static double spin_random_side(void *context){(void)context;return GetRandomValue(0,1)?.75:.25;}
+static void motion_camera_feedback(bool playing,bool was_boosting)
+{
+    if(!playing)return;
+    if(rr_camera_fx_ignite(&app.camera_fx,was_boosting,app.car.boosting,app.session.race_time))rr_nitro_call_start(&app.nitro_call,GetTime());
+    if(app.session.motion_stepped)rr_camera_fx_impact(&app.camera_fx,app.session.motion.impact);
 }
 
 static void update_camera(double dt)
@@ -158,25 +166,26 @@ static void update_camera(double dt)
     rr_camera_motion_step(&motion,app.car.yaw,app.car.pitch,app.camera_looking||!chase_phase,dt);
     app.camera_yaw=motion.yaw;app.camera_pitch=motion.pitch;app.look_yaw=motion.look_yaw;app.look_pitch=motion.look_pitch;
     double orbit=rr_camera_orbit(app.look_yaw,app.look_pitch);
-    RRFirstPerson chase=rr_chase_pose(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch);
-    app.camera.position=vector(chase.position);app.camera.target=vector(rr_add(chase.position,rr_scale(chase.forward,20)));app.camera.up=vector(chase.up);
+    RRFirstPerson view=rr_chase_pose(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch);
+
     double sf=fmin(1.4,fmax(0,app.car.speed)/RR_CAR_MAX);
     app.camera_fov+=(68+15*fmin(1,sf)+9*app.car.nitro-app.camera_fov)*(1-exp(-4*dt));
     app.camera.fovy=(float)app.camera_fov;
     bool flight=app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_COUNTDOWN||app.session.phase==RR_SESSION_FINISHED;
     app.first_person_visible=flight&&rr_first_person_active(app.camera_mode,true,app.look_yaw,app.look_pitch);
     if(app.first_person_visible){
-        RRFirstPerson seat=rr_first_person_pose(&app.car,orbit);
-        app.camera.position=vector(seat.position);app.camera.target=vector(rr_add(seat.position,rr_scale(seat.forward,20)));app.camera.up=vector(seat.up);
+        view=rr_first_person_pose(&app.car,orbit);
     }
 
 #if defined(RR_COCKPIT_PREVIEW)
     app.cockpit_visible=rr_cockpit_visible(app.interior_requested,app.session.phase,app.look_yaw,app.look_pitch,app.cockpit_art.loaded==RR_COCKPIT_LAYER_COUNT&&!app.cockpit_art.failed);
     if(app.cockpit_visible){
-        app.first_person_visible=false;RRCKSeat seat=rr_cockpit_seat(&app.car);app.camera.position=vector(seat.position);app.camera.target=vector(rr_add(seat.position,rr_scale(seat.forward,20)));
+        app.first_person_visible=false;RRCKSeat seat=rr_cockpit_seat(&app.car);view.position=seat.position;view.forward=seat.forward;
         app.camera_fov+=(seat.extra_fov)*(1-exp(-4*dt));app.camera.fovy=(float)app.camera_fov;
     }
 #endif
+    if(chase_phase){RRCameraPulse pulse=rr_camera_fx_step(&app.camera_fx,app.car.nitro,dt,GetTime()*1000);view=rr_camera_fx_apply(view,pulse);app.camera.fovy=(float)(app.camera_fov+pulse.fov_add);}
+    app.camera.position=vector(view.position);app.camera.target=vector(rr_add(view.position,rr_scale(view.forward,20)));app.camera.up=vector(view.up);
 }
 
 static void open_roads(RRRaceMode mode)
@@ -255,10 +264,25 @@ static void menu_ui(void)
     if(action!=RR_MENU_NO_ACTION)open_roads(action==RR_MENU_START_TRIAL?RR_RACE_TWO_LAPS:RR_RACE_TIME_ATTACK);
     float y=l.actions[4].y+l.button_h+14;
     rr_ui_text(&app.ui,app.failed?"SCENE UNAVAILABLE / CHECK LOG":"OFFLINE / ONLINE SERVICES NOT CONNECTED",l.x,y,12,1,500,app.failed?magenta:muted,false);
-    rr_ui_text(&app.ui,"MOUSE steer + climb/dive   W thrust   S brake",l.x,y+25,19,0,0,muted,false);
-    rr_ui_text(&app.ui,"SHIFT boost   F spin   C camera   R reset",l.x,y+48,19,0,0,muted,false);
-    rr_ui_text(&app.ui,"RIVALS / COMBAT / ACCOUNT INTEGRATION PENDING",l.x,y+75,11,0,500,muted,false);
-    if(!app.ui.loaded)rr_ui_text(&app.ui,"THEME FONT LOAD FAILED",l.x,y+96,14,0,700,magenta,false);
+    rr_ui_text(&app.ui,"MOUSE SENS",l.x,y+28,10,1,500,muted,false);
+    RRUIRect sens={l.x+102,y+22,150,24};Vector2 mouse=GetMousePosition();
+    if(!IsWindowFocused()||!IsMouseButtonDown(MOUSE_BUTTON_LEFT))app.mouse_sens_drag=false;
+    if(IsWindowFocused()&&IsMouseButtonPressed(MOUSE_BUTTON_LEFT)&&CheckCollisionPointRec(mouse,(Rectangle){sens.x,sens.y,sens.w,sens.h}))app.mouse_sens_drag=true;
+    if(app.mouse_sens_drag)
+        app.mouse_settings.sensitivity=rr_mouse_sensitivity_at((mouse.x-sens.x)/sens.w);
+    DrawRectangle((int)sens.x,(int)(sens.y+11),(int)sens.w,3,Fade(cyan,.3f));
+    float knob=sens.x+(float)((app.mouse_settings.sensitivity-.3)/2.2)*sens.w;
+    DrawCircleV((Vector2){knob,sens.y+12},5,cyan);
+    rr_ui_text(&app.ui,TextFormat("%.2f",app.mouse_settings.sensitivity),sens.x+sens.w+8,y+27,11,0,700,cyan,false);
+    RRUIRect invert={l.x+312,y+22,140,24};
+    if(IsWindowFocused()&&IsMouseButtonPressed(MOUSE_BUTTON_LEFT)&&CheckCollisionPointRec(mouse,(Rectangle){invert.x,invert.y,invert.w,invert.h}))app.mouse_settings.invert=!app.mouse_settings.invert;
+    DrawRectangleLines((int)invert.x,(int)(invert.y+5),14,14,cyan);
+    if(app.mouse_settings.invert)DrawRectangle((int)(invert.x+3),(int)(invert.y+8),8,8,cyan);
+    rr_ui_text(&app.ui,"INVERT Y",invert.x+22,y+28,10,1,500,muted,false);
+    rr_ui_text(&app.ui,"MOUSE steer + climb/dive   W thrust   S brake",l.x,y+61,19,0,0,muted,false);
+    rr_ui_text(&app.ui,"SHIFT boost   F spin   C camera   R reset",l.x,y+84,19,0,0,muted,false);
+    rr_ui_text(&app.ui,"RIVALS / COMBAT / ACCOUNT INTEGRATION PENDING",l.x,y+111,11,0,500,muted,false);
+    if(!app.ui.loaded)rr_ui_text(&app.ui,"THEME FONT LOAD FAILED",l.x,y+132,14,0,700,magenta,false);
 #if !defined(PLATFORM_WEB)
     if(rr_ui_button(&app.ui,(RRUIRect){(float)w-168,(float)h-76,144,50},"QUIT",false,true,false,6)||key_hit(KEY_ESCAPE))app.quit=true;
 #endif
@@ -292,6 +316,17 @@ static void pause_ui(void)
     rr_ui_text_center(&app.ui,"ESC TO RESUME",l.panel.x+l.panel.w*.5f,l.panel.y+324,11,2,500,muted,false);
     rr_ui_text_center(&app.ui,"OFFLINE / NO PROGRESSION WRITES",l.panel.x+l.panel.w*.5f,l.panel.y+350,10,0,500,muted,false);
 }
+static void nitro_call_ui(void)
+{
+    RRNitroStyle s=rr_nitro_call_sample(&app.nitro_call,GetTime());if(!s.shown||s.opacity<=0)return;
+    float scale=(float)s.scale,spacing=(float)s.spacing;
+    /* Source is outside #hud zoom. Include its trailing CSS letter spacing in
+     * centering; native glyph/glow/italic appearance remains unqualified. */
+    float cx=GetScreenWidth()*.5f-spacing*scale*.5f;
+    float cy=GetScreenHeight()*.8f+(float)(.5+s.translate_y/100)*45;
+    rr_ui_text_center(&app.ui,"NITRO",cx,cy-22.5f*scale,36*1.254f*scale,spacing*scale,900,Fade((Color){234,255,255,255},(float)s.opacity),true);
+}
+
 static void flight_ui(void)
 {
     int w=GetScreenWidth(),h=GetScreenHeight();RRUIHudLayout l=rr_ui_hud_layout((float)w,(float)h);float z=l.scale;
@@ -321,12 +356,14 @@ static void flight_ui(void)
         if(next)DrawCircleLines((int)p.x,(int)p.y,11*l.map.w/440,WHITE);
     }
     Vector2 start=map_point(rr_v3(0,0,0),l.map);ui_map_line((Vector2){start.x-12*l.map.w/440,start.y},(Vector2){start.x+12*l.map.w/440,start.y},l.map,6*l.map.w/440,WHITE);
-    Vector2 player=map_point(app.car.pos,l.map);
-    if(Vector2Distance(player,center)<radius-8*z){
-        float angle=(float)-app.car.yaw,c=cosf(angle),s=sinf(angle);Vector2 tri[3];const float xy[3][2]={{0,-12},{-8,9},{8,9}};
-        for(int i=0;i<3;i++)tri[i]=(Vector2){player.x+(xy[i][0]*c-xy[i][1]*s)*l.map.w/440,player.y+(xy[i][0]*s+xy[i][1]*c)*l.map.h/440};
-        DrawTriangle(tri[0],tri[1],tri[2],WHITE);
+    double player_points[4][2];rr_minimap_player_points(&app.minimap,app.car.pos.x,app.car.pos.z,app.car.yaw,l.map.x,l.map.y,l.map.w,l.map.h,player_points);
+    Vector2 arrow[4];bool inside=true;
+    for(int i=0;i<4;i++){
+        arrow[i]=(Vector2){(float)player_points[i][0],(float)player_points[i][1]};
+        if(Vector2Distance(arrow[i],center)>radius)inside=false;
     }
+    /* Existing conservative edge policy remains until circular fill clipping qualifies. */
+    if(inside){DrawTriangle(arrow[0],arrow[2],arrow[1],WHITE);DrawTriangle(arrow[0],arrow[3],arrow[2],WHITE);}
     rr_ui_text_center(&app.ui,TextFormat("ROAD %d / %s",app.track.road->id,app.track.road->name),center.x,l.map.y+l.map.h-29*z,8*z,2*z,700,cyan,false);
 
     RRUIHistory history=rr_ui_history_layout(l.history,z,(float)GetScreenHeight(),app.session.lap_count);
@@ -336,12 +373,15 @@ static void flight_ui(void)
     for(size_t i=0;i<history.visible_rows;i++){
         Color color=i==app.ui_best_lap?magenta:white;float y=l.history.y+(35+(float)i*18)*z;
         rr_ui_time(clock,app.session.lap_times[i]);
-        rr_ui_text(&app.ui,TextFormat("%zu.",i+1),l.history.x+19*z,y,16*z,0,700,color,false);
+        char number[32];snprintf(number,sizeof(number),"%zu.",i+1);
+        Vector2 marker=MeasureTextEx(app.ui.loaded?app.ui.bold:GetFontDefault(),number,16*z,0);
+        rr_ui_text(&app.ui,number,l.history.x+35*z-marker.x,y,16*z,0,700,color,false);
         rr_ui_text(&app.ui,clock,l.history.x+39*z,y,16*z,0,700,color,false);
     }
     if(history.best_visible){
-        rr_ui_time(clock,race->best_lap_time>0?race->best_lap_time:NAN);
-        rr_ui_text(&app.ui,TextFormat("BEST %s",clock),l.history.x+19*z,history.best_y,13*z,0,600,muted,false);
+        double road_best=app.picker.rows[app.track.road->id-1].best_lap;
+        rr_ui_time(clock,road_best>0?road_best:NAN);
+        rr_ui_text(&app.ui,TextFormat("BEST %s",clock),l.history.x+19*z,history.best_y,13*z,0,700,muted,false);
     }
 
     if(!app.cockpit_visible){
@@ -360,12 +400,28 @@ static void flight_ui(void)
     rr_ui_text_center(&app.ui,"DODGE / F",spin.x,l.spin.y+100*z,10*z,1*z,500,muted,false);
     rr_ui_text_center(&app.ui,app.spin_cooldown>0?TextFormat("%.1f S",app.spin_cooldown):"READY",spin.x,l.spin.y+120*z,10*z,0,500,cyan,false);
 
-    Vector3 ahead=Vector3Subtract(vector(target),app.camera.position);
-    if(has_target&&Vector3DotProduct(ahead,Vector3Subtract(app.camera.target,app.camera.position))>0){
-        Vector2 p=GetWorldToScreen(vector(target),app.camera);
-        if(p.x>40&&p.x<w-40&&p.y>180*z&&p.y<h-160*z){
-            float pulse=1+.125f*(1+sinf((float)GetTime()*7.854f));DrawPolyLinesEx(p,4,15.56f*z*pulse,0,3*z,(Color){43,255,122,255});
-            rr_ui_text_center(&app.ui,TextFormat("%d M",(int)rr_length(rr_sub(target,app.car.pos))),p.x,p.y+24*z,13*z,0,700,(Color){208,255,224,255},true);
+    if(has_target){
+        Vector2 point=GetWorldToScreen(vector(target),app.camera);
+        Vector3 axis=Vector3Normalize(Vector3Subtract(app.camera.target,app.camera.position));
+        double depth=Vector3DotProduct(Vector3Subtract(vector(target),app.camera.position),axis);
+        /* Preserve native .1/2500 clipping safeguards; classify NDC z against
+         * that actual projection instead of expanding the world's far plane. */
+        double nz=depth!=0?(2500.1/2499.9)-(.2*2500/2499.9)/depth:INFINITY;
+        if(isfinite(point.x)&&isfinite(point.y)){
+            RRTargetGuidance t=rr_target_guidance(2*point.x/w-1,1-2*point.y/h,nz,w,h,z,rr_length(rr_sub(target,app.car.pos)));
+            Color green={43,255,122,255};Vector2 at={(float)t.x,(float)t.y};
+            if(t.on){
+                float pulse=1+.125f*(1+sinf((float)GetTime()*7.854f));DrawPolyLinesEx(at,4,15.56f*z*pulse,0,3*z,green);
+                rr_ui_text_center(&app.ui,TextFormat("%.0f m",t.distance),at.x,at.y+24*z,13*z,0,700,(Color){208,255,224,255},true);
+            }else{
+                /* Native vector placeholder for source edge-arrow glyph;
+                 * placement/rotation are source-defined, pixel shape is pending. */
+                Vector2 arrow_center={at.x+20*z,at.y+25*z},tip={(float)cos(t.angle),(float)sin(t.angle)};
+                Vector2 side={-tip.y,tip.x};
+                Vector2 v0=Vector2Add(arrow_center,Vector2Scale(tip,15*z));
+                Vector2 back=Vector2Subtract(arrow_center,Vector2Scale(tip,10*z));
+                DrawTriangle(v0,Vector2Subtract(back,Vector2Scale(side,10*z)),Vector2Add(back,Vector2Scale(side,10*z)),green);
+            }
         }
     }
     Vector3 heading=Vector3Add(vector(app.car.pos),Vector3Scale(vector(app.car.fwd),90));Vector3 hv=Vector3Subtract(heading,app.camera.position);
@@ -374,15 +430,19 @@ static void flight_ui(void)
         DrawLineEx((Vector2){p.x,p.y-32*z},(Vector2){p.x,p.y+32*z},2*z,Fade(cyan,.7f));
         DrawLineEx((Vector2){p.x-32*z,p.y},(Vector2){p.x-13*z,p.y},2*z,Fade(cyan,.7f));DrawLineEx((Vector2){p.x+13*z,p.y},(Vector2){p.x+32*z,p.y},2*z,Fade(cyan,.7f));
     }
-    if(app.session.phase==RR_SESSION_COUNTDOWN)rr_ui_text_center(&app.ui,TextFormat("%d",app.session.last_count),(float)w*.5f,(float)h*.24f,84*z,6*z,900,WHITE,true);
-    if(app.warning_time>0)rr_ui_text_center(&app.ui,app.warning==RR_RECOVERY_SIGNAL_LOST?"SIGNAL LOST":"WRONG WAY",(float)w*.5f,(float)h*.24f,40*z,3*z,900,magenta,true);
-    else if(app.message_time>0)rr_ui_text_center(&app.ui,"CHECKPOINT CLEARED",(float)w*.5f,(float)h*.24f,26*z,2*z,700,(Color){43,255,122,255},true);
+    if(app.message.shown)rr_ui_text_center(&app.ui,app.message.text,(float)w*.5f,(float)h*.24f,84*z,6*z,900,app.message.warn?(Color){255,208,246,255}:WHITE,true);
+    if(app.sub_notice.shown){
+        /* Cached fallback baseline offsets; mixed/native pixel alignment is pending. */
+        float ascent=strstr(app.sub_notice.text,"\xc2\xb7")?29.f:strstr(app.sub_notice.text,"\xe2\x98\x85")?28.f:26.484f;
+        rr_ui_subtext(&app.sub_art,&app.ui,app.sub_notice.text,(float)w*.5f,(float)h*.24f+(100+ascent)*z,z);
+    }
     rr_ui_text_center(&app.ui,"ESC PAUSE / C CAMERA / R RESET / F11 FULLSCREEN",(float)w*.5f,(float)h-18,11*z,0,500,muted,false);
 #if defined(RR_COCKPIT_PREVIEW)
     rr_ui_text(&app.ui,app.interior_requested?"I / EXTERIOR VIEW":"I / COCKPIT VIEW",(float)w-220,(float)h*.5f,11,0,500,muted,false);
     if(app.interior_requested&&app.cockpit_art.loaded!=RR_COCKPIT_LAYER_COUNT)rr_ui_text_center(&app.ui,"COCKPIT NOT READY / PAUSE TO FINISH LOADING",(float)w*.5f,(float)h*.6f,12,0,700,magenta,false);
 #endif
     if(!app.scene.car_loaded)rr_ui_text(&app.ui,"FALLBACK VEHICLE",l.map.x,l.map.y+l.map.h+12*z,11*z,0,500,muted,false);
+    nitro_call_ui();
     if(app.session.phase==RR_SESSION_PAUSED)pause_ui();
 }
 
@@ -469,6 +529,7 @@ static void frame(void)
     if(focused&&(app.session.phase==RR_SESSION_MENU||app.session.phase==RR_SESSION_PAUSED)&&!app.load_requested)
         rr_cockpit_load_next(&app.cockpit_art);
 #endif
+    bool boost_was=app.car.boosting;bool boost_fx_playing=app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_FINISHED||app.session.phase==RR_SESSION_RESULTS;
     if(app.session.phase==RR_SESSION_ACTIVE){
         RRInput in=app.smoke?(RRInput){1,0,0,.1,false}:controls();
 #if defined(RR_FINISH_VALIDATION) || defined(RR_COLLISION_VALIDATION)
@@ -478,31 +539,48 @@ static void frame(void)
         if(key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP))app.camera_mode=rr_camera_next(app.camera_mode);
 #endif
         app.cockpit_control=in.steer;
-        app.spin_cooldown=fmax(0,app.spin_cooldown-dt);
-        if((key_hit(KEY_F)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_RIGHT)) && app.spin_cooldown==0){rr_car_dodge(&app.car,in.steer<0?-1:1);app.spin_cooldown=RR_SPIN_COOLDOWN;}
-        app.message_time=fmax(0,app.message_time-dt);
+        bool spin_requested=key_hit(KEY_F)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_RIGHT);
+        RRVec3 warning_previous=app.car.pos;double checkpoint_clock=app.session.race.lap_time+dt;
         unsigned events=rr_session_step(&app.session,&app.car,app.track.gates,app.track.gate_count,in,raw_dt);
 #if defined(RR_COLLISION_VALIDATION)
         if(app.car.impact>0){TraceLog(LOG_INFO,"VALIDATION: wall impact=%.6f x=%.6f vx=%.6f speed=%.6f",app.car.impact,app.car.pos.x,app.car.vel.x,app.car.speed);rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000);EnableCursor();}
 #endif
-        if(events&RR_RACE_CHECKPOINT)app.message_time=2;
-        if(events&RR_RACE_LAP){rr_road_picker_lap(&app.picker,app.session.race.last_lap_time);app.ui_best_lap=rr_ui_best_lap_on_append(app.session.lap_times,app.session.lap_count,app.ui_best_lap);}
-        if(events&RR_RACE_FINISH){TraceLog(LOG_INFO,"STATE: offline two-lap trial finished in %.3f s",app.session.race.finish_time);app.message_time=0;app.warning_time=0;EnableCursor();}
+        if(events&RR_RACE_CHECKPOINT)rr_sub_notice_checkpoint(&app.sub_notice,events&RR_RACE_LAP?app.track.gate_count:app.session.race.next_checkpoint,app.track.gate_count,checkpoint_clock);
+        if(events&RR_RACE_LAP){
+            if(!(events&RR_RACE_FINISH))rr_hud_message_lap(&app.message,app.session.race.lap,app.session.race.mode==RR_RACE_TIME_ATTACK?0:2);
+            double previous_best=app.picker.rows[app.track.road->id-1].best_lap;
+            if(!(events&RR_RACE_FINISH))rr_sub_notice_lap(&app.sub_notice,app.session.race.last_lap_time,previous_best<=0||app.session.race.last_lap_time<previous_best);
+            rr_road_picker_lap(&app.picker,app.session.race.last_lap_time);app.ui_best_lap=rr_ui_best_lap_on_append(app.session.lap_times,app.session.lap_count,app.ui_best_lap);
+        }
+        if(events&RR_RACE_FINISH){rr_hud_message_finish(&app.message);TraceLog(LOG_INFO,"STATE: offline two-lap trial finished in %.3f s",app.session.race.finish_time);app.warning_time=0;EnableCursor();}
         if(app.session.phase==RR_SESSION_ACTIVE){
-            unsigned recovery=rr_recovery_update(&app.recovery,&app.track,app.car.pos,app.car.vel,34,dt,app.warning_time,app.session.race.mode==RR_RACE_FREE_ROAM);
-            if(recovery&RR_RECOVERY_WRONG_WAY){app.warning=RR_RECOVERY_WRONG_WAY;app.warning_time=.8;}
-            if(recovery&RR_RECOVERY_SIGNAL_LOST){app.warning=RR_RECOVERY_SIGNAL_LOST;app.warning_time=1.2;}
+            if(rr_race_missed_gate(&app.session.race,app.track.gate_count,&app.car,warning_previous,app.session.race_time)){
+                app.warning=RR_RACE_MISSED_GATE_WARNING;app.warning_time=RR_MISSED_GATE_SECONDS;rr_hud_message_set(&app.message,"MISSED GATE",1.4,true);
+            }
+            unsigned recovery=rr_recovery_update(&app.recovery,&app.track,app.car.pos,app.car.vel,34,dt,app.message.timer,app.session.race.mode==RR_RACE_FREE_ROAM);
+            if(recovery&RR_RECOVERY_WRONG_WAY){app.warning=RR_RECOVERY_WRONG_WAY;app.warning_time=.8;rr_hud_message_set(&app.message,"WRONG WAY",.8,true);}
+            if(recovery&RR_RECOVERY_SIGNAL_LOST){app.warning=RR_RECOVERY_SIGNAL_LOST;app.warning_time=1.2;rr_hud_message_set(&app.message,"SIGNAL LOST",1.2,true);}
             if(recovery&RR_RECOVERY_RESPAWN){TraceLog(LOG_INFO,"RECOVERY: signal lost timeout; returning to safe transform");reset_car(false);}
             if(key_hit(KEY_R)||pad_pressed(GAMEPAD_BUTTON_MIDDLE_LEFT))reset_car(false);
         }
+        /* Source playerWeapons follows player movement/rules/recovery and
+         * Nitro/impact feedback. A finish produced above suppresses this step. */
+        motion_camera_feedback(boost_fx_playing,boost_was);
+        RRSpinResult spin=rr_spin_control_step(&app.spin_cooldown,app.session.phase==RR_SESSION_ACTIVE,dt,spin_requested,in.steer,spin_random_side,NULL);
+        rr_spin_control_apply(spin,&app.car,&app.camera_fx.kick);
+        if(spin.accepted)rr_sub_notice_spin(&app.sub_notice);
     }else if(app.session.phase==RR_SESSION_COUNTDOWN || app.session.phase==RR_SESSION_FINISHED || app.session.phase==RR_SESSION_RESULTS){
         unsigned events=rr_session_step(&app.session,&app.car,app.track.gates,app.track.gate_count,finishing?rr_finish_controls(&app.track,&app.car,app.recovery.sample):(RRInput){0},raw_dt);
         if(finishing){
             unsigned recovery=rr_recovery_update(&app.recovery,&app.track,app.car.pos,app.car.vel,34,dt,app.warning_time,false);
             if(recovery&RR_RECOVERY_RESPAWN)reset_car(false);
         }
+        motion_camera_feedback(boost_fx_playing,boost_was);
+        int previous_count=app.start_cue.count;
+        rr_start_cue_observe(&app.start_cue,app.session.last_count);
+        if(app.start_cue.count!=previous_count)rr_hud_message_set(&app.message,app.start_cue.text,.9,false);
         if(events&RR_SESSION_SHOW_RESULTS)TraceLog(LOG_INFO,"STATE: results visible; lap history frozen");
-        if(events&RR_SESSION_GO){center_aim();app.message_time=0;TraceLog(LOG_INFO,"STATE: GO");}
+        if(events&RR_SESSION_GO){center_aim();TraceLog(LOG_INFO,"STATE: GO");}
     }
     if(app.session.phase==RR_SESSION_ERROR)EnableCursor();
 #if defined(RR_COCKPIT_PREVIEW)
@@ -510,6 +588,7 @@ static void frame(void)
         app.cockpit_steer=rr_cockpit_steer(app.cockpit_steer,app.cockpit_control,dt,app.session.phase==RR_SESSION_ACTIVE);
 #endif
     update_camera(dt);
+    if(app.session.phase!=RR_SESSION_MENU){rr_hud_message_tick(&app.message,dt);rr_start_cue_tick(&app.start_cue,dt);rr_sub_notice_tick(&app.sub_notice,dt);}
 #if defined(RR_HERO_VIEW)
     if(app.scene_ready){
         static bool logged=false;if(!logged){TraceLog(LOG_INFO,"VALIDATION: camera-only control-tower inspection; no actor/progress changes");logged=true;}
@@ -530,6 +609,7 @@ static void frame(void)
         BeginDrawing();ClearBackground(ink);
         DrawRectangleGradientV(0,0,GetScreenWidth(),GetScreenHeight(),ink,(Color){30,19,58,255});
     }
+    if(app.session.phase==RR_SESSION_MENU||app.session.phase==RR_SESSION_RESULTS||app.session.phase==RR_SESSION_ERROR)nitro_call_ui();
     if(app.session.phase==RR_SESSION_MENU)menu_ui();
     else if(app.session.phase==RR_SESSION_RESULTS || app.session.phase==RR_SESSION_ERROR){DrawRectangle(0,0,GetScreenWidth(),GetScreenHeight(),Fade(ink,.9f));results_ui();}
     else {
@@ -540,7 +620,7 @@ static void frame(void)
             rr_cockpit_draw(&app.cockpit_art,&app.ui,GetScreenWidth(),GetScreenHeight(),&values,app.car.boost,false);
         }
 #endif
-        flight_ui();if(app.session.phase==RR_SESSION_FINISHED)rr_ui_text_center(&app.ui,"FINISH",(float)GetScreenWidth()*.5f,(float)GetScreenHeight()*.24f,64,4,900,cyan,true);}
+        flight_ui();}
     app.picker_notice=fmax(0,app.picker_notice-dt);
     if(app.session.phase!=RR_SESSION_MENU)app.warning_time=fmax(0,app.warning_time-dt);
 #if defined(RR_FINISH_VALIDATION)
@@ -618,7 +698,8 @@ int main(int argc,char **argv)
     target_fps(app.smoke?60:30);
 #endif
     rlSetClipPlanes(.1,2500);
-    app.session.phase=RR_SESSION_MENU;app.camera.up=(Vector3){0,1,0};app.camera.projection=CAMERA_PERSPECTIVE;app.camera_fov=68;
+    app.mouse_settings=(RRMouseSettings){1,false};
+    app.session.phase=RR_SESSION_MENU;app.camera.up=(Vector3){0,1,0};app.camera.projection=CAMERA_PERSPECTIVE;app.camera_fov=70;
     if(!rr_corridor_init_all(&app.corridor,&app.track)||!rr_road_picker_init(&app.picker,&app.track)){
         TraceLog(LOG_ERROR,"All-route corridor/track initialization failed.");CloseWindow();return 1;
     }
@@ -626,7 +707,7 @@ int main(int argc,char **argv)
     TraceLog(LOG_INFO,"SHARED: platforms=%d columns=%d trees=%d props=%d colliders=%d",app.shared.platforms,app.shared.columns,app.shared.trees,app.shared.prop_count,app.shared.collider_count);
     if(!rr_canonical_city_plan(&app.city_plan,&app.corridor)){TraceLog(LOG_ERROR,"Canonical core exceeds city budget");CloseWindow();return 1;}
     TraceLog(LOG_INFO,"CITY_CORE: prototype kept=%d removed=%d canonical=%d total=%d",app.city_plan.prototype_kept,app.city_plan.prototype_removed,app.city_plan.canonical_count,app.city_plan.count);
-    rr_ui_load(&app.ui);
+    rr_ui_load(&app.ui);rr_sub_art_load(&app.sub_art);
     reset_car(true);
     TraceLog(LOG_INFO,"WORLD: union ready points=%d coarse=%d gates=%d cells=%d",app.corridor.point_count,app.corridor.coarse_count,app.corridor.gate_count,app.corridor.occupied_cells);
     TraceLog(LOG_INFO,"STARTUP: 2D menu ready; track %.3f m, %d samples; nine-road picker ready; offline open=1; scene deferred",app.track.length,app.track.sample_count);
@@ -636,7 +717,7 @@ int main(int argc,char **argv)
     while(!WindowShouldClose() && !app.quit && (!app.smoke || app.frame<151))frame();
     bool asset_failure=app.smoke && !app.fallback && !app.scene.car_loaded;
     if(app.smoke)printf("FIRST_FLIGHT_SMOKE: %d frames, model=%s, speed=%.3f m/s, output=captures/\n",app.frame,app.scene.car_loaded?"loaded":"fallback",app.car.speed);
-    rr_session_dispose(&app.session);rr_scene_unload(&app.scene);rr_cockpit_unload(&app.cockpit_art);rr_ui_unload(&app.ui);CloseWindow();
+    rr_session_dispose(&app.session);rr_scene_unload(&app.scene);rr_cockpit_unload(&app.cockpit_art);rr_sub_art_unload(&app.sub_art);rr_ui_unload(&app.ui);CloseWindow();
     TraceLog(LOG_INFO,"SESSION: clean shutdown");
     if(diagnostic_log){fclose(diagnostic_log);diagnostic_log=NULL;}
     return (asset_failure || app.failed)?1:0;

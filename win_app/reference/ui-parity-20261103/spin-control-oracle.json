@@ -1,0 +1,8 @@
+{
+  "aimPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\aim.js",
+  "aimSHA256": "dfa86c63f0c8b707e8ae18a1e1ab3bfa9fee14a250eae49db3a341cf9b88139f",
+  "carPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\car.js",
+  "carSHA256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af",
+  "cases": 192,
+  "scope": "Actual playerWeapons spin block plus Car.dodge/barrelRoll and constants; supplied RNG at0.5 boundary, active/finish gating, cooldown/steer/kick variations. Audio/flash/live effects stubbed; no real graphics or account/network calls."
+}

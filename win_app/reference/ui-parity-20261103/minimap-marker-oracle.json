@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "sourceSHA256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "reference": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\components\\source\\hud.js",
+  "referenceSHA256": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b",
+  "raceMethodUnchanged": true,
+  "cases": 54,
+  "scope": "Actual HUD.drawMap Canvas path/transform commands with inert context, no graphics; square/non-square viewports, heading wrap and off-map positions. Does not establish circular clipping, raster/glow or native appearance."
+}

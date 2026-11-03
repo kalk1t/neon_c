@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-11-03T17:20:01.030283+00:00",
+  "local_browser_version": "0.2.8",
+  "oracle": {
+    "mainPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+    "mainSHA256": "970b45c22f8f56d8ca5f9e8a68016248700c1092947af5d776cb3472d96ce36a",
+    "cameraPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+    "cameraSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+    "frames": 720,
+    "sequences": 3,
+    "ignitions": 12,
+    "scope": "Actual Nitro ignition branch + full chaseCamera with real Three math, matched initial FOV and external car/boost states. Three views, strict1-second guard, restart preserving camera history, mixed dt and wall-clock gap. No actual car/input/audio/particles/lens rendering, collision-damage trigger or account execution."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 8,
+      "focused_tests_failed": 0,
+      "summary": "Actual browser Nitro/camera FX: 720 sequential source frames, max error 1.4210854715202004e-14, 0 failures",
+      "log": "reference\\ui-parity-20261103\\camera-fx-native-build.log",
+      "sha256": "fd6a76e190a3be4b88f6e973f5d206973db53e74dbc3fa88404e1945fa33320d"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 8,
+      "focused_tests_failed": 0,
+      "summary": "Actual browser Nitro/camera FX: 720 sequential source frames, max error 1.4210854715202004e-14, 0 failures",
+      "log": "reference\\ui-parity-20261103\\camera-fx-web-build.log",
+      "sha256": "de36c48f3497b49d4e26172d2fd666b35a764b9452da5ba05b8d01e2307f2a00"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_camera_fx.h",
+      "sha256": "afbdc976e8e2b1c1d2a5f562cbf5401f0d8ab3bb42b6bd42ebfd76118e4ca100"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "76fc84330d054e556ddc19b5ad07ad87aaa40531e1b7c757f660ce9b995b2b4f"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "dccfa26c93494e467bb2b81ff4f4646e74900961bf1d23d4cebc3c2212ee84ed"
+    },
+    {
+      "path": "tests/test_camera_fx.c",
+      "sha256": "b9fba8d5dd62c2640cc7843f1d5809afac9d50eff5210bd12e217b0309cb076e"
+    },
+    {
+      "path": "tests/camera_fx_fixture.h",
+      "sha256": "595769f836d9f6270ad2e844358a95ecaac9779df9bab46ace0b440b19089a87"
+    },
+    {
+      "path": "tools/capture-camera-fx.mjs",
+      "sha256": "85d831955555d4cc1e06f03f84e6430437cd58118970bbccef15d33a15bb4cbb"
+    },
+    {
+      "path": "reference/ui-parity-20261103/camera-fx-oracle.json",
+      "sha256": "17c291603f8b9dc526a7b751789722867e6602936c94e187e80ac03777510a39"
+    }
+  ],
+  "preceding_start_cue_files_verified_unchanged": [
+    "src/presentation/rr_start_cue.h",
+    "tests/test_start_cue.c",
+    "tests/start_cue_fixture.h",
+    "tools/capture-start-cues.mjs",
+    "reference/ui-parity-20261103/start-cue-oracle.json"
+  ],
+  "resource_delta": "Fixed CPU trig/vector math and three doubles of FX state; no texture/mesh/shader/render-target or upload/cap change. FOV alters visibility, unmeasured on hardware.",
+  "reused": "Prior whole42 and subsequent focused evidence separate; complete48-test suite not rerun. Existing full-player-tick fixture regression fresh, not a new source oracle for full gameplay.",
+  "graphics": "Not run, rejected launch still pending separate explicit authorization without retry or desktop/process actions.",
+  "limits": "Boost states replayed as source inputs; no real controller/physics-to-FX/native GPU/comfort/audio/particle/collision damage or whole-game acceptance. Glyph work independent with asset team."
+}

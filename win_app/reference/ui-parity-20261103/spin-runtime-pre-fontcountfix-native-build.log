@@ -1,0 +1,133 @@
+-- Configuring done (0.0s)
+-- Generating done (1.3s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/spin-runtime-native
+[ 16%] Built target rr_core
+[ 17%] Building C object CMakeFiles/rr_spin_control_tests.dir/tests/test_spin_control.c.obj
+test_spin_control.c
+[ 17%] Linking C executable rr_spin_control_tests.exe
+[ 17%] Built target rr_spin_control_tests
+[ 18%] Built target rr_impact_fx_tests
+[ 19%] Built target rr_mouse_aim_tests
+[ 20%] Built target rr_hud_message_tests
+[ 21%] Built target rr_target_guidance_tests
+[ 21%] Building C object CMakeFiles/rr_sub_notice_tests.dir/tests/test_sub_notice.c.obj
+test_sub_notice.c
+[ 22%] Linking C executable rr_sub_notice_tests.exe
+[ 22%] Built target rr_sub_notice_tests
+[ 23%] Built target rr_camera_fx_tests
+[ 25%] Built target rr_start_cue_tests
+[ 26%] Built target rr_race_warning_tests
+[ 27%] Built target rr_camera_motion_tests
+[ 28%] Built target rr_chase_camera_tests
+[ 29%] Built target rr_first_person_tests
+[ 30%] Built target rr_input_mix_tests
+[ 31%] Built target rr_pause_ui_tests
+[ 32%] Built target rr_cockpit_tests
+[ 33%] Built target rr_race_ui_tests
+[ 35%] Built target rr_ui_layout_tests
+[ 36%] Built target rr_facade_tests
+[ 37%] Built target rr_mesh_loader_tests
+[ 38%] Built target rr_city_catalog_tests
+[ 40%] Built target rr_city_batching_tests
+[ 42%] Built target rr_city_repacking_tests
+[ 45%] Built target rr_city_triangle_tests
+[ 49%] Built target rr_city_occlusion_tests
+[ 54%] Built target rr_city_witness_tests
+[ 58%] Built target rr_city_coverage_tests
+[ 59%] Built target rr_poster_tests
+[ 60%] Built target rr_ai_tests
+[ 62%] Built target rr_rival_tests
+[ 63%] Built target rr_coin_tests
+[ 64%] Built target rr_pack_tests
+[ 65%] Built target rr_targeting_tests
+[ 66%] Built target rr_arsenal_tests
+[ 67%] Built target rr_combat_tests
+[ 68%] Built target rr_fire_tests
+[ 69%] Built target rr_battle_tests
+[ 70%] Built target rr_local_run_tests
+[ 71%] Built target rr_core_tests
+[ 72%] Built target rr_render_policy_tests
+[ 74%] Built target rr_race_tests
+[ 75%] Built target rr_session_tests
+[ 77%] Built target rr_menu_policy_tests
+[ 78%] Built target rr_recovery_tests
+[ 80%] Built target rr_all_roads_tests
+[ 81%] Built target rr_road_picker_tests
+[ 83%] Built target rr_city_clearance_tests
+[ 84%] Built target rr_finish_tests
+[ 86%] Built target rr_physics_tests
+[ 88%] Built target rr_course_tests
+[ 89%] Built target rr_shared_scenery_tests
+[ 91%] Built target rr_hero_asset_tests
+[ 93%] Built target rr_canonical_city_tests
+[ 94%] Built target rr_cockpit_image_tests
+[ 94%] Building C object CMakeFiles/rr_subtext_tests.dir/tests/test_subtext.c.obj
+test_subtext.c
+[ 95%] Linking C executable rr_subtext_tests.exe
+[ 96%] Built target rr_subtext_tests
+[ 97%] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.obj
+test_ui_fonts.c
+[ 97%] Linking C executable rr_ui_font_tests.exe
+[ 97%] Built target rr_ui_font_tests
+[ 97%] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.obj
+main.c
+[ 97%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.obj
+rr_ui.c
+[ 97%] Linking C executable bin\RoadstersRace.exe
+[100%] Built target RoadstersRace
+Test project C:/Users/User/Projects/neon_c/win_app/build/spin-runtime-native
+      Start  1: browser_native_spin_control
+ 1/19 Test  #1: browser_native_spin_control ................   Passed    0.03 sec
+      Start  2: browser_collision_camera_shake
+ 2/19 Test  #2: browser_collision_camera_shake .............   Passed    0.01 sec
+      Start  3: browser_mouse_aim_settings
+ 3/19 Test  #3: browser_mouse_aim_settings .................   Passed    0.01 sec
+      Start  4: browser_race_announcement_channel
+ 4/19 Test  #4: browser_race_announcement_channel ..........   Passed    0.01 sec
+      Start  5: browser_target_guidance
+ 5/19 Test  #5: browser_target_guidance ....................   Passed    0.01 sec
+      Start  6: browser_unicode_submessage_timers
+ 6/19 Test  #6: browser_unicode_submessage_timers ..........   Passed    0.02 sec
+      Start  7: browser_nitro_camera_fx
+ 7/19 Test  #7: browser_nitro_camera_fx ....................   Passed    0.01 sec
+      Start  8: browser_countdown_start_cues
+ 8/19 Test  #8: browser_countdown_start_cues ...............   Passed    0.01 sec
+      Start  9: browser_missed_gate_warning
+ 9/19 Test  #9: browser_missed_gate_warning ................   Passed    0.01 sec
+      Start 16: browser_race_ui_state_layout
+10/19 Test #16: browser_race_ui_state_layout ...............   Passed    0.02 sec
+      Start 33: browser_player_arsenal_rules
+11/19 Test #33: browser_player_arsenal_rules ...............   Passed    0.01 sec
+      Start 35: browser_fire_dispatch_rng
+12/19 Test #35: browser_fire_dispatch_rng ..................   Passed    0.02 sec
+      Start 37: browser_full_local_player_ticks
+13/19 Test #37: browser_full_local_player_ticks ............   Passed    0.05 sec
+      Start 41: race_session_lifecycle
+14/19 Test #41: race_session_lifecycle .....................   Passed    0.01 sec
+      Start 45: browser_road_picker
+15/19 Test #45: browser_road_picker ........................   Passed    0.04 sec
+      Start 47: browser_finish_results
+16/19 Test #47: browser_finish_results .....................   Passed    0.18 sec
+      Start 48: browser_collision_primitives
+17/19 Test #48: browser_collision_primitives ...............   Passed    0.03 sec
+      Start 54: browser_fallback_glyph_cpu_decode_layout
+18/19 Test #54: browser_fallback_glyph_cpu_decode_layout ...***Failed    0.04 sec
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+subtext check line27: count==96&&GetGlyphIndex(font,215)!=GetGlyphIndex(font,'?')
+
+      Start 55: browser_ui_font_cpu_atlas
+19/19 Test #55: browser_ui_font_cpu_atlas ..................***Failed    0.04 sec
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Font check failed line 20: count==96&&g[95].value==215&&g[95].advanceX>0&&g[95].image.data
+
+
+89% tests passed, 2 tests failed out of 19
+
+Total Test time (real) =   0.68 sec
+
+The following tests FAILED:
+	 54 - browser_fallback_glyph_cpu_decode_layout (Failed)
+	 55 - browser_ui_font_cpu_atlas (Failed)
+Errors while running CTest

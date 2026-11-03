@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:15:49.0825985Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "c54402071b80b01335badeae774d233e036428d93cf48a03a8977592f343c58b",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\mouse-settings-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "f5ace035d641bee36dff80dad4424a6f8a9889b7707d6673309cadf3b5a65475",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-mouse-settings-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\mouse-settings-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

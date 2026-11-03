@@ -1,0 +1,6 @@
+RoadstersFallbackGlyphs-v1: local development glyph crops.
+Only dot-white@3x.png and star-white@3x.png are imported unchanged from native-glyphs/.
+No Arial Black or Segoe UI Symbol font files are included.
+Metrics, hashes and original rights/acceptance notes: win_app/reference/fallback-glyph-import-20261103/.
+These are rendering output derived from installed system font faces. The source handoff does not independently establish external redistribution permission; retain its notes before any release. No external distribution is performed by this integration.
+Native appearance, scaling and glow remain unverified.

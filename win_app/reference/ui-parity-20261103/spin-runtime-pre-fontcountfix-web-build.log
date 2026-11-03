@@ -1,0 +1,88 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\spin-runtime-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (2.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/spin-runtime-web
+[0/2] Re-checking globbed directories...
+[1/12] Building C object CMakeFiles/rr_sub_notice_tests.dir/tests/test_sub_notice.c.o
+[2/12] Building C object CMakeFiles/rr_subtext_tests.dir/tests/test_subtext.c.o
+[3/12] Building C object CMakeFiles/rr_spin_control_tests.dir/tests/test_spin_control.c.o
+[4/12] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.o
+[5/12] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[6/12] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[7/12] Linking C executable rr_sub_notice_tests.js
+[8/12] Linking C executable rr_spin_control_tests.js
+[9/12] Linking C executable rr_ui_font_tests.js
+[10/12] Linking C executable rr_subtext_tests.js
+[11/12] Linking C executable bin\RoadstersRace.html
+Test project C:/Users/User/Projects/neon_c/win_app/build/spin-runtime-web
+      Start  1: browser_native_spin_control
+ 1/19 Test  #1: browser_native_spin_control ................   Passed    0.21 sec
+      Start  2: browser_collision_camera_shake
+ 2/19 Test  #2: browser_collision_camera_shake .............   Passed    0.19 sec
+      Start  3: browser_mouse_aim_settings
+ 3/19 Test  #3: browser_mouse_aim_settings .................   Passed    0.20 sec
+      Start  4: browser_race_announcement_channel
+ 4/19 Test  #4: browser_race_announcement_channel ..........   Passed    0.20 sec
+      Start  5: browser_target_guidance
+ 5/19 Test  #5: browser_target_guidance ....................   Passed    0.20 sec
+      Start  6: browser_unicode_submessage_timers
+ 6/19 Test  #6: browser_unicode_submessage_timers ..........   Passed    0.22 sec
+      Start  7: browser_nitro_camera_fx
+ 7/19 Test  #7: browser_nitro_camera_fx ....................   Passed    0.21 sec
+      Start  8: browser_countdown_start_cues
+ 8/19 Test  #8: browser_countdown_start_cues ...............   Passed    0.20 sec
+      Start  9: browser_missed_gate_warning
+ 9/19 Test  #9: browser_missed_gate_warning ................   Passed    0.20 sec
+      Start 16: browser_race_ui_state_layout
+10/19 Test #16: browser_race_ui_state_layout ...............   Passed    0.21 sec
+      Start 33: browser_player_arsenal_rules
+11/19 Test #33: browser_player_arsenal_rules ...............   Passed    0.21 sec
+      Start 35: browser_fire_dispatch_rng
+12/19 Test #35: browser_fire_dispatch_rng ..................   Passed    0.20 sec
+      Start 37: browser_full_local_player_ticks
+13/19 Test #37: browser_full_local_player_ticks ............   Passed    0.22 sec
+      Start 41: race_session_lifecycle
+14/19 Test #41: race_session_lifecycle .....................   Passed    0.19 sec
+      Start 45: browser_road_picker
+15/19 Test #45: browser_road_picker ........................   Passed    0.24 sec
+      Start 47: browser_finish_results
+16/19 Test #47: browser_finish_results .....................   Passed    0.37 sec
+      Start 48: browser_collision_primitives
+17/19 Test #48: browser_collision_primitives ...............   Passed    0.23 sec
+      Start 54: browser_fallback_glyph_cpu_decode_layout
+18/19 Test #54: browser_fallback_glyph_cpu_decode_layout ...***Failed    0.25 sec
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+subtext check line27: count==96&&GetGlyphIndex(font,215)!=GetGlyphIndex(font,'?')
+
+      Start 55: browser_ui_font_cpu_atlas
+19/19 Test #55: browser_ui_font_cpu_atlas ..................***Failed    0.25 sec
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Font check failed line 20: count==96&&g[95].value==215&&g[95].advanceX>0&&g[95].image.data
+
+
+89% tests passed, 2 tests failed out of 19
+
+Total Test time (real) =   4.23 sec
+
+The following tests FAILED:
+	 54 - browser_fallback_glyph_cpu_decode_layout (Failed)
+	 55 - browser_ui_font_cpu_atlas (Failed)
+Errors while running CTest

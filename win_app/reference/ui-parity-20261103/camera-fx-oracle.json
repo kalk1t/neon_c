@@ -1,0 +1,10 @@
+{
+  "mainPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+  "mainSHA256": "970b45c22f8f56d8ca5f9e8a68016248700c1092947af5d776cb3472d96ce36a",
+  "cameraPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+  "cameraSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "frames": 720,
+  "sequences": 3,
+  "ignitions": 12,
+  "scope": "Actual Nitro ignition branch + full chaseCamera with real Three math, matched initial FOV and external car/boost states. Three views, strict1-second guard, restart preserving camera history, mixed dt and wall-clock gap. No actual car/input/audio/particles/lens rendering, collision-damage trigger or account execution."
+}

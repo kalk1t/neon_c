@@ -1,0 +1,1518 @@
+{
+  "created_utc": "2026-11-03T16:38:32.883881+00:00",
+  "local_browser_version": "0.2.7",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+    "sourceSHA256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+    "assetManifest": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+    "assetManifestSHA256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd",
+    "cases": [
+      {
+        "count": 0,
+        "rows": [],
+        "best": "--:--.--"
+      },
+      {
+        "count": 1,
+        "rows": [
+          {
+            "best": true,
+            "text": "01:10.00"
+          }
+        ],
+        "best": "01:10.00"
+      },
+      {
+        "count": 2,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          }
+        ],
+        "best": "01:00.00"
+      },
+      {
+        "count": 3,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.25"
+          }
+        ],
+        "best": "01:00.00"
+      },
+      {
+        "count": 4,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.25"
+          },
+          {
+            "best": false,
+            "text": "01:00.00"
+          }
+        ],
+        "best": "01:00.00"
+      },
+      {
+        "count": 10,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.25"
+          },
+          {
+            "best": false,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.50"
+          },
+          {
+            "best": false,
+            "text": "01:10.63"
+          },
+          {
+            "best": false,
+            "text": "01:10.75"
+          },
+          {
+            "best": false,
+            "text": "01:10.88"
+          },
+          {
+            "best": false,
+            "text": "01:11.00"
+          },
+          {
+            "best": false,
+            "text": "01:11.13"
+          }
+        ],
+        "best": "01:00.00"
+      },
+      {
+        "count": 64,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.25"
+          },
+          {
+            "best": false,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.50"
+          },
+          {
+            "best": false,
+            "text": "01:10.63"
+          },
+          {
+            "best": false,
+            "text": "01:10.75"
+          },
+          {
+            "best": false,
+            "text": "01:10.88"
+          },
+          {
+            "best": false,
+            "text": "01:11.00"
+          },
+          {
+            "best": false,
+            "text": "01:11.13"
+          },
+          {
+            "best": false,
+            "text": "01:11.25"
+          },
+          {
+            "best": false,
+            "text": "01:11.38"
+          },
+          {
+            "best": false,
+            "text": "01:11.50"
+          },
+          {
+            "best": false,
+            "text": "01:11.63"
+          },
+          {
+            "best": false,
+            "text": "01:11.75"
+          },
+          {
+            "best": false,
+            "text": "01:11.88"
+          },
+          {
+            "best": false,
+            "text": "01:12.00"
+          },
+          {
+            "best": false,
+            "text": "01:12.13"
+          },
+          {
+            "best": false,
+            "text": "01:12.25"
+          },
+          {
+            "best": false,
+            "text": "01:12.38"
+          },
+          {
+            "best": false,
+            "text": "01:12.50"
+          },
+          {
+            "best": false,
+            "text": "01:12.63"
+          },
+          {
+            "best": false,
+            "text": "01:12.75"
+          },
+          {
+            "best": false,
+            "text": "01:12.88"
+          },
+          {
+            "best": false,
+            "text": "01:13.00"
+          },
+          {
+            "best": false,
+            "text": "01:13.13"
+          },
+          {
+            "best": false,
+            "text": "01:13.25"
+          },
+          {
+            "best": false,
+            "text": "01:13.38"
+          },
+          {
+            "best": false,
+            "text": "01:13.50"
+          },
+          {
+            "best": false,
+            "text": "01:13.63"
+          },
+          {
+            "best": false,
+            "text": "01:13.75"
+          },
+          {
+            "best": false,
+            "text": "01:13.88"
+          },
+          {
+            "best": false,
+            "text": "01:14.00"
+          },
+          {
+            "best": false,
+            "text": "01:14.13"
+          },
+          {
+            "best": false,
+            "text": "01:14.25"
+          },
+          {
+            "best": false,
+            "text": "01:14.38"
+          },
+          {
+            "best": false,
+            "text": "01:14.50"
+          },
+          {
+            "best": false,
+            "text": "01:14.63"
+          },
+          {
+            "best": false,
+            "text": "01:14.75"
+          },
+          {
+            "best": false,
+            "text": "01:14.88"
+          },
+          {
+            "best": false,
+            "text": "01:15.00"
+          },
+          {
+            "best": false,
+            "text": "01:15.13"
+          },
+          {
+            "best": false,
+            "text": "01:15.25"
+          },
+          {
+            "best": false,
+            "text": "01:15.38"
+          },
+          {
+            "best": false,
+            "text": "01:15.50"
+          },
+          {
+            "best": false,
+            "text": "01:15.63"
+          },
+          {
+            "best": false,
+            "text": "01:15.75"
+          },
+          {
+            "best": false,
+            "text": "01:15.88"
+          },
+          {
+            "best": false,
+            "text": "01:16.00"
+          },
+          {
+            "best": false,
+            "text": "01:16.13"
+          },
+          {
+            "best": false,
+            "text": "01:16.25"
+          },
+          {
+            "best": false,
+            "text": "01:16.38"
+          },
+          {
+            "best": false,
+            "text": "01:16.50"
+          },
+          {
+            "best": false,
+            "text": "01:16.63"
+          },
+          {
+            "best": false,
+            "text": "01:16.75"
+          },
+          {
+            "best": false,
+            "text": "01:16.88"
+          },
+          {
+            "best": false,
+            "text": "01:17.00"
+          },
+          {
+            "best": false,
+            "text": "01:17.13"
+          },
+          {
+            "best": false,
+            "text": "01:17.25"
+          },
+          {
+            "best": false,
+            "text": "01:17.38"
+          },
+          {
+            "best": false,
+            "text": "01:17.50"
+          },
+          {
+            "best": false,
+            "text": "01:17.63"
+          },
+          {
+            "best": false,
+            "text": "01:17.75"
+          },
+          {
+            "best": false,
+            "text": "01:17.88"
+          }
+        ],
+        "best": "01:00.00"
+      },
+      {
+        "count": 256,
+        "rows": [
+          {
+            "best": false,
+            "text": "01:10.00"
+          },
+          {
+            "best": true,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.25"
+          },
+          {
+            "best": false,
+            "text": "01:00.00"
+          },
+          {
+            "best": false,
+            "text": "01:10.50"
+          },
+          {
+            "best": false,
+            "text": "01:10.63"
+          },
+          {
+            "best": false,
+            "text": "01:10.75"
+          },
+          {
+            "best": false,
+            "text": "01:10.88"
+          },
+          {
+            "best": false,
+            "text": "01:11.00"
+          },
+          {
+            "best": false,
+            "text": "01:11.13"
+          },
+          {
+            "best": false,
+            "text": "01:11.25"
+          },
+          {
+            "best": false,
+            "text": "01:11.38"
+          },
+          {
+            "best": false,
+            "text": "01:11.50"
+          },
+          {
+            "best": false,
+            "text": "01:11.63"
+          },
+          {
+            "best": false,
+            "text": "01:11.75"
+          },
+          {
+            "best": false,
+            "text": "01:11.88"
+          },
+          {
+            "best": false,
+            "text": "01:12.00"
+          },
+          {
+            "best": false,
+            "text": "01:12.13"
+          },
+          {
+            "best": false,
+            "text": "01:12.25"
+          },
+          {
+            "best": false,
+            "text": "01:12.38"
+          },
+          {
+            "best": false,
+            "text": "01:12.50"
+          },
+          {
+            "best": false,
+            "text": "01:12.63"
+          },
+          {
+            "best": false,
+            "text": "01:12.75"
+          },
+          {
+            "best": false,
+            "text": "01:12.88"
+          },
+          {
+            "best": false,
+            "text": "01:13.00"
+          },
+          {
+            "best": false,
+            "text": "01:13.13"
+          },
+          {
+            "best": false,
+            "text": "01:13.25"
+          },
+          {
+            "best": false,
+            "text": "01:13.38"
+          },
+          {
+            "best": false,
+            "text": "01:13.50"
+          },
+          {
+            "best": false,
+            "text": "01:13.63"
+          },
+          {
+            "best": false,
+            "text": "01:13.75"
+          },
+          {
+            "best": false,
+            "text": "01:13.88"
+          },
+          {
+            "best": false,
+            "text": "01:14.00"
+          },
+          {
+            "best": false,
+            "text": "01:14.13"
+          },
+          {
+            "best": false,
+            "text": "01:14.25"
+          },
+          {
+            "best": false,
+            "text": "01:14.38"
+          },
+          {
+            "best": false,
+            "text": "01:14.50"
+          },
+          {
+            "best": false,
+            "text": "01:14.63"
+          },
+          {
+            "best": false,
+            "text": "01:14.75"
+          },
+          {
+            "best": false,
+            "text": "01:14.88"
+          },
+          {
+            "best": false,
+            "text": "01:15.00"
+          },
+          {
+            "best": false,
+            "text": "01:15.13"
+          },
+          {
+            "best": false,
+            "text": "01:15.25"
+          },
+          {
+            "best": false,
+            "text": "01:15.38"
+          },
+          {
+            "best": false,
+            "text": "01:15.50"
+          },
+          {
+            "best": false,
+            "text": "01:15.63"
+          },
+          {
+            "best": false,
+            "text": "01:15.75"
+          },
+          {
+            "best": false,
+            "text": "01:15.88"
+          },
+          {
+            "best": false,
+            "text": "01:16.00"
+          },
+          {
+            "best": false,
+            "text": "01:16.13"
+          },
+          {
+            "best": false,
+            "text": "01:16.25"
+          },
+          {
+            "best": false,
+            "text": "01:16.38"
+          },
+          {
+            "best": false,
+            "text": "01:16.50"
+          },
+          {
+            "best": false,
+            "text": "01:16.63"
+          },
+          {
+            "best": false,
+            "text": "01:16.75"
+          },
+          {
+            "best": false,
+            "text": "01:16.88"
+          },
+          {
+            "best": false,
+            "text": "01:17.00"
+          },
+          {
+            "best": false,
+            "text": "01:17.13"
+          },
+          {
+            "best": false,
+            "text": "01:17.25"
+          },
+          {
+            "best": false,
+            "text": "01:17.38"
+          },
+          {
+            "best": false,
+            "text": "01:17.50"
+          },
+          {
+            "best": false,
+            "text": "01:17.63"
+          },
+          {
+            "best": false,
+            "text": "01:17.75"
+          },
+          {
+            "best": false,
+            "text": "01:17.88"
+          },
+          {
+            "best": false,
+            "text": "01:18.00"
+          },
+          {
+            "best": false,
+            "text": "01:18.13"
+          },
+          {
+            "best": false,
+            "text": "01:18.25"
+          },
+          {
+            "best": false,
+            "text": "01:18.38"
+          },
+          {
+            "best": false,
+            "text": "01:18.50"
+          },
+          {
+            "best": false,
+            "text": "01:18.63"
+          },
+          {
+            "best": false,
+            "text": "01:18.75"
+          },
+          {
+            "best": false,
+            "text": "01:18.88"
+          },
+          {
+            "best": false,
+            "text": "01:19.00"
+          },
+          {
+            "best": false,
+            "text": "01:19.13"
+          },
+          {
+            "best": false,
+            "text": "01:19.25"
+          },
+          {
+            "best": false,
+            "text": "01:19.38"
+          },
+          {
+            "best": false,
+            "text": "01:19.50"
+          },
+          {
+            "best": false,
+            "text": "01:19.63"
+          },
+          {
+            "best": false,
+            "text": "01:19.75"
+          },
+          {
+            "best": false,
+            "text": "01:19.88"
+          },
+          {
+            "best": false,
+            "text": "01:20.00"
+          },
+          {
+            "best": false,
+            "text": "01:20.13"
+          },
+          {
+            "best": false,
+            "text": "01:20.25"
+          },
+          {
+            "best": false,
+            "text": "01:20.38"
+          },
+          {
+            "best": false,
+            "text": "01:20.50"
+          },
+          {
+            "best": false,
+            "text": "01:20.63"
+          },
+          {
+            "best": false,
+            "text": "01:20.75"
+          },
+          {
+            "best": false,
+            "text": "01:20.88"
+          },
+          {
+            "best": false,
+            "text": "01:21.00"
+          },
+          {
+            "best": false,
+            "text": "01:21.13"
+          },
+          {
+            "best": false,
+            "text": "01:21.25"
+          },
+          {
+            "best": false,
+            "text": "01:21.38"
+          },
+          {
+            "best": false,
+            "text": "01:21.50"
+          },
+          {
+            "best": false,
+            "text": "01:21.63"
+          },
+          {
+            "best": false,
+            "text": "01:21.75"
+          },
+          {
+            "best": false,
+            "text": "01:21.88"
+          },
+          {
+            "best": false,
+            "text": "01:22.00"
+          },
+          {
+            "best": false,
+            "text": "01:22.13"
+          },
+          {
+            "best": false,
+            "text": "01:22.25"
+          },
+          {
+            "best": false,
+            "text": "01:22.38"
+          },
+          {
+            "best": false,
+            "text": "01:22.50"
+          },
+          {
+            "best": false,
+            "text": "01:22.63"
+          },
+          {
+            "best": false,
+            "text": "01:22.75"
+          },
+          {
+            "best": false,
+            "text": "01:22.88"
+          },
+          {
+            "best": false,
+            "text": "01:23.00"
+          },
+          {
+            "best": false,
+            "text": "01:23.13"
+          },
+          {
+            "best": false,
+            "text": "01:23.25"
+          },
+          {
+            "best": false,
+            "text": "01:23.38"
+          },
+          {
+            "best": false,
+            "text": "01:23.50"
+          },
+          {
+            "best": false,
+            "text": "01:23.63"
+          },
+          {
+            "best": false,
+            "text": "01:23.75"
+          },
+          {
+            "best": false,
+            "text": "01:23.88"
+          },
+          {
+            "best": false,
+            "text": "01:24.00"
+          },
+          {
+            "best": false,
+            "text": "01:24.13"
+          },
+          {
+            "best": false,
+            "text": "01:24.25"
+          },
+          {
+            "best": false,
+            "text": "01:24.38"
+          },
+          {
+            "best": false,
+            "text": "01:24.50"
+          },
+          {
+            "best": false,
+            "text": "01:24.63"
+          },
+          {
+            "best": false,
+            "text": "01:24.75"
+          },
+          {
+            "best": false,
+            "text": "01:24.88"
+          },
+          {
+            "best": false,
+            "text": "01:25.00"
+          },
+          {
+            "best": false,
+            "text": "01:25.13"
+          },
+          {
+            "best": false,
+            "text": "01:25.25"
+          },
+          {
+            "best": false,
+            "text": "01:25.38"
+          },
+          {
+            "best": false,
+            "text": "01:25.50"
+          },
+          {
+            "best": false,
+            "text": "01:25.63"
+          },
+          {
+            "best": false,
+            "text": "01:25.75"
+          },
+          {
+            "best": false,
+            "text": "01:25.88"
+          },
+          {
+            "best": false,
+            "text": "01:26.00"
+          },
+          {
+            "best": false,
+            "text": "01:26.13"
+          },
+          {
+            "best": false,
+            "text": "01:26.25"
+          },
+          {
+            "best": false,
+            "text": "01:26.38"
+          },
+          {
+            "best": false,
+            "text": "01:26.50"
+          },
+          {
+            "best": false,
+            "text": "01:26.63"
+          },
+          {
+            "best": false,
+            "text": "01:26.75"
+          },
+          {
+            "best": false,
+            "text": "01:26.88"
+          },
+          {
+            "best": false,
+            "text": "01:27.00"
+          },
+          {
+            "best": false,
+            "text": "01:27.13"
+          },
+          {
+            "best": false,
+            "text": "01:27.25"
+          },
+          {
+            "best": false,
+            "text": "01:27.38"
+          },
+          {
+            "best": false,
+            "text": "01:27.50"
+          },
+          {
+            "best": false,
+            "text": "01:27.63"
+          },
+          {
+            "best": false,
+            "text": "01:27.75"
+          },
+          {
+            "best": false,
+            "text": "01:27.88"
+          },
+          {
+            "best": false,
+            "text": "01:28.00"
+          },
+          {
+            "best": false,
+            "text": "01:28.13"
+          },
+          {
+            "best": false,
+            "text": "01:28.25"
+          },
+          {
+            "best": false,
+            "text": "01:28.38"
+          },
+          {
+            "best": false,
+            "text": "01:28.50"
+          },
+          {
+            "best": false,
+            "text": "01:28.63"
+          },
+          {
+            "best": false,
+            "text": "01:28.75"
+          },
+          {
+            "best": false,
+            "text": "01:28.88"
+          },
+          {
+            "best": false,
+            "text": "01:29.00"
+          },
+          {
+            "best": false,
+            "text": "01:29.13"
+          },
+          {
+            "best": false,
+            "text": "01:29.25"
+          },
+          {
+            "best": false,
+            "text": "01:29.38"
+          },
+          {
+            "best": false,
+            "text": "01:29.50"
+          },
+          {
+            "best": false,
+            "text": "01:29.63"
+          },
+          {
+            "best": false,
+            "text": "01:29.75"
+          },
+          {
+            "best": false,
+            "text": "01:29.88"
+          },
+          {
+            "best": false,
+            "text": "01:30.00"
+          },
+          {
+            "best": false,
+            "text": "01:30.13"
+          },
+          {
+            "best": false,
+            "text": "01:30.25"
+          },
+          {
+            "best": false,
+            "text": "01:30.38"
+          },
+          {
+            "best": false,
+            "text": "01:30.50"
+          },
+          {
+            "best": false,
+            "text": "01:30.63"
+          },
+          {
+            "best": false,
+            "text": "01:30.75"
+          },
+          {
+            "best": false,
+            "text": "01:30.88"
+          },
+          {
+            "best": false,
+            "text": "01:31.00"
+          },
+          {
+            "best": false,
+            "text": "01:31.13"
+          },
+          {
+            "best": false,
+            "text": "01:31.25"
+          },
+          {
+            "best": false,
+            "text": "01:31.38"
+          },
+          {
+            "best": false,
+            "text": "01:31.50"
+          },
+          {
+            "best": false,
+            "text": "01:31.63"
+          },
+          {
+            "best": false,
+            "text": "01:31.75"
+          },
+          {
+            "best": false,
+            "text": "01:31.88"
+          },
+          {
+            "best": false,
+            "text": "01:32.00"
+          },
+          {
+            "best": false,
+            "text": "01:32.13"
+          },
+          {
+            "best": false,
+            "text": "01:32.25"
+          },
+          {
+            "best": false,
+            "text": "01:32.38"
+          },
+          {
+            "best": false,
+            "text": "01:32.50"
+          },
+          {
+            "best": false,
+            "text": "01:32.63"
+          },
+          {
+            "best": false,
+            "text": "01:32.75"
+          },
+          {
+            "best": false,
+            "text": "01:32.88"
+          },
+          {
+            "best": false,
+            "text": "01:33.00"
+          },
+          {
+            "best": false,
+            "text": "01:33.13"
+          },
+          {
+            "best": false,
+            "text": "01:33.25"
+          },
+          {
+            "best": false,
+            "text": "01:33.38"
+          },
+          {
+            "best": false,
+            "text": "01:33.50"
+          },
+          {
+            "best": false,
+            "text": "01:33.63"
+          },
+          {
+            "best": false,
+            "text": "01:33.75"
+          },
+          {
+            "best": false,
+            "text": "01:33.88"
+          },
+          {
+            "best": false,
+            "text": "01:34.00"
+          },
+          {
+            "best": false,
+            "text": "01:34.13"
+          },
+          {
+            "best": false,
+            "text": "01:34.25"
+          },
+          {
+            "best": false,
+            "text": "01:34.38"
+          },
+          {
+            "best": false,
+            "text": "01:34.50"
+          },
+          {
+            "best": false,
+            "text": "01:34.63"
+          },
+          {
+            "best": false,
+            "text": "01:34.75"
+          },
+          {
+            "best": false,
+            "text": "01:34.88"
+          },
+          {
+            "best": false,
+            "text": "01:35.00"
+          },
+          {
+            "best": false,
+            "text": "01:35.13"
+          },
+          {
+            "best": false,
+            "text": "01:35.25"
+          },
+          {
+            "best": false,
+            "text": "01:35.38"
+          },
+          {
+            "best": false,
+            "text": "01:35.50"
+          },
+          {
+            "best": false,
+            "text": "01:35.63"
+          },
+          {
+            "best": false,
+            "text": "01:35.75"
+          },
+          {
+            "best": false,
+            "text": "01:35.88"
+          },
+          {
+            "best": false,
+            "text": "01:36.00"
+          },
+          {
+            "best": false,
+            "text": "01:36.13"
+          },
+          {
+            "best": false,
+            "text": "01:36.25"
+          },
+          {
+            "best": false,
+            "text": "01:36.38"
+          },
+          {
+            "best": false,
+            "text": "01:36.50"
+          },
+          {
+            "best": false,
+            "text": "01:36.63"
+          },
+          {
+            "best": false,
+            "text": "01:36.75"
+          },
+          {
+            "best": false,
+            "text": "01:36.88"
+          },
+          {
+            "best": false,
+            "text": "01:37.00"
+          },
+          {
+            "best": false,
+            "text": "01:37.13"
+          },
+          {
+            "best": false,
+            "text": "01:37.25"
+          },
+          {
+            "best": false,
+            "text": "01:37.38"
+          },
+          {
+            "best": false,
+            "text": "01:37.50"
+          },
+          {
+            "best": false,
+            "text": "01:37.63"
+          },
+          {
+            "best": false,
+            "text": "01:37.75"
+          },
+          {
+            "best": false,
+            "text": "01:37.88"
+          },
+          {
+            "best": false,
+            "text": "01:38.00"
+          },
+          {
+            "best": false,
+            "text": "01:38.13"
+          },
+          {
+            "best": false,
+            "text": "01:38.25"
+          },
+          {
+            "best": false,
+            "text": "01:38.38"
+          },
+          {
+            "best": false,
+            "text": "01:38.50"
+          },
+          {
+            "best": false,
+            "text": "01:38.63"
+          },
+          {
+            "best": false,
+            "text": "01:38.75"
+          },
+          {
+            "best": false,
+            "text": "01:38.88"
+          },
+          {
+            "best": false,
+            "text": "01:39.00"
+          },
+          {
+            "best": false,
+            "text": "01:39.13"
+          },
+          {
+            "best": false,
+            "text": "01:39.25"
+          },
+          {
+            "best": false,
+            "text": "01:39.38"
+          },
+          {
+            "best": false,
+            "text": "01:39.50"
+          },
+          {
+            "best": false,
+            "text": "01:39.63"
+          },
+          {
+            "best": false,
+            "text": "01:39.75"
+          },
+          {
+            "best": false,
+            "text": "01:39.88"
+          },
+          {
+            "best": false,
+            "text": "01:40.00"
+          },
+          {
+            "best": false,
+            "text": "01:40.13"
+          },
+          {
+            "best": false,
+            "text": "01:40.25"
+          },
+          {
+            "best": false,
+            "text": "01:40.38"
+          },
+          {
+            "best": false,
+            "text": "01:40.50"
+          },
+          {
+            "best": false,
+            "text": "01:40.63"
+          },
+          {
+            "best": false,
+            "text": "01:40.75"
+          },
+          {
+            "best": false,
+            "text": "01:40.88"
+          },
+          {
+            "best": false,
+            "text": "01:41.00"
+          },
+          {
+            "best": false,
+            "text": "01:41.13"
+          },
+          {
+            "best": false,
+            "text": "01:41.25"
+          },
+          {
+            "best": false,
+            "text": "01:41.38"
+          },
+          {
+            "best": false,
+            "text": "01:41.50"
+          },
+          {
+            "best": false,
+            "text": "01:41.63"
+          },
+          {
+            "best": false,
+            "text": "01:41.75"
+          },
+          {
+            "best": false,
+            "text": "01:41.88"
+          }
+        ],
+        "best": "01:00.00"
+      }
+    ],
+    "twoLapGeometry": {
+      "height": 103,
+      "children": [
+        {
+          "tag": "DIV",
+          "rect": {
+            "x": 19,
+            "y": 10,
+            "width": 175,
+            "height": 19
+          }
+        },
+        {
+          "tag": "OL",
+          "rect": {
+            "x": 19,
+            "y": 35,
+            "width": 175,
+            "height": 36
+          }
+        },
+        {
+          "tag": "DIV",
+          "rect": {
+            "x": 19,
+            "y": 77,
+            "width": 175,
+            "height": 16
+          }
+        }
+      ]
+    },
+    "scope": "Actual HUD.laps order/format/first-best with inert DOM text fields; existing prepared browser geometry, not fresh layout rendering. No graphics/network/accounts."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 5,
+      "focused_tests_failed": 0,
+      "log": "reference\\ui-parity-20261103\\lap-history-v026-native-build.log",
+      "sha256": "e93e5dd50493efbc0b61eb189e7b2a4e67584a6ff6778cc5eedeaf4f5611dd0e"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 5,
+      "focused_tests_failed": 0,
+      "log": "reference\\ui-parity-20261103\\lap-history-v026-web-build.log",
+      "sha256": "6f97f21fe40edd2d0b1793281980c58be063e25738d6c07154253b4452181e6d"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/presentation/rr_race_ui.h",
+      "sha256": "9c35dd6e4a343dfe6825007a6789a94e7c2072e107a6cb204854a044ce0b8031"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "f6d6fa861bb354b0c7fc0660df1f71e282adb45476189058794bbb477de7da4a"
+    },
+    {
+      "path": "tests/test_race_ui.c",
+      "sha256": "7740b14495dfb10bb2edb5e23ed044ef71ea27ff3042e53d6a32c6df0734df0b"
+    },
+    {
+      "path": "tools/capture-lap-history.mjs",
+      "sha256": "83142c226f355f13919d5ec5631fb7d8c5f84f29ca2226472e3a750e554f8a70"
+    },
+    {
+      "path": "reference/ui-parity-20261103/lap-history-oracle.json",
+      "sha256": "7053b14649c527ed13587ffe059facb05516b41396968376d634a32bed6bcb64"
+    }
+  ],
+  "prior_files_verified_unchanged": [
+    "src/core/rr_input_mix.h",
+    "tests/test_input_mix.c",
+    "tests/input_state_fixture.h",
+    "tools/capture-input-state.mjs",
+    "reference/ui-parity-20261103/input-state-oracle.json",
+    "src/core/rr_first_person.h",
+    "tests/test_first_person.c",
+    "tests/first_person_fixture.h",
+    "tools/capture-first-person.mjs",
+    "reference/ui-parity-20261103/first-person-oracle.json",
+    "src/core/rr_chase_camera.h",
+    "tests/test_chase_camera.c",
+    "tests/chase_camera_fixture.h",
+    "tools/capture-chase-camera.mjs",
+    "reference/ui-parity-20261103/chase-camera-oracle.json",
+    "src/core/rr_camera_motion.h",
+    "tests/test_camera_motion.c",
+    "tests/camera_motion_fixture.h",
+    "tools/capture-camera-motion.mjs",
+    "reference/ui-parity-20261103/camera-motion-oracle.json"
+  ],
+  "source_layout_tests": "Two-lap prepared capture; 0/4-lap states; counts0,1,2,3,4,10,1000,SIZE_MAX across6 viewports. Native final numbering right-aligned using existing font metrics; appearance unverified.",
+  "reused": "Prepared v3 browser layout, prior full42/42 suites and focused camera evidence. Full45-test suite not rerun.",
+  "graphics": "Not run; prior rejected launch remains pending separate explicit authorization; no retry.",
+  "limits": "Behavior, source-list contract and bounded paint layout only. No native pixel, clipping/overlap, input/hardware, GPU/stability or whole-game acceptance. Browser and progression unchanged."
+}

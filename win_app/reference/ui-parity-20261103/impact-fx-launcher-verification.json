@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:21:03.1487904Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "7485622304622ef6e7681fbd2ffee4ac4087f7196dcd394969fabce5c8f981ee",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\impact-fx-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "d98dd88f1fcf584cebaaa9e1d75098cac9ac541245a24efd8a21f929f988047f",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-impact-fx-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\impact-fx-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

@@ -8,10 +8,11 @@ bool rr_ui_load(RRUI *ui)
 {
     const char *paths[]={"assets/ui-theme/Orbitron-500.ttf","assets/ui-theme/Orbitron-700.ttf","assets/ui-theme/Orbitron-900.ttf","assets/ui-theme/Rajdhani-Medium.ttf"};
     Font *fonts[]={&ui->regular,&ui->bold,&ui->heavy,&ui->body};ui->loaded=true;
-    /* One bounded ASCII atlas per weight. No scene/world allocation or postprocess. */
+    /* One bounded atlas per weight; bold also includes source multiplication U+00D7. */
+    int cps[96];for(int i=0;i<95;i++)cps[i]=32+i;cps[95]=215;
     for(int i=0;i<4;i++){
         if(!FileExists(paths[i])){ui->loaded=false;break;}
-        *fonts[i]=LoadFontEx(paths[i],i==3?32:64,NULL,95);
+        *fonts[i]=LoadFontEx(paths[i],i==3?32:64,cps,i==1?96:95);
         if(fonts[i]->texture.id==GetFontDefault().texture.id||!fonts[i]->texture.id){ui->loaded=false;break;}
         SetTextureFilter(fonts[i]->texture,TEXTURE_FILTER_BILINEAR);
         TraceLog(LOG_INFO,"UI_FONT: %s atlas=%dx%d",paths[i],fonts[i]->texture.width,fonts[i]->texture.height);

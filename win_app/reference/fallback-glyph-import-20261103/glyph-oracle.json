@@ -1,0 +1,278 @@
+[
+  {
+    "id": "dot",
+    "character": "·",
+    "codepoint": "U+00B7",
+    "scale": 1,
+    "file": "glyphs/dot-white@1x.png",
+    "styled": "glyphs/dot-source-glow@1x.png",
+    "platformFonts": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 8.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 8.671875,
+      "height": 37
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "canvas": {
+      "advance": 8.6708984375,
+      "actualBoundingBoxLeft": -1,
+      "actualBoundingBoxRight": 8,
+      "actualBoundingBoxAscent": 12,
+      "actualBoundingBoxDescent": -7,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  },
+  {
+    "id": "star",
+    "character": "★",
+    "codepoint": "U+2605",
+    "scale": 1,
+    "file": "glyphs/star-white@1x.png",
+    "styled": "glyphs/star-source-glow@1x.png",
+    "platformFonts": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 21.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 21.671875,
+      "height": 35
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "canvas": {
+      "advance": 21.658203125,
+      "actualBoundingBoxLeft": 2,
+      "actualBoundingBoxRight": 23,
+      "actualBoundingBoxAscent": 20,
+      "actualBoundingBoxDescent": 2,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  },
+  {
+    "id": "dot",
+    "character": "·",
+    "codepoint": "U+00B7",
+    "scale": 2,
+    "file": "glyphs/dot-white@2x.png",
+    "styled": "glyphs/dot-source-glow@2x.png",
+    "platformFonts": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 8.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 8.671875,
+      "height": 37
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "canvas": {
+      "advance": 8.6708984375,
+      "actualBoundingBoxLeft": -1,
+      "actualBoundingBoxRight": 8,
+      "actualBoundingBoxAscent": 12,
+      "actualBoundingBoxDescent": -7,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  },
+  {
+    "id": "star",
+    "character": "★",
+    "codepoint": "U+2605",
+    "scale": 2,
+    "file": "glyphs/star-white@2x.png",
+    "styled": "glyphs/star-source-glow@2x.png",
+    "platformFonts": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 21.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 21.671875,
+      "height": 35
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "canvas": {
+      "advance": 21.658203125,
+      "actualBoundingBoxLeft": 2,
+      "actualBoundingBoxRight": 23,
+      "actualBoundingBoxAscent": 20,
+      "actualBoundingBoxDescent": 2,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  },
+  {
+    "id": "dot",
+    "character": "·",
+    "codepoint": "U+00B7",
+    "scale": 3,
+    "file": "glyphs/dot-white@3x.png",
+    "styled": "glyphs/dot-source-glow@3x.png",
+    "platformFonts": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 8.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 8.671875,
+      "height": 37
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "canvas": {
+      "advance": 8.6708984375,
+      "actualBoundingBoxLeft": -1,
+      "actualBoundingBoxRight": 8,
+      "actualBoundingBoxAscent": 12,
+      "actualBoundingBoxDescent": -7,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  },
+  {
+    "id": "star",
+    "character": "★",
+    "codepoint": "U+2605",
+    "scale": 3,
+    "file": "glyphs/star-white@3x.png",
+    "styled": "glyphs/star-source-glow@3x.png",
+    "platformFonts": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourceStyle": {
+      "font": "700 26px Orbitron, \"Arial Black\", sans-serif",
+      "fontFamily": "Orbitron, \"Arial Black\", sans-serif",
+      "fontWeight": "700",
+      "fontSize": "26px",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "color": "rgb(25, 230, 255)",
+      "textShadow": "rgb(25, 230, 255) 0px 0px 10px"
+    },
+    "advanceCSS": 21.671875,
+    "glyphBox": {
+      "x": 40,
+      "y": 24,
+      "width": 21.671875,
+      "height": 35
+    },
+    "baselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "canvas": {
+      "advance": 21.658203125,
+      "actualBoundingBoxLeft": 2,
+      "actualBoundingBoxRight": 23,
+      "actualBoundingBoxAscent": 20,
+      "actualBoundingBoxDescent": 2,
+      "fontBoundingBoxAscent": 26,
+      "fontBoundingBoxDescent": 6
+    }
+  }
+]

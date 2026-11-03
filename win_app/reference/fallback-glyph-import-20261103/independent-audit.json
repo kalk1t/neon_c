@@ -1,0 +1,107 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersFallbackGlyphs-v1",
+  "manifest_sha256": "7e46f49d4bf4e6d23b384438a4944c53e9fb1f17818d4767e13ab002e3a39353",
+  "directory_files_verified": 40,
+  "archive_files_verified": 40,
+  "failures": 0,
+  "selected": [
+    {
+      "id": "dot",
+      "codepoint": 183,
+      "unicode": "U+00B7",
+      "variant": "white",
+      "deviceScale": 3,
+      "sourceFontSizeCSS": 26,
+      "file": "native-glyphs/dot-white@3x.png",
+      "widthPixels": 30,
+      "heightPixels": 28,
+      "drawWidthCSS": 10,
+      "drawHeightCSS": 9.333333333333334,
+      "offsetFromBaselineCSS": {
+        "x": -0.6666666666666643,
+        "y": -14
+      },
+      "advanceCSS": 8.671875,
+      "canvasAdvanceCSS": 8.6708984375,
+      "sourceCrop": {
+        "x": 118,
+        "y": 117,
+        "width": 30,
+        "height": 28
+      },
+      "sourceCapture": "glyphs/dot-white@3x.png",
+      "sourceBaselineCSS": {
+        "x": 40,
+        "y": 53
+      },
+      "sourceInkBoundsPixels": {
+        "minX": 124,
+        "minY": 123,
+        "maxX": 141,
+        "maxY": 138
+      },
+      "observedPlatformFont": [
+        {
+          "familyName": "Arial Black",
+          "postScriptName": "Arial-Black",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "alpha": "Straight RGBA, source rasterization preserved",
+      "tint": "Tint core mask to source cyan; native glow separate",
+      "sha256": "b53e25264cbad04b22140c71b34cd00dd9826f28a689bee13ff1cf1741e45238",
+      "rgba_bytes": 3360
+    },
+    {
+      "id": "star",
+      "codepoint": 9733,
+      "unicode": "U+2605",
+      "variant": "white",
+      "deviceScale": 3,
+      "sourceFontSizeCSS": 26,
+      "file": "native-glyphs/star-white@3x.png",
+      "widthPixels": 79,
+      "heightPixels": 75,
+      "drawWidthCSS": 26.333333333333332,
+      "drawHeightCSS": 25,
+      "offsetFromBaselineCSS": {
+        "x": -2.3333333333333357,
+        "y": -21.666666666666668
+      },
+      "advanceCSS": 21.671875,
+      "canvasAdvanceCSS": 21.658203125,
+      "sourceCrop": {
+        "x": 113,
+        "y": 91,
+        "width": 79,
+        "height": 75
+      },
+      "sourceCapture": "glyphs/star-white@3x.png",
+      "sourceBaselineCSS": {
+        "x": 40,
+        "y": 52
+      },
+      "sourceInkBoundsPixels": {
+        "minX": 119,
+        "minY": 97,
+        "maxX": 185,
+        "maxY": 159
+      },
+      "observedPlatformFont": [
+        {
+          "familyName": "Segoe UI Symbol",
+          "postScriptName": "SegoeUISymbol",
+          "isCustomFont": false,
+          "glyphCount": 1
+        }
+      ],
+      "alpha": "Straight RGBA, source rasterization preserved",
+      "tint": "Tint core mask to source cyan; native glow separate",
+      "sha256": "ca745ceb545cfd30e04b4750a8aad2328490a8de8ae735fda2396ac14c6f37a1",
+      "rgba_bytes": 23700
+    }
+  ],
+  "rgba8_total": 27060,
+  "limits": "Hashes/archive/header/metrics only; native texture upload/rendering unrun. No whole system font files imported."
+}

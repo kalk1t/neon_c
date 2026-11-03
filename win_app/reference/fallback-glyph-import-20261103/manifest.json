@@ -1,0 +1,213 @@
+{
+  "kind": "Two browser fallback glyphs, fixed source size, source/metrics handoff",
+  "createdUTC": "2026-11-03T17:18:40.913Z",
+  "counts": {
+    "glyphs": 2,
+    "deviceScales": 3,
+    "isolatedPNGs": 12,
+    "files": 40
+  },
+  "nativeVisualParity": false,
+  "assets": [
+    {
+      "file": "browser-pixel-verification.json",
+      "bytes": 2403,
+      "sha256": "c359a53cfd938a7499d1c65288545f99a734f32fec6567177463a25c5e10a5e3"
+    },
+    {
+      "file": "glyph-metrics.json",
+      "bytes": 13311,
+      "sha256": "dc9f69ca4b81fcab334a13903291dbae5b24b88cf7b6e2944da2d7c539b91b14"
+    },
+    {
+      "file": "glyph-oracle.json",
+      "bytes": 7031,
+      "sha256": "3b10e35a10b0abd92cd220eba148554c150706e83bbb4302ec34e5f38119e1c8"
+    },
+    {
+      "file": "glyphs/dot-source-glow@1x.png",
+      "bytes": 1040,
+      "sha256": "1830c46887fed0ea03e76c01b5f3cd4ede334abcae4061175309ebae85087aa9"
+    },
+    {
+      "file": "glyphs/dot-source-glow@2x.png",
+      "bytes": 2375,
+      "sha256": "086a21bbccf38512f136433d8d9b2969be1e9e3b5797e7ff9b06d6b7090f5c29"
+    },
+    {
+      "file": "glyphs/dot-source-glow@3x.png",
+      "bytes": 4392,
+      "sha256": "34d47a4dbce29f47f860aa315db25714cd2a4a87d54858cbe510dab18d11c4d4"
+    },
+    {
+      "file": "glyphs/dot-white@1x.png",
+      "bytes": 388,
+      "sha256": "9640a1f361aee1d37ea43a48cc039f87d9a9f3fa925ec60b26233a93d61b3ecb"
+    },
+    {
+      "file": "glyphs/dot-white@2x.png",
+      "bytes": 808,
+      "sha256": "c9c36ef727e222f8960c6977301cc8cb5b702145f28e44f6e52131abdfa588e0"
+    },
+    {
+      "file": "glyphs/dot-white@3x.png",
+      "bytes": 1371,
+      "sha256": "8bf86406341d93db7b195fcf775dad6adff54e4c59a31e93560f67b2ae835b44"
+    },
+    {
+      "file": "glyphs/star-source-glow@1x.png",
+      "bytes": 2308,
+      "sha256": "1840a012357ef31bd74549609d24bfadff9413eadfdc735cf988590c99d535c9"
+    },
+    {
+      "file": "glyphs/star-source-glow@2x.png",
+      "bytes": 5938,
+      "sha256": "d929c3af3b44efa2327648d9ba4ab9d3d064d59224114c33d40a10cc8f85b47b"
+    },
+    {
+      "file": "glyphs/star-source-glow@3x.png",
+      "bytes": 9842,
+      "sha256": "a5f20caef48ce07de68aa3636601308aab502a7fe2b77f65e617c2078abeff81"
+    },
+    {
+      "file": "glyphs/star-white@1x.png",
+      "bytes": 864,
+      "sha256": "029f8657a2b4464521b35d10c11608dc9d5e8c4e03259a6341b1a1f507a263b9"
+    },
+    {
+      "file": "glyphs/star-white@2x.png",
+      "bytes": 1814,
+      "sha256": "ece0561f795afe5cd1d6777561e268cd7617e57fa4691e33e07cb0c3aaa681a3"
+    },
+    {
+      "file": "glyphs/star-white@3x.png",
+      "bytes": 2870,
+      "sha256": "55beb906d83864baa556c2672a61aff2d21f0faaf8de7af6b695eb40f2dec873"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 2030,
+      "sha256": "4d668e2650e17e5f842811e81000edc781a5ee2f2d45a9a26d7d7e5bd3e8bbc6"
+    },
+    {
+      "file": "HANDOFF.md",
+      "bytes": 4891,
+      "sha256": "2f416a0d328c843a1a54e9cef1b1c266040fb42f72d729a5b49bd1eee2f1bb56"
+    },
+    {
+      "file": "native/rr_fallback_glyphs.h",
+      "bytes": 2425,
+      "sha256": "1b5166c4e98744dce598f6b1fcc6243188fa203d52270757b7cc429f07f9ea10"
+    },
+    {
+      "file": "native-glyphs/dot-source-glow@1x.png",
+      "bytes": 496,
+      "sha256": "ae8c5f94ad2fe20ec197fa1d92b73a06c3d31c98e3f109ca91f3d2bd1550ca07"
+    },
+    {
+      "file": "native-glyphs/dot-source-glow@2x.png",
+      "bytes": 928,
+      "sha256": "67c96309edbaecf700091874dd1c69caeb271a8ad95e91cd21acafbb1b8f2e9c"
+    },
+    {
+      "file": "native-glyphs/dot-source-glow@3x.png",
+      "bytes": 1522,
+      "sha256": "b991b64f04d85ee2684c0838a28e3a587c17d3f1a9bffd3f6f56cf2dbe005212"
+    },
+    {
+      "file": "native-glyphs/dot-white@1x.png",
+      "bytes": 86,
+      "sha256": "89c2082b503a54895d20b64cf5d39e1d16bef8690668d37595741096fc99750a"
+    },
+    {
+      "file": "native-glyphs/dot-white@2x.png",
+      "bytes": 94,
+      "sha256": "bfbd24d2dec23579e7e1a9dd8c53a2d762f3792f02b98ef6396e30cdbfc63b00"
+    },
+    {
+      "file": "native-glyphs/dot-white@3x.png",
+      "bytes": 99,
+      "sha256": "b53e25264cbad04b22140c71b34cd00dd9826f28a689bee13ff1cf1741e45238"
+    },
+    {
+      "file": "native-glyphs/star-source-glow@1x.png",
+      "bytes": 1611,
+      "sha256": "f31d6cd9dda5c63f4e4e7e35fe74e803bac58f75620343669564ca49c024e4ca"
+    },
+    {
+      "file": "native-glyphs/star-source-glow@2x.png",
+      "bytes": 3856,
+      "sha256": "efe69cf1477c9c3968e399be855591faa9ad621827e3655858344d30f267436c"
+    },
+    {
+      "file": "native-glyphs/star-source-glow@3x.png",
+      "bytes": 6007,
+      "sha256": "d7ceb7c18ab47631d4a6de2e15d06bdba2e087d1307502beec7d20514a0dd9ef"
+    },
+    {
+      "file": "native-glyphs/star-white@1x.png",
+      "bytes": 417,
+      "sha256": "b7dc9b49729f667eb6a95afe05920ab3935fe99640184de1e48201e523f2f9b0"
+    },
+    {
+      "file": "native-glyphs/star-white@2x.png",
+      "bytes": 806,
+      "sha256": "64347b3ae2ee4ee95b3233813088c9041c0bc624a3f429f0d018d52f4775b2b6"
+    },
+    {
+      "file": "native-glyphs/star-white@3x.png",
+      "bytes": 1183,
+      "sha256": "ca745ceb545cfd30e04b4750a8aad2328490a8de8ae735fda2396ac14c6f37a1"
+    },
+    {
+      "file": "previews/browser-fallback.png",
+      "bytes": 37292,
+      "sha256": "dc5dc010a478d7ea4ae88c454a4970b8751e3590e0e014509c91c65e98a20a03"
+    },
+    {
+      "file": "provenance/font-cmap-audit.json",
+      "bytes": 6609,
+      "sha256": "f3338020e691b811e20b0e56e97fc1d4baacf434fd1f8bf244c2a4c41d285eca"
+    },
+    {
+      "file": "provenance/inputs.json",
+      "bytes": 1710,
+      "sha256": "81aac869c83eb421614624d6081213c17fe66d1713ea97c0e302f705fea6bec4"
+    },
+    {
+      "file": "provenance/mixed-font-oracle.json",
+      "bytes": 1126,
+      "sha256": "ed9cd30cd0640b9ceac31f08498fd97a24c9a8dc874464b1f0c3cd4c24d8f88c"
+    },
+    {
+      "file": "START_HERE.html",
+      "bytes": 3501,
+      "sha256": "6ef346e0a37f6bcd3ff5afec4d12a96212f2d407a7b6a4bffdd6c0b0b74750bf"
+    },
+    {
+      "file": "tools/finish-glyph-handoff.mjs",
+      "bytes": 14203,
+      "sha256": "9c7eae3d8076a885a6600305fbeaf434b1c36dffa4d7fff32ba4397428722d42"
+    },
+    {
+      "file": "tools/glyph-browser-oracle.mjs",
+      "bytes": 6721,
+      "sha256": "acde2c57140003a8072d62f2d71106a8c0bbf5cc912422005b2956c8d27a20ff"
+    },
+    {
+      "file": "tools/prepare-glyph-handoff.mjs",
+      "bytes": 4367,
+      "sha256": "da6c314e9849f7087602c208bc3f4fd2ee0912b052350a13e751925aebbb3e84"
+    },
+    {
+      "file": "tools/qa-glyph-handoff.mjs",
+      "bytes": 2626,
+      "sha256": "8fde66c6d05102e20eab1d0ab84f40fd8a58eba8eeadcd12ac1971a3cbeacb5e"
+    },
+    {
+      "file": "validation.json",
+      "bytes": 2364,
+      "sha256": "d18512538c5e9e2d97dd2b0a8501e70a3411c5fe9ef34d72371723e4d6420166"
+    }
+  ]
+}

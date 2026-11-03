@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:39:10.0158667Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "a9f831d4732c97b71a4dc35f52b7cc8ba79d6066b7434282d0856a1a5914c921",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\nitro-call-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "43dab9eb3c91e2481b95265df9635e4ebac4698fee76953eff621bb59e0242ce",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-nitro-call-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\nitro-call-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

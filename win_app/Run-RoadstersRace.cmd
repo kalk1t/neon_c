@@ -1,10 +1,14 @@
 @echo off
 setlocal
-if exist "%~dp0dist\first-flight\RoadstersRace.exe" (
-    start "" "%~dp0dist\first-flight\RoadstersRace.exe"
-    exit /b 0
+rem Latest headlessly verified client; native visual qualification remains pending.
+rem Update this target only after a successful build and focused checks.
+set "clientDir=%~dp0build\nitro-call-native\bin"
+if not exist "%clientDir%\RoadstersRace.exe" (
+    echo The latest verified Roadsters client is missing.
+    echo Expected: %clientDir%\RoadstersRace.exe
+    echo See docs\CLIENT-LAUNCHER-2026-11-03.md for build and verification details.
+    pause
+    exit /b 1
 )
-echo Build the game first:
-echo powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\Build-Windows.ps1" -Package
-pause
-exit /b 1
+start "" /D "%clientDir%" "%clientDir%\RoadstersRace.exe"
+exit /b %errorlevel%

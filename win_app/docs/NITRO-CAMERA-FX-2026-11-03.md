@@ -1,0 +1,25 @@
+# Source Nitro camera response, 2026-11-03
+
+## Implemented bounded slice
+
+The current local browser reports0.2.8. Windows had the gradual speed/Nitro FOV target but lacked the ignition punch and camera vibration. Shared `rr_camera_fx` now reproduces the main.js rising boost-edge guard (strict raceTime-lastNitro>1), last-ignition timestamp, kick=1, capped +0.35 shake and camera.js shake/kick decay, local X-then-Y vibration and squared-kick +10 FOV contribution. The source deterministic wall-clock sine/cosine is used, with no RNG.
+
+The normal native host snapshots boosting before its existing session physics step, observes the resulting state afterward and invokes the camera ignition producer once for active/finished/results play. Countdown still updates camera response, but does not invent a boost-input edge. Pause/menu do not advance FX state. Existing simulation tick ownership, weapons/rivals/coins activation and account/progression are unchanged. The separate full-local-run module remains inactive and is not double-stepped or connected by this slice. Its future activation must consume the existing RR_RUN_NITRO event/history with one producer rather than running this host edge detector a second time.
+
+View geometry now stays in double precision through response rotation and is converted to native float fields afterward. The base FOV starts at source70 and is retained across session restarts rather than being reset to68 each time; the current target is still source68 plus speed/Nitro/cockpit contribution. FX restart resets lastNitro=-9 while retaining kick/shake history, as the browser does. Existing car/yaw/placement reset policy is not represented as whole-restart camera parity.
+
+This activates only the Nitro camera response. Collision/damage shake triggers, bloom/lens/edge-flash rendering, HUD Nitro animation, particles and real audio remain separate. No shader, render target, texture, mesh or upload allocation is added; core trig/rotation work is fixed per camera frame. Resource/framerate/focus safeguards and default-OFF dashboard candidate are unchanged. The FOV change can expose more of the existing bounded scene and needs native GPU/performance/comfort verification; no performance pass is inferred.
+
+## Actual-source verification
+
+`tools/capture-camera-fx.mjs` executes the actual main.js ignition branch and full camera.js chaseCamera in a headless VM with real Three PerspectiveCamera math. External car poses/Nitro and pre/post boost states are supplied; sound/HUD FX calls are inert. It checks both source hashes unchanged during capture. The three240-frame sequences cover near/far/raw views, changing orientation/bank, source motion smoothing, Nitro strength, strict1-second guard, re-ignition, a restart retaining history and mixed dt/wall-clock gaps. Initial FOV states are matched between C and source.
+
+The720-frame C test carries ignition, shake/kick, base FOV and camera motion state across frames and compares the event plus18 state/pose components with1e-10 tolerance. This qualifies those mathematical/source couplings, not actual physics-generated boost edges, audio/RNG loading, collision effects, hardware timing acquisition, native clipping or visible comfort. Seeded shake history exercises cap/decay but does not connect damage to production.
+
+Fresh native and WASM full application builds passed. Both passed8/8 focused FX/camera/clock/gameplay tests, including720 source frames and12 ignition events. Maximum state/pose component error was1.4210854715202004e-14 on each target, below1e-10 tolerance. Five prior start-cue implementation/fixture/provenance files were verified unchanged. Results are recorded in `camera-fx-{native,web}-build.log` and `camera-fx-implementation.json`. The existing full-local-player tick test is a regression against its preserved fixture, distinct from the new current-source camera oracle. Prior full42-test and later focused results remain separate; the complete48-test suite was not rerun.
+
+## Paths and remaining acceptance
+
+Added: `src/core/rr_camera_fx.h`, `tests/test_camera_fx.c`, `tests/camera_fx_fixture.h`, `tools/capture-camera-fx.mjs`, `reference/ui-parity-20261103/camera-fx-oracle.json`. Modified: `src/app/main.c`, `CMakeLists.txt`. Originals are in `reference/pre-camera-fx-20261103`; outputs are isolated at `build/camera-fx-native` and `build/camera-fx-web`. Existing source/assets, prior builds and evidence remain preserved. Glyph work stays with the separate asset team; no fonts or art were modified.
+
+The rejected graphics launch still awaits separate explicit owner authorization, with no retry, desktop control, process query or termination this turn. Native visual response, practical FOV/camera comfort, full-scene rendering and stability remain unverified. The first pending graphics scope remains menu/track selection; testing these effects requires a later bounded boost/world trial, not automatic scope expansion. No browser-owned file, shared service, wallet/progression/unlock, paid call or publication changed.

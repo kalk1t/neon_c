@@ -1,0 +1,554 @@
+[
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "white",
+    "deviceScale": 1,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-white@1x.png",
+    "widthPixels": 11,
+    "heightPixels": 9,
+    "drawWidthCSS": 11,
+    "drawHeightCSS": 9,
+    "offsetFromBaselineCSS": {
+      "x": -1,
+      "y": -14
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 39,
+      "y": 39,
+      "width": 11,
+      "height": 9
+    },
+    "sourceCapture": "glyphs/dot-white@1x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 41,
+      "minY": 41,
+      "maxX": 47,
+      "maxY": 45
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "source-glow",
+    "deviceScale": 1,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-source-glow@1x.png",
+    "widthPixels": 31,
+    "heightPixels": 31,
+    "drawWidthCSS": 31,
+    "drawHeightCSS": 31,
+    "offsetFromBaselineCSS": {
+      "x": -11,
+      "y": -25
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 29,
+      "y": 28,
+      "width": 31,
+      "height": 31
+    },
+    "sourceCapture": "glyphs/dot-source-glow@1x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 31,
+      "minY": 30,
+      "maxX": 57,
+      "maxY": 56
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "white",
+    "deviceScale": 1,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-white@1x.png",
+    "widthPixels": 28,
+    "heightPixels": 25,
+    "drawWidthCSS": 28,
+    "drawHeightCSS": 25,
+    "offsetFromBaselineCSS": {
+      "x": -3,
+      "y": -22
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 37,
+      "y": 30,
+      "width": 28,
+      "height": 25
+    },
+    "sourceCapture": "glyphs/star-white@1x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 39,
+      "minY": 32,
+      "maxX": 62,
+      "maxY": 52
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "source-glow",
+    "deviceScale": 1,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-source-glow@1x.png",
+    "widthPixels": 43,
+    "heightPixels": 42,
+    "drawWidthCSS": 43,
+    "drawHeightCSS": 42,
+    "offsetFromBaselineCSS": {
+      "x": -11,
+      "y": -30
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 29,
+      "y": 22,
+      "width": 43,
+      "height": 42
+    },
+    "sourceCapture": "glyphs/star-source-glow@1x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 31,
+      "minY": 24,
+      "maxX": 69,
+      "maxY": 61
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  },
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "white",
+    "deviceScale": 2,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-white@2x.png",
+    "widthPixels": 21,
+    "heightPixels": 18,
+    "drawWidthCSS": 10.5,
+    "drawHeightCSS": 9,
+    "offsetFromBaselineCSS": {
+      "x": -1,
+      "y": -13.5
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 78,
+      "y": 79,
+      "width": 21,
+      "height": 18
+    },
+    "sourceCapture": "glyphs/dot-white@2x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 82,
+      "minY": 83,
+      "maxX": 94,
+      "maxY": 92
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "source-glow",
+    "deviceScale": 2,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-source-glow@2x.png",
+    "widthPixels": 64,
+    "heightPixels": 64,
+    "drawWidthCSS": 32,
+    "drawHeightCSS": 32,
+    "offsetFromBaselineCSS": {
+      "x": -11.5,
+      "y": -25
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 57,
+      "y": 56,
+      "width": 64,
+      "height": 64
+    },
+    "sourceCapture": "glyphs/dot-source-glow@2x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 61,
+      "minY": 60,
+      "maxX": 116,
+      "maxY": 115
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "white",
+    "deviceScale": 2,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-white@2x.png",
+    "widthPixels": 53,
+    "heightPixels": 51,
+    "drawWidthCSS": 26.5,
+    "drawHeightCSS": 25.5,
+    "offsetFromBaselineCSS": {
+      "x": -2.5,
+      "y": -22
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 75,
+      "y": 60,
+      "width": 53,
+      "height": 51
+    },
+    "sourceCapture": "glyphs/star-white@2x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 79,
+      "minY": 64,
+      "maxX": 123,
+      "maxY": 106
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "source-glow",
+    "deviceScale": 2,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-source-glow@2x.png",
+    "widthPixels": 89,
+    "heightPixels": 87,
+    "drawWidthCSS": 44.5,
+    "drawHeightCSS": 43.5,
+    "offsetFromBaselineCSS": {
+      "x": -11.5,
+      "y": -30.5
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 57,
+      "y": 43,
+      "width": 89,
+      "height": 87
+    },
+    "sourceCapture": "glyphs/star-source-glow@2x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 61,
+      "minY": 47,
+      "maxX": 141,
+      "maxY": 125
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  },
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "white",
+    "deviceScale": 3,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-white@3x.png",
+    "widthPixels": 30,
+    "heightPixels": 28,
+    "drawWidthCSS": 10,
+    "drawHeightCSS": 9.333333333333334,
+    "offsetFromBaselineCSS": {
+      "x": -0.6666666666666643,
+      "y": -14
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 118,
+      "y": 117,
+      "width": 30,
+      "height": 28
+    },
+    "sourceCapture": "glyphs/dot-white@3x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 124,
+      "minY": 123,
+      "maxX": 141,
+      "maxY": 138
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "dot",
+    "codepoint": 183,
+    "unicode": "U+00B7",
+    "variant": "source-glow",
+    "deviceScale": 3,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/dot-source-glow@3x.png",
+    "widthPixels": 96,
+    "heightPixels": 96,
+    "drawWidthCSS": 32,
+    "drawHeightCSS": 32,
+    "offsetFromBaselineCSS": {
+      "x": -11.666666666666668,
+      "y": -25.333333333333332
+    },
+    "advanceCSS": 8.671875,
+    "canvasAdvanceCSS": 8.6708984375,
+    "sourceCrop": {
+      "x": 85,
+      "y": 83,
+      "width": 96,
+      "height": 96
+    },
+    "sourceCapture": "glyphs/dot-source-glow@3x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 53
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 91,
+      "minY": 89,
+      "maxX": 174,
+      "maxY": 172
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "white",
+    "deviceScale": 3,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-white@3x.png",
+    "widthPixels": 79,
+    "heightPixels": 75,
+    "drawWidthCSS": 26.333333333333332,
+    "drawHeightCSS": 25,
+    "offsetFromBaselineCSS": {
+      "x": -2.3333333333333357,
+      "y": -21.666666666666668
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 113,
+      "y": 91,
+      "width": 79,
+      "height": 75
+    },
+    "sourceCapture": "glyphs/star-white@3x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 119,
+      "minY": 97,
+      "maxX": 185,
+      "maxY": 159
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Tint core mask to source cyan; native glow separate"
+  },
+  {
+    "id": "star",
+    "codepoint": 9733,
+    "unicode": "U+2605",
+    "variant": "source-glow",
+    "deviceScale": 3,
+    "sourceFontSizeCSS": 26,
+    "file": "native-glyphs/star-source-glow@3x.png",
+    "widthPixels": 133,
+    "heightPixels": 131,
+    "drawWidthCSS": 44.333333333333336,
+    "drawHeightCSS": 43.666666666666664,
+    "offsetFromBaselineCSS": {
+      "x": -11.333333333333332,
+      "y": -30.666666666666668
+    },
+    "advanceCSS": 21.671875,
+    "canvasAdvanceCSS": 21.658203125,
+    "sourceCrop": {
+      "x": 86,
+      "y": 64,
+      "width": 133,
+      "height": 131
+    },
+    "sourceCapture": "glyphs/star-source-glow@3x.png",
+    "sourceBaselineCSS": {
+      "x": 40,
+      "y": 52
+    },
+    "sourceInkBoundsPixels": {
+      "minX": 92,
+      "minY": 70,
+      "maxX": 212,
+      "maxY": 188
+    },
+    "observedPlatformFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "alpha": "Straight RGBA, source rasterization preserved",
+    "tint": "Already source cyan with CSS10px glow and core; do not double tint/glow or overlay the core again"
+  }
+]

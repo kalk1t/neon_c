@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+  "sourceSHA256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140",
+  "coursePath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\course.js",
+  "courseSHA256": "0536a3348e251c9a0e071fdf7c35c3fc916173887f9ca3fad2e8bd0f2bfdac7c",
+  "gate": {
+    "halfW": 23,
+    "y0": 109,
+    "y1": 142
+  },
+  "cases": 1248,
+  "warnings": 48,
+  "scope": "Actual raceRules boundary behavior and1.4-second message payload. Ordered passed.size equals nextCP. Other checkpoint/motion/recovery behavior held neutral; completeLap/respawn inert. No graphics, rewards, network or account execution."
+}

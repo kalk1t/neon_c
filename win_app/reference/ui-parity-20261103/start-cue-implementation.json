@@ -1,0 +1,127 @@
+{
+  "created_utc": "2026-11-03T17:08:09.759311+00:00",
+  "local_browser_version": "0.2.8",
+  "oracle": {
+    "mainPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+    "mainSHA256": "970b45c22f8f56d8ca5f9e8a68016248700c1092947af5d776cb3472d96ce36a",
+    "hudPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+    "hudSHA256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+    "frames": 1680,
+    "sequences": 4,
+    "published": [
+      "3",
+      "2",
+      "1",
+      "GO!",
+      "3",
+      "2",
+      "1",
+      "GO!",
+      "3",
+      "2",
+      "1",
+      "GO!",
+      "3",
+      "3",
+      "2",
+      "1",
+      "GO!"
+    ],
+    "scope": "Actual countdown branch plus HUD.update timer statements, coupled to native session in C. First blank interval,3/2/1/GO!, already-clamped dt including raw stall and pause/resume plus countdown restart retaining its prior visible cue. No real input, graphics, sounds, touch, network/accounts or restart with stale other HUD messages."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 6,
+      "focused_tests_failed": 0,
+      "summary": "Actual browser countdown/HUD timers: 1680 session-coupled frames, max timer error 0, 0 failures",
+      "log": "reference\\ui-parity-20261103\\start-cue-native-build.log",
+      "sha256": "e4643c11f31324d8b1010f7bfc0f89bb743ac4745123a5e9fc4345d6cc43474a"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 6,
+      "focused_tests_failed": 0,
+      "summary": "Actual browser countdown/HUD timers: 1680 session-coupled frames, max timer error 0, 0 failures",
+      "log": "reference\\ui-parity-20261103\\start-cue-web-build.log",
+      "sha256": "f42b37c7871ab177471ce92431a071724d094db62ed3eb9dc1b9426c5055ce88"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/presentation/rr_start_cue.h",
+      "sha256": "2aa31ac1c13f1e2151349afd2885cbfc98ff569b41c9f76fc20413a11472d928"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "4636871762a61d7c64d186510ab8775adafa4dd3b8f830e779e22f527002ce88"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "e434b4b00e7e8835a63eda798a4696bc7583010072bd2f3bfe1f8de80749e8e1"
+    },
+    {
+      "path": "tests/test_start_cue.c",
+      "sha256": "26039a854f097998483238519e375319f98e23b2bf04cc422c9c0e500c7d0587"
+    },
+    {
+      "path": "tests/start_cue_fixture.h",
+      "sha256": "706b8960438f9f045b67cc929f049d6f7c0983607e0b2c801b5d51fb5042466d"
+    },
+    {
+      "path": "tools/capture-start-cues.mjs",
+      "sha256": "c070ff73b23b945f90e6944a4959d4a62a8af65017f6b978b860626f8d142b73"
+    },
+    {
+      "path": "reference/ui-parity-20261103/start-cue-oracle.json",
+      "sha256": "214d28d4e5ab2093c9065f7b2e01f2d4af0093e9d8b19835dfcfa9b14d7f69e4"
+    }
+  ],
+  "preceding_warning_files_verified_unchanged": [
+    "src/core/rr_race_warning.h",
+    "tests/test_race_warning.c",
+    "tests/missed_gate_fixture.h",
+    "tools/capture-missed-gate.mjs",
+    "reference/ui-parity-20261103/missed-gate-oracle.json"
+  ],
+  "initial": "Native1260 frames passed; initial WASM failed signed-enum comparison in test under -Werror before tests. Cast corrected and restart sequence added; final1680-frame runs above fresh. Initial logs retained separately.",
+  "glyph_requirements": {
+    "needed": [
+      "U+00B7 middle dot for checkpoint submessage",
+      "U+2605 black star for best-lap submessage"
+    ],
+    "fonts": [
+      {
+        "path": "assets\\ui-theme\\Orbitron-500.ttf",
+        "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+        "U+00B7": null,
+        "U+2605": null
+      },
+      {
+        "path": "assets\\ui-theme\\Orbitron-700.ttf",
+        "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+        "U+00B7": null,
+        "U+2605": null
+      },
+      {
+        "path": "assets\\ui-theme\\Orbitron-900.ttf",
+        "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+        "U+00B7": null,
+        "U+2605": null
+      },
+      {
+        "path": "assets\\ui-theme\\Rajdhani-Medium.ttf",
+        "sha256": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802",
+        "U+00B7": "periodcentered",
+        "U+2605": null
+      }
+    ],
+    "runtime": "Current font atlases are ASCII95; no glyphs or atlases changed.",
+    "next": "Define browser-equivalent fallback glyph/asset strategy for these two missing Orbitron characters; reuse existing source, not full-screen fixture text or regenerated skins. Native visual acceptance remains pending."
+  },
+  "reused": "Earlier full42 and focused results separate; complete47-test suite not rerun.",
+  "graphics": "Not run, prior rejected launch remains pending explicit authorization without retry or desktop/process interaction.",
+  "limits": "ASCII start cues with source timers and native session coupling, not whole HUD message system, mixed-warning restart leftovers, native pixels/fades/audio/touch/input/stability or whole-game acceptance."
+}

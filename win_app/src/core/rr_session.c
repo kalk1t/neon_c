@@ -42,10 +42,11 @@ static bool remember_lap(RRSession *s,double elapsed)
 unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,
                          int count,RRInput input,double raw_dt)
 {
+    s->motion=(RRCarStepReport){0};s->motion_stepped=false;
     double dt=rr_frame_dt(raw_dt);
     if(dt<=0)return 0;
     if(s->phase==RR_SESSION_FINISHED || s->phase==RR_SESSION_RESULTS){
-        s->race_time+=dt;rr_car_step_world(car,input,dt,s->world);
+        s->race_time+=dt;rr_car_step_world_report(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
         if(s->phase==RR_SESSION_RESULTS)return 0;
         s->finish_wait+=raw_dt;
         if(s->finish_wait>=2){s->phase=RR_SESSION_RESULTS;return RR_SESSION_SHOW_RESULTS;}
@@ -53,13 +54,13 @@ unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,
     }
     if(s->phase==RR_SESSION_COUNTDOWN){
         s->countdown-=dt;s->last_count=(int)ceil(s->countdown);
-        rr_car_step_world(car,(RRInput){0},dt,s->world);
+        rr_car_step_world_report(car,(RRInput){0},dt,s->world,&s->motion);s->motion_stepped=true;
         if(s->last_count<=0){s->phase=RR_SESSION_ACTIVE;return RR_SESSION_GO;}
         return 0;
     }
     if(s->phase!=RR_SESSION_ACTIVE)return 0;
     RRVec3 previous=car->pos;
-    s->race_time+=dt;rr_car_step_world(car,input,dt,s->world);
+    s->race_time+=dt;rr_car_step_world_report(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
     unsigned events=rr_race_step(&s->race,gates,count,car,previous,dt,s->race_time);
     if((events&RR_RACE_LAP) && !remember_lap(s,s->race.last_lap_time)){
         s->phase=RR_SESSION_ERROR;return events;

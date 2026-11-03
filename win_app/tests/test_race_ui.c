@@ -1,6 +1,7 @@
 #include "rr_race_ui.h"
 #include "rr_minimap.h"
 #include "ui-time-reference.h"
+#include "minimap_marker_fixture.h"
 #include <stdlib.h>
 static int failures;
 #define CHECK(x) do{if(!(x)){fprintf(stderr,"line %d %s\n",__LINE__,#x);failures++;}}while(0)
@@ -44,11 +45,19 @@ int main(void)
         if(p.visible_rows)CHECK(l.history.y+(35+(float)(p.visible_rows-1)*18)*l.scale<sizes[k][1]);
         if(p.best_visible)CHECK(p.best_y<sizes[k][1]);
     }
+    for(size_t i=0;i<sizeof(marker_cases)/sizeof(marker_cases[0]);i++){
+        const MarkerCase *c=&marker_cases[i];RRMinimap m={200,100,732};double p[4][2];
+        rr_minimap_player_points(&m,c->x,c->z,c->yaw,c->vx,c->vy,c->w,c->h,p);
+        for(int j=0;j<4;j++)for(int k=0;k<2;k++)CHECK(fabs(p[j][k]-c->points[j][k])<1e-10);
+        /* The notch-to-tip diagonal partitions the source arrow without overlap. */
+        for(int side=0;side<2;side++){int b=side?3:2,d=side?2:1;
+            double area=(p[b][0]-p[0][0])*(p[d][1]-p[0][1])-(p[b][1]-p[0][1])*(p[d][0]-p[0][0]);CHECK(area<0);}
+    }
     RRSession s;RRCar c;rr_session_init(&s);
     for(int phase=RR_SESSION_ACTIVE;phase<=RR_SESSION_RESULTS;phase++)if(phase!=RR_SESSION_PAUSED){
         rr_session_start(&s,&c,RR_RACE_TWO_LAPS);s.phase=(RRSessionPhase)phase;CHECK(rr_session_pause(&s));CHECK(rr_session_resume(&s));CHECK(s.phase==(RRSessionPhase)phase);
         CHECK(rr_session_pause(&s));rr_session_start(&s,&c,RR_RACE_TWO_LAPS);CHECK(s.phase==RR_SESSION_COUNTDOWN&&s.lap_count==0&&s.race.next_checkpoint==0);
         CHECK(rr_session_pause(&s));rr_session_menu(&s);CHECK(s.phase==RR_SESSION_MENU&&s.finish_wait==0);
     }
-    rr_session_dispose(&s);printf("Race UI: chronological history/capture bounds, 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: %d failures\n",failures);return failures?1:0;
+    rr_session_dispose(&s);printf("Race UI: source Canvas player marker and chronological history/capture bounds, 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: %d failures\n",failures);return failures?1:0;
 }

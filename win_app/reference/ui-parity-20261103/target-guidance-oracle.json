@@ -1,0 +1,6 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "cases": 1296,
+  "scope": "Actual HUD target visibility/placement/rotation/distance branch. NDC inputs supplied, not full world projection or GPU pixels; four viewports/zooms, strict boundary cases, behind and beyond-far semantics."
+}

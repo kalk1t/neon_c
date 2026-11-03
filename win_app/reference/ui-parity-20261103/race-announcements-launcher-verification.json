@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:10:51.7082571Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "604956795806372c83563ef7a736667f2be8c8af9af6dcc4a040be4a3e82fe99",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\race-announcements-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "a1661d85f961557db6c317c13756c8c3fc4ec15d59c1ecc38b2557ecbf6368b5",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-race-announcements-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\race-announcements-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

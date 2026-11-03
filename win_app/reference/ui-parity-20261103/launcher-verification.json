@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:01:08.8721978Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "baf9955bcc279f84a3e38a79cbe11741f14ad0e2a479b29c69103b24f1e048f1",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\fallback-subtext-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "ff806861db4f2f4c18a98e03c7a0166884717171e462cb908d46cd425bdcefa0",
+  "matching_asset_files": 447,
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\fallback-subtext-native\\bin",
+  "original_preserved": "reference/pre-launcher-latest-20261103/Run-RoadstersRace.cmd",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch remains pending explicit execution authorization"
+}

@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-11-03T16:54:00.162386+00:00",
+  "local_browser_version": "0.2.8",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+    "sourceSHA256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140",
+    "coursePath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\course.js",
+    "courseSHA256": "0536a3348e251c9a0e071fdf7c35c3fc916173887f9ca3fad2e8bd0f2bfdac7c",
+    "gate": {
+      "halfW": 23,
+      "y0": 109,
+      "y1": 142
+    },
+    "cases": 1248,
+    "warnings": 48,
+    "scope": "Actual raceRules boundary behavior and1.4-second message payload. Ordered passed.size equals nextCP. Other checkpoint/motion/recovery behavior held neutral; completeLap/respawn inert. No graphics, rewards, network or account execution."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 7,
+      "focused_tests_failed": 0,
+      "summary": "Actual raceRules missed-gate warning: 1248 boundary cases, 48 warnings, 0 failures",
+      "log": "reference\\ui-parity-20261103\\missed-gate-native-build.log",
+      "sha256": "21c947c3e64721ea6fb4e6449151c90d8ad8606b42886edf3639e805ddb52df5"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 7,
+      "focused_tests_failed": 0,
+      "summary": "Actual raceRules missed-gate warning: 1248 boundary cases, 48 warnings, 0 failures",
+      "log": "reference\\ui-parity-20261103\\missed-gate-web-build.log",
+      "sha256": "9b552e8112a4ab17e5d1a2519a1bdc487af9b08b3ab0b6b47701033265a0ffd5"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_race_warning.h",
+      "sha256": "13ddd3769d165a6ba154ba853b4cb752efa17bc10dab4db54a947bf614dd47d6"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "d602a8e6710fda7f4e6e801e3b19632039abd9c79cdd952e001c5bb13f3d24e8"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "f8eb2bd4ad15d59dccb173dc2db74fc4e52d70eb753719e579933b660cc034b4"
+    },
+    {
+      "path": "tests/test_race_warning.c",
+      "sha256": "c6345943790676da79ea91dd6c84d178e10a4fbe609ca86a8015dce35ba80335"
+    },
+    {
+      "path": "tests/missed_gate_fixture.h",
+      "sha256": "c5f80f0994bead4820b39e4b20e6ecb3fbeeea437e146eef3665d99b9294d338"
+    },
+    {
+      "path": "tools/capture-missed-gate.mjs",
+      "sha256": "5c4bf9ea9077fcbe7fa6afd541df6868650ee7e20c485791a8199c5fcf090896"
+    },
+    {
+      "path": "reference/ui-parity-20261103/missed-gate-oracle.json",
+      "sha256": "021b653fb62cf6b3111dcd247461954bbaf0962c43b962855ca47ff16416da9a"
+    }
+  ],
+  "preceding_minimap_files_verified_unchanged": [
+    "src/core/rr_minimap.h",
+    "tests/test_race_ui.c",
+    "tests/minimap_marker_fixture.h",
+    "tools/capture-minimap-marker.mjs",
+    "reference/ui-parity-20261103/minimap-marker-oracle.json"
+  ],
+  "reused": "Earlier full42 and subsequent focused results remain separate; full46-test suite not rerun.",
+  "graphics": "Not run; rejected launch pending separate explicit authorization, no retry or desktop/process interaction.",
+  "limits": "Player-only ordered-progress warning trigger and duration; no scoring/progression changes. Source whole-world interactions, HUD styling/expiry and hardware acceptance unqualified."
+}

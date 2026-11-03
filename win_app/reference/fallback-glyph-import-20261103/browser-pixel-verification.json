@@ -1,0 +1,115 @@
+{
+  "glyphs": [
+    {
+      "id": "dot",
+      "variant": "white",
+      "scale": 1,
+      "width": 11,
+      "height": 9,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "dot",
+      "variant": "source-glow",
+      "scale": 1,
+      "width": 31,
+      "height": 31,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "white",
+      "scale": 1,
+      "width": 28,
+      "height": 25,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "source-glow",
+      "scale": 1,
+      "width": 43,
+      "height": 42,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "dot",
+      "variant": "white",
+      "scale": 2,
+      "width": 21,
+      "height": 18,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "dot",
+      "variant": "source-glow",
+      "scale": 2,
+      "width": 64,
+      "height": 64,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "white",
+      "scale": 2,
+      "width": 53,
+      "height": 51,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "source-glow",
+      "scale": 2,
+      "width": 89,
+      "height": 87,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "dot",
+      "variant": "white",
+      "scale": 3,
+      "width": 30,
+      "height": 28,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "dot",
+      "variant": "source-glow",
+      "scale": 3,
+      "width": 96,
+      "height": 96,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "white",
+      "scale": 3,
+      "width": 79,
+      "height": 75,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "star",
+      "variant": "source-glow",
+      "scale": 3,
+      "width": 133,
+      "height": 131,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    }
+  ],
+  "pageErrors": [],
+  "allPassed": true,
+  "nativeVisualParity": false
+}

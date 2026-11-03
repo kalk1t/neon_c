@@ -13,6 +13,7 @@ typedef struct RRSession {
     RRRace race;
     const struct RRWorld *world; /* optional collision context; set after start */
     double race_time, countdown, finish_wait;
+    RRCarStepReport motion;bool motion_stepped; /* Current call only; cleared even for paused/zero dt. */
     double *lap_times;
     size_t lap_count, lap_capacity;
     int last_count;

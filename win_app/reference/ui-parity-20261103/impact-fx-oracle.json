@@ -1,0 +1,8 @@
+{
+  "mainPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+  "mainSHA256": "f35a9cd26589c7363297deee897428e4611c91b0b69059b37d072943978480ab",
+  "cameraPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+  "cameraSHA256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "cases": 336,
+  "scope": "Actual Nitro ignition then collision shake branch, strict4 threshold, cap1.2 and camera decay. Audio/particles stubbed, supplied impact inputs; no graphics or performance evidence."
+}

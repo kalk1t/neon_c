@@ -1,0 +1,92 @@
+-- Configuring done (0.0s)
+-- Generating done (1.2s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/target-guidance-native
+[ 16%] Built target rr_core
+[ 18%] Built target rr_target_guidance_tests
+[ 20%] Built target rr_sub_notice_tests
+[ 22%] Built target rr_camera_fx_tests
+[ 23%] Built target rr_start_cue_tests
+[ 24%] Built target rr_race_warning_tests
+[ 25%] Built target rr_camera_motion_tests
+[ 26%] Built target rr_chase_camera_tests
+[ 28%] Built target rr_first_person_tests
+[ 29%] Built target rr_input_mix_tests
+[ 30%] Built target rr_pause_ui_tests
+[ 31%] Built target rr_cockpit_tests
+[ 32%] Built target rr_race_ui_tests
+[ 34%] Built target rr_ui_layout_tests
+[ 35%] Built target rr_facade_tests
+[ 36%] Built target rr_mesh_loader_tests
+[ 38%] Built target rr_city_catalog_tests
+[ 40%] Built target rr_city_batching_tests
+[ 43%] Built target rr_city_repacking_tests
+[ 46%] Built target rr_city_triangle_tests
+[ 49%] Built target rr_city_occlusion_tests
+[ 53%] Built target rr_city_witness_tests
+[ 59%] Built target rr_city_coverage_tests
+[ 61%] Built target rr_poster_tests
+[ 63%] Built target rr_ai_tests
+[ 64%] Built target rr_rival_tests
+[ 65%] Built target rr_coin_tests
+[ 66%] Built target rr_pack_tests
+[ 67%] Built target rr_targeting_tests
+[ 68%] Built target rr_arsenal_tests
+[ 70%] Built target rr_combat_tests
+[ 71%] Built target rr_fire_tests
+[ 72%] Built target rr_battle_tests
+[ 73%] Built target rr_local_run_tests
+[ 74%] Built target rr_core_tests
+[ 75%] Built target rr_render_policy_tests
+[ 76%] Built target rr_race_tests
+[ 78%] Built target rr_session_tests
+[ 80%] Built target rr_menu_policy_tests
+[ 82%] Built target rr_recovery_tests
+[ 83%] Built target rr_all_roads_tests
+[ 84%] Built target rr_road_picker_tests
+[ 85%] Built target rr_city_clearance_tests
+[ 86%] Built target rr_finish_tests
+[ 88%] Built target rr_physics_tests
+[ 90%] Built target rr_course_tests
+[ 91%] Built target rr_shared_scenery_tests
+[ 92%] Built target rr_hero_asset_tests
+[ 93%] Built target rr_canonical_city_tests
+[ 95%] Built target rr_cockpit_image_tests
+[ 96%] Built target rr_subtext_tests
+[ 97%] Built target rr_ui_font_tests
+[ 97%] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.obj
+main.c
+[ 98%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.obj
+rr_scene.c
+[ 98%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.obj
+rr_ui.c
+[ 99%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_subtext.c.obj
+rr_subtext.c
+[100%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_cockpit.c.obj
+rr_cockpit.c
+[100%] Linking C executable bin\RoadstersRace.exe
+[100%] Built target RoadstersRace
+Test project C:/Users/User/Projects/neon_c/win_app/build/target-guidance-native
+      Start  1: browser_target_guidance
+ 1/10 Test  #1: browser_target_guidance ....................   Passed    0.03 sec
+      Start  2: browser_unicode_submessage_timers
+ 2/10 Test  #2: browser_unicode_submessage_timers ..........   Passed    0.03 sec
+      Start  4: browser_countdown_start_cues
+ 3/10 Test  #4: browser_countdown_start_cues ...............   Passed    0.03 sec
+      Start  5: browser_missed_gate_warning
+ 4/10 Test  #5: browser_missed_gate_warning ................   Passed    0.03 sec
+      Start 12: browser_race_ui_state_layout
+ 5/10 Test #12: browser_race_ui_state_layout ...............   Passed    0.03 sec
+      Start 37: race_session_lifecycle
+ 6/10 Test #37: race_session_lifecycle .....................   Passed    0.03 sec
+      Start 41: browser_road_picker
+ 7/10 Test #41: browser_road_picker ........................   Passed    0.06 sec
+      Start 43: browser_finish_results
+ 8/10 Test #43: browser_finish_results .....................   Passed    0.18 sec
+      Start 50: browser_fallback_glyph_cpu_decode_layout
+ 9/10 Test #50: browser_fallback_glyph_cpu_decode_layout ...   Passed    0.04 sec
+      Start 51: browser_ui_font_cpu_atlas
+10/10 Test #51: browser_ui_font_cpu_atlas ..................   Passed    0.04 sec
+
+100% tests passed out of 10
+
+Total Test time (real) =   0.69 sec

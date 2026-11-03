@@ -1,0 +1,41 @@
+{
+  "to": "Roadsters Windows developer via parent",
+  "requirementFile": "C:/Users/User/Projects/neon_c/win_app/reference/ui-parity-20261103/ui-fallback-glyph-requirements.json",
+  "requirementSHA256": "56c9e446d550ee57f0884762d7607468ee61ee291379027c152d03ffd3930881",
+  "requestedCodepoints": [
+    183,
+    9733
+  ],
+  "sourceStyle": {
+    "selector": "#submsg",
+    "fontWeight": 700,
+    "fontSizeCSS": 26,
+    "fontStack": "Orbitron, Arial Black, sans-serif",
+    "letterSpacingCSS": 0
+  },
+  "observedWindowsFallbacks": {
+    "U+00B7": {
+      "family": "Arial Black",
+      "postScript": "Arial-Black",
+      "installedFile": "C:/Windows/Fonts/ariblk.ttf"
+    },
+    "U+2605": {
+      "family": "Segoe UI Symbol",
+      "postScript": "SegoeUISymbol",
+      "installedFile": "C:/Windows/Fonts/seguisym.ttf"
+    }
+  },
+  "preferredPortableOption": "Isolated PNG glyphs plus supplied baseline/advance metrics; fixed source26CSSpx, device scales1/2/3. Does not require redistributing a whole system font.",
+  "runtimeOption": "Resolve local fallback families and explicitly load codepoint183 from Arial Black,9733 from Segoe UI Symbol. Existing ASCII95 atlases cannot contain these two codepoints even in a font that has them. Browser weight700 synthesis/hinting may differ from raw native font rasterization.",
+  "doNotUse": "Do not replace either marker with ASCII punctuation or change the entire primary font. Rajdhani has a dot, but source #submsg stack does not select it.",
+  "nativeAcceptance": "Pending, not claimed",
+  "projectEdits": false,
+  "systemFontsCopied": false,
+  "paidCalls": false,
+  "packageRoot": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersFallbackGlyphs-v1",
+  "glyphMetrics": "glyph-metrics.json",
+  "nativeMetadataHeader": "native/rr_fallback_glyphs.h",
+  "integrationNotes": "HANDOFF.md",
+  "browserRecompositionEvidence": "browser-pixel-verification.json",
+  "handoffStatus": "Ready for Windows developer import/review; production code and native visual acceptance untouched"
+}

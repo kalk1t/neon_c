@@ -1,0 +1,34 @@
+{
+  "needed": [
+    "U+00B7 middle dot for checkpoint submessage",
+    "U+2605 black star for best-lap submessage"
+  ],
+  "fonts": [
+    {
+      "path": "assets\\ui-theme\\Orbitron-500.ttf",
+      "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+      "U+00B7": null,
+      "U+2605": null
+    },
+    {
+      "path": "assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+      "U+00B7": null,
+      "U+2605": null
+    },
+    {
+      "path": "assets\\ui-theme\\Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+      "U+00B7": null,
+      "U+2605": null
+    },
+    {
+      "path": "assets\\ui-theme\\Rajdhani-Medium.ttf",
+      "sha256": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802",
+      "U+00B7": "periodcentered",
+      "U+2605": null
+    }
+  ],
+  "runtime": "Current font atlases are ASCII95; no glyphs or atlases changed.",
+  "next": "Define browser-equivalent fallback glyph/asset strategy for these two missing Orbitron characters; reuse existing source, not full-screen fixture text or regenerated skins. Native visual acceptance remains pending."
+}

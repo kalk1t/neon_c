@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-11-03T16:46:10.204245+00:00",
+  "local_browser_version": "0.2.8",
+  "oracle": {
+    "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+    "sourceSHA256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+    "reference": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets\\components\\source\\hud.js",
+    "referenceSHA256": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b",
+    "raceMethodUnchanged": true,
+    "cases": 54,
+    "scope": "Actual HUD.drawMap Canvas path/transform commands with inert context, no graphics; square/non-square viewports, heading wrap and off-map positions. Does not establish circular clipping, raster/glow or native appearance."
+  },
+  "fresh_results": [
+    {
+      "target": "native",
+      "application_build": "passed",
+      "focused_tests_passed": 3,
+      "focused_tests_failed": 0,
+      "log": "reference\\ui-parity-20261103\\minimap-marker-native-build.log",
+      "sha256": "18796e803cec68f04b579d9de0e63d1e0850a2b718430b1060a388109f69bf1f"
+    },
+    {
+      "target": "web",
+      "application_build": "passed",
+      "focused_tests_passed": 3,
+      "focused_tests_failed": 0,
+      "log": "reference\\ui-parity-20261103\\minimap-marker-web-build.log",
+      "sha256": "5ff44b9790dc9e347cd13be5ec7048f4574feffcb7dcf8f0ade11a27f8d07c96"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "src/core/rr_minimap.h",
+      "sha256": "42229a35a30342585c873888facbbf095080a383a29acb0ada66d25b45005435"
+    },
+    {
+      "path": "src/app/main.c",
+      "sha256": "ddf8cb5d8ed0950b020f15b6ab477fe32d29b77731024e9ed3e243d77e977854"
+    },
+    {
+      "path": "tests/test_race_ui.c",
+      "sha256": "f8b3134253765888d6eea390fc11e464deb2479bd760bd292cc6c890c1eadf13"
+    },
+    {
+      "path": "tests/minimap_marker_fixture.h",
+      "sha256": "c36dd07ef1a1c68c4c863b49dd499929b4effa047a9683b1422dcf72ff0fd17a"
+    },
+    {
+      "path": "tools/capture-minimap-marker.mjs",
+      "sha256": "88d26b607dedb8b9376c7955342a437953a3df718058f63e5baa615dd1240295"
+    },
+    {
+      "path": "reference/ui-parity-20261103/minimap-marker-oracle.json",
+      "sha256": "ce7d7d1b1abc80c4ee4ff3eb10ca17136e1b6dbdac38e6089054c67d6e72d305"
+    }
+  ],
+  "preceding_lap_history_files_verified_unchanged": [
+    "src/presentation/rr_race_ui.h",
+    "tools/capture-lap-history.mjs",
+    "reference/ui-parity-20261103/lap-history-oracle.json"
+  ],
+  "initial_attempt": "Native build failed with /WX C4456 local marker variable shadowing; no tests ran on native. Initial WASM built and passed3/3. Logs preserved separately under minimap-marker-pre-rename. Variable renamed; final builds and tests above are fresh.",
+  "reused": "Previous camera/input and lap-history evidence; full45-test suite not rerun.",
+  "graphics": "Not run; prior rejected launch authorization remains pending with no retry or desktop interaction.",
+  "limits": "54 actual Canvas-command transform fixtures,432 compared vertex coordinates and triangle winding checks; circle-rim partial clipping, magenta glow, native raster/input/GPU/stability remain unverified. No assets, caps, progression or browser edits."
+}
