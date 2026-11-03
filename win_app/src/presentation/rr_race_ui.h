@@ -16,6 +16,22 @@ static inline RRUIHudLayout rr_ui_hud_layout(float w,float h)
     l.spin=(RRUIRect){w-26*z-142*z,h-26*z-144*z,142*z,144*z};
     l.history=(RRUIRect){22*z,108*z,210*z,146*z};return l;
 }
+/* Source #laps-panel: label19 + OL margins12 + rows18 + best16 + padding20.
+ * Keep chronological order; the browser has no latest-three window/scrollbar.
+ * Bound paint work by viewport clipping while retaining the full lap history. */
+typedef struct RRUIHistory {RRUIRect panel;size_t visible_rows;float best_y;bool best_visible;} RRUIHistory;
+static inline RRUIHistory rr_ui_history_layout(RRUIRect anchor,float scale,float viewport_h,size_t count)
+{
+    RRUIHistory h={0};h.panel=anchor;
+    double full=(67.0+18.0*(double)count)*scale;
+    h.panel.h=(float)fmin(full,fmax(0,(double)viewport_h-anchor.y));
+    double row_top=anchor.y+35.0*scale,step=18.0*scale;
+    size_t visible=(scale>0&&viewport_h>row_top)?(size_t)ceil((viewport_h-row_top)/step):0;
+    h.visible_rows=count<visible?count:visible;
+    double best=anchor.y+(41.0+18.0*(double)count)*scale;
+    h.best_visible=best<viewport_h&&best+16*scale>0;
+    h.best_y=h.best_visible?(float)best:0;return h;
+}
 static inline RRUIOverlayLayout rr_ui_pause_layout(float w,float h)
 {
     RRUIOverlayLayout l={0};l.panel=(RRUIRect){(w-380)*.5f,(h-390)*.5f,380,390};

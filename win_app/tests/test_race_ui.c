@@ -30,11 +30,25 @@ int main(void)
         CHECK(rr_track_init_road(&track,road));RRMinimap map;rr_minimap_init(&map,&track);
         for(int i=0;i<track.sample_count;i++){double x,y;rr_minimap_point(&map,track.samples[i].x,track.samples[i].z,&x,&y);CHECK(hypot(x-.5,y-.5)<.49);}
     }
+    /* The supplied v3 browser capture has two18px OL rows, best y77 and height103.
+     * A fourth lap must retain row0 instead of shifting to a last-three window. */
+    RRUIRect anchor={22,108,210,146};RRUIHistory two=rr_ui_history_layout(anchor,1,1000,2);
+    CHECK(two.panel.h==103&&two.best_y==185&&two.visible_rows==2&&two.best_visible);
+    RRUIHistory four=rr_ui_history_layout(anchor,1,1000,4);
+    CHECK(four.visible_rows==4&&four.panel.h==139&&four.best_y==221);
+    RRUIHistory empty=rr_ui_history_layout(anchor,1,1000,0);CHECK(empty.visible_rows==0&&empty.panel.h==67&&empty.best_y==149);
+    const size_t counts[]={0,1,2,3,4,10,1000,SIZE_MAX};
+    for(int k=0;k<6;k++)for(size_t n=0;n<sizeof(counts)/sizeof(counts[0]);n++){
+        RRUIHudLayout l=rr_ui_hud_layout(sizes[k][0],sizes[k][1]);RRUIHistory p=rr_ui_history_layout(l.history,l.scale,sizes[k][1],counts[n]);
+        CHECK(p.panel.h>=0&&p.panel.y+p.panel.h<=sizes[k][1]+.001f&&p.visible_rows<=counts[n]&&p.visible_rows<=64);
+        if(p.visible_rows)CHECK(l.history.y+(35+(float)(p.visible_rows-1)*18)*l.scale<sizes[k][1]);
+        if(p.best_visible)CHECK(p.best_y<sizes[k][1]);
+    }
     RRSession s;RRCar c;rr_session_init(&s);
     for(int phase=RR_SESSION_ACTIVE;phase<=RR_SESSION_RESULTS;phase++)if(phase!=RR_SESSION_PAUSED){
         rr_session_start(&s,&c,RR_RACE_TWO_LAPS);s.phase=(RRSessionPhase)phase;CHECK(rr_session_pause(&s));CHECK(rr_session_resume(&s));CHECK(s.phase==(RRSessionPhase)phase);
         CHECK(rr_session_pause(&s));rr_session_start(&s,&c,RR_RACE_TWO_LAPS);CHECK(s.phase==RR_SESSION_COUNTDOWN&&s.lap_count==0&&s.race.next_checkpoint==0);
         CHECK(rr_session_pause(&s));rr_session_menu(&s);CHECK(s.phase==RR_SESSION_MENU&&s.finish_wait==0);
     }
-    rr_session_dispose(&s);printf("Race UI: 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: %d failures\n",failures);return failures?1:0;
+    rr_session_dispose(&s);printf("Race UI: chronological history/capture bounds, 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: %d failures\n",failures);return failures?1:0;
 }

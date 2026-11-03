@@ -329,16 +329,20 @@ static void flight_ui(void)
     }
     rr_ui_text_center(&app.ui,TextFormat("ROAD %d / %s",app.track.road->id,app.track.road->name),center.x,l.map.y+l.map.h-29*z,8*z,2*z,700,cyan,false);
 
-    DrawRectangle((int)l.history.x,(int)l.history.y,(int)l.history.w,(int)l.history.h,(Color){4,8,30,184});
-    DrawRectangle((int)l.history.x,(int)l.history.y,(int)(3*z),(int)l.history.h,magenta);
-    rr_ui_text(&app.ui,"LAP TIMES",l.history.x+16*z,l.history.y+10*z,13*z,2*z,700,cyan,false);
-    size_t from=app.session.lap_count>3?app.session.lap_count-3:0;
-    if(!app.session.lap_count)rr_ui_text(&app.ui,"NO LAPS YET",l.history.x+16*z,l.history.y+42*z,12*z,1*z,500,muted,false);
-    for(size_t i=from;i<app.session.lap_count;i++){
-        rr_ui_time(clock,app.session.lap_times[i]);rr_ui_text(&app.ui,TextFormat("%zu  %s",i+1,clock),l.history.x+16*z,l.history.y+(38+(float)(i-from)*24)*z,15*z,0,700,i==app.ui_best_lap?magenta:white,false);
+    RRUIHistory history=rr_ui_history_layout(l.history,z,(float)GetScreenHeight(),app.session.lap_count);
+    DrawRectangle((int)history.panel.x,(int)history.panel.y,(int)history.panel.w,(int)history.panel.h,(Color){4,8,30,184});
+    DrawRectangle((int)history.panel.x,(int)history.panel.y,(int)(3*z),(int)history.panel.h,magenta);
+    rr_ui_text(&app.ui,"LAP TIMES",l.history.x+19*z,l.history.y+10*z,15*z,2*z,700,cyan,false);
+    for(size_t i=0;i<history.visible_rows;i++){
+        Color color=i==app.ui_best_lap?magenta:white;float y=l.history.y+(35+(float)i*18)*z;
+        rr_ui_time(clock,app.session.lap_times[i]);
+        rr_ui_text(&app.ui,TextFormat("%zu.",i+1),l.history.x+19*z,y,16*z,0,700,color,false);
+        rr_ui_text(&app.ui,clock,l.history.x+39*z,y,16*z,0,700,color,false);
     }
-    rr_ui_time(clock,race->best_lap_time>0?race->best_lap_time:NAN);
-    rr_ui_text(&app.ui,TextFormat("BEST %s",clock),l.history.x+16*z,l.history.y+119*z,11*z,0,500,muted,false);
+    if(history.best_visible){
+        rr_ui_time(clock,race->best_lap_time>0?race->best_lap_time:NAN);
+        rr_ui_text(&app.ui,TextFormat("BEST %s",clock),l.history.x+19*z,history.best_y,13*z,0,600,muted,false);
+    }
 
     if(!app.cockpit_visible){
     rr_ui_hud_panel(l.speed,cyan,z);float sx=l.speed.x+22*z,sy=l.speed.y;
