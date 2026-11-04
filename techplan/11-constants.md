@@ -22,9 +22,9 @@
 | `RACE_GAP_MS` (client) | 60,000 | ms | When a too-soon race is saved again (`lastRaceAt` + gap + 2 s, clamped 3–65 s) | `src/online/index.js` | `src/account.js` `flushPending` | code | Must equal `RACE_GAP_S` × 1000 |
 | Ticket retry | 3,500 | ms | Second ticket request after a failure | `src/account.js` `startRace` | — | code | > `TICKET_MIN_GAP_S` (3 s) |
 | `RULES.MIN_RACE_S` | 60 | s | Equals `RACE_GAP_S` (back-to-back real races never wait). Since v0.2.4 coins, times and unlocks use the per-road minimums below | `functions/rules.js` | — | code | ≤ `min(ROAD_MIN_RACE_S)` |
-| `RULES.MIN_LAP_S` | 30 | s | Fastest lap on any road (= road 1's) | `functions/rules.js` | — | code | `constants.test.mjs` checks it = `min(ROAD_MIN_LAP_S)` |
-| `PACE_MAX` | 170 | m/s | Faster than any driver can average (nitro 138 + a 1.5× spin surge 2 s in every 6 s ≈ 161) | `functions/rules.js` | `ROAD_MIN_*` | code | `constants.test.mjs` checks it against `CAR` / `SPIN` |
-| `ROAD_MIN_RACE_S` / `ROAD_MIN_LAP_S` | 61, 66, 72, 79, 84, 94, 86, 103, 106 / 30, 33, 36, 39, 42, 47, 43, 51, 53 | s | Fastest possible 2-lap race / lap per road: gate-to-gate distance ÷ `PACE_MAX` (R8, v0.2.4) | `functions/rules.js` | `finishRace` | code | Recomputed from `src/roads.js` by `constants.test.mjs`: change them with the roads |
+| `RULES.MIN_LAP_S` | 21 (30 before v0.2.15) | s | Fastest lap on any road (= road 1's) | `functions/rules.js` | — | code | `constants.test.mjs` checks it = `min(ROAD_MIN_LAP_S)` |
+| `PACE_MAX` | 240 (170 before v0.2.15) | m/s | Faster than any driver can average (nitro 196 + a 1.5× spin surge 2 s in every 6 s ≈ 229) | `functions/rules.js` | `ROAD_MIN_*` | code | `constants.test.mjs` checks it against `CAR` / `SPIN` |
+| `ROAD_MIN_RACE_S` / `ROAD_MIN_LAP_S` | 43, 47, 51, 56, 59, 66, 61, 73, 75 / 21, 23, 25, 28, 29, 33, 30, 36, 37 (v0.2.15) | s | Fastest possible 2-lap race / lap per road: gate-to-gate distance ÷ `PACE_MAX` (R8, v0.2.4) | `functions/rules.js` | `finishRace` | code | Recomputed from `src/roads.js` by `constants.test.mjs`: change them with the roads |
 | `RULES.DAILY_COIN_CAP` | 2,000 | coins / UTC day | Most coins banked per day (R8) | `functions/rules.js` | `finishRace` (`coinsDay`) | code | Real players make ~10–50 a race |
 | `RULES.RELAY_BATCH` / `RELAY_KILLS_MAX` / `KILLER_COUNT_MAX` | 50 / 60 / 1e6 | players / kills / count | What one `relayKills` save may hold | `functions/rules.js` | `relayKills` | code | Relay copies `SAVE_BATCH`, `SAVE_KILLS`, `KC_MAX` (`server/live.js`), checked by `constants.test.mjs` |
 | `RULES.TICKET_MAX_AGE_S` | 2,700 (45 min) | s | A race left open longer isn't saved | `functions/rules.js:10` | `functions/index.js:58` | code | |
@@ -61,7 +61,7 @@
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch/roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 9 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 10 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
@@ -89,28 +89,29 @@
 
 | Name | Value | Units | Purpose | Def | Config? | Notes |
 |---|---|---|---|---|---|---|
-| `CAR.MAX` / `BOOST_MAX` | 95 / 138 | m/s | Top speed / with boost | `src/car.js:10` | code | Server `MIN_*_S` depend on these |
+| `CAR.MAX` / `BOOST_MAX` / `ACCEL` / `BOOST_ACCEL` | `TOP` 135 / 196 / 51 / 107 (95 / 138 / 36 / 75 × `K = TOP / 95`; v0.2.15) | m/s, m/s² | Top speed / with boost / accelerations | `src/car.js` | code | Server `PACE_MAX` and `ROAD_MIN_*` depend on these (`constants.test.mjs` evaluates `CAR`) |
 | `CAR.ACCEL` / `BOOST_ACCEL` | 36 / 75 | m/s² | Acceleration | `src/car.js:10` | code | |
 | `CAR.RADIUS` | 2.1 | m | Collision radius | `src/car.js:10` | code | |
 | `SPIN` | ROLL 0.55, SURGE 2, MUL 1.5, JINK 22, COOLDOWN 6 | s, s, ×, m/s, s | Spin dodge | `src/car.js:12` | code | Units [inferred] from comments |
 | Boost drain / regen | 0.32 / 0.06 | fraction / s | Boost tank | `src/car.js:666` | code | |
 | `LIVERIES` | 10 rivals, skill 1.0–0.92 | factor | Rival identity, boost eagerness (top speed no longer, since v0.2.3) | `src/ai.js:3` | code | |
-| `RIVAL_POWER` | 1.5 | factor | Rival damage and fire rate multiplier (v0.2.3) | `src/ai.js:18` | code | |
-| `DAMAGE` | RIVAL_SHOT 51, RIVAL_SHOT_ON_PLAYER 30 (34 / 20 × `RIVAL_POWER`) | hp | AI damage | `src/ai.js:19` | code | |
+| `RIVAL_AIM` | SPREAD 0.03 rad, CONE 0.3 rad, SLOWER 3 | | Rivals fire the player's bolts (v0.2.15): aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s) | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
+| `RIVAL_SPEED` | ROAD1 120, STEP 1.02 | m/s, factor | Rival top speed `rivalTop(id) = 120 × 1.02^(id − 1)`: 120 … 141 m/s (v0.2.15) | `src/roads.js` | code | Replaced road `ai` factors |
+| `CORNER` | TURN 1.15 rad/s, GRIP 0.8, BRAKE 45 m/s², SPAN 3 samples | | Rival corner speeds and braking (v0.2.15) | `src/ai.js` | code | |
+| `GATE_R` / `GATE_R_RIVAL` | 15 / 45 | m | Gate ring radius that counts a pass: player / rivals (v0.2.15) | `src/race.js` | code | |
 | `WEAPON` | BOLT_DMG 21, BOLT_RATE 0.21 s, BOLT_SPEED 750 m/s, BOLT_LIFE 1.5 s, BOLT_LEN 45 m, BOLT_WID 7 m, HEAT_PER_BOLT 0.08 (~22 bolts to overheat), COOL_RATE 0.45 /s, LOCK_RANGE 2000 m, LOCK_KEEP 2100 m, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s, EMP_DMG 25, EMP_RADIUS 95 m, EMP_COOLDOWN 11 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
 | `COIN` | PER_GATE_GAP 6, VALUE 1, RESPAWN 6 s, RADIUS 6.5 m | | Track coins | `src/ai.js:23` | code | |
-| `AI_FIRE_INTERVAL` | [4, 8] ([6, 12] ÷ `RIVAL_POWER`) | s | Rival shot interval | `src/ai.js:27` | code | × road `fire` factor |
 | Race wreck | 2.4 | s | Down time in races | `src/race.js` `wreck` | code | |
 | Loot on wreck | 25 % (rounded up) | of coins | Coins the attacker takes on a takedown | `src/race.js` `wreck` | code | Tested in `tests/race.test.mjs` |
 | Podium coin bonus | [0, 15, 8, 4] | coins | Bonus for 1st/2nd/3rd in the coin race (`multi` = a RACE with AI rivals) | `src/race.js` `showResults` | code | Counts toward the 200 cap |
-| Rubber band | clamp(gap·0.05, −0.05, 0.07) | speed factor | AI catch-up | `src/race.js` `updateRanking` | code | |
+| Rubber band (`RUBBER_BAND`) | clamp(gap·0.05, 0, 0.07) (−0.05 before v0.2.15) | speed factor | AI catch-up; a rival ahead is never slowed | `src/race.js` `updateRanking` | code | |
 | Lock-on | acquire < 0.3 rad within 2000 m (`LOCK_RANGE`), keep < 0.5 rad within 2100 m (`LOCK_KEEP`), min 8 m (400 / 460 before v0.2.14) | rad, m | Seeker lock | `src/aim.js` `updateLock` | code | |
 | `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], emp [0.65, 1.6], shot [0.6, 0.7] | [speed kept (factor), stun s] | Race hit reaction | `src/race.js` | code | Tested in `tests/race.test.mjs` (missile halves the speed) |
 | `CAMS` | {d 9, h 2.7}, {d 15, h 4.8}, cockpit | m | Camera presets | `src/camera.js` | device (`neon.view`) | |
 | `MOUSE_RAD_PER_PX` | 0.0021 | rad / px | Mouse look | `src/aim.js` | × device `neon.sens` | |
 | `PLAYER_SLOT` | 7 | grid slot | Player's start slot | `src/main.js` | code | `GRID` has 12 (`src/track.js:8`) |
 | `MAPS` laps / floor / roamFloor | 2 / 34 / 40 | laps, m, m | Race length, fall-out height | `src/maps.js:13-15` | code | `MIN_RACE_S` assumes 2 laps |
-| `ROADS` | 9 entries, `ai` ≈ 1–1.0x, `fire`, rings 9–19 | | Road set | `src/roads.js:11` | code (tools/roadgen) | Must match functions `ROADS` |
+| `ROADS` | 9 entries, `fire` (rival aim), rings 9–19 | | Road set | `src/roads.js:11` | code (tools/roadgen) | Must match functions `ROADS` |
 | `RING` | R 15.5, tube 2.3, H 22 | m | Ring geometry | `src/props.js:5` | code | |
 
 ## E. Rendering and world

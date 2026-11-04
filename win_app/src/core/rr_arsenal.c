@@ -10,18 +10,18 @@ void rr_arsenal_restart(RRArsenal *s) {
     s->emp_cd=0; s->spin_cd=0;
 }
 void rr_arsenal_init(RRArsenal *s) { s->side=1; rr_arsenal_restart(s); }
-void rr_arsenal_step_dispatch(RRArsenal *s,double dt,RRArsenalInput i,
-    RRArsenalRandom rng,void *context,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *e) {
+void rr_arsenal_step_dispatch_pulse(RRArsenal *s,double dt,RRArsenalInput i,
+    RRArsenalRandom rng,void *context,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *e,RRArsenalPulse pulse) {
     memset(e,0,sizeof(*e));
     s->bolt_cd-=dt;
     s->heat=fmax(0,s->heat-.45*dt*(s->overheated?1.4:i.fire?.35:1));
     if(s->overheated&&s->heat<=.25) s->overheated=false;
     if(i.fire&&!s->overheated&&s->bolt_cd<=0) {
-        s->bolt_cd=.09; s->side=-s->side; e->bolt_side=s->side;
+        s->bolt_cd=pulse.period; s->side=-s->side; e->bolt_side=s->side;
         e->spread_x=(draw(e,rng,context)-.5)*.008;
         e->spread_y=(draw(e,rng,context)-.5)*.008;
         emit(e,RR_ARSENAL_BOLT,notice,notice_ctx);
-        s->heat+=.06;
+        s->heat+=pulse.heat;
         if(s->heat>=1) { s->heat=1; s->overheated=true; emit(e,RR_ARSENAL_OVERHEAT,notice,notice_ctx); }
     }
     s->missiles=fmin(3,s->missiles+dt/4.5);
@@ -47,6 +47,9 @@ void rr_arsenal_step_dispatch(RRArsenal *s,double dt,RRArsenalInput i,
     }
 }
 
+void rr_arsenal_step_dispatch(RRArsenal *s,double dt,RRArsenalInput input,RRArsenalRandom random,void *ctx,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *events){
+    rr_arsenal_step_dispatch_pulse(s,dt,input,random,ctx,notice,notice_ctx,events,(RRArsenalPulse){.09,.06});
+}
 void rr_arsenal_step(RRArsenal *s,double dt,RRArsenalInput i,RRArsenalRandom rng,void *context,RRArsenalEvents *e) {
     rr_arsenal_step_dispatch(s,dt,i,rng,context,NULL,NULL,e);
 }

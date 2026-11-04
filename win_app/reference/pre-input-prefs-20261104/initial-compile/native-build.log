@@ -1,0 +1,76 @@
+-- The C compiler identification is MSVC 19.51.36260.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (1.1s)
+-- Generating done (0.9s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/input-prefs-native
+[  0%] Building C object CMakeFiles/rr_core.dir/src/core/rr_input_settings.c.obj
+rr_input_settings.c
+[  1%] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.obj
+rr_local_run.c
+[  1%] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.obj
+rr_battle.c
+[  1%] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.obj
+rr_fire.c
+[  2%] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.obj
+rr_combat.c
+[  2%] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.obj
+rr_arsenal.c
+[  3%] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.obj
+rr_targeting.c
+[  3%] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.obj
+rr_pack.c
+[  3%] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.obj
+rr_coins.c
+[  4%] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.obj
+rr_rival.c
+[  4%] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.obj
+rr_ai.c
+[  5%] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.obj
+rr_flight.c
+[  5%] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.obj
+rr_track.c
+[  5%] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.obj
+rr_race.c
+[  6%] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.obj
+rr_session.c
+[  6%] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.obj
+rr_recovery.c
+[  7%] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.obj
+rr_road_picker.c
+[  7%] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.obj
+rr_corridor.c
+[  7%] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.obj
+rr_city_plan.c
+[  8%] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.obj
+rr_finish.c
+[  8%] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.obj
+rr_physics.c
+[  9%] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.obj
+rr_world_plan.c
+[  9%] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.obj
+rr_course_plan.c
+[  9%] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.obj
+rr_shared_scenery.c
+[ 10%] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.obj
+rr_canonical_city.c
+[ 10%] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.obj
+rr_facade.c
+[ 11%] Linking C static library rr_core.lib
+[ 11%] Built target rr_core
+[ 11%] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.obj
+rr_input_preferences.c
+[ 11%] Linking C static library rr_input_preferences.lib
+[ 11%] Built target rr_input_preferences
+[ 12%] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.obj
+test_input_preferences.c
+C:\Users\User\Projects\neon_c\win_app\tests\test_input_preferences.c(14): error C2059: syntax error: '<parameter-list>'
+NMAKE : fatal error U1077: '"C:\Program Files\CMake\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\rr_input_preferences_tests.dir\tests\test_input_preferences.c.obj.d --working-dir=C:\Users\User\Projects\neon_c\win_app\build\input-prefs-native --filter-prefix="Note: including file: " -- "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe" @C:\Users\User\AppData\Local\Temp\nm39CA.tmp' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\rr_input_preferences_tests.dir\build.make /nologo -SL                 CMakeFiles\rr_input_preferences_tests.dir\build' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\Makefile2 /nologo -LS                 all' : return code '0x2'
+Stop.

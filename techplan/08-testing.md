@@ -76,6 +76,15 @@ right in turn), `roam.test.mjs` 5 (+1: 4 bolts leave a car alive, the 5th wrecks
 values (3 fail with HEAT_PER_BOLT 0.06 and BOLT_DMG 6). `hits.test.mjs` updated for 750 m/s × 1.5 s; `live.test.mjs`
 for protocol 9. Browser suites as below.
 
+### v0.2.15 (2026-11-03)
+`test:live` 106 / 106, `test:game` 41 / 41: `race.test.mjs` 20 (+2: rival top speed 120 m/s × 1.02 a road; rivals
+hold fire 6 s, then fire the player's bolts at a car ahead; one bolt per 0.63 s, never overheating, nothing at
+1,200 m, firing at 1,000 m, an EMP pause; the rubber band test now checks that a rival ahead keeps its full speed).
+`constants.test.mjs` evaluates `CAR` (it read the literal 138 of `138 * K` and missed the faster nitro) against
+`PACE_MAX` 240. `test:functions` 26 / 26 (R8 and impossible-times tests on the new road limits). Rival driving was
+checked with a Node simulation of 2-lap races on all 9 roads (every rival finished, no respawns). Browser suites as
+below (`rivals` updated for the new speed and fire rules).
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

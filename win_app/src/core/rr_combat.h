@@ -2,6 +2,8 @@
 #define RR_COMBAT_H
 #include "rr_rival.h"
 typedef enum { RR_SHOT_GENERIC, RR_SHOT_BOLT, RR_SHOT_MISSILE, RR_SHOT_EMP } RRShotKind;
+typedef struct RRShotVisual {double length,width,flown;RRVec3 color;bool painted;} RRShotVisual;
+
 typedef struct {
     RRLocalRacer *owner,*target;
     RRVec3 pos,vel;
@@ -9,6 +11,7 @@ typedef struct {
     RRShotKind kind;
     bool always,trail,has_damage;
     unsigned serial; /* Opaque caller identity, retained when stable-compacting. */
+    RRShotVisual visual; /* CPU metadata moves with the shot, never a GPU handle. */
 } RRShot;
 enum {RR_DAMAGE_APPLIED=1,RR_DAMAGE_DODGED=2,RR_DAMAGE_WRECK=4};
 /* Offline state effects only. Wreck rewards, audio/FX and lock release are host

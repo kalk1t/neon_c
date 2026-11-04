@@ -17,10 +17,10 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
 | `src/clock.js` | 7 | `time`, `advance` | The game clock |
 | `src/car.js` | 818 | `Car`, `CAR`, `SPIN`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll), spin dodge, sideways slide, per-model muzzle (`car.muzzle(side)`, v0.2.14), GLB model loading and livery shader, nitro and ribbons, killer aura attachment |
-| `src/ai.js` | 117 | `Racer`, `aiInput`, `LIVERIES`, `RIVAL_POWER`, `DAMAGE`, `WEAPON`, `COIN`, `AI_FIRE_INTERVAL` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `race.js`), weapon and coin constants |
+| `src/ai.js` | 117 | `Racer`, `aiInput`, `LIVERIES`, `WEAPON`, `COIN`, `CORNER`, `cornerSpeeds` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `race.js`), weapon and coin constants |
 | `src/physics.js` | 162 | `OBB`, `Cyl`, `Torus`, `Colliders` | Static collision world: uniform grid (`CELL` 120 m), swept segment tests (3 m steps) |
 | `src/track.js` | 155 | `Track`, `Corridor`, `SAMPLE_STEP`, `GRID` | Road spline (sampled every 4 m), start grid (12 slots), corridor grid (`CELL` 160) used to keep scenery off the road |
-| `src/roads.js` | 128 | `ROADS` | 9 roads: id, name, control points, AI speed factor `ai`, fire factor `fire`, ring count |
+| `src/roads.js` | 128 | `ROADS`, `RIVAL_SPEED`, `rivalTop` | 9 roads: id, name, control points, rival aim factor `fire`, ring count; rival top speed per road (v0.2.15) |
 | `src/maps.js` | 24 | `MAPS` | The single map: laps 2, floor 34, roamFloor 40, atmosphere options |
 | `src/course.js` | 251 | `buildCourse` | Race furniture: gates, path dots (7 m), chevrons (84 m), beacons (125 m), barriers |
 | `src/coins.js` | 128 | `Coins` | Track coins (instanced), pickup, respawn |
@@ -63,7 +63,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (9), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (10), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)

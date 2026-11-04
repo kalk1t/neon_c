@@ -1,0 +1,152 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\input-prefs-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (10.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/input-prefs-web
+[0/2] Re-checking globbed directories...
+[1/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[2/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[3/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[4/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_input_settings.c.o
+[5/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[6/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[7/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[8/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[9/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[10/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[11/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[12/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[13/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[14/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[15/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[16/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[17/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[18/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[19/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[20/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[21/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[22/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[23/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[24/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[25/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[26/259] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[27/259] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+FAILED: [code=1] CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe  -IC:/Users/User/Projects/neon_c/win_app/src/platform -IC:/Users/User/Projects/neon_c/win_app/src/core -O3 -DNDEBUG -std=c17 -Wall -Wextra -Wpedantic -Werror -Wno-missing-field-initializers -MD -MT CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -MF CMakeFiles\rr_input_preferences.dir\src\platform\rr_input_preferences.c.o.d -o CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -c C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:66: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                  ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:124: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                            ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:152: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                                                        ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:155: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                                                           ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:8: error: EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |        ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:50:25: note: expanded from macro 'EM_ASM_INT'
+   50 | #define EM_ASM_INT(...) EM_ASM_ERROR
+      |                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:48:22: note: expanded from macro 'EM_ASM_ERROR'
+   48 | #define EM_ASM_ERROR _Pragma("GCC error(\"EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead\")")
+      |                      ^
+<scratch space>:45:6: note: expanded from here
+   45 |  GCC error("EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead")
+      |      ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:228: error: expected expression
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                                                                                                                                    ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:16:34: error: unused parameter 'path' [-Werror,-Wunused-parameter]
+   16 | static int read_blob(const char *path,char *out,size_t *size){
+      |                                  ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:16:45: error: unused parameter 'out' [-Werror,-Wunused-parameter]
+   16 | static int read_blob(const char *path,char *out,size_t *size){
+      |                                             ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:49: error: EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                 ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:52:28: note: expanded from macro 'EM_ASM_DOUBLE'
+   52 | #define EM_ASM_DOUBLE(...) EM_ASM_ERROR
+      |                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:48:22: note: expanded from macro 'EM_ASM_ERROR'
+   48 | #define EM_ASM_ERROR _Pragma("GCC error(\"EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead\")")
+      |                      ^
+<scratch space>:47:6: note: expanded from here
+   47 |  GCC error("EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead")
+      |      ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:142: error: expected expression
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                              ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:154: error: EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                          ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:50:25: note: expanded from macro 'EM_ASM_INT'
+   50 | #define EM_ASM_INT(...) EM_ASM_ERROR
+      |                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:48:22: note: expanded from macro 'EM_ASM_ERROR'
+   48 | #define EM_ASM_ERROR _Pragma("GCC error(\"EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead\")")
+      |                      ^
+<scratch space>:49:6: note: expanded from here
+   49 |  GCC error("EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead")
+      |      ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:241: error: expected expression
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                                                                                                                 ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:59: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                           ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:76: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                                            ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:79: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                                               ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:9: error: EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:50:25: note: expanded from macro 'EM_ASM_INT'
+   50 | #define EM_ASM_INT(...) EM_ASM_ERROR
+      |                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:48:22: note: expanded from macro 'EM_ASM_ERROR'
+   48 | #define EM_ASM_ERROR _Pragma("GCC error(\"EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead\")")
+      |                      ^
+<scratch space>:51:6: note: expanded from here
+   51 |  GCC error("EM_ASM does not work in -std=c* modes, use -std=gnu* modes instead")
+      |      ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:133: error: expected expression
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                                                                                                     ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:51:74: error: unused parameter 'data' [-Werror,-Wunused-parameter]
+   51 | static RRPreferenceStatus replace_blob(RRInputPreferences *s,const char *data,size_t size){
+      |                                                                          ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:51:86: error: unused parameter 'size' [-Werror,-Wunused-parameter]
+   51 | static RRPreferenceStatus replace_blob(RRInputPreferences *s,const char *data,size_t size){
+      |                                                                                      ^
+19 errors generated.
+[28/259] Linking C static library librr_core.a
+[29/259] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[30/259] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+ninja: build stopped: subcommand failed.

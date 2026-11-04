@@ -42,7 +42,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
 | D14 | ~~`RACE_GAP_S` (120 s) longer than a fast race~~ **Fixed in v0.2.1:** `RACE_GAP_S` = `MIN_RACE_S` = 60 s, so a real back-to-back race never waits (trade-off: R8 cheat rate doubles) | `functions/rules.js` | — |
 
-## 13.3 Status 2026-11-03 (v0.2.14)
+## 13.3 Status 2026-11-03 (v0.2.15)
 v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
 glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotated the secret, disabled the leaked version and added a build guard
 (`vite.config.js` `secretGuard`). v0.2.6 split `main.js` (D1). v0.2.7 fixed the security findings C2 (plain-text HUD
@@ -53,7 +53,9 @@ made the CSP ready to enforce (findings from the first real reports). v0.2.12 (n
 centred mouse-aim ring with the camera following it; mouse reversing no longer spins the car; stuck mouse buttons fixed. v0.2.13: A / D slide sideways with the mouse;
 a stopped car no longer shakes when turning (coasting overshot zero). v0.2.14 (gameplay): PULSE blaster rework (21 damage,
 750 m/s × 1.5 s, ~22 bolts to overheat, lock-on 2 km), bolts in the car's paint colour from each model's front bumper,
-42° slide lean; `LIVE_PROTOCOL` 9.
+42° slide lean; `LIVE_PROTOCOL` 9. v0.2.15 (gameplay): rivals 120 m/s + 2% a road, brake for bends, fire the
+player's bolts 3x slower; the rubber band never slows a rival; player car 135 m/s; `PACE_MAX` 240 (functions deploy);
+km/h / mph setting; `LIVE_PROTOCOL` 10.
 
 Fixed: R2-R8, R10-R13, D1-D15. Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05.

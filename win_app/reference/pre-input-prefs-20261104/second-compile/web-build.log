@@ -1,0 +1,219 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\input-prefs-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+-- Audio Backend: miniaudio
+
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/input-prefs-web
+[0/2] Re-checking globbed directories...
+[1/230] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+FAILED: [code=1] CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe  -IC:/Users/User/Projects/neon_c/win_app/src/platform -IC:/Users/User/Projects/neon_c/win_app/src/core -O3 -DNDEBUG -std=gnu17 -Wno-dollar-in-identifier-extension -Wno-gnu-zero-variadic-macro-arguments -Wall -Wextra -Wpedantic -Werror -Wno-missing-field-initializers -MD -MT CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -MF CMakeFiles\rr_input_preferences.dir\src\platform\rr_input_preferences.c.o.d -o CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -c C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:66: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                  ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:124: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                            ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:152: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                                                        ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:155: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |                                                                                                                                                           ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:18:8: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   18 |  int n=EM_ASM_INT({try{const s=localStorage.getItem(UTF8ToString($0));if(s===null)return 0;const n=lengthBytesUTF8(s);if(n>$2)return -2;stringToUTF8(s,$1,$2+1);return n+1;}catch(e){return -1;}},path,out,RR_INPUT_SETTINGS_BYTES);
+      |        ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:73: note: expanded from macro 'EM_ASM_INT'
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 3 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+<scratch space>:46:1: note: expanded from here
+   46 | _EM_ASM_ARG_SIGS_3
+      | ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:117:57: note: expanded from macro '_EM_ASM_ARG_SIGS_3'
+  117 | #define _EM_ASM_ARG_SIGS_3(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_2(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:87: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                                                       ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:9: note: macro '_EM_ASM_ARG_SIGS_1' defined here
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:141: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                             ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:232:9: note: macro 'EM_ASM_DOUBLE' defined here
+  232 | #define EM_ASM_DOUBLE(code, ...) emscripten_asm_const_double(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:49: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                 ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:232:79: note: expanded from macro 'EM_ASM_DOUBLE'
+  232 | #define EM_ASM_DOUBLE(code, ...) emscripten_asm_const_double(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                               ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:69: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |                                                                     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:131:9: note: macro '_EM_ASM_ARG_SIGS_' defined here
+  131 | #define _EM_ASM_ARG_SIGS_(N, ...) \
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:49: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                 ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:232:79: note: expanded from macro 'EM_ASM_DOUBLE'
+  232 | #define EM_ASM_DOUBLE(code, ...) emscripten_asm_const_double(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                               ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:23: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |                       ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:111:85: note: expanded from macro '_EM_ASM_COUNT_ARGS'
+  111 |     _EM_ASM_COUNT_ARGS_EXP($$,##__VA_ARGS__,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0)
+      |                                                                                     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:109:9: note: macro '_EM_ASM_COUNT_ARGS_EXP' defined here
+  109 | #define _EM_ASM_COUNT_ARGS_EXP(_$,_0,_1,_2,_3,_4,_5,_6,_7,_8,_9,_10,_11,_12,_13,_14,_15,n,...) n
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:49: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                 ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:232:79: note: expanded from macro 'EM_ASM_DOUBLE'
+  232 | #define EM_ASM_DOUBLE(code, ...) emscripten_asm_const_double(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                               ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:132:68: note: expanded from macro '_EM_ASM_ARG_SIGS_'
+  132 |     ((char[]){ _EM_ASM_CONCATENATE(_EM_ASM_ARG_SIGS_,N)(__VA_ARGS__) '\0' })
+      |                                                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:114:9: note: macro '_EM_ASM_ARG_SIGS_0' defined here
+  114 | #define _EM_ASM_ARG_SIGS_0(x, ...)
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:240: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                                                                                                                ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:9: note: macro 'EM_ASM_INT' defined here
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:154: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                          ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:73: note: expanded from macro 'EM_ASM_INT'
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:69: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |                                                                     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:131:9: note: macro '_EM_ASM_ARG_SIGS_' defined here
+  131 | #define _EM_ASM_ARG_SIGS_(N, ...) \
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:154: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                          ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:73: note: expanded from macro 'EM_ASM_INT'
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:23: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |                       ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:111:85: note: expanded from macro '_EM_ASM_COUNT_ARGS'
+  111 |     _EM_ASM_COUNT_ARGS_EXP($$,##__VA_ARGS__,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0)
+      |                                                                                     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:109:9: note: macro '_EM_ASM_COUNT_ARGS_EXP' defined here
+  109 | #define _EM_ASM_COUNT_ARGS_EXP(_$,_0,_1,_2,_3,_4,_5,_6,_7,_8,_9,_10,_11,_12,_13,_14,_15,n,...) n
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:41:154: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   41 |  if(status==RR_PREF_MISSING){double sensitivity=EM_ASM_DOUBLE({try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});int invert=EM_ASM_INT({try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});RRMouseSettings legacy={sensitivity,invert!=0};if(rr_input_settings_valid(legacy))s->saved=s->pending=*value=legacy;}
+      |                                                                                                                                                          ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:73: note: expanded from macro 'EM_ASM_INT'
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:132:68: note: expanded from macro '_EM_ASM_ARG_SIGS_'
+  132 |     ((char[]){ _EM_ASM_CONCATENATE(_EM_ASM_ARG_SIGS_,N)(__VA_ARGS__) '\0' })
+      |                                                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:114:9: note: macro '_EM_ASM_ARG_SIGS_0' defined here
+  114 | #define _EM_ASM_ARG_SIGS_0(x, ...)
+      |         ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:59: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                           ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:76: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                                            ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:79: error: '$' in identifier [-Werror,-Wdollar-in-identifier-extension]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |                                                                               ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:54:9: error: passing no argument for the '...' parameter of a variadic macro is a C23 extension [-Werror,-Wvariadic-macro-arguments-omitted]
+   54 |  int ok=EM_ASM_INT({try{localStorage.setItem(UTF8ToString($0),UTF8ToString($1,$2));return 1;}catch(e){return 0;}},s->path,data,size);return ok?RR_PREF_OK:RR_PREF_IO_ERROR;
+      |         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:222:73: note: expanded from macro 'EM_ASM_INT'
+  222 | #define EM_ASM_INT(code, ...) emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__))
+      |                                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 3 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+<scratch space>:52:1: note: expanded from here
+   52 | _EM_ASM_ARG_SIGS_3
+      | ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:117:57: note: expanded from macro '_EM_ASM_ARG_SIGS_3'
+  117 | #define _EM_ASM_ARG_SIGS_3(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_2(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:87: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                                                       ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:9: note: macro '_EM_ASM_ARG_SIGS_1' defined here
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |         ^
+17 errors generated.
+[2/230] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[3/230] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[4/230] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+ninja: build stopped: subcommand failed.

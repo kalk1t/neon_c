@@ -11,5 +11,7 @@ unsigned rr_lock_angles(RRLocalLock *state,const double *acquire,int count,
     bool keep_valid,double keep_angle,double dt);
 unsigned rr_lock_update(RRLocalLock *state,RRVec3 player,RRVec3 aim,
     const RRLocalTarget *targets,int count,double dt);
+/* Frozen earlier API uses400/460; current rules call this shared range form. */
+unsigned rr_lock_update_ranges(RRLocalLock *state,RRVec3 player,RRVec3 aim,const RRLocalTarget *targets,int count,double dt,double acquire_range,double keep_range);
 bool rr_target_lead(RRVec3 from,const RRLocalTarget *target,double speed,RRVec3 *direction);
 #endif

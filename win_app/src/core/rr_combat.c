@@ -59,6 +59,7 @@ void rr_shots_step(RRShot *shots,size_t *count,RRLocalRacer **racers,size_t nr,
             hit_world=world&&world(world_ctx,prev,p->pos,&hit);
             if(!hit_world&&p->pos.y<floor_height){hit_world=true;hit=p->pos;}
         }
+        p->visual.flown+=rr_length(rr_sub(p->pos,prev));
         if(p->trail) {
             p->trail_time-=dt;
             if(p->trail_time<=0){p->trail_time=.022;if(notice)notice(ctx,RR_SHOT_TRAIL,p,NULL,p->pos);}

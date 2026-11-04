@@ -9,6 +9,7 @@
 #include "rr_canonical_city.h"
 #include "rr_menu_policy.h"
 #include "rr_menu_keys.h"
+#include "rr_input_preferences.h"
 #include "rr_recovery.h"
 #include "rr_road_picker.h"
 #include "rr_key_events.h"
@@ -67,7 +68,7 @@
 
 typedef struct RRApp {
     RRTrack track; RRCorridor corridor; RRWorld world; RRCityPlan city_plan; RRCourse course; RRSharedScenery shared; RRCar car; RRScene scene; RRSession session; RRRaceMode selected_mode; RRMenuPolicy menu_policy; RRMenuKeys menu_keys; RRMenuKeyResult menu_key_result; RRRecovery recovery; RRRoadPicker picker; RRKeyEvents key_events; RRMinimap minimap; RRTargetPulse target_pulse;
-    Camera3D camera; RRMouseCapture mouse_capture; RRMouseClickCapture capture_click; RRBoostMeter boost_meter; RRNitroCall nitro_call; RRMouseSettings mouse_settings; RRMouseWidgetInput mouse_widget_input; RRHUDMessage message; RRNoticeFade message_fade; double message_opacity; RRSubNotice sub_notice; RRNoticeFade sub_fade; double sub_opacity; RRSubArt sub_art; RRArrowArt arrow_art; RRCameraFX camera_fx; RRStartCue start_cue; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
+    Camera3D camera; RRMouseCapture mouse_capture; RRMouseClickCapture capture_click; RRBoostMeter boost_meter; RRNitroCall nitro_call; RRMouseSettings mouse_settings; RRInputPreferences input_preferences; bool preferences_menu,preferences_focused; RRMouseWidgetInput mouse_widget_input; RRHUDMessage message; RRNoticeFade message_fade; double message_opacity; RRSubNotice sub_notice; RRNoticeFade sub_fade; double sub_opacity; RRSubArt sub_art; RRArrowArt arrow_art; RRCameraFX camera_fx; RRStartCue start_cue; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
     bool interior_requested,cockpit_visible,first_person_visible,camera_looking,camera_aim; double cockpit_steer,cockpit_control;
     double aim_yaw,aim_pitch,look_yaw,look_pitch,camera_yaw,camera_pitch,camera_fov;RRVec3 aim_direction;
     RRShowcase showcase;RRSceneClock scene_clock;
@@ -431,6 +432,7 @@ static void menu_ui(void)
     float pending_y=y+rr_menu_help_pending((float)h),error_y=y+rr_menu_help_error((float)h);
     rr_ui_text_css(&app.ui,"RIVALS / COMBAT / ACCOUNT INTEGRATION PENDING",l.x,(float)rr_css_line_baseline(pending_y,14,11,500),11,0,500,muted,false);
     if(!app.ui.loaded)rr_ui_text_css(&app.ui,"THEME FONT LOAD FAILED",l.x,(float)rr_css_line_baseline(error_y,18,14,700),14,0,700,magenta,false);
+    else if(app.input_preferences.status>=RR_PREF_INVALID)rr_ui_text_css(&app.ui,"INPUT SETTINGS NOT SAVED",l.x,(float)rr_css_line_baseline(error_y,18,14,700),14,0,700,magenta,false);
 #if !defined(PLATFORM_WEB)
     if(rr_ui_button(&app.ui,(RRUIRect){(float)w-168,(float)h-76,144,50},"QUIT",false,true,rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_QUIT,IsWindowFocused()),6)||key_hit(KEY_ESCAPE)||app.menu_key_result.activate==RR_MENU_FOCUS_QUIT)app.quit=true;
 #endif
@@ -751,6 +753,16 @@ static void results_ui(void)
     }
 }
 
+static void input_preferences_tick(bool shutdown)
+{
+    bool menu=app.session.phase==RR_SESSION_MENU&&!app.picker.open,focused=IsWindowFocused();
+    bool force=shutdown||app.quit||(app.preferences_menu&&!menu)||(app.preferences_focused&&!focused);
+    RRPreferenceStatus before=app.input_preferences.status;
+    RRPreferenceStatus status=rr_input_preferences_tick(&app.input_preferences,app.mouse_settings,GetTime(),force);
+    if(status!=before)TraceLog(status>=RR_PREF_INVALID?LOG_WARNING:LOG_INFO,"INPUT_SETTINGS: status=%d (device input preferences only)",status);
+    app.preferences_menu=menu;app.preferences_focused=focused;
+}
+
 static void frame(void)
 {
     read_key_events();
@@ -759,6 +771,7 @@ static void frame(void)
     double dt=rr_frame_dt(raw_dt);
     app.frame++;
     if(IsWindowMinimized() || GetScreenWidth()<=0 || GetScreenHeight()<=0){
+        input_preferences_tick(true);
         app.menu_policy.armed=false;app.capture_click.armed=false;rr_showcase_up(&app.showcase);rr_mouse_widgets_cancel(&app.mouse_widget_input);rr_menu_keys_reset(&app.menu_keys);
         rr_boost_meter_render(&app.boost_meter,false,GetTime());
         if(rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000))release_mouse();
@@ -941,6 +954,7 @@ static void frame(void)
     rr_ui_text(&app.ui,"COCKPIT CANDIDATE / VISUAL VALIDATION PENDING",20,5,11,0,700,magenta,false);
 #endif
     EndDrawing();
+    input_preferences_tick(false);
 #if defined(RR_FINISH_VALIDATION) && !defined(PLATFORM_WEB)
     if(app.session.phase==RR_SESSION_RESULTS){
         static bool captured=false;static int result_frames=0;result_frames++;
@@ -1006,7 +1020,9 @@ int main(int argc,char **argv)
     rlSetClipPlanes(.1,2500);
     rr_showcase_init(&app.showcase);
     rr_menu_keys_reset(&app.menu_keys);
-    app.mouse_settings=(RRMouseSettings){1,false};app.aim_direction=rr_v3(0,0,-1);
+    RRPreferenceStatus preferences_status=rr_input_preferences_default(&app.input_preferences,&app.mouse_settings);
+    TraceLog(preferences_status>=RR_PREF_INVALID?LOG_WARNING:LOG_INFO,"INPUT_SETTINGS: startup status=%d; no startup write",preferences_status);
+    app.preferences_menu=true;app.preferences_focused=IsWindowFocused();app.aim_direction=rr_v3(0,0,-1);
     app.session.phase=RR_SESSION_MENU;app.camera.up=(Vector3){0,1,0};app.camera.projection=CAMERA_PERSPECTIVE;app.camera_fov=70;
     if(!rr_corridor_init_all(&app.corridor,&app.track)||!rr_road_picker_init(&app.picker,&app.track)){
         TraceLog(LOG_ERROR,"All-route corridor/track initialization failed.");CloseWindow();return 1;
@@ -1023,6 +1039,7 @@ int main(int argc,char **argv)
     emscripten_set_main_loop(frame,0,1);
 #else
     while(!WindowShouldClose() && !app.quit && (!app.smoke || app.frame<151))frame();
+    input_preferences_tick(true);
     bool asset_failure=app.smoke && !app.fallback && !app.scene.car_loaded;
     if(app.smoke)printf("FIRST_FLIGHT_SMOKE: %d frames, model=%s, speed=%.3f m/s, output=captures/\n",app.frame,app.scene.car_loaded?"loaded":"fallback",app.car.speed);
     rr_session_dispose(&app.session);rr_scene_unload(&app.scene);rr_cockpit_unload(&app.cockpit_art);rr_sub_art_unload(&app.sub_art);rr_arrow_art_unload(&app.arrow_art);rr_ui_unload(&app.ui);CloseWindow();

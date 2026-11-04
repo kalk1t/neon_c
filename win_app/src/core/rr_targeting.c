@@ -14,11 +14,12 @@ unsigned rr_lock_angles(RRLocalLock *state,const double *acquire,int count,bool 
         if(best!=state->target){state->target=best;state->charge=0;if(best>=0)events|=RR_LOCK_ACQUIRE;}}
     if(state->target<0){state->charge=0;return events;}double was=state->charge;state->charge=fmin(1,state->charge+dt/.5);if(was<1&&state->charge>=1)events|=RR_LOCK_READY;return events;
 }
-unsigned rr_lock_update(RRLocalLock *state,RRVec3 player,RRVec3 aim,const RRLocalTarget *targets,int count,double dt)
+unsigned rr_lock_update_ranges(RRLocalLock *state,RRVec3 player,RRVec3 aim,const RRLocalTarget *targets,int count,double dt,double acquire_range,double keep_range)
 {
-    if(!state||(count&&!targets)||count<0||count>RR_AI_RIVALS)return 0;double acquire[RR_AI_RIVALS];for(int i=0;i<count;i++)if(!rr_target_angle(player,aim,&targets[i],400,&acquire[i]))acquire[i]=-1;
-    double keep_angle=0;bool keep=state->target>=0&&state->target<count&&rr_target_angle(player,aim,&targets[state->target],460,&keep_angle);return rr_lock_angles(state,acquire,count,keep,keep_angle,dt);
+    if(!state||(count&&!targets)||count<0||count>RR_AI_RIVALS)return 0;double acquire[RR_AI_RIVALS];for(int i=0;i<count;i++)if(!rr_target_angle(player,aim,&targets[i],acquire_range,&acquire[i]))acquire[i]=-1;
+    double keep_angle=0;bool keep=state->target>=0&&state->target<count&&rr_target_angle(player,aim,&targets[state->target],keep_range,&keep_angle);return rr_lock_angles(state,acquire,count,keep,keep_angle,dt);
 }
+unsigned rr_lock_update(RRLocalLock *state,RRVec3 player,RRVec3 aim,const RRLocalTarget *targets,int count,double dt){return rr_lock_update_ranges(state,player,aim,targets,count,dt,400,460);}
 bool rr_target_lead(RRVec3 from,const RRLocalTarget *target,double speed,RRVec3 *direction)
 {
     if(!target||!direction||!isfinite(speed)||speed<=0)return false;double time=rr_length(rr_sub(from,target->pos))/speed;*direction=rr_normalize(rr_sub(rr_add(target->pos,rr_scale(target->vel,time*.9)),from));return isfinite(direction->x)&&isfinite(direction->y)&&isfinite(direction->z);

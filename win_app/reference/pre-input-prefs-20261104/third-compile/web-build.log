@@ -1,0 +1,41 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\input-prefs-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/input-prefs-web
+[0/2] Re-checking globbed directories...
+[1/227] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+FAILED: [code=1] CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe  -IC:/Users/User/Projects/neon_c/win_app/src/platform -IC:/Users/User/Projects/neon_c/win_app/src/core -O3 -DNDEBUG -std=gnu17 -Wall -Wextra -Wpedantic -Werror -Wno-missing-field-initializers -MD -MT CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -MF CMakeFiles\rr_input_preferences.dir\src\platform\rr_input_preferences.c.o.d -o CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o -c C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:9:3: error: extra ';' outside of a function [-Werror,-Wextra-semi]
+    9 | });
+      |   ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:10:131: error: extra ';' outside of a function [-Werror,-Wextra-semi]
+   10 | EM_JS(double,rr_web_preferences_legacy_sens,(void),{try{return Number(localStorage.getItem('neon.sens'))||1;}catch(e){return 1;}});
+      |                                                                                                                                   ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:11:127: error: extra ';' outside of a function [-Werror,-Wextra-semi]
+   11 | EM_JS(int,rr_web_preferences_legacy_invert,(void),{try{return localStorage.getItem('neon.invert')==='1';}catch(e){return 0;}});
+      |                                                                                                                               ^
+C:/Users/User/Projects/neon_c/win_app/src/platform/rr_input_preferences.c:12:182: error: extra ';' outside of a function [-Werror,-Wextra-semi]
+   12 | EM_JS(int,rr_web_preferences_write,(const char *path,const char *data,int size),{try{localStorage.setItem(UTF8ToString(path),UTF8ToString(data,size));return 1;}catch(e){return 0;}});
+      |                                                                                                                                                                                      ^
+4 errors generated.
+[2/227] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.o
+[3/227] Building C object CMakeFiles/rr_menu_keys_tests.dir/tests/test_menu_keys.c.o
+[4/227] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+ninja: build stopped: subcommand failed.

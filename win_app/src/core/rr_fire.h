@@ -39,8 +39,23 @@ typedef struct {
  * Muzzle/quaternion/aim supplied by host; rewards/account/network never applied.
  * Shot/FX capacity failure latches error; do not treat that run as qualified. */
 void rr_fire_player_step(RRFireLocal *local,RRArsenal *arsenal,double dt,RRArsenalInput input,RRArsenalEvents *events);
+typedef struct RRFireFlash {RRVec3 position,color;} RRFireFlash;
+/* Read-only visual notification: no simulation RNG, reentry or roster mutation. */
+typedef void (*RRFireFlashCue)(void *ctx,const RRFireFlash *flash);
+typedef struct RRFireBinding {
+    int model;double model_world[16];unsigned accent;
+    RRFireFlashCue flash;void *flash_context;
+} RRFireBinding;
+/* Current v0.2.14 player dispatch. Caller gates active/alive and supplies the
+ * exact pre-weapon source model-group matrix (bob/tilt included). Failure latches
+ * error; never advance/qualify a run with invalid pose or insufficient storage. */
+bool rr_fire_player_current_step(RRFireLocal *local,RRArsenal *arsenal,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events);
+typedef struct RRShotStreak {RRVec3 center;double length,width;} RRShotStreak;
+RRShotStreak rr_fire_shot_streak(const RRShot *shot,RRVec3 camera);
 /* Reverse projectile dispatch -> impact/damage/wreck -> FX aging. Caller then
  * consumes existing late-coin tail. No structurally mutating callbacks allowed. */
+/* Source finished state still advances projectiles/FX, but damage rejects it. */
+void rr_fire_projectiles_current_tick(RRFireLocal *local,double dt,double floor_height,RRShotWorld world,void *ctx,bool race_active);
 void rr_fire_projectiles_tick(RRFireLocal *local,double dt,double floor_height,RRShotWorld world,void *ctx);
 /* Source Weapons.clear leaves existing FX alive; resource restart is separate. */
 void rr_fire_clear(RRFireLocal *local);
