@@ -1,0 +1,44 @@
+{
+  "version": "0.2.13",
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\package.json",
+      "sha256": "cefb13faea1b231e97d20fb7eb4259648338594d28ed672c7ca8c5584d4a2035"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\index.html",
+      "sha256": "b65e35f4581b96c3b46171f095c44552f13919e84712cdebd5cbeaea3bf42144"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\input.js",
+      "sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "72f2ac1f1350b755c19a1efe020e328fafe0d4d669484fbffc8cf50664fe2f2d"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\manual\\02-controls.md",
+      "sha256": "45329354022fdec5cba1d3b55e827b7d90fa5efaa341802d3b56fef3265421fa"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\manual\\08-settings.md",
+      "sha256": "6ffcd2c1424b4c07d172b566e918fc743ab62deea4dbbd4889df2f929b3c2b44"
+    }
+  ],
+  "enabled_subset_dom_order": [
+    "race",
+    "attack",
+    "sens",
+    "invert"
+  ],
+  "native_extra": "QUIT follows the supported source subset on Windows only.",
+  "sensitivity": {
+    "min": 0.3,
+    "max": 2.5,
+    "step": 0.05,
+    "steps": 45
+  },
+  "actual_source_keydown_states": 30,
+  "scope": "Actual Input keydown/hit methods in inert event registration; source INPUT early-return and non-INPUT Space/arrow preventDefault. Static DOM order and settings bounds. Native Tab/Enter/arrow/Home/End/checkbox press-release adapter is state-tested separately; no browser UA activation, accessibility API, OS event, pixels or graphics tested."
+}

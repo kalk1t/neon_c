@@ -2,21 +2,22 @@
 #define RR_MENU_FOOTER_H
 #include "rr_css_font_metrics.h"
 #include <stddef.h>
+#include <stdbool.h>
 typedef struct RRHelpKey {const char *text;float width;} RRHelpKey;
 typedef struct RRHelpRun {int key;const char *text;} RRHelpRun;
 typedef struct RRHelpBox {float x,y,w,h;} RRHelpBox;
 static inline const RRHelpKey *rr_menu_help_key(int index)
 {
-    static const RRHelpKey keys[]={{"MOUSE",64.125f},{"RMB",45.03125f},{"W",28.15625f},{"S",23.921875f},{"SHIFT",54.609375f},{"F",22.6875f},{"C",23.875f},{"R",23.90625f},{"ESC",42.96875f}};
-    return index>=0&&index<9?&keys[index]:NULL;
+    static const RRHelpKey keys[]={{"MOUSE",64.125f},{"RMB",45.03125f},{"W",28.15625f},{"S",23.921875f},{"SHIFT",54.609375f},{"F",22.6875f},{"C",23.875f},{"R",23.90625f},{"ESC",42.96875f},{"A",24.046875f},{"D",24.015625f}};
+    return index>=0&&index<11?&keys[index]:NULL;
 }
-static inline int rr_menu_help_count(int row){return row==0?4:row==1?8:row==2?6:0;}
+static inline int rr_menu_help_count(int row){return row==0?4:row==1?9:row==2?8:0;}
 static inline const RRHelpRun *rr_menu_help_run(int row,int index)
 {
-    static const RRHelpRun rows[3][8]={
+    static const RRHelpRun rows[3][9]={
       {{0,NULL},{-1," steer + climb/dive "},{1,NULL},{-1," hold to look around"}},
-      {{2,NULL},{-1," thrust "},{3,NULL},{-1," brake "},{4,NULL},{-1," boost "},{5,NULL},{-1," spin dodge"}},
-      {{6,NULL},{-1," camera "},{7,NULL},{-1," reset "},{8,NULL},{-1," pause"}}};
+      {{2,NULL},{-1," thrust "},{3,NULL},{-1," brake "},{4,NULL},{-1," boost "},{9,NULL},{10,NULL},{-1," slide sideways"}},
+      {{5,NULL},{-1," spin dodge "},{6,NULL},{-1," camera "},{7,NULL},{-1," reset "},{8,NULL},{-1," pause"}}};
     return index>=0&&index<rr_menu_help_count(row)?&rows[row][index]:NULL;
 }
 static inline float rr_menu_help_line_height(float height){return height<=820?24.f:30.f;}

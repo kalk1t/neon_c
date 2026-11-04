@@ -16,7 +16,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/camera.js` | ~150 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras; with the mouse captured the chase camera follows the aim (`g.camAim`, v0.2.12) |
 | `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
 | `src/clock.js` | 7 | `time`, `advance` | The game clock |
-| `src/car.js` | 818 | `Car`, `CAR`, `SPIN`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll), spin dodge, GLB model loading and livery shader, nitro and ribbons, killer aura attachment |
+| `src/car.js` | 818 | `Car`, `CAR`, `SPIN`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll), spin dodge, sideways slide, per-model muzzle (`car.muzzle(side)`, v0.2.14), GLB model loading and livery shader, nitro and ribbons, killer aura attachment |
 | `src/ai.js` | 117 | `Racer`, `aiInput`, `LIVERIES`, `RIVAL_POWER`, `DAMAGE`, `WEAPON`, `COIN`, `AI_FIRE_INTERVAL` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `race.js`), weapon and coin constants |
 | `src/physics.js` | 162 | `OBB`, `Cyl`, `Torus`, `Colliders` | Static collision world: uniform grid (`CELL` 120 m), swept segment tests (3 m steps) |
 | `src/track.js` | 155 | `Track`, `Corridor`, `SAMPLE_STEP`, `GRID` | Road spline (sampled every 4 m), start grid (12 slots), corridor grid (`CELL` 160) used to keep scenery off the road |
@@ -24,7 +24,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/maps.js` | 24 | `MAPS` | The single map: laps 2, floor 34, roamFloor 40, atmosphere options |
 | `src/course.js` | 251 | `buildCourse` | Race furniture: gates, path dots (7 m), chevrons (84 m), beacons (125 m), barriers |
 | `src/coins.js` | 128 | `Coins` | Track coins (instanced), pickup, respawn |
-| `src/fx.js` | 314 | `Weapons`, `Ribbon`, `tex`, `additive`, `axisBillboard` | Projectiles (bolts, seekers, EMP), explosions, trails |
+| `src/fx.js` | 314 | `Weapons`, `Ribbon`, `tex`, `additive`, `axisBillboard` | Projectiles (bolts, seekers, EMP; bolt streaks grow out of the muzzle, v0.2.14), explosions, trails |
 | `src/killer.js` | 366 | `KillerAura`, `KILLER_AURA` | Killer auras: `AURA_STYLES` CRIMSON FLAME and VOID CROWN (adds a crown sprite and orbiting crystal shards); `auraStyleFor(kc)`: VOID CROWN from 10 Killer kills; tiers high / menu / remote / low |
 | `src/nitro.js` | 199 | `NitroFX`, `flameMaterial` | Thruster flames, 140 sparks |
 
@@ -63,7 +63,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (7), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (9), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)

@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "dadb51b36c1125361b4b640fb7ea1502674536fa308b450f9ea16fb868e05573",
+  "target": {
+    "path": "build/mouse-widgets-native/bin/RoadstersRace.exe",
+    "sha256": "b16fa13b9eab909873355e73b3323611b4ac87c0cf7644ae3aa3e6302ae96418"
+  },
+  "working_directory": "build/mouse-widgets-native/bin",
+  "static_only": true,
+  "launcher_executed": false
+}

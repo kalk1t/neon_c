@@ -69,6 +69,13 @@ Each new test was first run against the old code and failed there (or was checke
 stop, slide standing and at speed, slide decay and reset, A / D vs arrows; all fail on v0.2.12). Browser suites as
 below.
 
+### v0.2.14 (2026-11-03)
+`test:live` 104 / 104, `test:game` 39 / 39: `controls.test.mjs` 16 (+3: holding fire gives ~22 bolts before it
+overheats; bolt damage 21, reach ≥ 1.1 km, lock-on 2 km; each car model's bolts leave from its front bumper, left and
+right in turn), `roam.test.mjs` 5 (+1: 4 bolts leave a car alive, the 5th wrecks it). The new tests fail on v0.2.13's
+values (3 fail with HEAT_PER_BOLT 0.06 and BOLT_DMG 6). `hits.test.mjs` updated for 750 m/s × 1.5 s; `live.test.mjs`
+for protocol 9. Browser suites as below.
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

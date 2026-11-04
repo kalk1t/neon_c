@@ -18,8 +18,8 @@ static inline RRInput rr_mouse_aim_step(RRMouseAim *a,RRMouseSettings settings,d
     difference=rr_clamp(difference,-1.1,1.1);a->yaw=car_yaw+difference;
     a->pitch=rr_clamp(a->pitch,-.62,.62);
     double cp=cos(a->pitch);a->direction=rr_v3(-sin(a->yaw)*cp,sin(a->pitch),-cos(a->yaw)*cp);
-    if(!key_steer)in.steer=rr_clamp(-difference*2.8,-1,1);
-    if(!key_climb)in.climb=rr_clamp(a->pitch/.62*1.25,-1,1);
+    if(!key_steer){in.steer=rr_clamp(-difference*2.8,-1,1);in.aim_steer=true;}
+    if(!key_climb)in.climb=rr_clamp(a->pitch/.62,-1,1);
     return in;
 }
 #endif

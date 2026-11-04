@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "7aa24bfa52840b772a0209994d0d547b664448aca502424acab9c0ee1465a623",
+  "target": {
+    "path": "build/aim-camera-native/bin/RoadstersRace.exe",
+    "sha256": "da86a5e0ad349b8859b4509e33bdce462879b884f0b36cd3e3a87399e71a37ae"
+  },
+  "static_only": true,
+  "executed": false
+}

@@ -8,6 +8,7 @@
 #include "rr_world_plan.h"
 #include "rr_canonical_city.h"
 #include "rr_menu_policy.h"
+#include "rr_menu_keys.h"
 #include "rr_recovery.h"
 #include "rr_road_picker.h"
 #include "rr_key_events.h"
@@ -15,6 +16,7 @@
 #include "rr_first_person.h"
 #include "rr_chase_camera.h"
 #include "rr_camera_motion.h"
+#include "rr_aim_camera.h"
 #include "rr_camera_fx.h"
 #include "rr_minimap.h"
 #include "rr_render_policy.h"
@@ -55,6 +57,7 @@
 #include "rr_pause_scene.h"
 #include "rr_button_text.h"
 #include "rr_menu_header.h"
+#include "rr_mouse_widgets.h"
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
@@ -63,9 +66,9 @@
 #endif
 
 typedef struct RRApp {
-    RRTrack track; RRCorridor corridor; RRWorld world; RRCityPlan city_plan; RRCourse course; RRSharedScenery shared; RRCar car; RRScene scene; RRSession session; RRRaceMode selected_mode; RRMenuPolicy menu_policy; RRRecovery recovery; RRRoadPicker picker; RRKeyEvents key_events; RRMinimap minimap; RRTargetPulse target_pulse;
-    Camera3D camera; RRMouseCapture mouse_capture; RRMouseClickCapture capture_click; RRBoostMeter boost_meter; RRNitroCall nitro_call; RRMouseSettings mouse_settings; bool mouse_sens_drag; RRHUDMessage message; RRNoticeFade message_fade; double message_opacity; RRSubNotice sub_notice; RRNoticeFade sub_fade; double sub_opacity; RRSubArt sub_art; RRArrowArt arrow_art; RRCameraFX camera_fx; RRStartCue start_cue; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
-    bool interior_requested,cockpit_visible,first_person_visible,camera_looking; double cockpit_steer,cockpit_control;
+    RRTrack track; RRCorridor corridor; RRWorld world; RRCityPlan city_plan; RRCourse course; RRSharedScenery shared; RRCar car; RRScene scene; RRSession session; RRRaceMode selected_mode; RRMenuPolicy menu_policy; RRMenuKeys menu_keys; RRMenuKeyResult menu_key_result; RRRecovery recovery; RRRoadPicker picker; RRKeyEvents key_events; RRMinimap minimap; RRTargetPulse target_pulse;
+    Camera3D camera; RRMouseCapture mouse_capture; RRMouseClickCapture capture_click; RRBoostMeter boost_meter; RRNitroCall nitro_call; RRMouseSettings mouse_settings; RRMouseWidgetInput mouse_widget_input; RRHUDMessage message; RRNoticeFade message_fade; double message_opacity; RRSubNotice sub_notice; RRNoticeFade sub_fade; double sub_opacity; RRSubArt sub_art; RRArrowArt arrow_art; RRCameraFX camera_fx; RRStartCue start_cue; RRUI ui; float road_scroll; RRCockpitArt cockpit_art;
+    bool interior_requested,cockpit_visible,first_person_visible,camera_looking,camera_aim; double cockpit_steer,cockpit_control;
     double aim_yaw,aim_pitch,look_yaw,look_pitch,camera_yaw,camera_pitch,camera_fov;RRVec3 aim_direction;
     RRShowcase showcase;RRSceneClock scene_clock;
     double spin_cooldown,picker_notice;
@@ -169,11 +172,12 @@ static RRInput controls(void)
         pad.brake=rr_clamp((GetGamepadAxisMovement(p,GAMEPAD_AXIS_LEFT_TRIGGER)+1)*.5,0,1);
         pad.boost=IsGamepadButtonDown(p,GAMEPAD_BUTTON_RIGHT_FACE_DOWN);
     }
-    RRInput in=rr_input_mix(held,pad);
+    RRInput in=rr_input_mix_capture(held,pad,app.mouse_capture.captured);
     Vector2 delta=GetMouseDelta();
     if(!rr_mouse_capture_allows(&app.mouse_capture,GetTime()*1000))delta=(Vector2){0};
     RRMouseAim aim={app.aim_yaw,app.aim_pitch,app.look_yaw,app.look_pitch,false,{0}};
     in=rr_mouse_aim_step(&aim,app.mouse_settings,app.car.yaw,app.car.pitch,in,delta.x,delta.y,IsMouseButtonDown(MOUSE_BUTTON_RIGHT));
+    app.camera_aim=app.mouse_capture.captured;
     app.aim_yaw=aim.yaw;app.aim_pitch=aim.pitch;app.look_yaw=aim.look_yaw;app.look_pitch=aim.look_pitch;app.camera_looking=aim.looking;app.aim_direction=aim.direction;
     return in;
 }
@@ -184,6 +188,7 @@ static RRInput finished_controls(void)
 {
     RRFinishAim aim;
     RRInput input=rr_finish_player_controls(&app.track,&app.car,app.recovery.sample,&aim);
+    app.camera_aim=app.mouse_capture.captured;
     app.aim_yaw=aim.yaw;app.aim_pitch=aim.pitch;app.aim_direction=aim.direction;
     return input;
 }
@@ -227,10 +232,11 @@ static void update_camera(double dt)
     }
     bool chase_phase=app.session.phase==RR_SESSION_ACTIVE||app.session.phase==RR_SESSION_COUNTDOWN||app.session.phase==RR_SESSION_FINISHED||app.session.phase==RR_SESSION_RESULTS;
     RRCameraMotion motion={app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch};
-    rr_camera_motion_step(&motion,app.car.yaw,app.car.pitch,app.camera_looking||!chase_phase,dt);
+    bool aim_camera=rr_aim_camera_active(app.camera_aim,app.session.phase,app.smoke);
+    rr_camera_motion_aim_step(&motion,aim_camera?app.aim_yaw:app.car.yaw,aim_camera?app.aim_pitch:app.car.pitch,aim_camera,app.camera_looking||!chase_phase,dt);
     app.camera_yaw=motion.yaw;app.camera_pitch=motion.pitch;app.look_yaw=motion.look_yaw;app.look_pitch=motion.look_pitch;
     double orbit=rr_camera_orbit(app.look_yaw,app.look_pitch);
-    RRFirstPerson view=rr_chase_pose(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch);
+    RRFirstPerson view=rr_chase_pose_aim(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch,aim_camera);
 
     double sf=fmin(1.4,fmax(0,app.car.speed)/RR_CAR_MAX);
     app.camera_fov+=(68+15*fmin(1,sf)+9*app.car.nitro-app.camera_fov)*(1-exp(-4*dt));
@@ -338,6 +344,58 @@ static void menu_help_ui(RRUIMenuLayout l,int height)
     }
 }
 
+static Color mouse_widget_color(int index)
+{
+    uint32_t c=rr_mouse_widget_rgba(index);return (Color){(unsigned char)(c>>24),(unsigned char)(c>>16),(unsigned char)(c>>8),(unsigned char)c};
+}
+static RRMouseWidgetBoxes menu_mouse_boxes(RRUIMenuLayout l,float y)
+{
+    Font font=app.ui.loaded?app.ui.bold:GetFontDefault();float pixels=app.ui.loaded?(float)rr_css_font_size(12,700):12;
+    float invert_width=MeasureTextEx(font,"INVERT Y",pixels,2).x+2;
+    return rr_mouse_widget_boxes(l.x,y+22,invert_width);
+}
+static void mouse_settings_ui(RRUIMenuLayout l,float y)
+{
+    RRMouseWidgetBoxes b=menu_mouse_boxes(l,y);Vector2 mouse=GetMousePosition();
+    RRMouseWidgetEvent e={mouse.x,mouse.y,app.session.phase==RR_SESSION_MENU&&!app.picker.open,IsWindowFocused(),IsMouseButtonPressed(MOUSE_BUTTON_LEFT),IsMouseButtonReleased(MOUSE_BUTTON_LEFT),IsMouseButtonDown(MOUSE_BUTTON_LEFT)};
+    app.mouse_settings.sensitivity=rr_mouse_widget_slider(&app.mouse_widget_input,b.slider,app.mouse_settings.sensitivity,e);
+    if(rr_mouse_widget_checkbox(&app.mouse_widget_input,b.invert_hit,e))app.mouse_settings.invert=!app.mouse_settings.invert;
+    rr_ui_text_css(&app.ui,"MOUSE SENS",l.x,b.label_baseline,12,2,700,cyan,false);
+    rr_ui_text_css(&app.ui,"INVERT Y",b.label_x,b.label_baseline,12,2,700,cyan,false);
+    rr_ui_text_css(&app.ui,TextFormat("%.2f",app.mouse_settings.sensitivity),b.readout_x,b.label_baseline,12,0,700,cyan,false);
+    float thumb=(float)rr_mouse_widget_thumb(b.slider,app.mouse_settings.sensitivity),cy=b.slider.y+8;
+    Rectangle rail={b.slider.x+1,cy-4,94,8};DrawRectangleRounded(rail,.75f,6,mouse_widget_color(0));
+    float fill=thumb-(b.slider.x+2);if(fill>0)DrawRectangleRounded((Rectangle){b.slider.x+2,cy-3,fill,6},2.f/3,6,mouse_widget_color(2));
+    DrawRectangleRoundedLinesEx(rail,.75f,6,1,mouse_widget_color(1));DrawCircleV((Vector2){thumb,cy},8,mouse_widget_color(2));
+    if(rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_SENS,IsWindowFocused()))DrawRectangleLinesEx((Rectangle){b.slider.x-2,b.slider.y-2,b.slider.w+4,b.slider.h+4},1,cyan);
+    Rectangle check={b.checkbox.x,b.checkbox.y,13,13};DrawRectangleRounded(check,4.f/13,6,mouse_widget_color(app.mouse_settings.invert?2:3));
+    if(app.mouse_settings.invert){
+        DrawLineEx((Vector2){check.x+3,check.y+6.5f},(Vector2){check.x+5.5f,check.y+9},1.6f,mouse_widget_color(5));
+        DrawLineEx((Vector2){check.x+5.5f,check.y+9},(Vector2){check.x+10,check.y+3.5f},1.6f,mouse_widget_color(5));
+    }else DrawRectangleRoundedLinesEx(check,4.f/13,6,1,mouse_widget_color(4));
+    if(rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_INVERT,IsWindowFocused()))DrawRectangleLinesEx((Rectangle){check.x-2,check.y-2,check.width+4,check.height+4},1,cyan);
+}
+
+static void menu_keyboard_input(bool focused)
+{
+    RRMenuKeyFrame f={0};f.active=app.session.phase==RR_SESSION_MENU&&!app.picker.open;f.focused=focused;f.pointer_target=RR_MENU_FOCUS_NONE;
+    if(f.active){
+        RRUIMenuLayout l=rr_ui_menu_layout((float)GetScreenWidth(),(float)GetScreenHeight());RRMouseWidgetBoxes b=menu_mouse_boxes(l,l.footer_y);Vector2 m=GetMousePosition();
+        f.enabled=(1u<<RR_MENU_FOCUS_SENS)|(1u<<RR_MENU_FOCUS_INVERT);if(!app.failed)f.enabled|=(1u<<RR_MENU_FOCUS_RACE)|(1u<<RR_MENU_FOCUS_ATTACK);
+#if !defined(PLATFORM_WEB)
+        f.enabled|=1u<<RR_MENU_FOCUS_QUIT;
+        if(rr_ui_hit((RRUIRect){(float)GetScreenWidth()-168,(float)GetScreenHeight()-76,144,50},m.x,m.y,14))f.pointer_target=RR_MENU_FOCUS_QUIT;
+#endif
+        for(int i=0;i<2;i++)if(rr_ui_hit(l.actions[i],m.x,m.y,14))f.pointer_target=i;
+        if(rr_mouse_widget_hit(b.slider,m.x,m.y))f.pointer_target=RR_MENU_FOCUS_SENS;
+        if(rr_mouse_widget_hit(b.invert_hit,m.x,m.y))f.pointer_target=RR_MENU_FOCUS_INVERT;
+        f.pointer_pressed=IsMouseButtonPressed(MOUSE_BUTTON_LEFT);f.tab=key_hit(KEY_TAB)||IsKeyPressedRepeat(KEY_TAB);f.shift=IsKeyDown(KEY_LEFT_SHIFT)||IsKeyDown(KEY_RIGHT_SHIFT);f.enter=key_hit(KEY_ENTER);
+        f.space_pressed=key_hit(KEY_SPACE);f.space_released=IsKeyReleased(KEY_SPACE);f.space_held=IsKeyDown(KEY_SPACE);
+        f.left=key_hit(KEY_LEFT)||IsKeyPressedRepeat(KEY_LEFT);f.right=key_hit(KEY_RIGHT)||IsKeyPressedRepeat(KEY_RIGHT);f.up=key_hit(KEY_UP)||IsKeyPressedRepeat(KEY_UP);f.down=key_hit(KEY_DOWN)||IsKeyPressedRepeat(KEY_DOWN);f.home=key_hit(KEY_HOME);f.end=key_hit(KEY_END);
+    }
+    app.menu_key_result=rr_menu_keys_step(&app.menu_keys,f,&app.mouse_settings);
+}
+
 static void menu_ui(void)
 {
     if(app.picker.open){road_picker_ui();return;}
@@ -351,14 +409,14 @@ static void menu_ui(void)
     float track_origin=app.ui.loaded?(float)rr_css_raylib_origin(track_baseline,13,700,menu_face.baseSize):track_baseline-13;
     rr_ui_text_fit(&app.ui,TextFormat("ROAD %d / %s / %d GATES",app.picker.current_road,rr_road_by_id(app.picker.current_road)->name,road->gates),l.x,track_origin,l.width,track_pixels,3,700,cyan);
     float button_size=(float)rr_menu_button_css_size(h);
-    bool trial_mouse=rr_ui_button_ex(&app.ui,l.actions[0],"RACE / OFFLINE TRIAL",true,!app.failed,false,0,button_size,24);
-    bool time_mouse=rr_ui_button_ex(&app.ui,l.actions[1],"TIME ATTACK / SOLO",false,!app.failed,false,1,button_size,24);
+    bool trial_mouse=rr_ui_button_ex(&app.ui,l.actions[0],"RACE / OFFLINE TRIAL",true,!app.failed,rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_RACE,IsWindowFocused()),0,button_size,24);
+    bool time_mouse=rr_ui_button_ex(&app.ui,l.actions[1],"TIME ATTACK / SOLO",false,!app.failed,rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_ATTACK,IsWindowFocused()),1,button_size,24);
     rr_ui_button_ex(&app.ui,l.actions[2],"FREE ROAM / ONLINE",false,false,false,2,button_size,24);
     rr_ui_button_ex(&app.ui,l.actions[3],"WORLD RANKING",false,false,false,3,button_size,24);
     rr_ui_button_ex(&app.ui,l.actions[4],"SHOP",false,false,false,4,button_size,24);
-    bool enter=key_hit(KEY_ENTER),pad=pad_pressed(GAMEPAD_BUTTON_MIDDLE_RIGHT);
+    bool enter=app.menu_key_result.activate==RR_MENU_FOCUS_RACE,pad=pad_pressed(GAMEPAD_BUTTON_MIDDLE_RIGHT);
     bool held=IsMouseButtonDown(MOUSE_BUTTON_LEFT)||IsKeyDown(KEY_ENTER)||pad_down(GAMEPAD_BUTTON_MIDDLE_RIGHT);
-    int action=app.failed?RR_MENU_NO_ACTION:rr_menu_request(&app.menu_policy,IsWindowFocused(),held,trial_mouse||enter||pad,time_mouse);
+    int action=app.failed?RR_MENU_NO_ACTION:rr_menu_request(&app.menu_policy,IsWindowFocused(),held,trial_mouse||enter||pad,time_mouse||app.menu_key_result.activate==RR_MENU_FOCUS_ATTACK);
     if(action!=RR_MENU_NO_ACTION)open_roads(action==RR_MENU_START_TRIAL?RR_RACE_TWO_LAPS:RR_RACE_TIME_ATTACK);
     char record_clock[32];rr_ui_best_clock(record_clock,&app.picker,app.picker.current_road);
     float best_baseline=(float)rr_menu_best_baseline(l);
@@ -368,27 +426,13 @@ static void menu_ui(void)
     rr_ui_text_css(&app.ui,record_clock,best_x,best_baseline,14,2,900,magenta,false);
     float y=l.footer_y;
     rr_ui_text(&app.ui,app.failed?"SCENE UNAVAILABLE / CHECK LOG":"OFFLINE / ONLINE SERVICES NOT CONNECTED",l.x,y,12,1,500,app.failed?magenta:muted,false);
-    rr_ui_text(&app.ui,"MOUSE SENS",l.x,y+28,10,1,500,muted,false);
-    RRUIRect sens={l.x+102,y+22,150,24};Vector2 mouse=GetMousePosition();
-    if(!IsWindowFocused()||!IsMouseButtonDown(MOUSE_BUTTON_LEFT))app.mouse_sens_drag=false;
-    if(IsWindowFocused()&&IsMouseButtonPressed(MOUSE_BUTTON_LEFT)&&CheckCollisionPointRec(mouse,(Rectangle){sens.x,sens.y,sens.w,sens.h}))app.mouse_sens_drag=true;
-    if(app.mouse_sens_drag)
-        app.mouse_settings.sensitivity=rr_mouse_sensitivity_at((mouse.x-sens.x)/sens.w);
-    DrawRectangle((int)sens.x,(int)(sens.y+11),(int)sens.w,3,Fade(cyan,.3f));
-    float knob=sens.x+(float)((app.mouse_settings.sensitivity-.3)/2.2)*sens.w;
-    DrawCircleV((Vector2){knob,sens.y+12},5,cyan);
-    rr_ui_text(&app.ui,TextFormat("%.2f",app.mouse_settings.sensitivity),sens.x+sens.w+8,y+27,11,0,700,cyan,false);
-    RRUIRect invert={l.x+312,y+22,140,24};
-    if(IsWindowFocused()&&IsMouseButtonPressed(MOUSE_BUTTON_LEFT)&&CheckCollisionPointRec(mouse,(Rectangle){invert.x,invert.y,invert.w,invert.h}))app.mouse_settings.invert=!app.mouse_settings.invert;
-    DrawRectangleLines((int)invert.x,(int)(invert.y+5),14,14,cyan);
-    if(app.mouse_settings.invert)DrawRectangle((int)(invert.x+3),(int)(invert.y+8),8,8,cyan);
-    rr_ui_text(&app.ui,"INVERT Y",invert.x+22,y+28,10,1,500,muted,false);
+    mouse_settings_ui(l,y);
     menu_help_ui(l,h);
     float pending_y=y+rr_menu_help_pending((float)h),error_y=y+rr_menu_help_error((float)h);
     rr_ui_text_css(&app.ui,"RIVALS / COMBAT / ACCOUNT INTEGRATION PENDING",l.x,(float)rr_css_line_baseline(pending_y,14,11,500),11,0,500,muted,false);
     if(!app.ui.loaded)rr_ui_text_css(&app.ui,"THEME FONT LOAD FAILED",l.x,(float)rr_css_line_baseline(error_y,18,14,700),14,0,700,magenta,false);
 #if !defined(PLATFORM_WEB)
-    if(rr_ui_button(&app.ui,(RRUIRect){(float)w-168,(float)h-76,144,50},"QUIT",false,true,false,6)||key_hit(KEY_ESCAPE))app.quit=true;
+    if(rr_ui_button(&app.ui,(RRUIRect){(float)w-168,(float)h-76,144,50},"QUIT",false,true,rr_menu_keys_visible(&app.menu_keys,RR_MENU_FOCUS_QUIT,IsWindowFocused()),6)||key_hit(KEY_ESCAPE)||app.menu_key_result.activate==RR_MENU_FOCUS_QUIT)app.quit=true;
 #endif
 }
 
@@ -565,7 +609,7 @@ static void flight_ui(void)
     if(!app.cockpit_visible){
     rr_ui_hud_panel(l.speed,cyan,z);float sx=l.speed.x+22*z,sy=l.speed.y;
     rr_ui_text_css(&app.ui,"SPEED",boxes.speed_label.x,(float)rr_css_line_baseline(boxes.speed_label.y,boxes.speed_label.h,15*z,700),15*z,2*z,700,cyan,true);
-    rr_ui_text_css(&app.ui,TextFormat("%d",rr_ui_speed(app.car.speed)),boxes.speed_value.x,(float)rr_css_line_baseline(boxes.speed_value.y,boxes.speed_value.h,64*z,900),64*z,0,900,(Color){242,254,255,255},true);
+    rr_ui_text_css(&app.ui,TextFormat("%d",rr_ui_speed(rr_car_display_speed(&app.car))),boxes.speed_value.x,(float)rr_css_line_baseline(boxes.speed_value.y,boxes.speed_value.h,64*z,900),64*z,0,900,(Color){242,254,255,255},true);
     rr_ui_text_css(&app.ui,"km/h",boxes.unit.x,(float)rr_css_line_baseline(boxes.unit.y,boxes.unit.h,18*z,700),18*z,0,700,cyan,false);
     boost_meter_ui(l.speed,z);
     RRBoostUI boost_box=rr_boost_ui(l.speed,z);uint32_t boost_rgba=rr_boost_label_color();
@@ -596,19 +640,23 @@ static void flight_ui(void)
 
     /* Source DOM paints heading/aim before the later gate target. */
     RRReticleShape marks=rr_reticle_shape(z);
-    Vector3 heading=Vector3Add(vector(app.car.pos),Vector3Scale(vector(app.car.fwd),90));
-    RRHUDPoint cross=hud_point(heading);
-    if(cross.shown&&cross.position.x>=-marks.tick_end&&cross.position.x<=w+marks.tick_end&&cross.position.y>=-marks.tick_end&&cross.position.y<=h+marks.tick_end){
-        Vector2 p=cross.position;
-        DrawRing(p,(float)marks.cross_inner,(float)marks.cross_outer,0,360,64,Fade(cyan,.5f));
-        DrawRectangleRec((Rectangle){p.x-z,p.y-(float)marks.tick_end,2*z,2*(float)marks.tick_end},Fade(cyan,.7f));
-        DrawRectangleRec((Rectangle){p.x-(float)marks.tick_end,p.y-z,(float)(marks.tick_end-marks.tick_gap),2*z},Fade(cyan,.7f));
-        DrawRectangleRec((Rectangle){p.x+(float)marks.tick_gap,p.y-z,(float)(marks.tick_end-marks.tick_gap),2*z},Fade(cyan,.7f));
-    }
     Vector3 aim_point=Vector3Add(vector(app.car.pos),Vector3Scale(vector(app.aim_direction),90));
     RRHUDPoint aim=hud_point(aim_point);
     /* This solo host has no wreck/alive state; production combat remains off. */
-    if(rr_reticle_aim_visible(aim.shown,app.mouse_capture.captured,true)&&aim.position.x>=-marks.aim_outer&&aim.position.x<=w+marks.aim_outer&&aim.position.y>=-marks.aim_outer&&aim.position.y<=h+marks.aim_outer){
+    bool aim_visible=rr_reticle_aim_visible(aim.shown,app.mouse_capture.captured,true);
+    RRHeadingReticle heading_shape=rr_reticle_heading(aim_visible,z);
+    Vector3 heading=Vector3Add(vector(app.car.pos),Vector3Scale(vector(app.car.fwd),90));
+    RRHUDPoint cross=hud_point(heading);
+    if(cross.shown&&cross.position.x>=-heading_shape.extent&&cross.position.x<=w+heading_shape.extent&&cross.position.y>=-heading_shape.extent&&cross.position.y<=h+heading_shape.extent){
+        Vector2 p=cross.position;
+        DrawRing(p,(float)heading_shape.inner,(float)heading_shape.outer,0,360,64,Fade(cyan,(float)heading_shape.opacity));
+        if(heading_shape.ticks){
+            DrawRectangleRec((Rectangle){p.x-z,p.y-(float)marks.tick_end,2*z,2*(float)marks.tick_end},Fade(cyan,.7f));
+            DrawRectangleRec((Rectangle){p.x-(float)marks.tick_end,p.y-z,(float)(marks.tick_end-marks.tick_gap),2*z},Fade(cyan,.7f));
+            DrawRectangleRec((Rectangle){p.x+(float)marks.tick_gap,p.y-z,(float)(marks.tick_end-marks.tick_gap),2*z},Fade(cyan,.7f));
+        }
+    }
+    if(aim_visible&&aim.position.x>=-marks.aim_outer&&aim.position.x<=w+marks.aim_outer&&aim.position.y>=-marks.aim_outer&&aim.position.y<=h+marks.aim_outer){
         DrawRing(aim.position,(float)marks.aim_inner,(float)marks.aim_outer,0,360,48,WHITE);
         DrawCircleV(aim.position,(float)marks.dot,WHITE);
     }
@@ -711,7 +759,7 @@ static void frame(void)
     double dt=rr_frame_dt(raw_dt);
     app.frame++;
     if(IsWindowMinimized() || GetScreenWidth()<=0 || GetScreenHeight()<=0){
-        app.menu_policy.armed=false;app.capture_click.armed=false;rr_showcase_up(&app.showcase);
+        app.menu_policy.armed=false;app.capture_click.armed=false;rr_showcase_up(&app.showcase);rr_mouse_widgets_cancel(&app.mouse_widget_input);rr_menu_keys_reset(&app.menu_keys);
         rr_boost_meter_render(&app.boost_meter,false,GetTime());
         if(rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000))release_mouse();
         PollInputEvents();
@@ -721,6 +769,8 @@ static void frame(void)
         return;
     }
     bool focused=IsWindowFocused();
+    menu_keyboard_input(focused);
+    if(!focused||app.session.phase!=RR_SESSION_MENU||app.picker.open)rr_mouse_widgets_cancel(&app.mouse_widget_input);
     bool finishing=app.session.phase==RR_SESSION_FINISHED||app.session.phase==RR_SESSION_RESULTS;
     if(finishing && !focused && rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000))release_mouse();
     target_fps(app.smoke?60:!focused?5:30);
@@ -732,7 +782,7 @@ static void frame(void)
 #else
     bool interior_enabled=false;
 #endif
-    rr_view_controls_step(&view_controls,app.session.phase,focused,interior_enabled,key_hit(KEY_C)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP),key_hit(KEY_I));
+    rr_view_controls_step(&view_controls,app.session.phase,focused,interior_enabled,(!rr_menu_keys_input_focus(&app.menu_keys)&&key_hit(KEY_C))||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_UP),!rr_menu_keys_input_focus(&app.menu_keys)&&key_hit(KEY_I));
     app.camera_mode=view_controls.mode;app.interior_requested=view_controls.interior;
     bool pause_key=key_hit(KEY_ESCAPE)||key_hit(KEY_P)||pad_pressed(GAMEPAD_BUTTON_MIDDLE_RIGHT);
     if((app.session.phase==RR_SESSION_ACTIVE || app.session.phase==RR_SESSION_COUNTDOWN) && (pause_key || (!app.smoke && !focused))){rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000);release_mouse();}
@@ -861,7 +911,7 @@ static void frame(void)
 #if defined(RR_COCKPIT_PREVIEW)
         if(app.cockpit_visible){
             RRCKReadout values;int laps=app.session.race.mode==RR_RACE_TIME_ATTACK?-1:2;
-            rr_cockpit_readout(&values,0,fabs(app.car.speed)*3.6,app.car.boost,app.session.race.lap_time,0,false,laps==2?(app.session.race.lap>2?2:app.session.race.lap):app.session.race.lap,laps,app.cockpit_steer);
+            rr_cockpit_readout(&values,0,rr_car_display_speed(&app.car)*3.6,app.car.boost,app.session.race.lap_time,0,false,laps==2?(app.session.race.lap>2?2:app.session.race.lap):app.session.race.lap,laps,app.cockpit_steer);
             rr_cockpit_draw(&app.cockpit_art,&app.ui,GetScreenWidth(),GetScreenHeight(),&values,app.car.boost,false);
         }
 #endif
@@ -955,6 +1005,7 @@ int main(int argc,char **argv)
 #endif
     rlSetClipPlanes(.1,2500);
     rr_showcase_init(&app.showcase);
+    rr_menu_keys_reset(&app.menu_keys);
     app.mouse_settings=(RRMouseSettings){1,false};app.aim_direction=rr_v3(0,0,-1);
     app.session.phase=RR_SESSION_MENU;app.camera.up=(Vector3){0,1,0};app.camera.projection=CAMERA_PERSPECTIVE;app.camera_fov=70;
     if(!rr_corridor_init_all(&app.corridor,&app.track)||!rr_road_picker_init(&app.picker,&app.track)){

@@ -1,0 +1,65 @@
+{
+  "version": "0.2.13",
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\package.json",
+      "sha256": "cefb13faea1b231e97d20fb7eb4259648338594d28ed672c7ca8c5584d4a2035"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\car.js",
+      "sha256": "5c04c86c8dcd0d92fc417a20c2b3266a4fba7c393021d1fe95b4f9ba1c60e89f"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\aim.js",
+      "sha256": "ac764bf99b2bad10b54eb0d8befdddeabd81d8c07a48690a8855a12e03919567"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\input.js",
+      "sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+      "sha256": "01003f497d1a6a7bd4ddc7d79ba6520404ee343f2bf531387ecdf0317f4fb947"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "072b011d525db862d1d69e9910b3fe36942f48674b9940b7c6815bffdd15a616"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\index.html",
+      "sha256": "b65e35f4581b96c3b46171f095c44552f13919e84712cdebd5cbeaea3bf42144"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\changelog.md",
+      "sha256": "207c50a886585693d8f50f102b32fe97c14cbd42b3b6210e41d3fc1102ec0d1e"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\manual\\02-controls.md",
+      "sha256": "45329354022fdec5cba1d3b55e827b7d90fa5efaa341802d3b56fef3265421fa"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\manual\\04-flying.md",
+      "sha256": "40e5f7b2519a1c58ec98cff0614f3aa75c12206425147b11af7718f2612de9c1"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\techplan\\04-components.md",
+      "sha256": "63d2a22881ffa3a1c8ad23900c25c6c4d07faebb01c57450f1ea9f0433198e34"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\techplan\\08-testing.md",
+      "sha256": "824657189ff852aa6e3f0e0101447ab81a91f9e1363eeadc613d6c7367903d07"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\techplan\\11-constants.md",
+      "sha256": "914c4b483ca8c4d584acc93c8405ec9094e7966bf734842ab667b64eb8ce0b97"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\techplan\\12-coverage-open-questions.md",
+      "sha256": "b62bcdea6765e90215093c5c10a76e91eaa528de39195f67fbfbac71b5138935"
+    }
+  ],
+  "steps": 2400,
+  "input_states": 16384,
+  "scenarios": 8,
+  "scope": "Actual source Car.update free-space callback (no world collision), Roadster podTilt .45; actual Input.state inert events/gamepad data. No game window, GPU, OS input, storage/network."
+}

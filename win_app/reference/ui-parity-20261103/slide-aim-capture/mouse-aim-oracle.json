@@ -1,0 +1,7 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\win_app\\..\\game\\src\\aim.js",
+  "sha256": "ac764bf99b2bad10b54eb0d8befdddeabd81d8c07a48690a8855a12e03919567",
+  "states": 384,
+  "sequences": 12,
+  "scope": "Actual updateAim with source clamp semantics, consumed pixel deltas, sensitivity/invert and sequential RMB/keyboard/gamepad-like axes. No browser mouse-event filtering, OS capture, GPU or real hardware input."
+}

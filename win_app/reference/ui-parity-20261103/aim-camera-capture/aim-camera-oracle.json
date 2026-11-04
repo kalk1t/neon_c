@@ -1,0 +1,41 @@
+{
+  "version": "0.2.13",
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\package.json",
+      "sha256": "cefb13faea1b231e97d20fb7eb4259648338594d28ed672c7ca8c5584d4a2035"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+      "sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+      "sha256": "01003f497d1a6a7bd4ddc7d79ba6520404ee343f2bf531387ecdf0317f4fb947"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\aim.js",
+      "sha256": "ac764bf99b2bad10b54eb0d8befdddeabd81d8c07a48690a8855a12e03919567"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "072b011d525db862d1d69e9910b3fe36942f48674b9940b7c6815bffdd15a616"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\docs\\manual\\04-flying.md",
+      "sha256": "40e5f7b2519a1c58ec98cff0614f3aa75c12206425147b11af7718f2612de9c1"
+    }
+  ],
+  "camera_sequences": 12,
+  "camera_steps": 2160,
+  "reticle_states": 372,
+  "nose_css": [
+    "\n#crosshair.nose { width: 8px; height: 8px; margin: -4px; border-color: rgba(25, 230, 255, 0.8); }",
+    "\n#crosshair.nose::before, #crosshair.nose::after { display: none; }"
+  ],
+  "scope": "Actual source chaseCamera and HUD reticle/screen methods in inert VM with real Three math. Includes camera modes, capture request changes, countdown/active/finished/results, autopilot, live/dead and RMB hold/release. No runtime graphics/window/input/devices/accounts or raster/AA/glow tests. Effects/nitro/shake zeroed to isolate changed camera core."
+}

@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "be03ad1a3d98ca53a459f0985cc576ef8234dec03a8a8ce1e168a267372961aa",
+  "native_client": {
+    "path": "build/slide-native/bin/RoadstersRace.exe",
+    "sha256": "fc309475abb8e645490f0c15ec79bb5555b552ded2d68b8dc34f384085bc522e"
+  },
+  "static_only": true,
+  "executed": false
+}

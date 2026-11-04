@@ -1,0 +1,533 @@
+{
+  "version": "0.2.12",
+  "source": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+    "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7"
+  },
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2",
+  "manifest_sha256": "a171f138a70fdff9cd9973671b3ecdf52148f8c9e1805f8e2cf25c9ddd551bda",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\assets.json",
+      "sha256": "42f85453e8b43d9224535da0a3b461b7dd26410c4f69050c59f791230a95ebf2"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\menu\\native-widget-references\\sensitivity\\min\\reference@1x.png",
+      "sha256": "d52ceb039b1816306d55a27bfcc4c39a20feb9162a915f60f91667369ebf452e"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\menu\\native-widget-references\\sensitivity\\mid\\reference@1x.png",
+      "sha256": "4be72c4ea9eca331397b8875abb65e475d84c66abf57c99db2bb86355dd708d5"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\menu\\native-widget-references\\sensitivity\\max\\reference@1x.png",
+      "sha256": "0d861548d36241eca2f04b3d10e97dba790a153d9513f800cc51a98064b28df3"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\menu\\native-widget-references\\invert\\off\\reference@1x.png",
+      "sha256": "78ca6fbdbbebdd6e8b119507eb4ebd8366b7c9d2403634922dc0bdf4e5aed2c0"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v2\\menu\\native-widget-references\\invert\\on\\reference@1x.png",
+      "sha256": "e0d926ef195f6644028ab11274969fa5621c0f2652de19c82ae41a458007eae5"
+    }
+  ],
+  "rules": [
+    ".settings { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font: 600 12px var(--font); color: var(--c); letter-spacing: 2px; margin-top: 10px; pointer-events: auto; }",
+    ".settings input[type=range] { accent-color: var(--m); width: 96px; vertical-align: middle; }",
+    ".settings input[type=checkbox] { accent-color: var(--m); vertical-align: middle; margin: 0 4px 0 0; }",
+    ".settings label { white-space: nowrap; }"
+  ],
+  "observations": [
+    {
+      "id": "menu/native-widget-references/sensitivity/min",
+      "rect": {
+        "x": 232.46875,
+        "y": 720.59375,
+        "width": 96,
+        "height": 16
+      },
+      "form": {
+        "type": "range",
+        "value": "0.3",
+        "checked": false,
+        "min": "0.3",
+        "max": "2.5",
+        "step": "0.05"
+      },
+      "accent_raster_center": 7.53125
+    },
+    {
+      "id": "menu/native-widget-references/sensitivity/mid",
+      "rect": {
+        "x": 232.46875,
+        "y": 720.59375,
+        "width": 96,
+        "height": 16
+      },
+      "form": {
+        "type": "range",
+        "value": "1.4",
+        "checked": false,
+        "min": "0.3",
+        "max": "2.5",
+        "step": "0.05"
+      },
+      "accent_raster_center": 47.53125
+    },
+    {
+      "id": "menu/native-widget-references/sensitivity/max",
+      "rect": {
+        "x": 232.46875,
+        "y": 720.59375,
+        "width": 96,
+        "height": 16
+      },
+      "form": {
+        "type": "range",
+        "value": "2.5",
+        "checked": false,
+        "min": "0.3",
+        "max": "2.5",
+        "step": "0.05"
+      },
+      "accent_raster_center": 87.53125
+    },
+    {
+      "id": "menu/native-widget-references/invert/off",
+      "rect": {
+        "x": 348.46875,
+        "y": 723.09375,
+        "width": 13,
+        "height": 13
+      },
+      "form": {
+        "type": "checkbox",
+        "value": "on",
+        "checked": false,
+        "min": "",
+        "max": "",
+        "step": ""
+      },
+      "accent_raster_center": 0
+    },
+    {
+      "id": "menu/native-widget-references/invert/on",
+      "rect": {
+        "x": 348.46875,
+        "y": 723.09375,
+        "width": 13,
+        "height": 13
+      },
+      "form": {
+        "type": "checkbox",
+        "value": "on",
+        "checked": true,
+        "min": "",
+        "max": "",
+        "step": ""
+      },
+      "accent_raster_center": 0
+    }
+  ],
+  "rgba_histograms": [
+    {
+      "id": "menu/native-widget-references/sensitivity/min",
+      "dominant_colors": [
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          809
+        ],
+        [
+          [
+            59,
+            59,
+            59,
+            255
+          ],
+          458
+        ],
+        [
+          [
+            133,
+            133,
+            133,
+            255
+          ],
+          152
+        ],
+        [
+          [
+            255,
+            43,
+            214,
+            255
+          ],
+          148
+        ],
+        [
+          [
+            255,
+            42,
+            214,
+            254
+          ],
+          5
+        ],
+        [
+          [
+            255,
+            34,
+            221,
+            15
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            62
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            106
+          ],
+          4
+        ]
+      ]
+    },
+    {
+      "id": "menu/native-widget-references/sensitivity/mid",
+      "dominant_colors": [
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          817
+        ],
+        [
+          [
+            255,
+            43,
+            214,
+            255
+          ],
+          366
+        ],
+        [
+          [
+            59,
+            59,
+            59,
+            255
+          ],
+          218
+        ],
+        [
+          [
+            133,
+            133,
+            133,
+            255
+          ],
+          144
+        ],
+        [
+          [
+            255,
+            42,
+            214,
+            255
+          ],
+          7
+        ],
+        [
+          [
+            255,
+            34,
+            221,
+            15
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            62
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            106
+          ],
+          4
+        ]
+      ]
+    },
+    {
+      "id": "menu/native-widget-references/sensitivity/max",
+      "dominant_colors": [
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          809
+        ],
+        [
+          [
+            255,
+            43,
+            214,
+            255
+          ],
+          606
+        ],
+        [
+          [
+            133,
+            133,
+            133,
+            255
+          ],
+          152
+        ],
+        [
+          [
+            255,
+            42,
+            214,
+            255
+          ],
+          7
+        ],
+        [
+          [
+            255,
+            34,
+            221,
+            15
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            62
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            41,
+            214,
+            106
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            51,
+            255,
+            5
+          ],
+          4
+        ]
+      ]
+    },
+    {
+      "id": "menu/native-widget-references/invert/off",
+      "dominant_colors": [
+        [
+          [
+            255,
+            255,
+            255,
+            255
+          ],
+          117
+        ],
+        [
+          [
+            118,
+            118,
+            118,
+            255
+          ],
+          28
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          27
+        ],
+        [
+          [
+            146,
+            146,
+            146,
+            215
+          ],
+          8
+        ],
+        [
+          [
+            255,
+            255,
+            255,
+            25
+          ],
+          4
+        ],
+        [
+          [
+            146,
+            146,
+            146,
+            239
+          ],
+          4
+        ],
+        [
+          [
+            178,
+            178,
+            178,
+            255
+          ],
+          4
+        ],
+        [
+          [
+            149,
+            149,
+            149,
+            245
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": "menu/native-widget-references/invert/on",
+      "dominant_colors": [
+        [
+          [
+            255,
+            43,
+            214,
+            255
+          ],
+          114
+        ],
+        [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          27
+        ],
+        [
+          [
+            255,
+            255,
+            255,
+            255
+          ],
+          8
+        ],
+        [
+          [
+            255,
+            75,
+            220,
+            102
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            61,
+            217,
+            236
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            61,
+            217,
+            237
+          ],
+          4
+        ],
+        [
+          [
+            255,
+            237,
+            252,
+            255
+          ],
+          2
+        ],
+        [
+          [
+            255,
+            253,
+            255,
+            255
+          ],
+          2
+        ]
+      ]
+    }
+  ],
+  "layout": {
+    "slider_width": 96,
+    "slider_height": 16,
+    "checkbox_width": 13,
+    "checkbox_height": 13,
+    "checkbox_from_slider_x": 116,
+    "checkbox_from_slider_y": 2.5
+  },
+  "scope": "Five existing Chromium Windows native-widget PNGs CRC-decoded; default colors present and range thumb center estimated from accent pixels outside rail, with subpixel paint snapping tolerance. Native analytic widget approximates platform look while retaining pointer operation; keyboard/OS accessibility, true theme/raster/AA, browser UA drag/click internals not qualified. No new image asset or graphics run."
+}

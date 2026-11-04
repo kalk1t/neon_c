@@ -1,0 +1,18 @@
+{
+  "source": {
+    "path": "C:/Users/User/Projects/neon_c/game/src/main.js",
+    "sha256": "072b011d525db862d1d69e9910b3fe36942f48674b9940b7c6815bffdd15a616"
+  },
+  "fragment": "const settings = { sens: Number(localStorage.getItem('neon.sens')) || 1, invert: localStorage.getItem('neon.invert') === '1' };\n$('sens').value = settings.sens;\n$('invert').checked = settings.invert;\n$('sens').addEventListener('input', (e) => localStorage.setItem('neon.sens', (settings.sens = Number(e.target.value))));\n$('invert').addEventListener('change', (e) => localStorage.setItem('neon.invert', (settings.invert = e.target.checked) ? '1' : '0'));\n",
+  "fragment_sha256": "dcbc7a5990a3c247dcf1b351e3e45a9433d69fdcf7e515b63ae4ffe9abee2d96",
+  "states": 45,
+  "scope": "Actual browser settings input/change handlers with45 stepped values and invert flags; inert localStorage records only. No user storage/account writes, native pointer/DOM event/default widget/keyboard/OS accessibility verification.",
+  "source_reconciliation": {
+    "initial_oracle": "reference\\ui-parity-20261103\\settings-callback-initial-oracle.json",
+    "previous_source_sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89",
+    "current_source_sha256": "072b011d525db862d1d69e9910b3fe36942f48674b9940b7c6815bffdd15a616",
+    "fragment_identical": true,
+    "numeric_fixture_byte_identical": true,
+    "scope": "main.js changed outside this selected listener fragment; no runtime/test data changed, no whole-browser change audit claimed."
+  }
+}

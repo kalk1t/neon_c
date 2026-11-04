@@ -25,4 +25,9 @@ static inline bool rr_reticle_aim_visible(bool projected,bool captured,bool aliv
 typedef struct RRReticleShape {double cross_outer,cross_inner,tick_end,tick_gap,aim_outer,aim_inner,dot;} RRReticleShape;
 static inline RRReticleShape rr_reticle_shape(double zoom)
 {RRReticleShape s={22*zoom,20*zoom,30*zoom,12*zoom,13*zoom,11*zoom,2*zoom};return s;}
+/* CSS #crosshair.nose retains its 2px border; it is a hollow 8px dot.
+ * Switch on successful aim projection, independently of viewport culling. */
+typedef struct RRHeadingReticle {double outer,inner,extent,opacity;bool ticks;} RRHeadingReticle;
+static inline RRHeadingReticle rr_reticle_heading(bool aim_visible,double zoom)
+{return aim_visible?(RRHeadingReticle){4*zoom,2*zoom,4*zoom,.8,false}:(RRHeadingReticle){22*zoom,20*zoom,30*zoom,.5,true};}
 #endif

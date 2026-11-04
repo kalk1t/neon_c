@@ -12,11 +12,11 @@ static double ideal_text(const char *s){for(size_t i=0;i<sizeof(help_widths)/siz
 int main(int argc,char **argv)
 {
     if(argc!=2)return 1;SetTraceLogLevel(LOG_WARNING);
-    for(int i=0;i<9;i++){const RRHelpKey *k=rr_menu_help_key(i);const KeySource *s=&key_sources[i];RRHelpBox b=rr_menu_help_key_box(i,100,200,1000);CHECK(!strcmp(k->text,s->text)&&fabs(b.w-s->w)<.001&&fabs(b.h-s->h)<.001&&b.x==102);CHECK(fabs((b.y+3+rr_css_line_baseline(0,15,12,700))-200)<.0001);}
-    CHECK(!rr_menu_help_key(-1)&&!rr_menu_help_key(9)&&!rr_menu_help_run(3,0)&&!rr_menu_help_run(0,4));
+    for(int i=0;i<11;i++){const RRHelpKey *k=rr_menu_help_key(i);const KeySource *s=&key_sources[i];RRHelpBox b=rr_menu_help_key_box(i,100,200,1000);CHECK(!strcmp(k->text,s->text)&&fabs(b.w-s->w)<.001&&fabs(b.h-s->h)<.001&&b.x==102);CHECK(fabs((b.y+3+rr_css_line_baseline(0,15,12,700))-200)<.0001);}
+    CHECK(!rr_menu_help_key(-1)&&!rr_menu_help_key(11)&&!rr_menu_help_run(3,0)&&!rr_menu_help_run(0,4));
     Font fonts[2]={{0}};Rectangle recs[2][95]={0};unsigned char *data[2]={0};
     for(int face=0;face<2;face++){
-        char path[1024];snprintf(path,sizeof(path),"%s/%s",argv[1],face==0?"Rajdhani-Medium.ttf":"Orbitron-700.ttf");int bytes=0,count=0,cps[95];for(int i=0;i<95;i++)cps[i]=32+i;data[face]=LoadFileData(path,&bytes);if(!data[face])return 1;int base=face==0?32:64;GlyphInfo *g=LoadFontData(data[face],bytes,base,cps,95,FONT_DEFAULT,&count);if(!g)return 1;
+        char path[1024];snprintf(path,sizeof(path),"%s/%s",argv[1],face==0?"Rajdhani-Medium.ttf":"Orbitron-700.ttf");int bytes=0,count=0,cps[95];for(size_t i=0;i<sizeof(cps)/sizeof(cps[0]);i++)cps[i]=32+(int)i;data[face]=LoadFileData(path,&bytes);if(!data[face])return 1;int base=face==0?32:64;GlyphInfo *g=LoadFontData(data[face],bytes,base,cps,95,FONT_DEFAULT,&count);if(!g)return 1;
         fonts[face]=(Font){0};fonts[face].baseSize=base;fonts[face].glyphCount=count;fonts[face].glyphs=g;fonts[face].texture.id=1;fonts[face].recs=recs[face];for(int i=0;i<count&&i<95;i++)recs[face][i]=(Rectangle){0,0,(float)g[i].image.width,(float)g[i].image.height};
         for(size_t i=0;i<sizeof(help_widths)/sizeof(help_widths[0]);i++){
             const HelpWidthCase *c=&help_widths[i];if(c->face!=face)continue;float pixels=(float)rr_css_font_size(c->size,face==0?0:700);double got=MeasureTextEx(fonts[face],c->text,pixels,0).x,error=fabs(got-c->expected);if(error>worst_width)worst_width=error;CHECK(error<strlen(c->text)*(double)pixels/base+.05);
@@ -35,5 +35,5 @@ int main(int argc,char **argv)
         for(int row=0;row<3;row++){double top=l.footer_y+61+row*rr_menu_help_line_height(h),base=rr_menu_help_baseline(top,rr_menu_help_line_height(h));RRHelpBox b=rr_menu_help_key_box(0,l.x,(float)base,h);CHECK(b.y>=top&&b.y+b.h<=top+rr_menu_help_line_height(h));CHECK(b.h==(h<=820?17:21));}
     }
     for(int face=0;face<2;face++){UnloadFontData(fonts[face].glyphs,fonts[face].glyphCount);UnloadFileData(data[face]);}
-    printf("Menu help:9 reused browser keycaps,18 independent TTF widths,3 supported-control rows,8 footer views; worst width %.9g, row %.9g, %d failures; no GPU\n",worst_width,worst_row,failures);return failures?1:0;
+    printf("Menu help:11 reused browser keycaps,21 independent TTF widths,3 supported-control rows,8 footer views; worst width %.9g, row %.9g, %d failures; no GPU\n",worst_width,worst_row,failures);return failures?1:0;
 }

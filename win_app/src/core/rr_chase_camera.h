@@ -2,8 +2,8 @@
 #define RR_CHASE_CAMERA_H
 #include "rr_first_person.h"
 /* Three lookAt with world-up, followed by local rotateZ. No effects/RNG. */
-static inline RRFirstPerson rr_chase_pose(const RRCar *car,int mode,bool alive,
-    double camera_yaw,double camera_pitch,double look_yaw,double look_pitch)
+static inline RRFirstPerson rr_chase_pose_aim(const RRCar *car,int mode,bool alive,
+    double camera_yaw,double camera_pitch,double look_yaw,double look_pitch,bool aim_camera)
 {
     double sf=fmin(1.4,fmax(0,car->speed)/RR_CAR_MAX);
     double orbit=rr_camera_orbit(look_yaw,look_pitch);
@@ -11,7 +11,7 @@ static inline RRFirstPerson rr_chase_pose(const RRCar *car,int mode,bool alive,
     RRVec3 f=rr_v3(-sin(yaw)*cos(pitch),sin(pitch),-cos(yaw)*cos(pitch));
     double d=(mode==1?15:9)*(1+sf*.22)+(alive?0:14);
     RRVec3 pos=rr_sub(car->pos,rr_scale(f,d));pos.y+=(mode==1?4.8:2.7)-sf*.6+(alive?0:6);
-    RRVec3 target=rr_add(rr_add(car->pos,rr_scale(car->fwd,9*(1-orbit))),rr_v3(0,.9,0));
+    RRVec3 target=rr_add(rr_add(car->pos,rr_scale(aim_camera?f:car->fwd,9*(1-orbit))),rr_v3(0,.9,0));
     RRVec3 z=rr_sub(pos,target);
     if(rr_dot(z,z)==0)z.z=1;
     z=rr_normalize(z);RRVec3 right=rr_v3(z.z,0,-z.x);
@@ -22,4 +22,6 @@ static inline RRFirstPerson rr_chase_pose(const RRCar *car,int mode,bool alive,
     RRFirstPerson p={pos,rr_scale(z,-1),rr_sub(rr_scale(up,cos(bank)),rr_scale(right,sin(bank)))};
     return p;
 }
+static inline RRFirstPerson rr_chase_pose(const RRCar *car,int mode,bool alive,double yaw,double pitch,double look_yaw,double look_pitch)
+{return rr_chase_pose_aim(car,mode,alive,yaw,pitch,look_yaw,look_pitch,false);}
 #endif

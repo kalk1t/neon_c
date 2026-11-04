@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROADSTERS RACE — Skyline Loop</title>
+  <meta name="description" content="Roadsters Race: a free browser anti-gravity racer. Fly nine skyline roads (5.6 to 10.4 km) against 10 rivals, blast them, grab coins and climb the world ranking." />
+  <meta name="theme-color" content="#05061a" />
+  <meta property="og:title" content="ROADSTERS RACE — Skyline Loop" />
+  <meta property="og:description" content="Free browser racer: 10 rivals, weapons, coins and a world ranking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roadstersrace.com/" />
+  <meta property="og:site_name" content="Roadsters Race" />
+  <meta property="og:image" content="https://roadstersrace.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Roadsters Race: neon skyline racing" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ROADSTERS RACE — Skyline Loop" />
+  <meta name="twitter:description" content="Free browser racer: 10 rivals, weapons, coins and a world ranking." />
+  <meta name="twitter:image" content="https://roadstersrace.com/og-image.jpg" />
+  <link rel="canonical" href="https://roadstersrace.com/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/brand/logo-512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div id="loading"><div class="ld-title">ROADSTERS RACE</div><div class="ld-bar"><i></i></div><div class="ld-txt">BUILDING SKYLINE…</div></div>
+
+  <div id="hud" class="hidden">
+    <div id="minimap"><canvas width="440" height="440"></canvas><span>SKYLINE LOOP</span></div>
+    <div id="pos-panel"><span class="lbl">POS</span><b id="pos">1</b><span id="pos-total">/11</span></div>
+    <div id="live-panel"><div class="live-head"><i></i><span id="live-status">OFFLINE</span><small class="live-kills">KILLS</small></div><div id="live-stats"><span><b id="ls-fps">–</b> FPS</span><span><b id="ls-ping">–</b> MS</span><span><b id="ls-time">0:00</b> ONLINE</span></div><ol id="live-list"></ol></div>
+    <div id="feed"></div>
+    <div id="chat"><div id="chat-log"></div><input id="chat-input" type="text" autocomplete="off" spellcheck="false" enterkeyhint="send" placeholder="SAY SOMETHING · ENTER TO SEND · ESC TO CLOSE" aria-label="Chat message" /></div>
+    <div id="coin-panel"><i class="coin-ico"></i><b id="coins">0</b><span id="coin-rank"></span></div>
+    <div id="laps-panel">
+      <div class="lbl">LAP TIMES</div>
+      <ol id="lap-list"></ol>
+      <div class="best">BEST <b id="best">--:--.--</b></div>
+    </div>
+    <div id="tags"></div>
+    <div id="crosshair"></div>
+    <div id="aim"></div>
+    <div id="lock"><i></i><span id="lock-name"></span></div>
+    <div id="hitmark"></div>
+    <div id="lockhint">CLICK TO CAPTURE MOUSE</div>
+    <div id="target"><div class="diamond"></div><span id="target-dist">0 m</span></div>
+    <div id="edge-arrow">➤</div>
+    <div id="msg"></div>
+    <div id="view-hint"></div>
+    <div id="submsg"></div>
+    <div id="bar">
+      <div class="panel speed">
+        <div class="lbl">SPEED</div>
+        <div id="speed">0</div>
+        <div class="unit">km/h</div>
+        <div class="boost"><i id="boost"></i></div>
+        <div class="boost-lbl">BOOST <small>[SHIFT]</small></div>
+        <div class="shield"><i id="shield"></i></div>
+        <div class="boost-lbl">SHIELD</div>
+      </div>
+      <div class="panel lap">
+        <div class="row"><span class="lbl">LAP</span><b id="lap">1/2</b></div>
+        <div id="time">00:00.00</div>
+        <div class="row cp"><span class="lbl">CHECKPOINT</span><b id="cp">0/8</b></div>
+      </div>
+      <div class="panel attack">
+        <div class="wpn pulse">
+          <div class="lbl atk">PULSE</div>
+          <div class="heat"><i id="heat"></i></div>
+          <div class="key">HOLD LMB</div>
+        </div>
+        <div class="wpn">
+          <div class="ring" id="atk-ring"><img src="/tex/attack.png" alt="" /></div>
+          <div class="pips" id="pips"></div>
+          <div class="key">SEEKER · SPACE</div>
+        </div>
+        <div class="wpn">
+          <div class="ring emp" id="emp-ring"><b>EMP</b></div>
+          <div class="key">SHOCK · X</div>
+        </div>
+        <div class="wpn">
+          <div class="ring emp spin" id="spin-ring"><b>SPIN</b></div>
+          <div class="key">DODGE · F</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="menu" class="hidden">
+    <div class="menu-card">
+      <div class="brand">ROADSTERS<span>RACE</span></div>
+      <div class="track-name"><span id="track-name">SKYLINE LOOP · 8 GATES</span> · <span id="track-len"></span></div>
+      <button data-mode="race" class="primary">RACE · 10 RIVALS</button>
+      <button data-mode="attack">TIME ATTACK · SOLO</button>
+      <button data-mode="roam" class="roam-btn">FREE ROAM · ONLINE <small id="roam-count">SIGN-IN</small></button>
+      <button id="btn-ranking" class="rank-btn">♛ WORLD RANKING</button>
+      <button id="btn-shop" class="shop-btn"><img class="coin" src="/ui/coin-32.png" alt="" /> SHOP <span id="shop-btn-wallet"></span><i class="new-tag">NEW</i></button>
+      <div class="paint-row">CAR COLOR <b id="paint-name"></b><div id="paints"></div></div>
+      <div class="best-line">BEST LAP <b id="menu-best">--:--.--</b></div>
+      <div class="best-line kills-line hidden" id="menu-kills"></div>
+      <div id="app-version" class="app-version"></div>
+      <div class="settings">
+        <label class="desk-only">MOUSE SENS <input id="sens" type="range" min="0.3" max="2.5" step="0.05" /></label>
+        <label><input id="invert" type="checkbox" /> INVERT Y</label>
+        <label>VOLUME <input id="vol" type="range" min="0" max="1" step="0.05" /></label>
+        <label>GRAPHICS <select id="gfx"><option value="high">HIGH</option><option value="low">LOW · FASTER</option></select></label>
+      </div>
+      <div class="controls touch-only">
+        <div><kbd>TILT</kbd> steer like a wheel · tip back to climb, forward to dive</div>
+        <div><kbd>BOOST</kbd> <kbd>FIRE</kbd> <kbd>SEEKER</kbd> <kbd>EMP</kbd> <kbd>SPIN</kbd> <kbd>BRAKE</kbd> on screen · it accelerates by itself</div>
+        <div>No tilt sensor? Drag on the left side to steer. <kbd>◎ TILT</kbd> re-levels.</div>
+      </div>
+      <div class="controls desk-only">
+        <div><kbd>MOUSE</kbd> steer + climb/dive <kbd>RMB</kbd> hold to look around</div>
+        <div><kbd>LMB</kbd> blaster (hold) <kbd>SPACE</kbd> seeker missile <kbd>X</kbd> EMP blast <kbd>F</kbd> spin dodge <kbd>ENTER</kbd> chat (free roam)</div>
+        <div><kbd>W</kbd> thrust <kbd>S</kbd> brake <kbd>SHIFT</kbd> boost · <kbd>A</kbd><kbd>D</kbd> slide sideways · <kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> steer</div>
+        <div><kbd>C</kbd> camera <kbd>I</kbd> cockpit view <kbd>R</kbd> reset <kbd>M</kbd> mute <kbd>ESC</kbd> pause</div>
+      </div>
+      <div id="sysreq"></div>
+    </div>
+  </div>
+
+  <div id="account">
+    <div id="acc-out">
+      <button id="btn-signin" class="google"><svg viewBox="0 0 48 48" width="22" height="22" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>SIGN IN WITH GOOGLE</button>
+      <div id="acc-note"></div>
+    </div>
+    <div id="acc-in" class="hidden">
+      <img id="acc-photo" alt="" referrerpolicy="no-referrer" />
+      <div class="acc-info">
+        <b id="acc-nick"></b>
+        <span>WALLET <b id="acc-coins" class="gold">0</b> · WORLD <b id="acc-rank">–</b></span>
+        <span>KILLS <b id="acc-kills" class="red">0</b> · KILL RANK <b id="acc-krank">–</b></span>
+      </div>
+      <div class="acc-btns"><button id="btn-nick" class="mini">EDIT</button><button id="btn-signout" class="mini">SIGN OUT</button></div>
+    </div>
+  </div>
+
+  <footer id="site-foot">
+    <div class="contact">
+      <span class="contact-lbl">BUG? IDEA? WANT TO COLLABORATE?</span>
+      <a href="mailto:help@roadstersrace.com?subject=Roadsters%20Race" class="mail">✉ help@roadstersrace.com</a>
+      <span class="contact-sub">We read every message: bug reports, ideas, feedback, partnerships and business offers.</span>
+    </div>
+    <nav><a href="/privacy.html" target="_blank">PRIVACY</a> · <a href="/terms.html" target="_blank">TERMS</a> · <a href="#" id="btn-cookies">ANALYTICS SETTINGS</a></nav>
+  </footer>
+
+  <div id="consent" class="hidden">
+    <p><b>Help us improve Roadsters Race?</b> We'd like to use Google Analytics to count visitors and see which parts of the game
+      people play. No ads, nothing sold. <a href="/privacy.html" target="_blank">Privacy</a></p>
+    <div class="consent-btns"><button id="consent-yes" class="mini primary">ALLOW</button><button id="consent-no" class="mini">NO THANKS</button></div>
+  </div>
+
+  <div id="nick-modal">
+    <form id="nick-form" class="menu-card small">
+      <div class="brand sm" id="nick-title">CHOOSE YOUR NICKNAME</div>
+      <div class="nick-sub" id="nick-sub"></div>
+      <input id="nick-input" maxlength="16" autocomplete="off" spellcheck="false" />
+      <div id="nick-err"></div>
+      <button id="nick-save" class="primary" type="submit">SAVE</button>
+      <button id="nick-cancel" type="button">CANCEL</button>
+    </form>
+  </div>
+
+  <!-- road picker (main.js openRoads): RACE and TIME ATTACK first choose one of the map's nine roads -->
+  <div id="roads" class="hidden">
+    <div class="menu-card small roads-card">
+      <div class="brand sm" id="roads-title">CHOOSE YOUR ROAD</div>
+      <div class="rank-sub">WIN A ROAD IN 1ST PLACE (RACE) TO UNLOCK THE NEXT · EACH ROAD HAS ITS OWN TIME RANKING</div>
+      <ol id="road-list"></ol>
+      <button id="roads-close">BACK</button>
+    </div>
+  </div>
+
+  <div id="ranking" class="hidden">
+    <div class="menu-card small rank-card">
+      <div class="brand sm">WORLD RANKING</div>
+      <div class="rank-tabs">
+        <button class="rank-tab on" data-kind="coins">COIN</button>
+        <button class="rank-tab" data-kind="time">TIME</button>
+        <button class="rank-tab" data-kind="kills">KILLS</button>
+      </div>
+      <div id="rank-roads" class="rank-roads hidden"></div>
+      <div class="rank-sub" id="rank-sub">TOP 10 COIN COLLECTORS · ALL TIME</div>
+      <ol id="rank-list"></ol>
+      <div id="rank-me"></div>
+      <button id="rank-close">CLOSE</button>
+    </div>
+  </div>
+
+  <!-- SHOP (shop.js): the middle stays clear for the live 3D car of the showcase -->
+  <div id="shop" class="hidden" role="dialog" aria-label="Shop">
+    <header class="shop-head">
+      <div class="shop-title"><img class="coin" src="/ui/coin-64.png" alt="" /> SHOP</div>
+      <div class="shop-wallet"><span>WALLET</span><b id="shop-wallet">–</b></div>
+      <button id="shop-close" class="shop-x" aria-label="Close the shop">✕</button>
+    </header>
+    <div class="shop-garage">
+      <div class="shop-lbl">GARAGE</div>
+      <div id="shop-cards"></div>
+    </div>
+    <div id="shop-stage"><div class="shop-hint">⟳ DRAG TO ROTATE<span class="desk-only"> · SCROLL TO ZOOM</span></div></div>
+    <div class="shop-detail">
+      <div id="shop-name"></div>
+      <div id="shop-desc"></div>
+      <div id="shop-note"></div>
+    </div>
+    <button id="shop-action" class="shop-action"></button>
+    <div id="shop-dialog" class="hidden">
+      <div id="shop-ask" class="shop-panel" role="alertdialog" aria-labelledby="shop-dlg-title">
+        <div id="shop-dlg-title" class="dlg-title"></div>
+        <div id="shop-dlg-text" class="dlg-text"></div>
+        <div class="dlg-wallet"><span>WALLET</span><div id="shop-dlg-wallet"></div></div>
+        <div id="shop-dlg-err" class="dlg-err" role="alert"></div>
+        <div class="dlg-btns"><button id="shop-cancel" class="secondary">CANCEL</button><button id="shop-confirm" class="primary">BUY</button></div>
+      </div>
+      <div id="shop-done" class="shop-panel hidden" role="alertdialog" aria-labelledby="shop-done-title">
+        <div class="dlg-check">✓</div>
+        <div id="shop-done-title" class="dlg-title"></div>
+        <div class="dlg-btns"><button id="shop-equip-now" class="primary">EQUIP NOW</button><button id="shop-later" class="secondary">LATER</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="rotate-note"><div class="rot-phone"></div><div class="brand sm">TURN YOUR PHONE</div><p>Roadsters Race plays sideways. Tilt the phone like a steering wheel to drive.</p></div>
+  <div id="touch-note" class="hidden"><div class="menu-card small"><div class="brand sm">DESKTOP RACER</div>
+    <p>Roadsters Race is flown with mouse + keyboard (or a gamepad). Open it on a computer for the full experience.</p>
+    <p class="small-contact">Questions? <a href="mailto:help@roadstersrace.com">help@roadstersrace.com</a></p>
+    <button id="touch-ok">CONTINUE ANYWAY</button></div></div>
+
+  <div id="pause" class="hidden"><div class="menu-card small"><div class="brand sm">PAUSED</div>
+    <button data-act="resume" class="primary">RESUME</button><button data-act="restart">RESTART</button><button data-act="quit">MAIN MENU</button>
+    <div class="pause-roam">FREE ROAM KEEPS GOING · YOUR CAR CAN STILL BE HIT</div>
+    <div class="pause-hint"><span class="desk-only">DRAG TO ROTATE · SCROLL TO ZOOM</span><span class="touch-only">DRAG TO ROTATE THE CAR</span></div>
+    <div class="pause-contact">Found a bug or have an idea? <a href="mailto:help@roadstersrace.com?subject=Roadsters%20Race">help@roadstersrace.com</a></div></div></div>
+
+  <div id="results" class="hidden"><div class="menu-card small wide"><div class="brand sm">FINISH</div>
+    <div id="res-place"></div><div id="res-total"></div><ol id="res-laps"></ol>
+    <div class="res-cols"><div><div class="lbl">STANDINGS</div><ol id="res-standings"></ol></div>
+      <div><div class="lbl gold">COIN RACE</div><ol id="res-coins"></ol><div id="res-bank"></div></div></div>
+    <div id="res-unlock" class="hidden"></div>
+    <div id="res-online"></div>
+    <button data-act="next" class="primary hidden" id="res-next">NEXT ROAD ›</button><button data-act="restart" class="primary" id="res-again">RACE AGAIN</button><button data-act="quit">MAIN MENU</button></div></div>
+
+  <div id="fatal" class="hidden"><div class="menu-card small"><div class="brand sm" id="fatal-title"></div>
+    <p id="fatal-text"></p>
+    <button id="fatal-reload" class="primary">RELOAD</button>
+    <p class="small-contact">Still not working? Tell us at <a href="mailto:help@roadstersrace.com?subject=Game%20won%27t%20start">help@roadstersrace.com</a></p></div></div>
+
+  <div id="flash"></div>
+  <div id="nitro-call">NITRO</div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

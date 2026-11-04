@@ -3,6 +3,8 @@
 #include "raymath.h"
 #include "rlgl.h"
 #include "roadster_meshes.h"
+#include "rr_pod_pivots.h"
+#include "rr_pod_transform.h"
 #include "rr_render_policy.h"
 #include "rr_atmosphere.h"
 #include "rr_shared_material.h"
@@ -446,7 +448,13 @@ void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
     Matrix rotation=MatrixMultiply(MatrixMultiply(MatrixRotateZ((float)(car->roll+spin)),MatrixRotateX((float)car->pitch)),MatrixRotateY((float)car->yaw));
     Matrix transform=MatrixMultiply(MatrixMultiply(MatrixTranslate(0,-.35f,0),rotation),MatrixTranslate((float)car->pos.x,(float)car->pos.y,(float)car->pos.z));
     if(s->car_loaded){
-        for(int i=0;i<s->car.meshCount;i++)if(rr_roadster_hi_meshes[i])DrawMesh(s->car.meshes[i],s->car.materials[s->car.meshMaterial[i]],transform);
+        for(int i=0;i<s->car.meshCount;i++)if(rr_roadster_hi_meshes[i]){
+            Matrix local=MatrixIdentity();
+            if(i>=1&&i<=4){Vector3 p=rr_pod_pivots[i-1];
+                local=rr_pod_transform(p,car->pod_pitch[i-1],car->pod_roll[i-1]);
+            }
+            DrawMesh(s->car.meshes[i],s->car.materials[s->car.meshMaterial[i]],MatrixMultiply(local,transform));
+        }
     }else{
         BeginShaderMode(s->world_shader);
         rlPushMatrix();rlTranslatef((float)car->pos.x,(float)car->pos.y,(float)car->pos.z);
@@ -454,8 +462,10 @@ void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
         DrawCube((Vector3){0,-.15f,0},2.2f,.7f,5.6f,(Color){40,44,59,255});
         DrawCube((Vector3){0,.45f,.3f},1.65f,.8f,2.2f,(Color){38,101,134,255});
         for(int x=-1;x<=1;x+=2)for(int z=-1;z<=1;z+=2){
-            DrawCube((Vector3){x*1.85f,-.15f,z*1.6f},.85f,1,1.6f,(Color){57,61,76,255});
-            DrawCube((Vector3){x*1.85f,.4f,z*1.6f},.7f,.08f,1.4f,cyan);
+            int pod=(z<0?0:2)+(x>0?1:0);rlPushMatrix();rlTranslatef(x*1.85f,-.15f,z*1.6f);
+            rlRotatef((float)(car->pod_roll[pod]/.45*RAD2DEG),0,0,1);rlRotatef((float)(car->pod_pitch[pod]/.45*RAD2DEG),1,0,0);
+            DrawCube((Vector3){0,0,0},.85f,1,1.6f,(Color){57,61,76,255});
+            DrawCube((Vector3){0,.55f,0},.7f,.08f,1.4f,cyan);rlPopMatrix();
         }
         rlPopMatrix();EndShaderMode();
     }
