@@ -18,4 +18,6 @@ static inline RRSpinResult rr_spin_control_step(double *cooldown,bool active,dou
 }
 static inline void rr_spin_control_apply(RRSpinResult result,RRCar *car,double *kick)
 {if(result.accepted){rr_car_dodge(car,result.side);*kick=fmax(*kick,.6);}}
+static inline void rr_spin_control_apply_current(RRSpinResult result,RRCar *car,double *kick)
+{if(result.accepted){rr_car_dodge_current(car,result.side);*kick=fmax(*kick,.6);}}
 #endif

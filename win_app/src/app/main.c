@@ -237,9 +237,9 @@ static void update_camera(double dt)
     rr_camera_motion_aim_step(&motion,aim_camera?app.aim_yaw:app.car.yaw,aim_camera?app.aim_pitch:app.car.pitch,aim_camera,app.camera_looking||!chase_phase,dt);
     app.camera_yaw=motion.yaw;app.camera_pitch=motion.pitch;app.look_yaw=motion.look_yaw;app.look_pitch=motion.look_pitch;
     double orbit=rr_camera_orbit(app.look_yaw,app.look_pitch);
-    RRFirstPerson view=rr_chase_pose_aim(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch,aim_camera);
+    RRFirstPerson view=rr_chase_pose_current_aim(&app.car,app.camera_mode,true,app.camera_yaw,app.camera_pitch,app.look_yaw,app.look_pitch,aim_camera);
 
-    double sf=fmin(1.4,fmax(0,app.car.speed)/RR_CAR_MAX);
+    double sf=fmin(1.4,fmax(0,app.car.speed)/RR_CURRENT_CAR_MAX);
     app.camera_fov+=(68+15*fmin(1,sf)+9*app.car.nitro-app.camera_fov)*(1-exp(-4*dt));
     app.camera.fovy=(float)app.camera_fov;
     bool flight=rr_view_flight_phase(app.session.phase);
@@ -844,7 +844,7 @@ static void frame(void)
         bool spin_requested=key_hit(KEY_F)||pad_pressed(GAMEPAD_BUTTON_RIGHT_FACE_RIGHT);
         bool reset_requested=key_hit(KEY_R)||pad_pressed(GAMEPAD_BUTTON_MIDDLE_LEFT);
         RRVec3 warning_previous=app.car.pos;double checkpoint_clock=app.session.race.lap_time+dt;
-        unsigned events=rr_session_step(&app.session,&app.car,app.track.gates,app.track.gate_count,in,raw_dt);
+        unsigned events=rr_session_step_current(&app.session,&app.car,app.track.gates,app.track.gate_count,in,raw_dt);
 #if defined(RR_COLLISION_VALIDATION)
         if(app.car.impact>0){TraceLog(LOG_INFO,"VALIDATION: wall impact=%.6f x=%.6f vx=%.6f speed=%.6f",app.car.impact,app.car.pos.x,app.car.vel.x,app.car.speed);rr_ui_pause_stamp(&app.session,&app.pause_at_ms,GetTime()*1000);release_mouse();}
 #endif
@@ -868,10 +868,10 @@ static void frame(void)
         motion_camera_feedback(boost_fx_playing,boost_was);
         RRPlayerControlState state=player_control_state();
         /* Solo host is alive and has no connected account-role restriction. */
-        RRPlayerControlEvents actions=rr_player_controls_step(&state,(RRPlayerControlInput){dt,in.steer,spin_requested,reset_requested,true,false},spin_random_side,NULL);
+        RRPlayerControlEvents actions=rr_player_controls_step_current(&state,(RRPlayerControlInput){dt,in.steer,spin_requested,reset_requested,true,false},spin_random_side,NULL);
         if(actions.spin.accepted)rr_sub_notice_spin(&app.sub_notice);
     }else if(app.session.phase==RR_SESSION_COUNTDOWN || app.session.phase==RR_SESSION_FINISHED || app.session.phase==RR_SESSION_RESULTS){
-        unsigned events=rr_session_step(&app.session,&app.car,app.track.gates,app.track.gate_count,finishing?finished_controls():(RRInput){0},raw_dt);
+        unsigned events=rr_session_step_current(&app.session,&app.car,app.track.gates,app.track.gate_count,finishing?finished_controls():(RRInput){0},raw_dt);
         if(finishing)player_recovery_feedback(dt);
         motion_camera_feedback(boost_fx_playing,boost_was);
         int previous_count=app.start_cue.count;

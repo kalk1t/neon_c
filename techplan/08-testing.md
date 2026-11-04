@@ -85,6 +85,12 @@ hold fire 6 s, then fire the player's bolts at a car ahead; one bolt per 0.63 s,
 checked with a Node simulation of 2-lap races on all 9 roads (every rival finished, no respawns). Browser suites as
 below (`rivals` updated for the new speed and fire rules).
 
+### v0.2.16 (2026-11-03)
+`test:live` 110 / 110, `test:game` 45 / 45: `race.test.mjs` 24 (+4: the 35° target cone; rival seekers after a full
+0.5 s lock, the player's missile values, 1.5 s apart, 3 charges and the 4.5 s recharge, none at 700 m; the spin dodge
+on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars within 95 m: the player's damage, rivals
+hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

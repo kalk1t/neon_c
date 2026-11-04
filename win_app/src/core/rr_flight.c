@@ -29,18 +29,20 @@ void rr_car_reset(RRCar *c, RRVec3 pos, double yaw, double speed)
     rr_car_place(c,pos,yaw,speed);
 }
 
-void rr_car_dodge(RRCar *c, int side)
+static void dodge(RRCar *c,int side,double maximum)
 {
     c->roll_time=RR_SPIN_ROLL;
     c->roll_direction=side<0 ? -1 : 1;
     c->surge=2;
-    c->speed=fmax(c->speed, RR_CAR_MAX*0.5)*1.5;
+    c->speed=fmax(c->speed, maximum*0.5)*1.5;
     c->vel.x += cos(c->yaw)*c->roll_direction*22;
     c->vel.z -= sin(c->yaw)*c->roll_direction*22;
 }
 
+void rr_car_dodge(RRCar *c,int side){dodge(c,side,RR_CAR_MAX);}
+void rr_car_dodge_current(RRCar *c,int side){dodge(c,side,RR_CURRENT_CAR_MAX);}
 void rr_car_step(RRCar *c, RRInput in, double dt){rr_car_step_world(c,in,dt,NULL);}
-void rr_car_step_world_report(RRCar *c, RRInput in, double dt,const RRWorld *world,RRCarStepReport *report)
+static void step(RRCar *c,RRInput in,double dt,const RRWorld *world,RRCarStepReport *report,bool current)
 {
     if(report)*report=(RRCarStepReport){0};
     if (!isfinite(dt) || dt<=0 || dt>0.05) return;
@@ -48,7 +50,8 @@ void rr_car_step_world_report(RRCar *c, RRInput in, double dt,const RRWorld *wor
     c->stun=fmax(0,c->stun-dt);
     c->roll_time=fmax(0,c->roll_time-dt);
     c->surge=fmax(0,c->surge-dt);
-    double sf=fmin(1,fabs(c->speed)/RR_CAR_MAX);
+    double top=current?RR_CURRENT_CAR_MAX:RR_CAR_MAX;
+    double sf=fmin(1,fabs(c->speed)/top);
     bool was=c->boosting;
     c->boosting=in.boost && c->boost>0.02 && in.throttle>0 && c->stun<=0;
     if(c->boosting && !was) c->kick=1;
@@ -58,8 +61,8 @@ void rr_car_step_world_report(RRCar *c, RRInput in, double dt,const RRWorld *wor
     c->sputter=fmax(0,c->sputter-dt);
     c->thrust+=(fmax(0,in.throttle)-c->thrust)*(1-exp(-8*dt));
     c->boost=rr_clamp(c->boost+(c->boosting ? -0.32 : 0.06)*dt,0,1);
-    double maximum=(c->boosting?RR_CAR_BOOST_MAX:RR_CAR_MAX)*c->max_multiplier*(c->surge>0?1.5:1);
-    double accel=c->boosting?75:36;
+    double maximum=(c->boosting?(current?RR_CURRENT_CAR_BOOST_MAX:RR_CAR_BOOST_MAX):top)*c->max_multiplier*(c->surge>0?1.5:1);
+    double accel=(c->boosting?75:36)*(current?RR_CURRENT_CAR_SCALE*c->max_multiplier:1);
     if(in.throttle>0) c->speed+=accel*in.throttle*dt*fmax(0,1-pow(c->speed/maximum,2));
     else {double drag=9*dt;c->speed=fabs(c->speed)<=drag?0:c->speed-drag*(c->speed>0?1:-1);}
     if(in.brake>0) c->speed-=(c->speed>0?70:14)*in.brake*dt;
@@ -97,3 +100,7 @@ void rr_car_step_world_report(RRCar *c, RRInput in, double dt,const RRWorld *wor
 }
 
 void rr_car_step_world(RRCar *c,RRInput in,double dt,const RRWorld *world){rr_car_step_world_report(c,in,dt,world,NULL);}
+
+void rr_car_step_world_report(RRCar *c,RRInput in,double dt,const RRWorld *world,RRCarStepReport *report){step(c,in,dt,world,report,false);}
+void rr_car_step_current_world_report(RRCar *c,RRInput in,double dt,const RRWorld *world,RRCarStepReport *report){step(c,in,dt,world,report,true);}
+void rr_car_step_current(RRCar *c,RRInput in,double dt){step(c,in,dt,NULL,NULL,true);}

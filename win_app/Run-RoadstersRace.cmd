@@ -2,7 +2,7 @@
 setlocal
 rem Latest headlessly verified client; native visual qualification remains pending.
 rem Update this target only after a successful build and focused checks.
-set "clientDir=%~dp0build\current-fire-native\bin"
+set "clientDir=%~dp0build\speed-current-native\bin"
 if not exist "%clientDir%\RoadstersRace.exe" (
     echo The latest verified Roadsters client is missing.
     echo Expected: %clientDir%\RoadstersRace.exe

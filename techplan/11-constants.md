@@ -95,7 +95,7 @@
 | `SPIN` | ROLL 0.55, SURGE 2, MUL 1.5, JINK 22, COOLDOWN 6 | s, s, ×, m/s, s | Spin dodge | `src/car.js:12` | code | Units [inferred] from comments |
 | Boost drain / regen | 0.32 / 0.06 | fraction / s | Boost tank | `src/car.js:666` | code | |
 | `LIVERIES` | 10 rivals, skill 1.0–0.92 | factor | Rival identity, boost eagerness (top speed no longer, since v0.2.3) | `src/ai.js:3` | code | |
-| `RIVAL_AIM` | SPREAD 0.03 rad, CONE 0.3 rad, SLOWER 3 | | Rivals fire the player's bolts (v0.2.15): aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s) | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
+| `RIVAL_AIM` | SPREAD 0.03 rad, CONE 35° (0.3 rad before v0.2.16), SLOWER 3, SEEKER_RANGE 600 m, SEEKER_GAP 1.5 s, DODGE 0.5, EMP_CARS 2 | | Rivals use the player's arsenal: bolt aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s); seekers on a full lock within range, at most one per gap (v0.2.16); spin-dodge chance per seeker homing on them; cars within the EMP radius to set it off | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
 | `RIVAL_SPEED` | ROAD1 120, STEP 1.02 | m/s, factor | Rival top speed `rivalTop(id) = 120 × 1.02^(id − 1)`: 120 … 141 m/s (v0.2.15) | `src/roads.js` | code | Replaced road `ai` factors |
 | `CORNER` | TURN 1.15 rad/s, GRIP 0.8, BRAKE 45 m/s², SPAN 3 samples | | Rival corner speeds and braking (v0.2.15) | `src/ai.js` | code | |
 | `GATE_R` / `GATE_R_RIVAL` | 15 / 45 | m | Gate ring radius that counts a pass: player / rivals (v0.2.15) | `src/race.js` | code | |

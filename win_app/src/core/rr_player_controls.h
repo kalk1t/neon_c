@@ -20,15 +20,18 @@ static inline void rr_player_controls_respawn(RRPlayerControlState *state)
 }
 /* After movement/rules/recovery and Nitro/impact: source playerWeapons spin,
  * then manual reset. Flags are host-supplied; no account/profile calls here. */
-static inline RRPlayerControlEvents rr_player_controls_step(RRPlayerControlState *state,RRPlayerControlInput input,RRArsenalRandom random,void *context)
+static inline RRPlayerControlEvents rr_player_controls_tuned(RRPlayerControlState *state,RRPlayerControlInput input,RRArsenalRandom random,void *context,bool current)
 {
     RRPlayerControlEvents events={0};bool active=state->session->phase==RR_SESSION_ACTIVE;
     events.spin=rr_spin_control_step(state->spin_cd,active&&input.alive,input.dt,input.spin,input.steer,random,context);
-    rr_spin_control_apply(events.spin,state->car,state->camera_kick);
+    if(current)rr_spin_control_apply_current(events.spin,state->car,state->camera_kick);
+    else rr_spin_control_apply(events.spin,state->car,state->camera_kick);
     if(active&&input.alive&&input.reset){
         if(input.reset_blocked)events.reset_blocked=true;
         else{rr_player_controls_respawn(state);events.reset=true;}
     }
     return events;
 }
+static inline RRPlayerControlEvents rr_player_controls_step(RRPlayerControlState *s,RRPlayerControlInput i,RRArsenalRandom r,void *p){return rr_player_controls_tuned(s,i,r,p,false);}
+static inline RRPlayerControlEvents rr_player_controls_step_current(RRPlayerControlState *s,RRPlayerControlInput i,RRArsenalRandom r,void *p){return rr_player_controls_tuned(s,i,r,p,true);}
 #endif

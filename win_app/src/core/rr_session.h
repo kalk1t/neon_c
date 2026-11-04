@@ -34,6 +34,8 @@ void rr_session_respawn(const RRSession *session, RRCar *car);
  */
 unsigned rr_session_step(RRSession *session, RRCar *car, const RRGate *gates,
                          int gate_count, RRInput input, double raw_dt);
+/* Same lifecycle/world reporting with explicit v0.2.15 flight tuning. */
+unsigned rr_session_step_current(RRSession *session,RRCar *car,const RRGate *gates,int gate_count,RRInput input,double raw_dt);
 /* Race HUD guidance continues after finish/results, as source targetOf does.
  * Menu/error and CSS-hidden free-roam guidance remain absent. */
 bool rr_session_target(const RRSession *session, const RRGate *gates,

@@ -39,14 +39,14 @@ static bool remember_lap(RRSession *s,double elapsed)
     }
     s->lap_times[s->lap_count++]=elapsed;return true;
 }
-unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,
-                         int count,RRInput input,double raw_dt)
+static unsigned step(RRSession *s,RRCar *car,const RRGate *gates,
+                         int count,RRInput input,double raw_dt,bool current)
 {
     s->motion=(RRCarStepReport){0};s->motion_stepped=false;
     double dt=rr_frame_dt(raw_dt);
     if(dt<=0)return 0;
     if(s->phase==RR_SESSION_FINISHED || s->phase==RR_SESSION_RESULTS){
-        s->race_time+=dt;rr_car_step_world_report(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
+        s->race_time+=dt;(current?rr_car_step_current_world_report:rr_car_step_world_report)(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
         if(s->phase==RR_SESSION_RESULTS)return 0;
         s->finish_wait+=raw_dt;
         if(s->finish_wait>=2){s->phase=RR_SESSION_RESULTS;return RR_SESSION_SHOW_RESULTS;}
@@ -54,13 +54,13 @@ unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,
     }
     if(s->phase==RR_SESSION_COUNTDOWN){
         s->countdown-=dt;s->last_count=(int)ceil(s->countdown);
-        rr_car_step_world_report(car,(RRInput){0},dt,s->world,&s->motion);s->motion_stepped=true;
+        (current?rr_car_step_current_world_report:rr_car_step_world_report)(car,(RRInput){0},dt,s->world,&s->motion);s->motion_stepped=true;
         if(s->last_count<=0){s->phase=RR_SESSION_ACTIVE;return RR_SESSION_GO;}
         return 0;
     }
     if(s->phase!=RR_SESSION_ACTIVE)return 0;
     RRVec3 previous=car->pos;
-    s->race_time+=dt;rr_car_step_world_report(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
+    s->race_time+=dt;(current?rr_car_step_current_world_report:rr_car_step_world_report)(car,input,dt,s->world,&s->motion);s->motion_stepped=true;
     unsigned events=rr_race_step(&s->race,gates,count,car,previous,dt,s->race_time);
     if((events&RR_RACE_LAP) && !remember_lap(s,s->race.last_lap_time)){
         s->phase=RR_SESSION_ERROR;return events;
@@ -76,3 +76,6 @@ bool rr_session_target(const RRSession *s,const RRGate *gates,int count,RRVec3 *
     *target=s->race.next_checkpoint<count?gates[s->race.next_checkpoint].pos:rr_v3(0,126,0);
     return true;
 }
+
+unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,int count,RRInput input,double raw_dt){return step(s,car,gates,count,input,raw_dt,false);}
+unsigned rr_session_step_current(RRSession *s,RRCar *car,const RRGate *gates,int count,RRInput input,double raw_dt){return step(s,car,gates,count,input,raw_dt,true);}
