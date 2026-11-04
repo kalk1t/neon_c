@@ -49,7 +49,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge |
 | `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |
 | `src/touch.js` | 176 | `TouchControls` | Phone controls: tilt steering (24°), climb (18°), dead zone 2.5° |
-| `src/input.js` | 132 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
+| `src/input.js` | ~135 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); A / D give `strafe` while the mouse is captured (v0.2.13); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
 | `src/online/mutes.js` | 41 | `isMuted`, `mutedNames`, `muteCommand` | FREE ROAM `/mute`, `/unmute`, `/muted` on this device (localStorage `neon.muted`, v0.2.9) |
 | `src/audio.js` | 245 | `Sound` | Procedural Web Audio (no sound files), 18 voices |
 | `src/sysreq.js` | 89 | `showRequirements` | Minimum requirements and device check |

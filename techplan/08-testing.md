@@ -64,6 +64,11 @@ For v0.2.7 (C2, C3, relay connection limits, race unit tests; 2026-11-03):
 
 Each new test was first run against the old code and failed there (or was checked by breaking the rule on purpose).
 
+### v0.2.13 (2026-11-03)
+`test:live` 100 / 100, `test:game` 35 / 35: `controls.test.mjs` 13 (+6: coasting stops at zero, smooth turn from a
+stop, slide standing and at speed, slide decay and reset, A / D vs arrows; all fail on v0.2.12). Browser suites as
+below.
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

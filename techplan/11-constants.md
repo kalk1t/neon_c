@@ -187,10 +187,11 @@
 | `RECENT_LINES` | 8 | Chat lines kept per player (memory) for `/report` | `server/live.js` |
 | Mutes | 200 names | `neon.muted` (localStorage) | `src/online/mutes.js` |
 
-## Mouse aim and camera (v0.2.12)
+## Mouse aim, camera and slide (v0.2.12-v0.2.13)
 | Name | Value | Unit | Purpose | Source |
 |---|---|---|---|---|
 | Aim limits | ±1.1 yaw from the nose, ±0.62 pitch | rad | How far the aim may lead the car | `src/aim.js` `updateAim` |
 | Steering gain | `steer = −Δyaw × 2.8`, `climb = aimPitch / 0.62` | | The car flies to the aim (× 1.25 on climb before v0.2.12) | `src/aim.js` |
+| `STRAFE` | SPEED 25, RESPONSE 6 | m/s, 1/s | Sideways slide (A / D with the mouse, v0.2.13) | `src/car.js` |
 | Aim camera follow | yaw 14 /s, pitch 10 /s toward 0.85 × aim pitch | 1/s | Keeps the aim ring near the centre (car camera: 7 and 5, 0.6 × car pitch) | `src/camera.js` `chaseCamera` |
 
