@@ -1,0 +1,13 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/camera.js",
+      "sha256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45"
+    }
+  ],
+  "fragment_sha256": "55c61005fa6d0c0f2df8ffd305358894f8cd57c022896cfee0b2a1b6e794d559",
+  "states": 2880,
+  "sequences": 12,
+  "scope": "Actual source paused showcase and callback execution with real Three Vector3 in inert event harness. No browser engine, DOM hit testing, graphics, input delivery, car idle animation or shader/lens effects. Native focus/minimize cancellation is a separate host safeguard."
+}

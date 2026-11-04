@@ -1,0 +1,8 @@
+{
+  "mainPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+  "mainSHA256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89",
+  "hudPath": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "hudSHA256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "cases": 35,
+  "scope": "Actual home roadUI best assignments, road-row best template and HUD fmt, synthetic read-only storage values. Finite nonnegative records on roads1/2/9, locked/unlocked presentation; no real storage/account/profile writes or unlocks."
+}

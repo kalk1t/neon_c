@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "8255bf9a6d768b253d520b3c9a77703ff930126b03ae3fdeb8034d27c43749e0",
+  "target": {
+    "path": "build/hud-readouts-native/bin/RoadstersRace.exe",
+    "sha256": "92abf2aa7c747f7727ee185bf0e32ce9fead31400229bb9fdf6fb0529648ed7b"
+  },
+  "working_directory": "build/hud-readouts-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-hud-readouts-20261103/Run-RoadstersRace.cmd"
+}

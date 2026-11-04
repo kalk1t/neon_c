@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "08d1c89ddc937c79b3780ee792753a9ef4e5d876a160eb9fb181bea72970ae1d",
+  "target": {
+    "path": "build/spin-readout-native/bin/RoadstersRace.exe",
+    "sha256": "28f1ce2b361761e55a89edc0468cf5762a43c9cd90dc0f57c5c29e91e79327ff"
+  },
+  "working_directory": "build/spin-readout-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-spin-readout-20261103/Run-RoadstersRace.cmd"
+}

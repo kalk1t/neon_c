@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+      "sha256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\index.html",
+      "sha256": "e1d6cc204d926795a0612de6e3a11aa02e3a4e7b64f734c2e45c97cc115eb313"
+    }
+  ],
+  "states": 54,
+  "css": {
+    "nitro_z": 6,
+    "overlay_z": 10,
+    "results_rgba": [
+      3,
+      4,
+      20,
+      0.55
+    ],
+    "results_rgba8": 50599052,
+    "nitro_outside_hud": true
+  },
+  "scope": "Actual toMenu/pause/resume and HUD.show functions in VM with inert DOM classes; actual start/finish/results presentation fragments, explicit GO state transition. CSS determines draw order and backdrop; index div nesting confirms external NITRO. Physics/audio/capture/network/backend and timer scheduling stubbed. No browser window, GPU, storage, account or screenshot."
+}

@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+      "sha256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\aim.js",
+      "sha256": "dfa86c63f0c8b707e8ae18a1e1ab3bfa9fee14a250eae49db3a341cf9b88139f"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\car.js",
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+      "sha256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45"
+    }
+  ],
+  "scenarios": 96,
+  "scope": "Actual player respawn/Car.place/dodge/forward, spin block, manual-reset eligibility and chase-camera motion prefix. Synthetic alive/killer inputs; race mode only, audio/flash/sync stubbed, track nearestGlobal stubbed. No real accounts, storage, network, world stepping or GPU."
+}

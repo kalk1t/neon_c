@@ -2,19 +2,25 @@
 #define RR_UI_LAYOUT_H
 #include <stdbool.h>
 #include <math.h>
+#include "rr_menu_footer.h"
 typedef struct RRUIRect { float x,y,w,h; } RRUIRect;
-typedef struct RRUIMenuLayout { float x,y,width,brand,button_h,gap; RRUIRect actions[5]; } RRUIMenuLayout;
+typedef struct RRUIMenuLayout { float x,y,width,brand,button_h,gap,best_y,footer_y,brand_line_h,track_y,track_h,content_h; RRUIRect actions[5]; } RRUIMenuLayout;
 typedef struct RRUIRoadLayout { RRUIRect panel,list,back; float row_h,stride,content_h,max_scroll; } RRUIRoadLayout;
 static inline RRUIMenuLayout rr_ui_menu_layout(float w,float h)
 {
     RRUIMenuLayout l={0}; bool compact=h<=820;
     l.x=w*.07f;l.width=fminf(470,w-l.x-24);l.brand=compact?46.f:64.f;
-    l.button_h=compact?50.f:60.f;l.gap=compact?9.f:14.f;
-    float total=l.brand*1.9f+31+5*(l.button_h+l.gap)+105;
-    l.y=fmaxf(16,(h-total)*.5f);
-    float top=l.y+l.brand*1.9f+31;
-    for(int i=0;i<5;i++)l.actions[i]=(RRUIRect){l.x,top+i*(l.button_h+l.gap),l.width,l.button_h};
-    return l;
+    l.brand_line_h=compact?43.6875f:60.796875f;l.track_h=18;
+    l.button_h=compact?50.f:64.f;l.gap=compact?9.f:14.f;
+    float track=2*l.brand_line_h+l.gap,top=track+l.track_h+(compact?4.f:14.f)+l.gap;
+    const float compact_heights[5]={50,50,50,48,48},desktop_heights[5]={64,64,64,63,61};
+    for(int i=0;i<5;i++){float bh=compact?compact_heights[i]:desktop_heights[i];l.actions[i]=(RRUIRect){l.x,top,l.width,bh};top+=bh+(i<4?l.gap:0);}
+    l.best_y=top+14;l.footer_y=l.best_y+24;
+    /* Native footer uses the source keycap/control style. Its contents are shorter
+     * than the browser's full paint/profile/settings/controls card. */
+    l.content_h=l.footer_y+rr_menu_footer_height(h);l.y=fmaxf(16,(h-l.content_h)*.5f);
+    l.track_y=l.y+track;l.best_y+=l.y;l.footer_y+=l.y;
+    for(int i=0;i<5;i++)l.actions[i].y+=l.y;return l;
 }
 static inline RRUIRoadLayout rr_ui_road_layout(float w,float h)
 {

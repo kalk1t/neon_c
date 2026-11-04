@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+      "sha256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    }
+  ],
+  "scenarios": 70,
+  "frames": 2896,
+  "scope": "Actual raceRules recovery tail and HUD.message/expiry. Finished native/results map to browser finished; controlled nearest/along/off geometry and respawn stub (clears lost timer, counts calls), no car movement, storage, account, network, audio, graphics or world-collision execution. Initial FINISH/GO text supplied as fixture state."
+}

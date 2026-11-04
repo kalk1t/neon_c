@@ -1,0 +1,41 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "package": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    }
+  ],
+  "rules": [
+    "#submsg { position: absolute; top: calc(24% + 100px); width: 100%; text-align: center; font: 700 26px var(--font); color: var(--c); text-shadow: 0 0 10px var(--c); opacity: 0; transition: opacity 0.25s; }",
+    "#submsg.show { opacity: 1; }",
+    ".hidden { display: none !important; }"
+  ],
+  "tick_source": "if ((this.subTimer -= dt) <= 0) e.sub.classList.remove('show');",
+  "states": 16418,
+  "paint_states": 7632,
+  "sequences": 16,
+  "reused_submessage_box": {
+    "x": 0,
+    "y": 340,
+    "width": 1600,
+    "height": 32
+  },
+  "scope": "Actual HUD.sub/show and subTimer-removal statement with inert DOM; per-paint coalesced independent CSS Transitions model, not browser-engine timing/pixels. Literal UTF8 text, replacements, expiration/zero duration, hidden/re-rendered HUD at30/60/144/240Hz. Existing fallback art/geometry unchanged; no GPU/network/account or graphics stability measurement."
+}

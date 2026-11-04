@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "a29013e2d1461c6b698b04c5406b32f526a2cff429428799c201b79ab789aae3",
+  "target": {
+    "path": "build/sub-fade-native/bin/RoadstersRace.exe",
+    "sha256": "ec1bb601a8e7da421e8c79646180299cba20af81330e6a6a85fea73947bf633e"
+  },
+  "working_directory": "build/sub-fade-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-sub-fade-20261103/Run-RoadstersRace.cmd"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "source_sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "race_drawMap_method_sha256": "324f2a1f5f8c6b027df6f802145f122425c960cdf0b705e85338f6709d6a8f60",
+  "css_source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+  "css_sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2",
+  "selected_css": "#minimap { position: absolute; top: 22px; right: 22px; width: 240px; height: 240px; border: 2px solid var(--c); border-radius: 50%; background: radial-gradient(rgba(10, 20, 70, 0.8), rgba(3, 5, 22, 0.85)); box-shadow: 0 0 18px rgba(25, 230, 255, 0.5); overflow: hidden; }\n#minimap canvas { width: 100%; height: 100%; }",
+  "cases": 516,
+  "source_marker_triangles": 504,
+  "reference": "Independent analytic circle/triangle intersection via segment roots and oriented sector integrals; no polygon clipping in oracle. Bounds from inscribed circle deficit and radial gap times triangle perimeter.",
+  "radial_gap_at_118_css_pixels": 0.035539393847898504,
+  "scope": "Actual current HUD.drawMap arrow commands with inert Canvas context; mathematically checked clipping, not a browser raster/mask or native GPU test."
+}

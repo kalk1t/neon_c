@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "9ee0b8196f25b6b7af02b2bd370ac6dceadba57dee6aeca4ffca7463d7e7ee73",
+  "target": {
+    "path": "build/ui-layers-native/bin/RoadstersRace.exe",
+    "sha256": "1e6cb3da3175575d01c25a3ccb920db1b153fc57f3375e1282783e401cc871f2"
+  },
+  "working_directory": "build/ui-layers-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-ui-layers-20261103/Run-RoadstersRace.cmd"
+}

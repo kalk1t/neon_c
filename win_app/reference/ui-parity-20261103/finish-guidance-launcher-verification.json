@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "852a713d24efc87c2e85537870f98e0ee113356c45072fdb742596251252d0c8",
+  "target": {
+    "path": "build/finish-guidance-native/bin/RoadstersRace.exe",
+    "sha256": "a7681a923cc7fb79ce70905e4cfa8bd420f5e91c7c04366ca3fe6ceed18e3e0a"
+  },
+  "working_directory": "build/finish-guidance-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-finish-guidance-20261103/Run-RoadstersRace.cmd"
+}

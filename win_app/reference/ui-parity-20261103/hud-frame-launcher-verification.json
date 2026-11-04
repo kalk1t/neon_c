@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "a67c959b522dd7710d7c8fe204ec152f6d6f493fabdfd4d135ba5181a42f08cf",
+  "target": {
+    "path": "build/hud-frame-native/bin/RoadstersRace.exe",
+    "sha256": "19aab93bfb7d958d1873184b8fd0a93e198af1a57a532f8d48e4867781eb4b3b"
+  },
+  "working_directory": "build/hud-frame-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-hud-frame-20261103/Run-RoadstersRace.cmd"
+}

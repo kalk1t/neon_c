@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "12bbeb9952861912cc5db9d6cd26df635cfeebbd0337b85d00e1f40c1afe3b09",
+  "target": {
+    "path": "build/capture-prompt-native/bin/RoadstersRace.exe",
+    "sha256": "6e0a40134d7ce8dc106dd85dba8c61abc56e2083112731e57b667bc08532f675"
+  },
+  "working_directory": "build/capture-prompt-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-capture-prompt-20261103/Run-RoadstersRace.cmd"
+}

@@ -71,8 +71,8 @@ unsigned rr_session_step(RRSession *s,RRCar *car,const RRGate *gates,
 bool rr_session_target(const RRSession *s,const RRGate *gates,int count,RRVec3 *target)
 {
     if(count<=0 || s->race.next_checkpoint<0 || s->race.next_checkpoint>count ||
-       s->race.mode==RR_RACE_FREE_ROAM || s->race.finished || s->phase==RR_SESSION_MENU ||
-       s->phase==RR_SESSION_RESULTS || s->phase==RR_SESSION_ERROR)return false;
+       s->race.mode==RR_RACE_FREE_ROAM || s->phase==RR_SESSION_MENU ||
+       s->phase==RR_SESSION_ERROR)return false;
     *target=s->race.next_checkpoint<count?gates[s->race.next_checkpoint].pos:rr_v3(0,126,0);
     return true;
 }

@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "5e41f2b21ec4c4e871b8426131ff1f6265887156865fe41de22e7c13cb9e9e97",
+  "target": {
+    "path": "build/boost-layout-native/bin/RoadstersRace.exe",
+    "sha256": "3ade38350f2f695be235f974dfc9bd5a3dcaa79d3f8c1ff99cdc8154d8673ccd"
+  },
+  "working_directory": "build/boost-layout-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-boost-layout-20261103/Run-RoadstersRace.cmd"
+}

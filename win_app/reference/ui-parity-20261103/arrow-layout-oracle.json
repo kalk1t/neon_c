@@ -1,0 +1,6 @@
+{
+  "source": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+  "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "cases": 918,
+  "scope": "Actual HUD target/arrow DOM branch; sprite corner transform model uses verified42x60 box,64px padding and21/30 origin. NDC inputs supplied, not world/GPU/native filtering acceptance."
+}

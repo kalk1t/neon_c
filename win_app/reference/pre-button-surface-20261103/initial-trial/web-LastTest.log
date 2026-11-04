@@ -1,0 +1,1129 @@
+Start testing: Nov 03 18:18 Eastern Standard Time
+----------------------------------------------------------
+1/84 Testing: browser_boost_layout_visibility
+1/84 Test: browser_boost_layout_visibility
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_boost_layout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_boost_layout_visibility" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Boost layout: two reused Chrome track/caption boxes and 7680 source DOM/spec-model states across16 sequences; visibility restart and class precedence; worst style error8.12927503091e-12, 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_boost_layout_visibility" end time: Nov 03 18:18 Eastern Standard Time
+"browser_boost_layout_visibility" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/84 Testing: browser_capture_prompt_gesture
+2/84 Test: browser_capture_prompt_gesture
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_capture_prompt_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_capture_prompt_gesture" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Capture prompt: 28 actual-source hint cases, 238 callback/gesture states across98 sequences; native ownership and unchanged150ms guard; CSS/nominal layout, 0 failures; no graphics or OS capture
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_capture_prompt_gesture" end time: Nov 03 18:18 Eastern Standard Time
+"browser_capture_prompt_gesture" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/84 Testing: browser_target_pulse_layout
+3/84 Test: browser_target_pulse_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_target_pulse_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_target_pulse_layout" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Target pulse: 8608 source DOM/spec-model states across16 sequences, one reused group/child box; layout/border scaling and display restarts; worst scale error1.6187051699e-13, 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_target_pulse_layout" end time: Nov 03 18:18 Eastern Standard Time
+"browser_target_pulse_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/84 Testing: browser_hud_frame_geometry
+4/84 Test: browser_hud_frame_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_hud_frame_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_hud_frame_geometry" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+HUD frame: 38064 reused Chrome mask pixels, 24 analytic sizes; 16 triangles/panel; previous model3024 mismatches, new0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_hud_frame_geometry" end time: Nov 03 18:18 Eastern Standard Time
+"browser_hud_frame_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/84 Testing: browser_minimap_background_pixels
+5/84 Test: browser_minimap_background_pixels
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_map_background_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_minimap_background_pixels" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Minimap background: 379 reused Chrome interior RGBA pixels, unchanged36-fan model; new max 1.66911034834/1.73918769554/1.96351112744/0.67329862126, previous 1.13675448768/2.70609498526/9.10743424845/5.44628729345; 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_minimap_background_pixels" end time: Nov 03 18:18 Eastern Standard Time
+"browser_minimap_background_pixels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/84 Testing: browser_submessage_fade
+6/84 Test: browser_submessage_fade
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_sub_fade_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_submessage_fade" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Submessage fade: 16418 actual-source states, 7632 coalesced paint/model samples across16 sequences; UTF8/plain text and shared tint bounds; worst opacity error1.2107537195e-12, 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_submessage_fade" end time: Nov 03 18:18 Eastern Standard Time
+"browser_submessage_fade" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/84 Testing: browser_announcement_css_timing
+7/84 Test: browser_announcement_css_timing
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_announcement_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_announcement_css_timing" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Announcement CSS: 24261 actual-source DOM/model states across24 sequences, two reused boxes; worst opacity error1.21314069901e-12, 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_announcement_css_timing" end time: Nov 03 18:18 Eastern Standard Time
+"browser_announcement_css_timing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/84 Testing: browser_history_css_cascade
+8/84 Test: browser_history_css_cascade
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_history_style_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_history_css_cascade" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+History CSS: 7824 source-class layout cases, 64620 selected prefix/best/boundary rows; first-best order, 20/16 desktop model and clipped extreme counts: 0 failures; no graphics
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_history_css_cascade" end time: Nov 03 18:18 Eastern Standard Time
+"browser_history_css_cascade" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/84 Testing: browser_spin_indicator_compositing
+9/84 Test: browser_spin_indicator_compositing
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_spin_indicator_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_spin_indicator_compositing" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Spin indicator: 604 actual HUD states, five reused Chrome styles, clockwise disk geometry/compositing bounds; max192 triangles, worst fill1.1102230246251565e-16, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_spin_indicator_compositing" end time: Nov 03 18:18 Eastern Standard Time
+"browser_spin_indicator_compositing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/84 Testing: browser_pause_layout_backdrop
+10/84 Test: browser_pause_layout_backdrop
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_pause_layout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_pause_layout_backdrop" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Pause layout: 2 verified Chrome card states, 1007 CSS gradient samples, seven native viewport/control checks; worst left-edge error0.00312042236328125 px, 0 failures
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_layout_backdrop" end time: Nov 03 18:18 Eastern Standard Time
+"browser_pause_layout_backdrop" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/84 Testing: browser_ui_visibility_paint_order
+11/84 Test: browser_ui_visibility_paint_order
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_ui_layer_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_ui_visibility_paint_order" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser UI layers: 54 transition states, CSS backdrop/order, external NITRO, native guards and lifecycle; max3 layers, 0 failures
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_visibility_paint_order" end time: Nov 03 18:18 Eastern Standard Time
+"browser_ui_visibility_paint_order" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/84 Testing: browser_finish_aim_target_continuity
+12/84 Test: browser_finish_aim_target_continuity
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_finish_guidance_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_finish_aim_target_continuity" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser finish guidance: 810 aim/control cases, 126 target cases across four phases; nine two-lap completion/pilot/results/restart sequences, worst3.865352482534945e-12, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_finish_aim_target_continuity" end time: Nov 03 18:18 Eastern Standard Time
+"browser_finish_aim_target_continuity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/84 Testing: browser_recovery_feedback_lifecycle
+13/84 Test: browser_recovery_feedback_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_recovery_feedback_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_recovery_feedback_lifecycle" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser recovery feedback: 2896 frames across 70 sequences, all nine real update/respawn seams; worst error0, 0 failures
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_recovery_feedback_lifecycle" end time: Nov 03 18:18 Eastern Standard Time
+"browser_recovery_feedback_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/84 Testing: browser_minimap_checkpoint_primitives
+14/84 Test: browser_minimap_checkpoint_primitives
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_map_mark_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_minimap_checkpoint_primitives" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser minimap marks: 192 style, 336 analytic circle/annulus, 60 rectangle cases, all nine roads; max clipped vertices5, max gates19, worst area error1.4743381504928834, 0 failures
+Actual roads desktop markers: max input triangles1346, max output triangles1346; state40 bytes, caller clip2112 bytes, no new textures/tables/heap
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_minimap_checkpoint_primitives" end time: Nov 03 18:18 Eastern Standard Time
+"browser_minimap_checkpoint_primitives" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/84 Testing: browser_view_controls_lifecycle
+15/84 Test: browser_view_controls_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_view_control_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_view_controls_lifecycle" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser C/I: 288 dispatch + 180 visibility cases; native focus/error/readiness and lifecycle sequence: 0 failures
+Known exact-threshold visibility differences: 0; worst orbit error 0 (strict branch parity remains open at libm rounding boundary)
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_view_controls_lifecycle" end time: Nov 03 18:18 Eastern Standard Time
+"browser_view_controls_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/84 Testing: browser_player_reset_order
+16/84 Test: browser_player_reset_order
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_player_control_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_player_reset_order" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser reset/spin/camera prefix: 96 scenarios, worst0, 0 failures; resources/progress retained, no camera snap
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_reset_order" end time: Nov 03 18:18 Eastern Standard Time
+"browser_player_reset_order" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/84 Testing: browser_best_record_readouts
+17/84 Test: browser_best_record_readouts
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_best_readout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_best_record_readouts" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Best record UI: 35 actual browser home/row strings; read-only, modes/restart/improvement/locked-road and footer containment checks, 0 failures
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_best_record_readouts" end time: Nov 03 18:18 Eastern Standard Time
+"browser_best_record_readouts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/84 Testing: browser_mouse_capture_warmup
+18/84 Test: browser_mouse_capture_warmup
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_mouse_capture_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_mouse_capture_warmup" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser capture guard: 48 source listener eligibility states plus keyboard/capture-loss/reacquire checks, 0 failures; event-vs-frame delivery unqualified
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_mouse_capture_warmup" end time: Nov 03 18:18 Eastern Standard Time
+"browser_mouse_capture_warmup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/84 Testing: minimap_circle_clip_analytic
+19/84 Test: minimap_circle_clip_analytic
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_circle_clip_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"minimap_circle_clip_analytic" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Circle clipping: 516 analytic area cases, max vertices128/marker6, worst sampled marker area loss1.0361180619379411, 0 failures;128-gon radial gap at118px 0.035539393847898504
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"minimap_circle_clip_analytic" end time: Nov 03 18:18 Eastern Standard Time
+"minimap_circle_clip_analytic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/84 Testing: browser_boost_meter_states
+20/84 Test: browser_boost_meter_states
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_boost_meter_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_boost_meter_states" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Boost meter: 6 manifest-verified Chromium initial states/geometry, strict20% threshold, animation precedence/restart/alternate endpoints, 0 failures; no GPU
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_boost_meter_states" end time: Nov 03 18:18 Eastern Standard Time
+"browser_boost_meter_states" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/84 Testing: browser_nitro_call_timeline
+21/84 Test: browser_nitro_call_timeline
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_nitro_call_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_nitro_call_timeline" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Nitro call: 2 manifest-verified Chromium samples, wall-clock/retrigger/expiry checks, 0 failures; no GPU
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_nitro_call_timeline" end time: Nov 03 18:18 Eastern Standard Time
+"browser_nitro_call_timeline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/84 Testing: browser_native_spin_control
+22/84 Test: browser_native_spin_control
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_spin_control_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_native_spin_control" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser spin control/dodge: 192 cases, worst 0, 0 failures; finish-frame suppression checked
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_native_spin_control" end time: Nov 03 18:18 Eastern Standard Time
+"browser_native_spin_control" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/84 Testing: browser_collision_camera_shake
+23/84 Test: browser_collision_camera_shake
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_impact_fx_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_collision_camera_shake" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser impact shake: 336 boundary/order cases, worst 0, 0 failures; session report lifecycle checked
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_collision_camera_shake" end time: Nov 03 18:18 Eastern Standard Time
+"browser_collision_camera_shake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/84 Testing: browser_mouse_aim_settings
+24/84 Test: browser_mouse_aim_settings
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_mouse_aim_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_mouse_aim_settings" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser updateAim: 384 states, worst 1.1102230246251565e-16, 0 failures; 45 slider steps checked
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_mouse_aim_settings" end time: Nov 03 18:18 Eastern Standard Time
+"browser_mouse_aim_settings" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/84 Testing: browser_race_announcement_channel
+25/84 Test: browser_race_announcement_channel
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_hud_message_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_race_announcement_channel" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser HUD announcement channel: 76 states plus recovery timer coupling, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_race_announcement_channel" end time: Nov 03 18:18 Eastern Standard Time
+"browser_race_announcement_channel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/84 Testing: browser_target_guidance
+26/84 Test: browser_target_guidance
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_target_guidance_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_target_guidance" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser target guidance: 1296 cases, worst 1.1368683772161603e-13, failures 0
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_target_guidance" end time: Nov 03 18:18 Eastern Standard Time
+"browser_target_guidance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/84 Testing: browser_unicode_submessage_timers
+27/84 Test: browser_unicode_submessage_timers
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_sub_notice_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_unicode_submessage_timers" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual source checkpoint/lap/HUD.sub: 92 Unicode caption/timer states, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_unicode_submessage_timers" end time: Nov 03 18:18 Eastern Standard Time
+"browser_unicode_submessage_timers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/84 Testing: browser_nitro_camera_fx
+28/84 Test: browser_nitro_camera_fx
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_camera_fx_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_nitro_camera_fx" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser Nitro/camera FX: 720 sequential source frames, max error 1.4210854715202004e-14, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_nitro_camera_fx" end time: Nov 03 18:18 Eastern Standard Time
+"browser_nitro_camera_fx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/84 Testing: browser_countdown_start_cues
+29/84 Test: browser_countdown_start_cues
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_start_cue_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_countdown_start_cues" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser countdown/HUD timers: 1680 session-coupled frames, max timer error 0, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_countdown_start_cues" end time: Nov 03 18:18 Eastern Standard Time
+"browser_countdown_start_cues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/84 Testing: browser_missed_gate_warning
+30/84 Test: browser_missed_gate_warning
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_race_warning_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_missed_gate_warning" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual raceRules missed-gate warning: 1248 boundary cases, 48 warnings, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_missed_gate_warning" end time: Nov 03 18:18 Eastern Standard Time
+"browser_missed_gate_warning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/84 Testing: browser_camera_motion_timing
+31/84 Test: browser_camera_motion_timing
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_camera_motion_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_camera_motion_timing" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual v0.2.6 chaseCamera timing: 960 sequential states and resulting poses, max error 3.5527136788005009e-15, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_camera_motion_timing" end time: Nov 03 18:18 Eastern Standard Time
+"browser_camera_motion_timing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/84 Testing: browser_chase_camera_geometry
+32/84 Test: browser_chase_camera_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_chase_camera_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_chase_camera_geometry" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual v0.2.6 chaseCamera: 1225 geometry/bank/speed/degenerate cases, max error 4.4408920985006262e-16, 0 failures
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_chase_camera_geometry" end time: Nov 03 18:18 Eastern Standard Time
+"browser_chase_camera_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/84 Testing: browser_first_person_view
+33/84 Test: browser_first_person_view
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_first_person_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_first_person_view" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual source chaseCamera: 1080 visibility cases, 108 raw seat poses, max error 6.0973509486883858e-16, 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_first_person_view" end time: Nov 03 18:18 Eastern Standard Time
+"browser_first_person_view" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/84 Testing: browser_pause_guard_and_cockpit_palette
+35/84 Test: browser_pause_guard_and_cockpit_palette
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_pause_ui_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_pause_guard_and_cockpit_palette" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Source pause400ms guard: 4 phases, boundary/held/focus/button/restart/menu and v3 cockpit palette: 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_guard_and_cockpit_palette" end time: Nov 03 18:18 Eastern Standard Time
+"browser_pause_guard_and_cockpit_palette" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/84 Testing: browser_cockpit_fit_and_readouts
+36/84 Test: browser_cockpit_fit_and_readouts
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_cockpit_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_cockpit_fit_and_readouts" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Cockpit: 18 source fits, 36 source readouts, 3 car layouts, visibility/easing/seat: 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_cockpit_fit_and_readouts" end time: Nov 03 18:18 Eastern Standard Time
+"browser_cockpit_fit_and_readouts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/84 Testing: browser_button_surface_pixels
+37/84 Test: browser_button_surface_pixels
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_button_surface_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_button_surface_pixels" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+button surface line27
+Button surface: 54768 reused Chrome mask pixels, 760 premultiplied RGBA samples,14 triangles/button; old model 5600 mask mismatches; color maxima 191.470588/215.341176/193.647059/137.268029, 232 failures; no GPU
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Failed.
+"browser_button_surface_pixels" end time: Nov 03 18:18 Eastern Standard Time
+"browser_button_surface_pixels" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/84 Testing: browser_pause_scene_policy
+38/84 Test: browser_pause_scene_policy
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_pause_scene_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_pause_scene_policy" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Pause scene: 1280 actual-source freeze/resume states, 112 eligibility combinations,10-frame overload cutoff,4800 float-boundary camera steps; worst error 0.000122583736593, 0 failures; no GPU
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_scene_policy" end time: Nov 03 18:18 Eastern Standard Time
+"browser_pause_scene_policy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/84 Testing: browser_pause_showcase_callbacks
+39/84 Test: browser_pause_showcase_callbacks
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_showcase_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_pause_showcase_callbacks" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Showcase pause: 2880 actual-source callback/camera states across12 sequences; worst error 5.68434188608e-14, 0 failures; no GPU
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_showcase_callbacks" end time: Nov 03 18:18 Eastern Standard Time
+"browser_pause_showcase_callbacks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/84 Testing: browser_results_card_layout
+40/84 Test: browser_results_card_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_results_layout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_results_card_layout" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Results layout:8 reused Chrome boxes,6 viewports,80 variable-width lap pairs, fixed offline placeholders; 0 failures, no GPU
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_results_card_layout" end time: Nov 03 18:18 Eastern Standard Time
+"browser_results_card_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/84 Testing: browser_race_ui_state_layout
+41/84 Test: browser_race_ui_state_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_race_ui_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_race_ui_state_layout" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Race UI: source Canvas player marker and chronological history/capture bounds, 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: 0 failures
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_race_ui_state_layout" end time: Nov 03 18:18 Eastern Standard Time
+"browser_race_ui_state_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/84 Testing: browser_ui_layout_and_hit_regions
+42/84 Test: browser_ui_layout_and_hit_regions
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_ui_layout_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_ui_layout_and_hit_regions" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+UI layout: viewport containment, focus scroll, clipped hit regions passed (4 viewports).
+<end of output>
+Test time =   0.18 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_layout_and_hit_regions" end time: Nov 03 18:18 Eastern Standard Time
+"browser_ui_layout_and_hit_regions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/84 Testing: browser_player_arsenal_rules
+58/84 Test: browser_player_arsenal_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_arsenal_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_player_arsenal_rules" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+ARSENAL_SUMMARY cases=4324 draws=1727 events=2870 overheats=39 denies=908 restarts=6 max_error=0 state_bytes=48 event_bytes=64
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_arsenal_rules" end time: Nov 03 18:18 Eastern Standard Time
+"browser_player_arsenal_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/84 Testing: browser_fire_dispatch_rng
+60/84 Test: browser_fire_dispatch_rng
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_fire_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_fire_dispatch_rng" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+FIRE_SUMMARY init_cases=96 fx_cases=35 seeded_frames=480 restarts=4 fx_probe_draws=1209 sequence_draws=7828 max_shots=10 max_fx=48 max_error=0 failures=0
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_fire_dispatch_rng" end time: Nov 03 18:18 Eastern Standard Time
+"browser_fire_dispatch_rng" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/84 Testing: browser_full_local_player_ticks
+62/84 Test: browser_full_local_player_ticks
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_local_run_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_full_local_player_ticks" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+RUN_SUMMARY roads=2 frames=640 restarts=2 go=2 laps=4 finishes=2 respawns=6 manual=2 smoke=6 impacts=5 nitro=6 paused=30 world_hits=9 collections=6 sequence_draws=5667 max_shots=8 max_fx=58 max_error=5.1869619710487314e-13 failures=0
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_full_local_player_ticks" end time: Nov 03 18:18 Eastern Standard Time
+"browser_full_local_player_ticks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/84 Testing: race_session_lifecycle
+66/84 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_session_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"race_session_lifecycle" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 03 18:18 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/84 Testing: browser_route_recovery
+68/84 Test: browser_route_recovery
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_recovery_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_route_recovery" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+357 actual browser recovery steps; 83 tangent and 28 nearest cases; worst error 2.3e-13; 0 failures.
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_route_recovery" end time: Nov 03 18:18 Eastern Standard Time
+"browser_route_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/84 Testing: browser_road_picker
+70/84 Test: browser_road_picker
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_road_picker_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_road_picker" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+20 actual browser picker cases, 36 minimap cases; initialization/restart on 9 roads; no progression writes; 0 failures.
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"browser_road_picker" end time: Nov 03 18:18 Eastern Standard Time
+"browser_road_picker" time elapsed: 00:00:00
+----------------------------------------------------------
+
+72/84 Testing: browser_finish_results
+72/84 Test: browser_finish_results
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_finish_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_finish_results" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+270 browser autopilot controls; 6 solo summaries; nine-road session completion/motion/results/restart/cancellation; worst 6.22e-15; 0 failures.
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"browser_finish_results" end time: Nov 03 18:18 Eastern Standard Time
+"browser_finish_results" time elapsed: 00:00:00
+----------------------------------------------------------
+
+73/84 Testing: browser_collision_primitives
+73/84 Test: browser_collision_primitives
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_physics_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_collision_primitives" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser collision: 1344 shapes, 400 ordered cell queries, 120 segments, 720 car steps, 432 course shapes across nine roads; finite torus-center guard; worst 3.87e-12; 0 failures.
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"browser_collision_primitives" end time: Nov 03 18:18 Eastern Standard Time
+"browser_collision_primitives" time elapsed: 00:00:00
+----------------------------------------------------------
+
+79/84 Testing: browser_reticle_projection_visibility
+79/84 Test: browser_reticle_projection_visibility
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_reticle_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_reticle_projection_visibility" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual HUD.screen/Three reticles: 1620 projection cases/8 source visibility states; worst0.002180142118275441 pixels, raylib0, 0 failures; no window/GPU
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_reticle_projection_visibility" end time: Nov 03 18:18 Eastern Standard Time
+"browser_reticle_projection_visibility" time elapsed: 00:00:00
+----------------------------------------------------------
+
+80/84 Testing: browser_fallback_glyph_cpu_decode_layout
+80/84 Test: browser_fallback_glyph_cpu_decode_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_subtext_tests.js" "/ui-theme" "/ui-fallback"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_fallback_glyph_cpu_decode_layout" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Fallback glyphs:2 lossless white-core decodes,27060 RGBA bytes; UTF-8, fractional advances, bearings and missing-primary bypass passed; no GPU/window.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_fallback_glyph_cpu_decode_layout" end time: Nov 03 18:18 Eastern Standard Time
+"browser_fallback_glyph_cpu_decode_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+81/84 Testing: browser_hud_readout_font_metrics
+81/84 Test: browser_hud_readout_font_metrics
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_hud_readout_tests.js" "/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_hud_readout_font_metrics" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+HUD readouts: 2 reused Chrome panel states, four Canvas widths and 160 raw-font widths; worst corrected width24.3966675 px, old Chrome error197.343872 px; nominal baselines, 0 failures; no window/GPU
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_hud_readout_font_metrics" end time: Nov 03 18:18 Eastern Standard Time
+"browser_hud_readout_font_metrics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+82/84 Testing: browser_spin_readout_typography
+82/84 Test: browser_spin_readout_typography
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_spin_readout_tests.js" "/ui-theme/Orbitron-700.ttf"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_spin_readout_typography" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+SPIN readout: two reused Chrome group boxes, 64 independent font/fallback width cases; CSS em sizing and codepoint tracking; worst quantized width error3.11268969727, 0 failures; no window/GPU
+<end of output>
+Test time =   0.21 sec
+----------------------------------------------------------
+Test Passed.
+"browser_spin_readout_typography" end time: Nov 03 18:18 Eastern Standard Time
+"browser_spin_readout_typography" time elapsed: 00:00:00
+----------------------------------------------------------
+
+83/84 Testing: browser_edge_arrow_asset_layout
+83/84 Test: browser_edge_arrow_asset_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_arrow_art_tests.js" "/ui-guidance/edge-arrow@1x.png"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_edge_arrow_asset_layout" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Edge arrow: 918 actual-source offscreen transform cases, verified CPU PNG sums and127840-byte RGBA bound; max corner error3.41060513165e-13, 0 failures; no window/upload/GPU
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_edge_arrow_asset_layout" end time: Nov 03 18:18 Eastern Standard Time
+"browser_edge_arrow_asset_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+84/84 Testing: browser_ui_font_cpu_atlas
+84/84 Test: browser_ui_font_cpu_atlas
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/button-surface-web/rr_ui_font_tests.js" "/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/button-surface-web
+"browser_ui_font_cpu_atlas" start time: Nov 03 18:18 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Orbitron-700.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=12531144
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-900.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=14122856
+Rajdhani-Medium.ttf CPU atlas 512x256, conservative RGBA8=524288 bytes, glyph coverage=1197097
+CPU font rasterization/atlas passed; RGBA8 total=6815744; no window/GPU initialized.
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_font_cpu_atlas" end time: Nov 03 18:18 Eastern Standard Time
+"browser_ui_font_cpu_atlas" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 18:18 Eastern Standard Time

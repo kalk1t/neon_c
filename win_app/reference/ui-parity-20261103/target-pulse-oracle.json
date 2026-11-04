@@ -1,0 +1,43 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "package": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    }
+  ],
+  "rules": [
+    "* { box-sizing: border-box; }",
+    "#target { position: absolute; transform: translate(-50%, -50%); text-align: center; }",
+    "#target .diamond { width: 22px; height: 22px; margin: 0 auto; border: 3px solid var(--g); transform: rotate(45deg); box-shadow: 0 0 12px var(--g); animation: pulse 0.8s infinite alternate; }",
+    "#target span { display: block; margin-top: 8px; font: 700 13px var(--font); color: #d0ffe0; text-shadow: 0 0 6px var(--g); }",
+    "@keyframes pulse { to { transform: rotate(45deg) scale(1.25); } }"
+  ],
+  "states": 8608,
+  "sequences": 16,
+  "reused_group_geometry": {
+    "projected_x": 800,
+    "projected_y": 500,
+    "diamond_center_x": 799.9921875,
+    "diamond_center_y": 488,
+    "radius": 15.55633544921875,
+    "text_top": 507
+  },
+  "scope": "Actual source target visibility/position fragment and HUD.show parent class in inert DOM. Independent CSS alternate/ease wall-time model including display-none restarts, not fresh browser-engine timing or GPU projection. One verified prepared desktop group/child geometry reused; font baseline and compact scale remain nominal."
+}

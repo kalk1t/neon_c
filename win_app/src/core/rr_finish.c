@@ -8,6 +8,11 @@ RRInput rr_finish_controls(const RRTrack *track,const RRCar *car,int sample)
     double pitch=atan2(to.y,hypot(to.x,to.z));
     return (RRInput){1,fabs(dy)>.5?1:0,rr_clamp(-dy*3,-1,1),rr_clamp(pitch/.62*1.4,-1,1),fabs(dy)<.08};
 }
+RRInput rr_finish_player_controls(const RRTrack *track,const RRCar *car,int sample,RRFinishAim *aim)
+{
+    *aim=(RRFinishAim){car->yaw,car->pitch,car->fwd};
+    return rr_finish_controls(track,car,sample);
+}
 RRResultSummary rr_finish_summary(const double *laps,size_t count)
 {
     RRResultSummary result={0,0};

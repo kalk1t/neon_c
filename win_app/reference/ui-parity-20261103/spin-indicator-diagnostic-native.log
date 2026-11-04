@@ -1,0 +1,19 @@
+[ 92%] Built target rr_core
+[ 92%] Building C object CMakeFiles/rr_spin_indicator_tests.dir/tests/test_spin_indicator.c.obj
+test_spin_indicator.c
+[100%] Linking C executable rr_spin_indicator_tests.exe
+[100%] Built target rr_spin_indicator_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/spin-indicator-native
+    Start 1: browser_spin_indicator_compositing
+1/1 Test #1: browser_spin_indicator_compositing ...***Failed    0.03 sec
+Spin row602 cooldown5.9999999999989999 fill1.66644475996236e-13 added8 failures
+Spin indicator: 604 actual HUD states, five reused Chrome styles, clockwise disk geometry/compositing bounds; max192 triangles, worst fill1.1102230246251565e-16, 8 failures
+
+
+0% tests passed, 1 tests failed out of 1
+
+Total Test time (real) =   0.05 sec
+
+The following tests FAILED:
+	  1 - browser_spin_indicator_compositing (Failed)
+Errors while running CTest

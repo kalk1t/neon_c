@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "6c196ea92906788dd5687222686294c91027aca9c7d1c108b94f00383cda918a",
+  "target": {
+    "path": "build/pause-scene-native/bin/RoadstersRace.exe",
+    "sha256": "8d1c02d2edcf3032fc84ed54ca1b3b5c2e4108676a98af6cce618bc3f4b0f207"
+  },
+  "working_directory": "build/pause-scene-native/bin",
+  "static_only": true,
+  "launcher_executed": false
+}

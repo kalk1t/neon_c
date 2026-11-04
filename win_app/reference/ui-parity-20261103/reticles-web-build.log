@@ -1,0 +1,76 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\reticles-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/reticles-web
+[0/2] Re-checking globbed directories...
+[1/3] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[2/3] Linking C executable bin\RoadstersRace.html
+Test project C:/Users/User/Projects/neon_c/win_app/build/reticles-web
+      Start  1: browser_mouse_capture_warmup
+ 1/24 Test  #1: browser_mouse_capture_warmup ...............   Passed    0.18 sec
+      Start  2: minimap_circle_clip_analytic
+ 2/24 Test  #2: minimap_circle_clip_analytic ...............   Passed    0.18 sec
+      Start  3: browser_boost_meter_states
+ 3/24 Test  #3: browser_boost_meter_states .................   Passed    0.18 sec
+      Start  4: browser_nitro_call_timeline
+ 4/24 Test  #4: browser_nitro_call_timeline ................   Passed    0.18 sec
+      Start  5: browser_native_spin_control
+ 5/24 Test  #5: browser_native_spin_control ................   Passed    0.18 sec
+      Start  6: browser_collision_camera_shake
+ 6/24 Test  #6: browser_collision_camera_shake .............   Passed    0.18 sec
+      Start  7: browser_mouse_aim_settings
+ 7/24 Test  #7: browser_mouse_aim_settings .................   Passed    0.18 sec
+      Start  8: browser_race_announcement_channel
+ 8/24 Test  #8: browser_race_announcement_channel ..........   Passed    0.18 sec
+      Start  9: browser_target_guidance
+ 9/24 Test  #9: browser_target_guidance ....................   Passed    0.18 sec
+      Start 10: browser_unicode_submessage_timers
+10/24 Test #10: browser_unicode_submessage_timers ..........   Passed    0.18 sec
+      Start 11: browser_nitro_camera_fx
+11/24 Test #11: browser_nitro_camera_fx ....................   Passed    0.18 sec
+      Start 12: browser_countdown_start_cues
+12/24 Test #12: browser_countdown_start_cues ...............   Passed    0.18 sec
+      Start 13: browser_missed_gate_warning
+13/24 Test #13: browser_missed_gate_warning ................   Passed    0.19 sec
+      Start 20: browser_race_ui_state_layout
+14/24 Test #20: browser_race_ui_state_layout ...............   Passed    0.19 sec
+      Start 37: browser_player_arsenal_rules
+15/24 Test #37: browser_player_arsenal_rules ...............   Passed    0.19 sec
+      Start 39: browser_fire_dispatch_rng
+16/24 Test #39: browser_fire_dispatch_rng ..................   Passed    0.19 sec
+      Start 41: browser_full_local_player_ticks
+17/24 Test #41: browser_full_local_player_ticks ............   Passed    0.22 sec
+      Start 45: race_session_lifecycle
+18/24 Test #45: race_session_lifecycle .....................   Passed    0.20 sec
+      Start 49: browser_road_picker
+19/24 Test #49: browser_road_picker ........................   Passed    0.23 sec
+      Start 51: browser_finish_results
+20/24 Test #51: browser_finish_results .....................   Passed    0.33 sec
+      Start 52: browser_collision_primitives
+21/24 Test #52: browser_collision_primitives ...............   Passed    0.22 sec
+      Start 58: browser_reticle_projection_visibility
+22/24 Test #58: browser_reticle_projection_visibility ......   Passed    0.20 sec
+      Start 59: browser_fallback_glyph_cpu_decode_layout
+23/24 Test #59: browser_fallback_glyph_cpu_decode_layout ...   Passed    0.22 sec
+      Start 60: browser_ui_font_cpu_atlas
+24/24 Test #60: browser_ui_font_cpu_atlas ..................   Passed    0.21 sec
+
+100% tests passed out of 24
+
+Total Test time (real) =   4.78 sec

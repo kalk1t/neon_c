@@ -23,7 +23,7 @@ int main(void)
     }
     CHECK(rr_cockpit_layout(1).controls==2&&rr_cockpit_layout(1).race_column);CHECK(rr_cockpit_layout(2).pivot_y==.39);
     CHECK(rr_cockpit_visible(true,RR_SESSION_ACTIVE,0,0,true));CHECK(!rr_cockpit_visible(true,RR_SESSION_ACTIVE,.0125001,0,true));CHECK(rr_cockpit_visible(true,RR_SESSION_ACTIVE,.0124999,0,true));
-    CHECK(!rr_cockpit_visible(true,RR_SESSION_PAUSED,0,0,true)&&!rr_cockpit_visible(true,RR_SESSION_RESULTS,0,0,true)&&!rr_cockpit_visible(true,RR_SESSION_MENU,0,0,true));
+    CHECK(!rr_cockpit_visible(true,RR_SESSION_PAUSED,0,0,true)&&rr_cockpit_visible(true,RR_SESSION_RESULTS,0,0,true)&&!rr_cockpit_visible(true,RR_SESSION_MENU,0,0,true));
     CHECK(!rr_cockpit_visible(true,RR_SESSION_ACTIVE,0,0,false));CHECK(!rr_cockpit_visible(false,RR_SESSION_ACTIVE,0,0,true));
     CHECK(fabs(rr_cockpit_steer(0,1,.05,true)-.4)<1e-12);CHECK(fabs(rr_cockpit_steer(1,1,.05,false)-.6)<1e-12);
     RRCar car={0};car.pos=rr_v3(3,100,4);car.fwd=rr_v3(0,0,-1);RRCKSeat seat=rr_cockpit_seat(&car);CHECK(fabs(seat.position.x-3)<1e-12&&fabs(seat.position.y-101.5)<1e-12&&fabs(seat.position.z-3.4)<1e-12);CHECK(fabs(seat.forward.y+sin(.2))<1e-12&&fabs(rr_length(seat.forward)-1)<1e-12&&seat.extra_fov==8);

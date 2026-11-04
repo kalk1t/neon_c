@@ -2,6 +2,7 @@
 #define RR_COCKPIT_PLAN_H
 #include "rr_ui_layout.h"
 #include "rr_session.h"
+#include "rr_view_controls.h"
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>
@@ -39,7 +40,7 @@ static inline double rr_cockpit_steer(double previous,double target,double dt,bo
 {return previous+((playing?target:0)-previous)*fmin(1,fmax(0,dt)*8);}
 static inline bool rr_cockpit_visible(bool requested,RRSessionPhase phase,double look_yaw,double look_pitch,bool ready)
 {
-    bool flight=phase==RR_SESSION_ACTIVE||phase==RR_SESSION_COUNTDOWN||phase==RR_SESSION_FINISHED;
+    bool flight=rr_view_flight_phase(phase);
     double orbit=fmin(1,(fabs(atan2(sin(look_yaw),cos(look_yaw)))+fabs(look_pitch))*4);return requested&&ready&&flight&&orbit<.05;
 }
 typedef struct RRCKSeat {RRVec3 position,forward;double extra_fov;} RRCKSeat;

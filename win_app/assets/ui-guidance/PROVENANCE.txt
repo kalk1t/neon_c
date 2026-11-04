@@ -1,0 +1,5 @@
+Existing browser UI asset, copied byte-for-byte from RoadstersSharedAssets-v3/hud/markers/edge-arrow/reference@1x.png.
+Known package manifest SHA256 e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443.
+Original user-project browser component export, U+27A4 glyph with source green shadow on transparent page; 170x188 RGBA at1x. No new generation, recoloring or whole-font redistribution.
+Element box42x60; PNG padding64; CSS transform-origin21px30px. Runtime projection/visibility/distance remain source-driven.
+Full checksum, decoder/rotation evidence and native visual limits: reference/ui-parity-20261103/arrow-art-implementation.json.

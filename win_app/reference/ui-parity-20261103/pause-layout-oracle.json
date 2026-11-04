@@ -1,0 +1,74 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\index.html",
+      "sha256": "2c1447d9ae11c064cc290e2213052b5a31339d946ac1cf4b77712128d9be4d57"
+    }
+  ],
+  "current_sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\index.html",
+      "sha256": "e1d6cc204d926795a0612de6e3a11aa02e3a4e7b64f734c2e45c97cc115eb313"
+    }
+  ],
+  "selected_css_matches_v3": [
+    "  --c: #19e6ff;",
+    "  --bg: rgba(4, 8, 30, 0.72);",
+    "  --font: Orbitron, 'Arial Black', sans-serif;",
+    "* { box-sizing: border-box; }",
+    "#menu, #pause, #results { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 7vw; background: linear-gradient(90deg, rgba(3, 4, 20, 0.85) 0%, rgba(3, 4, 20, 0.35) 45%, transparent 70%); z-index: 10; }",
+    "#pause, #results { justify-content: center; padding: 0; background: rgba(3, 4, 20, 0.55); }",
+    ".menu-card { width: 470px; display: flex; flex-direction: column; gap: 14px; }",
+    ".menu-card.small { width: 380px; padding: 30px; background: var(--bg); border: 2px solid var(--c); box-shadow: 0 0 30px rgba(25, 230, 255, 0.4); }",
+    ".brand { font: 900 64px/0.95 var(--font); color: #fff; letter-spacing: 4px; text-shadow: 0 0 18px var(--c); }",
+    ".brand.sm { font-size: 40px; text-align: center; }",
+    "button { pointer-events: auto; font: 700 20px var(--font); letter-spacing: 3px; color: #dff; background: rgba(6, 14, 46, 0.8); border: 2px solid var(--c); padding: 16px 22px; text-align: left; cursor: pointer;",
+    ".pause-hint { font: 600 11px var(--font); letter-spacing: 2px; color: #7fa9c4; text-align: center; }",
+    ".pause-contact, .small-contact { font: 500 14px Rajdhani, sans-serif; color: #9bd; text-align: center; margin-top: 6px; }",
+    "#pause { justify-content: flex-start; padding-left: 6vw; cursor: grab; background: linear-gradient(90deg, rgba(3, 4, 20, 0.82) 0%, rgba(3, 4, 20, 0.3) 32%, transparent 50%); }"
+  ],
+  "measured_states": [
+    {
+      "id": "pause/panel/desktop",
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "rect": {
+        "x": 96,
+        "y": 303,
+        "width": 380,
+        "height": 394
+      }
+    },
+    {
+      "id": "pause/panel/compact",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rect": {
+        "x": 76.796875,
+        "y": 163,
+        "width": 380,
+        "height": 394
+      }
+    }
+  ],
+  "gradient_cases": 1007,
+  "scope": "Reuses checksum-verified asset-team Chromium desktop/compact layout measurements; current relevant CSS matches v3. Gradient expectations derive from current CSS stops, not native implementation. No fresh browser raster, native render, asset copy or account/service work."
+}

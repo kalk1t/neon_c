@@ -1,0 +1,61 @@
+{
+  "version": "0.2.11",
+  "source": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+    "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+  },
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\pause\\buttons\\resume\\default\\chrome@1x.png",
+      "sha256": "266a11e7427840bcff44ffd1ecf3bc1f5ead8103e344a4da2b05e07727f18804"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\pause\\buttons\\resume\\disabled\\chrome@1x.png",
+      "sha256": "cc34f36aaa16ea698e1ff30ed8d51efd97411e6143c807d1b578ab3e11e4fe3a"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\pause\\buttons\\restart\\default\\chrome@1x.png",
+      "sha256": "dd192636d33e5dd916dea06f5299206222d7c363a6bde7deea2d90bd5b1850b7"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\pause\\buttons\\restart\\disabled\\chrome@1x.png",
+      "sha256": "802424ca1015232c56d07ac3ea4da10661ecdece8e1e5fc4339a2335a918029d"
+    }
+  ],
+  "rules": [
+    "button { padding-top: 10px; padding-bottom: 10px; font-size: 18px; }",
+    "button.primary { border-color: var(--m); background: linear-gradient(90deg, rgba(255, 43, 214, 0.35), rgba(6, 14, 46, 0.8)); }",
+    "button:disabled { opacity: 0.4; cursor: default; }"
+  ],
+  "checks": [
+    {
+      "id": "pause/buttons/resume/default",
+      "mask_mismatches": 0
+    },
+    {
+      "id": "pause/buttons/resume/disabled",
+      "mask_mismatches": 0
+    },
+    {
+      "id": "pause/buttons/restart/default",
+      "mask_mismatches": 0
+    },
+    {
+      "id": "pause/buttons/restart/disabled",
+      "mask_mismatches": 0
+    }
+  ],
+  "mask_pixels": 54768,
+  "color_samples": 280,
+  "scope": "Reused four default/disabled primary/normal browser chrome PNGs, CRC checked. Boundary mask band18px/outside2px excludes1.1px around two diagonal cuts. Interior RGBA samples use only top/bottom12px padding bands, outside the centered25px text line plus6px guard. Chrome layers still contain glyphs; naming is not proof of no text. No fresh engine/GPU raster, hover/shadow or compact/DPR verification."
+}

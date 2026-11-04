@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\car.js",
+      "sha256": "2f706c37903e1552ddf328188c765818f5dad683f774f426ef73d8cdc077a3af"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    }
+  ],
+  "matched_css": [
+    ".attack .ring.emp { width: 74px; height: 74px; background: conic-gradient(#ff2bd6 var(--p, 100%), rgba(25, 230, 255, 0.25) 0); }",
+    ".attack .ring.emp b { width: 100%; height: 100%; border-radius: 50%; background: #0a0420; display: grid; place-items: center; font: 900 16px var(--font); color: #ffc4f4; text-shadow: 0 0 10px var(--m); }",
+    ".attack .ring.emp.cool b { opacity: 0.35; }",
+    ".attack .ring.spin { background: conic-gradient(#19e6ff var(--p, 100%), rgba(255, 43, 214, 0.25) 0); }",
+    ".attack .ring.spin b { color: #c4fbff; text-shadow: 0 0 10px var(--c); font-size: 14px; }",
+    ".attack .ring { width: 86px; height: 86px; border-radius: 50%; padding: 6px; background: conic-gradient(var(--m) var(--p, 100%), rgba(25, 230, 255, 0.35) 0); display: grid; place-items: center; filter: drop-shadow(0 0 8px var(--m)); }",
+    ".wpn .key { font: 600 9px var(--font); letter-spacing: 1.5px; color: #c9a6d9; white-space: nowrap; }"
+  ],
+  "reused_browser_states": [
+    "hud/rings/spin/6",
+    "hud/rings/spin/4p5",
+    "hud/rings/spin/3",
+    "hud/rings/spin/1p5",
+    "hud/rings/spin/0"
+  ],
+  "fresh_fill_states": 604,
+  "scope": "Actual HUD spin fill/cool-class statements in VM; checksum-verified v3 Chromium spin74px/padding6/child62px/font/color/opacity records, selected current CSS identical. No fresh browser/native raster, graphics, input, account or storage."
+}

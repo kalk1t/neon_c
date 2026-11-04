@@ -1,0 +1,63 @@
+{
+  "version": "0.2.11",
+  "source": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+    "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+  },
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\hud\\markers\\edge-arrow\\reference@1x.png",
+      "sha256": "78beda32b60e5807c81de7bcb3a8abba88c88532db8411948ebf6ac9469ea632"
+    }
+  ],
+  "rules": [
+    ":root {\n  --c: #19e6ff;\n  --m: #ff2bd6;\n  --g: #2bff7a; /* route guidance (checkpoints, path) */\n  --bg: rgba(4, 8, 30, 0.72);\n  --font: Orbitron, 'Arial Black', sans-serif;\n}",
+    "html, body { margin: 0; height: 100%; background: #05061a; overflow: hidden; color: #e8fbff; font-family: Rajdhani, sans-serif; user-select: none; }",
+    "#edge-arrow { position: absolute; font-size: 42px; color: var(--g); text-shadow: 0 0 14px var(--g); transform-origin: center; }"
+  ],
+  "asset": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\hud\\markers\\edge-arrow\\reference@1x.png",
+  "asset_sha256": "78beda32b60e5807c81de7bcb3a8abba88c88532db8411948ebf6ac9469ea632",
+  "bytes": 4708,
+  "dimensions": [
+    170,
+    188
+  ],
+  "rgba_bytes": 127840,
+  "element_box": [
+    42,
+    60
+  ],
+  "padding": [
+    64,
+    64
+  ],
+  "transform_origin": [
+    21,
+    30
+  ],
+  "rgba_sums": [
+    81656,
+    725730,
+    297257,
+    167705
+  ],
+  "ink_pixels": 2846,
+  "clear_pixels": 29114,
+  "alpha_bounds": [
+    53,
+    66,
+    114,
+    122
+  ],
+  "scope": "Existing source-colored glyph plus shadow PNG copied byte-for-byte, not generated; independent CPU PNG decode/geometry metadata. Native upload/pixels/filtering/rotation/visual acceptance untested."
+}

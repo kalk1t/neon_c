@@ -1,0 +1,73 @@
+-- The C compiler identification is MSVC 19.51.36260.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.8s)
+-- Generating done (0.6s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/ui-layers-native
+[  1%] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.obj
+rr_local_run.c
+[  2%] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.obj
+rr_battle.c
+[  2%] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.obj
+rr_fire.c
+[  3%] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.obj
+rr_combat.c
+[  3%] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.obj
+rr_arsenal.c
+[  4%] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.obj
+rr_targeting.c
+[  4%] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.obj
+rr_pack.c
+[  5%] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.obj
+rr_coins.c
+[  5%] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.obj
+rr_rival.c
+[  6%] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.obj
+rr_ai.c
+[  6%] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.obj
+rr_flight.c
+[  7%] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.obj
+rr_track.c
+[  7%] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.obj
+rr_race.c
+[  8%] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.obj
+rr_session.c
+[  8%] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.obj
+rr_recovery.c
+[  9%] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.obj
+rr_road_picker.c
+[  9%] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.obj
+rr_corridor.c
+[ 10%] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.obj
+rr_city_plan.c
+[ 10%] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.obj
+rr_finish.c
+[ 11%] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.obj
+rr_physics.c
+[ 12%] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.obj
+rr_world_plan.c
+[ 12%] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.obj
+rr_course_plan.c
+[ 13%] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.obj
+rr_shared_scenery.c
+[ 13%] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.obj
+rr_canonical_city.c
+[ 14%] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.obj
+rr_facade.c
+[ 14%] Linking C static library rr_core.lib
+[ 14%] Built target rr_core
+[ 15%] Building C object CMakeFiles/rr_ui_layer_tests.dir/tests/test_ui_layers.c.obj
+test_ui_layers.c
+C:\Users\User\Projects\neon_c\win_app\tests\test_ui_layers.c(18): error C2220: the following warning is treated as an error
+C:\Users\User\Projects\neon_c\win_app\tests\test_ui_layers.c(18): warning C4223: nonstandard extension used: non-lvalue array converted to pointer
+C:\Users\User\Projects\neon_c\win_app\tests\test_ui_layers.c(22): warning C4223: nonstandard extension used: non-lvalue array converted to pointer
+C:\Users\User\Projects\neon_c\win_app\tests\test_ui_layers.c(23): warning C4223: nonstandard extension used: non-lvalue array converted to pointer
+NMAKE : fatal error U1077: '"C:\Program Files\CMake\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\rr_ui_layer_tests.dir\tests\test_ui_layers.c.obj.d --working-dir=C:\Users\User\Projects\neon_c\win_app\build\ui-layers-native --filter-prefix="Note: including file: " -- "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe" @C:\Users\User\AppData\Local\Temp\nm5241.tmp' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\rr_ui_layer_tests.dir\build.make /nologo -SL                 CMakeFiles\rr_ui_layer_tests.dir\build' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\nmake.exe" -s -f CMakeFiles\Makefile2 /nologo -LS                 all' : return code '0x2'
+Stop.

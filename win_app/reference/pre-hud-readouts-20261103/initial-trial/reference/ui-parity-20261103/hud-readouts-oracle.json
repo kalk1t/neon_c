@@ -1,0 +1,79 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\recipes\\measured-layouts.json",
+      "sha256": "f7fd1a6a1f8c3df0f0dc304fb88db3f35288b313aa35722da4afd0fd333effc6"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\recipes\\font-matching.json",
+      "sha256": "fa14b6ccd094d5e184b0b7034c5b2acd18b8985193a0740b5865d8eea23eefc7"
+    }
+  ],
+  "current_css": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+    "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+  },
+  "matching_css": [
+    "  --font: Orbitron, 'Arial Black', sans-serif;",
+    "* { box-sizing: border-box; }",
+    ".panel {\n  background: linear-gradient(180deg, rgba(8, 20, 60, 0.78), rgba(3, 6, 24, 0.78));\n  border: 2px solid var(--c);\n  box-shadow: 0 0 14px rgba(25, 230, 255, 0.55), inset 0 0 18px rgba(25, 230, 255, 0.18);\n  clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px);\n  padding: 12px 22px;\n}",
+    ".lbl { font: 700 15px var(--font); color: var(--c); letter-spacing: 2px; text-shadow: 0 0 8px var(--c); }",
+    "#bar { position: absolute; left: 26px; right: 26px; bottom: 26px; display: flex; gap: 14px; align-items: flex-end; justify-content: space-between; }",
+    ".speed { width: 230px; }",
+    "#speed { font: 900 64px/1 var(--font); color: #f2feff; text-shadow: 0 0 14px var(--c); margin-top: 4px; }",
+    ".unit { font: 700 18px var(--font); color: var(--c); }",
+    ".lap { position: fixed; top: 22px; left: 50%; transform: translateX(-50%); width: 300px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }",
+    ".lap .row { display: flex; justify-content: space-between; align-items: baseline; }",
+    ".lap .row b { font: 900 34px var(--font); color: #fff; }",
+    ".lap .cp b { font-size: 20px; }",
+    "#time { font: 900 40px var(--font); color: #fff; text-shadow: 0 0 10px var(--c); letter-spacing: 1px; }"
+  ],
+  "fonts": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-500.ttf",
+      "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+      "units": 1000,
+      "ascent": 1011,
+      "descent": -243,
+      "ratio": 1.254
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+      "units": 1000,
+      "ascent": 1011,
+      "descent": -243,
+      "ratio": 1.254
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+      "units": 1000,
+      "ascent": 1011,
+      "descent": -243,
+      "ratio": 1.254
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Rajdhani-Medium.ttf",
+      "sha256": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802",
+      "units": 1000,
+      "ascent": 930,
+      "descent": -346,
+      "ratio": 1.276
+    }
+  ],
+  "reused_layout_states": 2,
+  "reused_chrome_canvas_widths": 4,
+  "font_table_width_cases": 160,
+  "scope": "Reused checksum-verified asset-team Chromium panel/child rectangles and four Canvas widths; selected current CSS unchanged. Independent sfnt head/hhea/cmap/hmtx parser supplies native-face metrics/advances. Nominal baseline model, not fresh browser ink/baseline or GPU/raster acceptance."
+}

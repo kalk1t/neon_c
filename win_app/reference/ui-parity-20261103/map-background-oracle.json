@@ -1,0 +1,38 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\third_party\\raylib-6.2-source\\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca\\src\\rshapes.c",
+      "sha256": "928085d04b8fa375f870a33a4f32f9a3ff192c70a694ea39af72a569a1887522"
+    }
+  ],
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\hud\\minimap-frame\\chrome@1x.png",
+      "sha256": "3797edc9692ff6b35be701099bb6e90b8f056c8cec261056d014de724d9937f5"
+    }
+  ],
+  "rules": [
+    "* { box-sizing: border-box; }",
+    "#minimap { position: absolute; top: 22px; right: 22px; width: 240px; height: 240px; border: 2px solid var(--c); border-radius: 50%; background: radial-gradient(rgba(10, 20, 70, 0.8), rgba(3, 5, 22, 0.85)); box-shadow: 0 0 18px rgba(25, 230, 255, 0.5); overflow: hidden; }"
+  ],
+  "source_fan": "void DrawCircleGradient(Vector2 center, float radius, Color inner, Color outer)\n{\n    rlBegin(RL_TRIANGLES);\n        for (int i = 0; i < 360; i += 10)\n        {\n            rlColor4ub(inner.r, inner.g, inner.b, inner.a);\n            rlVertex2f(center.x, center.y);\n            rlColor4ub(outer.r, outer.g, outer.b, outer.a);\n            rlVertex2f(center.x + cosf(DEG2RAD*(i + 10))*radius, center.y + sinf(DEG2RAD*(i + 10))*radius);\n            rlColor4ub(outer.r, outer.g, outer.b, outer.a);\n            rlVertex2f(center.x + cosf(DEG2RAD*i)*radius, center.y + sinf(DEG2RAD*i)*radius);\n        }\n    rlEnd();\n}\n\n",
+  "reused_pixel_samples": 379,
+  "sample_region": "PNG pixel centers within radius88 of minimap center, gridstep8; interior excludes frame/text-edge/shadow-dominant pixels. No runtime/distance culling change.",
+  "gradient_origin": "rgba(0, 0, 0, 0) radial-gradient(rgba(10, 20, 70, 0.8), rgba(3, 5, 22, 0.85)) repeat scroll 0% 0% / auto padding-box border-box",
+  "scope": "CRC-checked standard-library decoding of known-manifest prepared static Chrome PNG; current relevant CSS unchanged. CPU raylib36-fan interpolation model, not native framebuffer/pixel, border/glow, whole-disk or performance acceptance."
+}

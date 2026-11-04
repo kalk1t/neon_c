@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "385b080e078c7aeb691991de574deb901e25dd20db242e3a994e3f469c5d2fa5",
+  "target": {
+    "path": "build/map-background-native/bin/RoadstersRace.exe",
+    "sha256": "03d873573564e8dcd3ab35d0f128ac1cdbafbf283cc9b2202e756c1a7f7f6349"
+  },
+  "working_directory": "build/map-background-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-map-background-20261103/Run-RoadstersRace.cmd"
+}

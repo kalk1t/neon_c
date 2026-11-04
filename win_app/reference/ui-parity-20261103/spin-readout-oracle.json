@@ -1,0 +1,53 @@
+{
+  "version": "0.2.11",
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\recipes\\measured-layouts.json",
+      "sha256": "f7fd1a6a1f8c3df0f0dc304fb88db3f35288b313aa35722da4afd0fd333effc6"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\fonts\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    }
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\index.html",
+      "sha256": "e1d6cc204d926795a0612de6e3a11aa02e3a4e7b64f734c2e45c97cc115eb313"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\src\\presentation\\rr_subtext_data.h",
+      "sha256": "f08579abddbb6d28aabc31e4face146ce40e82a6f21f928e949b6a4e6fd9c281"
+    }
+  ],
+  "rules": [
+    ".wpn { display: flex; flex-direction: column; align-items: center; gap: 6px; }",
+    ".wpn .key { font: 600 9px var(--font); letter-spacing: 1.5px; color: #c9a6d9; white-space: nowrap; }",
+    ".attack .ring.emp { width: 74px; height: 74px; background: conic-gradient(#ff2bd6 var(--p, 100%), rgba(25, 230, 255, 0.25) 0); }",
+    ".attack .ring.emp b { width: 100%; height: 100%; border-radius: 50%; background: #0a0420; display: grid; place-items: center; font: 900 16px var(--font); color: #ffc4f4; text-shadow: 0 0 10px var(--m); }",
+    ".attack .ring.spin b { color: #c4fbff; text-shadow: 0 0 10px var(--c); font-size: 14px; }",
+    ".attack .ring { width: 86px; height: 86px; border-radius: 50%; padding: 6px; background: conic-gradient(var(--m) var(--p, 100%), rgba(25, 230, 255, 0.35) 0); display: grid; place-items: center; filter: drop-shadow(0 0 8px var(--m)); }"
+  ],
+  "source_key": "DODGE \u00b7 F",
+  "reused_layout_states": 2,
+  "width_cases": 64,
+  "scope": "Prepared full weapon-panel SPIN group offsets/right inset and line heights, current relevant CSS/HTML unchanged. Independent hmtx ASCII widths plus existing browser26px middot advance scaled to caption size. Not fresh9px fallback hinting, glyph baselines, GPU group-opacity/glow or full weapons-panel acceptance."
+}

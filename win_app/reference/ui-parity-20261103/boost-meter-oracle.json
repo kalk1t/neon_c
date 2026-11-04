@@ -1,0 +1,130 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "selected_directory_and_archive_files_verified": [
+    {
+      "file": "assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "file": "source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "file": "source/hud.js",
+      "sha256": "ec5eb2b28156e4effba2484b4807be439048f1b4f1964d603bfc1ff9c904913b"
+    }
+  ],
+  "current_css": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+  "current_css_sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2",
+  "current_hud": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "current_hud_sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "selected_hud_boost_rules_match_packaged_reference": true,
+  "selected_css_sha256": "8ba44484db7fee029d40990a140c97da1c93cd70dda059b554047140191d4815",
+  "selected_css_matches_packaged_chromium_reference": true,
+  "samples": [
+    {
+      "id": "hud/meters/boost/full",
+      "boost": 1,
+      "on": false,
+      "low": false,
+      "animation": 0,
+      "opacity": 1.0,
+      "brightness": 1,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        182.7978515625,
+        6
+      ],
+      "computed_animation": "none",
+      "computed_filter": "none"
+    },
+    {
+      "id": "hud/meters/boost/partial",
+      "boost": 0.5,
+      "on": false,
+      "low": false,
+      "animation": 0,
+      "opacity": 1.0,
+      "brightness": 1,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        92.7978515625,
+        6
+      ],
+      "computed_animation": "none",
+      "computed_filter": "none"
+    },
+    {
+      "id": "hud/meters/boost/low",
+      "boost": 0.15,
+      "on": false,
+      "low": true,
+      "animation": 2,
+      "opacity": 1.0,
+      "brightness": 1,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        29.7978515625,
+        6
+      ],
+      "computed_animation": "0.4s infinite alternate nitro-low",
+      "computed_filter": "none"
+    },
+    {
+      "id": "hud/meters/boost/empty",
+      "boost": 0,
+      "on": false,
+      "low": true,
+      "animation": 2,
+      "opacity": 1.0,
+      "brightness": 1,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        2.7978515625,
+        6
+      ],
+      "computed_animation": "0.4s infinite alternate nitro-low",
+      "computed_filter": "none"
+    },
+    {
+      "id": "hud/meters/boost/burning",
+      "boost": 0.6,
+      "on": true,
+      "low": false,
+      "animation": 1,
+      "opacity": 1.0,
+      "brightness": 1.0,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        110.7978515625,
+        6
+      ],
+      "computed_animation": "0.22s infinite alternate nitro-bar",
+      "computed_filter": "brightness(1)"
+    },
+    {
+      "id": "hud/meters/boost/burning-low",
+      "boost": 0.1,
+      "on": true,
+      "low": true,
+      "animation": 2,
+      "opacity": 1.0,
+      "brightness": 1,
+      "relative_fill_bounds": [
+        23.60107421875,
+        132,
+        20.7978515625,
+        6
+      ],
+      "computed_animation": "0.4s infinite alternate nitro-low",
+      "computed_filter": "none"
+    }
+  ],
+  "scope": "Six reused Chromium initial meter states/child geometry from verified v3 package. Current selected CSS and HUD boost rules unchanged. Animation endpoints follow source; intermediate easing and native GPU/filter pixels not engine-verified."
+}

@@ -1,0 +1,672 @@
+Start testing: Nov 03 16:19 Eastern Standard Time
+----------------------------------------------------------
+1/70 Testing: browser_spin_indicator_compositing
+1/70 Test: browser_spin_indicator_compositing
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_spin_indicator_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_spin_indicator_compositing" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Spin indicator: 604 actual HUD states, five reused Chrome styles, clockwise disk geometry/compositing bounds; max192 triangles, worst fill1.1102230246251565e-16, 0 failures
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_spin_indicator_compositing" end time: Nov 03 16:19 Eastern Standard Time
+"browser_spin_indicator_compositing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/70 Testing: browser_pause_layout_backdrop
+2/70 Test: browser_pause_layout_backdrop
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_pause_layout_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_pause_layout_backdrop" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Pause layout: 2 verified Chrome card states, 1007 CSS gradient samples, seven native viewport/control checks; worst left-edge error0.00312042236328125 px, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_layout_backdrop" end time: Nov 03 16:19 Eastern Standard Time
+"browser_pause_layout_backdrop" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/70 Testing: browser_ui_visibility_paint_order
+3/70 Test: browser_ui_visibility_paint_order
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_ui_layer_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_ui_visibility_paint_order" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser UI layers: 54 transition states, CSS backdrop/order, external NITRO, native guards and lifecycle; max3 layers, 0 failures
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_visibility_paint_order" end time: Nov 03 16:19 Eastern Standard Time
+"browser_ui_visibility_paint_order" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/70 Testing: browser_finish_aim_target_continuity
+4/70 Test: browser_finish_aim_target_continuity
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_finish_guidance_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_finish_aim_target_continuity" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser finish guidance: 810 aim/control cases, 126 target cases across four phases; nine two-lap completion/pilot/results/restart sequences, worst3.865352482534945e-12, 0 failures
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_finish_aim_target_continuity" end time: Nov 03 16:19 Eastern Standard Time
+"browser_finish_aim_target_continuity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/70 Testing: browser_recovery_feedback_lifecycle
+5/70 Test: browser_recovery_feedback_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_recovery_feedback_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_recovery_feedback_lifecycle" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser recovery feedback: 2896 frames across 70 sequences, all nine real update/respawn seams; worst error0, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_recovery_feedback_lifecycle" end time: Nov 03 16:19 Eastern Standard Time
+"browser_recovery_feedback_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/70 Testing: browser_minimap_checkpoint_primitives
+6/70 Test: browser_minimap_checkpoint_primitives
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_map_mark_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_minimap_checkpoint_primitives" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser minimap marks: 192 style, 336 analytic circle/annulus, 60 rectangle cases, all nine roads; max clipped vertices5, max gates19, worst area error1.4743381504928834, 0 failures
+Actual roads desktop markers: max input triangles1346, max output triangles1346; state40 bytes, caller clip2112 bytes, no new textures/tables/heap
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_minimap_checkpoint_primitives" end time: Nov 03 16:19 Eastern Standard Time
+"browser_minimap_checkpoint_primitives" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/70 Testing: browser_view_controls_lifecycle
+7/70 Test: browser_view_controls_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_view_control_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_view_controls_lifecycle" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser C/I: 288 dispatch + 180 visibility cases; native focus/error/readiness and lifecycle sequence: 0 failures
+Known exact-threshold visibility differences: 16; worst orbit error 1.1102230246251565e-16 (strict branch parity remains open at libm rounding boundary)
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_view_controls_lifecycle" end time: Nov 03 16:19 Eastern Standard Time
+"browser_view_controls_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/70 Testing: browser_player_reset_order
+8/70 Test: browser_player_reset_order
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_player_control_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_player_reset_order" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser reset/spin/camera prefix: 96 scenarios, worst2.7755575615628914e-17, 0 failures; resources/progress retained, no camera snap
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_reset_order" end time: Nov 03 16:19 Eastern Standard Time
+"browser_player_reset_order" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/70 Testing: browser_best_record_readouts
+9/70 Test: browser_best_record_readouts
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_best_readout_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_best_record_readouts" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Best record UI: 35 actual browser home/row strings; read-only, modes/restart/improvement/locked-road and footer containment checks, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_best_record_readouts" end time: Nov 03 16:19 Eastern Standard Time
+"browser_best_record_readouts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/70 Testing: browser_mouse_capture_warmup
+10/70 Test: browser_mouse_capture_warmup
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_mouse_capture_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_mouse_capture_warmup" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser capture guard: 48 source listener eligibility states plus keyboard/capture-loss/reacquire checks, 0 failures; event-vs-frame delivery unqualified
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_mouse_capture_warmup" end time: Nov 03 16:19 Eastern Standard Time
+"browser_mouse_capture_warmup" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/70 Testing: minimap_circle_clip_analytic
+11/70 Test: minimap_circle_clip_analytic
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_circle_clip_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"minimap_circle_clip_analytic" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Circle clipping: 516 analytic area cases, max vertices128/marker6, worst sampled marker area loss1.0361180619379411, 0 failures;128-gon radial gap at118px 0.035539393847898504
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"minimap_circle_clip_analytic" end time: Nov 03 16:19 Eastern Standard Time
+"minimap_circle_clip_analytic" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/70 Testing: browser_boost_meter_states
+12/70 Test: browser_boost_meter_states
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_boost_meter_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_boost_meter_states" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Boost meter: 6 manifest-verified Chromium initial states/geometry, strict20% threshold, animation precedence/restart/alternate endpoints, 0 failures; no GPU
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_boost_meter_states" end time: Nov 03 16:19 Eastern Standard Time
+"browser_boost_meter_states" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/70 Testing: browser_nitro_call_timeline
+13/70 Test: browser_nitro_call_timeline
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_nitro_call_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_nitro_call_timeline" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Nitro call: 2 manifest-verified Chromium samples, wall-clock/retrigger/expiry checks, 0 failures; no GPU
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_nitro_call_timeline" end time: Nov 03 16:19 Eastern Standard Time
+"browser_nitro_call_timeline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/70 Testing: browser_native_spin_control
+14/70 Test: browser_native_spin_control
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_spin_control_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_native_spin_control" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser spin control/dodge: 192 cases, worst 0, 0 failures; finish-frame suppression checked
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_native_spin_control" end time: Nov 03 16:19 Eastern Standard Time
+"browser_native_spin_control" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/70 Testing: browser_collision_camera_shake
+15/70 Test: browser_collision_camera_shake
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_impact_fx_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_collision_camera_shake" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser impact shake: 336 boundary/order cases, worst 0, 0 failures; session report lifecycle checked
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_collision_camera_shake" end time: Nov 03 16:19 Eastern Standard Time
+"browser_collision_camera_shake" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/70 Testing: browser_mouse_aim_settings
+16/70 Test: browser_mouse_aim_settings
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_mouse_aim_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_mouse_aim_settings" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser updateAim: 384 states, worst 1.1102230246251565e-16, 0 failures; 45 slider steps checked
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_mouse_aim_settings" end time: Nov 03 16:19 Eastern Standard Time
+"browser_mouse_aim_settings" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/70 Testing: browser_race_announcement_channel
+17/70 Test: browser_race_announcement_channel
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_hud_message_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_race_announcement_channel" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser HUD announcement channel: 76 states plus recovery timer coupling, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_race_announcement_channel" end time: Nov 03 16:19 Eastern Standard Time
+"browser_race_announcement_channel" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/70 Testing: browser_target_guidance
+18/70 Test: browser_target_guidance
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_target_guidance_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_target_guidance" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser target guidance: 1296 cases, worst 2.2737367544323206e-13, failures 0
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_target_guidance" end time: Nov 03 16:19 Eastern Standard Time
+"browser_target_guidance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/70 Testing: browser_unicode_submessage_timers
+19/70 Test: browser_unicode_submessage_timers
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_sub_notice_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_unicode_submessage_timers" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual source checkpoint/lap/HUD.sub: 92 Unicode caption/timer states, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_unicode_submessage_timers" end time: Nov 03 16:19 Eastern Standard Time
+"browser_unicode_submessage_timers" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/70 Testing: browser_nitro_camera_fx
+20/70 Test: browser_nitro_camera_fx
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_camera_fx_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_nitro_camera_fx" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser Nitro/camera FX: 720 sequential source frames, max error 1.4210854715202004e-14, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_nitro_camera_fx" end time: Nov 03 16:19 Eastern Standard Time
+"browser_nitro_camera_fx" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/70 Testing: browser_countdown_start_cues
+21/70 Test: browser_countdown_start_cues
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_start_cue_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_countdown_start_cues" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual browser countdown/HUD timers: 1680 session-coupled frames, max timer error 0, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_countdown_start_cues" end time: Nov 03 16:19 Eastern Standard Time
+"browser_countdown_start_cues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/70 Testing: browser_missed_gate_warning
+22/70 Test: browser_missed_gate_warning
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_race_warning_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_missed_gate_warning" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual raceRules missed-gate warning: 1248 boundary cases, 48 warnings, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_missed_gate_warning" end time: Nov 03 16:19 Eastern Standard Time
+"browser_missed_gate_warning" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/70 Testing: browser_camera_motion_timing
+23/70 Test: browser_camera_motion_timing
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_camera_motion_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_camera_motion_timing" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual v0.2.6 chaseCamera timing: 960 sequential states and resulting poses, max error 1.8207657603852567e-14, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_camera_motion_timing" end time: Nov 03 16:19 Eastern Standard Time
+"browser_camera_motion_timing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/70 Testing: browser_chase_camera_geometry
+24/70 Test: browser_chase_camera_geometry
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_chase_camera_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_chase_camera_geometry" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual v0.2.6 chaseCamera: 1225 geometry/bank/speed/degenerate cases, max error 4.4408920985006262e-16, 0 failures
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_chase_camera_geometry" end time: Nov 03 16:19 Eastern Standard Time
+"browser_chase_camera_geometry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/70 Testing: browser_first_person_view
+25/70 Test: browser_first_person_view
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_first_person_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_first_person_view" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual source chaseCamera: 1080 visibility cases, 108 raw seat poses, max error 6.0973509486883858e-16, 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_first_person_view" end time: Nov 03 16:19 Eastern Standard Time
+"browser_first_person_view" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/70 Testing: browser_pause_guard_and_cockpit_palette
+27/70 Test: browser_pause_guard_and_cockpit_palette
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_pause_ui_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_pause_guard_and_cockpit_palette" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Source pause400ms guard: 4 phases, boundary/held/focus/button/restart/menu and v3 cockpit palette: 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_pause_guard_and_cockpit_palette" end time: Nov 03 16:19 Eastern Standard Time
+"browser_pause_guard_and_cockpit_palette" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/70 Testing: browser_cockpit_fit_and_readouts
+28/70 Test: browser_cockpit_fit_and_readouts
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_cockpit_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_cockpit_fit_and_readouts" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Cockpit: 18 source fits, 36 source readouts, 3 car layouts, visibility/easing/seat: 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_cockpit_fit_and_readouts" end time: Nov 03 16:19 Eastern Standard Time
+"browser_cockpit_fit_and_readouts" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/70 Testing: browser_race_ui_state_layout
+29/70 Test: browser_race_ui_state_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_race_ui_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_race_ui_state_layout" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Race UI: source Canvas player marker and chronological history/capture bounds, 142 browser time cases, 6 viewports, 9 minimaps and pause/restart/menu lifecycle: 0 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_race_ui_state_layout" end time: Nov 03 16:19 Eastern Standard Time
+"browser_race_ui_state_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/70 Testing: browser_ui_layout_and_hit_regions
+30/70 Test: browser_ui_layout_and_hit_regions
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_ui_layout_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_ui_layout_and_hit_regions" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+UI layout: viewport containment, focus scroll, clipped hit regions passed (4 viewports).
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_layout_and_hit_regions" end time: Nov 03 16:19 Eastern Standard Time
+"browser_ui_layout_and_hit_regions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/70 Testing: browser_player_arsenal_rules
+46/70 Test: browser_player_arsenal_rules
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_arsenal_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_player_arsenal_rules" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+ARSENAL_SUMMARY cases=4324 draws=1727 events=2870 overheats=39 denies=908 restarts=6 max_error=0 state_bytes=48 event_bytes=64
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_player_arsenal_rules" end time: Nov 03 16:19 Eastern Standard Time
+"browser_player_arsenal_rules" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/70 Testing: browser_fire_dispatch_rng
+48/70 Test: browser_fire_dispatch_rng
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_fire_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_fire_dispatch_rng" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+FIRE_SUMMARY init_cases=96 fx_cases=35 seeded_frames=480 restarts=4 fx_probe_draws=1209 sequence_draws=7828 max_shots=10 max_fx=48 max_error=0 failures=0
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_fire_dispatch_rng" end time: Nov 03 16:19 Eastern Standard Time
+"browser_fire_dispatch_rng" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/70 Testing: browser_full_local_player_ticks
+50/70 Test: browser_full_local_player_ticks
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_local_run_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_full_local_player_ticks" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+RUN_SUMMARY roads=2 frames=640 restarts=2 go=2 laps=4 finishes=2 respawns=6 manual=2 smoke=6 impacts=5 nitro=6 paused=30 world_hits=9 collections=6 sequence_draws=5667 max_shots=8 max_fx=58 max_error=5.1869619710487314e-13 failures=0
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"browser_full_local_player_ticks" end time: Nov 03 16:19 Eastern Standard Time
+"browser_full_local_player_ticks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/70 Testing: race_session_lifecycle
+54/70 Test: race_session_lifecycle
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_session_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"race_session_lifecycle" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Session lifecycle, clocks, targeting, respawn, history, results and 30/60/144 Hz: 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"race_session_lifecycle" end time: Nov 03 16:19 Eastern Standard Time
+"race_session_lifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/70 Testing: browser_route_recovery
+56/70 Test: browser_route_recovery
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_recovery_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_route_recovery" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+357 actual browser recovery steps; 83 tangent and 28 nearest cases; worst error 2.3e-13; 0 failures.
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_route_recovery" end time: Nov 03 16:19 Eastern Standard Time
+"browser_route_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/70 Testing: browser_road_picker
+58/70 Test: browser_road_picker
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_road_picker_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_road_picker" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+20 actual browser picker cases, 36 minimap cases; initialization/restart on 9 roads; no progression writes; 0 failures.
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"browser_road_picker" end time: Nov 03 16:19 Eastern Standard Time
+"browser_road_picker" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/70 Testing: browser_finish_results
+60/70 Test: browser_finish_results
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_finish_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_finish_results" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+270 browser autopilot controls; 6 solo summaries; nine-road session completion/motion/results/restart/cancellation; worst 6.22e-15; 0 failures.
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"browser_finish_results" end time: Nov 03 16:19 Eastern Standard Time
+"browser_finish_results" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/70 Testing: browser_collision_primitives
+61/70 Test: browser_collision_primitives
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_physics_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_collision_primitives" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Browser collision: 1344 shapes, 400 ordered cell queries, 120 segments, 720 car steps, 432 course shapes across nine roads; finite torus-center guard; worst 3.87e-12; 0 failures.
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"browser_collision_primitives" end time: Nov 03 16:19 Eastern Standard Time
+"browser_collision_primitives" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/70 Testing: browser_reticle_projection_visibility
+67/70 Test: browser_reticle_projection_visibility
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_reticle_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_reticle_projection_visibility" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Actual HUD.screen/Three reticles: 1620 projection cases/8 source visibility states; worst0.002180142118275441 pixels, raylib0, 0 failures; no window/GPU
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_reticle_projection_visibility" end time: Nov 03 16:19 Eastern Standard Time
+"browser_reticle_projection_visibility" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/70 Testing: browser_fallback_glyph_cpu_decode_layout
+68/70 Test: browser_fallback_glyph_cpu_decode_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_subtext_tests.exe" "C:/Users/User/Projects/neon_c/win_app/assets/ui-theme" "C:/Users/User/Projects/neon_c/win_app/assets/ui-fallback"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_fallback_glyph_cpu_decode_layout" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Fallback glyphs:2 lossless white-core decodes,27060 RGBA bytes; UTF-8, fractional advances, bearings and missing-primary bypass passed; no GPU/window.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_fallback_glyph_cpu_decode_layout" end time: Nov 03 16:19 Eastern Standard Time
+"browser_fallback_glyph_cpu_decode_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+69/70 Testing: browser_hud_readout_font_metrics
+69/70 Test: browser_hud_readout_font_metrics
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_hud_readout_tests.exe" "C:/Users/User/Projects/neon_c/win_app/assets/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_hud_readout_font_metrics" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+HUD readouts: 2 reused Chrome panel states, four Canvas widths and 160 raw-font widths; worst corrected width24.3966675 px, old Chrome error197.343872 px; nominal baselines, 2 failures; no window/GPU
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Failed.
+"browser_hud_readout_font_metrics" end time: Nov 03 16:19 Eastern Standard Time
+"browser_hud_readout_font_metrics" time elapsed: 00:00:00
+----------------------------------------------------------
+
+70/70 Testing: browser_ui_font_cpu_atlas
+70/70 Test: browser_ui_font_cpu_atlas
+Command: "C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native/rr_ui_font_tests.exe" "C:/Users/User/Projects/neon_c/win_app/assets/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/hud-readouts-native
+"browser_ui_font_cpu_atlas" start time: Nov 03 16:19 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [95/96]
+Orbitron-700.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=12531144
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-900.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=14122856
+Rajdhani-Medium.ttf CPU atlas 512x256, conservative RGBA8=524288 bytes, glyph coverage=1197097
+CPU font rasterization/atlas passed; RGBA8 total=6815744; no window/GPU initialized.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_font_cpu_atlas" end time: Nov 03 16:19 Eastern Standard Time
+"browser_ui_font_cpu_atlas" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 16:19 Eastern Standard Time

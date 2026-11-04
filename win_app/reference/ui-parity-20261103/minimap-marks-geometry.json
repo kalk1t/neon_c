@@ -1,0 +1,10 @@
+{
+  "circle_annulus_cases": 336,
+  "rectangle_cases": 60,
+  "reference": "Exact circle/circle lens formula, outer-minus-inner for annuli; exact rectangle/disk via segment roots and oriented sector integrals. Explicit polygon/mask area-deficit bounds; no triangle clipping in reference.",
+  "mark_segments": 64,
+  "mask_segments": 128,
+  "max_outline_radius_at_desktop": 6.704545454545454,
+  "mark_radial_deficit_at_desktop": 0.008075918624412284,
+  "mask_radial_deficit_at_desktop": 0.035539393847898504
+}

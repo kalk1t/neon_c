@@ -1,0 +1,35 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/main.js",
+      "sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/input.js",
+      "sha256": "835bff688cd8afa1f4d958ad003dec0429cade1f8f2d0c1fdff2ee3ca088c753"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/index.html",
+      "sha256": "e1d6cc204d926795a0612de6e3a11aa02e3a4e7b64f734c2e45c97cc115eb313"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "hint_statement": "e.hint.style.display = g.state === 'race' && !g.mouseLocked ? 'block' : 'none';",
+  "canvas_click": "renderer.domElement.addEventListener('click', () => {\n  if (g.state === 'race' || g.state === 'countdown') captureMouse();\n}",
+  "capture_mouse": "function captureMouse() {\n  if (!touch) input.lock(renderer.domElement, racing);\n}",
+  "racing": "function racing() {\n  return g.state === 'race' || g.state === 'countdown';\n}",
+  "css_rule": "#lockhint { position: absolute; top: 62%; width: 100%; text-align: center; font: 700 14px var(--font); letter-spacing: 3px; color: var(--c); text-shadow: 0 0 8px var(--c); display: none; }",
+  "text": "CLICK TO CAPTURE MOUSE",
+  "hint_cases": 28,
+  "gesture_states": 238,
+  "gesture_sequences": 98,
+  "scope": "Actual HUD hint assignment, source canvas click/captureMouse/Input.lock called with inert canvas and locked flag. Native-focused client down/up ownership is a conservative synthetic adapter, not real browser DOM dispatch or OS capture. No pointer-lock success/error/retry/timer/native input/graphics measurement. Layout is CSS/nominal font model; prepared visible hint rectangle unavailable."
+}

@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T19:32:29.6029771Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "2d03d2a729632bc599e45e8821a6fff27eeee7d50d1c85299beffbaecd649aec",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\best-readouts-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "4348ae09709e6e0b3cc8ef5f089a1c943b1d23abdc3ee45ce79b4a869b4ea635",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-best-readouts-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\best-readouts-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

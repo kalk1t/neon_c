@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "projection_cases": 1620,
+  "aim_visibility_states": 8,
+  "threePath": "C:\\Users\\User\\Projects\\neon_c\\game\\node_modules\\three\\build\\three.module.js",
+  "threeSHA256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+  "scope": "Actual HUD.screen with real Three perspective/lookAt/roll matrices, native+browser clip configurations,3 direct viewport/zoom and3 bounded-target display configurations,3FOVs/views and front/behind/beyond-far points; actual reticle visibility branch. Bounded target camera aspect models native adaptation, not browser runtime sizing. No GPU, CSS raster or physical pointer capture."
+}

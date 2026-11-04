@@ -1,0 +1,20 @@
+Start testing: Nov 03 15:58 Eastern Standard Time
+----------------------------------------------------------
+1/69 Testing: browser_spin_indicator_compositing
+1/69 Test: browser_spin_indicator_compositing
+Command: "C:/Users/User/Projects/neon_c/win_app/build/spin-indicator-native/rr_spin_indicator_tests.exe"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/spin-indicator-native
+"browser_spin_indicator_compositing" start time: Nov 03 15:58 Eastern Standard Time
+Output:
+----------------------------------------------------------
+Spin row602 cooldown5.9999999999989999 fill1.66644475996236e-13 added8 failures
+Spin indicator: 604 actual HUD states, five reused Chrome styles, clockwise disk geometry/compositing bounds; max192 triangles, worst fill1.1102230246251565e-16, 8 failures
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Failed.
+"browser_spin_indicator_compositing" end time: Nov 03 15:58 Eastern Standard Time
+"browser_spin_indicator_compositing" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 03 15:58 Eastern Standard Time

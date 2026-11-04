@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T19:22:23.1304586Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "4bbe76fbe361a1caff76cb2ee6de71172a6b0fd7e20d9329edc712499a647d1e",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\reticles-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "798a9516d1ac8e9383db4c3817ccdd7ab7e4a03cd19f175d337b790dec63dbe6",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-reticles-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\reticles-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

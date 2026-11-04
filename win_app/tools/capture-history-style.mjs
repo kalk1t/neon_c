@@ -1,0 +1,26 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';import {pathToFileURL} from 'node:url';
+const root='C:/Users/User/Projects/neon_c',pack='C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3',out=process.argv[2];fs.mkdirSync(out,{recursive:true});
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex'),read=f=>fs.readFileSync(f),manifestBytes=read(pack+'/manifest.json');if(sha(manifestBytes)!=='e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443')throw Error('Manifest');
+const manifest=JSON.parse(manifestBytes);const checked=[];
+for(const file of ['assets.json','source/style.css','fonts/Orbitron-700.ttf']){const bytes=read(pack+'/'+file),record=manifest.assets.find(v=>v.file===file);if(sha(bytes)!==record.sha256)throw Error(file);checked.push({path:pack+'/'+file,sha256:sha(bytes)});}
+const css=read(root+'/game/src/style.css').toString(),prior=read(pack+'/source/style.css').toString();const selectors=['#laps-panel','#lap-list','#lap-list li.best','#laps-panel .best','#laps-panel .best b','.lbl'];let rules=[];
+function blocks(s,selector){return [...s.matchAll(/([^{}]+)\{([^{}]*)\}/g)].filter(m=>m[1].trim().split('\n').at(-1)===selector).map(m=>m[2].trim());}
+for(const selector of selectors){const a=blocks(css,selector),b=blocks(prior,selector);if(!a.length||JSON.stringify(a)!==JSON.stringify(b))throw Error('CSS '+selector);rules.push({selector,blocks:a});}
+function prop(selector,name){const values=blocks(css,selector).flatMap(s=>s.split(';').filter(v=>v.trim().startsWith(name+':')).map(v=>v.slice(v.indexOf(':')+1).trim()));return values.at(-1);}
+const normal=Number(prop('#lap-list','font').match(/(\d+)px/)[1]),best=Number(prop('#laps-panel .best','font').match(/(\d+)px/)[1]),top=parseFloat(prop('#laps-panel','top'));
+if(normal!==16||best!==13||top!==140)throw Error('Source cascade changed');
+const font=read(pack+'/fonts/Orbitron-700.ttf'),n=font.readUInt16BE(4),tables={};for(let i=0;i<n;i++)tables[font.toString('ascii',12+i*16,16+i*16)]=font.readUInt32BE(20+i*16);
+const ratio=(font.readInt16BE(tables.hhea+4)-font.readInt16BE(tables.hhea+6))/font.readUInt16BE(tables.head+18),normalH=Math.round(normal*ratio),bestH=Math.round(best*ratio);
+const asset=JSON.parse(read(pack+'/assets.json')).find(v=>v.id==='hud/lap-list'&&v.scale===1);const ol=asset.observed.children.find(v=>v.tag==='OL');if(ol.rect.height!==normalH+bestH||asset.observed.rect.y!==top||ol.rect.y!==35||asset.observed.rect.height!==103)throw Error('Prepared layout differs');
+const {HUD}=await import(pathToFileURL(root+'/game/src/hud.js'));let rows=[],seq=0,states=[];
+for(const count of [...Array(17).keys(),32,64,256])for(let bi=0;bi<Math.max(1,count);bi++)for(const ties of [false,true]){
+ const laps=Array.from({length:count},(_,i)=>i===bi||ties&&i===bi+1?60:70+i/8),d=Object.create(HUD.prototype);d.el={list:{innerHTML:''},best:{textContent:''}};d.laps(laps,count?60:null);
+ const entries=[...d.el.list.innerHTML.matchAll(/<li class="([^"]*)">([^<]*)<\/li>/g)],bestIndex=entries.findIndex(v=>v[1]==='best');if(entries.length!==count||count&&bestIndex!==bi)throw Error('Order/best');
+ for(const scale of [1,.8])for(const height of [180,240,720,1000]){
+  let y=top*scale+35*scale,visible=0;for(const [i,row] of entries.entries()){if(y<height)visible++;const expected=bestIndex===i?bestH:normalH;if(i<2||i>=count-2||Math.abs(i-bestIndex)<=1||Math.abs(y-height)<25)rows.push('{'+[seq,i,y,expected*scale,(bestIndex===i?best:normal)*scale].join(',')+'}');y+=expected*scale;}
+  const list=entries.reduce((sum,v)=>sum+(v[1]==='best'?bestH:normalH),0),bestY=top*scale+(41+list)*scale,panelH=Math.min((67+list)*scale,Math.max(0,height-top*scale));
+  states.push('{'+[count,Math.max(0,bestIndex),scale,height,panelH,visible,bestY,bestY<height&&bestY+16*scale>0?1:0].join(',')+'}');seq++;
+ }
+}
+fs.writeFileSync(out+'/history_style_fixture.h','/* Actual HUD.laps order/first-best; CSS-derived nominal desktop line heights. Compact is nominal scaled, not measured. */\nstatic const HistoryCase history_cases[]={\n'+states.join(',\n')+'\n};\nstatic const RowCase row_cases[]={\n'+rows.join(',\n')+'\n};\n');
+const receipt={version:JSON.parse(read(root+'/game/package.json')).version,sources:['game/src/hud.js','game/src/style.css','game/package.json'].map(v=>({path:root+'/'+v,sha256:sha(read(root+'/'+v))})),package:pack,manifest_sha256:sha(manifestBytes),verified_files:checked,rules,normal_font_px:normal,best_font_px:best,normal_line_px:normalH,best_line_px:bestH,panel_top:top,source_order_sequences:seq/8,layout_cases:seq,row_cases:rows.length,reused_browser_layout:asset.observed.rect,scope:'Actual HUD.laps produces ordered LI classes and first tied best. Relevant current CSS equals verified v3; later top140 overrides108 and #laps-panel .best font applies to LI. Desktop hhea-derived20/16 normal line model agrees with reused OL total36; individual row heights/baselines and compact scaling are not newly browser-rendered. No graphics/network/accounts.'};fs.writeFileSync(out+'/history-style-oracle.json',JSON.stringify(receipt,null,2));console.log(JSON.stringify({sequences:seq/8,layouts:seq,rows:rows.length,lineHeights:[normalH,bestH],top}));

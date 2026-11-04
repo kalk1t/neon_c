@@ -10,38 +10,72 @@ typedef struct RRUIOverlayLayout { RRUIRect panel,actions[3],left,right; } RRUIO
 static inline RRUIHudLayout rr_ui_hud_layout(float w,float h)
 {
     float z=(w<=1180||h<=720)?.8f:1.f;RRUIHudLayout l={0};l.scale=z;
-    l.timer=(RRUIRect){w*.5f-150*z,22*z,300*z,142*z};
+    l.timer=(RRUIRect){w*.5f-150*z,(z<1?17.59375f:22.f),300*z,z<1?121.5625f:153.f};
     l.map=(RRUIRect){w-262*z,22*z,240*z,240*z};
-    l.speed=(RRUIRect){26*z,h-26*z-210*z,230*z,210*z};
-    l.spin=(RRUIRect){w-26*z-142*z,h-26*z-144*z,142*z,144*z};
-    l.history=(RRUIRect){22*z,108*z,210*z,146*z};return l;
+    l.speed=(RRUIRect){(z<1?20.796875f:26.f),h-(z<1?20.796875f:26.f)-(z<1?160.546875f:201.f),230*z,z<1?160.546875f:201.f};
+    l.spin=(RRUIRect){w-(z<1?20.796875f:26.f)-142*z,h-(z<1?20.796875f:26.f)-(z<1?113.578125f:144.f),142*z,z<1?113.578125f:144.f};
+    l.history=(RRUIRect){22*z,140*z,210*z,146*z};return l;
 }
-/* Source #laps-panel: label19 + OL margins12 + rows18 + best16 + padding20.
- * Keep chronological order; the browser has no latest-three window/scrollbar.
- * Bound paint work by viewport clipping while retaining the full lap history. */
-typedef struct RRUIHistory {RRUIRect panel;size_t visible_rows;float best_y;bool best_visible;} RRUIHistory;
-static inline RRUIHistory rr_ui_history_layout(RRUIRect anchor,float scale,float viewport_h,size_t count)
+typedef struct RRUIHudBoxes {RRUIRect lap_row,time,checkpoint_row,speed_label,speed_value,unit;} RRUIHudBoxes;
+static inline RRUIHudBoxes rr_ui_hud_boxes(RRUIHudLayout l)
 {
-    RRUIHistory h={0};h.panel=anchor;
-    double full=(67.0+18.0*(double)count)*scale;
-    h.panel.h=(float)fmin(full,fmax(0,(double)viewport_h-anchor.y));
-    double row_top=anchor.y+35.0*scale,step=18.0*scale;
-    size_t visible=(scale>0&&viewport_h>row_top)?(size_t)ceil((viewport_h-row_top)/step):0;
-    h.visible_rows=count<visible?count:visible;
-    double best=anchor.y+(41.0+18.0*(double)count)*scale;
+    float z=l.scale;RRUIHudBoxes b={0};
+    b.lap_row=(RRUIRect){l.timer.x+24*z,l.timer.y+14*z,252*z,42*z};
+    b.time=(RRUIRect){l.timer.x+24*z,l.timer.y+60*z,252*z,50*z};
+    b.checkpoint_row=(RRUIRect){l.timer.x+24*z,l.timer.y+114*z,252*z,25*z};
+    b.speed_label=(RRUIRect){l.speed.x+24*z,l.speed.y+14*z,182*z,19*z};
+    b.speed_value=(RRUIRect){l.speed.x+24*z,l.speed.y+37*z,182*z,64*z};
+    b.unit=(RRUIRect){l.speed.x+24*z,l.speed.y+101*z,182*z,22*z};
+    /* Verified DPR1 Chromium compact CSS zoom rounds borders/normal line boxes;
+     * it is not a uniform transform of desktop font line heights. */
+    if(z<1){
+        b.lap_row=(RRUIRect){l.timer.x+18.59375f,l.timer.y+10.59375f,202.8125f,34};
+        b.time=(RRUIRect){l.timer.x+18.59375f,l.timer.y+47.78125f,202.8125f,40};
+        b.checkpoint_row=(RRUIRect){l.timer.x+18.59375f,l.timer.y+90.96875f,202.8125f,20};
+        b.speed_label=(RRUIRect){l.speed.x+18.59375f,l.speed.y+10.59375f,146.8125f,15};
+        b.speed_value=(RRUIRect){l.speed.x+18.59375f,l.speed.y+28.78125f,146.8125f,51.203125f};
+        b.unit=(RRUIRect){l.speed.x+18.59375f,l.speed.y+79.984375f,146.8125f,18};
+    }return b;
+}
+/* Source later #laps-panel overrides top108 with140. The more-specific
+ * #laps-panel .best also applies font600 13px to the best LI, not just footer.
+ * Normal LI is700 16px: supplied desktop normal line boxes are20 vs16.
+ * Compact scales nominal desktop boxes; DPR/zoom line rounding remains open. */
+typedef struct RRUIHistory {RRUIRect panel;size_t visible_rows,best_index;float best_y,scale;bool best_visible;} RRUIHistory;
+static inline float rr_ui_history_row_y(RRUIHistory h,size_t row)
+{return h.panel.y+(float)(35.0+20.0*(double)row-(row>h.best_index?4.0:0))*h.scale;}
+static inline float rr_ui_history_row_font(RRUIHistory h,size_t row){return (row==h.best_index?13:16)*h.scale;}
+static inline float rr_ui_history_row_height(RRUIHistory h,size_t row){return (row==h.best_index?16:20)*h.scale;}
+static inline RRUIHistory rr_ui_history_layout(RRUIRect anchor,float scale,float viewport_h,size_t count,size_t best_index)
+{
+    RRUIHistory h={0};h.panel=anchor;h.scale=scale;h.best_index=best_index<count?best_index:0;
+    double list_height=count?20.0*(double)count-4.0:0;
+    h.panel.h=(float)fmin((67.0+list_height)*scale,fmax(0,(double)viewport_h-anchor.y));
+    /* Only viewport-visible prefix rows are painted; no count-sized traversal.
+     * SIZE_MAX is safe: conversion to double occurs before multiplication. */
+    double available=(scale>0?(viewport_h-anchor.y)/scale:0)-35;
+    size_t cap=available>0?(size_t)ceil((available+4)/20):0;
+    h.visible_rows=count<cap?count:cap;
+    while(h.visible_rows&&rr_ui_history_row_y(h,h.visible_rows-1)>=viewport_h)h.visible_rows--;
+    double best=anchor.y+(41.0+list_height)*scale;
     h.best_visible=best<viewport_h&&best+16*scale>0;
     h.best_y=h.best_visible?(float)best:0;return h;
 }
 static inline RRUIOverlayLayout rr_ui_pause_layout(float w,float h)
 {
-    RRUIOverlayLayout l={0};l.panel=(RRUIRect){(w-380)*.5f,(h-390)*.5f,380,390};
-    for(int i=0;i<3;i++)l.actions[i]=(RRUIRect){l.panel.x+30,l.panel.y+108+(float)i*66,320,52};return l;
+    /* Verified v3 desktop/compact card: border2 + padding30, brand38,
+     * button61 with gap14; source #pause is left6vw and vertically centered. */
+    RRUIOverlayLayout l={0};l.panel=(RRUIRect){w*.06f,(h-394)*.5f,380,394};
+    for(int i=0;i<3;i++)l.actions[i]=(RRUIRect){l.panel.x+32,l.panel.y+84+(float)i*75,316,61};return l;
 }
 static inline RRUIOverlayLayout rr_ui_results_layout(float w,float h)
 {
-    RRUIOverlayLayout l={0};l.panel=(RRUIRect){(w-680)*.5f,(h-480)*.5f,680,480};
-    l.left=(RRUIRect){l.panel.x+30,l.panel.y+172,296,118};l.right=(RRUIRect){l.panel.x+354,l.panel.y+172,296,118};
-    for(int i=0;i<2;i++)l.actions[i]=(RRUIRect){l.panel.x+30,l.panel.y+326+(float)i*66,620,52};return l;
+    RRUIOverlayLayout l={0};l.panel=(RRUIRect){(w-680)*.5f,fmaxf(16,(h-491.1875f)*.5f),680,491.1875f};
+    /* Chromium quantized tracks for616px content:1.3fr/1fr gap22. */
+    float left=335.734375f,right=258.25f;
+    l.left=(RRUIRect){l.panel.x+32,l.panel.y+185.296875f,left,113.890625f};
+    l.right=(RRUIRect){l.left.x+left+22,l.left.y,right,l.left.h};
+    for(int i=0;i<2;i++)l.actions[i]=(RRUIRect){l.panel.x+32,l.panel.y+336.1875f+(float)i*70,616,61};return l;
 }
 /* Exact positive binary-double rounding used by HUD fmt's seconds.toFixed(2),
  * including 59.995 -> 59.99 and its source-defined 00:60.00 minute-edge form.

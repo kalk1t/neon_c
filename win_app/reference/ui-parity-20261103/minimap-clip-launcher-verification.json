@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:58:19.2563834Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "b3589cc0b98588ba403c7ad3155fe882725d295b2c357dd6a9ad9ce40533e95e",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\minimap-clip-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "c296142d387ee9876c38f944308ab0d5f63777c563c8e0b6e2ebdca0d9c403d0",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-minimap-clip-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\minimap-clip-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

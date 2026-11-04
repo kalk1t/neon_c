@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "4c2e81615fba2bf13fd3176019c339639d31577a01f3e4b390035f4e4cb3fcd9",
+  "target": {
+    "path": "build/view-controls-native/bin/RoadstersRace.exe",
+    "sha256": "b6a23f94dfde6d37d6d43d52d953a8341a44517f0513f729bd1719e3f5a466a0"
+  },
+  "working_directory": "build/view-controls-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-view-controls-20261103/Run-RoadstersRace.cmd"
+}

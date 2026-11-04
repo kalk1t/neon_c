@@ -1,0 +1,22 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\hud.js",
+  "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc",
+  "cases": 192,
+  "track_strokes": [
+    {
+      "width": 14,
+      "color": "rgba(25,230,255,0.25)"
+    },
+    {
+      "width": 4,
+      "color": "#19e6ff"
+    }
+  ],
+  "start_rect": [
+    -12,
+    -3,
+    24,
+    6
+  ],
+  "scope": "Actual HUD.drawMap with inert Canvas context, synthetic bounds/checkpoints/passed sets/next and three CSS scales. Records circle position, radii, centered outline width, colors, start rectangle and whole-path stroke order. No DOM, raster, GPU or progress mutation."
+}

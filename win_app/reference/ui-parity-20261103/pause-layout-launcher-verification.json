@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "d8424a3cbbedec38a2f36ee54fa5042893dfeefbda586dbc3592d55aca6c6d8c",
+  "target": {
+    "path": "build/pause-layout-native/bin/RoadstersRace.exe",
+    "sha256": "e30850f50eda04b62a43daffc9114abaf99e1d501c2bb2fa4a3da704c211727c"
+  },
+  "working_directory": "build/pause-layout-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-pause-layout-20261103/Run-RoadstersRace.cmd"
+}

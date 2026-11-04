@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "2673ef21312eacd397a8399b363b0a4afe018fad28196f8669fde84b0fe7ff5a",
+  "target": {
+    "path": "build/player-reset-native/bin/RoadstersRace.exe",
+    "sha256": "a09fd2e7c5fdb6e92f960740a43d07df9d0c100a97417f304e092b7c0e639f70"
+  },
+  "working_directory": "build/player-reset-native/bin",
+  "verification": "Static only; target exists and assets verified, launcher not executed",
+  "prior_launcher": "reference/pre-player-reset-20261103/Run-RoadstersRace.cmd"
+}

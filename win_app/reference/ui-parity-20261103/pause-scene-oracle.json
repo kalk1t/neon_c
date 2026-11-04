@@ -1,0 +1,14 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/main.js",
+      "sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89"
+    }
+  ],
+  "block": "if (g.state !== 'paused') {\n    for (const r of g.racers) r.car.updateFX(camera.position);\n    for (const r of g.remotes) r.car.updateFX(camera.position);\n    weapons.update(dt, camera.position);\n    coins.update(dt, time, g.racers, playing && g.mode === 'race');\n    course.update(time, g.state === 'menu' || g.state === 'shop' ? null : player);\n    scenery.update(time);\n    ads.update(time);\n  }\n  ",
+  "block_sha256": "e86f165a8a9a8a7d16a4f060b6cbc6041cfdca15de39aba954c689ed0ffd4a2a",
+  "states": 1280,
+  "sequences": 8,
+  "scope": "Actual browser update guard: course/scenery/ads retain last absolute update time while paused and catch up to current time on resume. Native frozen time currently affects distant traffic in rr_scene_world. No actual rendering, shader/sky/car idle effects or browser engine run."
+}

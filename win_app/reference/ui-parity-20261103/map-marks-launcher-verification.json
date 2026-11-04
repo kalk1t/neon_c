@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "ea11828236d06260def8f7a280c85ac12cabbb704aefd890f5b566eb71d192ee",
+  "target": {
+    "path": "build/map-marks-native/bin/RoadstersRace.exe",
+    "sha256": "36fd4a3be682b3ffddea82cc936c59773d64b1a82f02e2a1279c609a410ee6ac"
+  },
+  "working_directory": "build/map-marks-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-map-marks-20261103/Run-RoadstersRace.cmd"
+}

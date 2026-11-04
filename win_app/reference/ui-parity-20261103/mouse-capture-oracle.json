@@ -1,0 +1,6 @@
+{
+  "source": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\input.js",
+  "sha256": "835bff688cd8afa1f4d958ad003dec0429cade1f8f2d0c1fdff2ee3ca088c753",
+  "states": 48,
+  "scope": "Actual browser Input pointerlockchange and mousemove listeners, unlocked/locked, negative/zero/strict150ms boundary/long times. Small events isolate eligibility from event-spike filtering. Native applies eligibility to frame totals, not event timestamps; no real cursor capture or graphics."
+}

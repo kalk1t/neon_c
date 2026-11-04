@@ -1,0 +1,37 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "package": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    }
+  ],
+  "rules": [
+    "#msg { position: absolute; top: 24%; width: 100%; text-align: center; font: 900 84px var(--font); color: #fff; letter-spacing: 6px; text-shadow: 0 0 20px var(--c), 0 0 50px var(--m); opacity: 0; transition: opacity 0.25s; }",
+    "#msg.show { opacity: 1; }",
+    "#msg.warn { color: #ffd0f6; text-shadow: 0 0 20px var(--m), 0 0 40px var(--m); }",
+    ".hidden { display: none !important; }"
+  ],
+  "tick_source": "if ((this.msgTimer -= dt) <= 0) e.msg.classList.remove('show');",
+  "states": 24261,
+  "sequences": 24,
+  "measured_boxes": 2,
+  "timing_reference": "https://www.w3.org/TR/css-transitions-1/",
+  "scope": "Actual HUD.message/show and timer-removal statement with inert DOM; independent CSS Transitions1 binary opacity model, default ease and interruption shortening. Two verified prepared desktop boxes reused. No fresh Chromium transition, group-opacity pixels, style-event coalescing, native font/GPU or graphics stability measurement."
+}

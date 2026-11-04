@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "launcher_sha256": "5650b9f1698d7aff29dd4359eb603b03a03d203621873699a85fc9f1afe39b0d",
+  "target": {
+    "path": "build/arrow-art-native/bin/RoadstersRace.exe",
+    "sha256": "b9c337cf5d33cce4810779b52c5c3bc3e844b82759e509302722f4c202917ee5"
+  },
+  "working_directory": "build/arrow-art-native/bin",
+  "verification": "Static only; target exists and assets verified. Launcher not executed.",
+  "prior_launcher": "reference/pre-arrow-art-20261103/Run-RoadstersRace.cmd"
+}

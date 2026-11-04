@@ -1,0 +1,87 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/package.json",
+      "sha256": "2d674b79ca2e4270bcc337a3e3b886ff7a56c3063f60e60384f88bfd9125b757"
+    }
+  ],
+  "package": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/fonts/Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    }
+  ],
+  "rules": [
+    {
+      "selector": "#laps-panel",
+      "blocks": [
+        "position: absolute; top: 108px; left: 22px; min-width: 210px; background: var(--bg); border-left: 3px solid var(--m); padding: 10px 16px;",
+        "top: 140px;"
+      ]
+    },
+    {
+      "selector": "#lap-list",
+      "blocks": [
+        "margin: 6px 0; padding-left: 20px; font: 700 16px var(--font); color: #cfefff;"
+      ]
+    },
+    {
+      "selector": "#lap-list li.best",
+      "blocks": [
+        "color: var(--m); text-shadow: 0 0 6px var(--m);"
+      ]
+    },
+    {
+      "selector": "#laps-panel .best",
+      "blocks": [
+        "font: 600 13px var(--font); color: #9ac;"
+      ]
+    },
+    {
+      "selector": "#laps-panel .best b",
+      "blocks": [
+        "color: #fff;"
+      ]
+    },
+    {
+      "selector": ".lbl",
+      "blocks": [
+        "font: 700 15px var(--font); color: var(--c); letter-spacing: 2px; text-shadow: 0 0 8px var(--c);"
+      ]
+    }
+  ],
+  "normal_font_px": 16,
+  "best_font_px": 13,
+  "normal_line_px": 20,
+  "best_line_px": 16,
+  "panel_top": 140,
+  "source_order_sequences": 978,
+  "layout_cases": 7824,
+  "row_cases": 64620,
+  "reused_browser_layout": {
+    "x": 22,
+    "y": 140,
+    "width": 210,
+    "height": 103
+  },
+  "scope": "Actual HUD.laps produces ordered LI classes and first tied best. Relevant current CSS equals verified v3; later top140 overrides108 and #laps-panel .best font applies to LI. Desktop hhea-derived20/16 normal line model agrees with reused OL total36; individual row heights/baselines and compact scaling are not newly browser-rendered. No graphics/network/accounts."
+}

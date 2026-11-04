@@ -1,0 +1,15 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\main.js",
+      "sha256": "b9155ec1e99b57c56c2c09ded28e890c04a29c4e68fbf79caa9866ec457aed89"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\camera.js",
+      "sha256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45"
+    }
+  ],
+  "dispatch_cases": 288,
+  "visibility_cases": 180,
+  "scope": "Actual main C then I branch and chaseCamera visibility prefix, real Three vector math, synthetic state/input. Native results maps browser finished. No DOM, localStorage, graphics, physical input or native cockpit activation; setInterior is a counted in-memory stub."
+}

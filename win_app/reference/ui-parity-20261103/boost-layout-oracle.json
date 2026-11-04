@@ -1,0 +1,89 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "sha256": "d0f8e0621b7601ad00f5c5c15f32ccbe210ad9fb573d9f6d1debf6f1f111b7bc"
+    },
+    {
+      "path": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+    }
+  ],
+  "package": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/source/style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:/Users/User/Documents/Codex/2026-11-03/task/RoadstersSharedAssets-v3/recipes/measured-layouts.json",
+      "sha256": "f7fd1a6a1f8c3df0f0dc304fb88db3f35288b313aa35722da4afd0fd333effc6"
+    }
+  ],
+  "rules": [
+    {
+      "prefix": ".panel {",
+      "blocks": [
+        ".panel {\n  background: linear-gradient(180deg, rgba(8, 20, 60, 0.78), rgba(3, 6, 24, 0.78));\n  border: 2px solid var(--c);\n  box-shadow: 0 0 14px rgba(25, 230, 255, 0.55), inset 0 0 18px rgba(25, 230, 255, 0.18);\n  clip-path: polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px);\n  padding: 12px 22px;\n}"
+      ]
+    },
+    {
+      "prefix": ".boost {",
+      "blocks": [
+        ".boost { margin-top: 8px; height: 8px; background: rgba(25, 230, 255, 0.12); border: 1px solid rgba(25, 230, 255, 0.5); transform: skewX(-25deg); }"
+      ]
+    },
+    {
+      "prefix": ".boost i {",
+      "blocks": [
+        ".boost i { display: block; height: 100%; width: 100%; background: linear-gradient(90deg, var(--c), #8ff7ff); box-shadow: 0 0 10px var(--c); }"
+      ]
+    },
+    {
+      "prefix": ".boost.on i {",
+      "blocks": [
+        ".boost.on i { background: linear-gradient(90deg, var(--m), #ffc4f4); box-shadow: 0 0 14px var(--m); }",
+        ".boost.on i { animation: nitro-bar 0.22s infinite alternate; }"
+      ]
+    },
+    {
+      "prefix": ".boost.low i {",
+      "blocks": [
+        ".boost.low i { animation: nitro-low 0.4s infinite alternate; }"
+      ]
+    },
+    {
+      "prefix": ".boost-lbl {",
+      "blocks": [
+        ".boost-lbl { font: 600 10px var(--font); color: #7fb9d0; margin-top: 5px; letter-spacing: 2px; }"
+      ]
+    },
+    {
+      "prefix": "@keyframes nitro-bar {",
+      "blocks": [
+        "@keyframes nitro-bar { from { filter: brightness(1); } to { filter: brightness(1.8); } }"
+      ]
+    },
+    {
+      "prefix": "@keyframes nitro-low {",
+      "blocks": [
+        "@keyframes nitro-low { from { opacity: 1; } to { opacity: 0.25; } }"
+      ]
+    }
+  ],
+  "assignments": [
+    "e.boost.style.width = `${car.boost * 100}%`;",
+    "e.boost.parentElement.classList.toggle('on', car.boosting);",
+    "e.boost.parentElement.classList.toggle('low', car.boost < 0.2);"
+  ],
+  "states": 7680,
+  "sequences": 16,
+  "reused_box_states": 2,
+  "scope": "Actual HUD boost width/on/low class assignments and HUD.show with inert DOM. Independent default-ease alternate/visibility-reset model, not browser-engine animation timing. Verified prepared desktop/compact outer-skew and caption boxes; nominal font baselines and native pixels/glow/filtering unqualified."
+}

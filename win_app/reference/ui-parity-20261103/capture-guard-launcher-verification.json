@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T19:05:01.0438867Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "aa243220b68efbf56ffd1ac086097c84eb88be255a251b7ccf8a741dec20df9b",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\capture-guard-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "471e64c51ddec32d13a8c0ad33e2d12d2d277f5197539393e9815bfaeaf47261",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-capture-guard-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\capture-guard-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

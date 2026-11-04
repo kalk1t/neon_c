@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-11-03T18:48:08.7525465Z",
+  "launcher": "Run-RoadstersRace.cmd",
+  "launcher_sha256": "658ebc67ac511fd79730af5bafe11e02706b882341b165dc35d19d21da4debac",
+  "target": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\boost-meter-native\\bin\\RoadstersRace.exe",
+  "target_sha256": "5df63d96b77024851a736597a0679287eb57e720750698e2a380bc8f91fb0993",
+  "matching_asset_files": 447,
+  "original_preserved": "reference/pre-boost-meter-20261103/Run-RoadstersRace.cmd",
+  "working_directory": "C:\\Users\\User\\Projects\\neon_c\\win_app\\build\\boost-meter-native\\bin",
+  "execution": "Not executed; static verification only",
+  "graphics_gate": "Prior rejected launch pending explicit authorization"
+}

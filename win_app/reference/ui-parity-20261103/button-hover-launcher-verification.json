@@ -1,0 +1,11 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "6a640dab7c941b1fe10bdb92bba471de15fd855134e8d6ab1cd9e4814fa88500",
+  "target": {
+    "path": "build/button-hover-native/bin/RoadstersRace.exe",
+    "sha256": "e677c3ab21866eed400f3a5b87b90fa6bc07b5130b9fec420a258cf6b6bc3861"
+  },
+  "working_directory": "build/button-hover-native/bin",
+  "static_only": true,
+  "launcher_executed": false
+}

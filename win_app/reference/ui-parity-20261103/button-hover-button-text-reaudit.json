@@ -1,0 +1,154 @@
+{
+  "version": "0.2.11",
+  "source": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\style.css",
+    "sha256": "5cdb15aaa7da77848c5113597626562c5269ab3cbfece759513fb59e132641a2"
+  },
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+  "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+  "verified_files": [
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\assets.json",
+      "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\source\\style.css",
+      "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3\\fonts\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    }
+  ],
+  "rules": [
+    "button { pointer-events: auto; font: 700 20px var(--font); letter-spacing: 3px; color: #dff; background: rgba(6, 14, 46, 0.8); border: 2px solid var(--c); padding: 16px 22px; text-align: left; cursor: pointer;\n  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); transition: all 0.15s; }",
+    "button:hover, button:focus { background: rgba(25, 230, 255, 0.2); box-shadow: inset 0 0 20px rgba(25, 230, 255, 0.4); color: #fff; outline: none; padding-left: 32px; }",
+    "button:disabled { opacity: 0.4; cursor: default; }",
+    "body:not(.touch) #menu .menu-card > button { padding-top: 10px; padding-bottom: 10px; font-size: 18px; }"
+  ],
+  "compact_media": "@media (max-height: 820px) {\n  body:not(.touch) #menu .menu-card { gap: 9px; }\n  body:not(.touch) #menu .brand { font-size: 46px; }\n  body:not(.touch) #menu .track-name { margin-bottom: 4px; }\n  body:not(.touch) #menu .menu-card > button { padding-top: 10px; padding-bottom: 10px; font-size: 18px; }\n  body:not(.touch) #menu .controls { line-height: 1.6; margin-top: 4px; }\n  body:not(.touch) #menu .controls kbd { padding-top: 0; padding-bottom: 0; }\n}",
+  "reused_computed_styles": 6,
+  "independent_width_cases": 22,
+  "font_metrics": {
+    "units": 1000,
+    "ascent": 1011,
+    "descent": -243
+  },
+  "widths": [
+    {
+      "label": "RACE / OFFLINE TRIAL",
+      "css_size": 18,
+      "width_without_trailing_tracking": 290.388
+    },
+    {
+      "label": "RACE / OFFLINE TRIAL",
+      "css_size": 20,
+      "width_without_trailing_tracking": 316.32
+    },
+    {
+      "label": "TIME ATTACK / SOLO",
+      "css_size": 18,
+      "width_without_trailing_tracking": 270.168
+    },
+    {
+      "label": "TIME ATTACK / SOLO",
+      "css_size": 20,
+      "width_without_trailing_tracking": 294.52
+    },
+    {
+      "label": "FREE ROAM / ONLINE",
+      "css_size": 18,
+      "width_without_trailing_tracking": 270.366
+    },
+    {
+      "label": "FREE ROAM / ONLINE",
+      "css_size": 20,
+      "width_without_trailing_tracking": 294.74
+    },
+    {
+      "label": "WORLD RANKING",
+      "css_size": 18,
+      "width_without_trailing_tracking": 214.506
+    },
+    {
+      "label": "WORLD RANKING",
+      "css_size": 20,
+      "width_without_trailing_tracking": 234.34
+    },
+    {
+      "label": "SHOP",
+      "css_size": 18,
+      "width_without_trailing_tracking": 68.328
+    },
+    {
+      "label": "SHOP",
+      "css_size": 20,
+      "width_without_trailing_tracking": 74.92
+    },
+    {
+      "label": "QUIT",
+      "css_size": 18,
+      "width_without_trailing_tracking": 57.33
+    },
+    {
+      "label": "QUIT",
+      "css_size": 20,
+      "width_without_trailing_tracking": 62.7
+    },
+    {
+      "label": "BACK",
+      "css_size": 18,
+      "width_without_trailing_tracking": 68.166
+    },
+    {
+      "label": "BACK",
+      "css_size": 20,
+      "width_without_trailing_tracking": 74.74
+    },
+    {
+      "label": "RESUME",
+      "css_size": 18,
+      "width_without_trailing_tracking": 103.902
+    },
+    {
+      "label": "RESUME",
+      "css_size": 20,
+      "width_without_trailing_tracking": 113.78
+    },
+    {
+      "label": "RESTART",
+      "css_size": 18,
+      "width_without_trailing_tracking": 118.72800000000001
+    },
+    {
+      "label": "RESTART",
+      "css_size": 20,
+      "width_without_trailing_tracking": 129.92000000000002
+    },
+    {
+      "label": "MAIN MENU",
+      "css_size": 18,
+      "width_without_trailing_tracking": 140.45999999999998
+    },
+    {
+      "label": "MAIN MENU",
+      "css_size": 20,
+      "width_without_trailing_tracking": 153.4
+    },
+    {
+      "label": "RACE AGAIN [ENTER]",
+      "css_size": 18,
+      "width_without_trailing_tracking": 265.344
+    },
+    {
+      "label": "RACE AGAIN [ENTER]",
+      "css_size": 20,
+      "width_without_trailing_tracking": 289.15999999999997
+    }
+  ],
+  "scope": "Six prepared default/hover/focus/pressed/disabled style endpoints.18px compact menu derives from identical current media CSS, not fresh browser measurement. Independent TTF em advances omit kerning. Nominal hhea baseline is not a measured Chromium glyph baseline. No graphics or event engine run."
+}

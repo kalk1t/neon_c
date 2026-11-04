@@ -1,0 +1,32 @@
+{
+  "version": "0.2.11",
+  "sources": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\package.json",
+      "sha256": "2d674b79ca2e4270bcc337a3e3b886ff7a56c3063f60e60384f88bfd9125b757"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\aim.js",
+      "sha256": "dfa86c63f0c8b707e8ae18a1e1ab3bfa9fee14a250eae49db3a341cf9b88139f"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\race.js",
+      "sha256": "b80df69a3a81becfe5f924c703033fe3e1c76b257c0eb534d8213395594cc140"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\roads.js",
+      "sha256": "61ec1991d201a8b0033ab6f076fae220690ccf49b29603605bf345eb309aff2c"
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\game\\src\\world.js",
+      "sha256": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd"
+    }
+  ],
+  "pilot_cases": 810,
+  "target_cases": 126,
+  "scope": "Actual aim.autopilot and race.targetOf in VM with real browser Track/ROADS/Three. Inputs cover nine roads, six sample locations, wrapped headings, pitches and raw non-unit forward vectors; target covers all valid checkpoint indices and finish gate. No Car.update, DOM, account/storage/network, GPU or physical input."
+}

@@ -44,7 +44,7 @@ int main(void)
     CHECK(crossing(&s,&car,true)==(RR_RACE_LAP|RR_RACE_FINISH));
     CHECK(s.phase==RR_SESSION_FINISHED && s.lap_count==2);
     CHECK(near(s.lap_times[0]+s.lap_times[1],s.race.finish_time));
-    CHECK(!rr_session_target(&s,&gate,1,&target));
+    CHECK(rr_session_target(&s,&gate,1,&target));CHECK(target.z==gate.pos.z);
     double finish=s.race.finish_time;
     CHECK(rr_session_step(&s,&car,&gate,1,(RRInput){0},1.99)==0);
     CHECK(rr_session_step(&s,&car,&gate,1,(RRInput){0},.02)==RR_SESSION_SHOW_RESULTS);
