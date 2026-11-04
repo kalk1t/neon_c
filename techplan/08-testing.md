@@ -91,6 +91,13 @@ below (`rivals` updated for the new speed and fire rules).
 on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars within 95 m: the player's damage, rivals
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
+### v0.2.19 (2026-11-04)
+`test:live` 119 / 119: `controls.test.mjs` 22 (+2: each shop car has its bolt art, pictures and 3D model; a painted car,
+a clone whose spec is a JSON copy, keeps its own `modelId` and bolt; changed: bolts leave from each car's marked spots,
+one or two; 300 m/s × 3.5 s and a bolt moves less than its own length a frame). `hits.test.mjs` reach cases at
+300 m/s × 3.5 s; `live.test.mjs` protocol 12. The bolt models were checked on renders (side, 3/4 behind, behind) and
+in-game screenshots per car (a painted car's shot carries its own look; no browser test).
+
 ### v0.2.18 (2026-11-04)
 `test:live` 117 / 117: `controls.test.mjs` 20 (+1: every shop car has its flame spots, three flames of the same length,
 the middle one thicker, at the tail). Flame and smoke placement was checked on screenshots of each car (no browser test).

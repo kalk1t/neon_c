@@ -61,7 +61,7 @@
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch/roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 11 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 12 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
@@ -96,6 +96,7 @@
 | Boost drain / regen | 0.32 / 0.06 | fraction / s | Boost tank | `src/car.js:666` | code | |
 | `LIVERIES` | 10 rivals, skill 1.0–0.92 | factor | Rival identity, boost eagerness (top speed no longer, since v0.2.3) | `src/ai.js:3` | code | |
 | `CAR_MODELS[id].flames` | roadster side [0.85, 0.25] middle [0.85, 0.4] · viper [0.85, 0.34] / [0.85, 0.6] · titan [0.85, 0.25] / [0.85, 0.34] | [length, width] scale | Thruster flame size per car (v0.2.18), spots in `exhaust` / `turbineFlame` (marked by the owner) | `src/car.js` | code | Same length, middle thicker (`controls.test.mjs`) |
+| `BOLT_LOOKS` | roadster len 8, flash [2.6, 1.07, 0.34], impact 5.5 · viper 8, [2.6, 0.91, 0.41], 5.5 · titan 7, [3, 1.26, 0.32], 6; glow (flash / impact added) roadster, viper | m, [height m, width / height, gun across 0..1], m | Each car's bolt (v0.2.19): 3D model scaled to `len` (×1.6 at most with distance), muzzle flash 0.09 s, impact | `src/fx.js` | code | Rivals: roadster. Art and GLBs checked by `controls.test.mjs` |
 | Engine smoke | every 0.012 s + health / 20; 93% of the car's speed, drag e^(−1.6 t); 1.3 + 2.2 k m | s, m | Damage smoke from the nozzles under 60% health (v0.2.18) | `src/main.js` `stepRacer`, `src/fx.js` `exhaustSmoke` | code | |
 | `CAR_STATS` | roadster: all 1, hp 100, spinCD 6, missiles 3 · viper: top 1.08, accel 1.276, turn 1.12, hp 75, knock 1.3, mass 0.8, spinCD 4 · titan: top 0.94, accel 0.797, turn 0.9, hp 140, knock 0.4, stun 0.6, mass 2, missiles 4, emp 1.25 | factors, hp, s | Per shop car (v0.2.17): speed, acceleration, turning, health, knock-back, stun, bump weight, spin cooldown, seekers, EMP radius | `src/car.js` | code | Rivals use roadster; the relay's `EMP_CAR_MAX` = the biggest `emp` (`constants.test.mjs`) |
 | `EMP_CAR_MAX` | 1.25 | factor | The biggest shop-car EMP the relay allows for | `server/hits.js` | code | |
@@ -103,7 +104,7 @@
 | `RIVAL_SPEED` | ROAD1 120, STEP 1.02 | m/s, factor | Rival top speed `rivalTop(id) = 120 × 1.02^(id − 1)`: 120 … 141 m/s (v0.2.15) | `src/roads.js` | code | Replaced road `ai` factors |
 | `CORNER` | TURN 1.15 rad/s, GRIP 0.8, BRAKE 45 m/s², SPAN 3 samples | | Rival corner speeds and braking (v0.2.15) | `src/ai.js` | code | |
 | `GATE_R` / `GATE_R_RIVAL` | 15 / 45 | m | Gate ring radius that counts a pass: player / rivals (v0.2.15) | `src/race.js` | code | |
-| `WEAPON` | BOLT_DMG 21, BOLT_RATE 0.21 s, BOLT_SPEED 750 m/s, BOLT_LIFE 1.5 s, BOLT_LEN 45 m, BOLT_WID 7 m, HEAT_PER_BOLT 0.08 (~22 bolts to overheat), COOL_RATE 0.45 /s, LOCK_RANGE 2000 m, LOCK_KEEP 2100 m, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s, EMP_DMG 25, EMP_RADIUS 95 m, EMP_COOLDOWN 11 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
+| `WEAPON` | BOLT_DMG 21, BOLT_RATE 0.21 s, BOLT_SPEED 300 m/s, BOLT_LIFE 3.5 s (750 / 1.5 in v0.2.14-0.2.18), BOLT_LEN 45 m, BOLT_WID 7 m (unused by bolts since v0.2.19: `BOLT_LOOKS`), HEAT_PER_BOLT 0.08 (~22 bolts to overheat), COOL_RATE 0.45 /s, LOCK_RANGE 2000 m, LOCK_KEEP 2100 m, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s, EMP_DMG 25, EMP_RADIUS 95 m, EMP_COOLDOWN 11 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
 | `COIN` | PER_GATE_GAP 6, VALUE 1, RESPAWN 6 s, RADIUS 6.5 m | | Track coins | `src/ai.js:23` | code | |
 | Race wreck | 2.4 | s | Down time in races | `src/race.js` `wreck` | code | |
 | Loot on wreck | 25 % (rounded up) | of coins | Coins the attacker takes on a takedown | `src/race.js` `wreck` | code | Tested in `tests/race.test.mjs` |
@@ -173,7 +174,7 @@
 ## FREE ROAM hit checks (S3, v0.2.10, `server/hits.js`)
 | Name | Value | Unit | Purpose | Notes |
 |---|---|---|---|---|
-| `BOLT_SPEED` / `BOLT_LIFE` | 750 / 1.5 (430 / 1.3 before v0.2.14) | m/s, s | Bolt reach (+ the shooter's speed) | = `WEAPON.BOLT_SPEED`, `src/aim.js`; `constants.test.mjs` checks |
+| `BOLT_SPEED` / `BOLT_LIFE` | 300 / 3.5 (v0.2.19; 750 / 1.5 from v0.2.14, 430 / 1.3 before) | m/s, s | Bolt reach (+ the shooter's speed) | = `WEAPON.BOLT_SPEED`, `src/aim.js`; `constants.test.mjs` checks |
 | `MISSILE_TOP` / `MISSILE_LIFE` | 330 / 3.6 | m/s, s | Seeker reach (+ the shooter's speed) | = `maxSpeed: speed + 330`, `life: 3.6` |
 | `EMP_RADIUS` | 95 | m | EMP reach (+ `REACH_SLACK`) | = `WEAPON.EMP_RADIUS` |
 | `SEEN_MS` | 1,500 | ms | How far back a victim's / shooter's positions count | Covers 150 ms playback + lag |
@@ -198,6 +199,6 @@
 | Aim limits | ±1.1 yaw from the nose, ±0.62 pitch | rad | How far the aim may lead the car | `src/aim.js` `updateAim` |
 | Steering gain | `steer = −Δyaw × 2.8`, `climb = aimPitch / 0.62` | | The car flies to the aim (× 1.25 on climb before v0.2.12) | `src/aim.js` |
 | `STRAFE` | SPEED 25, RESPONSE 6, LEAN 42° | m/s, 1/s, rad | Sideways slide (A / D with the mouse, v0.2.13); body roll at a full slide (v0.2.14, was 0.3 rad) | `src/car.js` |
-| `CAR_MODELS[id].muzzle` | roadster [±0.7, −0.74, −2.9], viper [±0.25, −1.22, −2.85], titan [±0.7, −1.0, −2.9] | m, car space | Where shots leave each model: its front bumper (v0.2.14, measured on the GLBs) | `src/car.js` |
+| `CAR_MODELS[id].muzzle` | roadster [0, −0.61, −2.77], viper [±0.17, −1.15, −2.15], titan [0, −1.03, −2.45] | m, car space | Where shots leave each model: the owner's marked shooting spots (v0.2.19, `Assets/01_Vehicle/*_shooting_spot*.png`, measured on the GLBs; x 0 = one spot, VIPER fires from its two in turn). Front bumper in v0.2.14-0.2.18 | `src/car.js` |
 | Aim camera follow | yaw 14 /s, pitch 10 /s toward 0.85 × aim pitch | 1/s | Keeps the aim ring near the centre (car camera: 7 and 5, 0.6 × car pitch) | `src/camera.js` `chaseCamera` |
 
