@@ -2,7 +2,7 @@
 #include "rr_weapon_current.h"
 static bool pair(void *p,int index,double values[2]){RRBattleCurrent *c=p;(void)index;RRFireLocal *l=&c->battle->fire;values[0]=l->random(l->random_ctx);values[1]=l->random(l->random_ctx);return true;}
 bool rr_battle_current_start(RRBattleCurrent *c,RRLocalBattle *b,RRLocalPack *p,const RRTrack *t,RRLocalRacer *player){
- if(!c||!b||!b->fire.random)return false;c->battle=b;c->error=false;rr_battle_restart(b);
+ if(!c||!b||!player||!b->fire.random)return false;c->battle=b;c->error=false;rr_battle_restart(b);rr_weapon_current_arsenal_restart_profile(&b->arsenal,player->car.profile);
  if(!rr_pack_current_start(&c->pack,p,t,player,pair,c)){c->error=true;return false;}rr_battle_bind(b,p);return true;
 }
 typedef struct {RRBattleCurrent *current;double dt,race_time;bool active;} Context;
@@ -10,7 +10,7 @@ static void rival(void *p,RRLocalRacer *r,int index,unsigned events){
  Context *s=p;RRBattleCurrent *c=s->current;if(c->error)return;RRFireLocal *l=&c->battle->fire;
  if(events&RR_RIVAL_SMOKE)rr_fire_effect(l,RR_FX_SMOKE);
  RRFireBinding binding;if(!c->binding||!c->binding(c->binding_context,index,r,&binding)){c->error=true;return;}
- if(!rr_rival_arsenal_step(l,r,&c->pack.resources[index-1],s->dt,s->race_time,s->active,c->battle->pack->track->road->fire_interval,&binding,c->rival_cue,c->rival_cue_context))c->error=true;
+ if(!rr_rival_arsenal_v217_step(l,r,&c->pack.resources[index-1],s->dt,s->race_time,s->active,c->battle->pack->track->road->fire_interval,&binding,c->rival_cue,c->rival_cue_context))c->error=true;
 }
 static void coin(void *p,const RRCoinCollection *event){RRBattleCurrent *c=p;(void)event;rr_fire_effect(&c->battle->fire,RR_FX_IMPACT);}
 bool rr_battle_current_after_player(RRBattleCurrent *c,RRPackBranch branch,bool active,double dt,double time,double race_time,const struct RRWorld *world,RRShotWorld segment,void *segment_context,RRArsenalInput input,RRPackEvents *events){
@@ -21,11 +21,11 @@ bool rr_battle_current_after_player(RRBattleCurrent *c,RRPackBranch branch,bool 
  if(branch==RR_PACK_PLAYING&&active){
   if(b->fire.player->wreck<=0){RRLocalTarget targets[RR_AI_RIVALS];for(int i=0;i<RR_AI_RIVALS;i++){RRLocalRacer *r=b->roster[i+1];targets[i]=(RRLocalTarget){r->car.pos,r->car.vel,true,r->wreck<=0,r->race.finished};}
    (void)rr_weapon_current_lock(&b->lock,b->fire.player->car.pos,b->fire.aim,targets,RR_AI_RIVALS,dt);b->fire.locked=b->lock.target<0?NULL:b->roster[b->lock.target+1];input.has_lock=b->fire.locked!=NULL;input.lock_charge=b->lock.charge;
-   RRArsenalEvents arsenal;if(!rr_fire_player_v216_step(&b->fire,&b->arsenal,dt,input,&player_binding,&arsenal)){c->error=true;return false;}
+   RRArsenalEvents arsenal;if(!rr_fire_player_v217_step(&b->fire,&b->arsenal,dt,input,&player_binding,&arsenal)){c->error=true;return false;}
   }else{b->fire.locked=NULL;b->lock.target=-1;}
   if(b->after_weapons)b->after_weapons(b->after_weapons_context);
  }
- rr_fire_projectiles_current_tick(&b->fire,dt,24,segment,segment_context,active);if(!b->fire.locked)b->lock.target=-1;
+ rr_fire_projectiles_v217_tick(&b->fire,dt,24,segment,segment_context,active);if(!b->fire.locked)b->lock.target=-1;
  if(!rr_pack_coins_dispatch(b->pack,coin,c,&events->coins))c->error=true;
  if(b->fire.error||b->fire.fx.error)c->error=true;return !c->error;
 }

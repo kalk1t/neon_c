@@ -10,8 +10,8 @@ void rr_arsenal_restart(RRArsenal *s) {
     s->emp_cd=0; s->spin_cd=0;
 }
 void rr_arsenal_init(RRArsenal *s) { s->side=1; rr_arsenal_restart(s); }
-void rr_arsenal_step_dispatch_pulse(RRArsenal *s,double dt,RRArsenalInput i,
-    RRArsenalRandom rng,void *context,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *e,RRArsenalPulse pulse) {
+void rr_arsenal_step_dispatch_limits(RRArsenal *s,double dt,RRArsenalInput i,
+    RRArsenalRandom rng,void *context,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *e,RRArsenalPulse pulse,RRArsenalLimits limits) {
     memset(e,0,sizeof(*e));
     s->bolt_cd-=dt;
     s->heat=fmax(0,s->heat-.45*dt*(s->overheated?1.4:i.fire?.35:1));
@@ -24,7 +24,7 @@ void rr_arsenal_step_dispatch_pulse(RRArsenal *s,double dt,RRArsenalInput i,
         s->heat+=pulse.heat;
         if(s->heat>=1) { s->heat=1; s->overheated=true; emit(e,RR_ARSENAL_OVERHEAT,notice,notice_ctx); }
     }
-    s->missiles=fmin(3,s->missiles+dt/4.5);
+    s->missiles=fmin(limits.missiles,s->missiles+dt/4.5);
     if(i.missile_hit) {
         if(s->missiles>=1) {
             s->missiles-=1; e->missile_homing=i.lock_charge>=1&&i.has_lock;
@@ -35,7 +35,7 @@ void rr_arsenal_step_dispatch_pulse(RRArsenal *s,double dt,RRArsenalInput i,
     if(i.spin_hit) {
         if(s->spin_cd>0) emit(e,RR_ARSENAL_DENY,notice,notice_ctx);
         else {
-            s->spin_cd=6;
+            s->spin_cd=limits.spin_cd;
             e->spin_side=i.steer>0?1:i.steer<0?-1:draw(e,rng,context)<.5?-1:1;
             emit(e,RR_ARSENAL_SPIN,notice,notice_ctx);
         }
@@ -53,3 +53,5 @@ void rr_arsenal_step_dispatch(RRArsenal *s,double dt,RRArsenalInput input,RRArse
 void rr_arsenal_step(RRArsenal *s,double dt,RRArsenalInput i,RRArsenalRandom rng,void *context,RRArsenalEvents *e) {
     rr_arsenal_step_dispatch(s,dt,i,rng,context,NULL,NULL,e);
 }
+
+void rr_arsenal_step_dispatch_pulse(RRArsenal *s,double dt,RRArsenalInput input,RRArsenalRandom random,void *ctx,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *events,RRArsenalPulse pulse){rr_arsenal_step_dispatch_limits(s,dt,input,random,ctx,notice,notice_ctx,events,pulse,(RRArsenalLimits){3,6});}

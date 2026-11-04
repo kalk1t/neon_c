@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-11-04T14:52:31.303141+00:00",
+  "local_package": "0.2.17",
+  "source_protocol": 11,
+  "release_or_deployment_verified": false,
+  "working_source_notes": "resource-source-pin.json records independent ongoing v0.2.18 nozzle/flame position and length/width edits; original and r2 snapshots preserved, resource fragments unchanged.",
+  "oracle": "profile-resources-capture/profile-resources-reference.json",
+  "oracle_sha256": "f6faf368aebe302c541e44114faf83d169275644e590e1895b4e5e5c27d7c8cb",
+  "source_summary": {
+    "frames": 7416,
+    "restarts": 24,
+    "observed_callbacks": 1395,
+    "random_draws": 2190,
+    "max_events": 4,
+    "sound_context_created": false
+  },
+  "files": [
+    {
+      "path": "src/core/rr_arsenal.c",
+      "sha256": "f515f706f6aa4fe0220b7b0e7b058b16e1b24a4bf9c7310e8ebd6358e701149a"
+    },
+    {
+      "path": "src/core/rr_arsenal.h",
+      "sha256": "a52225683e49638cf3415763b3a27fd040e4d4ac3b0ebd11811e6fbe4a23de40"
+    },
+    {
+      "path": "src/core/rr_weapon_current.c",
+      "sha256": "d050e21411681e5610848877d7fa2b01fa823b7f96c99b81f7411186dcfa54f8"
+    },
+    {
+      "path": "src/core/rr_weapon_current.h",
+      "sha256": "9165dfe209f1764e4f791d9cda967f666b3dc431bf55c40bb5edf8b6f26a154c"
+    },
+    {
+      "path": "src/core/rr_fire.c",
+      "sha256": "cdfafd41f70966dc034a2121efc367faff1b41d5a6c0ad363063184b01b5de4f"
+    },
+    {
+      "path": "src/core/rr_fire.h",
+      "sha256": "a9adb4be4e3a87e0682324a39d4f57716bf8105fd4d659c0e763efafddd04858"
+    },
+    {
+      "path": "src/core/rr_battle_current.c",
+      "sha256": "7b38fa355734189d1fdd7a9745364391402cf091d1f3e2cb64a111889693055c"
+    },
+    {
+      "path": "tests/test_profile_resources.c",
+      "sha256": "c6b8615ca700a569253a95a9afe93aef0c884ce80cc9bee5da496174b95ba1ff"
+    },
+    {
+      "path": "tests/profile_resources_reference.h",
+      "sha256": "27faacaa934e8fdfd489e9065f16942da4077906de70ffb5c46273e2971b7cca"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "b149138835202ca5e2308638fd4b645a30351d135efa515d05149a0e4788febb"
+    }
+  ],
+  "tests": {
+    "native": "153/153 full CPU suite passed",
+    "web": "153/153 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "frames": 7416,
+        "restarts": 24,
+        "callbacks": 1395,
+        "random_draws": 2190,
+        "checks": 163694,
+        "max_error": 0.0
+      },
+      "web": {
+        "frames": 7416,
+        "restarts": 24,
+        "callbacks": 1395,
+        "random_draws": 2190,
+        "checks": 163694,
+        "max_error": 0.0
+      }
+    }
+  },
+  "scope": "Fresh original aim.playerWeapons with inert projectile/FX/dodge sinks, empty EMP roster, actual Sound methods with ctx null and shared deterministic RNG. Actual source Object.assign resource-reset statement used without executing startRace/account code. C callback uses existing audio submission API; per-callback state/RNG and post-frame resources matched. Current full-pack tests are controlled C restart/firing seams, not fresh full-world source captures.",
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "current_full_pack_profile_resource_restart_and_fire_routed": true,
+  "legacy_apis_preserved": true,
+  "production_profile": "Roadster",
+  "production_full_pack_combat_audio_coins_rewards_enabled": false,
+  "graphics_or_audio_device_executed": false,
+  "resource_note": "Existing scalar arsenal storage/profile table, two source limit scalars; no runtime arrays/heap/GPU/RNG draws/cap increases. Source actual Sound context absent, C no-context submission accounts for unconditional blaster draw.",
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "ecc457de8190ae1049e20a33efa3b573aee1d73118f482c566e0618d1cfdef18",
+  "previous_client_sha256": "fa95d6225880ab57def8de8a3047d2b44c5c5577dc32b920dccd9d3de535a68c",
+  "remaining": [
+    "Player/rival EMP radius/push/profile-damage caller migration remains unported; numeric EMP cooldown stays11.",
+    "Rival alternate-profile arsenal limits/takedown refills and native HUD cooldown/charge rendering not qualified by player resource slice; normal rivals remain Roadster.",
+    "Working v0.2.18 nozzle/smoke pipeline pending; v0.2.17 smoke compatibility retained.",
+    "Owned equipment/player construction/shared accounts, protocol11, FREE ROAM and production/graphics/audio acceptance remain separate; graphics permission pending."
+  ]
+}

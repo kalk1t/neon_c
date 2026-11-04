@@ -1,0 +1,94 @@
+{
+  "created_utc": "2026-11-04T14:22:11.584938+00:00",
+  "local_package": "0.2.17",
+  "source_protocol": 11,
+  "release_or_deployment_verified": false,
+  "oracle": "profile-damage-capture/profile-damage-reference.json",
+  "oracle_sha256": "73c6f41c0b8926849c1409c51d99d257dcf67e6ad9032851b9bac43449825288",
+  "source_summary": {
+    "cases": 8124,
+    "applied": 1636,
+    "dodged": 1620,
+    "wrecks": 453,
+    "blocked": 4868,
+    "sequential_bolt_cases": 24
+  },
+  "files": [
+    {
+      "path": "src/core/rr_combat.c",
+      "sha256": "5034f0ebcc930df1b7e5ca0503b7284d62e12bce5aedec9bdfcb2a4cb481fdfb"
+    },
+    {
+      "path": "src/core/rr_combat.h",
+      "sha256": "d1031b78ae77afa7a5730f95d424add778ea03cc57aed2a885123533f844759c"
+    },
+    {
+      "path": "src/core/rr_fire.c",
+      "sha256": "9db2d5da3d05c40c4a15bbd9eb1f8b32309ecde34decc3d36c1d704661e6dbd1"
+    },
+    {
+      "path": "src/core/rr_fire.h",
+      "sha256": "6ea36f3a63d9b2031a840a556864cf1765292df941c5913ab580aed9353abd23"
+    },
+    {
+      "path": "src/core/rr_battle_current.c",
+      "sha256": "644ed6cb50df642a49953d700fa870b3b00eb0f0554dca5a1b2eff3fa7656ae1"
+    },
+    {
+      "path": "tests/test_profile_damage.c",
+      "sha256": "06bd0feab78a31ce1286e04c86d5086452222821e1d24aba1e7e381002414522"
+    },
+    {
+      "path": "tests/profile_damage_reference.h",
+      "sha256": "9172c29ce19fe6ccc822ed54dbf5531fc12f0e90f09acaa6af828c200304c0c0"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "cf5367f5837b00303f6d7c52e669fbc3e4e30cc2ab9a3e192c8b9e1c33541019"
+    }
+  ],
+  "tests": {
+    "native": "151/151 full CPU suite passed",
+    "web": "151/151 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "cases": 8124,
+        "applied": 1636,
+        "dodged": 1620,
+        "wrecks": 453,
+        "blocked": 4868,
+        "projectile_seams": 123,
+        "checks": 90619,
+        "max_error": 0.0
+      },
+      "web": {
+        "cases": 8124,
+        "applied": 1636,
+        "dodged": 1620,
+        "wrecks": 453,
+        "blocked": 4868,
+        "projectile_seams": 123,
+        "checks": 90619,
+        "max_error": 0.0
+      }
+    }
+  },
+  "scope": "Fresh original race.js damage and wreck numerical state with actual CPU vectors, inert HUD/FX/audio, null attacker (no rewards). Guard/result bits are C interface classification. Projectile and full-pack checks are C routing seams, not newly captured browser full ticks. Existing frozen fixtures rerun unchanged.",
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "current_full_pack_projectile_profile_damage_integrated": true,
+  "legacy_apis_preserved": true,
+  "production_profile": "Roadster",
+  "production_full_pack_combat_audio_coins_rewards_enabled": false,
+  "graphics_or_audio_device_executed": false,
+  "resource_note": "Two profile scalars read from existing table; no new runtime arrays/heap/GPU/RNG/caps. Projectile notice adds one bool in stack-only context. Test fixtures excluded from client.",
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "74e44a3ae2397286e03b09fe02b369ca1f553ee1a2a851d467d33dfbcfc92dff",
+  "previous_client_sha256": "7e8530924b7ff42bb3713ad56c849f9db16fcfe7abfa6063e8805e3a73a1d57c",
+  "remaining": [
+    "Max-health initialization/reset/respawn and 60%-health smoke thresholds remain unported. Tests seed source-defined HP explicitly.",
+    "EMP player/rival dispatch still uses older direct damage, radius/push and arsenal resources; direct current damage API supports EMP kind but does not connect those paths.",
+    "FREE ROAM hit rules, HUD percentage health, ownership/shared accounts and protocol11 production integration remain separate.",
+    "Production full-pack and visible/feel/audio qualification remain open; graphics execution permission pending."
+  ]
+}

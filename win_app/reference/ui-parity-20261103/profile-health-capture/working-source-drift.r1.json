@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-11-04T14:32:33.856538+00:00",
+  "capture_target": "v0.2.17 reset/respawn/smoke",
+  "local_package": "0.2.17",
+  "working_source_comments": "v0.2.18",
+  "release_or_deployment_verified": false,
+  "original_capture_unchanged": true,
+  "unchanged_recovery_fragments": [
+    {
+      "file": "src/car.js",
+      "fragment": "  place(pos, yaw, speed = 0)",
+      "unchanged": true
+    },
+    {
+      "file": "src/car.js",
+      "fragment": "  useStats(id)",
+      "unchanged": true
+    },
+    {
+      "file": "src/ai.js",
+      "fragment": "  reset(pos, yaw, track)",
+      "unchanged": true
+    },
+    {
+      "file": "src/ai.js",
+      "fragment": "  get maxHp()",
+      "unchanged": true
+    },
+    {
+      "file": "src/race.js",
+      "fragment": "export function respawn(r, keepHp = false)",
+      "unchanged": true
+    },
+    {
+      "file": "src/car.js",
+      "fragment": "CAR_STATS",
+      "unchanged": true
+    }
+  ],
+  "working_source_hashes": [
+    {
+      "path": "src/car.js",
+      "sha256": "362dd3196a3d90db4e4f9b895f858602bef57da42900a1c1f0c56d3214be59d6"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "a37c038f9b73ee03b8be8786ed4799d6407aa679c6f415f6ea03a0b8448a8502"
+    },
+    {
+      "path": "src/fx.js",
+      "sha256": "c68f68596bda5914e46c926be51656a3390920a0db7c11fbfe119fafd2a9c196"
+    }
+  ],
+  "findings": [
+    "Car constructor attaches side flame nozzles to nearest rear pods; effect nozzle positions/directions follow model/pod matrixWorld.",
+    "stepRacer cycles smokeN across nozzles, calls exhaustSmoke with nozzle-offset position and car velocity, fallback legacy smoke, interval now.02+healthFraction/10 (was.04+healthFraction/5).",
+    "New Weapons.exhaustSmoke life.6+.5*k+random*.3, initial puff velocity.85*carVel; update advects by velocity and damps exp(-2.5dt). Cap remains fx.length>260.",
+    "New emitter/timing/lifetime/FX RNG-residency path is NOT integrated in this v0.2.17 slice. Do not apply timing alone or claim latest-working-source smoke parity.",
+    "Docs/techplan hashes unchanged at scheduled sync; implementation target remains the captured v0.2.17 rules."
+  ]
+}

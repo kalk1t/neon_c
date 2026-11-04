@@ -24,6 +24,7 @@ typedef struct {
     double spread_x, spread_y;
 } RRArsenalEvents;
 typedef struct RRArsenalPulse {double period,heat;} RRArsenalPulse;
+typedef struct RRArsenalLimits {double missiles,spin_cd;} RRArsenalLimits;
 
 typedef void (*RRArsenalNotice)(void *context,unsigned event,const RRArsenalEvents *events);
 /* Synchronous source-order dispatch: callbacks may consume the same RNG stream
@@ -32,6 +33,9 @@ void rr_arsenal_step_dispatch(RRArsenal *state,double dt,RRArsenalInput input,
     RRArsenalRandom random,void *random_context,RRArsenalNotice notice,void *notice_context,RRArsenalEvents *events);
 /* Parameterized trigger core for current tuning; source order/RNG unchanged. */
 void rr_arsenal_step_dispatch_pulse(RRArsenal *state,double dt,RRArsenalInput input,RRArsenalRandom random,void *random_context,RRArsenalNotice notice,void *notice_context,RRArsenalEvents *events,RRArsenalPulse pulse);
+/* Caller supplies source-defined limits; no account/ownership or validation
+ * policy is invented. Same synchronous callback/RNG phase ordering. */
+void rr_arsenal_step_dispatch_limits(RRArsenal *state,double dt,RRArsenalInput input,RRArsenalRandom random,void *context,RRArsenalNotice notice,void *notice_context,RRArsenalEvents *events,RRArsenalPulse pulse,RRArsenalLimits limits);
 /* Existing entry points retain pre-v0.2.14 tuning for frozen pack fixtures.
  * New current-version integration must select rr_weapon_current explicitly. */
 void rr_arsenal_init(RRArsenal *state);

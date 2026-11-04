@@ -1,0 +1,34 @@
+--- 
+
++++ 
+
+@@ -207,6 +207,16 @@
+
+     this._sprite(tex('smoke'), c, THREE.NormalBlending, pos, 4 + 5 * k, 1.1 + Math.random() * 0.6, 3);
+   }
+ 
++  /** Damage smoke out of an engine nozzle (v0.2.18): starts with the car's speed and drags behind it, so it streams
++   *  back from the engine; k 0..1 = how badly damaged (bigger, longer puffs). */
++  exhaustSmoke(pos, vel, k = 1) {
++    if (this.fx.length > 260) return;
++    const c = new THREE.Color(0.16, 0.12, 0.24).lerp(new THREE.Color(0.5, 0.15, 0.4), Math.random() * 0.4);
++    this._sprite(tex('smoke'), c, THREE.NormalBlending, pos, 1.3 + 2.2 * k, 0.5 + 0.5 * k + Math.random() * 0.3, 1.2);
++    const f = this.fx[this.fx.length - 1];
++    f.vel = vel.clone().multiplyScalar(0.93);
++  }
++
+   explode(pos) {
+     this._sprite(tex('impact'), new THREE.Color(3, 1.6, 2.8), THREE.AdditiveBlending, pos, 46, 0.7);
+     this._sprite(tex('impact'), new THREE.Color(0.8, 2.2, 3), THREE.AdditiveBlending, pos, 30, 0.5);
+@@ -304,6 +314,10 @@
+
+       f.s.material.opacity = (1 - k * k) * (f.rise ? 0.7 : 1);
+       f.s.material.rotation += f.spin * dt;
+       f.s.position.y += f.rise * dt;
++      if (f.vel) {
++        f.s.position.addScaledVector(f.vel, dt);
++        f.vel.multiplyScalar(Math.exp(-1.6 * dt)); // air drag: the puff falls behind the car
++      }
+       if (k >= 1) {
+         this.scene.remove(f.s);
+         f.s.material.dispose();

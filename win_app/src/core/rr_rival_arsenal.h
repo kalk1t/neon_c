@@ -10,4 +10,8 @@ typedef void (*RRRivalArsenalCue)(void *context,unsigned event,RRLocalRacer *own
  * after dodge. Full pack, cold graphics/audio and rewards remain separate.
  * Validate true return AND no local error before continuing a fixture/run. */
 bool rr_rival_arsenal_step(RRFireLocal *local,RRLocalRacer *rival,RRRivalLifeResources *state,double dt,double race_time,bool race_active,double road_fire,const RRFireBinding *binding,RRRivalArsenalCue cue,void *cue_context);
+/* v0.2.17 profile EMP radius/victim reaction plus source spin/charge limits.
+ * Normal production-design rivals remain Roadster; alternative profiles in tests
+ * are isolated fixtures, not an unlocked roster or activation. */
+bool rr_rival_arsenal_v217_step(RRFireLocal *local,RRLocalRacer *rival,RRRivalLifeResources *state,double dt,double race_time,bool race_active,double road_fire,const RRFireBinding *binding,RRRivalArsenalCue cue,void *cue_context);
 #endif

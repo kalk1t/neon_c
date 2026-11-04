@@ -1,0 +1,27 @@
+--- 
+
++++ 
+
+@@ -569,16 +569,17 @@
+
+     // sculpted pods tilt like the code-built ones (front pair first, left before right); their fans are painted on
+     this.pods = model.children.filter((o) => o.name.includes('_pod_')).sort((a, b) => (a.name < b.name ? -1 : 1));
+     this.podTilt = spec.podTilt;
+-    // v0.2.18: side flames on tilting pods ride the pod (its nearest pod, in that pod's own space at rest)
++    // v0.2.18: side flames on tilting pods ride the pod (its nearest pod, in that pod's own space). Measured against
++    // the pod untilted (no rotation: the tilt below sets its whole rotation), not its pose right now: a model used
++    // again (paint changed back) may still have its pods tilted.
+     this.nozzleMount = [];
+     if (spec.podNozzles && this.pods.length) {
+       const [ex, ey, ez] = spec.exhaust;
+       this.nozzleMount = [-1, 1].map((side) => {
+         const at = new THREE.Vector3(side * ex, ey - spec.y, ez); // in the model file's space
+         const pod = this.pods.reduce((a, b) => (a.position.distanceToSquared(at) <= b.position.distanceToSquared(at) ? a : b));
+-        pod.updateMatrix();
+-        const inv = pod.matrix.clone().invert();
+-        return { pod, p: at.applyMatrix4(inv), d: new THREE.Vector3(0, 0, -1).transformDirection(inv) };
++        const inv = new THREE.Matrix4().compose(pod.position, new THREE.Quaternion(), pod.scale).invert();
++        return { pod, p: at.applyMatrix4(inv), d: new THREE.Vector3(0, 0, -1) };
+       });
+     }
+     this.muzzleAt = spec.muzzle; // this model's own muzzle (v0.2.14)

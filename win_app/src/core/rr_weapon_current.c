@@ -20,3 +20,6 @@ RRBoltStreak rr_weapon_current_streak(RRVec3 previous,RRVec3 head,RRVec3 velocit
  double far=1+fmin(2,rr_length(rr_sub(head,camera))/120);flown+=rr_length(rr_sub(head,previous));double length=fmin(rules.length*far,flown+1);
  RRBoltStreak p={rr_sub(head,rr_scale(rr_normalize(velocity),length/2)),flown,length,rules.width*far};return p;
 }
+
+void rr_weapon_current_arsenal_restart_profile(RRArsenal *s,RRCarProfile profile){rr_arsenal_restart(s);s->missiles=rr_car_stats(profile)->missiles;}
+void rr_weapon_current_arsenal_profile_dispatch(RRArsenal *s,double dt,RRArsenalInput input,RRCarProfile profile,RRArsenalRandom random,void *ctx,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *events){const RRCarStats *stats=rr_car_stats(profile);rr_arsenal_step_dispatch_limits(s,dt,input,random,ctx,notice,notice_ctx,events,(RRArsenalPulse){rules.period,rules.heat},(RRArsenalLimits){stats->missiles,stats->spin_cd});}

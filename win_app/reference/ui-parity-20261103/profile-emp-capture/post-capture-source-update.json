@@ -1,0 +1,132 @@
+{
+  "created_utc": "2026-11-04T15:10:45.483778+00:00",
+  "capture_package": "0.2.17",
+  "current_package": "0.2.18",
+  "release_or_deployment_verified": false,
+  "original_oracle_unchanged": true,
+  "unchanged_emp_fragments": [
+    {
+      "path": "src/car.js",
+      "fragment": "export const CAR_STATS = ",
+      "sha256": "4a350f6bdf4484489d84a0a3f8c8921b362cfd020304230d18ce90c20b7bf0cd",
+      "unchanged": true
+    },
+    {
+      "path": "src/car.js",
+      "fragment": "export const SPIN = ",
+      "sha256": "c9d61cce89fbd8baea5c0d38c5daaba072171e2b812c76be49ee161b9208a86f",
+      "unchanged": true
+    },
+    {
+      "path": "src/car.js",
+      "fragment": "  dodge(side)",
+      "sha256": "7cee10064576016d13275b4ec85c861fc0bf28a96b3162e2fb367ec6918064c2",
+      "unchanged": true
+    },
+    {
+      "path": "src/car.js",
+      "fragment": "  barrelRoll(side)",
+      "sha256": "221ac41a4683027f17727a3369f0e395d8828141284913e77042263dbc72a013",
+      "unchanged": true
+    },
+    {
+      "path": "src/ai.js",
+      "fragment": "export const WEAPON = ",
+      "sha256": "54cace4a54ed642a978c49a933a590248d0c08ef0229e61244b711ba8368a86d",
+      "unchanged": true
+    },
+    {
+      "path": "src/aim.js",
+      "fragment": "export function playerWeapons(dt, inp)",
+      "sha256": "d0d0d9ae3753eaeb92eea7631eefe6f902e5460ef76937bd7bc1f3d90952ce9e",
+      "unchanged": true
+    },
+    {
+      "path": "src/race.js",
+      "fragment": "export function damage(r, amount, attacker, kind",
+      "sha256": "b75134ee8eb4adcb180a8f4dd82e3895c8898a33cf6c1bbbdef4e63f1fd66f3e",
+      "unchanged": true
+    },
+    {
+      "path": "src/race.js",
+      "fragment": "function rivalTarget(",
+      "sha256": "05aa9314cc720c9d184bd9861434f9015b3997069b0bd1b18488de475352f0be",
+      "unchanged": true
+    },
+    {
+      "path": "src/race.js",
+      "fragment": "export function rivalCombat(r, dt)",
+      "sha256": "677fe4e0c5b961ca473e265e431979725a247411b22609224383809b4dc73d97",
+      "unchanged": true
+    },
+    {
+      "path": "src/race.js",
+      "fragment": "function rivalDodge(r)",
+      "sha256": "01362e8306dc477d4fd187576cffffe4600cfd16cbfcdf373537b1cb60c4ab45",
+      "unchanged": true
+    },
+    {
+      "path": "src/race.js",
+      "fragment": "function rivalEmp(r)",
+      "sha256": "6ed257b3dd8fb6744470d0e23d1a442fed6e81459658c05a5b43beded3d39308",
+      "unchanged": true
+    },
+    {
+      "path": "src/fx.js",
+      "fragment": "  purge(pos, radius, owner)",
+      "sha256": "dd73e60e6021f81ef35c269be9f1dccf2c7a3ff9c04295c1ebe596c36e94a263",
+      "unchanged": true
+    }
+  ],
+  "updated_snapshots": [
+    {
+      "path": "game/docs/changelog.md",
+      "sha256": "ffcd0986860914ee37b1ee29e1b1dbfb911beb7b50cb61dcbb32ff80379e45f0"
+    },
+    {
+      "path": "game/docs/manual/05-combat.md",
+      "sha256": "4a3f58750b94f1869c26bd08d163f233db3139d6367f61a06326d353b3926250"
+    },
+    {
+      "path": "game/docs/manual/10-whats-new.md",
+      "sha256": "0b73deb04175443d9bc5869876ab1322e6e10b755ebb2e519ca15256b2a51121"
+    },
+    {
+      "path": "game/docs/technical/04-car.md",
+      "sha256": "cbaddb8f88837e0fc4e507f683706bc70b894c1385878e22658a50f7fb06017b"
+    },
+    {
+      "path": "game/docs/technical/06-weapons-damage.md",
+      "sha256": "35c9b3aa96b35d2b0fa3a3716d0c52d1717b6398a2f7ded1c29c9a6b9a351b10"
+    },
+    {
+      "path": "game/package.json",
+      "sha256": "f67d35e6cadbe720097457615b6f0209e5fe8178daa13150f9a4778c2a31027d"
+    },
+    {
+      "path": "game/src/car.js",
+      "sha256": "3315823eba16d46c7b6582f30a78af81905b796813c3f0b63ceac617eb311da1"
+    },
+    {
+      "path": "techplan/04-components.md",
+      "sha256": "de5248a078b7472430482f2661b0bed6ebfc551a3e40455b2db30455e9f9f71d"
+    },
+    {
+      "path": "techplan/08-testing.md",
+      "sha256": "b1f7162f81eee80b929c82109d0a8988da93c75bb1f6059e5a13244127796664"
+    },
+    {
+      "path": "techplan/10-tech-debt-risks.md",
+      "sha256": "9af22914d66dfdcef3f5b53c6827a4a1d030d35b11d2163dbab84be620e19a81"
+    },
+    {
+      "path": "techplan/11-constants.md",
+      "sha256": "79fb53acbd31cd375d0bc1a5b7511a82a934188bfb01b021eedae79cb65ace51"
+    }
+  ],
+  "findings": [
+    "Package/docs now labelv0.2.18 (flame/nozzle placement and damage smoke), source protocol11 unchanged.",
+    "The latest car constructor measures pod mounts using neutral pod rotation to avoid reused tilted-model offsets; no EMP/flight/stat/dodge change in selected fragments.",
+    "Native nozzle/flame/smoke path remains unported and graphics unqualified. Captured EMP rules still applicable to current source."
+  ]
+}

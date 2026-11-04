@@ -1,0 +1,9 @@
+{
+  "launcher_sha256": "d3729ee88471aca346cd61a689af4b01fe7aaacbddfc81da6e7a9917d0368c85",
+  "target": "build/profile-damage-native/bin/RoadstersRace.exe",
+  "target_sha256": "74e44a3ae2397286e03b09fe02b369ca1f553ee1a2a851d467d33dfbcfc92dff",
+  "executed": false,
+  "promoted_after_checks": true,
+  "production_profile": "Roadster",
+  "production_full_pack_enabled": false
+}

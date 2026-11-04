@@ -1,0 +1,71 @@
+--- 
+
++++ 
+
+@@ -321,8 +321,12 @@
+
+   roadster: {
+     url: 'models/car.glb',
+     y: -0.35, // drop to match the hover height of the code-built car
+-    exhaust: [1.38, -0.78, 2.76], // flame nozzles (x mirrored): the small nozzle at the back of each rear pod (x 1.18..1.58, y -0.85..-0.46), low in it (owner: 2 x 0.12 m down)
+-    exhaustSize: 0.62, // side flames for that 0.2 m nozzle (the turbine's 0.34 m gets 1.05)
++    // flames (v0.2.18, spots marked by the owner on Assets/01_Vehicle/ROADSTER_flame_spots.png): the side ones come out of
++    // the small slot low on the back of each rear pod (0.2 x 0.12 m, recessed: the pod hides the flame's root), the
++    // middle one out of the dark core of the pink ring
++    exhaust: [1.38, -0.79, 2.25], // side flame nozzles (x mirrored)
++    turbineFlame: [0, -0.69, 2.46], // middle flame nozzle
++    flames: { side: [0.85, 0.25], middle: [0.85, 0.4] }, // [length, width] scale: the same length, the middle one thicker
+     podNozzles: true, // the side flames sit on the rear pods and tilt with them (v0.2.18)
+     turbine: [0, -0.5, 2.62, 0.34], // main rear turbine nozzle: centre + radius (glowing ring added in code)
+     tail: [0.8, 0.1, 2.8], // tail-light ribbon sources (x mirrored)
+@@ -596,9 +600,14 @@
+
+     this.fan.position.set(tx, ty, tz - 0.1);
+     this.model.add(ring, core, this.fan);
+     this.turbine = [tx, ty, tz + 0.05, 1.05];
++    // flame nozzles (v0.2.18): each car's own spots and [length, width] scale; without them, the old spots and sizes
++    this.flameSpec = {
++      middle: spec.turbineFlame ?? [tx, ty, tz + 0.05],
++      side: spec.flames?.side ?? [1, 1], mid: spec.flames?.middle ?? [1.05, 1.05],
++      inset: spec.flames ? 0 : 0.25, // how far the flame starts inside the nozzle (0: right at it, nothing drawn over the car)
++    };
+     this.flames[2].visible = this.flames[0].visible;
+     this.exhaust = spec.exhaust;
+-    this.exhaustSize = spec.exhaustSize ?? 1;
+     this.tail = spec.tail;
+     this.modelId = Object.keys(CAR_MODELS).find((k) => CAR_MODELS[k] === spec) ?? 'roadster';
+     this.aura?.attach(); // a Killer keeps their aura on the new car
+@@ -828,13 +837,14 @@
+
+     const m = this.model.matrixWorld;
+     const bodyFwd = new THREE.Vector3(0, 0, -1).transformDirection(m);
+     const [ex, ey, ez] = this.exhaust;
+-    const es = this.exhaustSize ?? 1;
+-    const noz = [[-ex, ey, ez, es], [ex, ey, ez, es]];
+-    if (this.turbine) noz.push(this.turbine);
+-    this.nozzles = noz.map(([x, y, z, s], i) => {
++    const fs = this.flameSpec ?? { side: [1, 1], mid: [1.05, 1.05], inset: 0.25, middle: this.turbine };
++    const noz = [[-ex, ey, ez, ...fs.side], [ex, ey, ez, ...fs.side]];
++    if (this.turbine) noz.push([...fs.middle.slice(0, 3), ...fs.mid]);
++    // s: length scale (also sizes the nitro bursts and smoke), w: width scale
++    this.nozzles = noz.map(([x, y, z, s, w], i) => {
+       const mount = this.nozzleMount?.[i];
+-      if (mount) return { p: mount.p.clone().applyMatrix4(mount.pod.matrixWorld), d: mount.d.clone().transformDirection(mount.pod.matrixWorld), s };
+-      return { p: new THREE.Vector3(x, y, z).applyMatrix4(m), d: bodyFwd.clone(), s };
++      if (mount) return { p: mount.p.clone().applyMatrix4(mount.pod.matrixWorld), d: mount.d.clone().transformDirection(mount.pod.matrixWorld), s, w };
++      return { p: new THREE.Vector3(x, y, z).applyMatrix4(m), d: bodyFwd.clone(), s, w };
+     });
+     // flames: a short pilot flame when coasting, full thrust on W, long afterburner on nitro, sputter as it runs out
+     const thrust = 0.25 + 0.75 * this.thrust;
+@@ -842,8 +852,8 @@
+
+     this.nozzles.forEach((n, i) => {
+       const f = this.flames[i];
+       const len = (1.6 + 3.2 * thrust + sf * 1.6 + this.nitro * 6 + this.kick * 3) * n.s;
+-      const wid = (0.75 + 0.3 * thrust + this.nitro * 0.35 + this.kick * 0.3) * n.s;
+-      const center = n.p.clone().addScaledVector(n.d, -(len * 0.5 - 0.25 * n.s));
++      const wid = (0.75 + 0.3 * thrust + this.nitro * 0.35 + this.kick * 0.3) * n.w;
++      const center = n.p.clone().addScaledVector(n.d, -(len * 0.5 - fs.inset * n.w));
+       axisBillboard(f, center, n.d, len, wid, camPos);
+       const u = f.material.uniforms;
+       u.uTime.value = t;

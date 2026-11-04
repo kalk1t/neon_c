@@ -42,7 +42,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
 | D14 | ~~`RACE_GAP_S` (120 s) longer than a fast race~~ **Fixed in v0.2.1:** `RACE_GAP_S` = `MIN_RACE_S` = 60 s, so a real back-to-back race never waits (trade-off: R8 cheat rate doubles) | `functions/rules.js` | — |
 
-## 13.3 Status 2026-11-04 (v0.2.17)
+## 13.3 Status 2026-11-04 (v0.2.18)
 v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
 glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotated the secret, disabled the leaked version and added a build guard
 (`vite.config.js` `secretGuard`). v0.2.6 split `main.js` (D1). v0.2.7 fixed the security findings C2 (plain-text HUD
@@ -58,7 +58,8 @@ player's bolts 3x slower; the rubber band never slows a rival; player car 135 m/
 km/h / mph setting; `LIVE_PROTOCOL` 10. v0.2.16 (gameplay): rivals also fire seekers, spin-dodge and set off EMPs
 with the player's values; target cone 35°. v0.2.17 (gameplay): per-car stats (`CAR_STATS`); `LIVE_PROTOCOL` 11; CI
 killer suite fixed (test helper). Accepted: `PACE_MAX` 240 stays below the VIPER's theoretical 247 m/s (real times are
-far slower; the owner chose not to touch the leaderboard).
+far slower; the owner chose not to touch the leaderboard). v0.2.18 (visual): thruster flames and damage smoke from each
+car's marked nozzles; no new debt.
 
 Fixed: R2-R8, R10-R13, D1-D15. Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05.

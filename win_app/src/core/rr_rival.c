@@ -12,17 +12,24 @@ bool rr_rival_reset(RRLocalRacer *r,const RRTrack *track,RRVec3 position,double 
     rr_race_reset(&r->race,mode,position,yaw);r->passed=0;r->lap_count=0;r->hp=100;r->wreck=r->lost=r->stuck=r->wrong_way=r->smoke_time=0;
     r->takedowns=r->coins=0;r->fire_cd=6/1.5+random_fire*(4/1.5);r->react=.1+random_reaction*.45;r->ai.sample=rr_track_nearest(track,position);r->error=false;return true;
 }
-bool rr_rival_respawn(RRLocalRacer *r,const RRTrack *track,bool keep_hp,double random_x,double random_y)
+static bool respawn(RRLocalRacer *r,const RRTrack *track,bool keep_hp,double random_x,double random_y,bool current)
 {
     if(!local_rival(r,track)||!random_valid(random_x)||!random_valid(random_y))return false;
     RRVec3 pos=r->race.safe_position;pos.x+=(random_x-.5)*12;pos.y+=(random_y-.5)*6;
-    rr_car_place(&r->car,pos,r->race.safe_yaw,35);r->visible=true;r->previous=pos;if(!keep_hp)r->hp=100;r->wreck=0;r->ai.sample=rr_track_nearest(track,pos);r->lost=r->stuck=0;return true;
+    rr_car_place(&r->car,pos,r->race.safe_yaw,35);r->visible=true;r->previous=pos;if(!keep_hp)r->hp=current?rr_racer_max_hp(r):100;r->wreck=0;r->ai.sample=rr_track_nearest(track,pos);r->lost=r->stuck=0;return true;
+}
+bool rr_rival_respawn(RRLocalRacer *r,const RRTrack *t,bool keep,double x,double y){return respawn(r,t,keep,x,y,false);}
+bool rr_rival_respawn_current(RRLocalRacer *r,const RRTrack *t,bool keep,double x,double y){return respawn(r,t,keep,x,y,true);}
+bool rr_racer_smoke_current(RRLocalRacer *r,double dt,double *strength){
+ double max_hp=rr_racer_max_hp(r);
+ if(r->hp<.6*max_hp){r->smoke_time-=dt;if(r->smoke_time<=0){double f=r->hp/max_hp;if(strength)*strength=(.6-f)/.6;r->smoke_time=.04+f/5;return true;}}
+ return false;
 }
 typedef struct FixedRandom {double x,y;} FixedRandom;
 static bool fixed_random(void *context,double values[2]){const FixedRandom *f=context;values[0]=f->x;values[1]=f->y;return true;}
-static bool respawn_random(RRLocalRacer *r,const RRTrack *track,RRRivalRandom random,void *context)
+static bool respawn_random(RRLocalRacer *r,const RRTrack *track,RRRivalRandom random,void *context,bool current)
 {
-    double values[2];if(!random||!random(context,values)||!rr_rival_respawn(r,track,false,values[0],values[1])){r->error=true;return false;}return true;
+    double values[2];if(!random||!random(context,values)||!(current?rr_rival_respawn_current:rr_rival_respawn)(r,track,false,values[0],values[1])){r->error=true;return false;}return true;
 }
 static bool remember(RRLocalRacer *r,double time)
 {
@@ -37,9 +44,9 @@ static unsigned rules_random(RRLocalRacer *r,const RRTrack *track,double dt,doub
     if(events&RR_RACE_LAP){r->passed=0;if(!remember(r,r->race.last_lap_time)){r->error=true;return events|RR_RIVAL_ERROR;}}
     r->ai.sample=rr_track_nearest_local(track,r->car.pos,r->ai.sample);
     r->stuck=r->car.speed<12&&race_time>3?r->stuck+dt:0;
-    if(r->stuck>2.5&&respawn_random(r,track,random,context))events|=RR_RIVAL_RESPAWN;
+    if(r->stuck>2.5&&respawn_random(r,track,random,context,current))events|=RR_RIVAL_RESPAWN;
     double off=rr_length(rr_sub(r->car.pos,track->samples[r->ai.sample]));
-    if(r->car.pos.y<floor_height||off>650){r->lost+=dt;if(r->lost>1.1&&respawn_random(r,track,random,context))events|=RR_RIVAL_RESPAWN;}else r->lost=0;
+    if(r->car.pos.y<floor_height||off>650){r->lost+=dt;if(r->lost>1.1&&respawn_random(r,track,random,context,current))events|=RR_RIVAL_RESPAWN;}else r->lost=0;
     return events|(r->error?RR_RIVAL_ERROR:0);
 }
 unsigned rr_rival_rules(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,double floor_height,double random_x,double random_y)
@@ -49,10 +56,11 @@ unsigned rr_rival_step(RRLocalRacer *r,const RRTrack *track,const struct RRWorld
 static unsigned step_random(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,RRInput input,double dt,double race_time,double floor_height,RRRivalRandom random,void *context,bool current)
 {
     if(!local_rival(r,track)||!isfinite(dt)||dt<=0||dt>.05)return 0;
-    if(!(r->wreck<=0)){r->wreck-=dt;if(r->wreck<=0&&respawn_random(r,track,random,context))return RR_RIVAL_RESPAWN;return r->error?RR_RIVAL_ERROR:0;}
+    if(!(r->wreck<=0)){r->wreck-=dt;if(r->wreck<=0&&respawn_random(r,track,random,context,current))return RR_RIVAL_RESPAWN;return r->error?RR_RIVAL_ERROR:0;}
     r->previous=r->car.pos;if(current)rr_car_step_current_world_report(&r->car,input,dt,world,NULL);else rr_car_step_world(&r->car,input,dt,world);if(!r->race.finished)r->race.lap_time+=dt;
     unsigned events=rules_random(r,track,dt,race_time,floor_height,random,context,current);
-    if(r->hp<60){r->smoke_time-=dt;if(r->smoke_time<=0){r->smoke_time=.04+r->hp/500;events|=RR_RIVAL_SMOKE;}}
+    if(current){if(rr_racer_smoke_current(r,dt,NULL))events|=RR_RIVAL_SMOKE;}
+    else if(r->hp<60){r->smoke_time-=dt;if(r->smoke_time<=0){r->smoke_time=.04+r->hp/500;events|=RR_RIVAL_SMOKE;}}
     return events;
 }
 static bool contacts(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out,bool current)

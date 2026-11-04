@@ -56,6 +56,10 @@ RRShotStreak rr_fire_shot_streak(const RRShot *shot,RRVec3 camera);
  * consumes existing late-coin tail. No structurally mutating callbacks allowed. */
 /* Source finished state still advances projectiles/FX, but damage rejects it. */
 void rr_fire_projectiles_current_tick(RRFireLocal *local,double dt,double floor_height,RRShotWorld world,void *ctx,bool race_active);
+/* v0.2.17 current full-pack path uses profile-aware projectile damage.
+ * All reverse shot ordering, impact/FX/lock/shake behavior stays existing.
+ * Earlier current_tick remains its frozen v0.2.14 API; EMP dispatch is separate. */
+void rr_fire_projectiles_v217_tick(RRFireLocal *local,double dt,double floor_height,RRShotWorld world,void *ctx,bool race_active);
 void rr_fire_projectiles_tick(RRFireLocal *local,double dt,double floor_height,RRShotWorld world,void *ctx);
 /* Source Weapons.clear leaves existing FX alive; resource restart is separate. */
 void rr_fire_clear(RRFireLocal *local);
@@ -63,8 +67,12 @@ void rr_fire_clear(RRFireLocal *local);
  * FX/storage errors latch local.error; caller must stop/never qualify that run. */
 void rr_fire_effect(RRFireLocal *local,unsigned kind);
 unsigned rr_fire_damage(RRFireLocal *local,RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
+unsigned rr_fire_damage_current(RRFireLocal *local,RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
 size_t rr_fire_purge(RRFireLocal *local,RRVec3 origin,double radius,RRLocalRacer *owner);
 /* Current full-roster v0.2.16 caller selects135m/s spin floor. Earlier explicit
  * current_step remains its frozen v0.2.14 fixture profile. */
 bool rr_fire_player_v216_step(RRFireLocal *local,RRArsenal *arsenal,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events);
+/* v0.2.17 profile player resources and EMP range/push/current damage.
+ * No production, reward, graphical or online acceptance is implied. */
+bool rr_fire_player_v217_step(RRFireLocal *local,RRArsenal *arsenal,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events);
 #endif

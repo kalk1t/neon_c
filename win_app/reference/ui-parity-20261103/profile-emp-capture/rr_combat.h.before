@@ -1,0 +1,46 @@
+#ifndef RR_COMBAT_H
+#define RR_COMBAT_H
+#include "rr_rival.h"
+typedef enum { RR_SHOT_GENERIC, RR_SHOT_BOLT, RR_SHOT_MISSILE, RR_SHOT_EMP } RRShotKind;
+typedef struct RRShotVisual {double length,width,flown;RRVec3 color;bool painted;} RRShotVisual;
+
+typedef struct {
+    RRLocalRacer *owner,*target;
+    RRVec3 pos,vel;
+    double speed,accel,max_speed,life,turn,damage,radius,trail_time;
+    RRShotKind kind;
+    bool always,trail,has_damage,dodge_tried; /* Source once-per-seeker dodge flag. */
+    unsigned serial; /* Opaque caller identity, retained when stable-compacting. */
+    RRShotVisual visual; /* CPU metadata moves with the shot, never a GPU handle. */
+} RRShot;
+enum {RR_DAMAGE_APPLIED=1,RR_DAMAGE_DODGED=2,RR_DAMAGE_WRECK=4};
+/* Offline state effects only. Wreck rewards, audio/FX and lock release are host
+ * work, signalled by result. No spawn protection is invented for local damage. */
+unsigned rr_combat_damage(RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
+unsigned rr_combat_shot_damage(const RRShot *shot,RRLocalRacer *victim,bool race_active);
+/* v0.2.17 race damage reaction: speed loss x victim knock, stun x victim stun.
+ * Legacy functions retain frozen rules. Stored HP is caller-owned; this does
+ * not initialize/heal a profile or change offline/online rewards and services. */
+unsigned rr_combat_damage_current(RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
+unsigned rr_combat_shot_damage_current(const RRShot *shot,RRLocalRacer *victim,bool race_active);
+/* EMP source roster order, inclusive radius95; impulse/fire delay precede damage even
+ * for a rolling car. Callback observes each damage result before the next car. */
+typedef void (*RRDamageNotice)(void *ctx,RRLocalRacer *victim,unsigned result);
+size_t rr_combat_emp(RRVec3 origin,RRLocalRacer **racers,size_t count,bool race_active,
+                     RRDamageNotice notice,void *ctx);
+typedef bool (*RRShotWorld)(void *ctx,RRVec3 from,RRVec3 to,RRVec3 *hit);
+enum {RR_SHOT_TRAIL=1,RR_SHOT_RACER_IMPACT,RR_SHOT_WORLD_IMPACT,RR_SHOT_PURGED};
+/* Synchronous event order preserves hit side effects between reverse-order shots.
+ * Trail is a request; host applies source FX capacity/RNG policy. No visual RNG
+ * or damage is applied implicitly. point is impact location (not swept contact). */
+typedef void (*RRShotNotice)(void *ctx,unsigned event,const RRShot *shot,
+                             RRLocalRacer *victim,RRVec3 point);
+/* Caller owns/resolves shot initialization, storage, live roster and pointer life.
+ * Exact source integration for finite dt>=0; no new range/cap/distance omission. */
+void rr_shots_step(RRShot *shots,size_t *count,RRLocalRacer **racers,size_t racer_count,
+                   double dt,double floor_height,RRShotWorld world,void *world_ctx,
+                   RRShotNotice notice,void *notice_ctx);
+size_t rr_shots_purge(RRShot *shots,size_t *count,RRVec3 origin,double radius,
+                      RRLocalRacer *owner,RRShotNotice notice,void *ctx);
+void rr_shots_clear(size_t *count);
+#endif

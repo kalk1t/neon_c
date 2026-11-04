@@ -6,6 +6,10 @@ typedef struct RRWeaponRules {double damage,period,speed,life,heat,acquire,keep,
 const RRWeaponRules *rr_weapon_current_rules(void);
 void rr_weapon_current_arsenal(RRArsenal *s,double dt,RRArsenalInput input,RRArsenalRandom random,void *ctx,RRArsenalEvents *events);
 void rr_weapon_current_arsenal_dispatch(RRArsenal *s,double dt,RRArsenalInput input,RRArsenalRandom random,void *ctx,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *events);
+/* v0.2.17 player resource stage; preserves side on race restart. Pure stats
+ * selection does not grant/select a car or activate gameplay/account services. */
+void rr_weapon_current_arsenal_restart_profile(RRArsenal *state,RRCarProfile profile);
+void rr_weapon_current_arsenal_profile_dispatch(RRArsenal *state,double dt,RRArsenalInput input,RRCarProfile profile,RRArsenalRandom random,void *ctx,RRArsenalNotice notice,void *notice_ctx,RRArsenalEvents *events);
 unsigned rr_weapon_current_lock(RRLocalLock *s,RRVec3 player,RRVec3 aim,const RRLocalTarget *targets,int count,double dt);
 RRFireOptions rr_weapon_current_bolt_options(void);
 /* 0=procedural fallback,1=Roadster,2=Viper,3=Titan; does not grant/select a car. */

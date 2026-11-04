@@ -1,35 +1,40 @@
 #include "rr_combat.h"
 #include <string.h>
 static bool alive(const RRLocalRacer *r) {return r->wreck<=0;}
-unsigned rr_combat_damage(RRLocalRacer *r,double amount,RRShotKind kind,bool active) {
+static unsigned damage(RRLocalRacer *r,double amount,RRShotKind kind,bool active,bool current) {
     if(!alive(r)||r->race.finished||!active)return 0;
     if(r->car.roll_time>0)return RR_DAMAGE_DODGED;
     r->hp-=amount;
     const double keep=kind==RR_SHOT_BOLT?.985:kind==RR_SHOT_MISSILE?.5:kind==RR_SHOT_EMP?.65:.6;
     const double stun=kind==RR_SHOT_BOLT?.12:kind==RR_SHOT_MISSILE?1:kind==RR_SHOT_EMP?1.6:.7;
-    r->car.speed*=keep;r->car.stun=fmax(r->car.stun,stun);
+    if(current){const RRCarStats *stats=rr_car_stats(r->car.profile);r->car.speed*=1-fmin(1,(1-keep)*stats->knock);r->car.stun=fmax(r->car.stun,stun*stats->stun);}
+    else{r->car.speed*=keep;r->car.stun=fmax(r->car.stun,stun);}
     if(r->hp<=0) {
         r->wreck=2.4;r->hp=0;r->visible=false;r->car.speed=0;r->car.vel=rr_v3(0,0,0);
         return RR_DAMAGE_APPLIED|RR_DAMAGE_WRECK;
     }
     return RR_DAMAGE_APPLIED;
 }
+unsigned rr_combat_damage(RRLocalRacer *r,double amount,RRShotKind kind,bool active){return damage(r,amount,kind,active,false);}
+unsigned rr_combat_damage_current(RRLocalRacer *r,double amount,RRShotKind kind,bool active){return damage(r,amount,kind,active,true);}
+unsigned rr_combat_shot_damage_current(const RRShot *s,RRLocalRacer *r,bool active){return rr_combat_damage_current(r,s->has_damage?s->damage:r->is_player?30:51,s->kind,active);}
 unsigned rr_combat_shot_damage(const RRShot *s,RRLocalRacer *r,bool active) {
     return rr_combat_damage(r,s->has_damage?s->damage:r->is_player?30:51,s->kind,active);
 }
-size_t rr_combat_emp(RRVec3 origin,RRLocalRacer **racers,size_t count,bool active,
-                     RRDamageNotice notice,void *ctx) {
+static size_t emp(RRVec3 origin,double radius,RRLocalRacer **racers,size_t count,bool active,RRDamageNotice notice,void *ctx,bool current) {
     size_t n=0;
     for(size_t i=0;i<count;++i) {
         RRLocalRacer *r=racers[i];if(r->is_player||!alive(r)||r->race.finished)continue;
-        RRVec3 delta=rr_sub(r->car.pos,origin);double d=rr_length(delta);if(d>95)continue;
+        RRVec3 delta=rr_sub(r->car.pos,origin);double d=rr_length(delta);if(d>radius)continue;
         ++n;r->fire_cd+=3;
-        r->car.vel=rr_add(r->car.vel,rr_scale(rr_normalize(delta),30*(1-d/95)+8));
-        unsigned result=rr_combat_damage(r,25*(1-.5*d/95),RR_SHOT_EMP,active);
+        r->car.vel=rr_add(r->car.vel,rr_scale(rr_normalize(delta),(30*(1-d/radius)+8)*(current?rr_car_stats(r->car.profile)->knock:1)));
+        unsigned result=(current?rr_combat_damage_current:rr_combat_damage)(r,25*(1-.5*d/radius),RR_SHOT_EMP,active);
         if(notice)notice(ctx,r,result);
     }
     return n;
 }
+size_t rr_combat_emp(RRVec3 origin,RRLocalRacer **racers,size_t count,bool active,RRDamageNotice notice,void *ctx){return emp(origin,95,racers,count,active,notice,ctx,false);}
+size_t rr_combat_emp_current(RRVec3 origin,double radius,RRLocalRacer **racers,size_t count,bool active,RRDamageNotice notice,void *ctx){return emp(origin,radius,racers,count,active,notice,ctx,true);}
 static void erase(RRShot *shots,size_t *count,size_t i) {
     memmove(shots+i,shots+i+1,(*count-i-1)*sizeof(*shots));--*count;
 }

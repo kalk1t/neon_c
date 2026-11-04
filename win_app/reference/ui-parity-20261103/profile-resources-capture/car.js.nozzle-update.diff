@@ -1,0 +1,35 @@
+--- 
+
++++ 
+
+@@ -321,7 +321,8 @@
+
+   roadster: {
+     url: 'models/car.glb',
+     y: -0.35, // drop to match the hover height of the code-built car
+-    exhaust: [1.55, -0.54, 2.7], // flame nozzles (x mirrored): the rear thruster pods
++    exhaust: [1.38, -0.78, 2.76], // flame nozzles (x mirrored): the small nozzle at the back of each rear pod (x 1.18..1.58, y -0.85..-0.46), low in it (owner: 2 x 0.12 m down)
++    exhaustSize: 0.62, // side flames for that 0.2 m nozzle (the turbine's 0.34 m gets 1.05)
+     podNozzles: true, // the side flames sit on the rear pods and tilt with them (v0.2.18)
+     turbine: [0, -0.5, 2.62, 0.34], // main rear turbine nozzle: centre + radius (glowing ring added in code)
+     tail: [0.8, 0.1, 2.8], // tail-light ribbon sources (x mirrored)
+@@ -597,6 +598,7 @@
+
+     this.turbine = [tx, ty, tz + 0.05, 1.05];
+     this.flames[2].visible = this.flames[0].visible;
+     this.exhaust = spec.exhaust;
++    this.exhaustSize = spec.exhaustSize ?? 1;
+     this.tail = spec.tail;
+     this.modelId = Object.keys(CAR_MODELS).find((k) => CAR_MODELS[k] === spec) ?? 'roadster';
+     this.aura?.attach(); // a Killer keeps their aura on the new car
+@@ -826,7 +828,8 @@
+
+     const m = this.model.matrixWorld;
+     const bodyFwd = new THREE.Vector3(0, 0, -1).transformDirection(m);
+     const [ex, ey, ez] = this.exhaust;
+-    const noz = [[-ex, ey, ez, 1], [ex, ey, ez, 1]];
++    const es = this.exhaustSize ?? 1;
++    const noz = [[-ex, ey, ez, es], [ex, ey, ez, es]];
+     if (this.turbine) noz.push(this.turbine);
+     this.nozzles = noz.map(([x, y, z, s], i) => {
+       const mount = this.nozzleMount?.[i];

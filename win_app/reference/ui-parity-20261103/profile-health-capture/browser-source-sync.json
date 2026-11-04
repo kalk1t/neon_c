@@ -1,0 +1,393 @@
+{
+  "created_utc": "2026-11-04T14:30:25.325012+00:00",
+  "scheduled_sync": true,
+  "local_package": "0.2.17",
+  "deployment_verified": false,
+  "source_checks": [
+    {
+      "path": "game/index.html",
+      "sha256": "f6ff6735442c8c7906098f70db6f69fef2b6f1da0ba65d318c24a5eabcd77bc0",
+      "prior_sha256": "f6ff6735442c8c7906098f70db6f69fef2b6f1da0ba65d318c24a5eabcd77bc0",
+      "changed": false
+    },
+    {
+      "path": "game/node_modules/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "prior_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "changed": false
+    },
+    {
+      "path": "game/package.json",
+      "sha256": "e5dac988d929d3561003be49b20e260566ffa5727ad0654e7f64bc449b406ba7",
+      "prior_sha256": "e5dac988d929d3561003be49b20e260566ffa5727ad0654e7f64bc449b406ba7",
+      "changed": false
+    },
+    {
+      "path": "game/src/ai.js",
+      "sha256": "1ef62d6dee81d5b3209f038f0725bd7e8ecc58c4b9551ab39ae1e22427c330ed",
+      "prior_sha256": "1ef62d6dee81d5b3209f038f0725bd7e8ecc58c4b9551ab39ae1e22427c330ed",
+      "changed": false
+    },
+    {
+      "path": "game/src/aim.js",
+      "sha256": "de1a27743ab13541b2e1fa18d83a40003667d5d24edcb14dba388785ccf2841e",
+      "prior_sha256": "de1a27743ab13541b2e1fa18d83a40003667d5d24edcb14dba388785ccf2841e",
+      "changed": false
+    },
+    {
+      "path": "game/src/audio.js",
+      "sha256": "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506",
+      "prior_sha256": "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506",
+      "changed": false
+    },
+    {
+      "path": "game/src/camera.js",
+      "sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+      "prior_sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+      "changed": false
+    },
+    {
+      "path": "game/src/car.js",
+      "sha256": "362dd3196a3d90db4e4f9b895f858602bef57da42900a1c1f0c56d3214be59d6",
+      "prior_sha256": "8ab9cca9c22c86dee4ebfbdc631e1e427372c17feff480f8610ce2c64eef2d9c",
+      "changed": true
+    },
+    {
+      "path": "game/src/coins.js",
+      "sha256": "edf8249a51b2abad4c4b6d8e9c2180535c60565f25741b1eb5461373d54da69a",
+      "prior_sha256": "edf8249a51b2abad4c4b6d8e9c2180535c60565f25741b1eb5461373d54da69a",
+      "changed": false
+    },
+    {
+      "path": "game/src/fx.js",
+      "sha256": "627cef3362bec05cb4be61eab1473920216e89e95b84d63df83bebbdcd686550",
+      "prior_sha256": "da08e84dc706f0005db140a902b131b3ba6e5273a4239ba44af7a6d1c98aef7d",
+      "changed": true
+    },
+    {
+      "path": "game/src/hud.js",
+      "sha256": "49df9c377a024dd398e08b02c13c94c590d88c45d4b50c7455df061f9b89409d",
+      "prior_sha256": "49df9c377a024dd398e08b02c13c94c590d88c45d4b50c7455df061f9b89409d",
+      "changed": false
+    },
+    {
+      "path": "game/src/input.js",
+      "sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f",
+      "prior_sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f",
+      "changed": false
+    },
+    {
+      "path": "game/src/main.js",
+      "sha256": "0f2ab48d4bdf94083156432d2c1249fd939ea286b5930d14eb621c720a59c35d",
+      "prior_sha256": "26ded641c2a0881c2464c3df13ad99a05ed400673afe31bfcc268255bcbed0a0",
+      "changed": true
+    },
+    {
+      "path": "game/src/maps.js",
+      "sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3",
+      "prior_sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3",
+      "changed": false
+    },
+    {
+      "path": "game/src/online/protocol.js",
+      "sha256": "6d03f532da0fbf533b086b506e1470bbbc649a052177fcf744b1cef499a40569",
+      "prior_sha256": "6d03f532da0fbf533b086b506e1470bbbc649a052177fcf744b1cef499a40569",
+      "changed": false
+    },
+    {
+      "path": "game/src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b",
+      "prior_sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b",
+      "changed": false
+    },
+    {
+      "path": "game/src/race.js",
+      "sha256": "087e372508b40777dfff49c973abd4b66774cdd3f0059080bb5d08624eaf6257",
+      "prior_sha256": "087e372508b40777dfff49c973abd4b66774cdd3f0059080bb5d08624eaf6257",
+      "changed": false
+    },
+    {
+      "path": "game/src/roads.js",
+      "sha256": "40eee86060471b7d9a68ab603fbf40896952e7b9d62c06dfcb7b70b3d4337ca9",
+      "prior_sha256": "40eee86060471b7d9a68ab603fbf40896952e7b9d62c06dfcb7b70b3d4337ca9",
+      "changed": false
+    },
+    {
+      "path": "game/src/style.css",
+      "sha256": "68c4538c43b093d6131ca3c56a3ab31dfa6e4b8ffd78a2f8ff512fc51b646d75",
+      "prior_sha256": "68c4538c43b093d6131ca3c56a3ab31dfa6e4b8ffd78a2f8ff512fc51b646d75",
+      "changed": false
+    },
+    {
+      "path": "game/src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9",
+      "prior_sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9",
+      "changed": false
+    },
+    {
+      "path": "game/src/world.js",
+      "sha256": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd",
+      "prior_sha256": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd",
+      "changed": false
+    }
+  ],
+  "docs_checks": [
+    {
+      "path": "game\\docs\\changelog.md",
+      "sha256": "44f166cd2f25b31c46cd04bb7978ab6ed504f285c24ac101459beef1a43fc8d2",
+      "prior_sha256": "44f166cd2f25b31c46cd04bb7978ab6ed504f285c24ac101459beef1a43fc8d2",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\feature-inventory.md",
+      "sha256": "b0dc1d639c99494289dad3b2cbe479f6b5db96d381a7a2461a60204b39508a51",
+      "prior_sha256": "b0dc1d639c99494289dad3b2cbe479f6b5db96d381a7a2461a60204b39508a51",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\glossary.md",
+      "sha256": "ecae5ad4e6d47bd6b3796b8fbd7cb83502640412052ae7219ebbdaa8571b6b9e",
+      "prior_sha256": "ecae5ad4e6d47bd6b3796b8fbd7cb83502640412052ae7219ebbdaa8571b6b9e",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\01-getting-started.md",
+      "sha256": "edcd5c122cf33661f792934fd152ed86dad4c7bc422de5d9bca5999f2e90b477",
+      "prior_sha256": "edcd5c122cf33661f792934fd152ed86dad4c7bc422de5d9bca5999f2e90b477",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\02-controls.md",
+      "sha256": "45329354022fdec5cba1d3b55e827b7d90fa5efaa341802d3b56fef3265421fa",
+      "prior_sha256": "45329354022fdec5cba1d3b55e827b7d90fa5efaa341802d3b56fef3265421fa",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\03-game-modes.md",
+      "sha256": "a9448265d22d7d0be85f6fc4a58820ed74559a56d2db2e14e64eab3323efcbb4",
+      "prior_sha256": "a9448265d22d7d0be85f6fc4a58820ed74559a56d2db2e14e64eab3323efcbb4",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\04-flying.md",
+      "sha256": "02de239b64a2a62937a1bd2744550dfa64ade44fac16292745ab98fbe339610a",
+      "prior_sha256": "02de239b64a2a62937a1bd2744550dfa64ade44fac16292745ab98fbe339610a",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\05-combat.md",
+      "sha256": "6d057bdc7fa4cf2a6708939a9b4ef3adc15d1a44ec6906ab5c1cbd7aa31a99c0",
+      "prior_sha256": "6d057bdc7fa4cf2a6708939a9b4ef3adc15d1a44ec6906ab5c1cbd7aa31a99c0",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\06-free-roam.md",
+      "sha256": "1a8a393f7af7f785da768ab1f2736ec9b29c0802b4e67ed8c6d06ac7346525d9",
+      "prior_sha256": "1a8a393f7af7f785da768ab1f2736ec9b29c0802b4e67ed8c6d06ac7346525d9",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\07-progress.md",
+      "sha256": "46665006ab0c1113baca048ba91ebf541e8c492b8520240d774379caecd3f2d6",
+      "prior_sha256": "46665006ab0c1113baca048ba91ebf541e8c492b8520240d774379caecd3f2d6",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\08-settings.md",
+      "sha256": "a538e70a2a00e2908a57669123f416d700a6b27fe32cd184b97d02a93a143099",
+      "prior_sha256": "a538e70a2a00e2908a57669123f416d700a6b27fe32cd184b97d02a93a143099",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\09-troubleshooting.md",
+      "sha256": "acfd3665985c7af95329ebe2b339984c3ee12c7b2b78123abb43fb8b9f2b5984",
+      "prior_sha256": "acfd3665985c7af95329ebe2b339984c3ee12c7b2b78123abb43fb8b9f2b5984",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\10-whats-new.md",
+      "sha256": "944f25cab320f9afa0d51710670c7bd60a114ea3a1d3bffb9727c2a7adf18d88",
+      "prior_sha256": "944f25cab320f9afa0d51710670c7bd60a114ea3a1d3bffb9727c2a7adf18d88",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\README.md",
+      "sha256": "4ab00ca2ddbe956a4b4f5ccdc1d43821b97e4c0f15c9f870f3372357defd60c5",
+      "prior_sha256": "4ab00ca2ddbe956a4b4f5ccdc1d43821b97e4c0f15c9f870f3372357defd60c5",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\media\\README.md",
+      "sha256": "a5f8ad2be23f12aa10c04eaaa5ee411aa612d3c88503b6602d9d7430e101fd04",
+      "prior_sha256": "a5f8ad2be23f12aa10c04eaaa5ee411aa612d3c88503b6602d9d7430e101fd04",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\README.md",
+      "sha256": "624b2062d2ab8b7f4b23e733d4f2cc947b263187d00864bd091d96352d0acb71",
+      "prior_sha256": "624b2062d2ab8b7f4b23e733d4f2cc947b263187d00864bd091d96352d0acb71",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\01-overview.md",
+      "sha256": "e5d7c56cb99f20aae22380dd7374a3a74642ea4d324ed5a772a36e74b2998e78",
+      "prior_sha256": "e5d7c56cb99f20aae22380dd7374a3a74642ea4d324ed5a772a36e74b2998e78",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\02-game-loop.md",
+      "sha256": "a0d2ec3578da4e844c1415c6cdba502e946ef7091101b4ff6f7fe4f5fbac0e12",
+      "prior_sha256": "a0d2ec3578da4e844c1415c6cdba502e946ef7091101b4ff6f7fe4f5fbac0e12",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\03-world.md",
+      "sha256": "6791e09c66b314f41aa6a8b1b5f98a88be146a6038b31a70a6ce940a2736330d",
+      "prior_sha256": "6791e09c66b314f41aa6a8b1b5f98a88be146a6038b31a70a6ce940a2736330d",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\04-car.md",
+      "sha256": "5d06f920e1b385ee31ea977fc90b5bc7282b82ea3b357a4daa0d9544a9cf87d1",
+      "prior_sha256": "5d06f920e1b385ee31ea977fc90b5bc7282b82ea3b357a4daa0d9544a9cf87d1",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\05-ai-rivals.md",
+      "sha256": "cd537141446bf6195055302a9d8f1151a5e3589151973ed20c68597ad67f657e",
+      "prior_sha256": "cd537141446bf6195055302a9d8f1151a5e3589151973ed20c68597ad67f657e",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\06-weapons-damage.md",
+      "sha256": "23756f83b668b36f6b69a026a53d26bca21ed99bac16d1e3816e75d964a3606f",
+      "prior_sha256": "23756f83b668b36f6b69a026a53d26bca21ed99bac16d1e3816e75d964a3606f",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\07-online.md",
+      "sha256": "2495681c8bcb4279915c607bb4ad24585e1f7f3caca91edd3d66168cf28caec5",
+      "prior_sha256": "2495681c8bcb4279915c607bb4ad24585e1f7f3caca91edd3d66168cf28caec5",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\08-accounts-data.md",
+      "sha256": "e8baaa8520248ab87a7aa8aea3b659f593fbba92ca9932a9acfc864d049db7d2",
+      "prior_sha256": "e8baaa8520248ab87a7aa8aea3b659f593fbba92ca9932a9acfc864d049db7d2",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\09-hud-ui.md",
+      "sha256": "f00d32e1f962de3d707783a40b01797e351e031677878cc353cb8fffd946b43e",
+      "prior_sha256": "f00d32e1f962de3d707783a40b01797e351e031677878cc353cb8fffd946b43e",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\10-operations.md",
+      "sha256": "6949e6af7829adb632d608cdb39d70a8ff297842846fcc5c664d87546052d7a4",
+      "prior_sha256": "6949e6af7829adb632d608cdb39d70a8ff297842846fcc5c664d87546052d7a4",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\11-known-issues-roadmap.md",
+      "sha256": "63ed44e635d98aa57817a3cad086c7ebb913147f3c31ba892ea896a4178afb36",
+      "prior_sha256": "63ed44e635d98aa57817a3cad086c7ebb913147f3c31ba892ea896a4178afb36",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\README.md",
+      "sha256": "c5d0337d78d620762bc47abd1120bf03a72f91a4b387aa9bc94e0fb659773280",
+      "prior_sha256": "c5d0337d78d620762bc47abd1120bf03a72f91a4b387aa9bc94e0fb659773280",
+      "changed": false
+    },
+    {
+      "path": "techplan\\01-architecture.md",
+      "sha256": "452fb6f280ae6d88f897f53d7bec931fe2683f5c824abf2e53fa9f6196c923b9",
+      "prior_sha256": "452fb6f280ae6d88f897f53d7bec931fe2683f5c824abf2e53fa9f6196c923b9",
+      "changed": false
+    },
+    {
+      "path": "techplan\\02-startup-config.md",
+      "sha256": "df1aabf4070a2012843cb0c181ffd5895dcdce19c9ed97f1342bd77ab7755cb1",
+      "prior_sha256": "df1aabf4070a2012843cb0c181ffd5895dcdce19c9ed97f1342bd77ab7755cb1",
+      "changed": false
+    },
+    {
+      "path": "techplan\\03-workflows.md",
+      "sha256": "e05f2b44c18a721e8e95d047b968bb1dcee0c8ad280856fe97e17c3dc4bf7bc2",
+      "prior_sha256": "e05f2b44c18a721e8e95d047b968bb1dcee0c8ad280856fe97e17c3dc4bf7bc2",
+      "changed": false
+    },
+    {
+      "path": "techplan\\04-components.md",
+      "sha256": "e7380f18420e1a5f5c24249cf3fe2f9b65ed02a9afc2c27957d6628c3affd37c",
+      "prior_sha256": "e7380f18420e1a5f5c24249cf3fe2f9b65ed02a9afc2c27957d6628c3affd37c",
+      "changed": false
+    },
+    {
+      "path": "techplan\\05-data.md",
+      "sha256": "dd017e5bf5ae49fef5a0c1d827d24dd11f0a27b17b8536be0e5154235ac1b4bc",
+      "prior_sha256": "dd017e5bf5ae49fef5a0c1d827d24dd11f0a27b17b8536be0e5154235ac1b4bc",
+      "changed": false
+    },
+    {
+      "path": "techplan\\06-apis-integrations.md",
+      "sha256": "23ff809b09afee9544d9059d56d11b1dd3b641a7b5a709174cb0537470b3753e",
+      "prior_sha256": "23ff809b09afee9544d9059d56d11b1dd3b641a7b5a709174cb0537470b3753e",
+      "changed": false
+    },
+    {
+      "path": "techplan\\07-security.md",
+      "sha256": "e5310d0371d821fbfffc4222286f0817a83a3fac165c0288401e1a5eaa7590de",
+      "prior_sha256": "e5310d0371d821fbfffc4222286f0817a83a3fac165c0288401e1a5eaa7590de",
+      "changed": false
+    },
+    {
+      "path": "techplan\\08-testing.md",
+      "sha256": "34a3579ff9a8bb5292437aaa9350252af12fcac86189fde031ab5d472d5a8fda",
+      "prior_sha256": "34a3579ff9a8bb5292437aaa9350252af12fcac86189fde031ab5d472d5a8fda",
+      "changed": false
+    },
+    {
+      "path": "techplan\\09-build-deploy-ops.md",
+      "sha256": "f6b8b5d8929c7f26f3ab8b57f22cfbe318fb3c8bf0b25742fe8d14401fadc5ae",
+      "prior_sha256": "f6b8b5d8929c7f26f3ab8b57f22cfbe318fb3c8bf0b25742fe8d14401fadc5ae",
+      "changed": false
+    },
+    {
+      "path": "techplan\\10-tech-debt-risks.md",
+      "sha256": "504a2ce171b3b928324249a08a19f34662968238bffb5570a867b8c0d6c0f7cd",
+      "prior_sha256": "504a2ce171b3b928324249a08a19f34662968238bffb5570a867b8c0d6c0f7cd",
+      "changed": false
+    },
+    {
+      "path": "techplan\\11-constants.md",
+      "sha256": "c436cbde45b16e89fa98f54c6adad0a2469b3f2be989ab5b49665f9af893c529",
+      "prior_sha256": "c436cbde45b16e89fa98f54c6adad0a2469b3f2be989ab5b49665f9af893c529",
+      "changed": false
+    },
+    {
+      "path": "techplan\\12-coverage-open-questions.md",
+      "sha256": "b62bcdea6765e90215093c5c10a76e91eaa528de39195f67fbfbac71b5138935",
+      "prior_sha256": "b62bcdea6765e90215093c5c10a76e91eaa528de39195f67fbfbac71b5138935",
+      "changed": false
+    },
+    {
+      "path": "techplan\\browser-tests\\README.md",
+      "sha256": "071dbf5ee2e9cc457ae8d1bc73f4063b3b5b7fd0d1c042f2780d5f69665f5098",
+      "prior_sha256": "071dbf5ee2e9cc457ae8d1bc73f4063b3b5b7fd0d1c042f2780d5f69665f5098",
+      "changed": false
+    },
+    {
+      "path": "techplan\\TECHNICAL_DOCUMENTATION.md",
+      "sha256": "90c67d124190551ebe78277d4f0420e553ecbaef7a0ee4c24d26af48f2134927",
+      "prior_sha256": "90c67d124190551ebe78277d4f0420e553ecbaef7a0ee4c24d26af48f2134927",
+      "changed": false
+    }
+  ],
+  "findings": [
+    "Current local source/package/docs v0.2.17 and source protocol11 remain the parity target; no deployment or release inspection.",
+    "Implementation follows original Racer.reset maxHp, race respawn keepHp semantics and main.stepRacer 60%-health smoke.",
+    "Technical weapons/damage prose still says under60 for smoke; car technical table and source correctly use60% of maxHp. Browser docs not edited."
+  ]
+}

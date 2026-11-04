@@ -35,15 +35,15 @@ static void damaged(RRFireLocal *l,RRLocalRacer *r,unsigned result) {
     if(result&RR_DAMAGE_WRECK){effect(l,RR_FX_EXPLODE);if(l->locked==r)l->locked=NULL;if(r->is_player&&l->shake)*l->shake=1.4;}
 }
 static void emp_notice(void *p,RRLocalRacer *r,unsigned result){damaged(p,r,result);}
-typedef struct {RRFireLocal *local;bool race_active;} ProjectileNotice;
+typedef struct {RRFireLocal *local;bool race_active,profile_damage;} ProjectileNotice;
 static void shot_notice_current(void *p,unsigned event,const RRShot *s,RRLocalRacer *r,RRVec3 point) {
     ProjectileNotice *notice=p;RRFireLocal *l=notice->local;(void)point;
     if(event==RR_SHOT_TRAIL){effect(l,RR_FX_TRAIL);return;}
     effect(l,event==RR_SHOT_PURGED||s->kind==RR_SHOT_BOLT?RR_FX_SPARK:RR_FX_IMPACT);
-    if(event==RR_SHOT_RACER_IMPACT)damaged(l,r,rr_combat_shot_damage(s,r,notice->race_active));
+    if(event==RR_SHOT_RACER_IMPACT)damaged(l,r,(notice->profile_damage?rr_combat_shot_damage_current:rr_combat_shot_damage)(s,r,notice->race_active));
 }
-static void shot_notice(void *p,unsigned event,const RRShot *shot,RRLocalRacer *r,RRVec3 point){ProjectileNotice notice={p,true};shot_notice_current(&notice,event,shot,r,point);}
-typedef struct {RRFireLocal *local;double speed;const RRFireBinding *binding;bool current_flight;} Dispatch;
+static void shot_notice(void *p,unsigned event,const RRShot *shot,RRLocalRacer *r,RRVec3 point){ProjectileNotice notice={p,true,false};shot_notice_current(&notice,event,shot,r,point);}
+typedef struct {RRFireLocal *local;double speed;const RRFireBinding *binding;bool current_flight,profile_effects;} Dispatch;
 static void dispatch(void *p,unsigned kind,const RRArsenalEvents *e) {
     Dispatch *d=p;RRFireLocal *l=d->local;RRFireOptions o={0};
     if(kind==RR_ARSENAL_BOLT||kind==RR_ARSENAL_MISSILE) {
@@ -71,36 +71,41 @@ static void dispatch(void *p,unsigned kind,const RRArsenalEvents *e) {
         }
     } else if(kind==RR_ARSENAL_SPIN){if(d->current_flight)rr_car_dodge_current(&l->player->car,e->spin_side);else rr_car_dodge(&l->player->car,e->spin_side);}
     else if(kind==RR_ARSENAL_EMP) {
+        double radius=d->profile_effects?95*rr_car_stats(l->player->car.profile)->emp:95;
         effect(l,RR_FX_WAVE);
-        (void)rr_shots_purge(l->shots,&l->count,l->player->car.pos,95,l->player,shot_notice,l);
+        (void)rr_shots_purge(l->shots,&l->count,l->player->car.pos,radius,l->player,shot_notice,l);
         /* Source sound.emp precedes the roster damage loop. */
         if(l->cue)l->cue(l->cue_ctx,kind);
         if(l->shake)*l->shake+=.5;
-        (void)rr_combat_emp(l->player->car.pos,l->racers,l->racer_count,true,emp_notice,l);return;
+        if(d->profile_effects)(void)rr_combat_emp_current(l->player->car.pos,radius,l->racers,l->racer_count,true,emp_notice,l);
+        else (void)rr_combat_emp(l->player->car.pos,l->racers,l->racer_count,true,emp_notice,l);
+        return;
     }
     if(l->cue)l->cue(l->cue_ctx,kind);
     if(l->shake&&kind==RR_ARSENAL_BOLT)*l->shake=fmin(.5,*l->shake+.03);
     if(l->shake&&kind==RR_ARSENAL_MISSILE)*l->shake+=.25;
 }
 void rr_fire_player_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,RRArsenalEvents *events) {
-    Dispatch d={l,fmax(0,l->player->car.speed),NULL,false};
+    Dispatch d={l,fmax(0,l->player->car.speed),NULL,false,false};
     rr_arsenal_step_dispatch(s,dt,input,l->random,l->random_ctx,dispatch,&d,events);
 }
-static bool current_player_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events,bool current_flight){
+static bool current_player_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events,bool current_flight,bool profile_limits){
     if(!l)return false;
     if(!s||!events||l->error||l->fx.error){l->error=true;return false;}
     if(!l->player||!l->random||!binding||binding->model<0||binding->model>3){l->error=true;return false;}
     for(int i=0;i<16;i++)if(!isfinite(binding->model_world[i])){l->error=true;return false;}
     for(int side=-1;side<=1;side++){RRVec3 p=rr_weapon_current_muzzle(binding->model,side,binding->model_world);if(!isfinite(p.x)||!isfinite(p.y)||!isfinite(p.z)){l->error=true;return false;}}
-    Dispatch d={l,fmax(0,l->player->car.speed),binding,current_flight};
-    rr_weapon_current_arsenal_dispatch(s,dt,input,l->random,l->random_ctx,dispatch,&d,events);return !l->error&&!l->fx.error;
+    Dispatch d={l,fmax(0,l->player->car.speed),binding,current_flight,profile_limits};
+    if(profile_limits)rr_weapon_current_arsenal_profile_dispatch(s,dt,input,l->player->car.profile,l->random,l->random_ctx,dispatch,&d,events);
+    else rr_weapon_current_arsenal_dispatch(s,dt,input,l->random,l->random_ctx,dispatch,&d,events);
+    return !l->error&&!l->fx.error;
 }
 RRShotStreak rr_fire_shot_streak(const RRShot *shot,RRVec3 camera){
     double far=1+fmin(2,rr_length(rr_sub(shot->pos,camera))/120),length=fmin(shot->visual.length*far,shot->visual.flown+1);
     RRShotStreak out={rr_sub(shot->pos,rr_scale(rr_normalize(shot->vel),length/2)),length,shot->visual.width*far};return out;
 }
 void rr_fire_projectiles_current_tick(RRFireLocal *l,double dt,double floor_height,RRShotWorld world,void *ctx,bool race_active){
-    ProjectileNotice notice={l,race_active};rr_shots_step(l->shots,&l->count,l->racers,l->racer_count,dt,floor_height,world,ctx,shot_notice_current,&notice);rr_fx_tick(&l->fx,dt);
+    ProjectileNotice notice={l,race_active,false};rr_shots_step(l->shots,&l->count,l->racers,l->racer_count,dt,floor_height,world,ctx,shot_notice_current,&notice);rr_fx_tick(&l->fx,dt);
 }
 void rr_fire_projectiles_tick(RRFireLocal *l,double dt,double floor_height,RRShotWorld world,void *ctx) {
     rr_fire_projectiles_current_tick(l,dt,floor_height,world,ctx,true);
@@ -111,5 +116,13 @@ void rr_fire_effect(RRFireLocal *l,unsigned kind){effect(l,kind);}
 unsigned rr_fire_damage(RRFireLocal *l,RRLocalRacer *r,double amount,RRShotKind kind,bool active){unsigned result=rr_combat_damage(r,amount,kind,active);damaged(l,r,result);return result;}
 size_t rr_fire_purge(RRFireLocal *l,RRVec3 origin,double radius,RRLocalRacer *owner){return rr_shots_purge(l->shots,&l->count,origin,radius,owner,shot_notice,l);}
 
-bool rr_fire_player_current_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,false);}
-bool rr_fire_player_v216_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,true);}
+bool rr_fire_player_current_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,false,false);}
+bool rr_fire_player_v216_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,true,false);}
+
+void rr_fire_projectiles_v217_tick(RRFireLocal *l,double dt,double floor_height,RRShotWorld world,void *ctx,bool race_active){
+ ProjectileNotice notice={l,race_active,true};rr_shots_step(l->shots,&l->count,l->racers,l->racer_count,dt,floor_height,world,ctx,shot_notice_current,&notice);rr_fx_tick(&l->fx,dt);
+}
+
+bool rr_fire_player_v217_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,true,true);}
+
+unsigned rr_fire_damage_current(RRFireLocal *l,RRLocalRacer *r,double amount,RRShotKind kind,bool active){unsigned result=rr_combat_damage_current(r,amount,kind,active);damaged(l,r,result);return result;}

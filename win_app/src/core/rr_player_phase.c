@@ -5,7 +5,7 @@ static bool valid(RRBattleCurrent *c){return c&&!c->error&&c->battle&&c->battle-
 static bool delta(double dt){return isfinite(dt)&&dt>0&&dt<=.05;}
 bool rr_player_phase_respawn(RRBattleCurrent *c){
  if(!valid(c))return false;RRLocalRacer *r=c->battle->fire.player;const RRTrack *t=c->battle->pack->track;
- rr_car_place(&r->car,r->race.safe_position,r->race.safe_yaw,35);r->visible=true;r->previous=r->car.pos;r->hp=100;r->wreck=0;r->ai.sample=rr_track_nearest(t,r->car.pos);r->lost=r->stuck=0;
+ rr_car_place(&r->car,r->race.safe_position,r->race.safe_yaw,35);r->visible=true;r->previous=r->car.pos;r->hp=rr_racer_max_hp(r);r->wreck=0;r->ai.sample=rr_track_nearest(t,r->car.pos);r->lost=r->stuck=0;
  if(!rr_car_pose_sync(&c->pack.poses[0],&r->car)){c->error=true;return false;}return true;
 }
 static bool remember(RRLocalRacer *r,double elapsed){
@@ -25,7 +25,7 @@ bool rr_player_phase_step(RRBattleCurrent *c,RRInput input,double dt,double time
  if((flags&RR_RACE_FINISH)&&!rr_pack_current_rank(&c->pack)){c->error=true;return false;}
  r->ai.sample=rr_track_nearest_local(t,r->car.pos,r->ai.sample);double along=rr_dot(r->car.vel,t->tangents[r->ai.sample]);r->wrong_way=along< -15?r->wrong_way+dt:0;
  double off=rr_length(rr_sub(r->car.pos,t->samples[r->ai.sample]));if(r->car.pos.y<34||off>650){r->lost+=dt;if(r->lost>1.1){if(!rr_player_phase_respawn(c))return false;*events|=RR_RUN_RESPAWN;}}else r->lost=0;
- if(r->hp<60){r->smoke_time-=dt;if(r->smoke_time<=0){r->smoke_time=.04+r->hp/500;*events|=RR_RUN_SMOKE;rr_fire_effect(&c->battle->fire,RR_FX_SMOKE);}}
+ if(rr_racer_smoke_current(r,dt,NULL)){*events|=RR_RUN_SMOKE;rr_fire_effect(&c->battle->fire,RR_FX_SMOKE);}
  if(c->battle->fire.error||c->battle->fire.fx.error){c->error=true;return false;}return true;
 }
 bool rr_player_phase_countdown(RRBattleCurrent *c,double dt,const struct RRWorld *world,RRCarStepReport *motion){

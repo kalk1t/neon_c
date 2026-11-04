@@ -1,0 +1,31 @@
+--- 
+
++++ 
+
+@@ -565,15 +565,18 @@
+
+   if (g.state === 'race' || r.finished || !r.isPlayer) raceRules(r, dt);
+   if (r.hp < 0.6 * r.maxHp) {
+     r.smokeT -= dt;
+-    if (r.smokeT <= 0) {
+-      const f = r.hp / r.maxHp; // health left, 0..1
+-      // v0.2.18: out of the engine nozzles in turn (where the nitro flames come from), streaming back with the car
+-      const noz = r.car.nozzles;
++    const f = r.hp / r.maxHp; // health left, 0..1
++    const noz = r.car.nozzles;
++    // v0.2.18: out of the engine nozzles in turn (where the nitro flames come from), streaming back with the car. Every
++    // puff due this frame comes out, each where it would be by now (a puff left behind at 7% of the car's speed), so the
++    // plume stays unbroken at any frame rate.
++    for (let k = 0; r.smokeT <= 0 && k < 8; k++) {
+       const n = noz.length ? noz[(r.smokeN = ((r.smokeN ?? 0) + 1) % noz.length)] : null;
+-      if (n) weapons.exhaustSmoke(n.p.clone().addScaledVector(n.d, -0.5 * n.s), r.car.vel, (0.6 - f) / 0.6);
++      if (n) weapons.exhaustSmoke(n.p.clone().addScaledVector(n.d, -0.5 * n.s).addScaledVector(r.car.vel, 0.07 * r.smokeT), r.car.vel, (0.6 - f) / 0.6);
+       else weapons.smoke(r.car.pos.clone().addScaledVector(r.car.fwd, -2.5), (0.6 - f) / 0.6);
+-      r.smokeT = 0.012 + f / 20;
+-    }
++      r.smokeT += 0.012 + f / 20;
++    }
++    r.smokeT = Math.max(r.smokeT, 0);
+   }
+   return res;
+ }

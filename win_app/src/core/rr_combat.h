@@ -18,11 +18,20 @@ enum {RR_DAMAGE_APPLIED=1,RR_DAMAGE_DODGED=2,RR_DAMAGE_WRECK=4};
  * work, signalled by result. No spawn protection is invented for local damage. */
 unsigned rr_combat_damage(RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
 unsigned rr_combat_shot_damage(const RRShot *shot,RRLocalRacer *victim,bool race_active);
+/* v0.2.17 race damage reaction: speed loss x victim knock, stun x victim stun.
+ * Legacy functions retain frozen rules. Stored HP is caller-owned; this does
+ * not initialize/heal a profile or change offline/online rewards and services. */
+unsigned rr_combat_damage_current(RRLocalRacer *victim,double amount,RRShotKind kind,bool race_active);
+unsigned rr_combat_shot_damage_current(const RRShot *shot,RRLocalRacer *victim,bool race_active);
 /* EMP source roster order, inclusive radius95; impulse/fire delay precede damage even
  * for a rolling car. Callback observes each damage result before the next car. */
 typedef void (*RRDamageNotice)(void *ctx,RRLocalRacer *victim,unsigned result);
 size_t rr_combat_emp(RRVec3 origin,RRLocalRacer **racers,size_t count,bool race_active,
                      RRDamageNotice notice,void *ctx);
+/* Current player EMP: caller pins source radius before wave/purge/audio.
+ * Source positive radius, source roster; victim push precedes profile damage.
+ * Same skip/order semantics; no wave rendering, rewards or network behavior. */
+size_t rr_combat_emp_current(RRVec3 origin,double radius,RRLocalRacer **racers,size_t count,bool race_active,RRDamageNotice notice,void *ctx);
 typedef bool (*RRShotWorld)(void *ctx,RRVec3 from,RRVec3 to,RRVec3 *hit);
 enum {RR_SHOT_TRAIL=1,RR_SHOT_RACER_IMPACT,RR_SHOT_WORLD_IMPACT,RR_SHOT_PURGED};
 /* Synchronous event order preserves hit side effects between reverse-order shots.

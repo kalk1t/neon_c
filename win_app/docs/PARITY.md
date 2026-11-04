@@ -1,3 +1,15 @@
+## 2026-11-04: profile player seeker capacity / spin cooldown
+
+Current full-pack restart/fire uses source 3/3/4 seeker limits and 6/4/6 spin cooldowns. Fresh 7,416-source-frame actual-Sound/no-context callback RNG oracle and native/WASM153/153 pass. Older APIs preserved; EMP effects, working v0.2.18 emitter and production activation remain open. See PROFILE-RESOURCES-2026-11-04.md.
+
+## 2026-11-04: v0.2.17 profile health recovery/smoke; new working v0.2.18 drift
+
+Current rival reset and player/rival recovery restore profile max HP; captured v0.2.17 fractional smoke routed. Fresh source oracle + native/WASM152/152 pass. Scheduled sync: car/fx/main now contain v0.2.18 nozzle/emitter/cadence changes; recovery fragments unchanged, docs/package still0.2.17. New emitter path remains separate/unported, production inactive. See PROFILE-HEALTH-2026-11-04.md.
+
+## 2026-11-04: v0.2.17 profile-aware race projectile damage
+
+Current full-pack projectile phase uses source knock/stun multipliers; older APIs and fixtures preserved. Fresh 8,124-case oracle plus projectile/full-pack seams; native/WASM 151/151 passed. Runtime max-health/reset/respawn/smoke and EMP caller migration remain open; production full-pack inactive. See PROFILE-DAMAGE-2026-11-04.md.
+
 ## 2026-11-04: current per-car contact mass
 
 Current pack uses source mass-weighted contact separation/response; legacy equal-mass fixtures preserved. Fresh5,852case source oracle plus pack routing, native/WASM150/150passed. Production full-pack remains inactive; health/arsenal/HUD/protocol qualification open. See CONTACT-MASS-2026-11-04.md.

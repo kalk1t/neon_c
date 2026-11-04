@@ -11,6 +11,12 @@ typedef struct RRLocalRacer {
     double *lap_times;size_t lap_count,lap_capacity;
     bool is_player,visible,error;
 } RRLocalRacer;
+/* Current profile maximum is source CAR_STATS, not an account/equipment grant. */
+static inline double rr_racer_max_hp(const RRLocalRacer *r){return rr_car_stats(r->car.profile)->hp;}
+/* Source shared smoke phase only: caller already gated alive/race and valid dt.
+ * No RNG/FX calls. Returns an emission and optional source intensity; above/equal
+ * 60% leaves smoke timer untouched. Does not heal/clamp health or strength. */
+bool rr_racer_smoke_current(RRLocalRacer *r,double dt,double *strength);
 typedef struct RRCarContactEvent {int a,b;double relative_speed,hit_volume;bool player_hit;} RRCarContactEvent;
 typedef struct RRCarContacts {RRCarContactEvent events[RR_LOCAL_MAX_CONTACTS];size_t count;double shake;} RRCarContacts;
 enum {RR_RIVAL_RESPAWN=8,RR_RIVAL_SMOKE=16,RR_RIVAL_ERROR=32};
@@ -24,6 +30,8 @@ void rr_rival_dispose(RRLocalRacer *r);
 bool rr_rival_reset(RRLocalRacer *r,const RRTrack *track,RRVec3 position,double yaw,
     RRRaceMode mode,double random_fire,double random_reaction);
 bool rr_rival_respawn(RRLocalRacer *r,const RRTrack *track,bool keep_hp,double random_x,double random_y);
+/* Current recovery restores profile max HP unless keep_hp; legacy heals100. */
+bool rr_rival_respawn_current(RRLocalRacer *r,const RRTrack *track,bool keep_hp,double random_x,double random_y);
 unsigned rr_rival_rules(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,
     double floor_height,double random_x,double random_y);
 unsigned rr_rival_step(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,

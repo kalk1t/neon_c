@@ -1,0 +1,106 @@
+{
+  "created_utc": "2026-11-04T14:37:18.634249+00:00",
+  "capture_target": "v0.2.17",
+  "local_package": "0.2.17",
+  "source_protocol": 11,
+  "working_source_drift": "profile-health-capture/working-source-drift.json",
+  "release_or_deployment_verified": false,
+  "oracle": "profile-health-capture/profile-health-reference.json",
+  "oracle_sha256": "9a7f07b6c6082a71c791b796453271b77fade28d597609e8c0082a3f9d20c782",
+  "source_summary": {
+    "resets": 27,
+    "respawns": 81,
+    "smoke_steps": 630,
+    "smoke_emissions": 120,
+    "reset_draws": 54,
+    "respawn_draws": 108
+  },
+  "files": [
+    {
+      "path": "src/core/rr_rival.h",
+      "sha256": "b12d6e91b831b492bead0c7d29add0c96f660ebed580d8dea34f7a8b158f6a7d"
+    },
+    {
+      "path": "src/core/rr_rival.c",
+      "sha256": "256ba5a054897f981851367b9a64b855e68fddd294d820a9ad81ece48d7d7fd9"
+    },
+    {
+      "path": "src/core/rr_rival_lifecycle.c",
+      "sha256": "3e0e0912b6ea739272e4186c40775f918666bef0281f5c9bc347e4f337fe6c14"
+    },
+    {
+      "path": "src/core/rr_player_phase.c",
+      "sha256": "05fcf3518dfba6a4458ad8262d31605bd7d7278acd729e55727f296287d8fd57"
+    },
+    {
+      "path": "tests/test_profile_health.c",
+      "sha256": "155990944e874651f963c48d79a0f41dda5b870de5ef05651117c5a384152b2f"
+    },
+    {
+      "path": "tests/profile_health_reference.h",
+      "sha256": "069a4f40246d1e115e2658ace0511108f161289dbd478f1087c9167d858c703e"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "0a63630882f60ac95b22903a6026621afd4b6ccc64706788f4b584595477c07d"
+    }
+  ],
+  "tests": {
+    "native": "152/152 full CPU suite passed",
+    "web": "152/152 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "resets": 27,
+        "player_respawns": 27,
+        "rival_respawns": 54,
+        "smoke_steps": 630,
+        "emissions": 120,
+        "runtime_random_pairs": 3,
+        "checks": 6645,
+        "max_error": 0.0
+      },
+      "web": {
+        "resets": 27,
+        "player_respawns": 27,
+        "rival_respawns": 54,
+        "smoke_steps": 630,
+        "emissions": 120,
+        "runtime_random_pairs": 3,
+        "checks": 6645,
+        "max_error": 0.0
+      }
+    }
+  },
+  "scope": "Fresh original Racer.reset/Car.place/race respawn using inert model sync/visibility and nearest-sample stub0; source reset consumes2units, rival respawn2, player0. Original v0.2.17 stepRacer smoke uses no-op movement/rules and inert smoke observations. C real current phase recovery/smoke checks are integration seams, not fresh full-world captures.",
+  "current_rival_reset_profile_hp": true,
+  "current_player_rival_recovery_profile_hp": true,
+  "v217_fractional_smoke_routed": true,
+  "v218_nozzle_smoke_integrated": false,
+  "native_main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "production_profile": "Roadster",
+  "production_full_pack_combat_audio_coins_rewards_enabled": false,
+  "graphics_or_audio_device_executed": false,
+  "resource_note": "Existing profile table/HP/timer fields, optional returned smoke strength; no added runtime arrays/heap/GPU/RNG/caps. Source v0.2.18 emitter frequency/lifetime/RNG residency remains separate.",
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "fa95d6225880ab57def8de8a3047d2b44c5c5577dc32b920dccd9d3de535a68c",
+  "previous_client_sha256": "74e44a3ae2397286e03b09fe02b369ca1f553ee1a2a851d467d33dfbcfc92dff",
+  "scheduled_sync": {
+    "sources_checked": 21,
+    "docs_techplan_checked": 42,
+    "changed_source_files": [
+      "game/src/car.js",
+      "game/src/fx.js",
+      "game/src/main.js"
+    ],
+    "changed_docs": [],
+    "new_comments": "v0.2.18",
+    "significance": "Nozzle/pod flame transforms, nozzle cycling/exhaustSmoke advection/lifetime, catch-up smoke cadence (up to8due puffs/frame); not integrated into pinned v0.2.17 path. Recovery fragments unchanged."
+  },
+  "remaining": [
+    "Owned-player initial race construction remains caller-owned; no equipment/account/progression contract changes.",
+    "Smoke intensity is numerically exposed but existing FX ledger/render appearance is not qualified.",
+    "Working v0.2.18 nozzle/emitter/timing/lifetime/advection path pending; v0.2.17 smoke compatibility is explicit, not latest working-source parity.",
+    "Arsenal capacities/cooldowns/EMP, HUD percentage health, FREE ROAM/network and production qualification remain open; graphics permission pending."
+  ]
+}

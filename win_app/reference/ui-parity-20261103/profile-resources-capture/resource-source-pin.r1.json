@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-04T14:48:05.674164+00:00",
+  "unchanged_resource_fragments": [
+    {
+      "path": "src/car.js",
+      "fragment": "export const CAR_STATS = ",
+      "unchanged": true,
+      "fragment_sha256": "4a350f6bdf4484489d84a0a3f8c8921b362cfd020304230d18ce90c20b7bf0cd"
+    },
+    {
+      "path": "src/ai.js",
+      "fragment": "export const WEAPON = ",
+      "unchanged": true,
+      "fragment_sha256": "54cace4a54ed642a978c49a933a590248d0c08ef0229e61244b711ba8368a86d"
+    },
+    {
+      "path": "src/aim.js",
+      "fragment": "export function playerWeapons(dt, inp)",
+      "unchanged": true,
+      "fragment_sha256": "d0d0d9ae3753eaeb92eea7631eefe6f902e5460ef76937bd7bc1f3d90952ce9e"
+    },
+    {
+      "path": "src/main.js",
+      "fragment": "  Object.assign(g, { heat: 0,",
+      "unchanged": true,
+      "fragment_sha256": "33a28e0c674a5251bc3716919d546c7ec4a82794d3006fd8d1a43ec99395c6ff"
+    }
+  ],
+  "current_car_sha256": "97e8a6e79665a24232b215d3ebfb68a35ad149da94195b68f24fe33d96f6aa63",
+  "car_changed_since_resource_capture": false,
+  "source_protocol": 11,
+  "working_comments": "v0.2.18",
+  "release_or_deployment_verified": false,
+  "additional_drift": "Roadster rear-pod nozzle position[1.38,-.78,2.76], exhaustSize.62; effect nozzles carry per-model size. Model/FX-only change, CAR_STATS unchanged.",
+  "unported_working_smoke": "Prior health task working-source-drift.json retains latest observed catch-up puff cap8, cadence.012+f/20, velocity.93, drag exp(-1.6dt); not imported by resource slice."
+}

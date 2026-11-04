@@ -1,0 +1,10 @@
+{
+  "launcher_sha256": "14fa35a3c012b167ebc5199bb239fe01cc223524638b9d6e99a48747cd534e9a",
+  "target": "build/profile-health-native/bin/RoadstersRace.exe",
+  "target_sha256": "fa95d6225880ab57def8de8a3047d2b44c5c5577dc32b920dccd9d3de535a68c",
+  "executed": false,
+  "promoted_after_checks": true,
+  "production_profile": "Roadster",
+  "production_full_pack_enabled": false,
+  "smoke_profile": "captured v0.2.17, newer working emitter pending"
+}

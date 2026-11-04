@@ -1,0 +1,72 @@
+--- 
+
++++ 
+
+@@ -322,6 +322,7 @@
+
+     url: 'models/car.glb',
+     y: -0.35, // drop to match the hover height of the code-built car
+     exhaust: [1.55, -0.54, 2.7], // flame nozzles (x mirrored): the rear thruster pods
++    podNozzles: true, // the side flames sit on the rear pods and tilt with them (v0.2.18)
+     turbine: [0, -0.5, 2.62, 0.34], // main rear turbine nozzle: centre + radius (glowing ring added in code)
+     tail: [0.8, 0.1, 2.8], // tail-light ribbon sources (x mirrored)
+     muzzle: [0.7, -0.74, -2.9], // where shots leave (x mirrored: bolts alternate sides; seekers from x 0): the front bumper (x ±0.9, y -0.95..-0.32)
+@@ -555,6 +556,18 @@
+
+     // sculpted pods tilt like the code-built ones (front pair first, left before right); their fans are painted on
+     this.pods = model.children.filter((o) => o.name.includes('_pod_')).sort((a, b) => (a.name < b.name ? -1 : 1));
+     this.podTilt = spec.podTilt;
++    // v0.2.18: side flames on tilting pods ride the pod (its nearest pod, in that pod's own space at rest)
++    this.nozzleMount = [];
++    if (spec.podNozzles && this.pods.length) {
++      const [ex, ey, ez] = spec.exhaust;
++      this.nozzleMount = [-1, 1].map((side) => {
++        const at = new THREE.Vector3(side * ex, ey - spec.y, ez); // in the model file's space
++        const pod = this.pods.reduce((a, b) => (a.position.distanceToSquared(at) <= b.position.distanceToSquared(at) ? a : b));
++        pod.updateMatrix();
++        const inv = pod.matrix.clone().invert();
++        return { pod, p: at.applyMatrix4(inv), d: new THREE.Vector3(0, 0, -1).transformDirection(inv) };
++      });
++    }
+     this.muzzleAt = spec.muzzle; // this model's own muzzle (v0.2.14)
+     this.fans = [];
+     if (this.glow) this.model.add(this.glow);
+@@ -804,14 +817,22 @@
+
+     this.aura?.update(camPos); // KILLER STATUS flames (they hide themselves with the car)
+     if (!this.root.visible) return;
+     const sf = Math.min(1, Math.max(0, this.speed) / CAR.MAX);
+-    const back = this.fwd.clone().negate();
+     const e = this.root.matrixWorld;
+     const t = performance.now() / 1000;
+-    // nozzle positions in world space (scale = flame size)
++    // nozzle positions in world space (scale = flame size; d = the way the nozzle faces forward, the flame goes the
++    // other way). v0.2.18: from the model itself, so the flames follow its hover bob and nitro nose lift; the
++    // ROADSTER's side flames also ride its tilting rear pods.
++    this.model.updateMatrixWorld(true);
++    const m = this.model.matrixWorld;
++    const bodyFwd = new THREE.Vector3(0, 0, -1).transformDirection(m);
+     const [ex, ey, ez] = this.exhaust;
+     const noz = [[-ex, ey, ez, 1], [ex, ey, ez, 1]];
+     if (this.turbine) noz.push(this.turbine);
+-    this.nozzles = noz.map(([x, y, z, s]) => ({ p: new THREE.Vector3(x, y, z).applyMatrix4(e), s }));
++    this.nozzles = noz.map(([x, y, z, s], i) => {
++      const mount = this.nozzleMount?.[i];
++      if (mount) return { p: mount.p.clone().applyMatrix4(mount.pod.matrixWorld), d: mount.d.clone().transformDirection(mount.pod.matrixWorld), s };
++      return { p: new THREE.Vector3(x, y, z).applyMatrix4(m), d: bodyFwd.clone(), s };
++    });
+     // flames: a short pilot flame when coasting, full thrust on W, long afterburner on nitro, sputter as it runs out
+     const thrust = 0.25 + 0.75 * this.thrust;
+     const stutter = this.sputter > 0 ? 0.35 + 0.65 * (Math.sin(t * 90) > 0.2 ? 1 : 0.25) : 1;
+@@ -819,8 +840,8 @@
+
+       const f = this.flames[i];
+       const len = (1.6 + 3.2 * thrust + sf * 1.6 + this.nitro * 6 + this.kick * 3) * n.s;
+       const wid = (0.75 + 0.3 * thrust + this.nitro * 0.35 + this.kick * 0.3) * n.s;
+-      const center = n.p.clone().addScaledVector(back, len * 0.5 - 0.25 * n.s);
+-      axisBillboard(f, center, this.fwd, len, wid, camPos);
++      const center = n.p.clone().addScaledVector(n.d, -(len * 0.5 - 0.25 * n.s));
++      axisBillboard(f, center, n.d, len, wid, camPos);
+       const u = f.material.uniforms;
+       u.uTime.value = t;
+       u.uNitro.value = Math.min(1, this.nitro + this.kick * 0.5);

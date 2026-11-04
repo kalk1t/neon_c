@@ -91,6 +91,10 @@ below (`rivals` updated for the new speed and fire rules).
 on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars within 95 m: the player's damage, rivals
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
+### v0.2.18 (2026-11-04)
+`test:live` 117 / 117: `controls.test.mjs` 20 (+1: every shop car has its flame spots, three flames of the same length,
+the middle one thicker, at the tail). Flame and smoke placement was checked on screenshots of each car (no browser test).
+
 ### v0.2.17 (2026-11-04)
 `test:live` 116 / 116, `test:game` 51 / 51: `controls.test.mjs` 19 (+3: each car's top speed and time to 90%, turning,
 health), `race.test.mjs` 27 (+3: a seeker's speed loss and stun per car, bumps split by mass, rivals on ROADSTER stats

@@ -1,0 +1,20 @@
+--- 
+
++++ 
+
+@@ -567,8 +567,12 @@
+
+     r.smokeT -= dt;
+     if (r.smokeT <= 0) {
+       const f = r.hp / r.maxHp; // health left, 0..1
+-      weapons.smoke(r.car.pos.clone().addScaledVector(r.car.fwd, -2.5), (0.6 - f) / 0.6);
+-      r.smokeT = 0.04 + f / 5;
++      // v0.2.18: out of the engine nozzles in turn (where the nitro flames come from), streaming back with the car
++      const noz = r.car.nozzles;
++      const n = noz.length ? noz[(r.smokeN = ((r.smokeN ?? 0) + 1) % noz.length)] : null;
++      if (n) weapons.exhaustSmoke(n.p.clone().addScaledVector(n.d, -0.5 * n.s), r.car.vel, (0.6 - f) / 0.6);
++      else weapons.smoke(r.car.pos.clone().addScaledVector(r.car.fwd, -2.5), (0.6 - f) / 0.6);
++      r.smokeT = 0.012 + f / 20;
+     }
+   }
+   return res;
