@@ -12,8 +12,8 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/render.js` | ~150 | `initRender`, `renderer`, `scene`, `camera`, `lens`, `GFX`, `setQuality`, `measureGfx`, `applyAtmosphere`, `volAt`, `panAt` | Renderer, post-processing, graphics quality, map atmosphere |
 | `src/world.js` | ~95 | `initWorld`, `buildWorld`, `setRoad`, `bestKey`, live bindings `map`, `road`, `track`, `course`, `coins`… | The map and its nine roads |
 | `src/race.js` | ~290 | `initRace`, `GATE`, `raceRules`, `respawn`, `damage`, `wreck`, `rivalCombat`, `carContacts`, `updateRanking`, `showResults` | Race rules and results |
-| `src/aim.js` | ~190 | `initAim`, `centreAim`, `updateAim`, `updateLock`, `playerWeapons`, `autopilot` | Mouse aim, lock-on, the player's weapons |
-| `src/camera.js` | ~150 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras |
+| `src/aim.js` | ~200 | `initAim`, `centreAim`, `updateAim`, `updateLock`, `playerWeapons`, `autopilot` | Mouse aim (the car flies to the aim, forwards and backwards: `inp.aimSteer`, v0.2.12), lock-on, the player's weapons |
+| `src/camera.js` | ~150 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras; with the mouse captured the chase camera follows the aim (`g.camAim`, v0.2.12) |
 | `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
 | `src/clock.js` | 7 | `time`, `advance` | The game clock |
 | `src/car.js` | 818 | `Car`, `CAR`, `SPIN`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll), spin dodge, GLB model loading and livery shader, nitro and ribbons, killer aura attachment |
@@ -49,7 +49,8 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge |
 | `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |
 | `src/touch.js` | 176 | `TouchControls` | Phone controls: tilt steering (24°), climb (18°), dead zone 2.5° |
-| `src/input.js` | 128 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15) |
+| `src/input.js` | 132 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
+| `src/online/mutes.js` | 41 | `isMuted`, `mutedNames`, `muteCommand` | FREE ROAM `/mute`, `/unmute`, `/muted` on this device (localStorage `neon.muted`, v0.2.9) |
 | `src/audio.js` | 245 | `Sound` | Procedural Web Audio (no sound files), 18 voices |
 | `src/sysreq.js` | 89 | `showRequirements` | Minimum requirements and device check |
 
@@ -70,10 +71,12 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | Function | Lines | Responsibility |
 |---|---|---|
 | `killerOf(x, kc)` | 67-71 | Sanitise a saved killer status |
-| `liveRelay({projectId, allowMock, log})` | 74-268 | Creates the `WebSocketServer` (`noServer`, `maxPayload` 4 KB); `identify(token)` (JWKS verify, REST profile read); message handlers `s`, `f`, `die`, `ping`, `hit`, `chat` (+ `command`), `hi`; 15/s snapshot tick; 15 s heartbeat with idle drop |
+| `liveRelay({projectId, allowMock, log, perIp, perIpMinute, maxPending, mod})` | ~100-460 | Creates the `WebSocketServer` (`noServer`, `maxPayload` 4 KB); `identify(token)` (JWKS verify, REST profile read); message handlers `s`, `f`, `die`, `ping`, `hit`, `chat` (+ `command`: `/pkclear`, `/report`, `/help`), `hi`; hit, shot and wreck checks through `server/hits.js` (S3), chat/name filter and bans through `mod` (S6); 15/s snapshot tick; 15 s heartbeat with idle drop |
 | `livePlugin(env)` | end of file | Vite plugin for the **dev** server: hooks `upgrade` for `/live` only (leaves HMR alone), serves `GET /live/count`; mock logins only with `LIVE_MOCK=1`. `killSaver()` builds the `relayKills` saver from `RELAY_SECRET`. `liveRelay` queues and saves kills / KILLER STATUS (`queueSave`, `save`, `flush`) |
 | `server/serve.mjs` | ~150 | **Production server** (v0.2.4, R5/R6): static `dist/` with cache headers, `/__` proxy, `/live` + `/live/count` passed to the relay; forks and restarts `relay.mjs` |
 | `server/relay.mjs` | ~45 | The relay as its own process on `127.0.0.1:LIVE_RELAY_PORT`; reads `.env.local`; exits when `serve.mjs` does |
+| `server/hits.js` | 96 | `remember`, `firedFrom`, `shot`, `hitFrom`, `empReaches`, `prune`: FREE ROAM hit checks (S3, v0.2.10): a hit only from a real shot, from where the shooter was, within reach and in the line of fire |
+| `server/moderation.js` | 70 | `moderation`, `wordFilter`, `normal`, `noModeration`: chat and nickname word filter, ban list (S6, v0.2.9), files re-read within 10 s |
 | `functions/tickets.js` | ~20 | `cleanTickets(db, now)`: deletes race tickets older than 45 min (daily `cleanRaceTickets`, D12) |
 
 ## 7.6 Cloud Functions (`functions/index.js`)

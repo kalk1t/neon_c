@@ -12,7 +12,8 @@
 | `serve` | `node server/serve.mjs --port 8080` | **Production entry point**, run by the launcher inside a release folder. No build. `vite preview` until v0.2.4 (R5) |
 | `release` | `node server/release.mjs` | Builds a commit into `neon_c/live/releases/<sha>` and switches production to it; `-- --rollback` |
 | `deploy` | `node server/deploy.mjs` | `npm run deploy -- functions client rules` (any subset; always in that order, each behind its tests; `--dry-run`); no parts = help only. Before 2026-11-02 it was `vite build && firebase deploy` (everything at once, R4) |
-| `test:live` | `node --test tests/live.test.mjs` | no emulator |
+| `test:live` | `node --test` on 9 files: relay (`live`), hit checks (`hits`), moderation, constants, production server (`serve`), launcher, race rules, FREE ROAM hits (`roam`), mouse controls (`controls`) | no emulator; the release gate |
+| `test:game` | `node --test` on `race`, `roam`, `controls` | game modules in Node (Vite SSR) |
 | `test:rules` | `firebase emulators:exec --only firestore --project demo-roadsters …` | needs Java 21+ |
 | `test:functions` | emulators (auth, firestore, functions), project `demo-roadsters` | |
 | `docs:shots` | `docs/tools/capture-screens.mjs` | uses `CHROME_PATH` |

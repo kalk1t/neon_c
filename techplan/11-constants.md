@@ -54,14 +54,14 @@
 | `LIMIT` | 20,000 | m | Coordinate sanity bound | `:54` | code | `ROAM_RADIUS` 9,000 sits well inside |
 | `CHAT_MAX` | 120 | chars | Chat length | `src/online/protocol.js` (v0.2.4) | relay and `src/chat.js` import it | code | One definition |
 | `CHAT_BURST` / `CHAT_REFILL_MS` | 5 / 3,000 | msgs / ms | Chat token bucket | `:57` | code | Client pace `GAP_MS` 1,200 (`src/chat.js:7`) |
-| `HIT_AFTER_FIRE_MS` | 5,000 | ms | A hit must follow the shooter's own shot | `:61` | code | Missile flight ≤ 3.6 s (comment) |
+| `KILL_AFTER_HIT_MS` | 30,000 | ms | A wreck counts only after the killer's checked hit or EMP on the victim this recently (S3, v0.2.10; replaced `HIT_AFTER_FIRE_MS` 5,000) | `server/live.js` | code | Generous: a slow victim's game may report late |
 | `DIE_MS` | 2,000 | ms | One wreck per victim per 2 s | `:62` | code | Below `ROAM_WRECK` 3 s |
 | `KC_MAX` | 1,000,000 | count | Saved count above this is reset | `:63` | code | |
 | Auth timer | 15,000 | ms | Close if no sign-in | `:138` | code | Client welcome timeout 12 s |
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch/roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 7 | version | Client/relay compatibility (7: relay-saved kills, shop cars) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 8 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
@@ -164,3 +164,33 @@
 | `PER_IP_MINUTE` | 20 | connections / minute | New connections per address | `server/live.js` | relay upgrade | The game reconnects with a 1-15 s back-off |
 | `MAX_PENDING` | 64 | connections | Still signing in, all addresses together | `server/live.js` | relay upgrade | Each closes after 15 s without a sign-in |
 | CSP | see `server/serve.mjs` `CSP` | | Content-Security-Policy on every page | `server/serve.mjs` | pages | Report-only until `CSP_ENFORCE=1` (`.env.local`); reports logged as `[csp]` |
+
+## FREE ROAM hit checks (S3, v0.2.10, `server/hits.js`)
+| Name | Value | Unit | Purpose | Notes |
+|---|---|---|---|---|
+| `BOLT_SPEED` / `BOLT_LIFE` | 430 / 1.3 | m/s, s | Bolt reach (+ the shooter's speed) | = `WEAPON.BOLT_SPEED`, `src/aim.js`; `constants.test.mjs` checks |
+| `MISSILE_TOP` / `MISSILE_LIFE` | 330 / 3.6 | m/s, s | Seeker reach (+ the shooter's speed) | = `maxSpeed: speed + 330`, `life: 3.6` |
+| `EMP_RADIUS` | 95 | m | EMP reach (+ `REACH_SLACK`) | = `WEAPON.EMP_RADIUS` |
+| `SEEN_MS` | 1,500 | ms | How far back a victim's / shooter's positions count | Covers 150 ms playback + lag |
+| `TRACK_MS` | 3,000 | ms | Positions kept per player | |
+| `LAG_S` / `LATE_S` | 0.6 / 1 | s | Extra flight time; a hit may arrive this long after the shot's life | |
+| `REACH_SLACK` | 40 | m | Car size, muzzle, 15/s positions | |
+| `NEAR` / `AIM_COS` | 80 / 0.6 | m, cos | Any direction this close; otherwise within ~53° | |
+| Shot origin | 20 + 0.3 × speed | m | `f` must come from near the shooter | |
+| `DROP_LOG_MS` | 60,000 | ms | `[s3]` log at most once a minute per player | `server/live.js` |
+
+## Chat moderation (S6, v0.2.9)
+| Name | Value | Purpose | Source |
+|---|---|---|---|
+| Reload check | 10,000 ms | `blocked-words.txt` / `bans.txt` re-read when changed | `server/moderation.js` `every` |
+| `REPORT_GAP_MS` | 30,000 ms | One `/report` per player | `server/live.js` |
+| `RECENT_LINES` | 8 | Chat lines kept per player (memory) for `/report` | `server/live.js` |
+| Mutes | 200 names | `neon.muted` (localStorage) | `src/online/mutes.js` |
+
+## Mouse aim and camera (v0.2.12)
+| Name | Value | Unit | Purpose | Source |
+|---|---|---|---|---|
+| Aim limits | ±1.1 yaw from the nose, ±0.62 pitch | rad | How far the aim may lead the car | `src/aim.js` `updateAim` |
+| Steering gain | `steer = −Δyaw × 2.8`, `climb = aimPitch / 0.62` | | The car flies to the aim (× 1.25 on climb before v0.2.12) | `src/aim.js` |
+| Aim camera follow | yaw 14 /s, pitch 10 /s toward 0.85 × aim pitch | 1/s | Keeps the aim ring near the centre (car camera: 7 and 5, 0.6 × car pitch) | `src/camera.js` `chaseCamera` |
+

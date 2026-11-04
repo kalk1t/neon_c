@@ -6,7 +6,7 @@
 
 | Suite | Command | Runner | Needs | Covers |
 |---|---|---|---|---|
-| Relay, shared values, production server | `npm run test:live` | `node:test` | nothing (relay in-process, `allowMock`; `serve.mjs` on free ports with a made-up `dist/`) | `live.test.mjs`: KILLER STATUS counting, `killer` broadcast once, `/pkclear`, unknown commands, protocol mismatch → `err old`, persistence via `hi.x/kc`, shop cars (`hi.car`), saving kills (batched, retried, rejoin before the save). `constants.test.mjs` (D2): values that must agree across game, relay, functions and rules, and each road's minimum times recomputed from `src/roads.js`. `serve.test.mjs` (R5/R6): caching, `/privacy`, path traversal, unknown hosts, `/live` through to the relay process, relay crash → restart, relay stops with the server. `launcher.test.mjs` (R12): log rotation without gaps |
+| Relay, shared values, production server | `npm run test:live` | `node:test` | nothing (relay in-process, `allowMock`; `serve.mjs` on free ports with a made-up `dist/`) | `live.test.mjs`: KILLER STATUS counting, `killer` broadcast once, `/pkclear`, unknown commands, protocol mismatch → `err old`, persistence via `hi.x/kc`, shop cars (`hi.car`), saving kills (batched, retried, rejoin before the save). `constants.test.mjs` (D2): values that must agree across game, relay, functions and rules, and each road's minimum times recomputed from `src/roads.js`. `serve.test.mjs` (R5/R6): caching, `/privacy`, path traversal, unknown hosts, `/live` through to the relay process, relay crash → restart, relay stops with the server. `launcher.test.mjs` (R12): log rotation without gaps. Since v0.2.7-v0.2.12 also `race`, `roam`, `controls` (game modules in Node), `hits` and `moderation` (see the result tables below) |
 | Firestore rules | `npm run test:rules` | `node:test` + `@firebase/rules-unit-testing` | Firestore emulator (port 8085), Java 21+ | Profiles and nicknames, renaming, server-only fields (M8), **no browser writes to kills or KILLER STATUS** (v0.2.4), private player info, the game's own transactions |
 | Cloud Functions | `npm run test:functions` | `node:test` | Emulators: auth 9099, firestore 8085, functions 5001; `tests/functions-secret.mjs` writes the emulator's `RELAY_SECRET` | `races` (15 tests: tickets, timing, caps, per-road minimum times, best lap vs race, daily cap, unlocks), `shop` (6), `relayKills` (4: secret, adding and replacing, `/pkclear`, bad entries and missing profiles), old tickets (1) |
 | Browser | `npm run test:browser` | Playwright (`playwright-core`) driven by `tests/browser/run.mjs` | Chromium (`npx playwright-core install chromium`); starts its own Vite dev server with `LIVE_MOCK=1` | `killer.test.mjs` (KILLER STATUS, two players), `void.test.mjs` (VOID CROWN), `save.test.mjs` (race saving, fake backend), `rivals.test.mjs` (v0.2.3: rival speed = player × `road.ai`, `RIVAL_POWER` 1.5 damage and fire rate, roads 1 and 9); a page error fails the test |
@@ -55,14 +55,23 @@ For v0.2.7 (C2, C3, relay connection limits, race unit tests; 2026-11-03):
 | `test:browser` | killer 29/29, rivals 12/12, save 5/5, void 9/9 | on the dev server |
 | CSP on a real build | no violations | `serve.mjs` + Chromium: reCAPTCHA, Analytics, Firebase, Google Fonts all loaded |
 
+### v0.2.12 (2026-11-03)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 94 / 94 | relay 24 (+ moderation: filtered chat and names, `/report`, bans; + hit checks: a shot per hit, far shots and EMPs, wrecks need a hit), hit checks 11 (`hits.test.mjs`), moderation 6, constants 11 (+ the relay's weapon values = the game's), production server 12 (+ Cloudflare beacon allowed, no inline event handlers), launcher 1, race rules 18, FREE ROAM hits 4 (`roam.test.mjs`), mouse controls 7 (`controls.test.mjs`) |
+| `test:game` | 29 / 29 | race 18, roam 4, controls 7 (the car flies to the aim forwards and backwards, keyboard reversing, nose height, camera follows the aim, stuck buttons) |
+| `test:browser` | killer 29/29, rivals 12/12, save 5/5, void 9/9 | wrecks now follow a real hit (`shootAt`), as the relay requires since v0.2.10 |
+
+Each new test was first run against the old code and failed there (or was checked by breaking the rule on purpose).
+
 ## 11.3 Gaps
 
 | Area | Automated test? |
 |---|---|
-| Game simulation (physics, AI, laps, weapons, coins) | **Partly**: race rules unit-tested (`race.test.mjs`, v0.2.7); physics, AI steering, coins and the player's weapons (`aim.js`) only through the browser tests |
+| Game simulation (physics, AI, laps, weapons, coins) | **Partly**: race rules (`race.test.mjs`, v0.2.7), FREE ROAM hits on our car (`roam.test.mjs`, v0.2.8) and mouse aim / car steering (`controls.test.mjs`, v0.2.12) unit-tested; AI steering, coins and firing only through the browser tests |
 | `account.js` flows (pending races, retry, unsaved-kills display) | Partly (`save.test.mjs`: pending races, retry) |
 | `src/online/live.js` client (reconnect, interpolation) | Indirectly, by `killer.test.mjs` (reconnect) |
-| Relay: rate limits, size limits, idle drop, `die` / `hit` validation, `err full`, `err again` | Partly (KILLER STATUS, kill saving, shop cars, invalid kills, connection limits) |
+| Relay: rate limits, size limits, idle drop, `die` / `hit` validation, `err full`, `err again` | Partly (KILLER STATUS, kill saving, shop cars, invalid kills, connection limits, moderation, hit and wreck checks) |
 | Rendering / visual regressions | No (`docs:shots` makes screenshots for docs, no comparison) |
 | Build smoke test | No script; builds were checked manually into a scratch `outDir` |
 | CI | **GitHub Actions** since 2026-11-02 (`.github/workflows/ci.yml`): on push to `main`, pull requests and by hand; Node 22, Java 21; build + live + rules + functions + browser. Never deploys |

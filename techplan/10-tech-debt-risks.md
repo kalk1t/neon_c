@@ -42,13 +42,15 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
 | D14 | ~~`RACE_GAP_S` (120 s) longer than a fast race~~ **Fixed in v0.2.1:** `RACE_GAP_S` = `MIN_RACE_S` = 60 s, so a real back-to-back race never waits (trade-off: R8 cheat rate doubles) | `functions/rules.js` | — |
 
-## 13.3 Status 2026-11-03 (v0.2.10)
+## 13.3 Status 2026-11-03 (v0.2.12)
 v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
 glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotated the secret, disabled the leaked version and added a build guard
 (`vite.config.js` `secretGuard`). v0.2.6 split `main.js` (D1). v0.2.7 fixed the security findings C2 (plain-text HUD
 lines) and C3 (CSP, report-only first), limited relay connections per address (07-security, DoS row) and added unit
 tests for the race rules. v0.2.8 fixed S5 (pausing no longer protects a car in FREE ROAM), v0.2.9 S6 (chat moderation:
-word filter, `/mute`, `/report`, bans), v0.2.10 S3 (the relay checks every hit; wrecks need a checked hit).
+word filter, `/mute`, `/report`, bans), v0.2.10 S3 (the relay checks every hit; wrecks need a checked hit). v0.2.11
+made the CSP ready to enforce (findings from the first real reports). v0.2.12 (not debt, a player-facing fix): one
+centred mouse-aim ring with the camera following it; mouse reversing no longer spins the car; stuck mouse buttons fixed.
 
 Fixed: R2-R8, R10-R13, D1-D15. Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05.
