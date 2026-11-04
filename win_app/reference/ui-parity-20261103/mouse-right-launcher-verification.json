@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "d3169029200d42dc47bdbd3aa27137742d678389105b786feae8a9251dc0b5be",
+  "target": "build/mouse-right-native/bin/RoadstersRace.exe",
+  "target_sha256": "b50f8531d68b7130be396fa66fc3ce1f359f5f5709818f2147fbecba72f24fdb",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

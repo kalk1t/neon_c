@@ -1,0 +1,377 @@
+{
+  "created_utc": "2026-11-04T12:25:59.016076+00:00",
+  "local_package_version": "0.2.16",
+  "source_checks": [
+    {
+      "path": "game/index.html",
+      "sha256": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9",
+      "baseline_sha256": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9",
+      "baseline": "speed-units-implementation.json",
+      "changed": false
+    },
+    {
+      "path": "game/node_modules/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "baseline_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/package.json",
+      "sha256": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+      "baseline_sha256": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+      "baseline": "offline-bests-capture/source-reference.json",
+      "changed": false
+    },
+    {
+      "path": "game/src/ai.js",
+      "sha256": "ef26972dd04c84b9e323c571837fa8d54ca045ca5ffdb3af85a7d2cbb39f053c",
+      "baseline_sha256": "ef26972dd04c84b9e323c571837fa8d54ca045ca5ffdb3af85a7d2cbb39f053c",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/aim.js",
+      "sha256": "2659166b49b41a5e764dbd91a33901f008cfae990e3d1b9ead254038af3e9f5e",
+      "baseline_sha256": "2659166b49b41a5e764dbd91a33901f008cfae990e3d1b9ead254038af3e9f5e",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/audio.js",
+      "sha256": "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506",
+      "baseline_sha256": "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/camera.js",
+      "sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+      "baseline_sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+      "baseline": "previous v0.2.13 aim-camera implementation; current reference already ported",
+      "changed": false
+    },
+    {
+      "path": "game/src/car.js",
+      "sha256": "eb0dca350073fb0f05d407ed9f747ca86ce99244adaed03ca66782c0f3bd737d",
+      "baseline_sha256": "eb0dca350073fb0f05d407ed9f747ca86ce99244adaed03ca66782c0f3bd737d",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/coins.js",
+      "sha256": "edf8249a51b2abad4c4b6d8e9c2180535c60565f25741b1eb5461373d54da69a",
+      "baseline_sha256": "edf8249a51b2abad4c4b6d8e9c2180535c60565f25741b1eb5461373d54da69a",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/fx.js",
+      "sha256": "da08e84dc706f0005db140a902b131b3ba6e5273a4239ba44af7a6d1c98aef7d",
+      "baseline_sha256": "da08e84dc706f0005db140a902b131b3ba6e5273a4239ba44af7a6d1c98aef7d",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/hud.js",
+      "sha256": "c1f07ab727fdbd7e393f8dff672b64c75502227814f1be679d2d21ee021446e1",
+      "baseline_sha256": "c1f07ab727fdbd7e393f8dff672b64c75502227814f1be679d2d21ee021446e1",
+      "baseline": "speed-units-implementation.json",
+      "changed": false
+    },
+    {
+      "path": "game/src/input.js",
+      "sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f",
+      "baseline_sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/main.js",
+      "sha256": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+      "baseline_sha256": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+      "baseline": "offline-bests-capture/source-reference.json",
+      "changed": false
+    },
+    {
+      "path": "game/src/maps.js",
+      "sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3",
+      "baseline_sha256": "50433f6bf27ebbf91aa17f9b234e4348f97c3e77f651a89906218142782a5dc3",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/online/protocol.js",
+      "sha256": "07203f3330288f0d64416ae2f1850ef0209e7bd612f4fd23ccfb656a2fceb538",
+      "baseline_sha256": "07203f3330288f0d64416ae2f1850ef0209e7bd612f4fd23ccfb656a2fceb538",
+      "baseline": "results-bound-flow browser sync",
+      "changed": false
+    },
+    {
+      "path": "game/src/physics.js",
+      "sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b",
+      "baseline_sha256": "c3be1921405b9097b522eaecfab09e430efc4ac9f3a8714f1375066ce055ad0b",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/race.js",
+      "sha256": "98579604939266354606b035d3d05a91e374b4532b6bcaf1fcabc0af58f90a29",
+      "baseline_sha256": "98579604939266354606b035d3d05a91e374b4532b6bcaf1fcabc0af58f90a29",
+      "baseline": "offline-bests-capture/source-reference.json",
+      "changed": false
+    },
+    {
+      "path": "game/src/roads.js",
+      "sha256": "40eee86060471b7d9a68ab603fbf40896952e7b9d62c06dfcb7b70b3d4337ca9",
+      "baseline_sha256": "40eee86060471b7d9a68ab603fbf40896952e7b9d62c06dfcb7b70b3d4337ca9",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/style.css",
+      "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7",
+      "baseline_sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7",
+      "baseline": "results-bound-flow browser sync",
+      "changed": false
+    },
+    {
+      "path": "game/src/track.js",
+      "sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9",
+      "baseline_sha256": "d16b796e65513c79034f7d232f9a2dda3aa8ffcdc66759977b5be1ede215b9b9",
+      "baseline": "current run-input source oracle",
+      "changed": false
+    },
+    {
+      "path": "game/src/world.js",
+      "sha256": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd",
+      "baseline_sha256": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd",
+      "baseline": "offline-bests-capture/source-reference.json",
+      "changed": false
+    }
+  ],
+  "changed_source_checks": [],
+  "docs_and_techplan_checks": [
+    {
+      "path": "game\\docs\\changelog.md",
+      "sha256": "80da4f852b0dd0b546feb7a770aedd795e04d21aaa5e455d0ceb1fa84acd8555",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\feature-inventory.md",
+      "sha256": "0decec0bf7369ee06840cc94300ddd53cf8bcb6fd749c54b34a59179bf4ba201",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\glossary.md",
+      "sha256": "2844d20ba17a796d988257e951c35edd225ce541ec9ccc44a0c485118bd91f00",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\01-getting-started.md",
+      "sha256": "edcd5c122cf33661f792934fd152ed86dad4c7bc422de5d9bca5999f2e90b477",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\02-controls.md",
+      "sha256": "45329354022fdec5cba1d3b55e827b7d90fa5efaa341802d3b56fef3265421fa",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\03-game-modes.md",
+      "sha256": "a9448265d22d7d0be85f6fc4a58820ed74559a56d2db2e14e64eab3323efcbb4",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\04-flying.md",
+      "sha256": "02de239b64a2a62937a1bd2744550dfa64ade44fac16292745ab98fbe339610a",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\05-combat.md",
+      "sha256": "b9c204d07c22b36d3689ff77a83bfb4a54ed09b4a8ea4dc75377f707b1dcd135",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\06-free-roam.md",
+      "sha256": "99183cdf35fadc149eb6db7ad19ed64a698f7ece5e85384e221bc66bc2b3d5d6",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\07-progress.md",
+      "sha256": "80ba6dcfd6d574098ee786b2922a685e431b706e6a3044a6db7017f8019a6623",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\08-settings.md",
+      "sha256": "a538e70a2a00e2908a57669123f416d700a6b27fe32cd184b97d02a93a143099",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\09-troubleshooting.md",
+      "sha256": "e7d29fbe2e1f8240ccf88edb0643af87b2a0594cdbaba37c79afa355f0dc481a",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\10-whats-new.md",
+      "sha256": "b45b7cc6f94e756298175065ac57a9948ee224e2c87a191489b13219e398dd96",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\manual\\README.md",
+      "sha256": "4ab00ca2ddbe956a4b4f5ccdc1d43821b97e4c0f15c9f870f3372357defd60c5",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\media\\README.md",
+      "sha256": "a5f8ad2be23f12aa10c04eaaa5ee411aa612d3c88503b6602d9d7430e101fd04",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\README.md",
+      "sha256": "624b2062d2ab8b7f4b23e733d4f2cc947b263187d00864bd091d96352d0acb71",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\01-overview.md",
+      "sha256": "e5d7c56cb99f20aae22380dd7374a3a74642ea4d324ed5a772a36e74b2998e78",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\02-game-loop.md",
+      "sha256": "a0d2ec3578da4e844c1415c6cdba502e946ef7091101b4ff6f7fe4f5fbac0e12",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\03-world.md",
+      "sha256": "6791e09c66b314f41aa6a8b1b5f98a88be146a6038b31a70a6ce940a2736330d",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\04-car.md",
+      "sha256": "23828a340f1dd470d7e04ba3f11321cbf63f0178adce634aac92173f44a2a33d",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\05-ai-rivals.md",
+      "sha256": "cd537141446bf6195055302a9d8f1151a5e3589151973ed20c68597ad67f657e",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\06-weapons-damage.md",
+      "sha256": "96a77c48ca2f5d36a0a7add83b97b393cd3dc6c7e833c1e6b9376061b21bf4c5",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\07-online.md",
+      "sha256": "8f385ab1d2ce1f45cd960e9de2504a7c6403b1cd69beb03713d6e522ae7e324c",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\08-accounts-data.md",
+      "sha256": "e8baaa8520248ab87a7aa8aea3b659f593fbba92ca9932a9acfc864d049db7d2",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\09-hud-ui.md",
+      "sha256": "70c38932ff13e2126770e76379abad5c316b317591753b69bdf83bafc91338f5",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\10-operations.md",
+      "sha256": "6949e6af7829adb632d608cdb39d70a8ff297842846fcc5c664d87546052d7a4",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\11-known-issues-roadmap.md",
+      "sha256": "63ed44e635d98aa57817a3cad086c7ebb913147f3c31ba892ea896a4178afb36",
+      "changed": false
+    },
+    {
+      "path": "game\\docs\\technical\\README.md",
+      "sha256": "c5d0337d78d620762bc47abd1120bf03a72f91a4b387aa9bc94e0fb659773280",
+      "changed": false
+    },
+    {
+      "path": "techplan\\01-architecture.md",
+      "sha256": "452fb6f280ae6d88f897f53d7bec931fe2683f5c824abf2e53fa9f6196c923b9",
+      "changed": false
+    },
+    {
+      "path": "techplan\\02-startup-config.md",
+      "sha256": "df1aabf4070a2012843cb0c181ffd5895dcdce19c9ed97f1342bd77ab7755cb1",
+      "changed": false
+    },
+    {
+      "path": "techplan\\03-workflows.md",
+      "sha256": "e05f2b44c18a721e8e95d047b968bb1dcee0c8ad280856fe97e17c3dc4bf7bc2",
+      "changed": false
+    },
+    {
+      "path": "techplan\\04-components.md",
+      "sha256": "34eaedb7228c71b2f696e83dafc9b0df5a80d644022a3de60343e6152f782c45",
+      "changed": false
+    },
+    {
+      "path": "techplan\\05-data.md",
+      "sha256": "dd017e5bf5ae49fef5a0c1d827d24dd11f0a27b17b8536be0e5154235ac1b4bc",
+      "changed": false
+    },
+    {
+      "path": "techplan\\06-apis-integrations.md",
+      "sha256": "23ff809b09afee9544d9059d56d11b1dd3b641a7b5a709174cb0537470b3753e",
+      "changed": false
+    },
+    {
+      "path": "techplan\\07-security.md",
+      "sha256": "e5310d0371d821fbfffc4222286f0817a83a3fac165c0288401e1a5eaa7590de",
+      "changed": false
+    },
+    {
+      "path": "techplan\\08-testing.md",
+      "sha256": "c06ddddd39ce9cd7be985d3e87e65e0579690fd3d460b4df4f1d163893224504",
+      "changed": false
+    },
+    {
+      "path": "techplan\\09-build-deploy-ops.md",
+      "sha256": "f6b8b5d8929c7f26f3ab8b57f22cfbe318fb3c8bf0b25742fe8d14401fadc5ae",
+      "changed": false
+    },
+    {
+      "path": "techplan\\10-tech-debt-risks.md",
+      "sha256": "83bd34b447e58023e0d645211be3a51051e2acb4f230109026b6d5a77a72f0c6",
+      "changed": false
+    },
+    {
+      "path": "techplan\\11-constants.md",
+      "sha256": "fa8f17df929e57d3e5093ab467fbd4cf20f855f27c4eeeca8b88d64ea543dac4",
+      "changed": false
+    },
+    {
+      "path": "techplan\\12-coverage-open-questions.md",
+      "sha256": "b62bcdea6765e90215093c5c10a76e91eaa528de39195f67fbfbac71b5138935",
+      "changed": false
+    },
+    {
+      "path": "techplan\\browser-tests\\README.md",
+      "sha256": "071dbf5ee2e9cc457ae8d1bc73f4063b3b5b7fd0d1c042f2780d5f69665f5098",
+      "changed": false
+    },
+    {
+      "path": "techplan\\TECHNICAL_DOCUMENTATION.md",
+      "sha256": "90c67d124190551ebe78277d4f0420e553ecbaef7a0ee4c24d26af48f2134927",
+      "changed": false
+    }
+  ],
+  "changed_docs": [],
+  "showcase_fragment_unchanged_from_older_oracle": true,
+  "older_whole_camera_diff_already_covered_by_aim_camera": true,
+  "older_camera_oracle_sha256": "5961c2c7d3d81a3412402673f1901f784485b1459a053a77e743cdccd35aba45",
+  "current_camera_reference_sha256": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+  "findings": [
+    "Compared relevant input/car/physics/track/roads/AI/race/aim/FX/coins/audio/main/HUD/world/style/markup/protocol/dependency sources to recorded local references.",
+    "Current pause entry mismatch is a pre-existing Windows integration gap, not assumed to be a new browser revision.",
+    "Older whole-camera source differences, if any, are distinguished from the prior2-hour sync; showcase fragment comparison is reported separately.",
+    "Local source/hash review only; no Git, deployment, live service, graphics or browser-owned writes."
+  ]
+}

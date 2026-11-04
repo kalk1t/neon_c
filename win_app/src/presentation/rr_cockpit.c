@@ -30,7 +30,7 @@ void rr_cockpit_draw(const RRCockpitArt *art,RRUI *ui,int width,int height,const
     RRUIRect speed=rr_cockpit_box(fit,layout.panel[0]),bo=rr_cockpit_box(fit,layout.panel[1]),at=rr_cockpit_box(fit,layout.panel[2]),race=rr_cockpit_box(fit,layout.panel[3]);
     Color ink={246,249,255,255},cyan={54,231,255,255};
     rr_ui_text_center(ui,v->speed,speed.x+speed.w*.5f,speed.y+speed.h*.5f-1.8f*em,3*em,.105f*em,900,ink,false);
-    rr_ui_text_center(ui,"KM/H",speed.x+speed.w*.5f,speed.y+speed.h*.5f+1.1f*em,.9f*em,.126f*em,700,ink,false);
+    rr_ui_text_center(ui,v->unit,speed.x+speed.w*.5f,speed.y+speed.h*.5f+1.1f*em,.9f*em,.126f*em,700,ink,false);
     float be=em*1.2f;
     RRUIRect icon={bo.x+bo.w*.5f-2*be,bo.y+bo.h*.5f-1.4f*be,.8f*be,.84f*be};texture_box(art->layers[2],icon,(Vector2){0,0},0,WHITE);
     rr_ui_text_center(ui,"BOOST",bo.x+bo.w*.5f+.6f*be,bo.y+bo.h*.5f-1.4f*be,.72f*be,.058f*be,700,ink,false);

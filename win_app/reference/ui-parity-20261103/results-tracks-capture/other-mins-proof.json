@@ -1,0 +1,424 @@
+{
+  "fonts": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    },
+    {
+      "path": "C:\\Windows\\Fonts\\ariblk.ttf",
+      "sha256": "10df702864b1f89cb29ba0d6b97c04228338d16807e13e8d8c74b91aba5e5f23"
+    }
+  ],
+  "labels": [
+    {
+      "text": "STANDINGS",
+      "bound": 119.984375
+    },
+    {
+      "text": "COIN RACE",
+      "bound": 111.90625
+    }
+  ],
+  "captions": [
+    {
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "bound": 110.078125
+    },
+    {
+      "count": 2,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 2,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 3,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 3,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 4,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 4,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 4,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 4,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 5,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 5,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 5,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 5,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 5,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 6,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 6,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 6,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 6,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 6,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 6,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 7,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 7,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 7,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 7,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 7,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 7,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 7,
+      "rank": 7,
+      "text": "COIN RACE 7th",
+      "bound": 113.265625
+    },
+    {
+      "count": 8,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 8,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 8,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 8,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 8,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 8,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 8,
+      "rank": 7,
+      "text": "COIN RACE 7th",
+      "bound": 113.265625
+    },
+    {
+      "count": 8,
+      "rank": 8,
+      "text": "COIN RACE 8th",
+      "bound": 115.359375
+    },
+    {
+      "count": 9,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 9,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 9,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 9,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 9,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 9,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 9,
+      "rank": 7,
+      "text": "COIN RACE 7th",
+      "bound": 113.265625
+    },
+    {
+      "count": 9,
+      "rank": 8,
+      "text": "COIN RACE 8th",
+      "bound": 115.359375
+    },
+    {
+      "count": 9,
+      "rank": 9,
+      "text": "COIN RACE 9th",
+      "bound": 115.28125
+    },
+    {
+      "count": 10,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 10,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 10,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 10,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 10,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 10,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 10,
+      "rank": 7,
+      "text": "COIN RACE 7th",
+      "bound": 113.265625
+    },
+    {
+      "count": 10,
+      "rank": 8,
+      "text": "COIN RACE 8th",
+      "bound": 115.359375
+    },
+    {
+      "count": 10,
+      "rank": 9,
+      "text": "COIN RACE 9th",
+      "bound": 115.28125
+    },
+    {
+      "count": 10,
+      "rank": 10,
+      "text": "COIN RACE 10th",
+      "bound": 121.0625
+    },
+    {
+      "count": 11,
+      "rank": 1,
+      "text": "COIN RACE 1st \u00b7 BONUS +15",
+      "bound": 207.0625
+    },
+    {
+      "count": 11,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "bound": 209.53125
+    },
+    {
+      "count": 11,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "bound": 206.40625
+    },
+    {
+      "count": 11,
+      "rank": 4,
+      "text": "COIN RACE 4th",
+      "bound": 114.109375
+    },
+    {
+      "count": 11,
+      "rank": 5,
+      "text": "COIN RACE 5th",
+      "bound": 115.3125
+    },
+    {
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "bound": 115.1875
+    },
+    {
+      "count": 11,
+      "rank": 7,
+      "text": "COIN RACE 7th",
+      "bound": 113.265625
+    },
+    {
+      "count": 11,
+      "rank": 8,
+      "text": "COIN RACE 8th",
+      "bound": 115.359375
+    },
+    {
+      "count": 11,
+      "rank": 9,
+      "text": "COIN RACE 9th",
+      "bound": 115.28125
+    },
+    {
+      "count": 11,
+      "rank": 10,
+      "text": "COIN RACE 10th",
+      "bound": 121.0625
+    },
+    {
+      "count": 11,
+      "rank": 11,
+      "text": "COIN RACE 11th",
+      "bound": 115.75
+    }
+  ],
+  "all_canonical_roster_rank_combinations": 66,
+  "maximum_full_text_bound": 209.53125,
+  "nonbinding_min_content_upper_bound": 258.25,
+  "scope": "Numeric font metadata only, no fallback binary/outline copied or runtime-loaded. Conservative full-text widths for current fixed labels and canonical count/rank captions; no exact text width, height/raster, arbitrary caption or account-state qualification."
+}

@@ -1,0 +1,10 @@
+{
+  "reason": "Initial staging asserted Arial Black in parent-list platform-font inventory, but floated span font is absent from that inventory. Corrected validation to the existing targeted v2 glyph-run observedFont and canvasAdvanceWithoutTracking evidence; wrapping inputs were not changed.",
+  "partial_initial_writes": [
+    "src/presentation/rr_results_advance_data.h",
+    "src/presentation/rr_results_advance.h",
+    "src/presentation/rr_results_advance.c"
+  ],
+  "resumed_at": "Read-only observation/fixture/provenance stage after verifying initial writes; backups were not replaced.",
+  "no_font_files_copied": true
+}

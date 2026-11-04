@@ -1,6 +1,7 @@
 #ifndef RR_RACE_UI_H
 #define RR_RACE_UI_H
 #include "rr_ui_layout.h"
+#include "rr_results_card.h"
 #include "rr_session.h"
 #include <stdio.h>
 #include <stdint.h>
@@ -70,12 +71,12 @@ static inline RRUIOverlayLayout rr_ui_pause_layout(float w,float h)
 }
 static inline RRUIOverlayLayout rr_ui_results_layout(float w,float h)
 {
-    RRUIOverlayLayout l={0};l.panel=(RRUIRect){(w-680)*.5f,fmaxf(16,(h-491.1875f)*.5f),680,491.1875f};
-    /* Chromium quantized tracks for616px content:1.3fr/1fr gap22. */
-    float left=335.734375f,right=258.25f;
-    l.left=(RRUIRect){l.panel.x+32,l.panel.y+185.296875f,left,113.890625f};
-    l.right=(RRUIRect){l.left.x+left+22,l.left.y,right,l.left.h};
-    for(int i=0;i<2;i++)l.actions[i]=(RRUIRect){l.panel.x+32,l.panel.y+336.1875f+(float)i*70,616,61};return l;
+    /* Existing offline placeholder profile uses the generic source flex flow.
+     * Full-pack intrinsic heights/visibility and scroll input remain external. */
+    RRUIOverlayLayout l={0};RRResultsCardLayout card;RRResultsCardContent content=rr_results_card_legacy();
+    if(!rr_results_card_flow(w,h,&content,0,&card))return l;
+    l.panel=card.panel;l.left=card.left;l.right=card.right;
+    l.actions[0]=card.boxes[RR_CARD_AGAIN];l.actions[1]=card.boxes[RR_CARD_MENU];return l;
 }
 /* Exact positive binary-double rounding used by HUD fmt's seconds.toFixed(2),
  * including 59.995 -> 59.99 and its source-defined 00:60.00 minute-edge form.

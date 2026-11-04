@@ -1,0 +1,103 @@
+{
+  "glyphs": [
+    {
+      "id": "approx-results-15",
+      "scale": 1,
+      "width": 14,
+      "height": 10,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "approx-results-15",
+      "scale": 2,
+      "width": 26,
+      "height": 22,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "approx-results-15",
+      "scale": 3,
+      "width": 39,
+      "height": 33,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-results-15",
+      "scale": 1,
+      "width": 19,
+      "height": 17,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-results-15",
+      "scale": 2,
+      "width": 36,
+      "height": 32,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-results-15",
+      "scale": 3,
+      "width": 53,
+      "height": 48,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-20",
+      "scale": 1,
+      "width": 24,
+      "height": 21,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-20",
+      "scale": 2,
+      "width": 44,
+      "height": 40,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-20",
+      "scale": 3,
+      "width": 64,
+      "height": 59,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-18",
+      "scale": 1,
+      "width": 22,
+      "height": 19,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-18",
+      "scale": 2,
+      "width": 40,
+      "height": 37,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    },
+    {
+      "id": "queen-menu-18",
+      "scale": 3,
+      "width": 60,
+      "height": 55,
+      "dimensionsPass": true,
+      "fullCaptureRecompositionExact": true
+    }
+  ],
+  "pageErrors": [],
+  "allPassed": true,
+  "nativeVisualParity": false
+}

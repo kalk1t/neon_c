@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-04T12:15:49.354410+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/offline-bests-capture/source-reference.json",
+    "sha256": "7ac642d1c3caae3b4796a3a29c6ce8f922089b4079a4216c629af545a8e243e4"
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "a5c45f57e9c0d2dd65d90691bf38db5b7456bd2f706f931d55e90786c7f37230"
+    },
+    {
+      "path": "src/platform/rr_input_preferences.c",
+      "sha256": "9531832c92b0e31116764b70599e08e91d19a91f9244999369f11dae5a08f8b1"
+    },
+    {
+      "path": "src/platform/rr_input_preferences.h",
+      "sha256": "b943f7c407584c36dfff7f8a00242a7147dd0d9676ec7d18a3cc956e72e123e6"
+    },
+    {
+      "path": "src/platform/rr_offline_best_codec.h",
+      "sha256": "6e7ec6ae4aea600961e02db9e822c2ce58c9e7aa25050d1f7bb22ed222525f77"
+    },
+    {
+      "path": "tests/test_offline_best.c",
+      "sha256": "a3f7a2dd0950208727800918ac980e460f84ab6edb281ef529e1f6e4cea03fb4"
+    },
+    {
+      "path": "tests/offline_best_reference.h",
+      "sha256": "3637c5d7bae29218d6accdd1ca20aec75faa5a0a0c3a917e78938ba01c3712b8"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "c4232a25989b6572bb690d58f7a1283dac94e25ab6ae1e97fecc94a67f112f55"
+    }
+  ],
+  "tests": {
+    "native": "142/142 full CPU tests passed",
+    "web": "142/142 full CPU tests passed; latest-main relink plus focused record test1/1 passed",
+    "source": "63 actual source strict-best decisions across9 roads; native picker/storage reload agrees",
+    "codec": "10005 exact binary64 roundtrips, including subnormal/min/max, no quantization",
+    "preservation": "malformed/future/oversized/negative/nonfinite values, conflict, debounce/force, retry and slower-value rejection"
+  },
+  "active_main_wired": true,
+  "storage": {
+    "native": "%LOCALAPPDATA%/RoadstersRace/offline-best-r1-v1.txt through r9",
+    "web": "neon.win.offline.best.r1 through r9",
+    "payload_bytes_per_record": 25,
+    "startup_write": false,
+    "canonical_browser_keys_accessed": false,
+    "account_or_unlock_write": false,
+    "resources": "Nine fixed guarded CPU store states; no heap or GPU/resource cap changes; dirty records only,0.25s debounce and2s failure backoff."
+  },
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "971afb727cfdc860a8f095d7f19e7e7d78805ac43deec268f5d7ca41dd51e1ee",
+  "previous_client_sha256": "f689f040c5494c64ba5b91baca6778fb48320f6f111b8d10b88a5518f2b5bd9f",
+  "graphics_executed": false,
+  "docs_sync_changes": [],
+  "initial_failures": [
+    "Web fixture EM_ASM object literal lacked parentheses; corrected only the inert mock; initial compiler log/test source preserved.",
+    "MSVC warnings-as-errors caught a shadowed status local in active host; renamed without suppressing the warning or altering save rules."
+  ],
+  "remaining": [
+    "Actual native application cold restart, physical input/pixels and filesystem failure UI remain unrun under graphics gate.",
+    "Private offline trial records only: browser/account import/sync and migration deliberately absent; no official leaderboard/record qualification.",
+    "Production full-pack/rewards/combat, caption glyph proof and renderer/material limitations unchanged."
+  ]
+}

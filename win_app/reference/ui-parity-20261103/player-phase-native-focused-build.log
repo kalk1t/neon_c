@@ -1,0 +1,12 @@
+[ 92%] Built target rr_core
+[ 92%] Building C object CMakeFiles/rr_player_phase_tests.dir/tests/test_player_phase.c.obj
+test_player_phase.c
+[100%] Linking C executable rr_player_phase_tests.exe
+[100%] Built target rr_player_phase_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/player-phase-native
+    Start 1: browser_current_full_pack_player_phase
+1/1 Test #1: browser_current_full_pack_player_phase ...   Passed    0.12 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.14 sec

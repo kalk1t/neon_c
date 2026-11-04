@@ -1,0 +1,1088 @@
+{
+  "observations": 60,
+  "mismatches": 0,
+  "cases": [
+    {
+      "fixture": "solo-3",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        0,
+        62.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        0,
+        308.96875
+      ],
+      "computed": [
+        285.03125,
+        308.96875
+      ],
+      "observed": [
+        285.03125,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        69.40625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        77.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        132.125,
+        132.125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        106.234375,
+        62.890625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        255.5,
+        255.5
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        255.53125,
+        255.53125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        245.734375,
+        245.734375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        245.75,
+        245.75
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        245.765625,
+        245.765625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "bottom",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        0,
+        62.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        0,
+        308.96875
+      ],
+      "computed": [
+        285.03125,
+        308.96875
+      ],
+      "observed": [
+        285.03125,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        69.40625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        77.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        132.125,
+        132.125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        106.234375,
+        62.890625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        255.5,
+        255.5
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        255.53125,
+        255.53125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        245.734375,
+        245.734375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        245.75,
+        245.75
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        245.765625,
+        245.765625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "bottom",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        0,
+        62.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        0,
+        308.96875
+      ],
+      "computed": [
+        285.03125,
+        308.96875
+      ],
+      "observed": [
+        285.03125,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        69.40625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        107.96875,
+        77.375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        132.125,
+        132.125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        106.234375,
+        62.890625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        255.5,
+        255.5
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        255.53125,
+        255.53125
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        245.734375,
+        245.734375
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        245.75,
+        245.75
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        245.765625,
+        245.765625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        255.515625,
+        255.515625
+      ],
+      "computed": [
+        335.734375,
+        258.25
+      ],
+      "observed": [
+        335.734375,
+        258.25
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        308.96875,
+        308.96875
+      ],
+      "computed": [
+        308.96875,
+        308.96875
+      ],
+      "observed": [
+        308.96875,
+        308.96875
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "top",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "bottom",
+      "minimums": [
+        298.625,
+        298.625
+      ],
+      "computed": [
+        298.625,
+        298.625
+      ],
+      "observed": [
+        298.625,
+        298.625
+      ],
+      "matches": true
+    }
+  ],
+  "examples": [],
+  "scope": "Hypothesis for observed source text/profile only; label/caption nonbinding and generic float min-content still require explicit qualification."
+}

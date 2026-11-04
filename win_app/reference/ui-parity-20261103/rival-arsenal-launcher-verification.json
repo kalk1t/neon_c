@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "2e4ecf2f994add35c40c9f55bb6db8a16bdae06b37964364da481eb17758abf0",
+  "target": {
+    "path": "build/rival-arsenal-native/bin/RoadstersRace.exe",
+    "sha256": "b37e39df048f529e5250c15c6fc365aa27300c1602ea1d05f07826e770371086"
+  },
+  "static_only": true,
+  "executed": false
+}

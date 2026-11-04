@@ -1,0 +1,19 @@
+import fs from'node:fs';import path from'node:path';import crypto from'node:crypto';import vm from'node:vm';import{pathToFileURL}from'node:url';
+const root=path.resolve(process.argv[2]),out=path.join(root,'reference/ui-parity-20261103/results-timer-capture'),game=path.resolve(root,'../game'),sha=b=>crypto.createHash('sha256').update(b).digest('hex');const raceBytes=fs.readFileSync(path.join(game,'src/race.js')),race=raceBytes.toString('utf8'),{Racer}=await import(pathToFileURL(path.join(game,'src/ai.js')).href);fs.mkdirSync(out,{recursive:true});
+const schedule=race.match(/setTimeout\(showResults,\s*2000\);/)?.[0];if(!schedule)throw Error('Source delay changed');const a=race.indexOf('export function showResults()'),b=race.indexOf('  const coinPos =',a);if(a<0||b<0)throw Error('Source results boundary changed');const fn=race.slice(a,b).replace('export function','function')+'captureResults({total,best:bi,lap_values:player.lapTimes.slice(),times:rows.map(v=>[g.racers.indexOf(v.r),v.t,v.est]),coins:coinRows.map(r=>[g.racers.indexOf(r),r.coins]),time_rank:rows.findIndex(v=>v.r===player)+1,coin_rank:coinRows.indexOf(player)+1,finish_position:g.finishPos});'+"$('results').classList.remove('hidden');}";
+const S=(now,phase='finished',time=10,coins=1)=>[0,now,phase,time,coins],P=(now,phase='finished',time=20,coins=5)=>[1,now,phase,time,coins],H=(now,phase='menu',time=10,coins=1)=>[2,now,phase,time,coins];
+const scenarios=[
+ ['boundary-freeze',[S(0),P(1999.999),P(2000),P(4000,'finished',80,0)]],
+ ['restart-guard-consumes',[S(0),H(500),P(2000,'countdown'),P(4000)]],
+ ['old-callback-reads-new-finish',[S(0),H(100,'countdown'),S(500,'finished',30),P(2000,'finished',40),P(2499,'finished',60),P(2500,'finished',70)]],
+ ['paused-guard-no-retry',[S(0),P(5000,'paused'),P(6000)]],
+ ['same-deadline-fifo',[S(0),S(0,'finished',30),P(2000)]],
+ ['late-pump-current-data',[S(1000),P(100000,'finished',100,9)]],
+ ['hide-before-due-task',[S(0),P(1999),H(2000),P(2000,'menu'),P(3000)]],
+ ['no-double-publication',[S(0),P(2000),P(2000),P(2001)]],
+ ['sixteen-pending',[...Array.from({length:16},(_,i)=>S(i)),P(2015,'finished',42,9)]]
+];const cases=[];
+for(const[name,steps]of scenarios){let now=0,queue=[],visible=false,board=null,revision=0;const racers=Array.from({length:11},(_,i)=>Object.assign(Object.create(Racer.prototype),{name:'Driver'+i,isPlayer:i===0,takedowns:0,sample:i*173,lap:i===0?3:1,nextCP:i===0?0:1,finished:i===0,finishTime:10,coins:i%4,lapTimes:[]})),player=racers[0];const ctx={g:{state:'finished',racers,raceTime:10,laps:2,finishPos:1},player,track:{n:4096},fmt:x=>x,ordinal:String,esc:x=>x,Math,captureResults:v=>{board=v;revision++;},setTimeout:(fn,delay)=>queue.push({fn,due:now+delay}),$:()=>({textContent:'',innerHTML:'',classList:{remove(){visible=true;},add(){visible=false;}}})};vm.createContext(ctx);vm.runInContext(fn,ctx);const actions=[];
+ for(const[kind,stamp,phase,time,coins]of steps){now=stamp;ctx.g.state=phase;ctx.g.raceTime=time;player.finishTime=time;player.coins=coins;player.lapTimes=[time*.4,time*.6];let callbacks=0;const before=revision;if(kind===0)vm.runInContext(schedule,ctx);else if(kind===2)visible=false;else while(queue.length&&queue[0].due<=now){const task=queue.shift();task.fn();callbacks++;}actions.push({kind,now,phase,time,coins,expected:{wall:now,callbacks,published:revision-before,pending:queue.map(v=>v.due),revision,visible,board}});}
+ cases.push({name,actions});}
+if(sha(fs.readFileSync(path.join(game,'src/race.js')))!==sha(raceBytes))throw Error('Source changed');fs.writeFileSync(path.join(out,'timer-cases.json'),JSON.stringify({source:{path:'src/race.js',sha256:sha(raceBytes)},scope:'Actual source setTimeout statement, display-prefix/phase guard and visibility tail in a virtual callback queue; no real timers/services/GPU.',cases})+'\n');console.log({cases:cases.length,actions:cases.reduce((n,c)=>n+c.actions.length,0)});

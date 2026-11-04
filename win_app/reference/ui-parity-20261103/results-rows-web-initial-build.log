@@ -1,0 +1,232 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\results-rows-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (10.1s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/results-rows-web
+[0/2] Re-checking globbed directories...
+[1/326] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_ui.c.o
+[2/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_timer.c.o
+[3/326] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_times.c.o
+[4/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_current.c.o
+[5/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_current.c.o
+[6/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_input.c.o
+[7/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_session_pose.c.o
+[8/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_player_phase.c.o
+[9/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle_current.c.o
+[10/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_car_pose.c.o
+[11/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_arsenal.c.o
+[12/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_lifecycle.c.o
+[13/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai_current.c.o
+[14/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_current.c.o
+[15/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_weapon_current.c.o
+[16/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_input_settings.c.o
+[17/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[18/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[19/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[20/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[21/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[22/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[23/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[24/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[25/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[26/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[27/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[28/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[29/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[30/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[31/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[32/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[33/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[34/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[35/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[36/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[37/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[38/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[39/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[40/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[41/326] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+[42/326] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[43/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[44/326] Linking C static library librr_core.a
+[45/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[46/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[47/326] Linking C static library librr_input_preferences.a
+[48/326] Building C object CMakeFiles/rr_results_times_tests.dir/tests/test_results_times.c.o
+[49/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[50/326] Building C object CMakeFiles/rr_results_ui_tests.dir/tests/test_results_ui.c.o
+[51/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[52/326] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[53/326] Building C object CMakeFiles/rr_results_ui_replay_tests.dir/tests/test_results_ui_replay.c.o
+[54/326] Building C object CMakeFiles/rr_results_timer_tests.dir/tests/test_results_timer.c.o
+[55/326] Building C object CMakeFiles/rr_current_results_tests.dir/tests/test_current_results.c.o
+[56/326] Building C object CMakeFiles/rr_run_input_tests.dir/tests/test_run_input.c.o
+[57/326] Building C object CMakeFiles/rr_session_pose_tests.dir/tests/test_session_pose.c.o
+[58/326] Building C object CMakeFiles/rr_car_pose_tests.dir/tests/test_car_pose.c.o
+[59/326] Building C object CMakeFiles/rr_player_phase_tests.dir/tests/test_player_phase.c.o
+[60/326] Building C object CMakeFiles/rr_run_current_tests.dir/tests/test_run_current.c.o
+[61/326] Building C object CMakeFiles/rr_rival_arsenal_tests.dir/tests/test_rival_arsenal.c.o
+[62/326] Building C object CMakeFiles/rr_battle_pose_tests.dir/tests/test_battle_pose.c.o
+[63/326] Building C object CMakeFiles/rr_battle_current_tests.dir/tests/test_battle_current.c.o
+[64/326] Building C object CMakeFiles/rr_ai_current_tests.dir/tests/test_ai_current.c.o
+[65/326] Building C object CMakeFiles/rr_rival_life_tests.dir/tests/test_rival_life.c.o
+[66/326] Building C object CMakeFiles/rr_speed_current_tests.dir/tests/test_speed_current.c.o
+[67/326] Building C object CMakeFiles/rr_rival_current_tests.dir/tests/test_rival_current.c.o
+[68/326] Building C object CMakeFiles/rr_current_fire_tests.dir/tests/test_current_fire.c.o
+[69/326] Building C object CMakeFiles/rr_weapon_current_tests.dir/tests/test_weapon_current.c.o
+[70/326] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.o
+[71/326] Building C object CMakeFiles/rr_menu_keys_tests.dir/tests/test_menu_keys.c.o
+[72/326] Building C object CMakeFiles/rr_aim_camera_tests.dir/tests/test_aim_camera.c.o
+[73/326] Building C object CMakeFiles/rr_boost_layout_tests.dir/tests/test_boost_layout.c.o
+[74/326] Building C object CMakeFiles/rr_capture_prompt_tests.dir/tests/test_capture_prompt.c.o
+[75/326] Building C object CMakeFiles/rr_slide_tests.dir/tests/test_slide.c.o
+[76/326] Building C object CMakeFiles/rr_target_pulse_tests.dir/tests/test_target_pulse.c.o
+[77/326] Building C object CMakeFiles/rr_hud_frame_tests.dir/tests/test_hud_frame.c.o
+[78/326] Building C object CMakeFiles/rr_map_background_tests.dir/tests/test_map_background.c.o
+[79/326] Building C object CMakeFiles/rr_pack_current_tests.dir/tests/test_pack_current.c.o
+[80/326] Building C object CMakeFiles/rr_sub_fade_tests.dir/tests/test_sub_fade.c.o
+[81/326] Building C object CMakeFiles/rr_announcement_tests.dir/tests/test_announcement.c.o
+[82/326] Building C object CMakeFiles/rr_history_style_tests.dir/tests/test_history_style.c.o
+[83/326] Building C object CMakeFiles/rr_spin_indicator_tests.dir/tests/test_spin_indicator.c.o
+[84/326] Building C object CMakeFiles/rr_pause_layout_tests.dir/tests/test_pause_layout.c.o
+[85/326] Building C object CMakeFiles/rr_finish_guidance_tests.dir/tests/test_finish_guidance.c.o
+[86/326] Building C object CMakeFiles/rr_recovery_feedback_tests.dir/tests/test_recovery_feedback.c.o
+[87/326] Building C object CMakeFiles/rr_ui_layer_tests.dir/tests/test_ui_layers.c.o
+[88/326] Building C object CMakeFiles/rr_map_mark_tests.dir/tests/test_minimap_marks.c.o
+[89/326] Building C object CMakeFiles/rr_view_control_tests.dir/tests/test_view_controls.c.o
+[90/326] Building C object CMakeFiles/rr_player_control_tests.dir/tests/test_player_controls.c.o
+[91/326] Building C object CMakeFiles/rr_best_readout_tests.dir/tests/test_best_readouts.c.o
+[92/326] Building C object CMakeFiles/rr_mouse_capture_tests.dir/tests/test_mouse_capture.c.o
+[93/326] Building C object CMakeFiles/rr_circle_clip_tests.dir/tests/test_circle_clip.c.o
+[94/326] Building C object CMakeFiles/rr_boost_meter_tests.dir/tests/test_boost_meter.c.o
+[95/326] Building C object CMakeFiles/rr_nitro_call_tests.dir/tests/test_nitro_call.c.o
+[96/326] Building C object CMakeFiles/rr_spin_control_tests.dir/tests/test_spin_control.c.o
+[97/326] Building C object CMakeFiles/rr_impact_fx_tests.dir/tests/test_impact_fx.c.o
+[98/326] Building C object CMakeFiles/rr_mouse_aim_tests.dir/tests/test_mouse_aim.c.o
+[99/326] Building C object CMakeFiles/rr_hud_message_tests.dir/tests/test_hud_message.c.o
+[100/326] Building C object CMakeFiles/rr_target_guidance_tests.dir/tests/test_target_guidance.c.o
+[101/326] Building C object CMakeFiles/rr_sub_notice_tests.dir/tests/test_sub_notice.c.o
+[102/326] Building C object CMakeFiles/rr_camera_fx_tests.dir/tests/test_camera_fx.c.o
+[103/326] Building C object CMakeFiles/rr_start_cue_tests.dir/tests/test_start_cue.c.o
+[104/326] Building C object CMakeFiles/rr_race_warning_tests.dir/tests/test_race_warning.c.o
+[105/326] Building C object CMakeFiles/rr_chase_camera_tests.dir/tests/test_chase_camera.c.o
+[106/326] Building C object CMakeFiles/rr_camera_motion_tests.dir/tests/test_camera_motion.c.o
+[107/326] Building C object CMakeFiles/rr_first_person_tests.dir/tests/test_first_person.c.o
+[108/326] Building C object CMakeFiles/rr_pause_ui_tests.dir/tests/test_pause_ui.c.o
+[109/326] Building C object CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o
+[110/326] Building C object CMakeFiles/rr_input_mix_tests.dir/tests/test_input_mix.c.o
+[111/326] Building C object CMakeFiles/rr_mouse_widget_tests.dir/tests/test_mouse_widgets.c.o
+[112/326] Building C object CMakeFiles/rr_pause_scene_tests.dir/tests/test_pause_scene.c.o
+[113/326] Building C object CMakeFiles/rr_button_hover_tests.dir/tests/test_button_hover.c.o
+[114/326] Building C object CMakeFiles/rr_showcase_tests.dir/tests/test_showcase.c.o
+[115/326] Building C object CMakeFiles/rr_button_surface_tests.dir/tests/test_button_surface.c.o
+[116/326] Building C object CMakeFiles/rr_results_layout_tests.dir/tests/test_results_layout.c.o
+[117/326] Building C object CMakeFiles/rr_race_ui_tests.dir/tests/test_race_ui.c.o
+[118/326] Building C object CMakeFiles/rr_ui_layout_tests.dir/tests/test_ui_layout.c.o
+[119/326] Building C object CMakeFiles/rr_facade_tests.dir/tests/test_facade.c.o
+[120/326] Building C object CMakeFiles/rr_mesh_loader_tests.dir/tests/test_mesh_loader.c.o
+[121/326] Building C object CMakeFiles/rr_city_catalog_tests.dir/tests/test_city_catalog.c.o
+[122/326] Building C object CMakeFiles/rr_city_catalog_tests.dir/src/experimental/rr_city_catalog.c.o
+[123/326] Building C object CMakeFiles/rr_city_batching_tests.dir/tests/test_city_batching.c.o
+[124/326] Building C object CMakeFiles/rr_city_batching_tests.dir/src/experimental/rr_city_batching.c.o
+[125/326] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_batching.c.o
+[126/326] Building C object CMakeFiles/rr_city_repacking_tests.dir/tests/test_city_repacking.c.o
+[127/326] Building C object CMakeFiles/rr_city_triangle_tests.dir/tests/test_city_triangle.c.o
+[128/326] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_triangle.c.o
+[129/326] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_repacking.c.o
+[130/326] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_batching.c.o
+[131/326] Building C object CMakeFiles/rr_city_occlusion_tests.dir/tests/test_city_occlusion.c.o
+[132/326] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_repacking.c.o
+[133/326] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_occlusion.c.o
+[134/326] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_triangle.c.o
+[135/326] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_batching.c.o
+[136/326] Building C object CMakeFiles/rr_city_witness_tests.dir/tests/test_city_witness.c.o
+[137/326] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_witness.c.o
+[138/326] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_triangle.c.o
+[139/326] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_repacking.c.o
+[140/326] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_batching.c.o
+[141/326] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_occlusion.c.o
+[142/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/tests/test_city_coverage.c.o
+[143/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_coverage.c.o
+[144/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_witness.c.o
+[145/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_triangle.c.o
+[146/326] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_repacking.c.o
+[147/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_occlusion.c.o
+[148/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_batching.c.o
+[149/326] Building C object CMakeFiles/rr_poster_tests.dir/tests/test_posters.c.o
+[150/326] Building C object CMakeFiles/rr_poster_tests.dir/src/experimental/rr_posters.c.o
+[151/326] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_repacking.c.o
+[152/326] Building C object CMakeFiles/rr_ai_tests.dir/tests/test_ai.c.o
+[153/326] Building C object CMakeFiles/rr_rival_tests.dir/tests/test_rival.c.o
+[154/326] Building C object CMakeFiles/rr_targeting_tests.dir/tests/test_targeting.c.o
+[155/326] Building C object CMakeFiles/rr_coin_tests.dir/tests/test_coins.c.o
+[156/326] Building C object CMakeFiles/rr_arsenal_tests.dir/tests/test_arsenal.c.o
+[157/326] Building C object CMakeFiles/rr_combat_tests.dir/tests/test_combat.c.o
+[158/326] Building C object CMakeFiles/rr_fire_tests.dir/tests/test_fire.c.o
+[159/326] Building C object CMakeFiles/rr_core_tests.dir/tests/test_core.c.o
+[160/326] Building C object CMakeFiles/rr_battle_tests.dir/tests/test_battle.c.o
+[161/326] Building C object CMakeFiles/rr_local_run_tests.dir/tests/test_local_run.c.o
+[162/326] Building C object CMakeFiles/rr_render_policy_tests.dir/tests/test_render_policy.c.o
+[163/326] Building C object CMakeFiles/rr_race_tests.dir/tests/test_race.c.o
+[164/326] Building C object CMakeFiles/rr_menu_policy_tests.dir/tests/test_menu_policy.c.o
+[165/326] Building C object CMakeFiles/rr_session_tests.dir/tests/test_session.c.o
+[166/326] Building C object CMakeFiles/rr_recovery_tests.dir/tests/test_recovery.c.o
+[167/326] Building C object CMakeFiles/rr_road_picker_tests.dir/tests/test_road_picker.c.o
+[168/326] Building C object CMakeFiles/rr_pack_tests.dir/tests/test_pack.c.o
+[169/326] Building C object CMakeFiles/rr_all_roads_tests.dir/tests/test_all_roads.c.o
+[170/326] Building C object CMakeFiles/rr_city_clearance_tests.dir/tests/test_city_clearance.c.o
+[171/326] Building C object CMakeFiles/rr_finish_tests.dir/tests/test_finish.c.o
+[172/326] Building C object CMakeFiles/rr_course_tests.dir/tests/test_course_furniture.c.o
+[173/326] Building C object CMakeFiles/rr_physics_tests.dir/tests/test_physics.c.o
+[174/326] Building C object CMakeFiles/rr_shared_scenery_tests.dir/tests/test_shared_scenery.c.o
+[175/326] Building C object CMakeFiles/rr_hero_asset_tests.dir/tests/test_hero_asset.c.o
+[176/326] Building C object CMakeFiles/rr_cockpit_image_tests.dir/tests/test_cockpit_images.c.o
+[177/326] Building C object CMakeFiles/rr_canonical_city_tests.dir/tests/test_canonical_city.c.o
+[178/326] Building C object CMakeFiles/rr_nose_reticle_tests.dir/tests/test_nose_reticle.c.o
+[179/326] Building C object CMakeFiles/rr_reticle_tests.dir/tests/test_reticles.c.o
+[180/326] Building C object CMakeFiles/rr_subtext_tests.dir/tests/test_subtext.c.o
+[181/326] Building C object CMakeFiles/rr_subtext_tests.dir/src/presentation/rr_subtext.c.o
+[182/326] Building C object CMakeFiles/rr_hud_readout_tests.dir/tests/test_hud_readouts.c.o
+[183/326] Building C object CMakeFiles/rr_menu_help_tests.dir/tests/test_menu_help.c.o
+[184/326] Building C object CMakeFiles/rr_menu_header_tests.dir/tests/test_menu_header.c.o
+[185/326] Building C object CMakeFiles/rr_button_text_tests.dir/tests/test_button_text.c.o
+[186/326] Building C object CMakeFiles/rr_spin_readout_tests.dir/tests/test_spin_readout.c.o
+[187/326] Building C object CMakeFiles/rr_spin_readout_tests.dir/src/presentation/rr_subtext.c.o
+[188/326] Building C object CMakeFiles/rr_arrow_art_tests.dir/tests/test_arrow_art.c.o
+[189/326] Building C object CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o
+FAILED: [code=1] CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe -DGRAPHICS_API_OPENGL_ES3 -DPLATFORM_WEB -IC:/Users/User/Projects/neon_c/win_app/src/presentation -IC:/Users/User/Projects/neon_c/win_app/src/core -IC:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src -O3 -DNDEBUG -std=c17 -Wall -Wextra -Wpedantic -Werror -Wno-missing-field-initializers -MD -MT CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o -MF CMakeFiles\rr_results_rows_tests.dir\tests\test_results_rows.c.o.d -o CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o -c C:/Users/User/Projects/neon_c/win_app/tests/test_results_rows.c
+C:/Users/User/Projects/neon_c/win_app/tests/test_results_rows.c:35:4: error: misleading indentation; statement is not part of the previous 'for' [-Werror,-Wmisleading-indentation]
+   35 |   }decoded[bytes]=0;CHECK(!strcmp(decoded,part?source->value:source->name));
+      |    ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_results_rows.c:27:3: note: previous statement is here
+   27 |   for(int pass=source->me?0:4;pass<5;pass++)for(size_t j=0;j<text->count;j++){
+      |   ^
+1 error generated.
+[190/326] Building C object CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_subtext.c.o
+[191/326] Building C object CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_results_text.c.o
+[192/326] Building C object CMakeFiles/rr_results_times_draw_tests.dir/tests/test_results_times_draw.c.o
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,2021 @@
+{
+  "version": "0.2.16",
+  "current_sources": [
+    {
+      "path": "src/style.css",
+      "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7"
+    },
+    {
+      "path": "index.html",
+      "sha256": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9"
+    },
+    {
+      "path": "package.json",
+      "sha256": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749"
+    }
+  ],
+  "package": {
+    "path": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v3",
+    "manifest_sha256": "e8eca0c29f6f392ca1a81ef602663de6438847db12306594011bb4677dfd0443",
+    "verified": [
+      {
+        "file": "assets.json",
+        "sha256": "e9ef36c898ef02c1ff4dc841d499864bfe00383640cf4625f7b252668824e6bd"
+      },
+      {
+        "file": "source/style.css",
+        "sha256": "bf72a15498df997638905858ba5dd78863b2ced18b7860a0a476592b1c30dc37"
+      },
+      {
+        "file": "source/index.html",
+        "sha256": "2c1447d9ae11c064cc290e2213052b5a31339d946ac1cf4b77712128d9be4d57"
+      },
+      {
+        "file": "results/panels/multiplayer-no-next/reference@1x.png",
+        "sha256": "da4e4c500644a5ccb36b3e9b7d941b57d3af30af26e8cf91fd0c797bea5990db"
+      },
+      {
+        "file": "results/panels/multiplayer-no-next/chrome@1x.png",
+        "sha256": "06fdc4e58498eb158cb48449fd0e6019cb58fe2198956eab8952a226c75e3d6b"
+      },
+      {
+        "file": "results/panels/multiplayer-next/reference@1x.png",
+        "sha256": "c8e4b8208b1683741a72d2e1a097fae7d3cc4eb17c64aaef0266a95a4d679f18"
+      },
+      {
+        "file": "results/panels/multiplayer-next/chrome@1x.png",
+        "sha256": "635122c7e07c14462f67cc304ad7315228ecb87ce1ec59acd0d204eac73607d2"
+      },
+      {
+        "file": "results/panels/unlocked-next/reference@1x.png",
+        "sha256": "0aed66ad1b47045f3662ec749a02466a7885c54e16ea27be8a3ed6c4e3b473de"
+      },
+      {
+        "file": "results/panels/unlocked-next/chrome@1x.png",
+        "sha256": "5e89bdd758dddd7dcfe93864a14128559b0e6fcd3248a81e10ded14eafabc5df"
+      },
+      {
+        "file": "results/panels/solo-time-attack/reference@1x.png",
+        "sha256": "02b5726e9564bf917b1822b3becd638f1f270d0851099c02edb998a24ab18481"
+      },
+      {
+        "file": "results/panels/solo-time-attack/chrome@1x.png",
+        "sha256": "f9501e49c039f8477ec200bb978692f24f5e49064905a5468ad994fc9e5458fe"
+      },
+      {
+        "file": "results/panels/save-signin/reference@1x.png",
+        "sha256": "d0b21ea7e21b71a496bce0bf1631cf874ad68f4aa4cec89c84e40401095c674f"
+      },
+      {
+        "file": "results/panels/save-signin/chrome@1x.png",
+        "sha256": "34654c8b479766928fd069019815e13442bd91970c787eedbb93973235d9639f"
+      },
+      {
+        "file": "results/panels/save-nickname/reference@1x.png",
+        "sha256": "c43550cc0cb3b377d6e03bd6b731038485130fa8609213ec02963bb3dfa9014f"
+      },
+      {
+        "file": "results/panels/save-nickname/chrome@1x.png",
+        "sha256": "024ac1629195f9bd70f46dde676b768134ca9fa2ae20ffbabc6cce80fea77861"
+      },
+      {
+        "file": "results/panels/save-saving/reference@1x.png",
+        "sha256": "917cc4d984c84d4b606789ca08800606c82244fef30b2e66e1aeeff9ab9b1ab7"
+      },
+      {
+        "file": "results/panels/save-saving/chrome@1x.png",
+        "sha256": "2d902b362eb42a227d4603212d9a52dfc73df953e9aef96b2b9c2db4965092f3"
+      },
+      {
+        "file": "results/panels/save-retry/reference@1x.png",
+        "sha256": "36424327ec8abda8971747a2c367f74c1de7a180acf9fdfe86bce6b0824cd386"
+      },
+      {
+        "file": "results/panels/save-retry/chrome@1x.png",
+        "sha256": "c4b07a0350c329765930005cedc717e3be3adfcc55e4ceca549a8152f23e216f"
+      },
+      {
+        "file": "results/panels/save-expired/reference@1x.png",
+        "sha256": "d27db6360238ec9b1878e889959d36cb3397a36019404b7fe7a0fb452095a1d4"
+      },
+      {
+        "file": "results/panels/save-expired/chrome@1x.png",
+        "sha256": "06fdc4e58498eb158cb48449fd0e6019cb58fe2198956eab8952a226c75e3d6b"
+      },
+      {
+        "file": "results/panels/save-too-soon/reference@1x.png",
+        "sha256": "42b4f7c8ed064297bccd37f1242a2c9b552e33d8f8844e4f2b448ea60f9afbab"
+      },
+      {
+        "file": "results/panels/save-too-soon/chrome@1x.png",
+        "sha256": "06fdc4e58498eb158cb48449fd0e6019cb58fe2198956eab8952a226c75e3d6b"
+      },
+      {
+        "file": "results/panels/multiplayer-no-next/reference@2x.png",
+        "sha256": "8357f23a0cdbcb286f6d50440faf4e5dca1fbfe6c025bcab9f33c16cb8f4c260"
+      },
+      {
+        "file": "results/panels/multiplayer-no-next/chrome@2x.png",
+        "sha256": "eb2e3149079044ec945988700f8ef065147a1c9fd6bd0f1ce4b72fdd2bdcc9d3"
+      },
+      {
+        "file": "results/panels/multiplayer-next/reference@2x.png",
+        "sha256": "fba0a1b877359726c5bc774555f56a1875db2b935c3db35bf9e0a14bfeae9b5c"
+      },
+      {
+        "file": "results/panels/multiplayer-next/chrome@2x.png",
+        "sha256": "e08cba9e938058ebb1af90328ed72893f8d4805080431119a83eacedb306d8e6"
+      },
+      {
+        "file": "results/panels/unlocked-next/reference@2x.png",
+        "sha256": "e9376b6288b0902959dac578b2b5bc8c1a9d133f40f669ed9452b7f74a16b42f"
+      },
+      {
+        "file": "results/panels/unlocked-next/chrome@2x.png",
+        "sha256": "c04a676d1f46606eed5b99fcf7ea68e6b2c956bee47fff591580f7e08de451f7"
+      },
+      {
+        "file": "results/panels/solo-time-attack/reference@2x.png",
+        "sha256": "f676ca463024dba7b1a6cfa8a297a72e1f3e8b85bb6f76237d5fdb0931566cd7"
+      },
+      {
+        "file": "results/panels/solo-time-attack/chrome@2x.png",
+        "sha256": "5b6c158c4f8b1f84cd37fb05537c8bd4c3136d6d870b8079e11092deb3e1b07e"
+      },
+      {
+        "file": "results/panels/save-signin/reference@2x.png",
+        "sha256": "382dfd671c2a5333ef9fb8ee73948ad8572a46b04a15069becbb49bc48995278"
+      },
+      {
+        "file": "results/panels/save-signin/chrome@2x.png",
+        "sha256": "96cfca41952fd6cb1b09806e335e8424fbbf1611618a70a73010b95f0a490da4"
+      },
+      {
+        "file": "results/panels/save-nickname/reference@2x.png",
+        "sha256": "a0cda694c6181b60d43652de76e61dfc9238741de813b69d851729c22e71636b"
+      },
+      {
+        "file": "results/panels/save-nickname/chrome@2x.png",
+        "sha256": "b26db4c779e5ededda53d317beff254085d2238f077af652f6a9a73ba963c47d"
+      },
+      {
+        "file": "results/panels/save-saving/reference@2x.png",
+        "sha256": "ef0595cc75975755635aed28ac7bdf11379c1442be4ef7eb891a6e4ea0fac2f8"
+      },
+      {
+        "file": "results/panels/save-saving/chrome@2x.png",
+        "sha256": "a78d248acc8f6ce0ae47150adc7966816374d0b4296bd115159e6670242eb626"
+      },
+      {
+        "file": "results/panels/save-retry/reference@2x.png",
+        "sha256": "42f206740dea454cc60098a76be952745ea0703a662a828ca2638aafa788615e"
+      },
+      {
+        "file": "results/panels/save-retry/chrome@2x.png",
+        "sha256": "3f80ff72de72e43d57a85bef24a351416596ef803a625f081b88ce4bb93df7eb"
+      },
+      {
+        "file": "results/panels/save-expired/reference@2x.png",
+        "sha256": "f16901acbffddc1e45f74629d9af171b74885205c49b1252d12644ca813036ec"
+      },
+      {
+        "file": "results/panels/save-expired/chrome@2x.png",
+        "sha256": "eb2e3149079044ec945988700f8ef065147a1c9fd6bd0f1ce4b72fdd2bdcc9d3"
+      },
+      {
+        "file": "results/panels/save-too-soon/reference@2x.png",
+        "sha256": "a02d6169bf3c54fe4db6dcc0d7174a5b5f6b8934113c3b7ab912081ba4c88f7b"
+      },
+      {
+        "file": "results/panels/save-too-soon/chrome@2x.png",
+        "sha256": "eb2e3149079044ec945988700f8ef065147a1c9fd6bd0f1ce4b72fdd2bdcc9d3"
+      }
+    ]
+  },
+  "rules": [
+    "* { box-sizing: border-box; }",
+    "* { zoom: 0.8; }",
+    "* { zoom: 0.55; }",
+    "* { zoom: 0.6; }",
+    "#menu, #pause, #results { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 7vw; background: linear-gradient(90deg, rgba(3, 4, 20, 0.85) 0%, rgba(3, 4, 20, 0.35) 45%, transparent 70%); z-index: 10; }",
+    "#pause, #results { position: fixed; inset: 0; display: flex; align-items: center; padding-left: 7vw; background: linear-gradient(90deg, rgba(3, 4, 20, 0.85) 0%, rgba(3, 4, 20, 0.35) 45%, transparent 70%); z-index: 10; }",
+    "#pause, #results { justify-content: center; padding: 0; background: rgba(3, 4, 20, 0.55); }",
+    "#menu, #results { overflow-y: auto; align-items: safe center; padding-top: 16px; padding-bottom: 16px; }",
+    ".menu-card { gap: 9px; }",
+    ".menu-card { width: 470px; display: flex; flex-direction: column; gap: 14px; }",
+    ".menu-card { cursor: default; }",
+    ".menu-card { zoom: 0.5; margin: auto 0; }",
+    ".menu-card { flex-shrink: 0; gap: 9px; padding: 22px 30px; }",
+    ".menu-card.small { width: 380px; padding: 30px; background: var(--bg); border: 2px solid var(--c); box-shadow: 0 0 30px rgba(25, 230, 255, 0.4); }",
+    ".menu-card.wide { width: 520px; }",
+    ".menu-card.wide { width: 680px; }",
+    "#results > .menu-card { flex-shrink: 0; gap: 9px; padding: 22px 30px; }",
+    "#res-laps { font: 700 18px var(--font); color: #cfefff; }",
+    "#res-laps { display: flex; justify-content: center; gap: 28px; margin: 0; padding: 0; list-style: none; font-size: 16px; }",
+    "#res-unlock.hidden, #res-next.hidden { display: none; }"
+  ],
+  "results_dom_sha256": "ac825e434e890b17fe8fa9598097be6ae37037a26efa3f7dd3198de304a59f16",
+  "cases": [
+    {
+      "id": "results/panels/multiplayer-no-next",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/multiplayer-next",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 991,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        64,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 217.90625,
+        "width": 680,
+        "height": 564.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -217.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 64
+        },
+        {
+          "x": 32,
+          "y": 409.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 479.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/unlocked-next",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 1023,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        23,
+        19,
+        64,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 201.90625,
+        "width": 680,
+        "height": 596.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 23
+        },
+        {
+          "x": 32,
+          "y": 340.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": 32,
+          "y": 368.1875,
+          "width": 616,
+          "height": 64
+        },
+        {
+          "x": 32,
+          "y": 441.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 511.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/solo-time-attack",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        0,
+        40,
+        20,
+        69.296875,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 293.203125,
+        "width": 680,
+        "height": 413.59375
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 74.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 123.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 152.296875,
+          "width": 616,
+          "height": 69.296875
+        },
+        {
+          "x": -460,
+          "y": -293.203125,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 230.59375,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -293.203125,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 258.59375,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 328.59375,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-signin",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        58,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 234.90625,
+        "width": 680,
+        "height": 530.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -234.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 58
+        },
+        {
+          "x": -460,
+          "y": -234.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 375.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 445.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-nickname",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        56,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 235.90625,
+        "width": 680,
+        "height": 528.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -235.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 56
+        },
+        {
+          "x": -460,
+          "y": -235.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 373.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 443.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-saving",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        17,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 255.40625,
+        "width": 680,
+        "height": 489.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -255.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 17
+        },
+        {
+          "x": -460,
+          "y": -255.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 334.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 404.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-retry",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        75,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 226.40625,
+        "width": 680,
+        "height": 547.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -226.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 75
+        },
+        {
+          "x": -460,
+          "y": -226.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 392.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 462.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-expired",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-too-soon",
+      "scale": 1,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/multiplayer-no-next",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/multiplayer-next",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 991,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        64,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 217.90625,
+        "width": 680,
+        "height": 564.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -217.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 64
+        },
+        {
+          "x": 32,
+          "y": 409.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 479.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/unlocked-next",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 1023,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        23,
+        19,
+        64,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 201.90625,
+        "width": 680,
+        "height": 596.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 23
+        },
+        {
+          "x": 32,
+          "y": 340.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": 32,
+          "y": 368.1875,
+          "width": 616,
+          "height": 64
+        },
+        {
+          "x": 32,
+          "y": 441.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 511.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/solo-time-attack",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        0,
+        40,
+        20,
+        69.296875,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 293.203125,
+        "width": 680,
+        "height": 413.59375
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 74.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 123.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 152.296875,
+          "width": 616,
+          "height": 69.296875
+        },
+        {
+          "x": -460,
+          "y": -293.203125,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 230.59375,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -293.203125,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 258.59375,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 328.59375,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-signin",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        58,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 234.90625,
+        "width": 680,
+        "height": 530.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -234.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 58
+        },
+        {
+          "x": -460,
+          "y": -234.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 375.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 445.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-nickname",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        56,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 235.90625,
+        "width": 680,
+        "height": 528.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -235.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 56
+        },
+        {
+          "x": -460,
+          "y": -235.90625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 373.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 443.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-saving",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        17,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 255.40625,
+        "width": 680,
+        "height": 489.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -255.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 17
+        },
+        {
+          "x": -460,
+          "y": -255.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 334.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 404.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-retry",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        75,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 226.40625,
+        "width": 680,
+        "height": 547.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -226.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 75
+        },
+        {
+          "x": -460,
+          "y": -226.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 392.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 462.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-expired",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    },
+    {
+      "id": "results/panels/save-too-soon",
+      "scale": 2,
+      "viewport": {
+        "width": 1600,
+        "height": 1000
+      },
+      "mask": 863,
+      "heights": [
+        32.296875,
+        33,
+        40,
+        20,
+        113.890625,
+        0,
+        19,
+        0,
+        61,
+        61
+      ],
+      "panel": {
+        "x": 460,
+        "y": 254.40625,
+        "width": 680,
+        "height": 491.1875
+      },
+      "boxes": [
+        {
+          "x": 32,
+          "y": 24,
+          "width": 616,
+          "height": 32.296875
+        },
+        {
+          "x": 32,
+          "y": 65.296875,
+          "width": 616,
+          "height": 33
+        },
+        {
+          "x": 32,
+          "y": 107.296875,
+          "width": 616,
+          "height": 40
+        },
+        {
+          "x": 32,
+          "y": 156.296875,
+          "width": 616,
+          "height": 20
+        },
+        {
+          "x": 32,
+          "y": 185.296875,
+          "width": 616,
+          "height": 113.890625
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 308.1875,
+          "width": 616,
+          "height": 19
+        },
+        {
+          "x": -460,
+          "y": -254.40625,
+          "width": 0,
+          "height": 0
+        },
+        {
+          "x": 32,
+          "y": 336.1875,
+          "width": 616,
+          "height": 61
+        },
+        {
+          "x": 32,
+          "y": 406.1875,
+          "width": 616,
+          "height": 61
+        }
+      ],
+      "note": "Actual showResults calculation/render body plus source account result-status methods with local fake backend/tickets. No awards, ranks or real progression are granted."
+    }
+  ],
+  "scope": "Reused checksum-verified prepared browser results states at their actual scales1/2 only; current relevant CSS rules and results DOM match supplied source. Inputs are observed child border-box heights/visibility; output panel/child positions are independently observed. No fresh browser/native/graphics render or real backend/progression state was produced. Scroll/resize extensions are CSS-rule-derived mathematical checks, not new browser observations."
+}

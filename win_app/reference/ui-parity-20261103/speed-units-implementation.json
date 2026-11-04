@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-11-04T11:40:47.021431+00:00",
+  "browser_version": "0.2.16",
+  "source_sha256": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/hud.js": "c1f07ab727fdbd7e393f8dff672b64c75502227814f1be679d2d21ee021446e1",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+    "index.html": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9"
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "e923ad75847e7529efdd4309afdd38d52d0d8431691ee3c6ca3fbccb0bc2531c"
+    },
+    {
+      "path": "src/core/rr_menu_keys.h",
+      "sha256": "d292061cae6e7cd50c5dabd9ea88e8feb6be4370339c6f9e738d07c7c4f82e7c"
+    },
+    {
+      "path": "src/core/rr_speed_units.h",
+      "sha256": "e38a1f030fe10d2b2a31bda6aea706571cf31a6970df1e01b0336d5042286227"
+    },
+    {
+      "path": "tests/test_menu_keys.c",
+      "sha256": "f9312cc20c9487c3108357719911e5af74260ae4da4f34d0922cecc5bfcb232b"
+    },
+    {
+      "path": "tests/test_speed_units.c",
+      "sha256": "88124d08b5f9231ab0351b1f944c7966179e3ae4d543f61dec736034d68e02cd"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "176c01c0987a12012f33d74323a5db892a8a5bed00d0605f226bc9818e16b002"
+    }
+  ],
+  "tests": {
+    "native": "140/140 passed",
+    "web": "140/140 passed",
+    "new_test": "40002 coefficient/rounding comparisons plus sideways/invalid/negative-speed and keyboard/no-race/blur checks"
+  },
+  "active_main_wired": true,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "284fe48c105dbabea969b22cd71b7373f6f8edd6977ecbafac60dc5b460b88dc",
+  "previous_client_sha256": "9ca8de610d36cbabf9c8f4393503a766b06865f80392615a16e6b95633f71a20",
+  "graphics_executed": false,
+  "remaining": [
+    "Session-only choice: device-local save/load not yet wired.",
+    "Native two-option toggle adapter, not a browser select popup/CSS parity claim.",
+    "Disabled cockpit preview remains km/h and is not qualified by this slice.",
+    "Native pixels, physical input and layout acceptance remain gated.",
+    "Full-pack main activation, caption glyph proof, renderer/resource and production combat/rewards gaps remain unchanged."
+  ]
+}

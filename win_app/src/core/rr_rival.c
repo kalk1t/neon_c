@@ -29,10 +29,10 @@ static bool remember(RRLocalRacer *r,double time)
     if(r->lap_count==r->lap_capacity){if(r->lap_capacity>SIZE_MAX/2/sizeof(double))return false;size_t cap=r->lap_capacity?r->lap_capacity*2:8;double *p=realloc(r->lap_times,cap*sizeof(double));if(!p)return false;r->lap_times=p;r->lap_capacity=cap;}
     r->lap_times[r->lap_count++]=time;return true;
 }
-static unsigned rules_random(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,double floor_height,RRRivalRandom random,void *context)
+static unsigned rules_random(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,double floor_height,RRRivalRandom random,void *context,bool current)
 {
     if(!local_rival(r,track)||!isfinite(dt)||dt<0||dt>.05)return 0;
-    unsigned events=rr_race_step(&r->race,track->gates,track->gate_count,&r->car,r->previous,0,race_time);
+    unsigned events=(current?rr_race_step_rival_current:rr_race_step)(&r->race,track->gates,track->gate_count,&r->car,r->previous,0,race_time);
     if(events&RR_RACE_CHECKPOINT){int index=r->race.next_checkpoint-1;if(index>=0&&index<32)r->passed|=UINT32_C(1)<<(unsigned int)index;}
     if(events&RR_RACE_LAP){r->passed=0;if(!remember(r,r->race.last_lap_time)){r->error=true;return events|RR_RIVAL_ERROR;}}
     r->ai.sample=rr_track_nearest_local(track,r->car.pos,r->ai.sample);
@@ -43,29 +43,38 @@ static unsigned rules_random(RRLocalRacer *r,const RRTrack *track,double dt,doub
     return events|(r->error?RR_RIVAL_ERROR:0);
 }
 unsigned rr_rival_rules(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,double floor_height,double random_x,double random_y)
-{FixedRandom f={random_x,random_y};return rules_random(r,track,dt,race_time,floor_height,fixed_random,&f);}
+{FixedRandom f={random_x,random_y};return rules_random(r,track,dt,race_time,floor_height,fixed_random,&f,false);}
 unsigned rr_rival_step(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,RRInput input,double dt,double race_time,double floor_height,double random_x,double random_y)
 {FixedRandom f={random_x,random_y};return rr_rival_step_random(r,track,world,input,dt,race_time,floor_height,fixed_random,&f);}
-unsigned rr_rival_step_random(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,RRInput input,double dt,double race_time,double floor_height,RRRivalRandom random,void *context)
+static unsigned step_random(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,RRInput input,double dt,double race_time,double floor_height,RRRivalRandom random,void *context,bool current)
 {
     if(!local_rival(r,track)||!isfinite(dt)||dt<=0||dt>.05)return 0;
     if(!(r->wreck<=0)){r->wreck-=dt;if(r->wreck<=0&&respawn_random(r,track,random,context))return RR_RIVAL_RESPAWN;return r->error?RR_RIVAL_ERROR:0;}
-    r->previous=r->car.pos;rr_car_step_world(&r->car,input,dt,world);if(!r->race.finished)r->race.lap_time+=dt;
-    unsigned events=rules_random(r,track,dt,race_time,floor_height,random,context);
+    r->previous=r->car.pos;if(current)rr_car_step_current_world_report(&r->car,input,dt,world,NULL);else rr_car_step_world(&r->car,input,dt,world);if(!r->race.finished)r->race.lap_time+=dt;
+    unsigned events=rules_random(r,track,dt,race_time,floor_height,random,context,current);
     if(r->hp<60){r->smoke_time-=dt;if(r->smoke_time<=0){r->smoke_time=.04+r->hp/500;events|=RR_RIVAL_SMOKE;}}
     return events;
 }
-bool rr_local_car_contacts(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out)
+static bool contacts(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out,bool current)
 {
     if(!out||(count&&!racers)||count>RR_LOCAL_MAX_CARS)return false;*out=(RRCarContacts){0};out->shake=shake;
     for(size_t i=0;i<count;i++){
         RRLocalRacer *a=&racers[i];if(!(a->wreck<=0))continue;
         for(size_t j=i+1;j<count;j++){
             RRLocalRacer *b=&racers[j];if(!(b->wreck<=0))continue;RRVec3 d=rr_sub(a->car.pos,b->car.pos);double dist=rr_length(d);if(dist>=4.6||dist<1e-3)continue;
-            d=rr_scale(d,1/dist);a->car.pos=rr_add(a->car.pos,rr_scale(d,(4.6-dist)/2));b->car.pos=rr_add(b->car.pos,rr_scale(d,-(4.6-dist)/2));
+            d=rr_scale(d,1/dist);double ka=1,kb=1;
+            if(current){double ma=rr_car_stats(a->car.profile)->mass,mb=rr_car_stats(b->car.profile)->mass;ka=(2*mb)/(ma+mb);kb=(2*ma)/(ma+mb);}
+            a->car.pos=rr_add(a->car.pos,rr_scale(d,((4.6-dist)/2)*ka));b->car.pos=rr_add(b->car.pos,rr_scale(d,(-(4.6-dist)/2)*kb));
             double vrel=rr_dot(d,rr_sub(a->car.vel,b->car.vel));bool hit=false;
-            if(vrel<0){a->car.vel=rr_add(a->car.vel,rr_scale(d,-vrel*.6));b->car.vel=rr_add(b->car.vel,rr_scale(d,vrel*.6));if((a->is_player||b->is_player)&&-vrel>5){out->shake=fmin(1.2,out->shake-vrel/40);hit=true;}}
+            if(vrel<0){a->car.vel=rr_add(a->car.vel,rr_scale(d,-vrel*.6*ka));b->car.vel=rr_add(b->car.vel,rr_scale(d,vrel*.6*kb));if((a->is_player||b->is_player)&&-vrel>5){out->shake=fmin(1.2,out->shake-vrel/40);hit=true;}}
             out->events[out->count++]=(RRCarContactEvent){(int)i,(int)j,vrel,hit?-vrel*.6:0,hit};
         }
     }return true;
 }
+
+unsigned rr_rival_step_random(RRLocalRacer *r,const RRTrack *t,const struct RRWorld *w,RRInput in,double dt,double time,double floor_height,RRRivalRandom random,void *p){return step_random(r,t,w,in,dt,time,floor_height,random,p,false);}
+unsigned rr_rival_step_current_random(RRLocalRacer *r,const RRTrack *t,const struct RRWorld *w,RRInput in,double dt,double time,double floor_height,RRRivalRandom random,void *p){return step_random(r,t,w,in,dt,time,floor_height,random,p,true);}
+unsigned rr_rival_rules_current(RRLocalRacer *r,const RRTrack *t,double dt,double time,double floor_height,double x,double y){FixedRandom f={x,y};return rules_random(r,t,dt,time,floor_height,fixed_random,&f,true);}
+
+bool rr_local_car_contacts(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out){return contacts(racers,count,shake,out,false);}
+bool rr_local_car_contacts_current(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out){return contacts(racers,count,shake,out,true);}

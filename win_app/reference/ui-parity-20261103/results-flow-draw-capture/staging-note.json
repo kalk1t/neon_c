@@ -1,0 +1,8 @@
+{
+  "initial_staging": "Stopped on wrong observation field name classes; actual schema is className, valueSpan.textNodes, character text.",
+  "completed_before_stop": [
+    "Original backups",
+    "Two new runtime files"
+  ],
+  "resumed": "Fixture/CMake/reference suffix only after verifying runtime source literals. No build or tests had started; existing evidence preserved."
+}

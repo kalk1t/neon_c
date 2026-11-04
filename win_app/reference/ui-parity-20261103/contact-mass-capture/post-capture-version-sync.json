@@ -1,0 +1,98 @@
+{
+  "created_utc": "2026-11-04T14:08:17.753640+00:00",
+  "capture_package_version": "0.2.16",
+  "current_package_version": "0.2.17",
+  "original_capture_unchanged": true,
+  "changed_capture_inputs": [
+    {
+      "path": "package.json",
+      "captured_sha256": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+      "current_sha256": "e5dac988d929d3561003be49b20e260566ffa5727ad0654e7f64bc449b406ba7"
+    },
+    {
+      "path": "docs/changelog.md",
+      "captured_sha256": "80da4f852b0dd0b546feb7a770aedd795e04d21aaa5e455d0ceb1fa84acd8555",
+      "current_sha256": "44f166cd2f25b31c46cd04bb7978ab6ed504f285c24ac101459beef1a43fc8d2"
+    }
+  ],
+  "current_metadata_snapshots": [
+    {
+      "path": "game/package.json",
+      "sha256": "e5dac988d929d3561003be49b20e260566ffa5727ad0654e7f64bc449b406ba7"
+    },
+    {
+      "path": "game\\docs\\changelog.md",
+      "sha256": "44f166cd2f25b31c46cd04bb7978ab6ed504f285c24ac101459beef1a43fc8d2"
+    },
+    {
+      "path": "game\\docs\\feature-inventory.md",
+      "sha256": "b0dc1d639c99494289dad3b2cbe479f6b5db96d381a7a2461a60204b39508a51"
+    },
+    {
+      "path": "game\\docs\\glossary.md",
+      "sha256": "ecae5ad4e6d47bd6b3796b8fbd7cb83502640412052ae7219ebbdaa8571b6b9e"
+    },
+    {
+      "path": "game\\docs\\manual\\05-combat.md",
+      "sha256": "6d057bdc7fa4cf2a6708939a9b4ef3adc15d1a44ec6906ab5c1cbd7aa31a99c0"
+    },
+    {
+      "path": "game\\docs\\manual\\06-free-roam.md",
+      "sha256": "1a8a393f7af7f785da768ab1f2736ec9b29c0802b4e67ed8c6d06ac7346525d9"
+    },
+    {
+      "path": "game\\docs\\manual\\07-progress.md",
+      "sha256": "46665006ab0c1113baca048ba91ebf541e8c492b8520240d774379caecd3f2d6"
+    },
+    {
+      "path": "game\\docs\\manual\\09-troubleshooting.md",
+      "sha256": "acfd3665985c7af95329ebe2b339984c3ee12c7b2b78123abb43fb8b9f2b5984"
+    },
+    {
+      "path": "game\\docs\\manual\\10-whats-new.md",
+      "sha256": "944f25cab320f9afa0d51710670c7bd60a114ea3a1d3bffb9727c2a7adf18d88"
+    },
+    {
+      "path": "game\\docs\\technical\\04-car.md",
+      "sha256": "5d06f920e1b385ee31ea977fc90b5bc7282b82ea3b357a4daa0d9544a9cf87d1"
+    },
+    {
+      "path": "game\\docs\\technical\\06-weapons-damage.md",
+      "sha256": "23756f83b668b36f6b69a026a53d26bca21ed99bac16d1e3816e75d964a3606f"
+    },
+    {
+      "path": "game\\docs\\technical\\07-online.md",
+      "sha256": "2495681c8bcb4279915c607bb4ad24585e1f7f3caca91edd3d66168cf28caec5"
+    },
+    {
+      "path": "game\\docs\\technical\\09-hud-ui.md",
+      "sha256": "f00d32e1f962de3d707783a40b01797e351e031677878cc353cb8fffd946b43e"
+    },
+    {
+      "path": "techplan\\04-components.md",
+      "sha256": "e7380f18420e1a5f5c24249cf3fe2f9b65ed02a9afc2c27957d6628c3affd37c"
+    },
+    {
+      "path": "techplan\\08-testing.md",
+      "sha256": "34a3579ff9a8bb5292437aaa9350252af12fcac86189fde031ab5d472d5a8fda"
+    },
+    {
+      "path": "techplan\\10-tech-debt-risks.md",
+      "sha256": "504a2ce171b3b928324249a08a19f34662968238bffb5570a867b8c0d6c0f7cd"
+    },
+    {
+      "path": "techplan\\11-constants.md",
+      "sha256": "c436cbde45b16e89fa98f54c6adad0a2469b3f2be989ab5b49665f9af893c529"
+    }
+  ],
+  "functional_source_changed": false,
+  "release_or_deployment_verified": false,
+  "reviewed": [
+    "game/docs/changelog.md v0.2.17 section",
+    "game/docs/technical/04-car.md CAR_STATS table",
+    "game/docs/technical/06-weapons-damage.md health/knock/stun",
+    "game/docs/technical/07-online.md protocol11",
+    "techplan/11-constants.md CAR_STATS / LIVE_PROTOCOL"
+  ],
+  "note": "Package/docs changed during build; original contact/car implementation and Three source remain identical. Original numeric oracle/version metadata not rewritten. Docs weapons-damage still says under60 for smoke while source uses0.6*maxHp; use source for follow-up."
+}

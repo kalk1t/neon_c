@@ -1,0 +1,36 @@
+{
+  "to": "Windows writer through parent",
+  "packageRoot": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersFallbackGlyphs-v2",
+  "newCodepoints": [
+    {
+      "unicode": "U+2248",
+      "decimal": 8776,
+      "name": "almost equal to",
+      "fallback": "Arial Black",
+      "sourceSizeCSS": 15
+    },
+    {
+      "unicode": "U+265B",
+      "decimal": 9819,
+      "name": "black chess queen",
+      "fallback": "Segoe UI Symbol",
+      "sourceSizesCSS": [
+        15,
+        18,
+        20
+      ]
+    }
+  ],
+  "glyphPNGs": 12,
+  "metrics": "glyph-metrics.json",
+  "cMetadata": "native/rr_results_fallback_glyphs.h",
+  "sourceEvidence": "oracle.json",
+  "notes": "HANDOFF.md",
+  "status": "Ready for import/review only; native writer must integrate, and native visual acceptance remains pending.",
+  "previousPackage": "../RoadstersFallbackGlyphs-v1/manifest.json",
+  "currentSourceRefactored": true,
+  "currentSourceModule": "game/src/race.js",
+  "projectFoldersModified": false,
+  "systemFontsRedistributed": false,
+  "paidServices": false
+}

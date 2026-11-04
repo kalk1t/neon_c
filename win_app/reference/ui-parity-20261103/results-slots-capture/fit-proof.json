@@ -1,0 +1,29 @@
+{
+  "fonts": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+      "em": 1000,
+      "ascent": 1011,
+      "descent": 243,
+      "max_positive": 41
+    },
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+      "em": 1000,
+      "ascent": 1011,
+      "descent": 243,
+      "max_positive": 50
+    }
+  ],
+  "profile": "Exactly two finite laps0..3600 seconds, count1..11, valid finish/coin ranks, takedowns0..9, empty online block and hidden unlock/next. Other states need a separate profile, never truncation.",
+  "bounds": {
+    "place": 401.34375,
+    "total": 216.716625,
+    "two_lap_group": 382.4095,
+    "limit": 616
+  },
+  "place_combinations": 650,
+  "scope": "Offline numeric font bounds for unwrapped source slot profile, not browser/native pixel or arbitrary account/wrapped-text acceptance."
+}

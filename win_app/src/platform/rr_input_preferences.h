@@ -1,6 +1,7 @@
 #ifndef RR_INPUT_PREFERENCES_H
 #define RR_INPUT_PREFERENCES_H
 #include "rr_input_settings.h"
+#include "rr_speed_units.h"
 #define RR_SETTINGS_PATH_BYTES 4096
 typedef enum RRPreferenceStatus {RR_PREF_OK,RR_PREF_MISSING,RR_PREF_INVALID,RR_PREF_UNSUPPORTED,RR_PREF_UNAVAILABLE,RR_PREF_READ_ONLY,RR_PREF_BUSY,RR_PREF_CONFLICT,RR_PREF_IO_ERROR} RRPreferenceStatus;
 typedef struct RRInputPreferences {
@@ -15,4 +16,15 @@ RRPreferenceStatus rr_input_preferences_default(RRInputPreferences *store,RRMous
 RRPreferenceStatus rr_input_preferences_save(RRInputPreferences *store,RRMouseSettings value);
 /* Coalesce changes for0.25s; force on menu exit/blur/shutdown. Never writes at startup. */
 RRPreferenceStatus rr_input_preferences_tick(RRInputPreferences *store,RRMouseSettings value,double now,bool force);
+/* Separate device-local raw kmh/mph setting; shares only safe blob I/O, never mouse data. */
+typedef struct RRUnitsPreferences {RRInputPreferences blob;RRSpeedUnit saved,pending;} RRUnitsPreferences;
+RRPreferenceStatus rr_units_preferences_open(RRUnitsPreferences *s,const char *path,RRSpeedUnit *value);
+RRPreferenceStatus rr_units_preferences_default(RRUnitsPreferences *s,RRSpeedUnit *value);
+RRPreferenceStatus rr_units_preferences_save(RRUnitsPreferences *s,RRSpeedUnit value);
+RRPreferenceStatus rr_units_preferences_tick(RRUnitsPreferences *s,RRSpeedUnit value,double now,bool force);
+/* Offline solo lap records only: never browser canonical keys, accounts or unlocks. */
+typedef struct RROfflineBestPreferences {RRInputPreferences blob;double saved,pending;} RROfflineBestPreferences;
+RRPreferenceStatus rr_offline_best_open(RROfflineBestPreferences *s,const char *path,double *seconds);
+RRPreferenceStatus rr_offline_best_default(RROfflineBestPreferences *s,int road_id,double *seconds);
+RRPreferenceStatus rr_offline_best_tick(RROfflineBestPreferences *s,double seconds,double now,bool force);
 #endif

@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-11-04T11:50:31.264186+00:00",
+  "browser_version": "0.2.16",
+  "source_sha256": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/hud.js": "c1f07ab727fdbd7e393f8dff672b64c75502227814f1be679d2d21ee021446e1",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+    "index.html": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9"
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "1f07d88066efc71daa592e8e93eeb90f4ab70bc5196dd076916c4d8d506958f3"
+    },
+    {
+      "path": "src/platform/rr_input_preferences.c",
+      "sha256": "24d54caedc0f9695c028c332e57e584f00195426eeea78afce74f4a62c42e1ab"
+    },
+    {
+      "path": "src/platform/rr_input_preferences.h",
+      "sha256": "38c5ec5833aeb42c6ae24177e0ec150f4426a0bfdbe50f18c17235a8a1427941"
+    },
+    {
+      "path": "src/presentation/rr_cockpit_plan.h",
+      "sha256": "394d2c54f7e77ad1b80ed8508cf5faa6fb455ba2e6028b842bb75ff32dba9e77"
+    },
+    {
+      "path": "src/presentation/rr_cockpit.c",
+      "sha256": "7c177bdd033f8c5e0bd800a26db50dac866fdf5957e9c28bd59b25505f2f2d13"
+    },
+    {
+      "path": "tests/test_cockpit.c",
+      "sha256": "fa3694fb5296863f60d96a5c140c53d03eea073892ad3ad288019ad76303f28e"
+    },
+    {
+      "path": "tests/test_input_preferences.c",
+      "sha256": "ba07ab857095dd96c898bfcb12e37d75d74215ddaa22229f2e2407032b2a6efa"
+    }
+  ],
+  "tests": {
+    "native": "140/140 full suite passed after final incremental rebuild",
+    "web": "140/140 full suite passed after final incremental rebuild",
+    "isolated_units": "save/load, debounce, forced save, no startup write, conflicts, malformed/oversized preservation, invalid values, canceled changes, failed-write backoff/retry",
+    "cockpit": "KM/H default plus matching KM/H/MPH label and total-speed number; original fits/readouts retained"
+  },
+  "active_main_persistence_wired": true,
+  "native_default_path": "%LOCALAPPDATA%/RoadstersRace/speed-units-v1.txt",
+  "web_default_key": "neon.units",
+  "real_user_store_accessed_by_tests": false,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "f37a25b8ccc44da041e993073b7e76717e5eeadae934aef131a4e758b84eca70",
+  "previous_client_sha256": "284fe48c105dbabea969b22cd71b7373f6f8edd6977ecbafac60dc5b460b88dc",
+  "graphics_executed": false,
+  "cockpit_preview_enabled": false,
+  "remaining": [
+    "Native pixels/physical input/DPI and real-profile application restart remain unrun under graphics approval gate.",
+    "Cockpit helper/renderer binding updated but preview remains disabled; enabled-preview main path and visual acceptance unqualified.",
+    "Native menu remains a two-option toggle adapter, not source select-popup/CSS parity.",
+    "Invalid stored units deliberately fall back without overwriting data; unlike browser startup normalization.",
+    "Production full-pack combat/rewards and caption glyph proof gaps unchanged."
+  ]
+}

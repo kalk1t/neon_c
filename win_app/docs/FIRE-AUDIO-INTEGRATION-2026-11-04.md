@@ -1,0 +1,17 @@
+# Firing callback / audio submission integration
+
+Six individual arsenal event values now dispatch to the existing source-qualified audio submission path: bolt -> blaster, overheat -> overheat, missile -> missile, deny -> deny, spin -> boostOn, EMP -> EMP. Dispatch remains synchronous in the original firing callback position, using the same caller-owned RNG, voice bank and per-helper clock. Invalid event values preserve bank/output and consume nothing. Existing partial-work failure accounting, explicit token retirement and no-replay obligations remain authoritative. A callback host must forward returned commands/tokens and latch any failure; the void RRFireCue cannot itself stop an enclosing tick. A failed tick must not be qualified or replayed.
+
+The actual existing full firing test now calls this API instead of the hand-coded blaster random stub. Its frozen source fixture/header and projectile, actor, FX, flash, order, seed/reset assertions remain intact. Context is deliberately absent there: unconditional blaster jitter is still consumed, no helper clock/node/voice is admitted. Separate ready/absent-context tests cover every mapping, command output, retirement and invalid event values. Ready command comparisons reuse the previously source-qualified submission API; they are not fresh browser observations. Existing 216-case original-Sound command oracle remains covered by its own unchanged test.
+
+Fresh native and WebAssembly full builds and CPU suites passed148/148 each. Exact callback counts, seeded fixture summaries, source/build hashes and455 asset checks are in reference/ui-parity-20261103/fire-audio-implementation.json. All originals and previous clients remain preserved. Launcher promotion follows verification and does not execute the game.
+
+No active-client audible or UI improvement is claimed from this slice: main remains unchanged and production audio/full-pack/combat/rewards inactive. No sound context/device, graphics, desktop/process inspection, network, backend, unlock or account operation ran. No sample/heap allocation or resource-cap increase was added; the wrapper adds one enum conversion and delegates existing fixed storage.
+
+## Fresh browser sync and next priority
+
+Compared21 relevant source files and42 docs/tech-plan files to the12:26 baseline: nine source files changed, docs unchanged. Working source has protocol11, CAR_STATS and v0.2.17 comments, while package/docs still0.2.16. No release or deployment equivalence is inferred. Current aim.js retains these six player audio mappings and audio.js is unchanged. Pinned source copies/hashes and delta inventory are in fire-audio-capture.
+
+The next source-grounded functional slice is per-car handling/health/resource tuning, preserving default Roadster and frozen older fixtures: car.js max/acceleration/turn; aim.js missile capacity, spin cooldown, EMP reach/victim knock; race.js checkpoint refill, rival arsenal and mass-weighted contacts; ai.js maxHP; HUD percent health/protocol11 serialization require separate offline-vs-account qualification. Do not grant ownership, change online contracts, import progress or enable unqualified combat. Production integration and full-world visual/audio acceptance remain open.
+
+Graphics testing is pending explicit authorization under AGENTS.md. Required next supported execution is the separately scoped normal menu/road-picker qualification after instance-state reconciliation, with conservative settings and verified shutdown; no such attempt occurred here.

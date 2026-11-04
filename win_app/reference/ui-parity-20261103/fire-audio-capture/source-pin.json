@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-11-04T13:47:47.483045+00:00",
+  "package_version": "0.2.16",
+  "hashes": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/aim.js": "de1a27743ab13541b2e1fa18d83a40003667d5d24edcb14dba388785ccf2841e",
+    "src/audio.js": "0cae3bc39222caf11a557444d0a2d330dc15d308f09ab1d3e47a648f1c35d506",
+    "src/car.js": "8ab9cca9c22c86dee4ebfbdc631e1e427372c17feff480f8610ce2c64eef2d9c",
+    "src/online/protocol.js": "6d03f532da0fbf533b086b506e1470bbbc649a052177fcf744b1cef499a40569"
+  },
+  "note": "Working source contains v0.2.17 per-car-stat comments; package remains0.2.16. No release/deployment inference. Full frozen fire fixture remains explicitly v0.2.14; only unchanged six source audio mappings bridged here."
+}

@@ -1,0 +1,8 @@
+{
+  "reason": "Initial generator compared JSON-loaded list slices with tuple-normalized expected rectangles, so equal numeric geometry failed a container-type assertion before fixtures/tests/CMake were written. Normalized both sides to tuples. Runtime source unchanged. Line character indices were additionally derived from independent measured character rectangles rather than the prototype.",
+  "resumed_stage": "Fixture/source-observation processing only",
+  "initial_writes": [
+    "src/presentation/rr_results_name_flow.h",
+    "src/presentation/rr_results_name_flow.c"
+  ]
+}

@@ -79,5 +79,40 @@ int main(int argc,char **argv){if(argc!=2)return 1;
  snprintf(auxiliary,sizeof(auxiliary),"%s.lock",path);put(auxiliary,"retry lock");CHECK(rr_input_preferences_tick(&s,(RRMouseSettings){1.7,true},10,true)==RR_PREF_BUSY);absent(auxiliary);CHECK(rr_input_preferences_tick(&s,(RRMouseSettings){1.7,true},10.1,true)==RR_PREF_BUSY);CHECK(rr_input_preferences_open(&t,path,&value)==RR_PREF_OK);check_near(value.sensitivity,1.6);CHECK(rr_input_preferences_tick(&s,(RRMouseSettings){1.7,true},12,false)==RR_PREF_OK);
  make_path(path,sizeof(path),argv[1],"utf8-\xc3\xa9.json");absent(path);CHECK(rr_input_preferences_open(&s,path,&value)==RR_PREF_MISSING);CHECK(rr_input_preferences_save(&s,(RRMouseSettings){.75,true})==RR_PREF_OK);CHECK(rr_input_preferences_open(&t,path,&value)==RR_PREF_OK);check_near(value.sensitivity,.75);CHECK(value.invert);
 #endif
+ // Units use the same guarded replace primitive, a separate path and raw browser-compatible values.
+ RRUnitsPreferences us,ut;RRSpeedUnit unit;
+ make_path(path,sizeof(path),argv[1],"units-v1.txt");absent(path);
+ CHECK(rr_units_preferences_open(&us,path,&unit)==RR_PREF_MISSING&&unit==RR_SPEED_KMH);
+ CHECK(rr_units_preferences_tick(&us,unit,0,true)==RR_PREF_MISSING);CHECK(!matches(path,"kmh"));
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,1,false)==RR_PREF_MISSING);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,1.249,false)==RR_PREF_MISSING);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,1.25,false)==RR_PREF_OK&&matches(path,"mph"));
+ CHECK(rr_units_preferences_open(&ut,path,&unit)==RR_PREF_OK&&unit==RR_SPEED_MPH);
+ CHECK(rr_units_preferences_tick(&ut,RR_SPEED_KMH,2,true)==RR_PREF_OK&&matches(path,"kmh"));
+ CHECK(rr_units_preferences_save(&us,RR_SPEED_MPH)==RR_PREF_CONFLICT&&matches(path,"kmh"));
+ const char *bad_units[]={"","MPH","mph\n","{\"version\":2}","mphx"};
+ for(size_t i=0;i<sizeof(bad_units)/sizeof(bad_units[0]);i++){
+  put(path,bad_units[i]);CHECK(rr_units_preferences_open(&us,path,&unit)==RR_PREF_INVALID&&unit==RR_SPEED_KMH);
+  CHECK(rr_units_preferences_save(&us,RR_SPEED_MPH)==RR_PREF_READ_ONLY&&matches(path,bad_units[i]));
+ }
+ char large_units[RR_INPUT_SETTINGS_BYTES+2];memset(large_units,'x',sizeof(large_units)-1);large_units[sizeof(large_units)-1]=0;put(path,large_units);CHECK(rr_units_preferences_open(&us,path,&unit)==RR_PREF_INVALID);CHECK(rr_units_preferences_save(&us,RR_SPEED_MPH)==RR_PREF_READ_ONLY&&matches(path,large_units));
+ absent(path);CHECK(rr_units_preferences_open(&us,path,&unit)==RR_PREF_MISSING);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,NAN,true)==RR_PREF_INVALID);
+ CHECK(rr_units_preferences_save(&us,(RRSpeedUnit)9)==RR_PREF_INVALID);CHECK(!matches(path,"mph"));
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,3,false)==RR_PREF_INVALID);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_KMH,3.1,true)==RR_PREF_INVALID&&!us.blob.dirty);
+#if defined(__EMSCRIPTEN__)
+ put("neon.units","mph");CHECK(rr_units_preferences_default(&ut,&unit)==RR_PREF_OK&&unit==RR_SPEED_MPH);
+ EM_ASM({globalThis.rrPrefFail=true;});CHECK(rr_units_preferences_tick(&ut,RR_SPEED_KMH,4,true)==RR_PREF_IO_ERROR);
+ EM_ASM({globalThis.rrPrefFail=false;});CHECK(rr_units_preferences_tick(&ut,RR_SPEED_KMH,4.1,true)==RR_PREF_IO_ERROR);
+ CHECK(rr_units_preferences_tick(&ut,RR_SPEED_KMH,6,true)==RR_PREF_OK&&matches("neon.units","kmh"));
+#else
+ CHECK(rr_units_preferences_open(&us,path,&unit)==RR_PREF_MISSING);
+ char units_lock[2100];snprintf(units_lock,sizeof(units_lock),"%s.lock",path);put(units_lock,"fixture lock");
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,4,true)==RR_PREF_BUSY);absent(units_lock);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,4.1,true)==RR_PREF_BUSY);
+ CHECK(rr_units_preferences_tick(&us,RR_SPEED_MPH,6,true)==RR_PREF_OK&&matches(path,"mph"));
+#endif
+ printf("Units preferences: isolated roundtrip,debounce/forced save/no startup write,malformed preservation,conflict,cancel and failed-write retry checked\n");
  printf("Input preferences:45 browser callback values,strict schema/truncation,debounce/forced save/conflict/preservation/platform failure; %d checks,max numeric error %.12g, %d failures; isolated native files or inert Web storage only,no GPU/user-store access\n",checks,worst,failures);return failures?1:0;
 }

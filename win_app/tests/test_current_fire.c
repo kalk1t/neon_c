@@ -1,4 +1,5 @@
 #include "rr_fire.h"
+#include "rr_audio_submit.h"
 #include "rr_weapon_current.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,7 +12,10 @@ static void near(double a,double b){double e=fabs(a-b);if(e>max_error)max_error=
 static void vector(RRVec3 a,RRVec3 b){near(a.x,b.x);near(a.y,b.y);near(a.z,b.z);}
 typedef struct{uint32_t state;unsigned draws;} Random;
 static double random_value(void *p){Random *r=p;r->state=r->state*UINT32_C(1664525)+UINT32_C(1013904223);++r->draws;return r->state/4294967296.0;}
-static void cue(void *p,unsigned kind){if(kind==RR_ARSENAL_BOLT)(void)random_value(p);}
+static unsigned audio_callbacks,audio_failures;static RRAudioVoiceBank audio_bank;
+static void cue(void *p,unsigned kind){RRAudioCueSubmission result;audio_callbacks++;
+ if(!rr_audio_submit_arsenal(&audio_bank,false,kind,random_value,p,NULL,NULL,&result)||!result.complete||result.voices.count||result.clock_reads)audio_failures++;
+}
 static void reset(RRLocalRacer *r){for(unsigned i=0;i<3;i++){memset(r+i,0,sizeof(*r));r[i].car.pos=rr_v3(i==2?20:0,100,i==0?0:i==1?-60:-80);r[i].car.vel=rr_v3(0,0,i==0?-95:0);r[i].car.speed=i==0?95:0;r[i].car.fwd=rr_v3(0,0,-1);r[i].car.roll_direction=1;r[i].hp=i==1?20:100;r[i].is_player=i==0;r[i].visible=true;}}
 static void actor(const RRLocalRacer *r,ActorFixture f){vector(r->car.pos,f.pos);vector(r->car.vel,f.vel);near(r->car.speed,f.speed);near(r->car.stun,f.stun);near(r->car.roll_time,f.roll);near(r->car.surge,f.surge);near(r->car.yaw,f.yaw);near(r->hp,f.hp);near(r->wreck,f.wreck);near(r->fire_cd,f.fire_cd);CHECK(r->race.finished==f.finished&&r->is_player==f.player&&r->visible==f.visible);}
 static void shot(const RRShot *s,ShotFixture f,RRLocalRacer **r){CHECK(s->owner==(f.owner<0?NULL:r[f.owner])&&s->target==(f.target<0?NULL:r[f.target]));vector(s->pos,f.pos);vector(s->vel,f.vel);near(s->speed,f.speed);near(s->accel,f.accel);near(s->max_speed,f.max_speed);near(s->life,f.life);near(s->turn,f.turn);near(s->damage,f.damage);near(s->radius,f.radius);near(s->trail_time,f.trail_time);CHECK((int)s->kind==f.kind&&s->always==f.always&&s->trail==f.trail&&s->has_damage==f.has_damage);near(s->visual.length,f.length);near(s->visual.width,f.width);near(s->visual.flown,f.flown);CHECK(s->visual.painted==f.painted);vector(s->visual.color,f.color);}
@@ -21,6 +25,7 @@ static bool world(void *p,RRVec3 a,RRVec3 b,RRVec3 *hit){World *w=p;(void)a;(voi
 typedef struct {Random *random;FlashFixture events[1];size_t count;} FlashLog;
 static void flash(void *p,const RRFireFlash *event){FlashLog *log=p;CHECK(log->count<1);if(log->count<1)log->events[log->count++]=(FlashFixture){event->position,event->color,log->random->draws,log->random->state};}
 int main(void){
+ rr_audio_voice_bank_init(&audio_bank);
  RRLocalRacer racers[3];RRLocalRacer *roster[3]={racers,racers+1,racers+2};RRShot shots[64];RRFxLife fx[512];RRFireLocal l={0};RRArsenal arsenal;RRLocalLock lock;Random rng={1,0};FlashLog flashes={0};
  unsigned total_draws=0,restarts=0,total_flashes=0;size_t max_shots=0,max_fx=0;
  for(current=0;current<COUNT(current_fire_frames);current++){
@@ -58,5 +63,7 @@ int main(void){
  RRFireBinding bad={0};RRArsenalEvents events;unsigned before=rng.draws;CHECK(!rr_fire_player_current_step(&l,&arsenal,.01,(RRArsenalInput){0},&bad,&events)&&l.error&&rng.draws==before);l.error=false;bad.model_world[0]=NAN;CHECK(!rr_fire_player_current_step(&l,&arsenal,.01,(RRArsenalInput){0},&bad,&events)&&l.error&&rng.draws==before);
  // Flight-based streak views use retained per-shot dimensions, not a shared bolt-only size.
  RRShot view={0};view.pos=rr_v3(0,0,-20);view.vel=rr_v3(0,0,-845);view.visual=(RRShotVisual){45,7,20,{0},true};RRShotStreak shape=rr_fire_shot_streak(&view,rr_v3(0,0,0));near(shape.length,21);near(shape.center.z,-9.5);near(shape.width,7*(1+20./120));
+ CHECK(audio_callbacks>0&&audio_failures==0&&audio_bank.active==0);
+ printf("FIRE_AUDIO_CALLBACKS calls=%u failures=%u; absent context, original seeded fire fixture unchanged\n",audio_callbacks,audio_failures);
  printf("CURRENT_FIRE_SUMMARY frames=%zu models=4 restarts=%u draws=%u flashes=%u max_shots=%zu max_fx=%zu shot_bytes=%zu visual_bytes=%zu max_error=%.17g failures=%u; production inactive,no GPU/user-store/network\n",COUNT(current_fire_frames),restarts,total_draws,total_flashes,max_shots,max_fx,sizeof(RRShot),sizeof(RRShotVisual),max_error,failures);return failures?1:0;
 }

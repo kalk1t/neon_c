@@ -1,0 +1,711 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\results-caption-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (10.1s)
+-- Generating done (0.3s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/results-caption-web
+[0/2] Re-checking globbed directories...
+[1/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_caption.c.o
+[2/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_tracks.c.o
+[3/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_label.c.o
+[4/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_body_flow.c.o
+[5/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_name_flow.c.o
+[6/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_list_flow.c.o
+[7/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_audio_cues.c.o
+[8/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_advance.c.o
+[9/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_summary.c.o
+[10/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_audio_current.c.o
+[11/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_bind.c.o
+[12/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_times.c.o
+[13/405] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_ui.c.o
+[14/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_timer.c.o
+[15/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_current.c.o
+[16/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_input.c.o
+[17/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_current.c.o
+[18/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_session_pose.c.o
+[19/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_player_phase.c.o
+[20/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_car_pose.c.o
+[21/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_lifecycle.c.o
+[22/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle_current.c.o
+[23/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_arsenal.c.o
+[24/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai_current.c.o
+[25/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_weapon_current.c.o
+[26/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_current.c.o
+[27/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_input_settings.c.o
+[28/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[29/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[30/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[31/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[32/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[33/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[34/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[35/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[36/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[37/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[38/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[39/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[40/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[41/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[42/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[43/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[44/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[45/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[46/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[47/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[48/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[49/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[50/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[51/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[52/405] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[53/405] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+[54/405] Linking C static library librr_core.a
+[55/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[56/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[57/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[58/405] Linking C static library librr_input_preferences.a
+[59/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[60/405] Building C object CMakeFiles/rr_results_times_tests.dir/tests/test_results_times.c.o
+[61/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[62/405] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[63/405] Building C object CMakeFiles/rr_results_ui_tests.dir/tests/test_results_ui.c.o
+[64/405] Building C object CMakeFiles/rr_results_bind_replay_tests.dir/tests/test_results_bind_replay.c.o
+[65/405] Building C object CMakeFiles/rr_results_ui_replay_tests.dir/tests/test_results_ui_replay.c.o
+[66/405] Building C object CMakeFiles/rr_results_timer_tests.dir/tests/test_results_timer.c.o
+[67/405] Building C object CMakeFiles/rr_current_results_tests.dir/tests/test_current_results.c.o
+[68/405] Building C object CMakeFiles/rr_run_input_tests.dir/tests/test_run_input.c.o
+[69/405] Building C object CMakeFiles/rr_session_pose_tests.dir/tests/test_session_pose.c.o
+[70/405] Building C object CMakeFiles/rr_car_pose_tests.dir/tests/test_car_pose.c.o
+[71/405] Building C object CMakeFiles/rr_player_phase_tests.dir/tests/test_player_phase.c.o
+[72/405] Building C object CMakeFiles/rr_run_current_tests.dir/tests/test_run_current.c.o
+[73/405] Building C object CMakeFiles/rr_battle_pose_tests.dir/tests/test_battle_pose.c.o
+[74/405] Building C object CMakeFiles/rr_battle_current_tests.dir/tests/test_battle_current.c.o
+[75/405] Building C object CMakeFiles/rr_rival_arsenal_tests.dir/tests/test_rival_arsenal.c.o
+[76/405] Building C object CMakeFiles/rr_rival_life_tests.dir/tests/test_rival_life.c.o
+[77/405] Building C object CMakeFiles/rr_speed_current_tests.dir/tests/test_speed_current.c.o
+[78/405] Building C object CMakeFiles/rr_ai_current_tests.dir/tests/test_ai_current.c.o
+[79/405] Building C object CMakeFiles/rr_weapon_current_tests.dir/tests/test_weapon_current.c.o
+[80/405] Building C object CMakeFiles/rr_rival_current_tests.dir/tests/test_rival_current.c.o
+[81/405] Building C object CMakeFiles/rr_current_fire_tests.dir/tests/test_current_fire.c.o
+[82/405] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.o
+[83/405] Building C object CMakeFiles/rr_menu_keys_tests.dir/tests/test_menu_keys.c.o
+[84/405] Building C object CMakeFiles/rr_aim_camera_tests.dir/tests/test_aim_camera.c.o
+[85/405] Building C object CMakeFiles/rr_boost_layout_tests.dir/tests/test_boost_layout.c.o
+[86/405] Building C object CMakeFiles/rr_capture_prompt_tests.dir/tests/test_capture_prompt.c.o
+[87/405] Building C object CMakeFiles/rr_slide_tests.dir/tests/test_slide.c.o
+[88/405] Building C object CMakeFiles/rr_target_pulse_tests.dir/tests/test_target_pulse.c.o
+[89/405] Building C object CMakeFiles/rr_hud_frame_tests.dir/tests/test_hud_frame.c.o
+[90/405] Building C object CMakeFiles/rr_map_background_tests.dir/tests/test_map_background.c.o
+[91/405] Building C object CMakeFiles/rr_pack_current_tests.dir/tests/test_pack_current.c.o
+[92/405] Building C object CMakeFiles/rr_sub_fade_tests.dir/tests/test_sub_fade.c.o
+[93/405] Building C object CMakeFiles/rr_announcement_tests.dir/tests/test_announcement.c.o
+[94/405] Building C object CMakeFiles/rr_history_style_tests.dir/tests/test_history_style.c.o
+[95/405] Building C object CMakeFiles/rr_ui_layer_tests.dir/tests/test_ui_layers.c.o
+[96/405] Building C object CMakeFiles/rr_spin_indicator_tests.dir/tests/test_spin_indicator.c.o
+[97/405] Building C object CMakeFiles/rr_pause_layout_tests.dir/tests/test_pause_layout.c.o
+[98/405] Building C object CMakeFiles/rr_finish_guidance_tests.dir/tests/test_finish_guidance.c.o
+[99/405] Building C object CMakeFiles/rr_map_mark_tests.dir/tests/test_minimap_marks.c.o
+[100/405] Building C object CMakeFiles/rr_recovery_feedback_tests.dir/tests/test_recovery_feedback.c.o
+[101/405] Building C object CMakeFiles/rr_view_control_tests.dir/tests/test_view_controls.c.o
+[102/405] Building C object CMakeFiles/rr_player_control_tests.dir/tests/test_player_controls.c.o
+[103/405] Building C object CMakeFiles/rr_mouse_capture_tests.dir/tests/test_mouse_capture.c.o
+[104/405] Building C object CMakeFiles/rr_best_readout_tests.dir/tests/test_best_readouts.c.o
+[105/405] Building C object CMakeFiles/rr_boost_meter_tests.dir/tests/test_boost_meter.c.o
+[106/405] Building C object CMakeFiles/rr_circle_clip_tests.dir/tests/test_circle_clip.c.o
+[107/405] Building C object CMakeFiles/rr_nitro_call_tests.dir/tests/test_nitro_call.c.o
+[108/405] Building C object CMakeFiles/rr_spin_control_tests.dir/tests/test_spin_control.c.o
+[109/405] Building C object CMakeFiles/rr_impact_fx_tests.dir/tests/test_impact_fx.c.o
+[110/405] Building C object CMakeFiles/rr_mouse_aim_tests.dir/tests/test_mouse_aim.c.o
+[111/405] Building C object CMakeFiles/rr_hud_message_tests.dir/tests/test_hud_message.c.o
+[112/405] Building C object CMakeFiles/rr_target_guidance_tests.dir/tests/test_target_guidance.c.o
+[113/405] Building C object CMakeFiles/rr_sub_notice_tests.dir/tests/test_sub_notice.c.o
+[114/405] Building C object CMakeFiles/rr_camera_fx_tests.dir/tests/test_camera_fx.c.o
+[115/405] Building C object CMakeFiles/rr_start_cue_tests.dir/tests/test_start_cue.c.o
+[116/405] Building C object CMakeFiles/rr_race_warning_tests.dir/tests/test_race_warning.c.o
+[117/405] Building C object CMakeFiles/rr_camera_motion_tests.dir/tests/test_camera_motion.c.o
+[118/405] Building C object CMakeFiles/rr_chase_camera_tests.dir/tests/test_chase_camera.c.o
+[119/405] Building C object CMakeFiles/rr_first_person_tests.dir/tests/test_first_person.c.o
+[120/405] Building C object CMakeFiles/rr_input_mix_tests.dir/tests/test_input_mix.c.o
+[121/405] Building C object CMakeFiles/rr_pause_ui_tests.dir/tests/test_pause_ui.c.o
+[122/405] Building C object CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.o
+[123/405] Building C object CMakeFiles/rr_mouse_widget_tests.dir/tests/test_mouse_widgets.c.o
+[124/405] Building C object CMakeFiles/rr_button_hover_tests.dir/tests/test_button_hover.c.o
+[125/405] Building C object CMakeFiles/rr_pause_scene_tests.dir/tests/test_pause_scene.c.o
+[126/405] Building C object CMakeFiles/rr_button_surface_tests.dir/tests/test_button_surface.c.o
+[127/405] Building C object CMakeFiles/rr_showcase_tests.dir/tests/test_showcase.c.o
+[128/405] Building C object CMakeFiles/rr_results_name_flow_tests.dir/tests/test_results_name_flow.c.o
+[129/405] Building C object CMakeFiles/rr_results_body_flow_tests.dir/tests/test_results_body_flow.c.o
+[130/405] Building C object CMakeFiles/rr_results_list_flow_tests.dir/tests/test_results_list_flow.c.o
+[131/405] Building C object CMakeFiles/rr_results_characters_tests.dir/tests/test_results_characters.c.o
+[132/405] Building C object CMakeFiles/rr_results_advance_tests.dir/tests/test_results_advance.c.o
+[133/405] Building C object CMakeFiles/rr_results_grid_tests.dir/tests/test_results_grid.c.o
+[134/405] Building C object CMakeFiles/rr_audio_cue_tests.dir/tests/test_audio_cues.c.o
+[135/405] Building C object CMakeFiles/rr_audio_control_tests.dir/tests/test_audio_control.c.o
+[136/405] Building C object CMakeFiles/rr_results_summary_tests.dir/tests/test_results_summary.c.o
+[137/405] Building C object CMakeFiles/rr_results_layout_tests.dir/tests/test_results_layout.c.o
+[138/405] Building C object CMakeFiles/rr_results_card_tests.dir/tests/test_results_card.c.o
+[139/405] Building C object CMakeFiles/rr_ui_layout_tests.dir/tests/test_ui_layout.c.o
+[140/405] Building C object CMakeFiles/rr_race_ui_tests.dir/tests/test_race_ui.c.o
+[141/405] Building C object CMakeFiles/rr_facade_tests.dir/tests/test_facade.c.o
+[142/405] Building C object CMakeFiles/rr_mesh_loader_tests.dir/tests/test_mesh_loader.c.o
+[143/405] Building C object CMakeFiles/rr_city_batching_tests.dir/src/experimental/rr_city_batching.c.o
+[144/405] Building C object CMakeFiles/rr_city_catalog_tests.dir/tests/test_city_catalog.c.o
+[145/405] Building C object CMakeFiles/rr_city_catalog_tests.dir/src/experimental/rr_city_catalog.c.o
+[146/405] Building C object CMakeFiles/rr_city_batching_tests.dir/tests/test_city_batching.c.o
+[147/405] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_batching.c.o
+[148/405] Building C object CMakeFiles/rr_city_repacking_tests.dir/tests/test_city_repacking.c.o
+[149/405] Building C object CMakeFiles/rr_city_triangle_tests.dir/tests/test_city_triangle.c.o
+[150/405] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_triangle.c.o
+[151/405] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_repacking.c.o
+[152/405] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_batching.c.o
+[153/405] Building C object CMakeFiles/rr_city_occlusion_tests.dir/tests/test_city_occlusion.c.o
+[154/405] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_repacking.c.o
+[155/405] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_occlusion.c.o
+[156/405] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_triangle.c.o
+[157/405] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_batching.c.o
+[158/405] Building C object CMakeFiles/rr_city_witness_tests.dir/tests/test_city_witness.c.o
+[159/405] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_witness.c.o
+[160/405] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_triangle.c.o
+[161/405] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_repacking.c.o
+[162/405] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_occlusion.c.o
+[163/405] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_batching.c.o
+[164/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/tests/test_city_coverage.c.o
+[165/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_coverage.c.o
+[166/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_witness.c.o
+[167/405] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_repacking.c.o
+[168/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_triangle.c.o
+[169/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_occlusion.c.o
+[170/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_batching.c.o
+[171/405] Building C object CMakeFiles/rr_poster_tests.dir/src/experimental/rr_posters.c.o
+[172/405] Building C object CMakeFiles/rr_poster_tests.dir/tests/test_posters.c.o
+[173/405] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_repacking.c.o
+[174/405] Building C object CMakeFiles/rr_ai_tests.dir/tests/test_ai.c.o
+[175/405] Building C object CMakeFiles/rr_targeting_tests.dir/tests/test_targeting.c.o
+[176/405] Building C object CMakeFiles/rr_rival_tests.dir/tests/test_rival.c.o
+[177/405] Building C object CMakeFiles/rr_coin_tests.dir/tests/test_coins.c.o
+[178/405] Building C object CMakeFiles/rr_arsenal_tests.dir/tests/test_arsenal.c.o
+[179/405] Building C object CMakeFiles/rr_combat_tests.dir/tests/test_combat.c.o
+[180/405] Building C object CMakeFiles/rr_fire_tests.dir/tests/test_fire.c.o
+[181/405] Building C object CMakeFiles/rr_core_tests.dir/tests/test_core.c.o
+[182/405] Building C object CMakeFiles/rr_battle_tests.dir/tests/test_battle.c.o
+[183/405] Building C object CMakeFiles/rr_local_run_tests.dir/tests/test_local_run.c.o
+[184/405] Building C object CMakeFiles/rr_render_policy_tests.dir/tests/test_render_policy.c.o
+[185/405] Building C object CMakeFiles/rr_race_tests.dir/tests/test_race.c.o
+[186/405] Building C object CMakeFiles/rr_session_tests.dir/tests/test_session.c.o
+[187/405] Building C object CMakeFiles/rr_menu_policy_tests.dir/tests/test_menu_policy.c.o
+[188/405] Building C object CMakeFiles/rr_recovery_tests.dir/tests/test_recovery.c.o
+[189/405] Building C object CMakeFiles/rr_road_picker_tests.dir/tests/test_road_picker.c.o
+[190/405] Building C object CMakeFiles/rr_pack_tests.dir/tests/test_pack.c.o
+[191/405] Building C object CMakeFiles/rr_all_roads_tests.dir/tests/test_all_roads.c.o
+[192/405] Building C object CMakeFiles/rr_finish_tests.dir/tests/test_finish.c.o
+[193/405] Building C object CMakeFiles/rr_city_clearance_tests.dir/tests/test_city_clearance.c.o
+[194/405] Building C object CMakeFiles/rr_physics_tests.dir/tests/test_physics.c.o
+[195/405] Building C object CMakeFiles/rr_course_tests.dir/tests/test_course_furniture.c.o
+[196/405] Building C object CMakeFiles/rr_shared_scenery_tests.dir/tests/test_shared_scenery.c.o
+[197/405] Building C object CMakeFiles/rr_hero_asset_tests.dir/tests/test_hero_asset.c.o
+[198/405] Building C object CMakeFiles/rr_cockpit_image_tests.dir/tests/test_cockpit_images.c.o
+[199/405] Building C object CMakeFiles/rr_canonical_city_tests.dir/tests/test_canonical_city.c.o
+[200/405] Building C object CMakeFiles/rr_nose_reticle_tests.dir/tests/test_nose_reticle.c.o
+[201/405] Building C object CMakeFiles/rr_reticle_tests.dir/tests/test_reticles.c.o
+[202/405] Building C object CMakeFiles/rr_subtext_tests.dir/tests/test_subtext.c.o
+[203/405] Building C object CMakeFiles/rr_subtext_tests.dir/src/presentation/rr_subtext.c.o
+[204/405] Building C object CMakeFiles/rr_hud_readout_tests.dir/tests/test_hud_readouts.c.o
+[205/405] Building C object CMakeFiles/rr_menu_help_tests.dir/tests/test_menu_help.c.o
+[206/405] Building C object CMakeFiles/rr_menu_header_tests.dir/tests/test_menu_header.c.o
+[207/405] Building C object CMakeFiles/rr_button_text_tests.dir/tests/test_button_text.c.o
+[208/405] Building C object CMakeFiles/rr_spin_readout_tests.dir/tests/test_spin_readout.c.o
+[209/405] Building C object CMakeFiles/rr_spin_readout_tests.dir/src/presentation/rr_subtext.c.o
+[210/405] Building C object CMakeFiles/rr_arrow_art_tests.dir/tests/test_arrow_art.c.o
+[211/405] Building C object CMakeFiles/rr_results_bind_tests.dir/tests/test_results_bind.c.o
+[212/405] Building C object CMakeFiles/rr_results_bind_tests.dir/src/presentation/rr_results_text.c.o
+[213/405] Building C object CMakeFiles/rr_results_bind_tests.dir/src/presentation/rr_subtext.c.o
+[214/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_results_caption_draw.c.o
+[215/405] Building C object CMakeFiles/rr_results_caption_tests.dir/tests/test_results_caption.c.o
+[216/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_results_tracks_draw.c.o
+[217/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_results_text.c.o
+[218/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_results_bound_flow.c.o
+[219/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_results_flow_draw.c.o
+[220/405] Building C object CMakeFiles/rr_results_caption_tests.dir/src/presentation/rr_subtext.c.o
+[221/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/src/presentation/rr_results_tracks_draw.c.o
+[222/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/tests/test_results_tracks.c.o
+[223/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/src/presentation/rr_results_bound_flow.c.o
+[224/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/src/presentation/rr_results_flow_draw.c.o
+[225/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/src/presentation/rr_results_text.c.o
+[226/405] Building C object CMakeFiles/rr_results_bound_flow_tests.dir/tests/test_results_bound_flow.c.o
+[227/405] Building C object CMakeFiles/rr_results_tracks_tests.dir/src/presentation/rr_subtext.c.o
+[228/405] Building C object CMakeFiles/rr_results_bound_flow_tests.dir/src/presentation/rr_results_bound_flow.c.o
+[229/405] Building C object CMakeFiles/rr_results_bound_flow_tests.dir/src/presentation/rr_results_flow_draw.c.o
+[230/405] Building C object CMakeFiles/rr_results_bound_flow_tests.dir/src/presentation/rr_results_text.c.o
+[231/405] Building C object CMakeFiles/rr_results_bound_flow_tests.dir/src/presentation/rr_subtext.c.o
+[232/405] Building C object CMakeFiles/rr_results_flow_draw_tests.dir/src/presentation/rr_results_flow_draw.c.o
+[233/405] Building C object CMakeFiles/rr_results_flow_draw_tests.dir/tests/test_results_flow_draw.c.o
+[234/405] Building C object CMakeFiles/rr_results_flow_draw_tests.dir/src/presentation/rr_results_text.c.o
+[235/405] Building C object CMakeFiles/rr_results_flow_draw_tests.dir/src/presentation/rr_subtext.c.o
+[236/405] Building C object CMakeFiles/rr_results_columns_draw_tests.dir/tests/test_results_columns_draw.c.o
+[237/405] Building C object CMakeFiles/rr_results_columns_draw_tests.dir/src/presentation/rr_results_art.c.o
+[238/405] Building C object CMakeFiles/rr_results_columns_draw_tests.dir/src/presentation/rr_results_columns.c.o
+[239/405] Building C object CMakeFiles/rr_results_columns_draw_tests.dir/src/presentation/rr_results_text.c.o
+[240/405] Building C object CMakeFiles/rr_results_columns_draw_tests.dir/src/presentation/rr_subtext.c.o
+[241/405] Building C object CMakeFiles/rr_results_columns_tests.dir/src/presentation/rr_results_columns.c.o
+[242/405] Building C object CMakeFiles/rr_results_columns_tests.dir/tests/test_results_columns.c.o
+[243/405] Building C object CMakeFiles/rr_results_columns_tests.dir/src/presentation/rr_results_text.c.o
+[244/405] Building C object CMakeFiles/rr_results_columns_tests.dir/src/presentation/rr_subtext.c.o
+[245/405] Building C object CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_results_text.c.o
+[246/405] Building C object CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o
+[247/405] Building C object CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_subtext.c.o
+[248/405] Building C object CMakeFiles/rr_results_times_draw_tests.dir/tests/test_results_times_draw.c.o
+[249/405] Building C object CMakeFiles/rr_results_times_draw_tests.dir/src/presentation/rr_results_times_draw.c.o
+[250/405] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.o
+[251/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_caption_draw.c.o
+[252/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_tracks_draw.c.o
+[253/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_bound_flow.c.o
+[254/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_flow_draw.c.o
+[255/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_columns.c.o
+[256/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_text.c.o
+[257/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_times_draw.c.o
+[258/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_art.c.o
+[259/405] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[260/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_subtext.c.o
+[261/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[262/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.o
+[263/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_arrow_art.c.o
+[264/405] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_cockpit.c.o
+[265/405] Building C object CMakeFiles/rr_pod_transform_tests.dir/tests/test_pods.c.o
+[266/405] Building C object CMakeFiles/rr_render_pose_tests.dir/tests/test_render_pose.c.o
+[267/405] Linking C static library raylib\raylib\libraylib.a
+[268/405] Linking C executable rr_results_times_tests.js
+[269/405] Linking C executable rr_results_ui_tests.js
+[270/405] Linking C executable rr_results_bind_replay_tests.js
+[271/405] Linking C executable rr_results_ui_replay_tests.js
+[272/405] Linking C executable rr_results_timer_tests.js
+[273/405] Linking C executable rr_current_results_tests.js
+[274/405] Linking C executable rr_session_pose_tests.js
+[275/405] Linking C executable rr_run_input_tests.js
+[276/405] Linking C executable rr_run_current_tests.js
+[277/405] Linking C executable rr_player_phase_tests.js
+[278/405] Linking C executable rr_car_pose_tests.js
+[279/405] Linking C executable rr_rival_arsenal_tests.js
+[280/405] Linking C executable rr_battle_pose_tests.js
+[281/405] Linking C executable rr_battle_current_tests.js
+[282/405] Linking C executable rr_ai_current_tests.js
+[283/405] Linking C executable rr_speed_current_tests.js
+[284/405] Linking C executable rr_rival_life_tests.js
+[285/405] Linking C executable rr_pack_current_tests.js
+[286/405] Linking C executable rr_weapon_current_tests.js
+[287/405] Linking C executable rr_input_preferences_tests.js
+[288/405] Linking C executable rr_current_fire_tests.js
+[289/405] Linking C executable rr_rival_current_tests.js
+[290/405] Linking C executable rr_menu_keys_tests.js
+[291/405] Linking C executable rr_aim_camera_tests.js
+[292/405] Linking C executable rr_boost_layout_tests.js
+[293/405] Linking C executable rr_slide_tests.js
+[294/405] Linking C executable rr_map_background_tests.js
+[295/405] Linking C executable rr_capture_prompt_tests.js
+[296/405] Linking C executable rr_target_pulse_tests.js
+[297/405] Linking C executable rr_hud_frame_tests.js
+[298/405] Linking C executable rr_spin_indicator_tests.js
+[299/405] Linking C executable rr_history_style_tests.js
+[300/405] Linking C executable rr_sub_fade_tests.js
+[301/405] Linking C executable rr_announcement_tests.js
+[302/405] Linking C executable rr_pause_layout_tests.js
+[303/405] Linking C executable rr_ui_layer_tests.js
+[304/405] Linking C executable rr_recovery_feedback_tests.js
+[305/405] Linking C executable rr_finish_guidance_tests.js
+[306/405] Linking C executable rr_map_mark_tests.js
+[307/405] Linking C executable rr_view_control_tests.js
+[308/405] Linking C executable rr_best_readout_tests.js
+[309/405] Linking C executable rr_player_control_tests.js
+[310/405] Linking C executable rr_mouse_capture_tests.js
+[311/405] Linking C executable rr_nitro_call_tests.js
+[312/405] Linking C executable rr_circle_clip_tests.js
+[313/405] Linking C executable rr_boost_meter_tests.js
+[314/405] Linking C executable rr_hud_message_tests.js
+[315/405] Linking C executable rr_mouse_aim_tests.js
+[316/405] Linking C executable rr_impact_fx_tests.js
+[317/405] Linking C executable rr_spin_control_tests.js
+[318/405] Linking C executable rr_sub_notice_tests.js
+[319/405] Linking C executable rr_target_guidance_tests.js
+[320/405] Linking C executable rr_camera_fx_tests.js
+[321/405] Linking C executable rr_start_cue_tests.js
+[322/405] Linking C executable rr_chase_camera_tests.js
+[323/405] Linking C executable rr_race_warning_tests.js
+[324/405] Linking C executable rr_first_person_tests.js
+[325/405] Linking C executable rr_camera_motion_tests.js
+[326/405] Linking C executable rr_mouse_widget_tests.js
+[327/405] Linking C executable rr_pause_ui_tests.js
+[328/405] Linking C executable rr_cockpit_tests.js
+[329/405] Linking C executable rr_input_mix_tests.js
+[330/405] Linking C executable rr_button_hover_tests.js
+[331/405] Linking C executable rr_showcase_tests.js
+[332/405] Linking C executable rr_pause_scene_tests.js
+[333/405] Linking C executable rr_button_surface_tests.js
+[334/405] Linking C executable rr_results_body_flow_tests.js
+[335/405] Linking C executable rr_results_list_flow_tests.js
+[336/405] Linking C executable rr_results_name_flow_tests.js
+[337/405] Linking C executable rr_results_characters_tests.js
+[338/405] Linking C executable rr_results_grid_tests.js
+[339/405] Linking C executable rr_results_advance_tests.js
+[340/405] Linking C executable rr_audio_cue_tests.js
+[341/405] Linking C executable rr_audio_control_tests.js
+[342/405] Linking C executable rr_results_layout_tests.js
+[343/405] Linking C executable rr_results_summary_tests.js
+[344/405] Linking C executable rr_results_card_tests.js
+[345/405] Linking C executable rr_race_ui_tests.js
+[346/405] Linking C executable rr_ui_layout_tests.js
+[347/405] Linking C executable rr_facade_tests.js
+[348/405] Linking C executable rr_city_catalog_tests.js
+[349/405] Linking C executable rr_mesh_loader_tests.js
+[350/405] Linking C executable rr_city_batching_tests.js
+[351/405] Linking C executable rr_city_triangle_tests.js
+[352/405] Linking C executable rr_city_repacking_tests.js
+[353/405] Linking C executable rr_city_occlusion_tests.js
+[354/405] Linking C executable rr_poster_tests.js
+[355/405] Linking C executable rr_ai_tests.js
+[356/405] Linking C executable rr_city_witness_tests.js
+[357/405] Linking C executable rr_city_coverage_tests.js
+[358/405] Linking C executable rr_rival_tests.js
+[359/405] Linking C executable rr_targeting_tests.js
+[360/405] Linking C executable rr_coin_tests.js
+[361/405] Linking C executable rr_arsenal_tests.js
+[362/405] Linking C executable rr_fire_tests.js
+[363/405] Linking C executable rr_combat_tests.js
+[364/405] Linking C executable rr_pack_tests.js
+[365/405] Linking C executable rr_core_tests.js
+[366/405] Linking C executable rr_render_policy_tests.js
+[367/405] Linking C executable rr_battle_tests.js
+[368/405] Linking C executable rr_local_run_tests.js
+[369/405] Linking C executable rr_race_tests.js
+[370/405] Linking C executable rr_session_tests.js
+[371/405] Linking C executable rr_menu_policy_tests.js
+[372/405] Linking C executable rr_recovery_tests.js
+[373/405] Linking C executable rr_all_roads_tests.js
+[374/405] Linking C executable rr_road_picker_tests.js
+[375/405] Linking C executable rr_city_clearance_tests.js
+[376/405] Linking C executable rr_finish_tests.js
+[377/405] Linking C executable rr_physics_tests.js
+[378/405] Linking C executable rr_course_tests.js
+[379/405] Linking C executable rr_shared_scenery_tests.js
+[380/405] Linking C executable rr_hero_asset_tests.js
+[381/405] Linking C executable rr_canonical_city_tests.js
+[382/405] Linking C executable rr_nose_reticle_tests.js
+[383/405] Linking C executable rr_cockpit_image_tests.js
+[384/405] Linking C executable rr_reticle_tests.js
+[385/405] Linking C executable rr_subtext_tests.js
+[386/405] Linking C executable rr_hud_readout_tests.js
+[387/405] Linking C executable rr_menu_help_tests.js
+[388/405] Linking C executable rr_menu_header_tests.js
+[389/405] Linking C executable rr_button_text_tests.js
+[390/405] Linking C executable rr_arrow_art_tests.js
+[391/405] Linking C executable rr_results_bind_tests.js
+[392/405] Linking C executable rr_spin_readout_tests.js
+[393/405] Linking C executable rr_results_bound_flow_tests.js
+[394/405] Linking C executable rr_results_tracks_tests.js
+[395/405] Linking C executable rr_results_flow_draw_tests.js
+[396/405] Linking C executable rr_results_caption_tests.js
+[397/405] Linking C executable rr_results_columns_tests.js
+[398/405] Linking C executable rr_results_times_draw_tests.js
+[399/405] Linking C executable rr_results_columns_draw_tests.js
+[400/405] Linking C executable rr_results_rows_tests.js
+[401/405] Linking C executable rr_pod_transform_tests.js
+[402/405] Linking C executable rr_render_pose_tests.js
+[403/405] Linking C executable rr_ui_font_tests.js
+[404/405] Linking C executable bin\RoadstersRace.html
+Test project C:/Users/User/Projects/neon_c/win_app/build/results-caption-web
+        Start   1: browser_results_bound_fullpack_replay
+  1/136 Test   #1: browser_results_bound_fullpack_replay ..........   Passed    0.24 sec
+        Start   2: browser_results_times_text_layout
+  2/136 Test   #2: browser_results_times_text_layout ..............   Passed    0.19 sec
+        Start   3: browser_results_ui_fullpack_replay
+  3/136 Test   #3: browser_results_ui_fullpack_replay .............   Passed    0.24 sec
+        Start   4: browser_results_ui_frame_pump
+  4/136 Test   #4: browser_results_ui_frame_pump ..................   Passed    0.19 sec
+        Start   5: browser_current_results_timer_publication
+  5/136 Test   #5: browser_current_results_timer_publication ......   Passed    0.24 sec
+        Start   6: browser_current_full_pack_results_projection
+  6/136 Test   #6: browser_current_full_pack_results_projection ...   Passed    0.24 sec
+        Start   7: browser_current_pack_input_aim_autopilot
+  7/136 Test   #7: browser_current_pack_input_aim_autopilot .......   Passed    0.24 sec
+        Start   8: browser_current_full_pack_clock_feedback
+  8/136 Test   #8: browser_current_full_pack_clock_feedback .......   Passed    0.24 sec
+        Start   9: browser_current_full_pack_player_phase
+  9/136 Test   #9: browser_current_full_pack_player_phase .........   Passed    0.22 sec
+        Start  10: browser_player_session_pose_host
+ 10/136 Test  #10: browser_player_session_pose_host ...............   Passed    0.19 sec
+        Start  11: browser_car_model_pose_history
+ 11/136 Test  #11: browser_car_model_pose_history .................   Passed    0.19 sec
+        Start  12: browser_current_roster_native_pose_rng
+ 12/136 Test  #12: browser_current_roster_native_pose_rng .........   Passed    0.22 sec
+        Start  13: browser_current_full_roster_combat_rng
+ 13/136 Test  #13: browser_current_full_roster_combat_rng .........   Passed    0.22 sec
+        Start  14: browser_v216_rival_arsenal_fx_projectiles
+ 14/136 Test  #14: browser_v216_rival_arsenal_fx_projectiles ......   Passed    0.20 sec
+        Start  15: browser_current_pack_order_and_coin_tail
+ 15/136 Test  #15: browser_current_pack_order_and_coin_tail .......   Passed    0.27 sec
+        Start  16: browser_current_rival_gate_reset_lifecycle
+ 16/136 Test  #16: browser_current_rival_gate_reset_lifecycle .....   Passed    0.47 sec
+        Start  17: browser_current_corner_ai_sequences
+ 17/136 Test  #17: browser_current_corner_ai_sequences ............   Passed    0.26 sec
+        Start  18: browser_v215_current_flight_session
+ 18/136 Test  #18: browser_v215_current_flight_session ............   Passed    0.21 sec
+        Start  19: browser_v215_rival_bolt_sequences
+ 19/136 Test  #19: browser_v215_rival_bolt_sequences ..............   Passed    0.20 sec
+        Start  20: browser_current_player_fire_sequences
+ 20/136 Test  #20: browser_current_player_fire_sequences ..........   Passed    0.20 sec
+        Start  21: browser_v214_weapon_preparation
+ 21/136 Test  #21: browser_v214_weapon_preparation ................   Passed    0.20 sec
+        Start  22: device_input_preferences_preservation
+ 22/136 Test  #22: device_input_preferences_preservation ..........   Passed    0.20 sec
+        Start  23: browser_enabled_menu_keyboard_flow
+ 23/136 Test  #23: browser_enabled_menu_keyboard_flow .............   Passed    0.20 sec
+        Start  24: browser_mouse_aim_camera_sequence
+ 24/136 Test  #24: browser_mouse_aim_camera_sequence ..............   Passed    0.20 sec
+        Start  25: browser_v213_slide_movement
+ 25/136 Test  #25: browser_v213_slide_movement ....................   Passed    0.20 sec
+        Start  26: browser_boost_layout_visibility
+ 26/136 Test  #26: browser_boost_layout_visibility ................   Passed    0.20 sec
+        Start  27: browser_capture_prompt_gesture
+ 27/136 Test  #27: browser_capture_prompt_gesture .................   Passed    0.20 sec
+        Start  28: browser_target_pulse_layout
+ 28/136 Test  #28: browser_target_pulse_layout ....................   Passed    0.20 sec
+        Start  29: browser_hud_frame_geometry
+ 29/136 Test  #29: browser_hud_frame_geometry .....................   Passed    0.20 sec
+        Start  30: browser_minimap_background_pixels
+ 30/136 Test  #30: browser_minimap_background_pixels ..............   Passed    0.20 sec
+        Start  31: browser_submessage_fade
+ 31/136 Test  #31: browser_submessage_fade ........................   Passed    0.20 sec
+        Start  32: browser_announcement_css_timing
+ 32/136 Test  #32: browser_announcement_css_timing ................   Passed    0.20 sec
+        Start  33: browser_history_css_cascade
+ 33/136 Test  #33: browser_history_css_cascade ....................   Passed    0.20 sec
+        Start  34: browser_spin_indicator_compositing
+ 34/136 Test  #34: browser_spin_indicator_compositing .............   Passed    0.22 sec
+        Start  35: browser_pause_layout_backdrop
+ 35/136 Test  #35: browser_pause_layout_backdrop ..................   Passed    0.20 sec
+        Start  36: browser_ui_visibility_paint_order
+ 36/136 Test  #36: browser_ui_visibility_paint_order ..............   Passed    0.20 sec
+        Start  37: browser_finish_aim_target_continuity
+ 37/136 Test  #37: browser_finish_aim_target_continuity ...........   Passed    0.21 sec
+        Start  38: browser_recovery_feedback_lifecycle
+ 38/136 Test  #38: browser_recovery_feedback_lifecycle ............   Passed    0.20 sec
+        Start  39: browser_minimap_checkpoint_primitives
+ 39/136 Test  #39: browser_minimap_checkpoint_primitives ..........   Passed    0.21 sec
+        Start  40: browser_view_controls_lifecycle
+ 40/136 Test  #40: browser_view_controls_lifecycle ................   Passed    0.20 sec
+        Start  41: browser_player_reset_order
+ 41/136 Test  #41: browser_player_reset_order .....................   Passed    0.20 sec
+        Start  42: browser_best_record_readouts
+ 42/136 Test  #42: browser_best_record_readouts ...................   Passed    0.20 sec
+        Start  43: browser_mouse_capture_warmup
+ 43/136 Test  #43: browser_mouse_capture_warmup ...................   Passed    0.20 sec
+        Start  44: minimap_circle_clip_analytic
+ 44/136 Test  #44: minimap_circle_clip_analytic ...................   Passed    0.20 sec
+        Start  45: browser_boost_meter_states
+ 45/136 Test  #45: browser_boost_meter_states .....................   Passed    0.20 sec
+        Start  46: browser_nitro_call_timeline
+ 46/136 Test  #46: browser_nitro_call_timeline ....................   Passed    0.20 sec
+        Start  47: browser_native_spin_control
+ 47/136 Test  #47: browser_native_spin_control ....................   Passed    0.20 sec
+        Start  48: browser_collision_camera_shake
+ 48/136 Test  #48: browser_collision_camera_shake .................   Passed    0.20 sec
+        Start  49: browser_mouse_aim_settings
+ 49/136 Test  #49: browser_mouse_aim_settings .....................   Passed    0.20 sec
+        Start  50: browser_race_announcement_channel
+ 50/136 Test  #50: browser_race_announcement_channel ..............   Passed    0.20 sec
+        Start  51: browser_target_guidance
+ 51/136 Test  #51: browser_target_guidance ........................   Passed    0.20 sec
+        Start  52: browser_unicode_submessage_timers
+ 52/136 Test  #52: browser_unicode_submessage_timers ..............   Passed    0.20 sec
+        Start  53: browser_nitro_camera_fx
+ 53/136 Test  #53: browser_nitro_camera_fx ........................   Passed    0.20 sec
+        Start  54: browser_countdown_start_cues
+ 54/136 Test  #54: browser_countdown_start_cues ...................   Passed    0.20 sec
+        Start  55: browser_missed_gate_warning
+ 55/136 Test  #55: browser_missed_gate_warning ....................   Passed    0.20 sec
+        Start  56: browser_camera_motion_timing
+ 56/136 Test  #56: browser_camera_motion_timing ...................   Passed    0.20 sec
+        Start  57: browser_chase_camera_geometry
+ 57/136 Test  #57: browser_chase_camera_geometry ..................   Passed    0.20 sec
+        Start  58: browser_first_person_view
+ 58/136 Test  #58: browser_first_person_view ......................   Passed    0.20 sec
+        Start  59: browser_input_state_mixing
+ 59/136 Test  #59: browser_input_state_mixing .....................   Passed    0.20 sec
+        Start  60: browser_pause_guard_and_cockpit_palette
+ 60/136 Test  #60: browser_pause_guard_and_cockpit_palette ........   Passed    0.20 sec
+        Start  61: browser_cockpit_fit_and_readouts
+ 61/136 Test  #61: browser_cockpit_fit_and_readouts ...............   Passed    0.20 sec
+        Start  62: browser_mouse_widget_adapter
+ 62/136 Test  #62: browser_mouse_widget_adapter ...................   Passed    0.19 sec
+        Start  63: browser_button_hover_transitions
+ 63/136 Test  #63: browser_button_hover_transitions ...............   Passed    0.20 sec
+        Start  64: browser_button_surface_pixels
+ 64/136 Test  #64: browser_button_surface_pixels ..................   Passed    0.21 sec
+        Start  65: browser_pause_scene_policy
+ 65/136 Test  #65: browser_pause_scene_policy .....................   Passed    0.20 sec
+        Start  66: browser_pause_showcase_callbacks
+ 66/136 Test  #66: browser_pause_showcase_callbacks ...............   Passed    0.20 sec
+        Start  67: browser_results_generated_body_card_flow
+ 67/136 Test  #67: browser_results_generated_body_card_flow .......   Passed    0.20 sec
+        Start  68: browser_results_coupled_value_float_flow
+ 68/136 Test  #68: browser_results_coupled_value_float_flow .......   Passed    0.22 sec
+        Start  69: browser_results_name_flow_exclusions
+ 69/136 Test  #69: browser_results_name_flow_exclusions ...........   Passed    0.20 sec
+        Start  70: browser_results_font_run_range_positions
+ 70/136 Test  #70: browser_results_font_run_range_positions .......   Passed    0.20 sec
+        Start  71: browser_results_precise_advance_widths
+ 71/136 Test  #71: browser_results_precise_advance_widths .........   Passed    0.20 sec
+        Start  72: browser_results_measured_intrinsic_grid
+ 72/136 Test  #72: browser_results_measured_intrinsic_grid ........   Passed    0.20 sec
+        Start  73: browser_audio_cue_recipes
+ 73/136 Test  #73: browser_audio_cue_recipes ......................   Passed    0.20 sec
+        Start  74: browser_continuous_audio_control
+ 74/136 Test  #74: browser_continuous_audio_control ...............   Passed    0.20 sec
+        Start  75: browser_results_frozen_place_summary
+ 75/136 Test  #75: browser_results_frozen_place_summary ...........   Passed    0.20 sec
+        Start  76: browser_results_intrinsic_card_flow
+ 76/136 Test  #76: browser_results_intrinsic_card_flow ............   Passed    0.20 sec
+        Start  77: browser_results_card_layout
+ 77/136 Test  #77: browser_results_card_layout ....................   Passed    0.20 sec
+        Start  78: browser_race_ui_state_layout
+ 78/136 Test  #78: browser_race_ui_state_layout ...................   Passed    0.21 sec
+        Start  79: browser_ui_layout_and_hit_regions
+ 79/136 Test  #79: browser_ui_layout_and_hit_regions ..............   Passed    0.20 sec
+        Start  80: browser_facade_window_pixels
+ 80/136 Test  #80: browser_facade_window_pixels ...................   Passed    0.20 sec
+        Start  81: canonical_mesh_loader_guards
+ 81/136 Test  #81: canonical_mesh_loader_guards ...................   Passed    0.20 sec
+        Start  82: experimental_city_catalog_paging
+ 82/136 Test  #82: experimental_city_catalog_paging ...............   Passed    0.22 sec
+        Start  83: experimental_exact_city_batching
+ 83/136 Test  #83: experimental_exact_city_batching ...............   Passed    0.34 sec
+        Start  84: experimental_material_repacking
+ 84/136 Test  #84: experimental_material_repacking ................   Passed    0.98 sec
+        Start  85: experimental_triangle_visibility
+ 85/136 Test  #85: experimental_triangle_visibility ...............   Passed    0.91 sec
+        Start  86: experimental_conservative_city_occlusion
+ 86/136 Test  #86: experimental_conservative_city_occlusion .......   Passed   13.56 sec
+        Start  87: experimental_city_visibility_witness
+ 87/136 Test  #87: experimental_city_visibility_witness ...........   Passed   13.79 sec
+        Start  88: experimental_city_blocker_coverage
+ 88/136 Test  #88: experimental_city_blocker_coverage .............   Passed   26.64 sec
+        Start  89: experimental_browser_poster_plan
+ 89/136 Test  #89: experimental_browser_poster_plan ...............   Passed    0.19 sec
+        Start  90: browser_ai_controller
+ 90/136 Test  #90: browser_ai_controller ..........................   Passed    0.21 sec
+        Start  91: browser_rival_contacts_lifecycle
+ 91/136 Test  #91: browser_rival_contacts_lifecycle ...............   Passed    0.44 sec
+        Start  92: browser_offline_coin_rules
+ 92/136 Test  #92: browser_offline_coin_rules .....................   Passed    0.26 sec
+        Start  93: browser_local_pack_ordering
+ 93/136 Test  #93: browser_local_pack_ordering ....................   Passed    0.24 sec
+        Start  94: browser_targeting_and_late_coin_phase
+ 94/136 Test  #94: browser_targeting_and_late_coin_phase ..........   Passed    0.18 sec
+        Start  95: browser_player_arsenal_rules
+ 95/136 Test  #95: browser_player_arsenal_rules ...................   Passed    0.18 sec
+        Start  96: browser_player_combat_rules
+ 96/136 Test  #96: browser_player_combat_rules ....................   Passed    0.19 sec
+        Start  97: browser_fire_dispatch_rng
+ 97/136 Test  #97: browser_fire_dispatch_rng ......................   Passed    0.19 sec
+        Start  98: browser_local_pack_combat_rng
+ 98/136 Test  #98: browser_local_pack_combat_rng ..................   Passed    0.20 sec
+        Start  99: browser_full_local_player_ticks
+ 99/136 Test  #99: browser_full_local_player_ticks ................   Passed    0.20 sec
+        Start 100: browser_flight_and_skyline_parity
+100/136 Test #100: browser_flight_and_skyline_parity ..............   Passed    0.19 sec
+        Start 101: bounded_rendering_policy
+101/136 Test #101: bounded_rendering_policy .......................   Passed    0.18 sec
+        Start 102: current_browser_race_rules
+102/136 Test #102: current_browser_race_rules .....................   Passed    0.18 sec
+        Start 103: race_session_lifecycle
+103/136 Test #103: race_session_lifecycle .........................   Passed    0.20 sec
+        Start 104: menu_activation_policy
+104/136 Test #104: menu_activation_policy .........................   Passed    0.18 sec
+        Start 105: browser_route_recovery
+105/136 Test #105: browser_route_recovery .........................   Passed    0.18 sec
+        Start 106: all_browser_road_geometry
+106/136 Test #106: all_browser_road_geometry ......................   Passed    0.19 sec
+        Start 107: browser_road_picker
+107/136 Test #107: browser_road_picker ............................   Passed    0.21 sec
+        Start 108: browser_city_clearance
+108/136 Test #108: browser_city_clearance .........................   Passed    0.23 sec
+        Start 109: browser_finish_results
+109/136 Test #109: browser_finish_results .........................   Passed    0.32 sec
+        Start 110: browser_collision_primitives
+110/136 Test #110: browser_collision_primitives ...................   Passed    0.21 sec
+        Start 111: browser_course_furniture
+111/136 Test #111: browser_course_furniture .......................   Passed    0.20 sec
+        Start 112: browser_shared_scenery
+112/136 Test #112: browser_shared_scenery .........................   Passed    0.20 sec
+        Start 113: browser_hero_asset
+113/136 Test #113: browser_hero_asset .............................   Passed    0.19 sec
+        Start 114: browser_canonical_city_core
+114/136 Test #114: browser_canonical_city_core ....................   Passed    0.21 sec
+        Start 115: browser_cockpit_cpu_png_decode
+115/136 Test #115: browser_cockpit_cpu_png_decode .................   Passed    0.23 sec
+        Start 116: browser_one_ring_nose_reticle
+116/136 Test #116: browser_one_ring_nose_reticle ..................   Passed    0.18 sec
+        Start 117: browser_reticle_projection_visibility
+117/136 Test #117: browser_reticle_projection_visibility ..........   Passed    0.20 sec
+        Start 118: browser_fallback_glyph_cpu_decode_layout
+118/136 Test #118: browser_fallback_glyph_cpu_decode_layout .......   Passed    0.20 sec
+        Start 119: browser_hud_readout_font_metrics
+119/136 Test #119: browser_hud_readout_font_metrics ...............   Passed    0.20 sec
+        Start 120: browser_menu_help_keycaps
+120/136 Test #120: browser_menu_help_keycaps ......................   Passed    0.20 sec
+        Start 121: browser_menu_header_geometry
+121/136 Test #121: browser_menu_header_geometry ...................   Passed    0.20 sec
+        Start 122: browser_button_typography
+122/136 Test #122: browser_button_typography ......................   Passed    0.20 sec
+        Start 123: browser_spin_readout_typography
+123/136 Test #123: browser_spin_readout_typography ................   Passed    0.20 sec
+        Start 124: browser_edge_arrow_asset_layout
+124/136 Test #124: browser_edge_arrow_asset_layout ................   Passed    0.21 sec
+        Start 125: browser_results_bound_identity_rows
+125/136 Test #125: browser_results_bound_identity_rows ............   Passed    0.21 sec
+        Start 126: browser_results_canonical_caption_height
+126/136 Test #126: browser_results_canonical_caption_height .......   Passed    0.22 sec
+        Start 127: browser_results_computed_source_tracks
+127/136 Test #127: browser_results_computed_source_tracks .........   Passed    0.23 sec
+        Start 128: browser_results_frozen_bound_flow_drawing
+128/136 Test #128: browser_results_frozen_bound_flow_drawing ......   Passed    0.22 sec
+        Start 129: browser_results_flow_native_drawing
+129/136 Test #129: browser_results_flow_native_drawing ............   Passed    0.21 sec
+        Start 130: browser_results_native_columns_commands
+130/136 Test #130: browser_results_native_columns_commands ........   Passed    0.21 sec
+        Start 131: browser_results_complete_columns_preflight
+131/136 Test #131: browser_results_complete_columns_preflight .....   Passed    0.22 sec
+        Start 132: browser_results_mixed_text_rows
+132/136 Test #132: browser_results_mixed_text_rows ................   Passed    0.23 sec
+        Start 133: browser_results_times_native_commands
+133/136 Test #133: browser_results_times_native_commands ..........   Passed    0.21 sec
+        Start 134: browser_ui_font_cpu_atlas
+134/136 Test #134: browser_ui_font_cpu_atlas ......................   Passed    0.21 sec
+        Start 135: browser_car_render_matrix_conversion
+135/136 Test #135: browser_car_render_matrix_conversion ...........   Passed    0.20 sec
+        Start 136: browser_roadster_pod_transforms
+136/136 Test #136: browser_roadster_pod_transforms ................   Passed    0.19 sec
+
+100% tests passed out of 136
+
+Total Test time (real) =  83.60 sec

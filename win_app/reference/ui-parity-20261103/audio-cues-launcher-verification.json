@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "a1e46643e432c3b227a84483063e9412fc24109dd5e05b2ba1ed5b471bc7e565",
+  "target": {
+    "path": "build/audio-cues-native/bin/RoadstersRace.exe",
+    "sha256": "cbe39b13997fd65b8b617b3bc192fb3bc2bde503137a5ee68e2f4503a2698867"
+  },
+  "static_only": true,
+  "executed": false
+}

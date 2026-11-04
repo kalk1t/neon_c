@@ -1,0 +1,6 @@
+{
+  "initial_native": "138/139 passed; original1440-frame simulation oracle passed; integration coverage assertion failed because no results callbacks became due.",
+  "initial_web": "Same138/139 result; zero presentation failures/lookups confirmed the virtual UI window never reached a due callback.",
+  "correction": "Add an explicit virtual UI-only frame2.001s after each finish; offset future UI clock to stay monotonic. Assert car/run/input/RNG unchanged during delayed publication, then retry without replay. Core tick sequence/source fixtures/runtime boundary unchanged.",
+  "preserved": "Both initial logs/LastTest and original integration test source retained."
+}

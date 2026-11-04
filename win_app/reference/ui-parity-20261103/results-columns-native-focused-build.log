@@ -1,0 +1,12 @@
+[ 92%] Built target rr_core
+[ 92%] Building C object CMakeFiles/rr_results_columns_tests.dir/tests/test_results_columns.c.obj
+test_results_columns.c
+[ 92%] Linking C executable rr_results_columns_tests.exe
+[100%] Built target rr_results_columns_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/results-columns-native
+    Start 117: browser_results_complete_columns_preflight
+1/1 Test #117: browser_results_complete_columns_preflight ...   Passed    0.03 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.05 sec

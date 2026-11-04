@@ -1,0 +1,9 @@
+{
+  "reason": "MSVC C4756 after inlining constant adversarial FLT_MAX inputs reported overflow in unreachable cast beyond validated guard. Only fixture inputs changed to volatile runtime values so real overflow rejection executes; no warning suppression or runtime implementation change.",
+  "initial_native": "Build failed while compiling new CPU test; no native tests ran in initial attempt.",
+  "initial_web": "127/127 CPU tests passed before fixture volatility change.",
+  "runtime_headers_unchanged": {
+    "src/presentation/rr_results_grid.h": "d5b609add6cb0c2ce0daf905f161b3199707834e8e715e407131ad3062285901",
+    "src/presentation/rr_results_card.h": "cb55309cbb3cf64d1a0f01df66d3a01079e242c164ac031012a927028f4da980"
+  }
+}

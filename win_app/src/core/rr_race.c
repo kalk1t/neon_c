@@ -7,8 +7,8 @@ void rr_race_reset(RRRace *race, RRRaceMode mode, RRVec3 spawn, double yaw)
     race->safe_position=spawn;race->safe_yaw=yaw;
 }
 
-unsigned rr_race_step(RRRace *race,const RRGate *gates,int count,
-                      RRCar *car,RRVec3 previous,double dt,double race_time)
+static unsigned step(RRRace *race,const RRGate *gates,int count,
+                      RRCar *car,RRVec3 previous,double dt,double race_time,double gate_radius)
 {
     unsigned events=RR_RACE_NONE;
     if(!race->finished)race->lap_time+=dt;
@@ -18,7 +18,7 @@ unsigned rr_race_step(RRRace *race,const RRGate *gates,int count,
         double a=rr_dot(rr_sub(previous,gate->pos),gate->forward);
         double b=rr_dot(rr_sub(car->pos,gate->pos),gate->forward);
         RRVec3 radial=rr_sub(rr_sub(car->pos,gate->pos),rr_scale(gate->forward,b));
-        if(a<0 && b>=0 && rr_length(radial)<15){
+        if(a<0 && b>=0 && rr_length(radial)<gate_radius){
             race->next_checkpoint++;
             race->safe_position=rr_add(gate->pos,rr_scale(gate->forward,12));
             race->safe_yaw=gate->yaw;
@@ -40,3 +40,6 @@ unsigned rr_race_step(RRRace *race,const RRGate *gates,int count,
     }
     return events;
 }
+
+unsigned rr_race_step(RRRace *r,const RRGate *g,int n,RRCar *c,RRVec3 previous,double dt,double time){return step(r,g,n,c,previous,dt,time,15);}
+unsigned rr_race_step_rival_current(RRRace *r,const RRGate *g,int n,RRCar *c,RRVec3 previous,double dt,double time){return step(r,g,n,c,previous,dt,time,45);}

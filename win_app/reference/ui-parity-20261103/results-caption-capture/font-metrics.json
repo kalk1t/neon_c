@@ -1,0 +1,626 @@
+{
+  "fonts": [
+    {
+      "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+      "em": 1000,
+      "ascent": 1011,
+      "descent": 243,
+      "rounded_ascent_12": 12,
+      "rounded_descent_12": 3
+    },
+    {
+      "path": "C:\\Windows\\Fonts\\ariblk.ttf",
+      "sha256": "10df702864b1f89cb29ba0d6b97c04228338d16807e13e8d8c74b91aba5e5f23",
+      "em": 2048,
+      "ascent": 2254,
+      "descent": 634,
+      "rounded_ascent_12": 13,
+      "rounded_descent_12": 4
+    }
+  ],
+  "observations": [
+    {
+      "fixture": "solo-3",
+      "scale": 1,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 1,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 1,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 1,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 1,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 1,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "bottom",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 2,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 2,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 2,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 2,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 2,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 2,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "bottom",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 3,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 3,
+      "offset": "top",
+      "count": 1,
+      "rank": 1,
+      "text": "COIN RACE 1st",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 2,
+      "text": "COIN RACE 2nd \u00b7 BONUS +8",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 3,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 3,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 3,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 3,
+      "offset": "top",
+      "count": 3,
+      "rank": 3,
+      "text": "COIN RACE 3rd \u00b7 BONUS +4",
+      "observed": 17,
+      "predicted": 17
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "top",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "bottom",
+      "count": 11,
+      "rank": 6,
+      "text": "COIN RACE 6th",
+      "observed": 15,
+      "predicted": 15
+    }
+  ],
+  "mismatches": 0,
+  "scope": "Bounded measured Windows-source normal-line model. Hhea and Windows ascender/descent metadata agree; nearest integer extents union. No font binary/outline copy, browser/native launch, glyph raster or general engine/font claim."
+}

@@ -1,0 +1,412 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\offline-bests-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES
+-- Performing Test COMPILER_HAS_THOSE_TOGGLES - Success
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC
+-- Performing Test RAYLIB_ATOMICS_WITHOUT_LIBATOMIC - Success
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (10.1s)
+-- Generating done (0.3s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/offline-bests-web
+[0/2] Re-checking globbed directories...
+[1/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_slots.c.o
+[2/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_caption.c.o
+[3/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_tracks.c.o
+[4/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_label.c.o
+[5/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_body_flow.c.o
+[6/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_list_flow.c.o
+[7/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_advance.c.o
+[8/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_name_flow.c.o
+[9/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_audio_current.c.o
+[10/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_audio_cues.c.o
+[11/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_summary.c.o
+[12/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_bind.c.o
+[13/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_ui.c.o
+[14/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_timer.c.o
+[15/445] Building C object CMakeFiles/rr_core.dir/src/presentation/rr_results_times.c.o
+[16/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_results_current.c.o
+[17/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_input.c.o
+[18/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_run_current.c.o
+[19/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_session_pose.c.o
+[20/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_player_phase.c.o
+[21/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_car_pose.c.o
+[22/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle_current.c.o
+[23/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_lifecycle.c.o
+[24/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_arsenal.c.o
+[25/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai_current.c.o
+[26/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival_current.c.o
+[27/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_weapon_current.c.o
+[28/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_input_settings.c.o
+[29/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_local_run.c.o
+[30/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_battle.c.o
+[31/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_fire.c.o
+[32/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_combat.c.o
+[33/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_arsenal.c.o
+[34/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_targeting.c.o
+[35/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_coins.c.o
+[36/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_pack.c.o
+[37/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_rival.c.o
+[38/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_ai.c.o
+[39/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_flight.c.o
+[40/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_track.c.o
+[41/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_race.c.o
+[42/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_session.c.o
+[43/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_recovery.c.o
+[44/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_road_picker.c.o
+[45/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_city_plan.c.o
+[46/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_corridor.c.o
+[47/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_finish.c.o
+[48/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_physics.c.o
+[49/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_world_plan.c.o
+[50/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_course_plan.c.o
+[51/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_shared_scenery.c.o
+[52/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_canonical_city.c.o
+[53/445] Building C object CMakeFiles/rr_core.dir/src/core/rr_facade.c.o
+[54/445] Building C object CMakeFiles/rr_input_preferences.dir/src/platform/rr_input_preferences.c.o
+[55/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/rshapes.c.o
+[56/445] Linking C static library librr_core.a
+[57/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/rcore.c.o
+[58/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtext.c.o
+[59/445] Linking C static library librr_input_preferences.a
+[60/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/rtextures.c.o
+[61/445] Building C object CMakeFiles/rr_results_times_tests.dir/tests/test_results_times.c.o
+[62/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/rmodels.c.o
+[63/445] Building C object raylib/raylib/CMakeFiles/raylib.dir/raudio.c.o
+In file included from C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/raudio.c:214:
+C:/Users/User/Projects/neon_c/win_app/third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src\external/stb_vorbis.c:1404:75: warning: pointer comparison always evaluates to false [-Wtautological-compare]
+ 1404 |       if (f->stream_start + loc >= f->stream_end || f->stream_start + loc < f->stream_start) {
+      |                                                                           ^
+1 warning generated.
+[64/445] Building C object CMakeFiles/rr_results_ui_tests.dir/tests/test_results_ui.c.o
+[65/445] Building C object CMakeFiles/rr_results_bind_replay_tests.dir/tests/test_results_bind_replay.c.o
+[66/445] Building C object CMakeFiles/rr_results_ui_replay_tests.dir/tests/test_results_ui_replay.c.o
+[67/445] Building C object CMakeFiles/rr_results_timer_tests.dir/tests/test_results_timer.c.o
+[68/445] Building C object CMakeFiles/rr_current_results_tests.dir/tests/test_current_results.c.o
+[69/445] Building C object CMakeFiles/rr_run_input_tests.dir/tests/test_run_input.c.o
+[70/445] Building C object CMakeFiles/rr_session_pose_tests.dir/tests/test_session_pose.c.o
+[71/445] Building C object CMakeFiles/rr_car_pose_tests.dir/tests/test_car_pose.c.o
+[72/445] Building C object CMakeFiles/rr_run_current_tests.dir/tests/test_run_current.c.o
+[73/445] Building C object CMakeFiles/rr_player_phase_tests.dir/tests/test_player_phase.c.o
+[74/445] Building C object CMakeFiles/rr_battle_pose_tests.dir/tests/test_battle_pose.c.o
+[75/445] Building C object CMakeFiles/rr_battle_current_tests.dir/tests/test_battle_current.c.o
+[76/445] Building C object CMakeFiles/rr_rival_arsenal_tests.dir/tests/test_rival_arsenal.c.o
+[77/445] Building C object CMakeFiles/rr_rival_life_tests.dir/tests/test_rival_life.c.o
+[78/445] Building C object CMakeFiles/rr_ai_current_tests.dir/tests/test_ai_current.c.o
+[79/445] Building C object CMakeFiles/rr_speed_current_tests.dir/tests/test_speed_current.c.o
+[80/445] Building C object CMakeFiles/rr_rival_current_tests.dir/tests/test_rival_current.c.o
+[81/445] Building C object CMakeFiles/rr_weapon_current_tests.dir/tests/test_weapon_current.c.o
+[82/445] Building C object CMakeFiles/rr_current_fire_tests.dir/tests/test_current_fire.c.o
+[83/445] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.o
+[84/445] Building C object CMakeFiles/rr_offline_best_tests.dir/tests/test_offline_best.c.o
+FAILED: [code=1] CMakeFiles/rr_offline_best_tests.dir/tests/test_offline_best.c.o 
+C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe  -IC:/Users/User/Projects/neon_c/win_app/src/platform -IC:/Users/User/Projects/neon_c/win_app/src/core -O3 -DNDEBUG -std=gnu17 -Wno-missing-field-initializers -MD -MT CMakeFiles/rr_offline_best_tests.dir/tests/test_offline_best.c.o -MF CMakeFiles\rr_offline_best_tests.dir\tests\test_offline_best.c.o.d -o CMakeFiles/rr_offline_best_tests.dir/tests/test_offline_best.c.o -c C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:153: error: call to undeclared function 'setItem'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                         ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:161: error: use of undeclared identifier 'k'
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                 ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:163: error: use of undeclared identifier 'v'
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                   ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:165: error: expected ')'
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: note: to match this '('
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 3 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+<scratch space>:74:1: note: expanded from here
+   74 | _EM_ASM_ARG_SIGS_2
+      | ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:36: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:83:38: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   83 | #define _EM_ASM_SIG_CHAR(x) _Generic((x), \
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:238: error: call to undeclared function 'removeItem'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                                                                                              ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:249: error: use of undeclared identifier 'k'
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                                                                                                         ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:251: error: expected ')'
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                                                                                                           ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: note: to match this '('
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:83:38: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   83 | #define _EM_ASM_SIG_CHAR(x) _Generic((x), \
+      |                                      ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:273: error: expected ','
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |                                                                                                                                                                                                                                                                                 ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+   38 |  EM_ASM({globalThis.rrBestMap=new Map();globalThis.rrBestFail=false;globalThis.localStorage={getItem(k){return rrBestMap.has(k)?rrBestMap.get(k):null;},setItem(k,v){if(rrBestFail)throw Error('fixture quota');rrBestMap.set(k,String(v));},removeItem(k){rrBestMap.delete(k);}};});
+      |  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:84:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   84 |     float: 'f', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:85:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   85 |     double: 'd', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:86:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   86 |     char: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:87:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   87 |     unsigned char: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:88:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   88 |     unsigned short: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:89:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   89 |     unsigned int: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:90:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   90 |     unsigned long: LONG_CODE, \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:91:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   91 |     unsigned long long: 'j', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:92:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   92 |     signed char: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:93:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   93 |     signed short: 'i', \
+      |     ^
+C:/Users/User/Projects/neon_c/win_app/tests/test_offline_best.c:38:2: error: expected expression
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:218:76: note: expanded from macro 'EM_ASM'
+  218 | #define EM_ASM(code, ...) ((void)emscripten_asm_const_int(CODE_EXPR(#code) _EM_ASM_PREP_ARGS(__VA_ARGS__)))
+      |                                                                            ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:138:34: note: expanded from macro '_EM_ASM_PREP_ARGS'
+  138 | #define _EM_ASM_PREP_ARGS(...) , _EM_ASM_ARG_SIGS(__VA_ARGS__), ##__VA_ARGS__
+      |                                  ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:135:5: note: expanded from macro '_EM_ASM_ARG_SIGS'
+  135 |     _EM_ASM_ARG_SIGS_(_EM_ASM_COUNT_ARGS(__VA_ARGS__), ##__VA_ARGS__)
+      |     ^
+note: (skipping 4 expansions in backtrace; use -fmacro-backtrace-limit=0 to see all)
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:116:57: note: expanded from macro '_EM_ASM_ARG_SIGS_2'
+  116 | #define _EM_ASM_ARG_SIGS_2(x, ...) _EM_ASM_SIG_CHAR(x), _EM_ASM_ARG_SIGS_1(__VA_ARGS__)
+      |                                                         ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:115:36: note: expanded from macro '_EM_ASM_ARG_SIGS_1'
+  115 | #define _EM_ASM_ARG_SIGS_1(x, ...) _EM_ASM_SIG_CHAR(x),
+      |                                    ^
+C:\Users\User\Projects\neon_c\win_app\build\emscripten-cache\sysroot/include\emscripten\em_asm.h:94:5: note: expanded from macro '_EM_ASM_SIG_CHAR'
+   94 |     signed int: 'i', \
+      |     ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+[85/445] Building C object CMakeFiles/rr_overlay_keys_tests.dir/tests/test_overlay_keys.c.o
+[86/445] Building C object CMakeFiles/rr_speed_units_tests.dir/tests/test_speed_units.c.o
+[87/445] Building C object CMakeFiles/rr_pack_current_tests.dir/tests/test_pack_current.c.o
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,69 @@
+{
+  "created_utc": "2026-11-04T14:00:18.080890+00:00",
+  "reference": "car-stats-capture/car-stats-reference.json",
+  "reference_sha256": "6e870f57295d0c39c69fbd88e126688810023ad177ec634365fffa6bb42db2bc",
+  "browser_package": "0.2.16",
+  "working_source_comments": "v0.2.17",
+  "source_protocol": 11,
+  "release_or_deployment_verified": false,
+  "files": [
+    {
+      "path": "src/core/rr_flight.h",
+      "sha256": "3fd6214823b5cc1fa369135771abc88ba2d14de2572c9992a887e53c33991e61"
+    },
+    {
+      "path": "src/core/rr_flight.c",
+      "sha256": "56f032b791a8ca95926e98da4778ea04a39b642ec1f02cbe500dacca4d024b79"
+    },
+    {
+      "path": "tests/test_car_stats.c",
+      "sha256": "8a798e3b83875bbd613f3f472e08afd74809c39dcd2b000330c6ff16394b867a"
+    },
+    {
+      "path": "tests/car_stats_reference.h",
+      "sha256": "f6e51dd43cfa0ca5f08f06064c9a9842f13039443d6f2ea9be6100b8003334b8"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "51e3b0f15c3abe8dd50ca1aeb70fd289a5efe89a83ac0f4a95aead0e54ec06a3"
+    }
+  ],
+  "tests": {
+    "native": "149/149 full CPU suite passed",
+    "web": "149/149 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "frames": 7200,
+        "profiles": 3,
+        "scenarios": 30,
+        "collisions": 1231,
+        "dodges": 6,
+        "preserved_placements": 3,
+        "max_error": 3.410605131648481e-13,
+        "car_bytes": 280
+      },
+      "web": {
+        "frames": 7200,
+        "profiles": 3,
+        "scenarios": 30,
+        "collisions": 1231,
+        "dodges": 6,
+        "preserved_placements": 3,
+        "max_error": 3.410605131648481e-13,
+        "car_bytes": 280
+      }
+    }
+  },
+  "scope": "Fresh original Car.update/place/dodge and Colliders numerical traces. CPU fake model/pods/FX and no Car constructor/sync/renderer.33 numerical channels plus boosting/contact/normal per frame. Session profile propagation and legacy compatibility tested in C. No whole-scene/graphics/feel acceptance.",
+  "native_exe_sha256": "85dd855423eed99353cfe31c36fe9250127f0adc97aad2bf5c18b15c14d4d89a",
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "current_flight_profile_multipliers_integrated": true,
+  "production_selected_profile": "Roadster",
+  "combat_health_mass_resource_rules_integrated": false,
+  "production_full_pack_audio_combat_rewards_enabled": false,
+  "native_asset_files_verified": 455,
+  "predecessor_sha256": "03b5ca4a90a0e09b350c9fbaef1e71df528e14818f9342511b417dabbea38faf",
+  "graphics_executed": false,
+  "resource_note": "Static3x10double table (240bytes), one enum in RRCar; car size recorded per target. No heap/GPU upload, cap increase or player-data format change."
+}

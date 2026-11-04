@@ -1,0 +1,117 @@
+[
+  {
+    "kind": "bundled-browser-face",
+    "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-500.ttf",
+    "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458",
+    "unitsPerEm": 1000,
+    "weightClass": 500,
+    "glyphs": [
+      {
+        "codepoint": 8776,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      },
+      {
+        "codepoint": 9819,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      }
+    ]
+  },
+  {
+    "kind": "bundled-browser-face",
+    "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-700.ttf",
+    "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952",
+    "unitsPerEm": 1000,
+    "weightClass": 700,
+    "glyphs": [
+      {
+        "codepoint": 8776,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      },
+      {
+        "codepoint": 9819,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      }
+    ]
+  },
+  {
+    "kind": "bundled-browser-face",
+    "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-900.ttf",
+    "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61",
+    "unitsPerEm": 1000,
+    "weightClass": 900,
+    "glyphs": [
+      {
+        "codepoint": 8776,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      },
+      {
+        "codepoint": 9819,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      }
+    ]
+  },
+  {
+    "kind": "installed-system-face-not-copied",
+    "source": "C:/Windows/Fonts/ariblk.ttf",
+    "sha256": "10df702864b1f89cb29ba0d6b97c04228338d16807e13e8d8c74b91aba5e5f23",
+    "unitsPerEm": 2048,
+    "weightClass": 900,
+    "glyphs": [
+      {
+        "codepoint": 8776,
+        "glyphID": 167,
+        "exists": true,
+        "advanceFontUnits": 1352,
+        "advanceAt26": 17.1640625
+      },
+      {
+        "codepoint": 9819,
+        "glyphID": 0,
+        "exists": false,
+        "advanceFontUnits": null,
+        "advanceAt26": null
+      }
+    ]
+  },
+  {
+    "kind": "installed-system-face-not-copied",
+    "source": "C:/Windows/Fonts/seguisym.ttf",
+    "sha256": "a4a35dcc62cd30e1a6c97b695ecef83e59d2b149e3af834f6a49f11851d56b37",
+    "unitsPerEm": 2048,
+    "weightClass": 400,
+    "glyphs": [
+      {
+        "codepoint": 8776,
+        "glyphID": 723,
+        "exists": true,
+        "advanceFontUnits": 1445,
+        "advanceAt26": 18.3447265625
+      },
+      {
+        "codepoint": 9819,
+        "glyphID": 1482,
+        "exists": true,
+        "advanceFontUnits": 2048,
+        "advanceAt26": 26
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+#ifndef RR_AUDIO_SUBMIT_H
+#define RR_AUDIO_SUBMIT_H
+#include "rr_audio_dispatch.h"
+/* Backend audio-context seconds, independent of simulation race time. */
+typedef double (*RRAudioClockRead)(void *context);
+typedef enum RRAudioSubmitError {RR_AUDIO_SUBMIT_OK,RR_AUDIO_SUBMIT_RECIPE,RR_AUDIO_SUBMIT_RANDOM,RR_AUDIO_SUBMIT_CLOCK,RR_AUDIO_SUBMIT_DISPATCH} RRAudioSubmitError;
+typedef struct RRAudioCueSubmission {
+ RRAudioCuePlan recipe;RRAudioDispatch voices;
+ unsigned recipe_draws,total_draws,clock_reads;size_t processed_requests,failed_request;
+ RRAudioSubmitError error;bool complete;
+} RRAudioCueSubmission;
+/* Connect original cue recipe to original helper admission in source order.
+ * Blaster jitter is drawn BEFORE context/volume/voice guards. Offset RNG remains
+ * dispatcher-owned and admitted-only. Each admitted helper reads its own clock;
+ * skipped helpers do not require or call it. Mute/master volume are not guards.
+ * Random/clock are single-owner, non-reentrant and may not mutate the bank.
+ * Invalid pointers/enum/bank preserve out. Once work begins, failures publish
+ * irreversible draw/clock counts plus all reserved tokens, complete=false.
+ * Retire returned tokens explicitly; never retry/replay the entire cue/tick.
+ * Bank lifetime/ended semantics stay dispatcher-owned. No graph creation,
+ * PCM/DSP/device/thread/network/account/main activation; warmed source scope. */
+bool rr_audio_submit_cue(RRAudioVoiceBank *bank,bool context_ready,RRAudioCue cue,
+ double amount,double pan,bool flag,RRAudioOffsetRandom random,void *random_context,
+ RRAudioClockRead read_time,void *clock_context,RRAudioCueSubmission *out);
+/* RRFireCue event values are individual enum members, never a bit mask.
+ * Source aim.js maps spin to boostOn. Invalid events preserve output/bank and
+ * consume no RNG. Caller callback owns forwarding results to its backend and
+ * latching failures; do not replay the firing tick after partial submission.
+ * This does not bind or activate production combat/playback. */
+bool rr_audio_submit_arsenal(RRAudioVoiceBank *bank,bool context_ready,unsigned event,
+ RRAudioOffsetRandom random,void *random_context,RRAudioClockRead read_time,
+ void *clock_context,RRAudioCueSubmission *out);
+#endif

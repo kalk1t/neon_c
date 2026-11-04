@@ -1,0 +1,318 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\mouse-right-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/mouse-right-web
+[0/2] Re-checking globbed directories...
+[1/5] Building C object CMakeFiles/rr_mouse_right_tests.dir/tests/test_mouse_right.c.o
+[2/5] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[3/5] Linking C executable rr_mouse_right_tests.js
+[4/5] Linking C executable bin\RoadstersRace.html
+Test project C:/Users/User/Projects/neon_c/win_app/build/mouse-right-web
+        Start   1: browser_results_bound_fullpack_replay
+  1/144 Test   #1: browser_results_bound_fullpack_replay ...........   Passed    0.24 sec
+        Start   2: browser_results_times_text_layout
+  2/144 Test   #2: browser_results_times_text_layout ...............   Passed    0.19 sec
+        Start   3: browser_results_ui_fullpack_replay
+  3/144 Test   #3: browser_results_ui_fullpack_replay ..............   Passed    0.24 sec
+        Start   4: browser_results_ui_frame_pump
+  4/144 Test   #4: browser_results_ui_frame_pump ...................   Passed    0.19 sec
+        Start   5: browser_current_results_timer_publication
+  5/144 Test   #5: browser_current_results_timer_publication .......   Passed    0.24 sec
+        Start   6: browser_current_full_pack_results_projection
+  6/144 Test   #6: browser_current_full_pack_results_projection ....   Passed    0.24 sec
+        Start   7: browser_current_pack_input_aim_autopilot
+  7/144 Test   #7: browser_current_pack_input_aim_autopilot ........   Passed    0.24 sec
+        Start   8: browser_current_full_pack_clock_feedback
+  8/144 Test   #8: browser_current_full_pack_clock_feedback ........   Passed    0.24 sec
+        Start   9: browser_current_full_pack_player_phase
+  9/144 Test   #9: browser_current_full_pack_player_phase ..........   Passed    0.22 sec
+        Start  10: browser_player_session_pose_host
+ 10/144 Test  #10: browser_player_session_pose_host ................   Passed    0.19 sec
+        Start  11: browser_car_model_pose_history
+ 11/144 Test  #11: browser_car_model_pose_history ..................   Passed    0.20 sec
+        Start  12: browser_current_roster_native_pose_rng
+ 12/144 Test  #12: browser_current_roster_native_pose_rng ..........   Passed    0.22 sec
+        Start  13: browser_current_full_roster_combat_rng
+ 13/144 Test  #13: browser_current_full_roster_combat_rng ..........   Passed    0.22 sec
+        Start  14: browser_v216_rival_arsenal_fx_projectiles
+ 14/144 Test  #14: browser_v216_rival_arsenal_fx_projectiles .......   Passed    0.20 sec
+        Start  15: browser_current_pack_order_and_coin_tail
+ 15/144 Test  #15: browser_current_pack_order_and_coin_tail ........   Passed    0.26 sec
+        Start  16: browser_current_rival_gate_reset_lifecycle
+ 16/144 Test  #16: browser_current_rival_gate_reset_lifecycle ......   Passed    0.46 sec
+        Start  17: browser_current_corner_ai_sequences
+ 17/144 Test  #17: browser_current_corner_ai_sequences .............   Passed    0.23 sec
+        Start  18: browser_v215_current_flight_session
+ 18/144 Test  #18: browser_v215_current_flight_session .............   Passed    0.20 sec
+        Start  19: browser_v215_rival_bolt_sequences
+ 19/144 Test  #19: browser_v215_rival_bolt_sequences ...............   Passed    0.19 sec
+        Start  20: browser_current_player_fire_sequences
+ 20/144 Test  #20: browser_current_player_fire_sequences ...........   Passed    0.19 sec
+        Start  21: browser_v214_weapon_preparation
+ 21/144 Test  #21: browser_v214_weapon_preparation .................   Passed    0.19 sec
+        Start  22: device_input_preferences_preservation
+ 22/144 Test  #22: device_input_preferences_preservation ...........   Passed    0.19 sec
+        Start  23: offline_per_road_best_preservation
+ 23/144 Test  #23: offline_per_road_best_preservation ..............   Passed    0.19 sec
+        Start  24: browser_mouse_right_capture_lifecycle
+ 24/144 Test  #24: browser_mouse_right_capture_lifecycle ...........   Passed    0.20 sec
+        Start  25: browser_offline_overlay_keyboard_actions
+ 25/144 Test  #25: browser_offline_overlay_keyboard_actions ........   Passed    0.19 sec
+        Start  26: browser_speed_units_readout_selection
+ 26/144 Test  #26: browser_speed_units_readout_selection ...........   Passed    0.20 sec
+        Start  27: browser_enabled_menu_keyboard_flow
+ 27/144 Test  #27: browser_enabled_menu_keyboard_flow ..............   Passed    0.20 sec
+        Start  28: browser_mouse_aim_camera_sequence
+ 28/144 Test  #28: browser_mouse_aim_camera_sequence ...............   Passed    0.21 sec
+        Start  29: browser_v213_slide_movement
+ 29/144 Test  #29: browser_v213_slide_movement .....................   Passed    0.22 sec
+        Start  30: browser_boost_layout_visibility
+ 30/144 Test  #30: browser_boost_layout_visibility .................   Passed    0.21 sec
+        Start  31: browser_capture_prompt_gesture
+ 31/144 Test  #31: browser_capture_prompt_gesture ..................   Passed    0.20 sec
+        Start  32: browser_target_pulse_layout
+ 32/144 Test  #32: browser_target_pulse_layout .....................   Passed    0.20 sec
+        Start  33: browser_hud_frame_geometry
+ 33/144 Test  #33: browser_hud_frame_geometry ......................   Passed    0.21 sec
+        Start  34: browser_minimap_background_pixels
+ 34/144 Test  #34: browser_minimap_background_pixels ...............   Passed    0.20 sec
+        Start  35: browser_submessage_fade
+ 35/144 Test  #35: browser_submessage_fade .........................   Passed    0.21 sec
+        Start  36: browser_announcement_css_timing
+ 36/144 Test  #36: browser_announcement_css_timing .................   Passed    0.21 sec
+        Start  37: browser_history_css_cascade
+ 37/144 Test  #37: browser_history_css_cascade .....................   Passed    0.21 sec
+        Start  38: browser_spin_indicator_compositing
+ 38/144 Test  #38: browser_spin_indicator_compositing ..............   Passed    0.22 sec
+        Start  39: browser_pause_layout_backdrop
+ 39/144 Test  #39: browser_pause_layout_backdrop ...................   Passed    0.20 sec
+        Start  40: browser_ui_visibility_paint_order
+ 40/144 Test  #40: browser_ui_visibility_paint_order ...............   Passed    0.20 sec
+        Start  41: browser_finish_aim_target_continuity
+ 41/144 Test  #41: browser_finish_aim_target_continuity ............   Passed    0.22 sec
+        Start  42: browser_recovery_feedback_lifecycle
+ 42/144 Test  #42: browser_recovery_feedback_lifecycle .............   Passed    0.21 sec
+        Start  43: browser_minimap_checkpoint_primitives
+ 43/144 Test  #43: browser_minimap_checkpoint_primitives ...........   Passed    0.22 sec
+        Start  44: browser_view_controls_lifecycle
+ 44/144 Test  #44: browser_view_controls_lifecycle .................   Passed    0.20 sec
+        Start  45: browser_player_reset_order
+ 45/144 Test  #45: browser_player_reset_order ......................   Passed    0.20 sec
+        Start  46: browser_best_record_readouts
+ 46/144 Test  #46: browser_best_record_readouts ....................   Passed    0.21 sec
+        Start  47: browser_mouse_capture_warmup
+ 47/144 Test  #47: browser_mouse_capture_warmup ....................   Passed    0.20 sec
+        Start  48: minimap_circle_clip_analytic
+ 48/144 Test  #48: minimap_circle_clip_analytic ....................   Passed    0.20 sec
+        Start  49: browser_boost_meter_states
+ 49/144 Test  #49: browser_boost_meter_states ......................   Passed    0.20 sec
+        Start  50: browser_nitro_call_timeline
+ 50/144 Test  #50: browser_nitro_call_timeline .....................   Passed    0.20 sec
+        Start  51: browser_native_spin_control
+ 51/144 Test  #51: browser_native_spin_control .....................   Passed    0.20 sec
+        Start  52: browser_collision_camera_shake
+ 52/144 Test  #52: browser_collision_camera_shake ..................   Passed    0.20 sec
+        Start  53: browser_mouse_aim_settings
+ 53/144 Test  #53: browser_mouse_aim_settings ......................   Passed    0.20 sec
+        Start  54: browser_race_announcement_channel
+ 54/144 Test  #54: browser_race_announcement_channel ...............   Passed    0.21 sec
+        Start  55: browser_target_guidance
+ 55/144 Test  #55: browser_target_guidance .........................   Passed    0.20 sec
+        Start  56: browser_unicode_submessage_timers
+ 56/144 Test  #56: browser_unicode_submessage_timers ...............   Passed    0.20 sec
+        Start  57: browser_nitro_camera_fx
+ 57/144 Test  #57: browser_nitro_camera_fx .........................   Passed    0.20 sec
+        Start  58: browser_countdown_start_cues
+ 58/144 Test  #58: browser_countdown_start_cues ....................   Passed    0.20 sec
+        Start  59: browser_missed_gate_warning
+ 59/144 Test  #59: browser_missed_gate_warning .....................   Passed    0.20 sec
+        Start  60: browser_camera_motion_timing
+ 60/144 Test  #60: browser_camera_motion_timing ....................   Passed    0.20 sec
+        Start  61: browser_chase_camera_geometry
+ 61/144 Test  #61: browser_chase_camera_geometry ...................   Passed    0.20 sec
+        Start  62: browser_first_person_view
+ 62/144 Test  #62: browser_first_person_view .......................   Passed    0.20 sec
+        Start  63: browser_input_state_mixing
+ 63/144 Test  #63: browser_input_state_mixing ......................   Passed    0.21 sec
+        Start  64: browser_pause_guard_and_cockpit_palette
+ 64/144 Test  #64: browser_pause_guard_and_cockpit_palette .........   Passed    0.20 sec
+        Start  65: browser_cockpit_fit_and_readouts
+ 65/144 Test  #65: browser_cockpit_fit_and_readouts ................   Passed    0.20 sec
+        Start  66: browser_mouse_widget_adapter
+ 66/144 Test  #66: browser_mouse_widget_adapter ....................   Passed    0.20 sec
+        Start  67: browser_button_hover_transitions
+ 67/144 Test  #67: browser_button_hover_transitions ................   Passed    0.21 sec
+        Start  68: browser_button_surface_pixels
+ 68/144 Test  #68: browser_button_surface_pixels ...................   Passed    0.21 sec
+        Start  69: browser_pause_scene_policy
+ 69/144 Test  #69: browser_pause_scene_policy ......................   Passed    0.21 sec
+        Start  70: browser_pause_entry_camera_lifecycle
+ 70/144 Test  #70: browser_pause_entry_camera_lifecycle ............   Passed    0.22 sec
+        Start  71: browser_pause_showcase_callbacks
+ 71/144 Test  #71: browser_pause_showcase_callbacks ................   Passed    0.21 sec
+        Start  72: browser_results_generated_body_card_flow
+ 72/144 Test  #72: browser_results_generated_body_card_flow ........   Passed    0.21 sec
+        Start  73: browser_results_coupled_value_float_flow
+ 73/144 Test  #73: browser_results_coupled_value_float_flow ........   Passed    0.21 sec
+        Start  74: browser_results_name_flow_exclusions
+ 74/144 Test  #74: browser_results_name_flow_exclusions ............   Passed    0.21 sec
+        Start  75: browser_results_font_run_range_positions
+ 75/144 Test  #75: browser_results_font_run_range_positions ........   Passed    0.20 sec
+        Start  76: browser_results_precise_advance_widths
+ 76/144 Test  #76: browser_results_precise_advance_widths ..........   Passed    0.19 sec
+        Start  77: browser_results_measured_intrinsic_grid
+ 77/144 Test  #77: browser_results_measured_intrinsic_grid .........   Passed    0.19 sec
+        Start  78: browser_audio_cue_recipes
+ 78/144 Test  #78: browser_audio_cue_recipes .......................   Passed    0.19 sec
+        Start  79: browser_continuous_audio_control
+ 79/144 Test  #79: browser_continuous_audio_control ................   Passed    0.19 sec
+        Start  80: browser_results_frozen_place_summary
+ 80/144 Test  #80: browser_results_frozen_place_summary ............   Passed    0.19 sec
+        Start  81: browser_results_intrinsic_card_flow
+ 81/144 Test  #81: browser_results_intrinsic_card_flow .............   Passed    0.19 sec
+        Start  82: browser_results_card_layout
+ 82/144 Test  #82: browser_results_card_layout .....................   Passed    0.19 sec
+        Start  83: browser_race_ui_state_layout
+ 83/144 Test  #83: browser_race_ui_state_layout ....................   Passed    0.20 sec
+        Start  84: browser_ui_layout_and_hit_regions
+ 84/144 Test  #84: browser_ui_layout_and_hit_regions ...............   Passed    0.20 sec
+        Start  85: browser_facade_window_pixels
+ 85/144 Test  #85: browser_facade_window_pixels ....................   Passed    0.19 sec
+        Start  86: canonical_mesh_loader_guards
+ 86/144 Test  #86: canonical_mesh_loader_guards ....................   Passed    0.20 sec
+        Start  87: experimental_city_catalog_paging
+ 87/144 Test  #87: experimental_city_catalog_paging ................   Passed    0.22 sec
+        Start  88: experimental_exact_city_batching
+ 88/144 Test  #88: experimental_exact_city_batching ................   Passed    0.34 sec
+        Start  89: experimental_material_repacking
+ 89/144 Test  #89: experimental_material_repacking .................   Passed    0.99 sec
+        Start  90: experimental_triangle_visibility
+ 90/144 Test  #90: experimental_triangle_visibility ................   Passed    0.94 sec
+        Start  91: experimental_conservative_city_occlusion
+ 91/144 Test  #91: experimental_conservative_city_occlusion ........   Passed   12.88 sec
+        Start  92: experimental_city_visibility_witness
+ 92/144 Test  #92: experimental_city_visibility_witness ............   Passed   11.52 sec
+        Start  93: experimental_city_blocker_coverage
+ 93/144 Test  #93: experimental_city_blocker_coverage ..............   Passed   41.54 sec
+        Start  94: experimental_browser_poster_plan
+ 94/144 Test  #94: experimental_browser_poster_plan ................   Passed    0.21 sec
+        Start  95: browser_ai_controller
+ 95/144 Test  #95: browser_ai_controller ...........................   Passed    0.23 sec
+        Start  96: browser_rival_contacts_lifecycle
+ 96/144 Test  #96: browser_rival_contacts_lifecycle ................   Passed    0.47 sec
+        Start  97: browser_offline_coin_rules
+ 97/144 Test  #97: browser_offline_coin_rules ......................   Passed    0.28 sec
+        Start  98: browser_local_pack_ordering
+ 98/144 Test  #98: browser_local_pack_ordering .....................   Passed    0.26 sec
+        Start  99: browser_targeting_and_late_coin_phase
+ 99/144 Test  #99: browser_targeting_and_late_coin_phase ...........   Passed    0.20 sec
+        Start 100: browser_player_arsenal_rules
+100/144 Test #100: browser_player_arsenal_rules ....................   Passed    0.20 sec
+        Start 101: browser_player_combat_rules
+101/144 Test #101: browser_player_combat_rules .....................   Passed    0.20 sec
+        Start 102: browser_fire_dispatch_rng
+102/144 Test #102: browser_fire_dispatch_rng .......................   Passed    0.20 sec
+        Start 103: browser_local_pack_combat_rng
+103/144 Test #103: browser_local_pack_combat_rng ...................   Passed    0.22 sec
+        Start 104: browser_full_local_player_ticks
+104/144 Test #104: browser_full_local_player_ticks .................   Passed    0.21 sec
+        Start 105: browser_flight_and_skyline_parity
+105/144 Test #105: browser_flight_and_skyline_parity ...............   Passed    0.20 sec
+        Start 106: bounded_rendering_policy
+106/144 Test #106: bounded_rendering_policy ........................   Passed    0.20 sec
+        Start 107: current_browser_race_rules
+107/144 Test #107: current_browser_race_rules ......................   Passed    0.20 sec
+        Start 108: race_session_lifecycle
+108/144 Test #108: race_session_lifecycle ..........................   Passed    0.20 sec
+        Start 109: menu_activation_policy
+109/144 Test #109: menu_activation_policy ..........................   Passed    0.20 sec
+        Start 110: browser_route_recovery
+110/144 Test #110: browser_route_recovery ..........................   Passed    0.20 sec
+        Start 111: all_browser_road_geometry
+111/144 Test #111: all_browser_road_geometry .......................   Passed    0.21 sec
+        Start 112: browser_road_picker
+112/144 Test #112: browser_road_picker .............................   Passed    0.23 sec
+        Start 113: browser_city_clearance
+113/144 Test #113: browser_city_clearance ..........................   Passed    0.25 sec
+        Start 114: browser_finish_results
+114/144 Test #114: browser_finish_results ..........................   Passed    0.34 sec
+        Start 115: browser_collision_primitives
+115/144 Test #115: browser_collision_primitives ....................   Passed    0.22 sec
+        Start 116: browser_course_furniture
+116/144 Test #116: browser_course_furniture ........................   Passed    0.22 sec
+        Start 117: browser_shared_scenery
+117/144 Test #117: browser_shared_scenery ..........................   Passed    0.21 sec
+        Start 118: browser_hero_asset
+118/144 Test #118: browser_hero_asset ..............................   Passed    0.20 sec
+        Start 119: browser_canonical_city_core
+119/144 Test #119: browser_canonical_city_core .....................   Passed    0.22 sec
+        Start 120: browser_cockpit_cpu_png_decode
+120/144 Test #120: browser_cockpit_cpu_png_decode ..................   Passed    0.24 sec
+        Start 121: browser_one_ring_nose_reticle
+121/144 Test #121: browser_one_ring_nose_reticle ...................   Passed    0.20 sec
+        Start 122: browser_reticle_projection_visibility
+122/144 Test #122: browser_reticle_projection_visibility ...........   Passed    0.20 sec
+        Start 123: browser_fallback_glyph_cpu_decode_layout
+123/144 Test #123: browser_fallback_glyph_cpu_decode_layout ........   Passed    0.21 sec
+        Start 124: browser_hud_readout_font_metrics
+124/144 Test #124: browser_hud_readout_font_metrics ................   Passed    0.22 sec
+        Start 125: browser_menu_help_keycaps
+125/144 Test #125: browser_menu_help_keycaps .......................   Passed    0.21 sec
+        Start 126: browser_menu_header_geometry
+126/144 Test #126: browser_menu_header_geometry ....................   Passed    0.21 sec
+        Start 127: browser_button_typography
+127/144 Test #127: browser_button_typography .......................   Passed    0.21 sec
+        Start 128: browser_spin_readout_typography
+128/144 Test #128: browser_spin_readout_typography .................   Passed    0.21 sec
+        Start 129: browser_edge_arrow_asset_layout
+129/144 Test #129: browser_edge_arrow_asset_layout .................   Passed    0.23 sec
+        Start 130: browser_results_bound_identity_rows
+130/144 Test #130: browser_results_bound_identity_rows .............   Passed    0.22 sec
+        Start 131: browser_current_input_results_host_boundary
+131/144 Test #131: browser_current_input_results_host_boundary .....   Passed    0.27 sec
+        Start 132: browser_results_empty_frame_native_lifecycle
+132/144 Test #132: browser_results_empty_frame_native_lifecycle ....   Passed    0.22 sec
+        Start 133: browser_results_generated_empty_account_slots
+133/144 Test #133: browser_results_generated_empty_account_slots ...   Passed    0.22 sec
+        Start 134: browser_results_canonical_caption_height
+134/144 Test #134: browser_results_canonical_caption_height ........   Passed    0.22 sec
+        Start 135: browser_results_computed_source_tracks
+135/144 Test #135: browser_results_computed_source_tracks ..........   Passed    0.22 sec
+        Start 136: browser_results_frozen_bound_flow_drawing
+136/144 Test #136: browser_results_frozen_bound_flow_drawing .......   Passed    0.21 sec
+        Start 137: browser_results_flow_native_drawing
+137/144 Test #137: browser_results_flow_native_drawing .............   Passed    0.21 sec
+        Start 138: browser_results_native_columns_commands
+138/144 Test #138: browser_results_native_columns_commands .........   Passed    0.22 sec
+        Start 139: browser_results_complete_columns_preflight
+139/144 Test #139: browser_results_complete_columns_preflight ......   Passed    0.21 sec
+        Start 140: browser_results_mixed_text_rows
+140/144 Test #140: browser_results_mixed_text_rows .................   Passed    0.24 sec
+        Start 141: browser_results_times_native_commands
+141/144 Test #141: browser_results_times_native_commands ...........   Passed    0.23 sec
+        Start 142: browser_ui_font_cpu_atlas
+142/144 Test #142: browser_ui_font_cpu_atlas .......................   Passed    0.21 sec
+        Start 143: browser_car_render_matrix_conversion
+143/144 Test #143: browser_car_render_matrix_conversion ............   Passed    0.20 sec
+        Start 144: browser_roadster_pod_transforms
+144/144 Test #144: browser_roadster_pod_transforms .................   Passed    0.20 sec
+
+100% tests passed out of 144
+
+Total Test time (real) =  97.97 sec

@@ -1,5 +1,6 @@
 #ifndef RR_COCKPIT_PLAN_H
 #define RR_COCKPIT_PLAN_H
+#include "rr_speed_units.h"
 #include "rr_ui_layout.h"
 #include "rr_session.h"
 #include "rr_view_controls.h"
@@ -9,7 +10,7 @@
 typedef struct RRCKBox { double x,y,w,h; } RRCKBox;
 typedef struct RRCKLayout { RRCKBox control[2],panel[4];double degrees,pivot_x,pivot_y,font[4];int controls;bool race_column; } RRCKLayout;
 typedef struct RRCKFit { double x,y,w,h,font; } RRCKFit;
-typedef struct RRCKReadout {char speed[16],boost[16],time[32],lap[32],heat[32];const char *charge;double angle;bool hot;} RRCKReadout;
+typedef struct RRCKReadout {char speed[16],boost[16],time[32],lap[32],heat[32];const char *charge,*unit;double angle;bool hot;} RRCKReadout;
 /* v3 measured DOM styles; return packed RGBA for renderer-independent tests. */
 static inline uint32_t rr_cockpit_boost_rgba(const RRCKReadout *v)
 {return strcmp(v->charge,"empty")==0?UINT32_C(0xc4ccd7ff):UINT32_C(0xf6f9ffff);}
@@ -29,6 +30,7 @@ static inline RRUIRect rr_cockpit_box(RRCKFit fit,RRCKBox b)
 {return (RRUIRect){(float)(fit.x+b.x*fit.w),(float)(fit.y+b.y*fit.h),(float)(b.w*fit.w),(float)(b.h*fit.h)};}
 static inline void rr_cockpit_readout(RRCKReadout *out,int id,double speed,double boost,double time,double heat,bool hot,int lap,int laps,double steer)
 {
+    out->unit="KM/H";
     int kmh=(int)floor(rr_clamp(speed,0,1e6)+.5),percent=(int)floor(rr_clamp(boost,0,1)*100+.5);
     snprintf(out->speed,sizeof(out->speed),"%d",kmh);snprintf(out->boost,sizeof(out->boost),"%d%%",percent);out->charge=percent==0?"empty":percent==100?"full":"partial";
     uint64_t ticks=(uint64_t)fmax(0,floor(rr_clamp(time,0,1e12)*100));snprintf(out->time,sizeof(out->time),"%02llu:%02llu.%02llu",(unsigned long long)(ticks/6000),(unsigned long long)(ticks/100%60),(unsigned long long)(ticks%100));
@@ -36,6 +38,8 @@ static inline void rr_cockpit_readout(RRCKReadout *out,int id,double speed,doubl
     out->hot=hot;if(hot)snprintf(out->heat,sizeof(out->heat),"OVERHEAT");else if(heat>.6)snprintf(out->heat,sizeof(out->heat),"HEAT %d%%",(int)floor(heat*100+.5));else snprintf(out->heat,sizeof(out->heat),"READY");
     out->angle=floor(steer*50+.5)/50*rr_cockpit_layout(id).degrees;
 }
+static inline void rr_cockpit_speed_unit(RRCKReadout *out,double meters_per_second,RRSpeedUnit unit)
+{snprintf(out->speed,sizeof(out->speed),"%d",rr_speed_readout(meters_per_second,unit));out->unit=unit==RR_SPEED_MPH?"MPH":"KM/H";}
 static inline double rr_cockpit_steer(double previous,double target,double dt,bool playing)
 {return previous+((playing?target:0)-previous)*fmin(1,fmax(0,dt)*8);}
 static inline bool rr_cockpit_visible(bool requested,RRSessionPhase phase,double look_yaw,double look_pitch,bool ready)

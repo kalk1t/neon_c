@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "661d795634b4d2ba789ed63642e25ba20908a9784a12c86873064af73a0acc2e",
+  "target": "build/pause-pointer-native/bin/RoadstersRace.exe",
+  "target_sha256": "76964deff1d96fa397d2d905822093f7768a7f94a5e735b82f1bc1bd45df6e10",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

@@ -1,0 +1,1 @@
+Initial capture stopped before writing oracle: ReferenceError showResults is not defined, completeLap -> raceRules -> stepRacer. Added inert showResults callback beside the already inert setTimeout; no actual timer/UI/storage service executed.

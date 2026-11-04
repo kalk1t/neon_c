@@ -4,6 +4,7 @@
 #include "raylib.h"
 #include "rr_track.h"
 #include "rr_flight.h"
+#include "rr_car_pose.h"
 #include "rr_city_plan.h"
 #include "rr_course_plan.h"
 #include "rr_shared_scenery.h"
@@ -38,6 +39,8 @@ bool rr_scene_begin(RRScene *scene,Camera3D camera);
 void rr_scene_world(RRScene *scene,const RRTrack *track,const RRCourse *course,const RRSharedScenery *shared,Camera3D camera,int next_gate,double time);
 void rr_scene_car(RRScene *scene,const RRCar *car);
 void rr_scene_car_view(RRScene *scene,const RRCar *car,bool hide_body);
+/* Explicit source pose; invalid conversion returns false before drawing. */
+bool rr_scene_car_pose_view(RRScene *scene,const RRCar *car,const RRCarPose *pose,bool hide_body);
 void rr_scene_finish(RRScene *scene);
 
 #endif

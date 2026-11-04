@@ -61,7 +61,7 @@
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch/roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 10 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 11 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
@@ -95,6 +95,8 @@
 | `SPIN` | ROLL 0.55, SURGE 2, MUL 1.5, JINK 22, COOLDOWN 6 | s, s, ×, m/s, s | Spin dodge | `src/car.js:12` | code | Units [inferred] from comments |
 | Boost drain / regen | 0.32 / 0.06 | fraction / s | Boost tank | `src/car.js:666` | code | |
 | `LIVERIES` | 10 rivals, skill 1.0–0.92 | factor | Rival identity, boost eagerness (top speed no longer, since v0.2.3) | `src/ai.js:3` | code | |
+| `CAR_STATS` | roadster: all 1, hp 100, spinCD 6, missiles 3 · viper: top 1.08, accel 1.276, turn 1.12, hp 75, knock 1.3, mass 0.8, spinCD 4 · titan: top 0.94, accel 0.797, turn 0.9, hp 140, knock 0.4, stun 0.6, mass 2, missiles 4, emp 1.25 | factors, hp, s | Per shop car (v0.2.17): speed, acceleration, turning, health, knock-back, stun, bump weight, spin cooldown, seekers, EMP radius | `src/car.js` | code | Rivals use roadster; the relay's `EMP_CAR_MAX` = the biggest `emp` (`constants.test.mjs`) |
+| `EMP_CAR_MAX` | 1.25 | factor | The biggest shop-car EMP the relay allows for | `server/hits.js` | code | |
 | `RIVAL_AIM` | SPREAD 0.03 rad, CONE 35° (0.3 rad before v0.2.16), SLOWER 3, SEEKER_RANGE 600 m, SEEKER_GAP 1.5 s, DODGE 0.5, EMP_CARS 2 | | Rivals use the player's arsenal: bolt aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s); seekers on a full lock within range, at most one per gap (v0.2.16); spin-dodge chance per seeker homing on them; cars within the EMP radius to set it off | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
 | `RIVAL_SPEED` | ROAD1 120, STEP 1.02 | m/s, factor | Rival top speed `rivalTop(id) = 120 × 1.02^(id − 1)`: 120 … 141 m/s (v0.2.15) | `src/roads.js` | code | Replaced road `ai` factors |
 | `CORNER` | TURN 1.15 rad/s, GRIP 0.8, BRAKE 45 m/s², SPAN 3 samples | | Rival corner speeds and braking (v0.2.15) | `src/ai.js` | code | |

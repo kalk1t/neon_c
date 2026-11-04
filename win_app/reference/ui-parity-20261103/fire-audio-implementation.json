@@ -1,0 +1,55 @@
+{
+  "created_utc": "2026-11-04T13:52:11.078557+00:00",
+  "source_pin": "fire-audio-capture/source-pin.json",
+  "files": [
+    {
+      "path": "src/core/rr_audio_submit.h",
+      "sha256": "4902bd29a8084580bd952d3f52cba2232ef4a872da18b3e5c06b0c59d5a39f1b"
+    },
+    {
+      "path": "src/core/rr_audio_submit.c",
+      "sha256": "5bca21da64df155d329f4734ec02d9409cde81c77f8930a5b782ad6a2f5e384a"
+    },
+    {
+      "path": "tests/test_current_fire.c",
+      "sha256": "8e593d8dc2a755dcf5c96d4e857d71216b36a9c57d799531186788bd7e1f23fc"
+    },
+    {
+      "path": "tests/test_fire_audio.c",
+      "sha256": "4735439a34de016cab01e55efe0a38ea8a18a19583d6e6de4f736650f0d97fcc"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "de16682c577c9ce78f5f9bb72fc4118453f1e1066a3838cf9e4a9081227ce5ed"
+    }
+  ],
+  "tests": {
+    "native": "148/148 full CPU suite passed",
+    "web": "148/148 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "mapping_checks": 95,
+        "actual_firing_callbacks": 100,
+        "frozen_source_fire_fixture": "frames=720 models=4 restarts=8 draws=12400 flashes=64 max_shots=4 max_fx=72 shot_bytes=200 visual_bytes=56 max_error=2.2204460492503131e-16 failures=0; production inactive,no GPU/user-store/network"
+      },
+      "web": {
+        "mapping_checks": 95,
+        "actual_firing_callbacks": 100,
+        "frozen_source_fire_fixture": "frames=720 models=4 restarts=8 draws=12400 flashes=64 max_shots=4 max_fx=72 shot_bytes=192 visual_bytes=56 max_error=2.2204460492503131e-16 failures=0; production inactive,no GPU/user-store/network"
+      }
+    }
+  },
+  "oracle_scope": "Existing frozen v0.2.14 current-fire fixture reused unchanged; new no-context firing callbacks exercise actual submission API and all original RNG/projectile/FX assertions. Six mappings checked against current aim.js; ready-state commands checked against existing source-qualified submission API, not a fresh browser capture.",
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "production_audio_or_full_pack_enabled": false,
+  "graphics_or_audio_device_executed": false,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "03b5ca4a90a0e09b350c9fbaef1e71df528e14818f9342511b417dabbea38faf",
+  "previous_client_sha256": "1db34966f32701feb2a3ff5cd7c01db323140f61294eff471fe3e7022834eea9",
+  "remaining": [
+    "Per-car handling/health/mass/arsenal changes and protocol11 working-source delta not implemented. Package/docs still0.2.16; no deployment claim.",
+    "No main/production audio hook, backend graph/DSP/device/cold loading/ended-thread integration or audible acceptance.",
+    "Full-pack/combat/rewards remain inactive pending qualification; graphics launch permission remains pending."
+  ]
+}

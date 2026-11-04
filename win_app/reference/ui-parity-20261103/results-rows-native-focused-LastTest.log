@@ -1,0 +1,20 @@
+Start testing: Nov 04 01:06 Eastern Standard Time
+----------------------------------------------------------
+114/118 Testing: browser_results_mixed_text_rows
+114/118 Test: browser_results_mixed_text_rows
+Command: "C:/Users/User/Projects/neon_c/win_app/build/results-rows-native/rr_results_rows_tests.exe" "C:/Users/User/Projects/neon_c/win_app/assets/ui-theme/Orbitron-700.ttf" "C:/Users/User/Projects/neon_c/win_app/assets/ui-results-fallback"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/results-rows-native
+"browser_results_mixed_text_rows" start time: Nov 04 01:06 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [96/97]
+RESULTS_ROWS_SUMMARY boards=36 source_rows=1044 paints=19983 primary=19395 fallback=588 rgba_new=24072 rgba_with_existing=51132 ink_pixels=2510 plan_bytes=2120 row_bytes=4272 failures=0 recorded_not_rendered=true
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"browser_results_mixed_text_rows" end time: Nov 04 01:06 Eastern Standard Time
+"browser_results_mixed_text_rows" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 04 01:06 Eastern Standard Time

@@ -3,6 +3,16 @@
 #include "rr_physics.h"
 #include <string.h>
 
+static const RRCarStats profiles[]={
+ {1,1,1,100,1,1,1,6,3,1},
+ {1.08,1.276,1.12,75,1.3,1,.8,4,3,1},
+ {.94,.797,.9,140,.4,.6,2,6,4,1.25}
+};
+const RRCarStats *rr_car_stats(RRCarProfile profile){return &profiles[(unsigned)profile<=RR_PROFILE_TITAN?(unsigned)profile:0];}
+void rr_car_use_stats(RRCar *car,const char *id){
+ car->profile=id&&!strcmp(id,"viper")?RR_PROFILE_VIPER:id&&!strcmp(id,"titan")?RR_PROFILE_TITAN:RR_PROFILE_ROADSTER;
+}
+
 static void update_forward(RRCar *c)
 {
     double cp = cos(c->pitch);
@@ -50,6 +60,7 @@ static void step(RRCar *c,RRInput in,double dt,const RRWorld *world,RRCarStepRep
     c->stun=fmax(0,c->stun-dt);
     c->roll_time=fmax(0,c->roll_time-dt);
     c->surge=fmax(0,c->surge-dt);
+    const RRCarStats *stats=rr_car_stats(current?c->profile:RR_PROFILE_ROADSTER);
     double top=current?RR_CURRENT_CAR_MAX:RR_CAR_MAX;
     double sf=fmin(1,fabs(c->speed)/top);
     bool was=c->boosting;
@@ -61,14 +72,14 @@ static void step(RRCar *c,RRInput in,double dt,const RRWorld *world,RRCarStepRep
     c->sputter=fmax(0,c->sputter-dt);
     c->thrust+=(fmax(0,in.throttle)-c->thrust)*(1-exp(-8*dt));
     c->boost=rr_clamp(c->boost+(c->boosting ? -0.32 : 0.06)*dt,0,1);
-    double maximum=(c->boosting?(current?RR_CURRENT_CAR_BOOST_MAX:RR_CAR_BOOST_MAX):top)*c->max_multiplier*(c->surge>0?1.5:1);
-    double accel=(c->boosting?75:36)*(current?RR_CURRENT_CAR_SCALE*c->max_multiplier:1);
+    double maximum=(c->boosting?(current?RR_CURRENT_CAR_BOOST_MAX:RR_CAR_BOOST_MAX):top)*c->max_multiplier*stats->top*(c->surge>0?1.5:1);
+    double accel=(c->boosting?75:36)*(current?RR_CURRENT_CAR_SCALE*c->max_multiplier:1)*stats->accel;
     if(in.throttle>0) c->speed+=accel*in.throttle*dt*fmax(0,1-pow(c->speed/maximum,2));
     else {double drag=9*dt;c->speed=fabs(c->speed)<=drag?0:c->speed-drag*(c->speed>0?1:-1);}
     if(in.brake>0) c->speed-=(c->speed>0?70:14)*in.brake*dt;
     if(c->speed>maximum) c->speed-=28*dt;
     c->speed=fmax(-18,c->speed);
-    double turn=rr_lerp(1.9,1.15,sf)*(in.brake>0?1.25:1);
+    double turn=rr_lerp(1.9,1.15,sf)*(in.brake>0?1.25:1)*stats->turn;
     c->yaw-=in.steer*turn*dt*(c->speed<0&&!in.aim_steer?-1:1)*fmin(1,fabs(c->speed)/8+0.35);
     c->pitch+=(in.climb*0.62-c->pitch)*(1-exp(-3.2*dt));
     update_forward(c);

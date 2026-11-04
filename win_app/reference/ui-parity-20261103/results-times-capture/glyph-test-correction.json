@@ -1,0 +1,10 @@
+{
+  "reason": "Pre-existing U+005E circumflex is absent from all supplied Orbitron cmaps. New test incorrectly assumed all97 requested codepoints load and used a hardcoded96 removal index. Actual loaded glyphs96 include the added em dash. Test now checks exact requested set with only94 missing, and removes dash at its actual returned index. Runtime/model/renderer/font source unchanged.",
+  "runtime_hashes_unchanged": {
+    "src/presentation/rr_results_times.c": "a74938e9d8b77966222787f37134e6647725f46aeb7bcbd142c824191ec2d316",
+    "src/presentation/rr_results_times_draw.c": "dc30797575aa3f0e18d9969a1d6348684f8549f17f622c58a3f6ea3ac6e41c9a",
+    "src/presentation/rr_ui.c": "49e5724dc54f70bd6b38f2fa554099a9e9705cc1380d2888f83e68a84fb08665",
+    "src/app/main.c": "84a23ae3d587587817d3e44928affb35f8ab048b49e66f052bd01eff35bf2f0f",
+    "src/presentation/rr_ui_codepoints.h": "079107a0e6ef5dba87bb1c37f369cbf16c13a6ba863118af33a5308fa8b032a6"
+  }
+}

@@ -1,0 +1,59 @@
+Start testing: Nov 04 00:46 Eastern Standard Time
+----------------------------------------------------------
+1/117 Testing: browser_results_times_text_layout
+1/117 Test: browser_results_times_text_layout
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/results-times-web/rr_results_times_tests.js"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/results-times-web
+"browser_results_times_text_layout" start time: Nov 04 00:46 Eastern Standard Time
+Output:
+----------------------------------------------------------
+RESULTS_TIMES_SUMMARY source_cases=431 failures=0 no_graphics=true
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"browser_results_times_text_layout" end time: Nov 04 00:47 Eastern Standard Time
+"browser_results_times_text_layout" time elapsed: 00:00:00
+----------------------------------------------------------
+
+114/117 Testing: browser_results_times_native_commands
+114/117 Test: browser_results_times_native_commands
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/results-times-web/rr_results_times_draw_tests.js" "/ui-theme/Orbitron-700.ttf"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/results-times-web
+"browser_results_times_native_commands" start time: Nov 04 00:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [96/97]
+RESULTS_DRAW_SUMMARY cases=431 paint_commands=1205 glyphs=96 dash_advance=41 atlas=1024x512 rgba_bytes=2097152 failures=0 paint_recorded_not_rendered=true
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"browser_results_times_native_commands" end time: Nov 04 00:47 Eastern Standard Time
+"browser_results_times_native_commands" time elapsed: 00:00:00
+----------------------------------------------------------
+
+115/117 Testing: browser_ui_font_cpu_atlas
+115/117 Test: browser_ui_font_cpu_atlas
+Command: "C:/Users/User/Projects/neon_c/win_app/third_party/emsdk-6.0.13/emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe" "C:/Users/User/Projects/neon_c/win_app/build/results-times-web/rr_ui_font_tests.js" "/ui-theme"
+Directory: C:/Users/User/Projects/neon_c/win_app/build/results-times-web
+"browser_ui_font_cpu_atlas" start time: Nov 04 00:47 Eastern Standard Time
+Output:
+----------------------------------------------------------
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-500.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=10551323
+WARNING: FONT: Requested codepoints glyphs found: [96/97]
+Orbitron-700.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=12592751
+WARNING: FONT: Requested codepoints glyphs found: [94/95]
+Orbitron-900.ttf CPU atlas 1024x512, conservative RGBA8=2097152 bytes, glyph coverage=14122856
+Rajdhani-Medium.ttf CPU atlas 512x256, conservative RGBA8=524288 bytes, glyph coverage=1197097
+CPU font rasterization/atlas passed; RGBA8 total=6815744; no window/GPU initialized.
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"browser_ui_font_cpu_atlas" end time: Nov 04 00:47 Eastern Standard Time
+"browser_ui_font_cpu_atlas" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 04 00:47 Eastern Standard Time

@@ -5,6 +5,7 @@
 #include "roadster_meshes.h"
 #include "rr_pod_pivots.h"
 #include "rr_pod_transform.h"
+#include "rr_car_render_transform.h"
 #include "rr_render_policy.h"
 #include "rr_atmosphere.h"
 #include "rr_shared_material.h"
@@ -439,14 +440,9 @@ void rr_scene_world(RRScene *s,const RRTrack *track,const RRCourse *course,const
     EndShaderMode();
 }
 
-void rr_scene_car(RRScene *s,const RRCar *car){rr_scene_car_view(s,car,false);}
-void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
+static void draw_car_transform(RRScene *s,const RRCar *car,bool hide_body,Matrix transform)
 {
     if(!hide_body){
-    double k=1-car->roll_time/RR_SPIN_ROLL;
-    double spin=car->roll_time>0?-car->roll_direction*RR_PI*2*k*k*(3-2*k):0;
-    Matrix rotation=MatrixMultiply(MatrixMultiply(MatrixRotateZ((float)(car->roll+spin)),MatrixRotateX((float)car->pitch)),MatrixRotateY((float)car->yaw));
-    Matrix transform=MatrixMultiply(MatrixMultiply(MatrixTranslate(0,-.35f,0),rotation),MatrixTranslate((float)car->pos.x,(float)car->pos.y,(float)car->pos.z));
     if(s->car_loaded){
         for(int i=0;i<s->car.meshCount;i++)if(rr_roadster_hi_meshes[i]){
             Matrix local=MatrixIdentity();
@@ -457,8 +453,7 @@ void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
         }
     }else{
         BeginShaderMode(s->world_shader);
-        rlPushMatrix();rlTranslatef((float)car->pos.x,(float)car->pos.y,(float)car->pos.z);
-        rlRotatef((float)(car->yaw*RAD2DEG),0,1,0);rlRotatef((float)(car->pitch*RAD2DEG),1,0,0);rlRotatef((float)((car->roll+spin)*RAD2DEG),0,0,1);
+        rlPushMatrix();rlMultMatrixf(MatrixToFloat(transform));
         DrawCube((Vector3){0,-.15f,0},2.2f,.7f,5.6f,(Color){40,44,59,255});
         DrawCube((Vector3){0,.45f,.3f},1.65f,.8f,2.2f,(Color){38,101,134,255});
         for(int x=-1;x<=1;x+=2)for(int z=-1;z<=1;z+=2){
@@ -479,6 +474,23 @@ void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
         DrawCylinderEx(p,end,.22f,.02f,8,car->boosting?magenta:cyan);
     }
     EndShaderMode();
+}
+
+/* Compatibility entry point has no historical pose owner. Keep its original
+ * scalar transform; the normal player host calls the explicit pose API below. */
+void rr_scene_car(RRScene *s,const RRCar *car){rr_scene_car_view(s,car,false);}
+void rr_scene_car_view(RRScene *s,const RRCar *car,bool hide_body)
+{
+    double k=1-car->roll_time/RR_SPIN_ROLL;
+    double spin=car->roll_time>0?-car->roll_direction*RR_PI*2*k*k*(3-2*k):0;
+    Matrix rotation=MatrixMultiply(MatrixMultiply(MatrixRotateZ((float)(car->roll+spin)),MatrixRotateX((float)car->pitch)),MatrixRotateY((float)car->yaw));
+    Matrix transform=MatrixMultiply(MatrixMultiply(MatrixTranslate(0,s->car_loaded?-.35f:0,0),rotation),MatrixTranslate((float)car->pos.x,(float)car->pos.y,(float)car->pos.z));
+    draw_car_transform(s,car,hide_body,transform);
+}
+bool rr_scene_car_pose_view(RRScene *s,const RRCar *car,const RRCarPose *pose,bool hide_body)
+{
+    Matrix transform;if(!s||!car||!rr_car_pose_raylib(pose,s->car_loaded?-.35:0,&transform))return false;
+    draw_car_transform(s,car,hide_body,transform);return true;
 }
 
 void rr_scene_finish(RRScene *s)

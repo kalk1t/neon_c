@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "b646458c747ddb10914e429345425a69d37dc1123cc889f690662cb6dad4c18e",
+  "target": "build/speed-units-native/bin/RoadstersRace.exe",
+  "target_sha256": "284fe48c105dbabea969b22cd71b7373f6f8edd6977ecbafac60dc5b460b88dc",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

@@ -1,0 +1,38 @@
+{
+  "tool": "tools\\check-results-glyphs.py",
+  "sha256": "306395ccfebb6f843e7fc33bfb3b305f148dc4aab8fec924ee1681d4726b6457",
+  "cmap_glyph_indices": {
+    "Orbitron-500.ttf": {
+      "0xb7": 0,
+      "0x2014": 149,
+      "0x2248": 0,
+      "0x265b": 0
+    },
+    "Orbitron-700.ttf": {
+      "0xb7": 0,
+      "0x2014": 149,
+      "0x2248": 0,
+      "0x265b": 0
+    },
+    "Orbitron-900.ttf": {
+      "0xb7": 0,
+      "0x2014": 149,
+      "0x2248": 0,
+      "0x265b": 0
+    }
+  },
+  "fonts": [
+    {
+      "path": "assets\\ui-theme\\Orbitron-500.ttf",
+      "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458"
+    },
+    {
+      "path": "assets\\ui-theme\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    },
+    {
+      "path": "assets\\ui-theme\\Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61"
+    }
+  ]
+}

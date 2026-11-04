@@ -1,0 +1,12 @@
+[ 92%] Built target rr_core
+[ 92%] Building C object CMakeFiles/rr_results_timer_tests.dir/tests/test_results_timer.c.obj
+test_results_timer.c
+[100%] Linking C executable rr_results_timer_tests.exe
+[100%] Built target rr_results_timer_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/results-timer-native
+    Start 1: browser_current_results_timer_publication
+1/1 Test #1: browser_current_results_timer_publication ...   Passed    0.21 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.24 sec

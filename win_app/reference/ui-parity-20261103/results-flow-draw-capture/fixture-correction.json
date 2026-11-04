@@ -1,0 +1,9 @@
+{
+  "initial_results": {
+    "native": "132/133 passed, observed14526 commands exact, one adversarial assertion failed",
+    "web": "132/133 passed, observed14526 commands exact, one adversarial assertion failed"
+  },
+  "cause": "Adversarial name Pilot has nonzero primary GPOS pairs il/lo/ot; the qualified layout returns NEEDS_FLOW before the deliberately missing Z font glyph. Expected INVALID was therefore wrong for that setup.",
+  "correction": "Use verified supported ACE and Z names, assert their shaping-ready status before simulating missing Z. Runtime source and observed-source expectations unchanged.",
+  "preserved": "Both initial build and LastTest logs plus original test source are in this folder."
+}

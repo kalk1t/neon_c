@@ -1,0 +1,48 @@
+{
+  "created_utc": "2026-11-04T12:00:29.713485+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/overlay-keys-capture/source-reference.json",
+    "sha256": "6d25ad123163e9fe85de92fe4dfc9b6f91fb6e64a68408fcce47646c945f4121"
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "6b8a1a0877a92f7f0887c126cdc2fb371dad4d43e4d14df0186ff17f3c3ba747"
+    },
+    {
+      "path": "src/core/rr_overlay_keys.h",
+      "sha256": "0aa935d7a5226ce0a357c57ab9dfedf7d3f60715a9a923aba9e868813c7f5dd5"
+    },
+    {
+      "path": "tests/test_overlay_keys.c",
+      "sha256": "9a877c735a76e1bf42464b5e90663f6de3815cdb68c6d76ddbba51a3956af5f1"
+    },
+    {
+      "path": "tests/overlay_keys_reference.h",
+      "sha256": "410eec5fe422f2ac0a925a7bfe93d958845656c6f94cfee920aca98204cb9490"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "f0e6c150939e4e9f8425dad279ab7f76cdee1a426be4a01eaea1c66a70a6077c"
+    }
+  ],
+  "tests": {
+    "native": "141/141 CPU tests passed",
+    "web": "141/141 CPU tests passed",
+    "source_dispatcher": "10 actual source mode/action invocations in inert Node VM",
+    "overlay_controller": "all masks/directions, tab order, pointer/blur/reset, result default isolation,12 real solo session lifecycle cases"
+  },
+  "active_main_wired": true,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "f689f040c5494c64ba5b91baca6778fb48320f6f111b8d10b88a5518f2b5bd9f",
+  "previous_client_sha256": "f37a25b8ccc44da041e993073b7e76717e5eeadae934aef131a4e758b84eca70",
+  "graphics_executed": false,
+  "source_capture_correction": "Initial extractor stopped at a nested closing div before results buttons. Corrected section boundary; initial parser preserved; no runtime/browser source changed by correction.",
+  "remaining": [
+    "Keyboard routing compiled and CPU tested; native hardware input/focus cues/pixels/DPI remain unrun under graphics gate.",
+    "Offline native button subset only; source mailto links, browser UA tab mechanics,hidden NEXT/progression/online paths not qualified or enabled.",
+    "Legacy no-focus Enter-to-restart remains a native shortcut, now focused-window guarded.",
+    "Full-pack production activation, rewards/combat, missing caption glyph proof and renderer limits unchanged."
+  ]
+}

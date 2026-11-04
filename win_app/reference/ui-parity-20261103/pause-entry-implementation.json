@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-11-04T12:26:37.807304+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/pause-entry-capture/source-reference.json",
+    "sha256": "ca01e79c18a7288d7ea13860a1e734b766da8ff0730685d1006739ce5be62d6f"
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "fbe0fcdf73ecefb5e5bc113264069411cc51faf86100c2d25baaa0b94bddd68f"
+    },
+    {
+      "path": "src/presentation/rr_pause_ui.h",
+      "sha256": "7cc6be4aec45729dce93fac44cdfef05e8749802efe7bfa4e4a6278bf0f8ebc7"
+    },
+    {
+      "path": "tests/test_pause_entry.c",
+      "sha256": "97595005bea332ce067e4854a37bc5442cdb41439e3ac00cc683e33ac3b062ad"
+    },
+    {
+      "path": "tests/pause_entry_reference.h",
+      "sha256": "fcf521defcf2ecc3d4101612cb9f7533bee5c18e5a5d53b48b87216bfa4b4cda"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "2f52c72fe77460f5a1ba546e92995d161e484e0547094493901aa2f6407baaec"
+    }
+  ],
+  "tests": {
+    "native": "143/143 CPU tests passed",
+    "web": "143/143 CPU tests passed",
+    "camera_source_states": 720,
+    "source_pause_entries": 12,
+    "return_phases": 4,
+    "numeric_summaries": {
+      "native": {
+        "checks": 12291,
+        "max_source_error": 5.68434188608e-14,
+        "max_float_host_error": 4.8332710378e-05
+      },
+      "web": {
+        "checks": 12291,
+        "max_source_error": 5.68434188608e-14,
+        "max_float_host_error": 4.8332710378e-05
+      }
+    },
+    "extra": "Duplicate pause rejection, stale-drag cancellation, forbidden menu/error transitions and unchanged strict400ms focused resume"
+  },
+  "browser_sync": {
+    "path": "reference/ui-parity-20261103/pause-entry-capture/browser-source-sync.json",
+    "sha256": "16de86dcc1aa48dffb4fd8bff31105ca76ec18b6e2091e0d782824e4eefc5812",
+    "relevant_source_files_checked": 21,
+    "docs_techplan_files_checked": 42,
+    "new_changes": 0,
+    "older_camera_difference": "Current hash matches previously ported v0.2.13 aim-camera reference; showcase fragment also unchanged."
+  },
+  "active_main_wired": true,
+  "host_pause_call_sites": 5,
+  "main_changes_limited_to_pause_wrapper_calls": true,
+  "resume_guard_unchanged": true,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "c3238629bae12c9692fcd26840391fb3dec720bac1a94dbac9e8f6c7b6b705fb",
+  "previous_client_sha256": "971afb727cfdc860a8f095d7f19e7e7d78805ac43deec268f5d7ca41dd51e1ee",
+  "graphics_executed": false,
+  "resources": "No new assets/heap/GPU resources, scene-phase/loading or rendering-cap changes. Existing RRShowcase reused.",
+  "remaining": [
+    "Native pause/resume input delivery, camera appearance, frame-time performance and visual acceptance remain unrun under graphics approval gate.",
+    "Cold 2D startup/menu rendering safeguards retained; menu showcase remains a separate parity gap.",
+    "Full-pack production activation/rewards/combat, missing caption glyph proof and renderer/material gaps unchanged."
+  ]
+}

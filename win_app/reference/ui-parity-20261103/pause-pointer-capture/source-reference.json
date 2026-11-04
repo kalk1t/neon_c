@@ -1,0 +1,17 @@
+{
+  "version": "0.2.16",
+  "hashes": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+    "src/camera.js": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000",
+    "src/input.js": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f"
+  },
+  "states": 216,
+  "sequences": 18,
+  "buttons": [
+    "left",
+    "right",
+    "middle"
+  ],
+  "scope": "Actual pause pointer callbacks before camera step, initialized by actual source pause(). Inert harness; native frame ordering/DOM hit-testing/hardware unqualified."
+}

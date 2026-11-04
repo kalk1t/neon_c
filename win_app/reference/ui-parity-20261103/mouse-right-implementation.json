@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-11-04T12:41:31.853816+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/mouse-right-capture/source-reference.json",
+    "sha256": "6a4f9d6dc92494f78153beec9d1217f928113da0204a4f32314febd6d0e903f4",
+    "unchanged_from_1226_sync": true
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "84c125ebbfac575a174714de7ca7854a447c3c114e1be0cb3973c9f58cf82111"
+    },
+    {
+      "path": "src/core/rr_mouse_right.h",
+      "sha256": "d13ef0473f1652c7f999a7b8a5e07806ea36516f564e13dc3fe96cdad9cf2f65"
+    },
+    {
+      "path": "tests/test_mouse_right.c",
+      "sha256": "ee4a65d36bc712158e8b1c4fb96f0b769ce7e39b222f1b42ffd7a01e5725694b"
+    },
+    {
+      "path": "tests/mouse_right_reference.h",
+      "sha256": "0f4871f0b98be8d57d51122358451908032a029b2ecc5967f70c03d8d2c32759"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "7fa2017bc49d1102350d3aeb2ea379dd7d11f528a75816eb545d3cdcf5588c83"
+    }
+  ],
+  "tests": {
+    "native": "144/144 CPU tests passed",
+    "web": "144/144 CPU tests passed",
+    "source_transitions": 128,
+    "summaries": {
+      "native": {
+        "checks": 194,
+        "previous_raw_hold_source_mismatches": 6
+      },
+      "web": {
+        "checks": 194,
+        "previous_raw_hold_source_mismatches": 6
+      }
+    },
+    "coupling": "Logical RMB to actual rr_mouse_aim_step: held capture loss/recapture follows nose aim until a fresh eligible press; canvas press through acquisition, blur, overlay/ineligible press and coalesced release also covered.",
+    "host_policy": "All session phases and viewport boundaries; no new phase/render activation."
+  },
+  "initial_validation_preserved": "Initial full suites passed144/144 each; static review refined the host to clear only on a captured-to-uncaptured transition. Initial main/header/test and logs retained; final full suites rerun with eight explicit host-transition checks.",
+  "active_main_wired": true,
+  "main_changes_limited_to_rmb_lifecycle": true,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "b50f8531d68b7130be396fa66fc3ce1f359f5f5709818f2147fbecba72f24fdb",
+  "previous_client_sha256": "c3238629bae12c9692fcd26840391fb3dec720bac1a94dbac9e8f6c7b6b705fb",
+  "graphics_executed": false,
+  "resources": "One logical RMB boolean; no new heap/assets/GPU resources or renderer cap changes.",
+  "remaining": [
+    "Native RMB event delivery across actual pause/resume/capture/focus and perceptual camera feel remain unrun under graphics approval gate.",
+    "Frame polling and host viewport eligibility are a native adapter; DOM target hit-testing/event coalescing require physical/native validation.",
+    "No browser per-event bogus-delta filter is applied to frame aggregates; existing warmup retained.",
+    "Production full-pack/rewards/combat, glyph and whole-scene material/resource gaps unchanged."
+  ]
+}

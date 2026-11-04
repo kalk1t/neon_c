@@ -1,0 +1,92 @@
+{
+  "version": "0.2.16",
+  "hashes": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "index.html": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+    "src/input.js": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f"
+  },
+  "pause": [
+    "resume",
+    "restart",
+    "quit"
+  ],
+  "results": [
+    "restart",
+    "quit"
+  ],
+  "dispatcher": "document.querySelectorAll('[data-act]').forEach((b) =>\n  b.addEventListener('click', () => {\n    const a = b.dataset.act;\n    if (a === 'resume') resume();\n    if (a === 'restart') startRace(g.mode);\n    if (a === 'next' && road.id < roadsOpen()) { setRoad(road.id + 1); startRace(g.mode); }\n    if (a === 'quit') toMenu();\n  }),\n);",
+  "cases": [
+    {
+      "act": "resume",
+      "mode": "race",
+      "trace": [
+        "resume"
+      ]
+    },
+    {
+      "act": "restart",
+      "mode": "race",
+      "trace": [
+        "start:race"
+      ]
+    },
+    {
+      "act": "quit",
+      "mode": "race",
+      "trace": [
+        "menu"
+      ]
+    },
+    {
+      "act": "restart",
+      "mode": "race",
+      "trace": [
+        "start:race"
+      ]
+    },
+    {
+      "act": "quit",
+      "mode": "race",
+      "trace": [
+        "menu"
+      ]
+    },
+    {
+      "act": "resume",
+      "mode": "time",
+      "trace": [
+        "resume"
+      ]
+    },
+    {
+      "act": "restart",
+      "mode": "time",
+      "trace": [
+        "start:time"
+      ]
+    },
+    {
+      "act": "quit",
+      "mode": "time",
+      "trace": [
+        "menu"
+      ]
+    },
+    {
+      "act": "restart",
+      "mode": "time",
+      "trace": [
+        "start:time"
+      ]
+    },
+    {
+      "act": "quit",
+      "mode": "time",
+      "trace": [
+        "menu"
+      ]
+    }
+  ],
+  "scope": "Actual source click dispatcher in inert Node VM; HTML enabled offline button subset. Not a UA keyboard, browser graphics or native input test."
+}

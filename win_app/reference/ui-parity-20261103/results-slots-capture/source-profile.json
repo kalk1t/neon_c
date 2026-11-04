@@ -1,0 +1,12 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersResultsWrapping-v1",
+  "harness": "tools/prepare-results-wrapping.mjs",
+  "default_laps": [
+    62.5,
+    61.25
+  ],
+  "default_finish_position": 1,
+  "takedowns": 0,
+  "account": "Harness clears online block and hides unlock/next. Explicit fixture profile only, never inferred live account status.",
+  "slot_expected": "Existing source card profiles/boxes and full panel geometry. Columns placeholder generated independently by body flow, not consumed."
+}

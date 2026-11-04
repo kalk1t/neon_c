@@ -1,0 +1,8 @@
+{
+  "launcher_sha256": "515e903a1a912b550283fecb520f645d9c6ce649795c7d5ad77db90b1c7f48bd",
+  "target": "build/audio-submit-native/bin/RoadstersRace.exe",
+  "target_sha256": "1db34966f32701feb2a3ff5cd7c01db323140f61294eff471fe3e7022834eea9",
+  "executed": false,
+  "promoted_after_all_checks": true,
+  "active_client_behavior_changed": false
+}

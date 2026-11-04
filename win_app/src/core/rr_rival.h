@@ -31,4 +31,12 @@ unsigned rr_rival_step(RRLocalRacer *r,const RRTrack *track,const struct RRWorld
 /* Same local racer pair order as main.js; finished-but-alive cars still collide.
  * Output events expose numerical sound/shake cues without playing audio. */
 bool rr_local_car_contacts(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out);
+/* Working-source per-car mass, same pair order/guards/thresholds/shake/sound.
+ * Current pack calls this path. No health/speed damage, RNG or pose resync.
+ * Legacy rr_local_car_contacts retains equal-mass frozen reference behavior. */
+bool rr_local_car_contacts_current(RRLocalRacer *racers,size_t count,double shake,RRCarContacts *out);
+/* Explicit current flight + strict45m rival gate rules; source respawn/smoke
+ * order unchanged. No weapon resources reset on respawn. */
+unsigned rr_rival_step_current_random(RRLocalRacer *r,const RRTrack *track,const struct RRWorld *world,RRInput input,double dt,double race_time,double floor_height,RRRivalRandom random,void *context);
+unsigned rr_rival_rules_current(RRLocalRacer *r,const RRTrack *track,double dt,double race_time,double floor_height,double random_x,double random_y);
 #endif

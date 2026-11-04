@@ -1,0 +1,518 @@
+{
+  "hashes": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/race.js": "98579604939266354606b035d3d05a91e374b4532b6bcaf1fcabc0af58f90a29",
+    "src/world.js": "af23d9d675d7ed1f3bd4897018966792afef783b62931230516e8179df3946dd",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9"
+  },
+  "version": "0.2.16",
+  "block": "  const lapT = r.lapTimes.at(-1);\n  const isBest = !g.best || lapT < g.best;\n  if (isBest) {\n    g.best = lapT;\n    localStorage.setItem(bestKey(), String(g.best));\n  }\n",
+  "key": "function bestKey(id = road.id) {\n  return id === 1 ? 'neon.best' : `neon.best.r${id}`;\n}",
+  "cases": [
+    {
+      "id": 1,
+      "before": 0,
+      "lap": 100.123456789,
+      "after": 100.123456789,
+      "wrote": true,
+      "key": "neon.best"
+    },
+    {
+      "id": 1,
+      "before": 100.123456789,
+      "lap": 120,
+      "after": 100.123456789,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 1,
+      "before": 100.123456789,
+      "lap": 100.123456789,
+      "after": 100.123456789,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 1,
+      "before": 100.123456789,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best"
+    },
+    {
+      "id": 1,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best"
+    },
+    {
+      "id": 1,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 1,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best"
+    },
+    {
+      "id": 2,
+      "before": 0,
+      "lap": 100.246913578,
+      "after": 100.246913578,
+      "wrote": true,
+      "key": "neon.best.r2"
+    },
+    {
+      "id": 2,
+      "before": 100.246913578,
+      "lap": 120,
+      "after": 100.246913578,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 2,
+      "before": 100.246913578,
+      "lap": 100.246913578,
+      "after": 100.246913578,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 2,
+      "before": 100.246913578,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r2"
+    },
+    {
+      "id": 2,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r2"
+    },
+    {
+      "id": 2,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 2,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r2"
+    },
+    {
+      "id": 3,
+      "before": 0,
+      "lap": 100.370370367,
+      "after": 100.370370367,
+      "wrote": true,
+      "key": "neon.best.r3"
+    },
+    {
+      "id": 3,
+      "before": 100.370370367,
+      "lap": 120,
+      "after": 100.370370367,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 3,
+      "before": 100.370370367,
+      "lap": 100.370370367,
+      "after": 100.370370367,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 3,
+      "before": 100.370370367,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r3"
+    },
+    {
+      "id": 3,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r3"
+    },
+    {
+      "id": 3,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 3,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r3"
+    },
+    {
+      "id": 4,
+      "before": 0,
+      "lap": 100.493827156,
+      "after": 100.493827156,
+      "wrote": true,
+      "key": "neon.best.r4"
+    },
+    {
+      "id": 4,
+      "before": 100.493827156,
+      "lap": 120,
+      "after": 100.493827156,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 4,
+      "before": 100.493827156,
+      "lap": 100.493827156,
+      "after": 100.493827156,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 4,
+      "before": 100.493827156,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r4"
+    },
+    {
+      "id": 4,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r4"
+    },
+    {
+      "id": 4,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 4,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r4"
+    },
+    {
+      "id": 5,
+      "before": 0,
+      "lap": 100.617283945,
+      "after": 100.617283945,
+      "wrote": true,
+      "key": "neon.best.r5"
+    },
+    {
+      "id": 5,
+      "before": 100.617283945,
+      "lap": 120,
+      "after": 100.617283945,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 5,
+      "before": 100.617283945,
+      "lap": 100.617283945,
+      "after": 100.617283945,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 5,
+      "before": 100.617283945,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r5"
+    },
+    {
+      "id": 5,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r5"
+    },
+    {
+      "id": 5,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 5,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r5"
+    },
+    {
+      "id": 6,
+      "before": 0,
+      "lap": 100.740740734,
+      "after": 100.740740734,
+      "wrote": true,
+      "key": "neon.best.r6"
+    },
+    {
+      "id": 6,
+      "before": 100.740740734,
+      "lap": 120,
+      "after": 100.740740734,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 6,
+      "before": 100.740740734,
+      "lap": 100.740740734,
+      "after": 100.740740734,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 6,
+      "before": 100.740740734,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r6"
+    },
+    {
+      "id": 6,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r6"
+    },
+    {
+      "id": 6,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 6,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r6"
+    },
+    {
+      "id": 7,
+      "before": 0,
+      "lap": 100.864197523,
+      "after": 100.864197523,
+      "wrote": true,
+      "key": "neon.best.r7"
+    },
+    {
+      "id": 7,
+      "before": 100.864197523,
+      "lap": 120,
+      "after": 100.864197523,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 7,
+      "before": 100.864197523,
+      "lap": 100.864197523,
+      "after": 100.864197523,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 7,
+      "before": 100.864197523,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r7"
+    },
+    {
+      "id": 7,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r7"
+    },
+    {
+      "id": 7,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 7,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r7"
+    },
+    {
+      "id": 8,
+      "before": 0,
+      "lap": 100.987654312,
+      "after": 100.987654312,
+      "wrote": true,
+      "key": "neon.best.r8"
+    },
+    {
+      "id": 8,
+      "before": 100.987654312,
+      "lap": 120,
+      "after": 100.987654312,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 8,
+      "before": 100.987654312,
+      "lap": 100.987654312,
+      "after": 100.987654312,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 8,
+      "before": 100.987654312,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r8"
+    },
+    {
+      "id": 8,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r8"
+    },
+    {
+      "id": 8,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 8,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r8"
+    },
+    {
+      "id": 9,
+      "before": 0,
+      "lap": 101.111111101,
+      "after": 101.111111101,
+      "wrote": true,
+      "key": "neon.best.r9"
+    },
+    {
+      "id": 9,
+      "before": 101.111111101,
+      "lap": 120,
+      "after": 101.111111101,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 9,
+      "before": 101.111111101,
+      "lap": 101.111111101,
+      "after": 101.111111101,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 9,
+      "before": 101.111111101,
+      "lap": 90.11111111111111,
+      "after": 90.11111111111111,
+      "wrote": true,
+      "key": "neon.best.r9"
+    },
+    {
+      "id": 9,
+      "before": 90.11111111111111,
+      "lap": 90.1111111111111,
+      "after": 90.1111111111111,
+      "wrote": true,
+      "key": "neon.best.r9"
+    },
+    {
+      "id": 9,
+      "before": 90.1111111111111,
+      "lap": 91,
+      "after": 90.1111111111111,
+      "wrote": false,
+      "key": null
+    },
+    {
+      "id": 9,
+      "before": 90.1111111111111,
+      "lap": 88.5,
+      "after": 88.5,
+      "wrote": true,
+      "key": "neon.best.r9"
+    }
+  ],
+  "scope": "Actual best-lap source block/key function in inert VM; browser stores untouched. Native store intentionally private to offline trials."
+}

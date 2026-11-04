@@ -1,3 +1,129 @@
+## 2026-11-04: current per-car contact mass
+
+Current pack uses source mass-weighted contact separation/response; legacy equal-mass fixtures preserved. Fresh5,852case source oracle plus pack routing, native/WASM150/150passed. Production full-pack remains inactive; health/arsenal/HUD/protocol qualification open. See CONTACT-MASS-2026-11-04.md.
+
+## 2026-11-04: current-source per-car flight
+
+Current flight/session consumes3profile top/acceleration/turn multipliers; production remains Roadster. Fresh original-source7,200-frame oracle and native/WASM149/149 pass. Health/mass/arsenal/protocol11 behavior still open; working source comments0.2.17 are not verified release/deployment. See CAR-STATS-FLIGHT-2026-11-04.md.
+
+## 2026-11-04: firing/audio callback integration and source drift
+
+Six source-defined events connect to audio submission; original seeded fire fixture now uses actual callback API. Fresh native/WASM148/148. Production playback/main unchanged. Working source adds CAR_STATS/protocol11 while package/docs remain0.2.16; these new gameplay differences remain open. See FIRE-AUDIO-INTEGRATION-2026-11-04.md.
+
+## 2026-11-04: independent cue submission integration
+
+Recipes connect to voice dispatch with source-ordered jitter/offset RNG, admitted-only per-helper clocks and explicit partial failure/token ownership. Fresh native/WASM147/147;216-case original oracle reused. Main/playback remain inactive. See AUDIO-SUBMIT-V216-2026-11-04.md.
+
+## 2026-11-04: independent audio voice dispatch
+
+Shared-C admission/scheduling/callback-token layer:216 source cases/253 commands/73 RNG observations; native/WASM full146/146 plus advancing-clock focused1/1 each. Main unchanged, no PCM/DSP/context/device/playback activation. See AUDIO-DISPATCH-V216-2026-11-04.md.
+
+## 2026-11-04: next active qualification boundary
+
+Fresh launcher/EXE/source/455-assets integrity and21 browser-source/42-doc checks; no new app/build/launcher change. Prior145/145 CPU suites reused explicitly. High-impact next activation awaits bounded native qualification and separate integration gates. See NEXT-ACTIVE-QUALIFICATION-2026-11-04.md.
+
+## 2026-11-04: active pause standard-button gestures
+
+Pause host supports left/right/middle background drag and any-button release, with UI exclusions and flight-RMB isolation. Native/WASM145/145 each;216 source callback states/18 sequences. No hardware/graphics qualification or renderer activation. See PAUSE-POINTER-V216-2026-11-04.md.
+
+## 2026-11-04: active RMB capture lifecycle
+
+Logical free-look button clears on release/blur and needs a fresh eligible press after held recapture. Native/WASM144/144 each;128 source callback transitions and actual aim coupling. No graphics/hardware qualification or combat activation. See MOUSE-RIGHT-V216-2026-11-04.md.
+
+## 2026-11-04: active pause showcase entry reset
+
+All5 host pause paths reset source yaw0.6/pitch0.14/distance9.5 only on successful entry; stale drag canceled. Native/WASM143/143 each,720 source camera states/12 entries; no graphics qualification or render-policy change. See PAUSE-ENTRY-V216-2026-11-04.md.
+
+## 2026-11-04: private offline best-lap persistence
+
+Active main saves/reloads exact per-road offline trial records; source strict-best63 cases and10005 exact roundtrips. Native/WASM full142/142 each; latest Web relink/focused1/1. No canonical browser/account/progression import or writes, no graphics execution. See OFFLINE-BESTS-V216-2026-11-04.md.
+
+## 2026-11-04: active pause/results keyboard buttons
+
+Default main supports Tab/Shift+Tab/Enter for offline pause/results buttons and guards results restart focus. Native/WASM 141/141 CPU tests each; source dispatcher10 inert cases. No hardware/pixel acceptance. See OVERLAY-KEYS-V216-2026-11-04.md.
+
+## 2026-11-04: device-local units persistence
+
+Default main loads/saves units with guarded device-local storage; cockpit candidate label/helper updated, preview stays OFF. Native/WASM final full suites 140/140 each, no graphics/profile execution. See UNITS-PERSISTENCE-V216-2026-11-04.md.
+
+## 2026-11-04: active session speed units
+
+Default menu/HUD wired for KM/H or MPH; native/WASM 140/140 CPU tests each. Session-only, no graphics qualification, cockpit preview unchanged. See SPEED-UNITS-V216-2026-11-04.md.
+
+Current (2026-11-04): [input tick/results host boundary](CURRENT-HOST-FRAME-V216-2026-11-04.md) retains original 1440-frame simulation oracle through presentation-failure/UI-only retry coupling; native/WASM 139/139 CPU tests. No main/graphics activation; successful full-world drawing and caption assets remain unqualified. Historical evidence below retains its scope.
+
+Current (2026-11-04): [persistent results frame candidate](RESULTS-FRAME-V216-2026-11-04.md) couples source timer/frozen identities/native row adapter; native/WASM 138/138 CPU tests. Derived supported-name lifecycle fixtures, not new pixel acceptance. Main/live accounts/header-caption painting remain open; playback/combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [generated empty-account source slots](RESULTS-SLOTS-V216-2026-11-04.md) validates 60 card panels and 14526 commands without measured slot/track/caption inputs; native/WASM 137/137 CPU tests. Explicit bounded fixture profile only; source12px glyph request recorded. Main/live accounts/pixels remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [canonical results caption height](RESULTS-CAPTION-V216-2026-11-04.md) matches 60 observed heights and 66 pure source strings; native/WASM 136/136 CPU tests, 14526 row commands retained without caption-height/track inputs. Caption painting/other slots/main/pixels remain open; rewards/playback/combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [computed source results tracks](RESULTS-TRACKS-V216-2026-11-04.md) matches 120 observed widths/60 boards and 14526 commands without measured track inputs; native/WASM 135/135 CPU tests. Other-content bounds must be qualified/nonbinding; caption heights/main/pixels remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [frozen results view/native flow](RESULTS-BOUND-FLOW-V216-2026-11-04.md) validates 60 captured displays/570 formatted rows/14526 commands; native/WASM 134/134 CPU tests. Main/slot-track measurements/pixels remain open; playback/combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [native results flow commands](RESULTS-FLOW-DRAW-V216-2026-11-04.md) verifies 60 observed boards/14526 commands with wrapped names/moved values; native/WASM 133/133 CPU tests. Main activation, slot/track sizing, pixels remain open; playback/combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [generated results body/card flow](RESULTS-BODY-FLOW-V216-2026-11-04.md) matches 60 observed cards/570 rows from strings, qualified caption/track/other-slot inputs; native/WASM 132/132 CPU tests. Caption shaping/track sizing/main/pixels remain open; playback/combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [coupled results float flow](RESULTS-LIST-FLOW-V216-2026-11-04.md) generates prior exclusions from strings: 120 observed lists/570 rows/591 name fragments exact; native/WASM 131/131 CPU tests. Width derivation/parent-card/main/pixels remain open; audio/combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [multiline name flow/exclusions](RESULTS-NAME-FLOW-V216-2026-11-04.md) matches 570 observed name rows/591 fragments with qualified prior float inputs; native/WASM 130/130 CPU tests. Current value placement/coupled floats/main/pixels/audio/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [primary/fallback character ranges](RESULTS-FONT-RANGES-V216-2026-11-04.md) matches 1119 supported nodes/8676 horizontal character envelopes using verified raw fallback metadata; native/WASM 129/129 CPU tests. Kerning/multiline/float flow/main/pixels/audio/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [supported character Range X placement](RESULTS-CHARACTERS-V216-2026-11-04.md) matches 1068 supported source nodes/8166 character envelopes; approx/kerning/multiline remain unqualified. Native/WASM 129/129 CPU tests. Painter/main/float flow/graphics/audio/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [precise results-width envelopes](RESULTS-ADVANCE-V216-2026-11-04.md) matches 1119 supported single-line measured range widths; rejects unqualified kerning/whitespace context. Native/WASM 128/128 CPU tests. Glyph origins/float shaping/main/pixels/audio/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [measured intrinsic results-grid integration](RESULTS-GRID-V216-2026-11-04.md) accepts qualified source tracks/natural heights, preserves overflow/stretch and nominal compatibility; native/WASM 127/127 CPU tests against 60 observed grids plus derived integration. Text-based intrinsic sizing/float wrapping/main/pixels/audio/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [audio cue recipes/docs sync/wrapping review](AUDIO-CUES-V216-2026-11-04.md) ports 18 raw source cue recipes; native/WASM 126/126 CPU tests. NEW SOURCE LIMIT: fixed results tracks are nominal-profile only; verified wrapping corpus shows wider auto-min tracks and non-row-height float relocation. Runtime wrapping/main/graphics/playback/combat/rewards remain open/inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [continuous audio target controls](AUDIO-CONTROL-V216-2026-11-04.md) matches source engine/wind/master target commands and frame policy; native/WASM 125/125 CPU tests. DSP/backend/audio output remain inactive/unqualified, as do production combat/rewards and graphics. Historical evidence below retains its scope.
+
+Current (2026-11-04): [frozen finish/takedown summary](RESULTS-SUMMARY-V216-2026-11-04.md) adds copied takedowns and exact display-only source header/ordinals; native/WASM 124/124 CPU tests. Main/wrapping/scroll/graphics remain open; production combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [native results-column renderer](RESULTS-NATIVE-COLUMNS-V216-2026-11-04.md) bridges complete frozen boards to native draw commands with preflighted font/fallback resources; native/WASM 123/123 CPU tests. Main/whole-card/wrapping/scroll/graphics remain open, production combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [whole-results-column preflight](RESULTS-COLUMNS-V216-2026-11-04.md) validates both frozen lists at actual column widths before painting; native/WASM 122/122 CPU tests. Wrapping/main/scroll-input/graphics remain open, production combat/rewards inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [intrinsic results-card flow](INTRINSIC-RESULTS-CARD-V216-2026-11-04.md) models source visible-slot flow/full-height/vertical-scroll geometry and preserves native legacy profile; native/WASM 121/121 CPU tests on 20 prepared observations plus derived checks. Text wrapping/full-pack/main/actual scroll input/graphics remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [results publication/name binding](RESULTS-BINDING-V216-2026-11-04.md) freezes identities with timer snapshots and feeds row consumers; native/WASM 120/120 CPU tests, 10 source scenarios/51 boundaries and 1,440-tick replay. Docs sync still local 0.2.16/protocol 10. Main/whole-card/graphics and account qualification remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [mixed-text results rows](MIXED-RESULTS-ROWS-V216-2026-11-04.md) stages six verified masks and adds bounded 15px source-order row content/commands; native/WASM 118/118 CPU tests, 1044 scaled source rows. Native texture/main/whole-card/pixel qualification remains open; rewards/combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [native results timing component](NATIVE-RESULTS-TIMES-V216-2026-11-04.md) connects source total/lap strings, em-dash atlas and centered timing draw path to normal solo results; native/WASM 117/117 CPU tests on 431 source cases/1,205 recorded paints. Actual pixels/graphics and full-pack activation remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [results UI frame integration](CURRENT-RESULTS-UI-V216-2026-11-04.md) pumps wall-time results callbacks on UI-only frames and delivers immutable cached boards to a drawing sink; native/WASM 115/115 CPU tests. Real renderer/main wiring and visual acceptance remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [results timer/publication](CURRENT-RESULTS-TIMER-V216-2026-11-04.md) preserves source wall-time/FIFO/phase guard/hide and frozen board semantics; native/WASM 113/113 CPU tests pass on 9 scenarios/48 actions and 1,440 source ticks. Native real-time card/render/platform acceptance remains open; no rewards or production activation. Historical evidence below retains its scope.
+
+Current (2026-11-04): [display-only results snapshot](CURRENT-RESULTS-PROJECTION-V216-2026-11-04.md) matches source lap/time-estimate/stable coin/time ordering in 320 cases and 60 complete-pack state projections; native/WASM 112/112 CPU tests pass. Timer/publication/native card drawing and whole-game qualification remain open; no rewards or production activation. Historical evidence below retains its scope.
+
+Current (2026-11-04): [aggregate input/aim host](CURRENT-INPUT-AIM-HOST-V216-2026-11-04.md) computes held-key/pad/mouse/aim/autopilot commands for current offline pack; native/WASM 111/111 CPU tests pass on 1,440 source frames. OS/capture/edge filtering and native presentation/whole-city/visual qualification remain open; production full-pack inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current clock/feedback host](CURRENT-CLOCK-FEEDBACK-HOST-V216-2026-11-04.md) owns offline raw-clamped clocks/GO/pause/feedback/order around current full-pack simulation; native/WASM 110/110 CPU tests pass on 1,440 source ticks with analytic collision. Native input/events/results and whole-city/visual qualification remain open; production full-pack inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current full-pack player phase](FULL-PACK-PLAYER-PHASE-V216-2026-11-04.md) couples C movement/rules/recovery/pose/smoke to current roster combat in 720 free-space source frames; native/WASM 109/109 CPU tests pass. Full host/input/world/visual qualification remains open; production full-pack inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [native body/pod pose conversion](NATIVE-RENDER-POSE-V216-2026-11-04.md) wires tracked source parent transforms to solo rendering; native/WASM 108/108 CPU tests pass, 23,040 Three-composed points checked. GPU/pixel acceptance and broader car/full-pack parity remain open; combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [solo player/session pose tracking](PLAYER-SESSION-POSE-V216-2026-11-04.md) connects movement/placement/recovery/idle boundaries in main; native/WASM 107/107 CPU tests pass. Renderer remains unchanged, current full-pack player host and real qualification remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [native C pose history](CAR-MODEL-POSE-V216-2026-11-04.md) matches source model/root/muzzles and independently supplies full-roster combat matrices; 1,440 pose frames+720 combined frames, native/WASM 106/106 CPU tests pass. Player host/renderer/real qualification remain open; production combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current full-roster coupling](BATTLE-CURRENT-V216-2026-11-04.md) connects rival/player arsenal, pack/contact/rank, projectile/FX and late coins; 720 seeded source frames, native/WASM 104/104 CPU tests pass. Player movement/session/pose generation and real native qualification remain open; production rivals/combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current rival arsenal](RIVAL-ARSENAL-V216-2026-11-04.md) adds source-ordered v0.2.16 seeker/dodge/EMP/bolt+FX/projectile coupling; 2,400 seeded source frames and native/WASM 103/103 CPU tests pass. Full current pack/player/global RNG and graphical qualification remain open; production combat/rivals inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current ordered pack projection](PACK-CURRENT-V216-2026-11-04.md) connects current reset/controller/flight/gates/ranking/contacts and late coins; 4,320 source ticks, native/WASM 102/102 CPU tests pass. Production rivals/combat remain inactive; v0.2.16 arsenal/player-fire/FX and graphics qualification remain open. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current rival lifecycle](RIVAL-LIFECYCLE-V216-2026-11-04.md) connects current AI/flight to strict 45m rival gates, recovery and v0.2.16 reset fields; native/WASM 101/101 CPU tests pass. Full current pack/arsenal and graphical qualification remain open; production rivals/combat inactive. Historical evidence below retains its scope.
+
+Current (2026-11-04): [current corner AI and browser sync](AI-CURRENT-V216-2026-11-04.md) adds explicit all-route corner/braking/gate/climb/ranking-speed APIs; 4,320 coupled source AI/flight steps and native/WASM 100/100 CPU tests pass. Current v0.2.16 full-pack/rival arsenal and graphical qualification remain open; no production rival/combat activation. Historical evidence below retains its scope.
+
 Current (2026-11-04): [v0.2.15 native player speed](SPEED-CURRENT-V215-2026-11-04.md) connects 135 m/s flight, scaled nitro/acceleration/spin and camera normalization in native host; 3,600 source frames and native/WASM 99/99 CPU tests pass. Graphics/feel remain unqualified; current AI/full pack and combat activation remain open. Historical evidence below retains its scope.
 
 Current (2026-11-04): [v0.2.15 rival bolts](RIVAL-CURRENT-V215-2026-11-04.md) match 4,000 source frames; native/WASM 98/98 CPU tests pass. Explicit offline API only, production combat remains inactive. Current full-pack/reset/AI driving/speed and renderer/graphics qualification remain open. Historical evidence below retains its scope.

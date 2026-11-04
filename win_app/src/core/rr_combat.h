@@ -9,7 +9,7 @@ typedef struct {
     RRVec3 pos,vel;
     double speed,accel,max_speed,life,turn,damage,radius,trail_time;
     RRShotKind kind;
-    bool always,trail,has_damage;
+    bool always,trail,has_damage,dodge_tried; /* Source once-per-seeker dodge flag. */
     unsigned serial; /* Opaque caller identity, retained when stable-compacting. */
     RRShotVisual visual; /* CPU metadata moves with the shot, never a GPU handle. */
 } RRShot;

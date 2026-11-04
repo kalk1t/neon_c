@@ -1,0 +1,126 @@
+{
+  "created_utc": "2026-11-04T08:05:50.303319+00:00",
+  "browser_version": "0.2.16",
+  "source": [
+    {
+      "path": "package.json",
+      "sha256": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749"
+    },
+    {
+      "path": "src/style.css",
+      "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7"
+    },
+    {
+      "path": "src/race.js",
+      "sha256": "98579604939266354606b035d3d05a91e374b4532b6bcaf1fcabc0af58f90a29"
+    },
+    {
+      "path": "src/account.js",
+      "sha256": "0498376a9a6059567ceb176fcd4af424b979d86ef710527c7af974bdb2ed7ccd"
+    },
+    {
+      "path": "src/main.js",
+      "sha256": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9"
+    },
+    {
+      "path": "src/input.js",
+      "sha256": "5d1382cb2166b874cdd482e74916fe21ab01f3367586304883cb4f25ea08ca4f"
+    }
+  ],
+  "checked_native_files": [
+    {
+      "path": "src/presentation/rr_results_art.h",
+      "sha256": "180849042566d5ef7e28fc01c8e598fc5036e4bbbf7e098caf997d73dc3495e3"
+    },
+    {
+      "path": "src/presentation/rr_results_art.c",
+      "sha256": "2a9d7a15e3e1d3ccc79e376201b426f16b15c74d7f35204fabeb9ea49ee57c3f"
+    },
+    {
+      "path": "tests/test_results_columns_draw.c",
+      "sha256": "83f31f0e904590190e2bfe33a2f3797d20ea538bb1c7398fe1b79bd97cb72c9b"
+    },
+    {
+      "path": "tools/implement-results-native-columns.py",
+      "sha256": "e9e6ab413b34bd509eaad19f11ea51add3d3419807b492681692e1015089ec5f"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "7a11b47e62ccd3bac93b12b508a4e339d1a9e0cb0b824d3abecb304b894aeda2"
+    }
+  ],
+  "main_sha256": "84a23ae3d587587817d3e44928affb35f8ab048b49e66f052bd01eff35bf2f0f",
+  "native_client": {
+    "path": "build/results-native-columns-native/bin/RoadstersRace.exe",
+    "sha256": "9dc8e4a30ed7aba0dcec58e4f7fe6bae2b857b8fd7ad9d6e5c592a32b390ffad"
+  },
+  "launcher": {
+    "path": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+    "sha256": "50edf72d75dd3fa78ca385cf16920c0daf3c1999ca3497403fde3785505900b8",
+    "unchanged": true,
+    "executed": false
+  },
+  "reused_tests": [
+    {
+      "target": "native",
+      "passed": 123,
+      "failed": 0,
+      "summary": "boards=108 commands=19983 failures=0 native_paint_endpoints_recorded=true texture_loads=0 graphics_contexts=0",
+      "build_log": {
+        "path": "reference\\ui-parity-20261103\\results-native-columns-native-build.log",
+        "sha256": "0925892cbea3c715d66453d90924000c7f160de88e5c13faf3e27e6182ef363c"
+      },
+      "test_log": {
+        "path": "build\\results-native-columns-native\\Testing\\Temporary\\LastTest.log",
+        "sha256": "91b7ceba391028d988c6fe1712faa5dc3bfde9f6d7cbc6b5a71819d34c943a04"
+      }
+    },
+    {
+      "target": "web",
+      "passed": 123,
+      "failed": 0,
+      "summary": "boards=108 commands=19983 failures=0 native_paint_endpoints_recorded=true texture_loads=0 graphics_contexts=0",
+      "build_log": {
+        "path": "reference\\ui-parity-20261103\\results-native-columns-web-build.log",
+        "sha256": "aff93791bc9f8528b55ce38a75237869dab1bd0b176888c897d541e616ab72d6"
+      },
+      "test_log": {
+        "path": "build\\results-native-columns-web\\Testing\\Temporary\\LastTest.log",
+        "sha256": "1be66bdbc1861ab5d1e79786f39fe04964d35616d6402b219035f51aa3937a82"
+      }
+    }
+  ],
+  "fresh_tests_run": 0,
+  "code_changed": false,
+  "graphics_executed": false,
+  "reference_states": [
+    "results/panels/multiplayer-next",
+    "results/panels/multiplayer-no-next",
+    "results/panels/save-expired",
+    "results/panels/save-nickname",
+    "results/panels/save-retry",
+    "results/panels/save-saving",
+    "results/panels/save-signin",
+    "results/panels/save-too-soon",
+    "results/panels/solo-time-attack",
+    "results/panels/unlocked-next"
+  ],
+  "reference_observations": 20,
+  "status": [
+    {
+      "action": "Activate complete full-pack results in src/app/main.c",
+      "state": "Not attempted; qualification pending",
+      "reason": "Main owns legacy solo RRSession, not the current full-pack graph. New renderer is not a complete card; qualified wrapping/intrinsic heights/ordinals/headings and cold native resource lifetime are missing. No silent truncation or discarded NEEDS_WRAP/NEEDS_HEIGHT."
+    },
+    {
+      "action": "Implement browser-equivalent results wrapping",
+      "state": "Reference measurement pending, not an access denial",
+      "reason": "Existing panel captures cover10 states at1x/2x and scripted row content, not long-nickname inline text/right-float layout. Need focused source-matched line/float rectangles before claiming equivalence."
+    },
+    {
+      "action": "Qualify native resource loading/drawing and actual scroll input",
+      "state": "Graphics execution authorization pending after prior rejection; no retry",
+      "reason": "AGENTS.md requires a new explicit user instruction. Existing CPU recordings do not exercise GPU loads, wheel delivery, focus, clipping or pixels."
+    }
+  ]
+}

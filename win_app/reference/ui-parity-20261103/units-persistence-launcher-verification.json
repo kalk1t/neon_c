@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "18eb0c8243a68f1f4d6ad1006ce4e1c1f1ce6e98c82616186709811dd2a59547",
+  "target": "build/units-persistence-native/bin/RoadstersRace.exe",
+  "target_sha256": "f37a25b8ccc44da041e993073b7e76717e5eeadae934aef131a4e758b84eca70",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

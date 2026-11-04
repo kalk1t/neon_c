@@ -46,7 +46,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 |---|---|---|---|
 | `src/hud.js` | 396 | `HUD` | Speed, boost, heat, missiles, lap times, sub-titles (`sub()` is plain text since v0.2.7, C2), kill feed, health bars |
 | `src/chat.js` | 76 | `Chat`, `CHAT_MAX` | FREE ROAM chat log and input (120 chars, own pace 1.2 s) |
-| `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge |
+| `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge; per-car stat bars (`statRows`, v0.2.17) |
 | `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |
 | `src/touch.js` | 176 | `TouchControls` | Phone controls: tilt steering (24°), climb (18°), dead zone 2.5° |
 | `src/input.js` | ~135 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); A / D give `strafe` while the mouse is captured (v0.2.13); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
@@ -63,7 +63,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (10), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (11), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)

@@ -1,0 +1,692 @@
+-- Configuring done (0.0s)
+-- Generating done (1.9s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/rival-arsenal-native
+[ 11%] Built target rr_core
+[ 12%] Built target rr_input_preferences
+[ 13%] Building C object CMakeFiles/rr_rival_arsenal_tests.dir/tests/test_rival_arsenal.c.obj
+test_rival_arsenal.c
+[ 13%] Linking C executable rr_rival_arsenal_tests.exe
+[ 13%] Built target rr_rival_arsenal_tests
+[ 13%] Building C object CMakeFiles/rr_pack_current_tests.dir/tests/test_pack_current.c.obj
+test_pack_current.c
+[ 13%] Linking C executable rr_pack_current_tests.exe
+[ 13%] Built target rr_pack_current_tests
+[ 13%] Building C object CMakeFiles/rr_rival_life_tests.dir/tests/test_rival_life.c.obj
+test_rival_life.c
+[ 14%] Linking C executable rr_rival_life_tests.exe
+[ 14%] Built target rr_rival_life_tests
+[ 14%] Building C object CMakeFiles/rr_ai_current_tests.dir/tests/test_ai_current.c.obj
+test_ai_current.c
+[ 15%] Linking C executable rr_ai_current_tests.exe
+[ 15%] Built target rr_ai_current_tests
+[ 15%] Building C object CMakeFiles/rr_speed_current_tests.dir/tests/test_speed_current.c.obj
+test_speed_current.c
+[ 16%] Linking C executable rr_speed_current_tests.exe
+[ 16%] Built target rr_speed_current_tests
+[ 16%] Building C object CMakeFiles/rr_rival_current_tests.dir/tests/test_rival_current.c.obj
+test_rival_current.c
+[ 17%] Linking C executable rr_rival_current_tests.exe
+[ 17%] Built target rr_rival_current_tests
+[ 17%] Building C object CMakeFiles/rr_current_fire_tests.dir/tests/test_current_fire.c.obj
+test_current_fire.c
+[ 18%] Linking C executable rr_current_fire_tests.exe
+[ 18%] Built target rr_current_fire_tests
+[ 18%] Building C object CMakeFiles/rr_weapon_current_tests.dir/tests/test_weapon_current.c.obj
+test_weapon_current.c
+[ 19%] Linking C executable rr_weapon_current_tests.exe
+[ 19%] Built target rr_weapon_current_tests
+[ 20%] Building C object CMakeFiles/rr_input_preferences_tests.dir/tests/test_input_preferences.c.obj
+test_input_preferences.c
+[ 20%] Linking C executable rr_input_preferences_tests.exe
+[ 20%] Built target rr_input_preferences_tests
+[ 20%] Building C object CMakeFiles/rr_menu_keys_tests.dir/tests/test_menu_keys.c.obj
+test_menu_keys.c
+[ 20%] Linking C executable rr_menu_keys_tests.exe
+[ 20%] Built target rr_menu_keys_tests
+[ 20%] Building C object CMakeFiles/rr_aim_camera_tests.dir/tests/test_aim_camera.c.obj
+test_aim_camera.c
+[ 20%] Linking C executable rr_aim_camera_tests.exe
+[ 20%] Built target rr_aim_camera_tests
+[ 21%] Building C object CMakeFiles/rr_slide_tests.dir/tests/test_slide.c.obj
+test_slide.c
+[ 21%] Linking C executable rr_slide_tests.exe
+[ 21%] Built target rr_slide_tests
+[ 21%] Building C object CMakeFiles/rr_boost_layout_tests.dir/tests/test_boost_layout.c.obj
+test_boost_layout.c
+[ 21%] Linking C executable rr_boost_layout_tests.exe
+[ 21%] Built target rr_boost_layout_tests
+[ 21%] Building C object CMakeFiles/rr_capture_prompt_tests.dir/tests/test_capture_prompt.c.obj
+test_capture_prompt.c
+[ 21%] Linking C executable rr_capture_prompt_tests.exe
+[ 21%] Built target rr_capture_prompt_tests
+[ 22%] Building C object CMakeFiles/rr_target_pulse_tests.dir/tests/test_target_pulse.c.obj
+test_target_pulse.c
+[ 22%] Linking C executable rr_target_pulse_tests.exe
+[ 22%] Built target rr_target_pulse_tests
+[ 22%] Building C object CMakeFiles/rr_hud_frame_tests.dir/tests/test_hud_frame.c.obj
+test_hud_frame.c
+[ 23%] Linking C executable rr_hud_frame_tests.exe
+[ 23%] Built target rr_hud_frame_tests
+[ 23%] Building C object CMakeFiles/rr_map_background_tests.dir/tests/test_map_background.c.obj
+test_map_background.c
+[ 23%] Linking C executable rr_map_background_tests.exe
+[ 23%] Built target rr_map_background_tests
+[ 23%] Building C object CMakeFiles/rr_sub_fade_tests.dir/tests/test_sub_fade.c.obj
+test_sub_fade.c
+[ 24%] Linking C executable rr_sub_fade_tests.exe
+[ 24%] Built target rr_sub_fade_tests
+[ 24%] Building C object CMakeFiles/rr_announcement_tests.dir/tests/test_announcement.c.obj
+test_announcement.c
+[ 25%] Linking C executable rr_announcement_tests.exe
+[ 25%] Built target rr_announcement_tests
+[ 25%] Building C object CMakeFiles/rr_history_style_tests.dir/tests/test_history_style.c.obj
+test_history_style.c
+[ 26%] Linking C executable rr_history_style_tests.exe
+[ 26%] Built target rr_history_style_tests
+[ 27%] Building C object CMakeFiles/rr_spin_indicator_tests.dir/tests/test_spin_indicator.c.obj
+test_spin_indicator.c
+[ 27%] Linking C executable rr_spin_indicator_tests.exe
+[ 27%] Built target rr_spin_indicator_tests
+[ 27%] Building C object CMakeFiles/rr_pause_layout_tests.dir/tests/test_pause_layout.c.obj
+test_pause_layout.c
+[ 28%] Linking C executable rr_pause_layout_tests.exe
+[ 28%] Built target rr_pause_layout_tests
+[ 28%] Building C object CMakeFiles/rr_ui_layer_tests.dir/tests/test_ui_layers.c.obj
+test_ui_layers.c
+[ 28%] Linking C executable rr_ui_layer_tests.exe
+[ 28%] Built target rr_ui_layer_tests
+[ 29%] Building C object CMakeFiles/rr_finish_guidance_tests.dir/tests/test_finish_guidance.c.obj
+test_finish_guidance.c
+[ 29%] Linking C executable rr_finish_guidance_tests.exe
+[ 29%] Built target rr_finish_guidance_tests
+[ 29%] Building C object CMakeFiles/rr_recovery_feedback_tests.dir/tests/test_recovery_feedback.c.obj
+test_recovery_feedback.c
+[ 29%] Linking C executable rr_recovery_feedback_tests.exe
+[ 29%] Built target rr_recovery_feedback_tests
+[ 30%] Building C object CMakeFiles/rr_map_mark_tests.dir/tests/test_minimap_marks.c.obj
+test_minimap_marks.c
+[ 30%] Linking C executable rr_map_mark_tests.exe
+[ 30%] Built target rr_map_mark_tests
+[ 30%] Building C object CMakeFiles/rr_view_control_tests.dir/tests/test_view_controls.c.obj
+test_view_controls.c
+[ 31%] Linking C executable rr_view_control_tests.exe
+[ 31%] Built target rr_view_control_tests
+[ 31%] Building C object CMakeFiles/rr_player_control_tests.dir/tests/test_player_controls.c.obj
+test_player_controls.c
+[ 32%] Linking C executable rr_player_control_tests.exe
+[ 32%] Built target rr_player_control_tests
+[ 32%] Building C object CMakeFiles/rr_best_readout_tests.dir/tests/test_best_readouts.c.obj
+test_best_readouts.c
+[ 33%] Linking C executable rr_best_readout_tests.exe
+[ 33%] Built target rr_best_readout_tests
+[ 33%] Building C object CMakeFiles/rr_mouse_capture_tests.dir/tests/test_mouse_capture.c.obj
+test_mouse_capture.c
+[ 33%] Linking C executable rr_mouse_capture_tests.exe
+[ 33%] Built target rr_mouse_capture_tests
+[ 33%] Building C object CMakeFiles/rr_circle_clip_tests.dir/tests/test_circle_clip.c.obj
+test_circle_clip.c
+[ 34%] Linking C executable rr_circle_clip_tests.exe
+[ 34%] Built target rr_circle_clip_tests
+[ 35%] Building C object CMakeFiles/rr_boost_meter_tests.dir/tests/test_boost_meter.c.obj
+test_boost_meter.c
+[ 35%] Linking C executable rr_boost_meter_tests.exe
+[ 35%] Built target rr_boost_meter_tests
+[ 35%] Building C object CMakeFiles/rr_nitro_call_tests.dir/tests/test_nitro_call.c.obj
+test_nitro_call.c
+[ 36%] Linking C executable rr_nitro_call_tests.exe
+[ 36%] Built target rr_nitro_call_tests
+[ 36%] Building C object CMakeFiles/rr_spin_control_tests.dir/tests/test_spin_control.c.obj
+test_spin_control.c
+[ 36%] Linking C executable rr_spin_control_tests.exe
+[ 36%] Built target rr_spin_control_tests
+[ 36%] Building C object CMakeFiles/rr_impact_fx_tests.dir/tests/test_impact_fx.c.obj
+test_impact_fx.c
+[ 37%] Linking C executable rr_impact_fx_tests.exe
+[ 37%] Built target rr_impact_fx_tests
+[ 37%] Building C object CMakeFiles/rr_mouse_aim_tests.dir/tests/test_mouse_aim.c.obj
+test_mouse_aim.c
+[ 38%] Linking C executable rr_mouse_aim_tests.exe
+[ 38%] Built target rr_mouse_aim_tests
+[ 38%] Building C object CMakeFiles/rr_hud_message_tests.dir/tests/test_hud_message.c.obj
+test_hud_message.c
+[ 38%] Linking C executable rr_hud_message_tests.exe
+[ 38%] Built target rr_hud_message_tests
+[ 38%] Building C object CMakeFiles/rr_target_guidance_tests.dir/tests/test_target_guidance.c.obj
+test_target_guidance.c
+[ 38%] Linking C executable rr_target_guidance_tests.exe
+[ 38%] Built target rr_target_guidance_tests
+[ 38%] Building C object CMakeFiles/rr_sub_notice_tests.dir/tests/test_sub_notice.c.obj
+test_sub_notice.c
+[ 39%] Linking C executable rr_sub_notice_tests.exe
+[ 39%] Built target rr_sub_notice_tests
+[ 40%] Building C object CMakeFiles/rr_camera_fx_tests.dir/tests/test_camera_fx.c.obj
+test_camera_fx.c
+[ 40%] Linking C executable rr_camera_fx_tests.exe
+[ 40%] Built target rr_camera_fx_tests
+[ 41%] Building C object CMakeFiles/rr_start_cue_tests.dir/tests/test_start_cue.c.obj
+test_start_cue.c
+[ 41%] Linking C executable rr_start_cue_tests.exe
+[ 41%] Built target rr_start_cue_tests
+[ 41%] Building C object CMakeFiles/rr_race_warning_tests.dir/tests/test_race_warning.c.obj
+test_race_warning.c
+[ 42%] Linking C executable rr_race_warning_tests.exe
+[ 42%] Built target rr_race_warning_tests
+[ 42%] Building C object CMakeFiles/rr_camera_motion_tests.dir/tests/test_camera_motion.c.obj
+test_camera_motion.c
+[ 43%] Linking C executable rr_camera_motion_tests.exe
+[ 43%] Built target rr_camera_motion_tests
+[ 44%] Building C object CMakeFiles/rr_chase_camera_tests.dir/tests/test_chase_camera.c.obj
+test_chase_camera.c
+[ 44%] Linking C executable rr_chase_camera_tests.exe
+[ 44%] Built target rr_chase_camera_tests
+[ 44%] Building C object CMakeFiles/rr_first_person_tests.dir/tests/test_first_person.c.obj
+test_first_person.c
+[ 44%] Linking C executable rr_first_person_tests.exe
+[ 44%] Built target rr_first_person_tests
+[ 44%] Building C object CMakeFiles/rr_input_mix_tests.dir/tests/test_input_mix.c.obj
+test_input_mix.c
+[ 44%] Linking C executable rr_input_mix_tests.exe
+[ 44%] Built target rr_input_mix_tests
+[ 45%] Building C object CMakeFiles/rr_pause_ui_tests.dir/tests/test_pause_ui.c.obj
+test_pause_ui.c
+[ 45%] Linking C executable rr_pause_ui_tests.exe
+[ 45%] Built target rr_pause_ui_tests
+[ 46%] Building C object CMakeFiles/rr_cockpit_tests.dir/tests/test_cockpit.c.obj
+test_cockpit.c
+[ 46%] Linking C executable rr_cockpit_tests.exe
+[ 46%] Built target rr_cockpit_tests
+[ 47%] Building C object CMakeFiles/rr_mouse_widget_tests.dir/tests/test_mouse_widgets.c.obj
+test_mouse_widgets.c
+[ 47%] Linking C executable rr_mouse_widget_tests.exe
+[ 47%] Built target rr_mouse_widget_tests
+[ 48%] Building C object CMakeFiles/rr_button_hover_tests.dir/tests/test_button_hover.c.obj
+test_button_hover.c
+[ 48%] Linking C executable rr_button_hover_tests.exe
+[ 48%] Built target rr_button_hover_tests
+[ 48%] Building C object CMakeFiles/rr_button_surface_tests.dir/tests/test_button_surface.c.obj
+test_button_surface.c
+[ 49%] Linking C executable rr_button_surface_tests.exe
+[ 49%] Built target rr_button_surface_tests
+[ 49%] Building C object CMakeFiles/rr_pause_scene_tests.dir/tests/test_pause_scene.c.obj
+test_pause_scene.c
+[ 49%] Linking C executable rr_pause_scene_tests.exe
+[ 49%] Built target rr_pause_scene_tests
+[ 49%] Building C object CMakeFiles/rr_showcase_tests.dir/tests/test_showcase.c.obj
+test_showcase.c
+[ 49%] Linking C executable rr_showcase_tests.exe
+[ 49%] Built target rr_showcase_tests
+[ 49%] Building C object CMakeFiles/rr_results_layout_tests.dir/tests/test_results_layout.c.obj
+test_results_layout.c
+[ 50%] Linking C executable rr_results_layout_tests.exe
+[ 50%] Built target rr_results_layout_tests
+[ 51%] Building C object CMakeFiles/rr_race_ui_tests.dir/tests/test_race_ui.c.obj
+test_race_ui.c
+[ 51%] Linking C executable rr_race_ui_tests.exe
+[ 51%] Built target rr_race_ui_tests
+[ 52%] Building C object CMakeFiles/rr_ui_layout_tests.dir/tests/test_ui_layout.c.obj
+test_ui_layout.c
+[ 52%] Linking C executable rr_ui_layout_tests.exe
+[ 52%] Built target rr_ui_layout_tests
+[ 52%] Building C object CMakeFiles/rr_facade_tests.dir/tests/test_facade.c.obj
+test_facade.c
+[ 52%] Linking C executable rr_facade_tests.exe
+[ 52%] Built target rr_facade_tests
+[ 52%] Building C object CMakeFiles/rr_mesh_loader_tests.dir/tests/test_mesh_loader.c.obj
+test_mesh_loader.c
+[ 53%] Linking C executable rr_mesh_loader_tests.exe
+[ 53%] Built target rr_mesh_loader_tests
+[ 53%] Building C object CMakeFiles/rr_city_catalog_tests.dir/tests/test_city_catalog.c.obj
+test_city_catalog.c
+[ 54%] Building C object CMakeFiles/rr_city_catalog_tests.dir/src/experimental/rr_city_catalog.c.obj
+rr_city_catalog.c
+[ 54%] Linking C executable rr_city_catalog_tests.exe
+[ 54%] Built target rr_city_catalog_tests
+[ 54%] Building C object CMakeFiles/rr_city_batching_tests.dir/tests/test_city_batching.c.obj
+test_city_batching.c
+[ 55%] Building C object CMakeFiles/rr_city_batching_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 55%] Linking C executable rr_city_batching_tests.exe
+[ 55%] Built target rr_city_batching_tests
+[ 55%] Building C object CMakeFiles/rr_city_repacking_tests.dir/tests/test_city_repacking.c.obj
+test_city_repacking.c
+[ 56%] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_repacking.c.obj
+rr_city_repacking.c
+[ 56%] Building C object CMakeFiles/rr_city_repacking_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 56%] Linking C executable rr_city_repacking_tests.exe
+[ 56%] Built target rr_city_repacking_tests
+[ 57%] Building C object CMakeFiles/rr_city_triangle_tests.dir/tests/test_city_triangle.c.obj
+test_city_triangle.c
+[ 57%] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_triangle.c.obj
+rr_city_triangle.c
+[ 57%] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_repacking.c.obj
+rr_city_repacking.c
+[ 58%] Building C object CMakeFiles/rr_city_triangle_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 58%] Linking C executable rr_city_triangle_tests.exe
+[ 58%] Built target rr_city_triangle_tests
+[ 58%] Building C object CMakeFiles/rr_city_occlusion_tests.dir/tests/test_city_occlusion.c.obj
+test_city_occlusion.c
+[ 58%] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_occlusion.c.obj
+rr_city_occlusion.c
+[ 59%] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_triangle.c.obj
+rr_city_triangle.c
+[ 59%] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_repacking.c.obj
+rr_city_repacking.c
+[ 60%] Building C object CMakeFiles/rr_city_occlusion_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 60%] Linking C executable rr_city_occlusion_tests.exe
+[ 60%] Built target rr_city_occlusion_tests
+[ 61%] Building C object CMakeFiles/rr_city_witness_tests.dir/tests/test_city_witness.c.obj
+test_city_witness.c
+[ 61%] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_witness.c.obj
+rr_city_witness.c
+[ 61%] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_triangle.c.obj
+rr_city_triangle.c
+[ 62%] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_occlusion.c.obj
+rr_city_occlusion.c
+[ 62%] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_repacking.c.obj
+rr_city_repacking.c
+[ 62%] Building C object CMakeFiles/rr_city_witness_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 63%] Linking C executable rr_city_witness_tests.exe
+[ 63%] Built target rr_city_witness_tests
+[ 63%] Building C object CMakeFiles/rr_city_coverage_tests.dir/tests/test_city_coverage.c.obj
+test_city_coverage.c
+[ 63%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_coverage.c.obj
+rr_city_coverage.c
+[ 64%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_witness.c.obj
+rr_city_witness.c
+[ 64%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_triangle.c.obj
+rr_city_triangle.c
+[ 65%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_occlusion.c.obj
+rr_city_occlusion.c
+[ 65%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_repacking.c.obj
+rr_city_repacking.c
+[ 65%] Building C object CMakeFiles/rr_city_coverage_tests.dir/src/experimental/rr_city_batching.c.obj
+rr_city_batching.c
+[ 66%] Linking C executable rr_city_coverage_tests.exe
+[ 66%] Built target rr_city_coverage_tests
+[ 67%] Building C object CMakeFiles/rr_poster_tests.dir/tests/test_posters.c.obj
+test_posters.c
+[ 67%] Building C object CMakeFiles/rr_poster_tests.dir/src/experimental/rr_posters.c.obj
+rr_posters.c
+[ 68%] Linking C executable rr_poster_tests.exe
+[ 68%] Built target rr_poster_tests
+[ 68%] Building C object CMakeFiles/rr_ai_tests.dir/tests/test_ai.c.obj
+test_ai.c
+[ 69%] Linking C executable rr_ai_tests.exe
+[ 69%] Built target rr_ai_tests
+[ 69%] Building C object CMakeFiles/rr_rival_tests.dir/tests/test_rival.c.obj
+test_rival.c
+[ 69%] Linking C executable rr_rival_tests.exe
+[ 69%] Built target rr_rival_tests
+[ 70%] Building C object CMakeFiles/rr_coin_tests.dir/tests/test_coins.c.obj
+test_coins.c
+[ 70%] Linking C executable rr_coin_tests.exe
+[ 70%] Built target rr_coin_tests
+[ 71%] Building C object CMakeFiles/rr_pack_tests.dir/tests/test_pack.c.obj
+test_pack.c
+[ 71%] Linking C executable rr_pack_tests.exe
+[ 71%] Built target rr_pack_tests
+[ 71%] Building C object CMakeFiles/rr_targeting_tests.dir/tests/test_targeting.c.obj
+test_targeting.c
+[ 72%] Linking C executable rr_targeting_tests.exe
+[ 72%] Built target rr_targeting_tests
+[ 73%] Building C object CMakeFiles/rr_arsenal_tests.dir/tests/test_arsenal.c.obj
+test_arsenal.c
+[ 73%] Linking C executable rr_arsenal_tests.exe
+[ 73%] Built target rr_arsenal_tests
+[ 73%] Building C object CMakeFiles/rr_combat_tests.dir/tests/test_combat.c.obj
+test_combat.c
+[ 74%] Linking C executable rr_combat_tests.exe
+[ 74%] Built target rr_combat_tests
+[ 74%] Building C object CMakeFiles/rr_fire_tests.dir/tests/test_fire.c.obj
+test_fire.c
+[ 75%] Linking C executable rr_fire_tests.exe
+[ 75%] Built target rr_fire_tests
+[ 76%] Building C object CMakeFiles/rr_battle_tests.dir/tests/test_battle.c.obj
+test_battle.c
+[ 76%] Linking C executable rr_battle_tests.exe
+[ 76%] Built target rr_battle_tests
+[ 76%] Building C object CMakeFiles/rr_local_run_tests.dir/tests/test_local_run.c.obj
+test_local_run.c
+[ 77%] Linking C executable rr_local_run_tests.exe
+[ 77%] Built target rr_local_run_tests
+[ 78%] Building C object CMakeFiles/rr_core_tests.dir/tests/test_core.c.obj
+test_core.c
+[ 78%] Linking C executable rr_core_tests.exe
+[ 78%] Built target rr_core_tests
+[ 79%] Building C object CMakeFiles/rr_render_policy_tests.dir/tests/test_render_policy.c.obj
+test_render_policy.c
+[ 79%] Linking C executable rr_render_policy_tests.exe
+[ 79%] Built target rr_render_policy_tests
+[ 79%] Building C object CMakeFiles/rr_race_tests.dir/tests/test_race.c.obj
+test_race.c
+[ 79%] Linking C executable rr_race_tests.exe
+[ 79%] Built target rr_race_tests
+[ 79%] Building C object CMakeFiles/rr_session_tests.dir/tests/test_session.c.obj
+test_session.c
+[ 80%] Linking C executable rr_session_tests.exe
+[ 80%] Built target rr_session_tests
+[ 81%] Building C object CMakeFiles/rr_menu_policy_tests.dir/tests/test_menu_policy.c.obj
+test_menu_policy.c
+[ 81%] Linking C executable rr_menu_policy_tests.exe
+[ 81%] Built target rr_menu_policy_tests
+[ 82%] Building C object CMakeFiles/rr_recovery_tests.dir/tests/test_recovery.c.obj
+test_recovery.c
+[ 82%] Linking C executable rr_recovery_tests.exe
+[ 82%] Built target rr_recovery_tests
+[ 83%] Building C object CMakeFiles/rr_all_roads_tests.dir/tests/test_all_roads.c.obj
+test_all_roads.c
+[ 83%] Linking C executable rr_all_roads_tests.exe
+[ 83%] Built target rr_all_roads_tests
+[ 84%] Building C object CMakeFiles/rr_road_picker_tests.dir/tests/test_road_picker.c.obj
+test_road_picker.c
+[ 84%] Linking C executable rr_road_picker_tests.exe
+[ 84%] Built target rr_road_picker_tests
+[ 84%] Building C object CMakeFiles/rr_city_clearance_tests.dir/tests/test_city_clearance.c.obj
+test_city_clearance.c
+[ 85%] Linking C executable rr_city_clearance_tests.exe
+[ 85%] Built target rr_city_clearance_tests
+[ 86%] Building C object CMakeFiles/rr_finish_tests.dir/tests/test_finish.c.obj
+test_finish.c
+[ 86%] Linking C executable rr_finish_tests.exe
+[ 86%] Built target rr_finish_tests
+[ 87%] Building C object CMakeFiles/rr_physics_tests.dir/tests/test_physics.c.obj
+test_physics.c
+[ 87%] Linking C executable rr_physics_tests.exe
+[ 87%] Built target rr_physics_tests
+[ 88%] Building C object CMakeFiles/rr_course_tests.dir/tests/test_course_furniture.c.obj
+test_course_furniture.c
+[ 88%] Linking C executable rr_course_tests.exe
+[ 88%] Built target rr_course_tests
+[ 88%] Building C object CMakeFiles/rr_shared_scenery_tests.dir/tests/test_shared_scenery.c.obj
+test_shared_scenery.c
+[ 89%] Linking C executable rr_shared_scenery_tests.exe
+[ 89%] Built target rr_shared_scenery_tests
+[ 90%] Building C object CMakeFiles/rr_hero_asset_tests.dir/tests/test_hero_asset.c.obj
+test_hero_asset.c
+[ 90%] Linking C executable rr_hero_asset_tests.exe
+[ 90%] Built target rr_hero_asset_tests
+[ 90%] Building C object CMakeFiles/rr_canonical_city_tests.dir/tests/test_canonical_city.c.obj
+test_canonical_city.c
+[ 91%] Linking C executable rr_canonical_city_tests.exe
+[ 91%] Built target rr_canonical_city_tests
+[ 91%] Building C object CMakeFiles/rr_cockpit_image_tests.dir/tests/test_cockpit_images.c.obj
+test_cockpit_images.c
+[ 91%] Linking C executable rr_cockpit_image_tests.exe
+[ 91%] Built target rr_cockpit_image_tests
+[ 91%] Building C object CMakeFiles/rr_nose_reticle_tests.dir/tests/test_nose_reticle.c.obj
+test_nose_reticle.c
+[ 92%] Linking C executable rr_nose_reticle_tests.exe
+[ 92%] Built target rr_nose_reticle_tests
+[ 92%] Building C object CMakeFiles/rr_reticle_tests.dir/tests/test_reticles.c.obj
+test_reticles.c
+[ 92%] Linking C executable rr_reticle_tests.exe
+[ 92%] Built target rr_reticle_tests
+[ 92%] Building C object CMakeFiles/rr_subtext_tests.dir/tests/test_subtext.c.obj
+test_subtext.c
+[ 92%] Building C object CMakeFiles/rr_subtext_tests.dir/src/presentation/rr_subtext.c.obj
+rr_subtext.c
+[ 93%] Linking C executable rr_subtext_tests.exe
+[ 93%] Built target rr_subtext_tests
+[ 94%] Building C object CMakeFiles/rr_hud_readout_tests.dir/tests/test_hud_readouts.c.obj
+test_hud_readouts.c
+[ 94%] Linking C executable rr_hud_readout_tests.exe
+[ 94%] Built target rr_hud_readout_tests
+[ 94%] Building C object CMakeFiles/rr_menu_help_tests.dir/tests/test_menu_help.c.obj
+test_menu_help.c
+[ 95%] Linking C executable rr_menu_help_tests.exe
+[ 95%] Built target rr_menu_help_tests
+[ 96%] Building C object CMakeFiles/rr_menu_header_tests.dir/tests/test_menu_header.c.obj
+test_menu_header.c
+[ 96%] Linking C executable rr_menu_header_tests.exe
+[ 96%] Built target rr_menu_header_tests
+[ 96%] Building C object CMakeFiles/rr_button_text_tests.dir/tests/test_button_text.c.obj
+test_button_text.c
+[ 96%] Linking C executable rr_button_text_tests.exe
+[ 96%] Built target rr_button_text_tests
+[ 97%] Building C object CMakeFiles/rr_spin_readout_tests.dir/tests/test_spin_readout.c.obj
+test_spin_readout.c
+[ 97%] Building C object CMakeFiles/rr_spin_readout_tests.dir/src/presentation/rr_subtext.c.obj
+rr_subtext.c
+[ 97%] Linking C executable rr_spin_readout_tests.exe
+[ 97%] Built target rr_spin_readout_tests
+[ 97%] Building C object CMakeFiles/rr_arrow_art_tests.dir/tests/test_arrow_art.c.obj
+test_arrow_art.c
+[ 97%] Linking C executable rr_arrow_art_tests.exe
+[ 97%] Built target rr_arrow_art_tests
+[ 97%] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.obj
+test_ui_fonts.c
+[ 98%] Linking C executable rr_ui_font_tests.exe
+[ 98%] Built target rr_ui_font_tests
+[ 98%] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.obj
+main.c
+[ 98%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.obj
+rr_scene.c
+[ 99%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.obj
+rr_ui.c
+[ 99%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_subtext.c.obj
+rr_subtext.c
+[ 99%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_arrow_art.c.obj
+rr_arrow_art.c
+[100%] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_cockpit.c.obj
+rr_cockpit.c
+[100%] Linking C executable bin\RoadstersRace.exe
+[100%] Built target RoadstersRace
+[100%] Building C object CMakeFiles/rr_pod_transform_tests.dir/tests/test_pods.c.obj
+test_pods.c
+[100%] Linking C executable rr_pod_transform_tests.exe
+[100%] Built target rr_pod_transform_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/rival-arsenal-native
+        Start   1: browser_v216_rival_arsenal_fx_projectiles
+  1/103 Test   #1: browser_v216_rival_arsenal_fx_projectiles ....   Passed    0.08 sec
+        Start   2: browser_current_pack_order_and_coin_tail
+  2/103 Test   #2: browser_current_pack_order_and_coin_tail .....   Passed    0.26 sec
+        Start   3: browser_current_rival_gate_reset_lifecycle
+  3/103 Test   #3: browser_current_rival_gate_reset_lifecycle ...   Passed    0.31 sec
+        Start   4: browser_current_corner_ai_sequences
+  4/103 Test   #4: browser_current_corner_ai_sequences ..........   Passed    0.06 sec
+        Start   5: browser_v215_current_flight_session
+  5/103 Test   #5: browser_v215_current_flight_session ..........   Passed    0.03 sec
+        Start   6: browser_v215_rival_bolt_sequences
+  6/103 Test   #6: browser_v215_rival_bolt_sequences ............   Passed    0.03 sec
+        Start   7: browser_current_player_fire_sequences
+  7/103 Test   #7: browser_current_player_fire_sequences ........   Passed    0.03 sec
+        Start   8: browser_v214_weapon_preparation
+  8/103 Test   #8: browser_v214_weapon_preparation ..............   Passed    0.03 sec
+        Start   9: device_input_preferences_preservation
+  9/103 Test   #9: device_input_preferences_preservation ........   Passed    0.07 sec
+        Start  10: browser_enabled_menu_keyboard_flow
+ 10/103 Test  #10: browser_enabled_menu_keyboard_flow ...........   Passed    0.03 sec
+        Start  11: browser_mouse_aim_camera_sequence
+ 11/103 Test  #11: browser_mouse_aim_camera_sequence ............   Passed    0.03 sec
+        Start  12: browser_v213_slide_movement
+ 12/103 Test  #12: browser_v213_slide_movement ..................   Passed    0.03 sec
+        Start  13: browser_boost_layout_visibility
+ 13/103 Test  #13: browser_boost_layout_visibility ..............   Passed    0.03 sec
+        Start  14: browser_capture_prompt_gesture
+ 14/103 Test  #14: browser_capture_prompt_gesture ...............   Passed    0.02 sec
+        Start  15: browser_target_pulse_layout
+ 15/103 Test  #15: browser_target_pulse_layout ..................   Passed    0.03 sec
+        Start  16: browser_hud_frame_geometry
+ 16/103 Test  #16: browser_hud_frame_geometry ...................   Passed    0.03 sec
+        Start  17: browser_minimap_background_pixels
+ 17/103 Test  #17: browser_minimap_background_pixels ............   Passed    0.03 sec
+        Start  18: browser_submessage_fade
+ 18/103 Test  #18: browser_submessage_fade ......................   Passed    0.03 sec
+        Start  19: browser_announcement_css_timing
+ 19/103 Test  #19: browser_announcement_css_timing ..............   Passed    0.15 sec
+        Start  20: browser_history_css_cascade
+ 20/103 Test  #20: browser_history_css_cascade ..................   Passed    0.04 sec
+        Start  21: browser_spin_indicator_compositing
+ 21/103 Test  #21: browser_spin_indicator_compositing ...........   Passed    0.04 sec
+        Start  22: browser_pause_layout_backdrop
+ 22/103 Test  #22: browser_pause_layout_backdrop ................   Passed    0.03 sec
+        Start  23: browser_ui_visibility_paint_order
+ 23/103 Test  #23: browser_ui_visibility_paint_order ............   Passed    0.03 sec
+        Start  24: browser_finish_aim_target_continuity
+ 24/103 Test  #24: browser_finish_aim_target_continuity .........   Passed    0.04 sec
+        Start  25: browser_recovery_feedback_lifecycle
+ 25/103 Test  #25: browser_recovery_feedback_lifecycle ..........   Passed    0.03 sec
+        Start  26: browser_minimap_checkpoint_primitives
+ 26/103 Test  #26: browser_minimap_checkpoint_primitives ........   Passed    0.04 sec
+        Start  27: browser_view_controls_lifecycle
+ 27/103 Test  #27: browser_view_controls_lifecycle ..............   Passed    0.03 sec
+        Start  28: browser_player_reset_order
+ 28/103 Test  #28: browser_player_reset_order ...................   Passed    0.03 sec
+        Start  29: browser_best_record_readouts
+ 29/103 Test  #29: browser_best_record_readouts .................   Passed    0.03 sec
+        Start  30: browser_mouse_capture_warmup
+ 30/103 Test  #30: browser_mouse_capture_warmup .................   Passed    0.03 sec
+        Start  31: minimap_circle_clip_analytic
+ 31/103 Test  #31: minimap_circle_clip_analytic .................   Passed    0.03 sec
+        Start  32: browser_boost_meter_states
+ 32/103 Test  #32: browser_boost_meter_states ...................   Passed    0.03 sec
+        Start  33: browser_nitro_call_timeline
+ 33/103 Test  #33: browser_nitro_call_timeline ..................   Passed    0.03 sec
+        Start  34: browser_native_spin_control
+ 34/103 Test  #34: browser_native_spin_control ..................   Passed    0.03 sec
+        Start  35: browser_collision_camera_shake
+ 35/103 Test  #35: browser_collision_camera_shake ...............   Passed    0.03 sec
+        Start  36: browser_mouse_aim_settings
+ 36/103 Test  #36: browser_mouse_aim_settings ...................   Passed    0.02 sec
+        Start  37: browser_race_announcement_channel
+ 37/103 Test  #37: browser_race_announcement_channel ............   Passed    0.02 sec
+        Start  38: browser_target_guidance
+ 38/103 Test  #38: browser_target_guidance ......................   Passed    0.03 sec
+        Start  39: browser_unicode_submessage_timers
+ 39/103 Test  #39: browser_unicode_submessage_timers ............   Passed    0.03 sec
+        Start  40: browser_nitro_camera_fx
+ 40/103 Test  #40: browser_nitro_camera_fx ......................   Passed    0.03 sec
+        Start  41: browser_countdown_start_cues
+ 41/103 Test  #41: browser_countdown_start_cues .................   Passed    0.03 sec
+        Start  42: browser_missed_gate_warning
+ 42/103 Test  #42: browser_missed_gate_warning ..................   Passed    0.03 sec
+        Start  43: browser_camera_motion_timing
+ 43/103 Test  #43: browser_camera_motion_timing .................   Passed    0.03 sec
+        Start  44: browser_chase_camera_geometry
+ 44/103 Test  #44: browser_chase_camera_geometry ................   Passed    0.03 sec
+        Start  45: browser_first_person_view
+ 45/103 Test  #45: browser_first_person_view ....................   Passed    0.03 sec
+        Start  46: browser_input_state_mixing
+ 46/103 Test  #46: browser_input_state_mixing ...................   Passed    0.03 sec
+        Start  47: browser_pause_guard_and_cockpit_palette
+ 47/103 Test  #47: browser_pause_guard_and_cockpit_palette ......   Passed    0.03 sec
+        Start  48: browser_cockpit_fit_and_readouts
+ 48/103 Test  #48: browser_cockpit_fit_and_readouts .............   Passed    0.03 sec
+        Start  49: browser_mouse_widget_adapter
+ 49/103 Test  #49: browser_mouse_widget_adapter .................   Passed    0.03 sec
+        Start  50: browser_button_hover_transitions
+ 50/103 Test  #50: browser_button_hover_transitions .............   Passed    0.03 sec
+        Start  51: browser_button_surface_pixels
+ 51/103 Test  #51: browser_button_surface_pixels ................   Passed    0.04 sec
+        Start  52: browser_pause_scene_policy
+ 52/103 Test  #52: browser_pause_scene_policy ...................   Passed    0.03 sec
+        Start  53: browser_pause_showcase_callbacks
+ 53/103 Test  #53: browser_pause_showcase_callbacks .............   Passed    0.03 sec
+        Start  54: browser_results_card_layout
+ 54/103 Test  #54: browser_results_card_layout ..................   Passed    0.03 sec
+        Start  55: browser_race_ui_state_layout
+ 55/103 Test  #55: browser_race_ui_state_layout .................   Passed    0.03 sec
+        Start  56: browser_ui_layout_and_hit_regions
+ 56/103 Test  #56: browser_ui_layout_and_hit_regions ............   Passed    0.02 sec
+        Start  57: browser_facade_window_pixels
+ 57/103 Test  #57: browser_facade_window_pixels .................   Passed    0.05 sec
+        Start  58: canonical_mesh_loader_guards
+ 58/103 Test  #58: canonical_mesh_loader_guards .................   Passed    0.03 sec
+        Start  59: experimental_city_catalog_paging
+ 59/103 Test  #59: experimental_city_catalog_paging .............   Passed    0.06 sec
+        Start  60: experimental_exact_city_batching
+ 60/103 Test  #60: experimental_exact_city_batching .............   Passed    0.20 sec
+        Start  61: experimental_material_repacking
+ 61/103 Test  #61: experimental_material_repacking ..............   Passed    1.44 sec
+        Start  62: experimental_triangle_visibility
+ 62/103 Test  #62: experimental_triangle_visibility .............   Passed    0.75 sec
+        Start  63: experimental_conservative_city_occlusion
+ 63/103 Test  #63: experimental_conservative_city_occlusion .....   Passed   12.16 sec
+        Start  64: experimental_city_visibility_witness
+ 64/103 Test  #64: experimental_city_visibility_witness .........   Passed   20.77 sec
+        Start  65: experimental_city_blocker_coverage
+ 65/103 Test  #65: experimental_city_blocker_coverage ...........   Passed   64.60 sec
+        Start  66: experimental_browser_poster_plan
+ 66/103 Test  #66: experimental_browser_poster_plan .............   Passed    0.03 sec
+        Start  67: browser_ai_controller
+ 67/103 Test  #67: browser_ai_controller ........................   Passed    0.05 sec
+        Start  68: browser_rival_contacts_lifecycle
+ 68/103 Test  #68: browser_rival_contacts_lifecycle .............   Passed    0.29 sec
+        Start  69: browser_offline_coin_rules
+ 69/103 Test  #69: browser_offline_coin_rules ...................   Passed    0.14 sec
+        Start  70: browser_local_pack_ordering
+ 70/103 Test  #70: browser_local_pack_ordering ..................   Passed    0.20 sec
+        Start  71: browser_targeting_and_late_coin_phase
+ 71/103 Test  #71: browser_targeting_and_late_coin_phase ........   Passed    0.03 sec
+        Start  72: browser_player_arsenal_rules
+ 72/103 Test  #72: browser_player_arsenal_rules .................   Passed    0.03 sec
+        Start  73: browser_player_combat_rules
+ 73/103 Test  #73: browser_player_combat_rules ..................   Passed    0.04 sec
+        Start  74: browser_fire_dispatch_rng
+ 74/103 Test  #74: browser_fire_dispatch_rng ....................   Passed    0.03 sec
+        Start  75: browser_local_pack_combat_rng
+ 75/103 Test  #75: browser_local_pack_combat_rng ................   Passed    0.08 sec
+        Start  76: browser_full_local_player_ticks
+ 76/103 Test  #76: browser_full_local_player_ticks ..............   Passed    0.07 sec
+        Start  77: browser_flight_and_skyline_parity
+ 77/103 Test  #77: browser_flight_and_skyline_parity ............   Passed    0.03 sec
+        Start  78: bounded_rendering_policy
+ 78/103 Test  #78: bounded_rendering_policy .....................   Passed    0.03 sec
+        Start  79: current_browser_race_rules
+ 79/103 Test  #79: current_browser_race_rules ...................   Passed    0.02 sec
+        Start  80: race_session_lifecycle
+ 80/103 Test  #80: race_session_lifecycle .......................   Passed    0.02 sec
+        Start  81: menu_activation_policy
+ 81/103 Test  #81: menu_activation_policy .......................   Passed    0.03 sec
+        Start  82: browser_route_recovery
+ 82/103 Test  #82: browser_route_recovery .......................   Passed    0.03 sec
+        Start  83: all_browser_road_geometry
+ 83/103 Test  #83: all_browser_road_geometry ....................   Passed    0.04 sec
+        Start  84: browser_road_picker
+ 84/103 Test  #84: browser_road_picker ..........................   Passed    0.06 sec
+        Start  85: browser_city_clearance
+ 85/103 Test  #85: browser_city_clearance .......................   Passed    0.07 sec
+        Start  86: browser_finish_results
+ 86/103 Test  #86: browser_finish_results .......................   Passed    0.16 sec
+        Start  87: browser_collision_primitives
+ 87/103 Test  #87: browser_collision_primitives .................   Passed    0.04 sec
+        Start  88: browser_course_furniture
+ 88/103 Test  #88: browser_course_furniture .....................   Passed    0.04 sec
+        Start  89: browser_shared_scenery
+ 89/103 Test  #89: browser_shared_scenery .......................   Passed    0.04 sec
+        Start  90: browser_hero_asset
+ 90/103 Test  #90: browser_hero_asset ...........................   Passed    0.03 sec
+        Start  91: browser_canonical_city_core
+ 91/103 Test  #91: browser_canonical_city_core ..................   Passed    0.06 sec
+        Start  92: browser_cockpit_cpu_png_decode
+ 92/103 Test  #92: browser_cockpit_cpu_png_decode ...............   Passed    0.06 sec
+        Start  93: browser_one_ring_nose_reticle
+ 93/103 Test  #93: browser_one_ring_nose_reticle ................   Passed    0.03 sec
+        Start  94: browser_reticle_projection_visibility
+ 94/103 Test  #94: browser_reticle_projection_visibility ........   Passed    0.03 sec
+        Start  95: browser_fallback_glyph_cpu_decode_layout
+ 95/103 Test  #95: browser_fallback_glyph_cpu_decode_layout .....   Passed    0.03 sec
+        Start  96: browser_hud_readout_font_metrics
+ 96/103 Test  #96: browser_hud_readout_font_metrics .............   Passed    0.03 sec
+        Start  97: browser_menu_help_keycaps
+ 97/103 Test  #97: browser_menu_help_keycaps ....................   Passed    0.03 sec
+        Start  98: browser_menu_header_geometry
+ 98/103 Test  #98: browser_menu_header_geometry .................   Passed    0.03 sec
+        Start  99: browser_button_typography
+ 99/103 Test  #99: browser_button_typography ....................   Passed    0.03 sec
+        Start 100: browser_spin_readout_typography
+100/103 Test #100: browser_spin_readout_typography ..............   Passed    0.03 sec
+        Start 101: browser_edge_arrow_asset_layout
+101/103 Test #101: browser_edge_arrow_asset_layout ..............   Passed    0.03 sec
+        Start 102: browser_ui_font_cpu_atlas
+102/103 Test #102: browser_ui_font_cpu_atlas ....................   Passed    0.03 sec
+        Start 103: browser_roadster_pod_transforms
+103/103 Test #103: browser_roadster_pod_transforms ..............   Passed    0.03 sec
+
+100% tests passed out of 103
+
+Total Test time (real) = 105.81 sec

@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-04T13:24:18.914419+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/audio-dispatch-capture/source-reference.json",
+    "sha256": "e90620cbc981e23934784964fc7d7d3725a8ae5d2491f35a69947394eeb7f0e0"
+  },
+  "files": [
+    {
+      "path": "src/core/rr_audio_dispatch.h",
+      "sha256": "bef5b5279b7d10fe4d72c04b0cd9f127bad0b62dd74a374a21334ac9c6520409"
+    },
+    {
+      "path": "src/core/rr_audio_dispatch.c",
+      "sha256": "e8c90d0640b11c1b17548ec04ba9bfa59880237ead6da418b745e17499945613"
+    },
+    {
+      "path": "tests/test_audio_dispatch.c",
+      "sha256": "8e4b4d43128a2927f2e294e4eefa3c8bc67d7dcc45ee04d6965f90f358cf30c2"
+    },
+    {
+      "path": "tests/audio_dispatch_reference.h",
+      "sha256": "9653adeb96aa62c154a11f525c90827accee2eaac4e55187e5a43682b024cf70"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "954360538d62ed067dbea5cf7cc474b8023628d8a0340ac71c3a29883cf4c209"
+    }
+  ],
+  "tests": {
+    "native_full": "146/146 CPU tests passed",
+    "web_full": "146/146 CPU tests passed",
+    "additional_advancing_clock_extension": "Focused1/1 passed on each target after test-only extension; full-suite logs/fixed-clock fixtures preserved separately; dispatcher implementation unchanged.",
+    "source_cases": 216,
+    "voice_commands": 253,
+    "recipe_and_offset_rng_observations": 73,
+    "per_helper_advancing_clock_cases": 18,
+    "metrics": {
+      "native": {
+        "checks": 7265,
+        "offset_callbacks_including_2_invalid_provider_boundary_calls": 63,
+        "max_command_error": 0.0,
+        "bank_bytes": 304,
+        "dispatch_bytes": 728
+      },
+      "web": {
+        "checks": 7265,
+        "offset_callbacks_including_2_invalid_provider_boundary_calls": 63,
+        "max_command_error": 0.0,
+        "bank_bytes": 304,
+        "dispatch_bytes": 720
+      }
+    }
+  },
+  "main_unchanged": true,
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "production_audio_active": false,
+  "production_full_pack_active": false,
+  "graphics_executed": false,
+  "audio_context_or_device_created": false,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "9d30adf580c5df497c1b430b1110fad3c9fe317c8b127eb0f232c65caa59744d",
+  "previous_client_sha256": "76964deff1d96fa397d2d905822093f7768a7f94a5e735b82f1bc1bd45df6e10",
+  "scope": "Independent shared-C voice admission/scheduling targets and explicit callback-token retirement; not PCM/DSP/node allocation/backend or audible output.",
+  "source_behavior": [
+    "Context/gain<=.002/18-voice guard per request; delayed voices count on admission.",
+    "Master mute/volume do not optimize away source cue admission/RNG.",
+    "Tone/rumble gain/frequency target times, stop tail, filter Q and optional panner clamping.",
+    "Only admitted rumble consumes offset RNG, after its voice increment; recipe blaster draw remains caller-owned.",
+    "No clock-based retirement; ended/cancel tokens retire once and stale callbacks cannot free a reused slot within a bank lifetime."
+  ],
+  "remaining": [
+    "DSP/oscillator/noise/filter/compressor/reverb/sample/panner rendering, cold initialization, backend/device/threading and audible acceptance remain unimplemented/unqualified.",
+    "Explicit audio_time is a fixed-clock batch input; advancing clocks are supported/tested via single-request composition. Backend clock acquisition remains caller-owned.",
+    "Invalid provider partial reservations/draw counts are a documented C failure policy, not invalid-WebAudio exception equivalence; caller must retire tokens and not replay.",
+    "Bank construction/recreation requires old backend callbacks quiesced; device epoch/restart/thread marshalling still external.",
+    "Native graphics remains pending explicit authorization; no desktop/process/launch retry performed."
+  ]
+}

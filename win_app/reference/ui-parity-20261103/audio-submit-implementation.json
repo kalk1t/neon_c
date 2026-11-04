@@ -1,0 +1,75 @@
+{
+  "created_utc": "2026-11-04T13:41:58.668832+00:00",
+  "browser_version": "0.2.16",
+  "reused_oracle": {
+    "path": "reference/ui-parity-20261103/audio-dispatch-capture/source-reference.json",
+    "sha256": "e90620cbc981e23934784964fc7d7d3725a8ae5d2491f35a69947394eeb7f0e0",
+    "cases": 216,
+    "commands": 253,
+    "source_rng_observations": 73,
+    "advancing_clock_cases": 18,
+    "qualification": "Existing original-Sound inert-node observations reused; fresh C submission API calls, not a fresh browser/audio capture."
+  },
+  "files": [
+    {
+      "path": "src/core/rr_audio_submit.h",
+      "sha256": "f6e276104315f25b29e53f8652006fa1f9dba72925bb831455ed039b3c4c74d4"
+    },
+    {
+      "path": "src/core/rr_audio_submit.c",
+      "sha256": "f9af2806b69e915e17685d2f0fcbfd7352e443cd768edcf763fe70e09b6f7e7d"
+    },
+    {
+      "path": "tests/test_audio_submit.c",
+      "sha256": "971d13f38b7b8aceec2b66861bd0302c76bf4d63990b8fd7c9363dfa1c25ed15"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "456e2b6401707cbbc2eb45798a6baf1128743e9cad25b2b7ef53074b211408e0"
+    }
+  ],
+  "tests": {
+    "native": "147/147 full CPU suite passed",
+    "web": "147/147 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "checks": 7216,
+        "random_callbacks_including_failure_boundaries": 78,
+        "clock_callbacks_including_failure_boundaries": 258,
+        "max_command_error": 0.0,
+        "submission_bytes": 1104
+      },
+      "web": {
+        "checks": 7216,
+        "random_callbacks_including_failure_boundaries": 78,
+        "clock_callbacks_including_failure_boundaries": 258,
+        "max_command_error": 0.0,
+        "submission_bytes": 1080
+      }
+    },
+    "extra": "No-context/full-cap blaster jitter, skipped clock reads, per-helper clocks, valid-prefix clock/RNG failures, reserved token retirement, malformed-bank/enum preservation and unused parameter acceptance."
+  },
+  "connected_capabilities": [
+    "Existing rr_audio_cue_recipe",
+    "Existing rr_audio_dispatch/voice token bank",
+    "Single global RNG callback for unconditional blaster jitter plus admitted-only rumble offsets",
+    "Caller-owned backend clock read once per admitted helper",
+    "Ordered partial-result/error propagation with no cue/tick replay"
+  ],
+  "main_unchanged": true,
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "existing_recipe_and_dispatch_unchanged": true,
+  "production_audio_active": false,
+  "production_full_pack_active": false,
+  "audio_context_or_device_created": false,
+  "graphics_executed": false,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "1db34966f32701feb2a3ff5cd7c01db323140f61294eff471fe3e7022834eea9",
+  "previous_client_sha256": "9d30adf580c5df497c1b430b1110fad3c9fe317c8b127eb0f232c65caa59744d",
+  "remaining": [
+    "No gameplay event-hook/main binding, graph nodes, PCM/DSP, backend sample clock or audible output/device acceptance.",
+    "Caller must marshal ended/cancel delivery to the bank owner and quiesce old callbacks before bank recreation.",
+    "Invalid provider/plan failure policy is C-owned partial-work accounting, not invalid-WebAudio exception qualification.",
+    "Graphics permission remains pending; no game launch, desktop/process control or denied-action retry occurred."
+  ]
+}

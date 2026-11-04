@@ -1,4 +1,5 @@
 #include "rr_input_preferences.h"
+#include "rr_offline_best_codec.h"
 #include <string.h>
 #include <stdio.h>
 #if defined(__EMSCRIPTEN__)
@@ -87,4 +88,77 @@ RRPreferenceStatus rr_input_preferences_tick(RRInputPreferences *s,RRMouseSettin
  if(!s->dirty)return s->status;if(!s->writable)return s->status;
  if(now<s->retry_at)return s->status;
  if(force||now-s->changed_at>=.25){RRPreferenceStatus status=rr_input_preferences_save(s,value);if(status!=RR_PREF_OK)s->retry_at=now+2;return status;}return s->status;
+}
+
+
+RRPreferenceStatus rr_units_preferences_open(RRUnitsPreferences *s,const char *path,RRSpeedUnit *value){
+ if(!s||!value)return RR_PREF_UNAVAILABLE;memset(s,0,sizeof(*s));*value=s->saved=s->pending=RR_SPEED_KMH;
+ RRInputPreferences *b=&s->blob;b->status=RR_PREF_UNAVAILABLE;
+ if(!path||strlen(path)>=sizeof(b->path))return b->status;memcpy(b->path,path,strlen(path)+1);
+ char raw[RR_INPUT_SETTINGS_BYTES+1];size_t size=0;int read=read_blob(path,raw,&size);
+ if(read<0)return b->status=read==-2?RR_PREF_INVALID:RR_PREF_UNAVAILABLE;
+ if(!read){b->writable=true;return b->status=RR_PREF_MISSING;}
+ b->existed=true;b->baseline_size=size;memcpy(b->baseline,raw,size);
+ if(size!=3||(memcmp(raw,"kmh",3)&&memcmp(raw,"mph",3)))return b->status=RR_PREF_INVALID;
+ *value=s->saved=s->pending=memcmp(raw,"mph",3)?RR_SPEED_KMH:RR_SPEED_MPH;b->writable=true;return b->status=RR_PREF_OK;
+}
+RRPreferenceStatus rr_units_preferences_default(RRUnitsPreferences *s,RRSpeedUnit *value){
+#if defined(__EMSCRIPTEN__)
+ return rr_units_preferences_open(s,"neon.units",value);
+#else
+ wchar_t base[RR_SETTINGS_PATH_BYTES];char path[RR_SETTINGS_PATH_BYTES];DWORD n=GetEnvironmentVariableW(L"LOCALAPPDATA",base,RR_SETTINGS_PATH_BYTES);
+ if(!n||n>=RR_SETTINGS_PATH_BYTES||n+64>=RR_SETTINGS_PATH_BYTES)return rr_units_preferences_open(s,NULL,value);
+ const wchar_t suffix[]=L"\\RoadstersRace\\speed-units-v1.txt";memcpy(base+n,suffix,sizeof(suffix));
+ if(!WideCharToMultiByte(CP_UTF8,WC_ERR_INVALID_CHARS,base,-1,path,RR_SETTINGS_PATH_BYTES,NULL,NULL))return rr_units_preferences_open(s,NULL,value);
+ RRPreferenceStatus status=rr_units_preferences_open(s,path,value);s->blob.create_parent=true;return status;
+#endif
+}
+RRPreferenceStatus rr_units_preferences_save(RRUnitsPreferences *s,RRSpeedUnit value){
+ if(!s)return RR_PREF_UNAVAILABLE;RRInputPreferences *b=&s->blob;if(!b->writable)return RR_PREF_READ_ONLY;
+ if(value!=RR_SPEED_KMH&&value!=RR_SPEED_MPH)return b->status=RR_PREF_INVALID;
+ const char *raw=value==RR_SPEED_MPH?"mph":"kmh";RRPreferenceStatus status=replace_blob(b,raw,3);b->status=status;
+ if(status==RR_PREF_CONFLICT)b->writable=false;
+ if(status==RR_PREF_OK){memcpy(b->baseline,raw,3);b->baseline_size=3;b->existed=true;s->saved=s->pending=value;b->dirty=false;}
+ return status;
+}
+RRPreferenceStatus rr_units_preferences_tick(RRUnitsPreferences *s,RRSpeedUnit value,double now,bool force){
+ if(!s||(value!=RR_SPEED_KMH&&value!=RR_SPEED_MPH)||!isfinite(now))return RR_PREF_INVALID;
+ RRInputPreferences *b=&s->blob;
+ if(value!=s->pending){s->pending=value;b->changed_at=now;b->retry_at=0;b->dirty=value!=s->saved;}
+ if(!b->dirty||!b->writable||now<b->retry_at)return b->status;
+ if(force||now-b->changed_at>=.25){RRPreferenceStatus status=rr_units_preferences_save(s,value);if(status!=RR_PREF_OK)b->retry_at=now+2;return status;}return b->status;
+}
+
+
+RRPreferenceStatus rr_offline_best_open(RROfflineBestPreferences *s,const char *path,double *seconds){
+ if(!s||!seconds)return RR_PREF_UNAVAILABLE;memset(s,0,sizeof(*s));*seconds=0;RRInputPreferences *b=&s->blob;b->status=RR_PREF_UNAVAILABLE;
+ if(!path||strlen(path)>=sizeof(b->path))return b->status;memcpy(b->path,path,strlen(path)+1);
+ char raw[RR_INPUT_SETTINGS_BYTES+1];size_t size=0;int read=read_blob(path,raw,&size);
+ if(read<0)return b->status=read==-2?RR_PREF_INVALID:RR_PREF_UNAVAILABLE;
+ if(!read){b->writable=true;return b->status=RR_PREF_MISSING;}
+ b->existed=true;b->baseline_size=size;memcpy(b->baseline,raw,size);
+ if(!rr_offline_best_decode(raw,size,seconds))return b->status=RR_PREF_INVALID;
+ s->saved=s->pending=*seconds;b->writable=true;return b->status=RR_PREF_OK;
+}
+RRPreferenceStatus rr_offline_best_default(RROfflineBestPreferences *s,int road_id,double *seconds){
+ if(road_id<1||road_id>9)return rr_offline_best_open(s,NULL,seconds);
+#if defined(__EMSCRIPTEN__)
+ char path[64];snprintf(path,sizeof(path),"neon.win.offline.best.r%d",road_id);return rr_offline_best_open(s,path,seconds);
+#else
+ wchar_t base[RR_SETTINGS_PATH_BYTES],suffix[64];char path[RR_SETTINGS_PATH_BYTES];DWORD n=GetEnvironmentVariableW(L"LOCALAPPDATA",base,RR_SETTINGS_PATH_BYTES);
+ if(!n||n>=RR_SETTINGS_PATH_BYTES||n+64>=RR_SETTINGS_PATH_BYTES)return rr_offline_best_open(s,NULL,seconds);
+ int wrote=swprintf(suffix,64,L"\\RoadstersRace\\offline-best-r%d-v1.txt",road_id);if(wrote<0||wrote>=64)return rr_offline_best_open(s,NULL,seconds);memcpy(base+n,suffix,((size_t)wrote+1)*sizeof(wchar_t));
+ if(!WideCharToMultiByte(CP_UTF8,WC_ERR_INVALID_CHARS,base,-1,path,RR_SETTINGS_PATH_BYTES,NULL,NULL))return rr_offline_best_open(s,NULL,seconds);
+ RRPreferenceStatus status=rr_offline_best_open(s,path,seconds);s->blob.create_parent=true;return status;
+#endif
+}
+RRPreferenceStatus rr_offline_best_tick(RROfflineBestPreferences *s,double seconds,double now,bool force){
+ if(!s||!isfinite(seconds)||seconds<0||!isfinite(now))return RR_PREF_INVALID;RRInputPreferences *b=&s->blob;
+ if(seconds>0&&(s->pending==0||seconds<s->pending)){s->pending=seconds;b->changed_at=now;b->retry_at=0;b->dirty=s->pending!=s->saved;}
+ if(!b->dirty||!b->writable||now<b->retry_at)return b->status;
+ if(!force&&now-b->changed_at<.25)return b->status;
+ char raw[26];size_t size=rr_offline_best_encode(raw,sizeof(raw),s->pending);if(!size)return b->status=RR_PREF_INVALID;
+ RRPreferenceStatus status=replace_blob(b,raw,size);b->status=status;if(status==RR_PREF_CONFLICT)b->writable=false;
+ if(status==RR_PREF_OK){memcpy(b->baseline,raw,size);b->baseline_size=size;b->existed=true;b->dirty=false;s->saved=s->pending;}else b->retry_at=now+2;
+ return status;
 }

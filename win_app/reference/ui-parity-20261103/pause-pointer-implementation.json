@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-11-04T12:53:34.722729+00:00",
+  "browser_version": "0.2.16",
+  "source_reference": {
+    "path": "reference/ui-parity-20261103/pause-pointer-capture/source-reference.json",
+    "sha256": "3e7deef3092f5c1c11004b6f33f9f651b4572230e9b8761fdf98bb38718ed09e",
+    "unchanged_from_1226_sync": true
+  },
+  "files": [
+    {
+      "path": "src/app/main.c",
+      "sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8"
+    },
+    {
+      "path": "src/presentation/rr_showcase_input.h",
+      "sha256": "bdc6d442fb6c706a3cd05a69869063783bafb667a0707b0fd79f9ff566e6748d"
+    },
+    {
+      "path": "tests/test_pause_pointer.c",
+      "sha256": "167ca8217a88d150928349c4c890f66e400c625a352969770e4a80f7b12f53b9"
+    },
+    {
+      "path": "tests/pause_pointer_reference.h",
+      "sha256": "de3bddf44dff4363b972228520d1832d1863fe318987cc1cdc84f7ca91b587b7"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "22edc95b2d89237176dccec8f8a2b389b1b1b1f45ad761f7b50eaa3b133b2704"
+    }
+  ],
+  "tests": {
+    "native": "145/145 CPU tests passed",
+    "web": "145/145 CPU tests passed",
+    "callback_states": 216,
+    "sequences": 18,
+    "summaries": {
+      "native": {
+        "checks": 894,
+        "previous_primary_only_source_mismatches": 174,
+        "max_source_error": 0.0
+      },
+      "web": {
+        "checks": 894,
+        "previous_primary_only_source_mismatches": 174,
+        "max_source_error": 0.0
+      }
+    },
+    "extra": "Control hit exclusion, any-button release, outside moves/wheel exclusion, native phase/blur/missing-release/nonfinite/coalesced guards and actual flight-RMB/aim isolation"
+  },
+  "active_main_wired": true,
+  "main_changes_limited_to_pause_pointer_adapter": true,
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "76964deff1d96fa397d2d905822093f7768a7f94a5e735b82f1bc1bd45df6e10",
+  "previous_client_sha256": "b50f8531d68b7130be396fa66fc3ce1f359f5f5709818f2147fbecba72f24fdb",
+  "graphics_executed": false,
+  "resources": "One small frame input record and three standard-button polls; no persistent allocations/assets/GPU resources or new camera range/render caps.",
+  "remaining": [
+    "Native standard-button gesture delivery, actual control hit-testing and camera appearance remain unrun under graphics approval gate.",
+    "Frame ordering/coalescing is a native adapter; browser UA defaults, arbitrary event ordering, extra buttons and touch are not qualified.",
+    "Menu showcase/new renderer modes and production full-pack/rewards/combat remain inactive/unqualified; glyph and whole-scene material/resource gaps unchanged."
+  ]
+}

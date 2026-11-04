@@ -1,0 +1,12 @@
+[100%] Built target rr_core
+[100%] Building C object CMakeFiles/rr_audio_dispatch_tests.dir/tests/test_audio_dispatch.c.obj
+test_audio_dispatch.c
+[100%] Linking C executable rr_audio_dispatch_tests.exe
+[100%] Built target rr_audio_dispatch_tests
+Test project C:/Users/User/Projects/neon_c/win_app/build/audio-dispatch-native
+    Start 70: browser_audio_voice_dispatch_lifecycle
+1/1 Test #70: browser_audio_voice_dispatch_lifecycle ...   Passed    0.03 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.06 sec

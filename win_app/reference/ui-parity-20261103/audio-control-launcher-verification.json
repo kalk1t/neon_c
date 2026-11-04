@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "6081048b61e5b06f18fcbe8e36a102860bc76e4d61f75237ff50f0cac4ec588c",
+  "target": {
+    "path": "build/audio-control-native/bin/RoadstersRace.exe",
+    "sha256": "df768c5acdad0bdc6cc82beb35b253e587544d63361eec6af143b19ed0dddece"
+  },
+  "static_only": true,
+  "executed": false
+}

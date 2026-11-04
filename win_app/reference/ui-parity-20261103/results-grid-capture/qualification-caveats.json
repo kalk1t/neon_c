@@ -1,0 +1,17 @@
+{
+  "nominalTracks": "335.734375/258.25 are observed for the nominal680px card, not invariant source tracks. Auto minimums in the unmodified1.3fr/1fr grid change tracks under valid long words.",
+  "longWExample": {
+    "fixture": "three-16W-crown-leader",
+    "tracks": [
+      308.96875,
+      308.96875
+    ],
+    "cardWidth": 680
+  },
+  "floatFlow": "A relocated float need not increase its li height; floats can affect later rows or sit side-by-side there. Do not infer independent per-row height from text/value count.",
+  "marker": "::marker style and ordinals recorded; DOM Range does not expose its rectangle. No marker rectangle fabricated. Review pixels are evidence only.",
+  "profile": "Header/footer values are explicitly frozen fixture inputs. Account output slot empty, unlock/next hidden; no source account method invoked or fabricated service banner. Heights are not a reconstruction of the existing491.1875px native profile.",
+  "intrinsic": "Active card/grid/column boxes are source layout. naturalHeightProbe is an explicitly instrumented offscreen absolute auto-height/BFC clone at the measured width, removed before active scroll measurements; it is not a production DOM change.",
+  "scroll": "Programmatic scrollTop0 and actual clamped bottom recorded. No wheel multiplier, focus, hit testing, native clipping, hardware input or frame qualification.",
+  "threshold": "Exact equality fits in recorded cases. The last observed fitting pair reports residual-1/64px; next observed over pair reports-2/64px and relocates. This does not establish a universal epsilon outside this source font/layout/browser corpus."
+}

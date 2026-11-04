@@ -1,0 +1,1 @@
+First CPU capture stopped before oracle output: attempted assigning Input.locked, which is a getter over document.pointerLockElement. Fixture now provides an inert virtual document with pointerLockElement and invokes the actual getter. No OS/browser pointer lock or security control was accessed.

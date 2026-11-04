@@ -43,7 +43,7 @@ static void shot_notice_current(void *p,unsigned event,const RRShot *s,RRLocalRa
     if(event==RR_SHOT_RACER_IMPACT)damaged(l,r,rr_combat_shot_damage(s,r,notice->race_active));
 }
 static void shot_notice(void *p,unsigned event,const RRShot *shot,RRLocalRacer *r,RRVec3 point){ProjectileNotice notice={p,true};shot_notice_current(&notice,event,shot,r,point);}
-typedef struct {RRFireLocal *local;double speed;const RRFireBinding *binding;} Dispatch;
+typedef struct {RRFireLocal *local;double speed;const RRFireBinding *binding;bool current_flight;} Dispatch;
 static void dispatch(void *p,unsigned kind,const RRArsenalEvents *e) {
     Dispatch *d=p;RRFireLocal *l=d->local;RRFireOptions o={0};
     if(kind==RR_ARSENAL_BOLT||kind==RR_ARSENAL_MISSILE) {
@@ -69,7 +69,7 @@ static void dispatch(void *p,unsigned kind,const RRArsenalEvents *e) {
             effect(l,RR_FX_FLASH);
             if(d->binding&&d->binding->flash){RRFireFlash flash={from,color};d->binding->flash(d->binding->flash_context,&flash);}
         }
-    } else if(kind==RR_ARSENAL_SPIN)rr_car_dodge(&l->player->car,e->spin_side);
+    } else if(kind==RR_ARSENAL_SPIN){if(d->current_flight)rr_car_dodge_current(&l->player->car,e->spin_side);else rr_car_dodge(&l->player->car,e->spin_side);}
     else if(kind==RR_ARSENAL_EMP) {
         effect(l,RR_FX_WAVE);
         (void)rr_shots_purge(l->shots,&l->count,l->player->car.pos,95,l->player,shot_notice,l);
@@ -83,16 +83,16 @@ static void dispatch(void *p,unsigned kind,const RRArsenalEvents *e) {
     if(l->shake&&kind==RR_ARSENAL_MISSILE)*l->shake+=.25;
 }
 void rr_fire_player_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,RRArsenalEvents *events) {
-    Dispatch d={l,fmax(0,l->player->car.speed),NULL};
+    Dispatch d={l,fmax(0,l->player->car.speed),NULL,false};
     rr_arsenal_step_dispatch(s,dt,input,l->random,l->random_ctx,dispatch,&d,events);
 }
-bool rr_fire_player_current_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){
+static bool current_player_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events,bool current_flight){
     if(!l)return false;
     if(!s||!events||l->error||l->fx.error){l->error=true;return false;}
     if(!l->player||!l->random||!binding||binding->model<0||binding->model>3){l->error=true;return false;}
     for(int i=0;i<16;i++)if(!isfinite(binding->model_world[i])){l->error=true;return false;}
     for(int side=-1;side<=1;side++){RRVec3 p=rr_weapon_current_muzzle(binding->model,side,binding->model_world);if(!isfinite(p.x)||!isfinite(p.y)||!isfinite(p.z)){l->error=true;return false;}}
-    Dispatch d={l,fmax(0,l->player->car.speed),binding};
+    Dispatch d={l,fmax(0,l->player->car.speed),binding,current_flight};
     rr_weapon_current_arsenal_dispatch(s,dt,input,l->random,l->random_ctx,dispatch,&d,events);return !l->error&&!l->fx.error;
 }
 RRShotStreak rr_fire_shot_streak(const RRShot *shot,RRVec3 camera){
@@ -106,3 +106,10 @@ void rr_fire_projectiles_tick(RRFireLocal *l,double dt,double floor_height,RRSho
     rr_fire_projectiles_current_tick(l,dt,floor_height,world,ctx,true);
 }
 void rr_fire_clear(RRFireLocal *l){rr_shots_clear(&l->count);}
+
+void rr_fire_effect(RRFireLocal *l,unsigned kind){effect(l,kind);}
+unsigned rr_fire_damage(RRFireLocal *l,RRLocalRacer *r,double amount,RRShotKind kind,bool active){unsigned result=rr_combat_damage(r,amount,kind,active);damaged(l,r,result);return result;}
+size_t rr_fire_purge(RRFireLocal *l,RRVec3 origin,double radius,RRLocalRacer *owner){return rr_shots_purge(l->shots,&l->count,origin,radius,owner,shot_notice,l);}
+
+bool rr_fire_player_current_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,false);}
+bool rr_fire_player_v216_step(RRFireLocal *l,RRArsenal *s,double dt,RRArsenalInput input,const RRFireBinding *binding,RRArsenalEvents *events){return current_player_step(l,s,dt,input,binding,events,true);}

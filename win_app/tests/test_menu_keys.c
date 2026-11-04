@@ -8,8 +8,8 @@ static int failures,checks;
 static RRMenuKeyFrame frame(unsigned mask){RRMenuKeyFrame f={0};f.active=f.focused=true;f.enabled=mask;f.pointer_target=-1;return f;}
 int main(void){RRMenuKeys k;RRMouseSettings settings={1,false};unsigned all=(1u<<RR_MENU_FOCUS_COUNT)-1;RRMenuKeyResult r;
  CHECK(source_sens_min==.3&&source_sens_max==2.5&&source_sens_step==.05);
- rr_menu_keys_reset(&k);RRMenuKeyFrame f=frame(all);f.tab=true;for(int i=0;i<10;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==i%5&&k.keyboard);}
- f.shift=true;for(int i=0;i<10;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==3-(i%5)||(i%5==4&&k.focus==4));}
+ rr_menu_keys_reset(&k);RRMenuKeyFrame f=frame(all);f.tab=true;for(int i=0;i<12;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==i%RR_MENU_FOCUS_COUNT&&k.keyboard);}
+ f.shift=true;for(int i=0;i<12;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==(RR_MENU_FOCUS_COUNT-2-i%RR_MENU_FOCUS_COUNT+RR_MENU_FOCUS_COUNT)%RR_MENU_FOCUS_COUNT);}
  // Source-supported web subset has no native QUIT; failed scene skips start buttons.
  rr_menu_keys_reset(&k);f=frame(15);f.tab=true;for(int i=0;i<8;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==i%4);}
  rr_menu_keys_reset(&k);f=frame((1u<<2)|(1u<<3));f.tab=true;for(int i=0;i<8;i++){rr_menu_keys_step(&k,f,&settings);CHECK(k.focus==2+i%2);}

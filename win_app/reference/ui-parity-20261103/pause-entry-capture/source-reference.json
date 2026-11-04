@@ -1,0 +1,12 @@
+{
+  "version": "0.2.16",
+  "hashes": {
+    "package.json": "b43a158a88179ab24873e7df8911c4218ecf6e76cc55b22acdb0bfd0bffa2749",
+    "src/main.js": "a1c5ec6743828f2a0d3be16813611b819cf7a7286238b0d0a19e352974ec0bc9",
+    "src/camera.js": "f50edb8b4870d57f2bb48285b80592218029d38000658c14862cf01e3e8d4000"
+  },
+  "pause": "function pause() {\n  car.model.visible = true; // may be hidden by the first-person camera\n  g.pausedAt = performance.now();\n  g.prevState = g.state;\n  g.state = 'paused';\n  chat.close();\n  input.unlock();\n  Object.assign(show, { yaw: 0.6, pitch: 0.14, dist: 9.5 });\n  hud.show(false);\n  car.showFX(false);\n  $('pause').classList.remove('hidden');\n}",
+  "states": 720,
+  "successful_entries": 12,
+  "scope": "Actual source pause and showcase callbacks/camera in inert Three Vector3 harness. No native input/graphics/scene-loading qualification. Native stale-drag cancellation tested separately."
+}

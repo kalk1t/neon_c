@@ -1,0 +1,8 @@
+{
+  "reason": "New test normalized only visible child rectangles. Supplied observations are parent-relative for every child, so display:none rects contain -panel origin and restore to absolute0. Fixed expectation translation for all children; original oracle/layout/legacy adapter unchanged. Initial full suites passed120existing tests and failed only this new expectation check.",
+  "runtime_hashes_unchanged": {
+    "src/presentation/rr_results_card.h": "bb4fc9abb317f9dc204bc7ae3485565419d6f249eab473f5caa2edbfd2be1ab1",
+    "src/presentation/rr_race_ui.h": "3e377cbe014a92387a1c7011693c85c9e6409f4da2b0abc8cd5b7cdcdb4b50a9"
+  },
+  "capture_metadata_correction": "Initial capture helper assumed three full-card scales and stopped before writing an oracle. Package inventory provides only1x/2x full-card refs:20observations for10states. Corrected count before generating/running tests; no3x browser observation claim."
+}

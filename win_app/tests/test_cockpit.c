@@ -30,5 +30,8 @@ int main(void)
     for(size_t i=0;i<sizeof(seat_reference)/sizeof(seat_reference[0]);i++){
         const double *v=seat_reference[i];car.fwd=rr_v3(v[0],v[1],v[2]);seat=rr_cockpit_seat(&car);CHECK(rr_length(rr_sub(seat.position,rr_v3(v[3],v[4],v[5])))<1e-12);CHECK(rr_length(rr_sub(seat.forward,rr_v3(v[6],v[7],v[8])))<1e-12);
     }
+    RRCKReadout units;rr_cockpit_readout(&units,0,0,0,0,0,false,1,2,0);CHECK(!strcmp(units.unit,"KM/H"));
+    rr_cockpit_speed_unit(&units,hypot(30,40),RR_SPEED_MPH);CHECK(!strcmp(units.speed,"112")&&!strcmp(units.unit,"MPH"));
+    rr_cockpit_speed_unit(&units,25,RR_SPEED_KMH);CHECK(!strcmp(units.speed,"90")&&!strcmp(units.unit,"KM/H"));
     printf("Cockpit: 18 source fits, 36 source readouts, 3 car layouts, visibility/easing/seat: %d failures\n",failures);return failures?1:0;
 }

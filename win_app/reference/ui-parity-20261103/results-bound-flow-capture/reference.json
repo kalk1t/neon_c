@@ -1,0 +1,3570 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersResultsWrapping-v1",
+  "cases": [
+    {
+      "fixture": "solo-3",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "ACE"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          2147483647
+        ]
+      ]
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 1,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "IIIIIIIIIIIIIIII",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWW-WWWW-WWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          1,
+          119.0,
+          false
+        ],
+        [
+          2,
+          120.0,
+          false
+        ],
+        [
+          4,
+          122.0,
+          false
+        ],
+        [
+          5,
+          123.0,
+          false
+        ],
+        [
+          7,
+          125.0,
+          false
+        ],
+        [
+          8,
+          126.0,
+          false
+        ],
+        [
+          10,
+          128.0,
+          false
+        ],
+        [
+          0,
+          150.0,
+          true
+        ],
+        [
+          3,
+          150.0,
+          true
+        ],
+        [
+          6,
+          150.0,
+          true
+        ],
+        [
+          9,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWSl",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWxij",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWIGHt",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWUH",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWI6k",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWICk",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "WWWWWWWWWWWWxij"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 1,
+      "offset": "bottom",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "ACE"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          2147483647
+        ]
+      ]
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 1,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "IIIIIIIIIIIIIIII",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWW-WWWW-WWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          1,
+          119.0,
+          false
+        ],
+        [
+          2,
+          120.0,
+          false
+        ],
+        [
+          4,
+          122.0,
+          false
+        ],
+        [
+          5,
+          123.0,
+          false
+        ],
+        [
+          7,
+          125.0,
+          false
+        ],
+        [
+          8,
+          126.0,
+          false
+        ],
+        [
+          10,
+          128.0,
+          false
+        ],
+        [
+          0,
+          150.0,
+          true
+        ],
+        [
+          3,
+          150.0,
+          true
+        ],
+        [
+          6,
+          150.0,
+          true
+        ],
+        [
+          9,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWSl",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWxij",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWIGHt",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWUH",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWI6k",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWICk",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "WWWWWWWWWWWWxij"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 2,
+      "offset": "bottom",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    },
+    {
+      "fixture": "solo-3",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "ACE"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "solo-16W-large",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW"
+      ],
+      "player": 0,
+      "times": [],
+      "coins": [
+        [
+          0,
+          2147483647
+        ]
+      ]
+    },
+    {
+      "fixture": "three-short-mixed",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-normal",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-player",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWWWWW",
+        "YOU"
+      ],
+      "player": 1,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16W-crown-leader",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16I",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "IIIIIIIIIIIIIIII",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "three-16-hyphen-natural",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWW-WWWW-WWWWWW",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-short-ties-zero",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-long-mixed-large",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          1,
+          119.0,
+          false
+        ],
+        [
+          2,
+          120.0,
+          false
+        ],
+        [
+          4,
+          122.0,
+          false
+        ],
+        [
+          5,
+          123.0,
+          false
+        ],
+        [
+          7,
+          125.0,
+          false
+        ],
+        [
+          8,
+          126.0,
+          false
+        ],
+        [
+          10,
+          128.0,
+          false
+        ],
+        [
+          0,
+          150.0,
+          true
+        ],
+        [
+          3,
+          150.0,
+          true
+        ],
+        [
+          6,
+          150.0,
+          true
+        ],
+        [
+          9,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWSl",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-fit",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWWxij",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-standings-over",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWIGHt",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-exactFit",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWUH",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-fit",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWI6k",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "threshold-coins-over",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "TOP",
+        "WWWWWWWWWWWICk",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "eleven-late-coin-wrap",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "P00",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "WWWWWWWWWWWWxij"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          10,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "narrow-640x480",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWWWW",
+        "ACE",
+        "YOU"
+      ],
+      "player": 2,
+      "times": [
+        [
+          0,
+          120.0,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          150.0,
+          true
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          1000
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "top",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    },
+    {
+      "fixture": "tall-1280x360",
+      "scale": 3,
+      "offset": "bottom",
+      "names": [
+        "WWWWWWWWWWWWWW00",
+        "WWWWWWWWWWWWWW01",
+        "WWWWWWWWWWWWWW02",
+        "WWWWWWWWWWWWWW03",
+        "WWWWWWWWWWWWWW04",
+        "WWWWWWWWWWWWWW05",
+        "WWWWWWWWWWWWWW06",
+        "WWWWWWWWWWWWWW07",
+        "WWWWWWWWWWWWWW08",
+        "WWWWWWWWWWWWWW09",
+        "WWWWWWWWWWWWWW10"
+      ],
+      "player": 5,
+      "times": [
+        [
+          0,
+          123.45,
+          false
+        ],
+        [
+          1,
+          123.45,
+          false
+        ],
+        [
+          2,
+          123.45,
+          false
+        ],
+        [
+          3,
+          123.45,
+          false
+        ],
+        [
+          4,
+          123.45,
+          false
+        ],
+        [
+          5,
+          123.45,
+          false
+        ],
+        [
+          6,
+          123.45,
+          false
+        ],
+        [
+          7,
+          123.45,
+          false
+        ],
+        [
+          8,
+          123.45,
+          false
+        ],
+        [
+          9,
+          123.45,
+          false
+        ],
+        [
+          10,
+          123.45,
+          false
+        ]
+      ],
+      "coins": [
+        [
+          0,
+          2147483647
+        ],
+        [
+          1,
+          2147483646
+        ],
+        [
+          2,
+          2147483645
+        ],
+        [
+          3,
+          2147483644
+        ],
+        [
+          4,
+          2147483643
+        ],
+        [
+          5,
+          2147483642
+        ],
+        [
+          6,
+          2147483641
+        ],
+        [
+          7,
+          2147483640
+        ],
+        [
+          8,
+          2147483639
+        ],
+        [
+          9,
+          2147483638
+        ],
+        [
+          10,
+          2147483637
+        ]
+      ]
+    }
+  ],
+  "scope": "Frozen captured display numbers and roster identity into native command bridge. Display seconds parsed from source shown times, not fresh core/full-pack simulation or graphics acceptance."
+}

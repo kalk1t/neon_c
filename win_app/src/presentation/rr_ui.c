@@ -1,4 +1,5 @@
 #include "rr_ui.h"
+#include "rr_ui_codepoints.h"
 #include "rr_hud_panel_shape.h"
 #include "rr_button_surface.h"
 #include "rr_button_text.h"
@@ -14,11 +15,12 @@ bool rr_ui_load(RRUI *ui)
 {
     const char *paths[]={"assets/ui-theme/Orbitron-500.ttf","assets/ui-theme/Orbitron-700.ttf","assets/ui-theme/Orbitron-900.ttf","assets/ui-theme/Rajdhani-Medium.ttf"};
     Font *fonts[]={&ui->regular,&ui->bold,&ui->heavy,&ui->body};ui->loaded=true;
-    /* One bounded atlas per weight; bold also includes source multiplication U+00D7. */
-    int cps[96];for(int i=0;i<95;i++)cps[i]=32+i;cps[95]=215;
+    /* One bounded atlas per weight, with source glyphs from the same fonts. */
+    int cps[RR_UI_MAX_CODEPOINTS];
     for(int i=0;i<4;i++){
         if(!FileExists(paths[i])){ui->loaded=false;break;}
-        *fonts[i]=LoadFontEx(paths[i],i==3?32:64,cps,i==1?96:95);
+        int count=rr_ui_codepoints(cps,i==1?700:500);
+        *fonts[i]=LoadFontEx(paths[i],i==3?32:64,cps,count);
         if(fonts[i]->texture.id==GetFontDefault().texture.id||!fonts[i]->texture.id){ui->loaded=false;break;}
         SetTextureFilter(fonts[i]->texture,TEXTURE_FILTER_BILINEAR);
         TraceLog(LOG_INFO,"UI_FONT: %s atlas=%dx%d",paths[i],fonts[i]->texture.width,fonts[i]->texture.height);

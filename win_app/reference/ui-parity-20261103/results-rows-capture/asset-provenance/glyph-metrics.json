@@ -1,0 +1,566 @@
+[
+  {
+    "id": "approx-results-15",
+    "codepoint": 8776,
+    "unicode": "U+2248",
+    "context": "estimated standings time",
+    "sourceSelector": "#res-standings li span",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 1,
+    "file": "native-glyphs/approx-results-15@1x.png",
+    "widthPixels": 14,
+    "heightPixels": 10,
+    "drawWidthCSS": 14,
+    "drawHeightCSS": 10,
+    "offsetFromBaselineCSS": {
+      "x": -2,
+      "y": -10
+    },
+    "advanceCSS": 9.90625,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 9.90625,
+    "canvasAdvanceWithoutTracking": 9.90234375,
+    "sourceCapture": "captures/approx-results-15@1x.png",
+    "sourceCrop": {
+      "x": 38,
+      "y": 30,
+      "width": 14,
+      "height": 10
+    },
+    "observedFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(153, 187, 221)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 43, 214)",
+        "textShadow": "rgb(255, 43, 214) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "approx-results-15",
+    "codepoint": 8776,
+    "unicode": "U+2248",
+    "context": "estimated standings time",
+    "sourceSelector": "#res-standings li span",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 2,
+    "file": "native-glyphs/approx-results-15@2x.png",
+    "widthPixels": 26,
+    "heightPixels": 22,
+    "drawWidthCSS": 13,
+    "drawHeightCSS": 11,
+    "offsetFromBaselineCSS": {
+      "x": -1.5,
+      "y": -11
+    },
+    "advanceCSS": 9.90625,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 9.90625,
+    "canvasAdvanceWithoutTracking": 9.90234375,
+    "sourceCapture": "captures/approx-results-15@2x.png",
+    "sourceCrop": {
+      "x": 77,
+      "y": 58,
+      "width": 26,
+      "height": 22
+    },
+    "observedFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(153, 187, 221)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 43, 214)",
+        "textShadow": "rgb(255, 43, 214) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "approx-results-15",
+    "codepoint": 8776,
+    "unicode": "U+2248",
+    "context": "estimated standings time",
+    "sourceSelector": "#res-standings li span",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 3,
+    "file": "native-glyphs/approx-results-15@3x.png",
+    "widthPixels": 39,
+    "heightPixels": 33,
+    "drawWidthCSS": 13,
+    "drawHeightCSS": 11,
+    "offsetFromBaselineCSS": {
+      "x": -1.6666666666666643,
+      "y": -11
+    },
+    "advanceCSS": 9.90625,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 9.90625,
+    "canvasAdvanceWithoutTracking": 9.90234375,
+    "sourceCapture": "captures/approx-results-15@3x.png",
+    "sourceCrop": {
+      "x": 115,
+      "y": 87,
+      "width": 39,
+      "height": 33
+    },
+    "observedFont": [
+      {
+        "familyName": "Arial Black",
+        "postScriptName": "Arial-Black",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(153, 187, 221)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 43, 214)",
+        "textShadow": "rgb(255, 43, 214) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-results-15",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "coin winner prefix",
+    "sourceSelector": "#res-coins li",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 1,
+    "file": "native-glyphs/queen-results-15@1x.png",
+    "widthPixels": 19,
+    "heightPixels": 17,
+    "drawWidthCSS": 19,
+    "drawHeightCSS": 17,
+    "offsetFromBaselineCSS": {
+      "x": -2,
+      "y": -14
+    },
+    "advanceCSS": 15,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 15,
+    "canvasAdvanceWithoutTracking": 15,
+    "sourceCapture": "captures/queen-results-15@1x.png",
+    "sourceCrop": {
+      "x": 38,
+      "y": 26,
+      "width": 19,
+      "height": 17
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(243, 224, 176)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 255, 255)",
+        "textShadow": "rgb(255, 160, 18) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-results-15",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "coin winner prefix",
+    "sourceSelector": "#res-coins li",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 2,
+    "file": "native-glyphs/queen-results-15@2x.png",
+    "widthPixels": 36,
+    "heightPixels": 32,
+    "drawWidthCSS": 18,
+    "drawHeightCSS": 16,
+    "offsetFromBaselineCSS": {
+      "x": -1.5,
+      "y": -13.5
+    },
+    "advanceCSS": 15,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 15,
+    "canvasAdvanceWithoutTracking": 15,
+    "sourceCapture": "captures/queen-results-15@2x.png",
+    "sourceCrop": {
+      "x": 77,
+      "y": 53,
+      "width": 36,
+      "height": 32
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(243, 224, 176)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 255, 255)",
+        "textShadow": "rgb(255, 160, 18) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-results-15",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "coin winner prefix",
+    "sourceSelector": "#res-coins li",
+    "fontSizeCSS": 15,
+    "fontWeight": 700,
+    "deviceScale": 3,
+    "file": "native-glyphs/queen-results-15@3x.png",
+    "widthPixels": 53,
+    "heightPixels": 48,
+    "drawWidthCSS": 17.666666666666668,
+    "drawHeightCSS": 16,
+    "offsetFromBaselineCSS": {
+      "x": -1.3333333333333357,
+      "y": -13.666666666666668
+    },
+    "advanceCSS": 15,
+    "sourceLetterSpacingCSS": 0,
+    "advanceIncludingSourceTrackingCSS": 15,
+    "canvasAdvanceWithoutTracking": 15,
+    "sourceCapture": "captures/queen-results-15@3x.png",
+    "sourceCrop": {
+      "x": 116,
+      "y": 79,
+      "width": 53,
+      "height": 48
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(243, 224, 176)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 255, 255)",
+        "textShadow": "rgb(255, 160, 18) 0px 0px 8px"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-20",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "desktop ranking button",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 20,
+    "fontWeight": 700,
+    "deviceScale": 1,
+    "file": "native-glyphs/queen-menu-20@1x.png",
+    "widthPixels": 24,
+    "heightPixels": 21,
+    "drawWidthCSS": 24,
+    "drawHeightCSS": 21,
+    "offsetFromBaselineCSS": {
+      "x": -2,
+      "y": -18
+    },
+    "advanceCSS": 20,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 23,
+    "canvasAdvanceWithoutTracking": 20,
+    "sourceCapture": "captures/queen-menu-20@1x.png",
+    "sourceCrop": {
+      "x": 38,
+      "y": 28,
+      "width": 24,
+      "height": 21
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-20",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "desktop ranking button",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 20,
+    "fontWeight": 700,
+    "deviceScale": 2,
+    "file": "native-glyphs/queen-menu-20@2x.png",
+    "widthPixels": 44,
+    "heightPixels": 40,
+    "drawWidthCSS": 22,
+    "drawHeightCSS": 20,
+    "offsetFromBaselineCSS": {
+      "x": -1,
+      "y": -17.5
+    },
+    "advanceCSS": 20,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 23,
+    "canvasAdvanceWithoutTracking": 20,
+    "sourceCapture": "captures/queen-menu-20@2x.png",
+    "sourceCrop": {
+      "x": 78,
+      "y": 57,
+      "width": 44,
+      "height": 40
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-20",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "desktop ranking button",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 20,
+    "fontWeight": 700,
+    "deviceScale": 3,
+    "file": "native-glyphs/queen-menu-20@3x.png",
+    "widthPixels": 64,
+    "heightPixels": 59,
+    "drawWidthCSS": 21.333333333333332,
+    "drawHeightCSS": 19.666666666666668,
+    "offsetFromBaselineCSS": {
+      "x": -0.6666666666666643,
+      "y": -17.333333333333332
+    },
+    "advanceCSS": 20,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 23,
+    "canvasAdvanceWithoutTracking": 20,
+    "sourceCapture": "captures/queen-menu-20@3x.png",
+    "sourceCrop": {
+      "x": 118,
+      "y": 86,
+      "width": 64,
+      "height": 59
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-18",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "compact ranking button at max-height820px",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 18,
+    "fontWeight": 700,
+    "deviceScale": 1,
+    "file": "native-glyphs/queen-menu-18@1x.png",
+    "widthPixels": 22,
+    "heightPixels": 19,
+    "drawWidthCSS": 22,
+    "drawHeightCSS": 19,
+    "offsetFromBaselineCSS": {
+      "x": -2,
+      "y": -16
+    },
+    "advanceCSS": 18,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 21,
+    "canvasAdvanceWithoutTracking": 18,
+    "sourceCapture": "captures/queen-menu-18@1x.png",
+    "sourceCrop": {
+      "x": 38,
+      "y": 27,
+      "width": 22,
+      "height": 19
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-18",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "compact ranking button at max-height820px",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 18,
+    "fontWeight": 700,
+    "deviceScale": 2,
+    "file": "native-glyphs/queen-menu-18@2x.png",
+    "widthPixels": 40,
+    "heightPixels": 37,
+    "drawWidthCSS": 20,
+    "drawHeightCSS": 18.5,
+    "offsetFromBaselineCSS": {
+      "x": -1,
+      "y": -16
+    },
+    "advanceCSS": 18,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 21,
+    "canvasAdvanceWithoutTracking": 18,
+    "sourceCapture": "captures/queen-menu-18@2x.png",
+    "sourceCrop": {
+      "x": 78,
+      "y": 54,
+      "width": 40,
+      "height": 37
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  },
+  {
+    "id": "queen-menu-18",
+    "codepoint": 9819,
+    "unicode": "U+265B",
+    "context": "compact ranking button at max-height820px",
+    "sourceSelector": "#btn-ranking",
+    "fontSizeCSS": 18,
+    "fontWeight": 700,
+    "deviceScale": 3,
+    "file": "native-glyphs/queen-menu-18@3x.png",
+    "widthPixels": 60,
+    "heightPixels": 55,
+    "drawWidthCSS": 20,
+    "drawHeightCSS": 18.333333333333332,
+    "offsetFromBaselineCSS": {
+      "x": -1,
+      "y": -16
+    },
+    "advanceCSS": 18,
+    "sourceLetterSpacingCSS": 3,
+    "advanceIncludingSourceTrackingCSS": 21,
+    "canvasAdvanceWithoutTracking": 18,
+    "sourceCapture": "captures/queen-menu-18@3x.png",
+    "sourceCrop": {
+      "x": 117,
+      "y": 81,
+      "width": 60,
+      "height": 55
+    },
+    "observedFont": [
+      {
+        "familyName": "Segoe UI Symbol",
+        "postScriptName": "SegoeUISymbol",
+        "isCustomFont": false,
+        "glyphCount": 1
+      }
+    ],
+    "sourcePaint": {
+      "color": "rgb(255, 226, 160)",
+      "textShadow": "none",
+      "playerRow": {
+        "color": "rgb(255, 226, 160)",
+        "textShadow": "none"
+      }
+    },
+    "format": "Straight RGBA white core mask, tint at draw time; no baked glow or tracking"
+  }
+]

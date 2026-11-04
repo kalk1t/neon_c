@@ -1,0 +1,9 @@
+{
+  "launcher_sha256": "870c072d3a68fcd5a8791ec133755634661dc87c63a597d9645f1f778b730778",
+  "target": "build/car-stats-native/bin/RoadstersRace.exe",
+  "target_sha256": "85dd855423eed99353cfe31c36fe9250127f0adc97aad2bf5c18b15c14d4d89a",
+  "executed": false,
+  "promoted_after_checks": true,
+  "production_profile": "Roadster",
+  "selection_or_ownership_changed": false
+}

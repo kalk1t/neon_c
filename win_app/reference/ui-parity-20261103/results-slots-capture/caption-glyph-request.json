@@ -1,0 +1,20 @@
+{
+  "codepoint": 183,
+  "css_size": 12,
+  "css_weight": 600,
+  "primary": "Orbitron700 selected by source stack",
+  "fallback": "Arial Black / Arial-Black",
+  "device_scales": [
+    1,
+    2,
+    3
+  ],
+  "variant": "white core for source #c9b27a tint, no caption shadow",
+  "required": [
+    "Lossless isolated crop with source baseline x/y bearings, advance and draw dimensions",
+    "Platform-font resolution, source/installed-font hashes and source CSS/font provenance",
+    "CPU decode/checksum and crop roundtrip checks, native raster still unqualified"
+  ],
+  "existing": "v1 dot masks are26CSSpx only; arbitrary downsampling is unqualified.",
+  "constraints": "No game/WebGL/native graphics, paid generation or proprietary font binary redistribution; separate asset-team capture via supported workflow if authorized."
+}

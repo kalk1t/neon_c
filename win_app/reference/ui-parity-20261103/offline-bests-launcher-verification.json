@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "2c74a8871fe1b76563bd178672472760d85b258fe025b97fe7c0b16b6e116d95",
+  "target": "build/offline-bests-native/bin/RoadstersRace.exe",
+  "target_sha256": "971afb727cfdc860a8f095d7f19e7e7d78805ac43deec268f5d7ca41dd51e1ee",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

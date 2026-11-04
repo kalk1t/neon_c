@@ -91,6 +91,13 @@ below (`rivals` updated for the new speed and fire rules).
 on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars within 95 m: the player's damage, rivals
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
+### v0.2.17 (2026-11-04)
+`test:live` 116 / 116, `test:game` 51 / 51: `controls.test.mjs` 19 (+3: each car's top speed and time to 90%, turning,
+health), `race.test.mjs` 27 (+3: a seeker's speed loss and stun per car, bumps split by mass, rivals on ROADSTER stats
+and a TITAN refilling to 4 seekers), `constants.test.mjs` (the relay's `EMP_CAR_MAX` = the biggest `CAR_STATS.emp`).
+CI fix: `shootAt` (`tests/browser/browser.mjs`) sends the shooter's position before the shot; on the ~0.4 fps runner the
+relay's 1.5 s origin check could miss it and one kill was ignored (run 41760860639: killer suite 21 / 29).
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

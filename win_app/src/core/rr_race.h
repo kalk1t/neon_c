@@ -22,4 +22,6 @@ void rr_race_reset(RRRace *race, RRRaceMode mode, RRVec3 spawn, double yaw);
  */
 unsigned rr_race_step(RRRace *race, const RRGate *gates, int count,
                       RRCar *car, RRVec3 previous, double dt, double race_time);
+/* Current source rivals use strict45m aperture; player/legacy stays15m. */
+unsigned rr_race_step_rival_current(RRRace *race,const RRGate *gates,int count,RRCar *car,RRVec3 previous,double dt,double race_time);
 #endif

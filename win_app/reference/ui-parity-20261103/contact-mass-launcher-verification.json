@@ -1,0 +1,9 @@
+{
+  "launcher_sha256": "31e010c31381bcdffc0708afd900210e3cdce49a3688a9a01d905005124eb06d",
+  "target": "build/contact-mass-native/bin/RoadstersRace.exe",
+  "target_sha256": "7e8530924b7ff42bb3713ad56c849f9db16fcfe7abfa6063e8805e3a73a1d57c",
+  "executed": false,
+  "promoted_after_checks": true,
+  "production_profile": "Roadster",
+  "production_full_pack_enabled": false
+}

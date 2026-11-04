@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-11-04T14:10:09.020755+00:00",
+  "capture_package": "0.2.16",
+  "current_package": "0.2.17",
+  "metadata_sync": "contact-mass-capture/post-capture-version-sync.json",
+  "source_comments": "v0.2.17 CAR_STATS",
+  "source_protocol": 11,
+  "release_or_deployment_verified": false,
+  "oracle": "contact-mass-capture/contact-mass-reference.json",
+  "oracle_sha256": "6c1a1ab2ed08a308f37691cbdef7866c00ebeda45ab5b6bef6f63dd72b8267c0",
+  "source_summary": {
+    "cases": 5852,
+    "contacts": 1794,
+    "sounds": 250,
+    "pair_cases": 5670,
+    "sequential_cases": 180,
+    "max_events": 35
+  },
+  "files": [
+    {
+      "path": "src/core/rr_rival.h",
+      "sha256": "7c34b72b1c740612685bd4545f2dc6176ff6725fa6f9b53d0fe5489282538704"
+    },
+    {
+      "path": "src/core/rr_rival.c",
+      "sha256": "fa41b69a1f084a28bb4a32245109626846aeb7882d697d145baa1bb36571231d"
+    },
+    {
+      "path": "src/core/rr_pack.c",
+      "sha256": "64d0e1bfe0e1b4f398dc378b6440b80f2a91c8b978a112e9ea3d837a18d78157"
+    },
+    {
+      "path": "tests/test_contact_mass.c",
+      "sha256": "39fee923ef9e3dd1a73dcef571f7cbc2ed2a0bf3c1e0a2505948644474e5f6f9"
+    },
+    {
+      "path": "tests/contact_mass_reference.h",
+      "sha256": "cbffdd83a72c006fde61949c6f171990e1f1950a952193a4aee3f3661b557498"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "fa261e58f39aa5c4daa4f051d2eeab047a957182814e9f7b67ead13ef8c7c63f"
+    }
+  ],
+  "tests": {
+    "native": "150/150 full CPU suite passed",
+    "web": "150/150 full CPU suite passed",
+    "metrics": {
+      "native": {
+        "cases": 5852,
+        "pairs": 1794,
+        "source_sound_calls": 250,
+        "checks": 135837,
+        "max_error": 2.220446049250313e-16,
+        "integration_rival_hooks": 10
+      },
+      "web": {
+        "cases": 5852,
+        "pairs": 1794,
+        "source_sound_calls": 250,
+        "checks": 135837,
+        "max_error": 2.220446049250313e-16,
+        "integration_rival_hooks": 10
+      }
+    }
+  },
+  "scope": "Fresh original browser carContacts executed with actual CPU Vector3 and inert sound. Wrappers observe pair normalization, relative-speed dot and hit calls without rewriting function body. Includes source pair guards and multi-car sequential mutations. Extra current-pack final-hook mixed-pair setup is a C routing seam test, not a fresh browser full-tick capture.",
+  "current_pack_contact_route_integrated": true,
+  "legacy_equal_mass_route_preserved": true,
+  "main_sha256": "d561012640218da294d8fd362bcebc2b106aba840598ea61598a8aa4a53155c8",
+  "main_unchanged": true,
+  "production_profile": "Roadster",
+  "production_full_pack_combat_audio_coins_rewards_enabled": false,
+  "graphics_or_audio_device_executed": false,
+  "resource_note": "No new runtime arrays, heap, RNG draws, uploads or cap changes; existing11-car/55-contact bound retained. Test-only source fixture data excluded from client.",
+  "native_asset_files_verified": 455,
+  "native_exe_sha256": "7e8530924b7ff42bb3713ad56c849f9db16fcfe7abfa6063e8805e3a73a1d57c",
+  "previous_client_sha256": "85dd855423eed99353cfe31c36fe9250127f0adc97aad2bf5c18b15c14d4d89a",
+  "remaining": [
+    "Profile-aware health/damage/respawn/smoke, arsenal capacity/spin/EMP and percentage-health presentation are not implemented here.",
+    "Ownership/equipment/shared online protocol11 integration untouched; local source is not confirmed released.",
+    "Production full-pack and visual/feel/audio qualification remain open; graphics permission pending."
+  ]
+}

@@ -1,0 +1,32 @@
+#include "rr_audio_submit.h"
+#include <math.h>
+static bool publish(RRAudioCueSubmission *result,RRAudioCueSubmission *out,RRAudioSubmitError error,size_t failed){
+ result->error=error;result->failed_request=failed;result->complete=error==RR_AUDIO_SUBMIT_OK;result->voices.complete=result->complete;
+ result->total_draws=result->recipe_draws+result->voices.offset_draws;*out=*result;return result->complete;
+}
+bool rr_audio_submit_cue(RRAudioVoiceBank *bank,bool ready,RRAudioCue cue,double amount,double pan,bool flag,
+ RRAudioOffsetRandom random,void *random_context,RRAudioClockRead read_time,void *clock_context,RRAudioCueSubmission *out){
+ if(!bank||!out||(unsigned)cue>=RR_CUE_COUNT)return false;
+ /* Existing empty-plan validation checks bank invariants without mutation or
+  * reading callbacks. Keep one authority for token/counter validity. */
+ RRAudioCuePlan empty={0};RRAudioDispatch checked;if(!rr_audio_dispatch(bank,false,0,&empty,NULL,NULL,&checked))return false;
+ RRAudioCueSubmission result={0};double unit=0;
+ if(cue==RR_CUE_BLASTER){
+  if(!random)return publish(&result,out,RR_AUDIO_SUBMIT_RANDOM,SIZE_MAX);
+  result.recipe_draws++;unit=random(random_context);
+  if(!isfinite(unit)||unit<0||unit>=1)return publish(&result,out,RR_AUDIO_SUBMIT_RANDOM,SIZE_MAX);
+ }
+ if(!rr_audio_cue_recipe(cue,amount,pan,flag,unit,&result.recipe))return publish(&result,out,RR_AUDIO_SUBMIT_RECIPE,SIZE_MAX);
+ for(size_t i=0;i<result.recipe.count;i++){
+  const RRAudioCueRequest *request=&result.recipe.requests[i];double now=0;
+  bool admitted=ready&&!(request->volume<=.002)&&bank->active<RR_AUDIO_MAX_VOICES;
+  if(admitted){if(!read_time)return publish(&result,out,RR_AUDIO_SUBMIT_CLOCK,i);result.clock_reads++;now=read_time(clock_context);}
+  RRAudioCuePlan one={0};one.count=1;one.requests[0]=*request;RRAudioDispatch part={0};
+  bool ok=rr_audio_dispatch(bank,ready,now,&one,random,random_context,&part);
+  result.voices.skipped+=part.skipped;result.voices.offset_draws+=part.offset_draws;
+  for(size_t j=0;j<part.count;j++){part.commands[j].request_index=i;result.voices.commands[result.voices.count++]=part.commands[j];}
+  if(!ok)return publish(&result,out,RR_AUDIO_SUBMIT_DISPATCH,i);
+  result.processed_requests++;
+ }
+ return publish(&result,out,RR_AUDIO_SUBMIT_OK,SIZE_MAX);
+}

@@ -1,0 +1,1 @@
+Initial timer capture moved the scripted finish to a captured-mouse frame and reached Input.unlock: virtual document lacked exitPointerLock. Added an inert virtual method that clears only virtual pointerLockElement. No OS/browser capture or protection was accessed; source/core were unchanged.

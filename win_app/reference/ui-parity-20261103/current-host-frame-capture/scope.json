@@ -1,0 +1,6 @@
+{
+  "source_oracle": "Original test_run_input.c + run_input_reference.h included unchanged, normalized input/player/full-pack/world/RNG/events checks retained.",
+  "added": "Actual input tick then completed finish event to wall-timer/results frame; deliberate unavailable UI resources; UI-only retry must not tick/change car/aim/clock/RNG/names/pending publication; invalid simulation skips presentation.",
+  "not_qualified": "This failure-path integration test does not paint rows, qualify native resources/graphics or alter production main/full-pack switches. Existing positive row/lifecycle tests remain separate.",
+  "ownership": "Borrowed prepared current graph/input state and persistent address-stable results frame. Phase/reset/application lifetime remains caller-owned."
+}

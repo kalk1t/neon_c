@@ -1,0 +1,10 @@
+{
+  "launcher": "C:\\Users\\User\\Projects\\neon_c\\win_app\\Run-RoadstersRace.cmd",
+  "sha256": "64caade495c2ff351ae111cced0570035f2b070195af13f43e00475656c8d5a6",
+  "target": {
+    "path": "build/results-font-ranges-native/bin/RoadstersRace.exe",
+    "sha256": "9f0288506964e5643724a2d22c0c87f01360aba6a82666e6da5e37cb6e7fe526"
+  },
+  "static_only": true,
+  "executed": false
+}

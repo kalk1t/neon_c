@@ -1,0 +1,65 @@
+{
+  "createdUTC": "2026-11-04T08:15:58.668Z",
+  "inputs": [
+    {
+      "source": "C:/Users/User/Projects/neon_c/game/src/style.css",
+      "file": "source/style.css",
+      "sha256": "f820d8d2f4c812598dcc9ab01c0c7c24a7d12d08d6562fa8a3a053a5a13a2da7"
+    },
+    {
+      "source": "C:/Users/User/Projects/neon_c/game/index.html",
+      "file": "source/index.html",
+      "sha256": "a9847e1d103a99745e107dcc996804418c3437d3cf3ae7b1f41ce383d20611c9"
+    },
+    {
+      "source": "C:/Users/User/Projects/neon_c/game/src/race.js",
+      "file": "source/race.js",
+      "sha256": "98579604939266354606b035d3d05a91e374b4532b6bcaf1fcabc0af58f90a29"
+    },
+    {
+      "source": "C:/Users/User/Projects/neon_c/game/src/hud.js",
+      "file": "source/hud.js",
+      "sha256": "c1f07ab727fdbd7e393f8dff672b64c75502227814f1be679d2d21ee021446e1"
+    },
+    {
+      "source": "C:/Users/User/Projects/neon_c/win_app/docs/RESULTS-QUALIFICATION-BOUNDARY-2026-11-04.md",
+      "sha256": "850beeebb36bbd5e980dbf091c85da18cfc5efbabdd1614ffbc125a16b2508b4"
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Orbitron",
+      "weight": 500,
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-500.ttf",
+      "sha256": "e1dd2875a4cf1711615b7bc7eb2ae8d05bef3861f87a7fdd847a78199169b458"
+    },
+    {
+      "family": "Orbitron",
+      "weight": 700,
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-700.ttf",
+      "sha256": "a24fe8031eefd8451d40e31882868d768ce6bed7c3659293281b3c5c7732a952"
+    },
+    {
+      "family": "Orbitron",
+      "weight": 900,
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Orbitron-900.ttf",
+      "sha256": "27cd313045d12280384256b4fba922366a4883e32ffb866b9acd62c5a859de61"
+    },
+    {
+      "family": "Rajdhani",
+      "weight": 500,
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Rajdhani-500.ttf",
+      "sha256": "7377b0a3421b01dae185fc1262ea34a45f6ba226155f531e9e72f5262b56d802"
+    },
+    {
+      "family": "Rajdhani",
+      "weight": 700,
+      "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersSharedAssets-v4\\fonts\\Rajdhani-700.ttf",
+      "sha256": "8b2fbb04ed3af38ea941d7351fc5bcf917d239d0bfb64c9bb8916510d8774495"
+    }
+  ],
+  "sourcePackageVersion": "0.2.16",
+  "gameOrServicesLaunched": false,
+  "projectEdits": false,
+  "paidCalls": false
+}

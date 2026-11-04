@@ -1,0 +1,7 @@
+{
+  "launcher_sha256": "385a21140981506295dc09d7149d348452b45c35b102f89989a7bc2486a9e143",
+  "target": "build/overlay-keys-native/bin/RoadstersRace.exe",
+  "target_sha256": "f689f040c5494c64ba5b91baca6778fb48320f6f111b8d10b88a5518f2b5bd9f",
+  "executed": false,
+  "promoted_after_all_checks": true
+}

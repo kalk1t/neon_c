@@ -1,0 +1,154 @@
+emcmake: cmake -S 'C:\Users\User\Projects\neon_c\win_app' -B 'C:\Users\User\Projects\neon_c\win_app\build\results-rows-web' -G Ninja '-DCMAKE_MAKE_PROGRAM=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja\ninja.exe' -DCMAKE_BUILD_TYPE=Release -DRR_COCKPIT_PREVIEW=OFF -DPLATFORM=Web '-DOPENGL_VERSION=ES 3.0' '-DRR_RAYLIB_SOURCE_DIR=C:\Users\User\Projects\neon_c\win_app\third_party\raylib-6.2-source\raylib-02566453880e06bec97f5b8160fa6fe1e98397ca' '-DCMAKE_TOOLCHAIN_FILE=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\cmake\Modules\Platform\Emscripten.cmake' '-DCMAKE_CROSSCOMPILING_EMULATOR=C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7/node/24.19.0_64bit/node.exe' in directory C:\Users\User\Documents\Codex\2026-11-02\task
+-- Testing if -Werror=pointer-arith can be used -- compiles
+-- Testing if -Werror=implicit-function-declaration can be used -- compiles
+-- Testing if -fno-strict-aliasing can be used -- compiles
+CMake Warning at third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/cmake/LibraryConfigurations.cmake:254 (message):
+  You are overriding the suggested GRAPHICS=GRAPHICS_API_OPENGL_ES2 with
+  GRAPHICS_API_OPENGL_ES3! This may fail.
+Call Stack (most recent call first):
+  third_party/raylib-6.2-source/raylib-02566453880e06bec97f5b8160fa6fe1e98397ca/src/CMakeLists.txt:57 (include)
+
+
+-- Audio Backend: miniaudio
+-- Building raylib static library
+-- Generated build type: Release
+-- Compiling with the flags:
+--   PLATFORM=PLATFORM_WEB
+--   GRAPHICS=GRAPHICS_API_OPENGL_ES3
+-- Configuring done (1.8s)
+-- Generating done (0.1s)
+-- Build files have been written to: C:/Users/User/Projects/neon_c/win_app/build/results-rows-web
+[0/2] Re-checking globbed directories...
+[1/135] Building C object CMakeFiles/rr_results_times_draw_tests.dir/src/presentation/rr_results_times_draw.c.o
+[2/135] Building C object CMakeFiles/rr_ui_font_tests.dir/tests/test_ui_fonts.c.o
+[3/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_text.c.o
+[4/135] Building C object CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o
+[5/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_times_draw.c.o
+[6/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_results_art.c.o
+[7/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_scene.c.o
+[8/135] Building C object CMakeFiles/RoadstersRace.dir/src/app/main.c.o
+[9/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_subtext.c.o
+[10/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_ui.c.o
+[11/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_cockpit.c.o
+[12/135] Building C object CMakeFiles/RoadstersRace.dir/src/presentation/rr_arrow_art.c.o
+[13/135] Linking C static library raylib\raylib\libraylib.a
+[14/135] Building C object CMakeFiles/rr_pod_transform_tests.dir/tests/test_pods.c.o
+[15/135] Building C object CMakeFiles/rr_render_pose_tests.dir/tests/test_render_pose.c.o
+[16/135] Linking C executable rr_results_times_tests.js
+[17/135] Linking C executable rr_results_ui_tests.js
+[18/135] Linking C executable rr_results_ui_replay_tests.js
+[19/135] Linking C executable rr_results_timer_tests.js
+[20/135] Linking C executable rr_current_results_tests.js
+[21/135] Linking C executable rr_run_input_tests.js
+[22/135] Linking C executable rr_session_pose_tests.js
+[23/135] Linking C executable rr_car_pose_tests.js
+[24/135] Linking C executable rr_player_phase_tests.js
+[25/135] Linking C executable rr_run_current_tests.js
+[26/135] Linking C executable rr_rival_arsenal_tests.js
+[27/135] Linking C executable rr_battle_current_tests.js
+[28/135] Linking C executable rr_ai_current_tests.js
+[29/135] Linking C executable rr_rival_life_tests.js
+[30/135] Linking C executable rr_battle_pose_tests.js
+[31/135] Linking C executable rr_pack_current_tests.js
+[32/135] Linking C executable rr_current_fire_tests.js
+[33/135] Linking C executable rr_rival_current_tests.js
+[34/135] Linking C executable rr_speed_current_tests.js
+[35/135] Linking C executable rr_weapon_current_tests.js
+[36/135] Linking C executable rr_menu_keys_tests.js
+[37/135] Linking C executable rr_input_preferences_tests.js
+[38/135] Linking C executable rr_aim_camera_tests.js
+[39/135] Linking C executable rr_capture_prompt_tests.js
+[40/135] Linking C executable rr_boost_layout_tests.js
+[41/135] Linking C executable rr_slide_tests.js
+[42/135] Linking C executable rr_target_pulse_tests.js
+[43/135] Linking C executable rr_map_background_tests.js
+[44/135] Linking C executable rr_sub_fade_tests.js
+[45/135] Linking C executable rr_hud_frame_tests.js
+[46/135] Linking C executable rr_announcement_tests.js
+[47/135] Linking C executable rr_pause_layout_tests.js
+[48/135] Linking C executable rr_spin_indicator_tests.js
+[49/135] Linking C executable rr_ui_layer_tests.js
+[50/135] Linking C executable rr_history_style_tests.js
+[51/135] Linking C executable rr_recovery_feedback_tests.js
+[52/135] Linking C executable rr_view_control_tests.js
+[53/135] Linking C executable rr_finish_guidance_tests.js
+[54/135] Linking C executable rr_map_mark_tests.js
+[55/135] Linking C executable rr_best_readout_tests.js
+[56/135] Linking C executable rr_circle_clip_tests.js
+[57/135] Linking C executable rr_mouse_capture_tests.js
+[58/135] Linking C executable rr_player_control_tests.js
+[59/135] Linking C executable rr_nitro_call_tests.js
+[60/135] Linking C executable rr_spin_control_tests.js
+[61/135] Linking C executable rr_boost_meter_tests.js
+[62/135] Linking C executable rr_impact_fx_tests.js
+[63/135] Linking C executable rr_hud_message_tests.js
+[64/135] Linking C executable rr_sub_notice_tests.js
+[65/135] Linking C executable rr_mouse_aim_tests.js
+[66/135] Linking C executable rr_target_guidance_tests.js
+[67/135] Linking C executable rr_camera_motion_tests.js
+[68/135] Linking C executable rr_race_warning_tests.js
+[69/135] Linking C executable rr_camera_fx_tests.js
+[70/135] Linking C executable rr_start_cue_tests.js
+[71/135] Linking C executable rr_pause_ui_tests.js
+[72/135] Linking C executable rr_first_person_tests.js
+[73/135] Linking C executable rr_chase_camera_tests.js
+[74/135] Linking C executable rr_input_mix_tests.js
+[75/135] Linking C executable rr_mouse_widget_tests.js
+[76/135] Linking C executable rr_cockpit_tests.js
+[77/135] Linking C executable rr_button_hover_tests.js
+[78/135] Linking C executable rr_button_surface_tests.js
+[79/135] Linking C executable rr_results_layout_tests.js
+[80/135] Linking C executable rr_pause_scene_tests.js
+[81/135] Linking C executable rr_showcase_tests.js
+[82/135] Linking C executable rr_race_ui_tests.js
+[83/135] Linking C executable rr_city_catalog_tests.js
+[84/135] Linking C executable rr_ui_layout_tests.js
+[85/135] Linking C executable rr_facade_tests.js
+[86/135] Linking C executable rr_mesh_loader_tests.js
+[87/135] Linking C executable rr_city_batching_tests.js
+[88/135] Linking C executable rr_city_triangle_tests.js
+[89/135] Linking C executable rr_city_repacking_tests.js
+[90/135] Linking C executable rr_city_occlusion_tests.js
+[91/135] Linking C executable rr_poster_tests.js
+[92/135] Linking C executable rr_ai_tests.js
+[93/135] Linking C executable rr_city_witness_tests.js
+[94/135] Linking C executable rr_city_coverage_tests.js
+[95/135] Linking C executable rr_rival_tests.js
+[96/135] Linking C executable rr_targeting_tests.js
+[97/135] Linking C executable rr_coin_tests.js
+[98/135] Linking C executable rr_arsenal_tests.js
+[99/135] Linking C executable rr_pack_tests.js
+[100/135] Linking C executable rr_combat_tests.js
+[101/135] Linking C executable rr_fire_tests.js
+[102/135] Linking C executable rr_core_tests.js
+[103/135] Linking C executable rr_render_policy_tests.js
+[104/135] Linking C executable rr_battle_tests.js
+[105/135] Linking C executable rr_local_run_tests.js
+[106/135] Linking C executable rr_race_tests.js
+[107/135] Linking C executable rr_session_tests.js
+[108/135] Linking C executable rr_menu_policy_tests.js
+[109/135] Linking C executable rr_recovery_tests.js
+[110/135] Linking C executable rr_road_picker_tests.js
+[111/135] Linking C executable rr_all_roads_tests.js
+[112/135] Linking C executable rr_city_clearance_tests.js
+[113/135] Linking C executable rr_finish_tests.js
+[114/135] Linking C executable rr_course_tests.js
+[115/135] Linking C executable rr_physics_tests.js
+[116/135] Linking C executable rr_shared_scenery_tests.js
+[117/135] Linking C executable rr_hero_asset_tests.js
+[118/135] Linking C executable rr_canonical_city_tests.js
+[119/135] Linking C executable rr_nose_reticle_tests.js
+[120/135] Linking C executable rr_cockpit_image_tests.js
+[121/135] Linking C executable rr_reticle_tests.js
+[122/135] Linking C executable rr_subtext_tests.js
+[123/135] Linking C executable rr_menu_help_tests.js
+[124/135] Linking C executable rr_hud_readout_tests.js
+[125/135] Linking C executable rr_menu_header_tests.js
+[126/135] Linking C executable rr_results_rows_tests.js
+FAILED: [code=1] rr_results_rows_tests.js 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Users\User\Projects\neon_c\win_app\third_party\emsdk-6.0.13\emsdk-35659964bc2762fffec0d257997fb61475f765b7\upstream\emscripten\emcc.exe -O3 -DNDEBUG -sUSE_GLFW=3 -sALLOW_MEMORY_GROWTH=1 --preload-file C:/Users/User/Projects/neon_c/win_app/assets/ui-theme@/ui-theme C:/Users/User/Projects/neon_c/win_app/assets/ui-results-fallback@/ui-results-fallback -sEXPORTED_RUNTIME_METHODS=ccall -sMIN_WEBGL_VERSION=2 -sMAX_WEBGL_VERSION=2 CMakeFiles/rr_results_rows_tests.dir/tests/test_results_rows.c.o CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_results_text.c.o CMakeFiles/rr_results_rows_tests.dir/src/presentation/rr_subtext.c.o -o rr_results_rows_tests.js  librr_core.a  raylib/raylib/libraylib.a  -lm && cd ."
+emcc: error: C:/Users/User/Projects/neon_c/win_app/assets/ui-results-fallback@/ui-results-fallback: No such file or directory ("C:/Users/User/Projects/neon_c/win_app/assets/ui-results-fallback@/ui-results-fallback" was expected to be an input file, based on the commandline arguments provided)
+[127/135] Linking C executable rr_spin_readout_tests.js
+[128/135] Linking C executable rr_button_text_tests.js
+[129/135] Linking C executable rr_arrow_art_tests.js
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,275 @@
+{
+  "package": "C:\\Users\\User\\Documents\\Codex\\2026-11-03\\task\\RoadstersFallbackGlyphs-v2",
+  "manifest_sha256": "82b7bfd4bd35e0c86dc0aca00e72ec2c5c537077b7ce5e6d75e590d91c34c61b",
+  "archive_sha256": "d8e93502a9c06946a75acc83e26089dff0e93d57a8d8a9d969378d7650e790aa",
+  "verified_manifest_files": 38,
+  "glyph_pngs": [
+    {
+      "path": "native-glyphs/approx-results-15@1x.png",
+      "width": 14,
+      "height": 10,
+      "sha256": "e8947af67687c91a3961d558543673cc431c8cf017dc693cd8162e0fae5887ea"
+    },
+    {
+      "path": "native-glyphs/approx-results-15@2x.png",
+      "width": 26,
+      "height": 22,
+      "sha256": "4f0fa81ce6683c4182752fcc817e43da6e7373a1fd440e0c33a5519429bfd0a3"
+    },
+    {
+      "path": "native-glyphs/approx-results-15@3x.png",
+      "width": 39,
+      "height": 33,
+      "sha256": "7634e94430dd18fd7e50bfab77cbbd108d29799e04ac28f240428f3fd0723e7f"
+    },
+    {
+      "path": "native-glyphs/queen-menu-18@1x.png",
+      "width": 22,
+      "height": 19,
+      "sha256": "8ea4eee7fe57db1237ede416caa4c6e3c083a2beb5b0e05ab01d658ad0b74ad1"
+    },
+    {
+      "path": "native-glyphs/queen-menu-18@2x.png",
+      "width": 40,
+      "height": 37,
+      "sha256": "602ee3f020f72f85ed35be48bff1798aab22c0852294edb02ade99d16cf0a010"
+    },
+    {
+      "path": "native-glyphs/queen-menu-18@3x.png",
+      "width": 60,
+      "height": 55,
+      "sha256": "d9a1f1d1ef84a99008fa976b7b994b4979a3c8f808eb5d62dd4e550cdd2ea759"
+    },
+    {
+      "path": "native-glyphs/queen-menu-20@1x.png",
+      "width": 24,
+      "height": 21,
+      "sha256": "58d7e5e782bd6d8205e76d8736c2f046583a2c79cdae3391ca0aa3cc10733020"
+    },
+    {
+      "path": "native-glyphs/queen-menu-20@2x.png",
+      "width": 44,
+      "height": 40,
+      "sha256": "3b4d5c92e56900b6fa607cbc8497c6382724e156dae7673d9ddef2f5062170da"
+    },
+    {
+      "path": "native-glyphs/queen-menu-20@3x.png",
+      "width": 64,
+      "height": 59,
+      "sha256": "efc95ec3db88294b3375c00631beb5d7251510a7508482c51af1323ceec41e5f"
+    },
+    {
+      "path": "native-glyphs/queen-results-15@1x.png",
+      "width": 19,
+      "height": 17,
+      "sha256": "4a7000be231c7aa3467e6044b33d61d94527bb3698e93cfee2723362c3be6f02"
+    },
+    {
+      "path": "native-glyphs/queen-results-15@2x.png",
+      "width": 36,
+      "height": 32,
+      "sha256": "68245eb87f3463d31046756ac007980de3277bf2b286c19fa05114724bc8e40b"
+    },
+    {
+      "path": "native-glyphs/queen-results-15@3x.png",
+      "width": 53,
+      "height": 48,
+      "sha256": "d28d953dadd907c3abef44b4b1f1107969fab82edb7f78d474b3926c61eb6faa"
+    }
+  ],
+  "scope": "Read-only manifest/archive/hash/PNG header and handoff/C lookup inspection, not pixel decoding, native loading or rendering.",
+  "integration": "Pending next bounded results/menu fallback draw integration. No source assets copied into runtime asset tree; earlier dot/star art unchanged.",
+  "compatibility": "Metadata-only C lookup is compatible with C. Approx15px advance9.90625; queen15px advance15; queen18/20px advances18/20; result tracking0/menu tracking3. Apply supplied bearings relative to baseline, tint white-core once, shadow separately. Distinct logical/device-scale dimensions; do not use cropped width as advance.",
+  "files": [
+    {
+      "file": "browser-errors.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "file": "browser-pixel-verification.json",
+      "bytes": 2189,
+      "sha256": "72930eef655977326df90258f6d500f637787bd030111d6f2c5cea96f1c6419a"
+    },
+    {
+      "file": "captures/approx-results-15@1x.png",
+      "bytes": 468,
+      "sha256": "8703e3deee20c070892e4d41af337c63218513ea126379751813c523c7729cf5"
+    },
+    {
+      "file": "captures/approx-results-15@2x.png",
+      "bytes": 1043,
+      "sha256": "96643577b9b6ff8f0bf1303d885267c4b2b84e105c5e29bd80dc14d89f3e99e6"
+    },
+    {
+      "file": "captures/approx-results-15@3x.png",
+      "bytes": 1836,
+      "sha256": "1074b6a2fe53eff6f580de00c04a5f7dc9b442a207efdfe17c0c464e107b59a4"
+    },
+    {
+      "file": "captures/queen-menu-18@1x.png",
+      "bytes": 736,
+      "sha256": "44d12bfba9a29e963855c2f875f3ede67821db970df592dab2be2ad87731e071"
+    },
+    {
+      "file": "captures/queen-menu-18@2x.png",
+      "bytes": 1738,
+      "sha256": "f10cf0d02d30fd098f70f1ba5b8baeea754ac6ebbba2d3b0bf72574364ff8f8f"
+    },
+    {
+      "file": "captures/queen-menu-18@3x.png",
+      "bytes": 2848,
+      "sha256": "448021a6b0be22c3315591993b3431bb052185d9b17e050f5e58c86941f6aefe"
+    },
+    {
+      "file": "captures/queen-menu-20@1x.png",
+      "bytes": 818,
+      "sha256": "ff6e0ef5522f623453592ee9101b16a1cd41b88bf2352930c684614750569b94"
+    },
+    {
+      "file": "captures/queen-menu-20@2x.png",
+      "bytes": 1862,
+      "sha256": "afe90b85ebf0da7ffb374acc180902cf3a0d76e19a19170ef0c3f70d8497a913"
+    },
+    {
+      "file": "captures/queen-menu-20@3x.png",
+      "bytes": 2967,
+      "sha256": "6ae4d7dbd04b871ea309ba82127e8df249da65c9e48f59bdf5d7948a278de11b"
+    },
+    {
+      "file": "captures/queen-results-15@1x.png",
+      "bytes": 677,
+      "sha256": "75f86be0ca4facac9747f7d5f043866aac5ff179d7f9d839c18121692bbaeb95"
+    },
+    {
+      "file": "captures/queen-results-15@2x.png",
+      "bytes": 1534,
+      "sha256": "df1c3b36cd3933938d4d7dab0a973439db711614d580d519bf2e616456e7ad1d"
+    },
+    {
+      "file": "captures/queen-results-15@3x.png",
+      "bytes": 2559,
+      "sha256": "262fc99bdfff2bfe466f8e18243f50f91488081c7fd7a402f237fa9c057383ea"
+    },
+    {
+      "file": "glyph-metrics.json",
+      "bytes": 14893,
+      "sha256": "1d78becb30da9780c2b75c026dea4614c296073ba35c4305c482f46e66f13076"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 1061,
+      "sha256": "99230e504c27e2e8072e5c7625340ba5615b156dda02c5cbb1854d760b9966f1"
+    },
+    {
+      "file": "HANDOFF.md",
+      "bytes": 3948,
+      "sha256": "07fc7225b35bada1498dc05c6867fc0ed56159dc792e979bfda70d4efdb1c24a"
+    },
+    {
+      "file": "native/rr_results_fallback_glyphs.h",
+      "bytes": 2613,
+      "sha256": "95475e8b85e3036dd1f49ed60d38d7cad9ff3812614596a0441ea7745cdace06"
+    },
+    {
+      "file": "native-glyphs/approx-results-15@1x.png",
+      "bytes": 110,
+      "sha256": "e8947af67687c91a3961d558543673cc431c8cf017dc693cd8162e0fae5887ea"
+    },
+    {
+      "file": "native-glyphs/approx-results-15@2x.png",
+      "bytes": 226,
+      "sha256": "4f0fa81ce6683c4182752fcc817e43da6e7373a1fd440e0c33a5519429bfd0a3"
+    },
+    {
+      "file": "native-glyphs/approx-results-15@3x.png",
+      "bytes": 345,
+      "sha256": "7634e94430dd18fd7e50bfab77cbbd108d29799e04ac28f240428f3fd0723e7f"
+    },
+    {
+      "file": "native-glyphs/queen-menu-18@1x.png",
+      "bytes": 323,
+      "sha256": "8ea4eee7fe57db1237ede416caa4c6e3c083a2beb5b0e05ab01d658ad0b74ad1"
+    },
+    {
+      "file": "native-glyphs/queen-menu-18@2x.png",
+      "bytes": 713,
+      "sha256": "602ee3f020f72f85ed35be48bff1798aab22c0852294edb02ade99d16cf0a010"
+    },
+    {
+      "file": "native-glyphs/queen-menu-18@3x.png",
+      "bytes": 1115,
+      "sha256": "d9a1f1d1ef84a99008fa976b7b994b4979a3c8f808eb5d62dd4e550cdd2ea759"
+    },
+    {
+      "file": "native-glyphs/queen-menu-20@1x.png",
+      "bytes": 376,
+      "sha256": "58d7e5e782bd6d8205e76d8736c2f046583a2c79cdae3391ca0aa3cc10733020"
+    },
+    {
+      "file": "native-glyphs/queen-menu-20@2x.png",
+      "bytes": 794,
+      "sha256": "3b4d5c92e56900b6fa607cbc8497c6382724e156dae7673d9ddef2f5062170da"
+    },
+    {
+      "file": "native-glyphs/queen-menu-20@3x.png",
+      "bytes": 1256,
+      "sha256": "efc95ec3db88294b3375c00631beb5d7251510a7508482c51af1323ceec41e5f"
+    },
+    {
+      "file": "native-glyphs/queen-results-15@1x.png",
+      "bytes": 284,
+      "sha256": "4a7000be231c7aa3467e6044b33d61d94527bb3698e93cfee2723362c3be6f02"
+    },
+    {
+      "file": "native-glyphs/queen-results-15@2x.png",
+      "bytes": 576,
+      "sha256": "68245eb87f3463d31046756ac007980de3277bf2b286c19fa05114724bc8e40b"
+    },
+    {
+      "file": "native-glyphs/queen-results-15@3x.png",
+      "bytes": 878,
+      "sha256": "d28d953dadd907c3abef44b4b1f1107969fab82edb7f78d474b3926c61eb6faa"
+    },
+    {
+      "file": "oracle.json",
+      "bytes": 14600,
+      "sha256": "1b602c66bda23a8c7086ed9c93db5db630cc433cf54c122e81434d5fb31dfd6c"
+    },
+    {
+      "file": "provenance/font-cmap-audit.json",
+      "bytes": 3005,
+      "sha256": "05b99ca2a22e1c1ee622124678c86baca6d8e75e953f2cf50393cbbe9fa4ac74"
+    },
+    {
+      "file": "provenance/inputs.json",
+      "bytes": 1886,
+      "sha256": "95134ccb1f57f7d3e234bccbc7d7c1ef7681572dce964f38c4d3cbc0c004e619"
+    },
+    {
+      "file": "START_HERE.html",
+      "bytes": 3483,
+      "sha256": "f3d806f9a79db37da7191a3c8216826678cb1bf676ea950c9df7ca2e3476da99"
+    },
+    {
+      "file": "tools/finish-results-glyphs-v2.mjs",
+      "bytes": 12554,
+      "sha256": "ec090872b27ed4e5c6d28fbb899b0f3b4fcd54e44eb33511b50c4dfb5a8cc577"
+    },
+    {
+      "file": "tools/glyph-results-oracle-v2.mjs",
+      "bytes": 6749,
+      "sha256": "8f6e7d6eaf0ae97fc555e1d1fe69aad48e789322f08e67ce6e0e0e6288d57427"
+    },
+    {
+      "file": "tools/qa-results-glyphs-v2.mjs",
+      "bytes": 2636,
+      "sha256": "d900ba4d5253c2df4e0964ccb46b79c4ab3d2e15912ab0de3a5ddf0084255019"
+    },
+    {
+      "file": "validation.json",
+      "bytes": 2635,
+      "sha256": "d784e619f23fc25dabc08f55699adcb9d214a7106beab0e170ecde0b70c60fac"
+    }
+  ]
+}
