@@ -24,7 +24,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/maps.js` | 24 | `MAPS` | The single map: laps 2, floor 34, roamFloor 40, atmosphere options |
 | `src/course.js` | 251 | `buildCourse` | Race furniture: gates, path dots (7 m), chevrons (84 m), beacons (125 m), barriers |
 | `src/coins.js` | 128 | `Coins` | Track coins (instanced), pickup, respawn |
-| `src/fx.js` | 434 | `Weapons`, `Ribbon`, `tex`, `additive`, `axisBillboard`, `BOLT_LOOKS` | Projectiles (bolts, seekers, EMP); each car's bolt: a 3D model (`public/models/bolts/<id>.glb`, all loaded at start), muzzle flash and impact in its art (`BOLT_LOOKS`, v0.2.19), explosions, trails, engine smoke (`exhaustSmoke`, v0.2.18) |
+| `src/fx.js` | 434 | `Weapons`, `Ribbon`, `tex`, `additive`, `axisBillboard`, `BOLT_LOOKS` | Projectiles (bolts, seekers); each car's bolt: a 3D model (`public/models/bolts/<id>.glb`, all loaded at start), muzzle flash and impact in its art (`BOLT_LOOKS`, v0.2.19), explosions, trails, engine smoke (`exhaustSmoke`, v0.2.18) |
 | `src/killer.js` | 366 | `KillerAura`, `KILLER_AURA` | Killer auras: `AURA_STYLES` CRIMSON FLAME and VOID CROWN (adds a crown sprite and orbiting crystal shards); `auraStyleFor(kc)`: VOID CROWN from 10 Killer kills; tiers high / menu / remote / low |
 | `src/nitro.js` | 199 | `NitroFX`, `flameMaterial` | Thruster flames, 140 sparks |
 
@@ -75,7 +75,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `livePlugin(env)` | end of file | Vite plugin for the **dev** server: hooks `upgrade` for `/live` only (leaves HMR alone), serves `GET /live/count`; mock logins only with `LIVE_MOCK=1`. `killSaver()` builds the `relayKills` saver from `RELAY_SECRET`. `liveRelay` queues and saves kills / KILLER STATUS (`queueSave`, `save`, `flush`) |
 | `server/serve.mjs` | ~150 | **Production server** (v0.2.4, R5/R6): static `dist/` with cache headers, `/__` proxy, `/live` + `/live/count` passed to the relay; forks and restarts `relay.mjs` |
 | `server/relay.mjs` | ~45 | The relay as its own process on `127.0.0.1:LIVE_RELAY_PORT`; reads `.env.local`; exits when `serve.mjs` does |
-| `server/hits.js` | 96 | `remember`, `firedFrom`, `shot`, `hitFrom`, `empReaches`, `prune`: FREE ROAM hit checks (S3, v0.2.10): a hit only from a real shot, from where the shooter was, within reach and in the line of fire |
+| `server/hits.js` | 96 | `remember`, `firedFrom`, `shot`, `hitFrom`, `prune`: FREE ROAM hit checks (S3, v0.2.10): a hit only from a real shot, from where the shooter was, within reach and in the line of fire |
 | `server/moderation.js` | 70 | `moderation`, `wordFilter`, `normal`, `noModeration`: chat and nickname word filter, ban list (S6, v0.2.9), files re-read within 10 s |
 | `functions/tickets.js` | ~20 | `cleanTickets(db, now)`: deletes race tickets older than 45 min (daily `cleanRaceTickets`, D12) |
 

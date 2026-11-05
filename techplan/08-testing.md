@@ -92,7 +92,7 @@ on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars wi
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
 ### v0.2.20 (2026-11-05)
-`test:live` 127 / 127: `race.test.mjs` (+7: protected after a wreck, the player (no damage, not aimed at) and a rival
+`test:live` 127 / 127 (v0.2.21: the EMP tests replaced by "no EMP" ones; the hits EMP-reach test removed): `race.test.mjs` (+7: protected after a wreck, the player (no damage, not aimed at) and a rival
 (no damage, holds fire); positions: exact on the same 4 m, a missed gate held at the gate, the start line, a wrecked
 car, the respawn point's sample; `controls.test.mjs` +1: no weapons while protected; changed: rival seekers
 after a 1.5 s lock, 6 s apart, 2 charges, one back every 9 s; rivals at 200 health and 2 seekers whatever the car),
@@ -114,7 +114,7 @@ the middle one thicker, at the tail). Flame and smoke placement was checked on s
 ### v0.2.17 (2026-11-04)
 `test:live` 116 / 116, `test:game` 51 / 51: `controls.test.mjs` 19 (+3: each car's top speed and time to 90%, turning,
 health), `race.test.mjs` 27 (+3: a seeker's speed loss and stun per car, bumps split by mass, rivals on ROADSTER stats
-and a TITAN refilling to 4 seekers), `constants.test.mjs` (the relay's `EMP_CAR_MAX` = the biggest `CAR_STATS.emp`).
+and a TITAN refilling to 4 seekers), `constants.test.mjs` (the relay's `EMP_CAR_MAX` = the biggest `CAR_STATS.emp`; replaced in v0.2.21 by "no EMP values in the game or the relay").
 CI fix: `shootAt` (`tests/browser/browser.mjs`) sends the shooter's position before the shot; on the ~0.4 fps runner the
 relay's 1.5 s origin check could miss it and one kill was ignored (run 41760860639: killer suite 21 / 29).
 

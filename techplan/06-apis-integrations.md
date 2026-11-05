@@ -16,7 +16,7 @@ Endpoint: `wss://roadstersrace.com/live` (same origin; `server/serve.mjs` passes
 |---|---|---|
 | `hi` | `token`, `c` (−1..15), `car` (a `CAR_IDS` id; one the profile doesn't own shows as the ROADSTER), `v` (7); test logins also `x`, `kc` | Once; 15 s to complete; `v` must equal `LIVE_PROTOCOL` |
 | `s` | `d`: 10 or 11 finite numbers | Position within ±20,000; clamps on the rest |
-| `f` | `k` ∈ bolt / missile / emp / spin, `o`, `d` (vec3), `tg` | ≤ 14 / s |
+| `f` | `k` ∈ bolt / missile / spin (emp dropped since v0.2.21), `o`, `d` (vec3), `tg` | ≤ 14 / s |
 | `hit` | `v` (victim id), `k` ∈ bolt / missile, `d` | ≤ 14 / s; within 5 s of the sender's own shot |
 | `die` | `by` (killer id) | Once per 2 s per victim; killer must be connected and not the sender |
 | `chat` | `s` | Control and bidi characters stripped, whitespace collapsed, ≤ 120 chars; token bucket 5, +1 per 3 s; `/…` = command |

@@ -64,7 +64,8 @@ the owner's art, fired from the marked shooting spots; bolts 300 m/s × 3.5 s (`
 too); fixed painted cars counting as ROADSTERs (`car.modelId`). No new debt; `WEAPON.BOLT_LEN` / `BOLT_WID` are now
 unused by bolts (kept, still in the tests). v0.2.20 (balance): health 200 / 150 / 250 (rivals 200), rival seekers
 slower (1.5 s lock, 2 charges, 9 s recharge, 6 s apart), 2 s protection after a wreck in races for every car (no hits, no attacks); exact positions (fractional, held at a
-missed gate, wrecked cars at their respawn point, every frame); `LIVE_PROTOCOL` 13;
+missed gate, wrecked cars at their respawn point, every frame); `LIVE_PROTOCOL` 13. v0.2.21: the EMP removed
+(player, rivals, relay), no RESTART in FREE ROAM's pause menu; `LIVE_PROTOCOL` 14;
 the Killer R block is FREE ROAM only (it wrongly applied in races). No
 new debt.
 
@@ -74,7 +75,7 @@ Fixed: R2-R8, R10-R13, D1-D15. Still open:
   real reports (2026-11-03) found an inline `onclick` and the Cloudflare Web Analytics beacon: both fixed in v0.2.11;
   watch the log again after it goes live.
 - **R1** single home PC: deferred by the owner until the Windows app's server needs are known.
-- **S4** server-authoritative health (hp, EMP hits, dodges decided by the server): deferred by the owner, to be
+- **S4** server-authoritative health (hp and dodges decided by the server; no EMP since v0.2.21): deferred by the owner, to be
   planned with the Windows app's game server (same decision as R1).
 
 **Accepted by the owner (2026-11-03), not debt:**

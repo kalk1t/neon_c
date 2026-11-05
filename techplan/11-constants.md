@@ -54,14 +54,14 @@
 | `LIMIT` | 20,000 | m | Coordinate sanity bound | `:54` | code | `ROAM_RADIUS` 9,000 sits well inside |
 | `CHAT_MAX` | 120 | chars | Chat length | `src/online/protocol.js` (v0.2.4) | relay and `src/chat.js` import it | code | One definition |
 | `CHAT_BURST` / `CHAT_REFILL_MS` | 5 / 3,000 | msgs / ms | Chat token bucket | `:57` | code | Client pace `GAP_MS` 1,200 (`src/chat.js:7`) |
-| `KILL_AFTER_HIT_MS` | 30,000 | ms | A wreck counts only after the killer's checked hit or EMP on the victim this recently (S3, v0.2.10; replaced `HIT_AFTER_FIRE_MS` 5,000) | `server/live.js` | code | Generous: a slow victim's game may report late |
+| `KILL_AFTER_HIT_MS` | 30,000 | ms | A wreck counts only after the killer's checked hit on the victim this recently (EMPs too until v0.2.20) (S3, v0.2.10; replaced `HIT_AFTER_FIRE_MS` 5,000) | `server/live.js` | code | Generous: a slow victim's game may report late |
 | `DIE_MS` | 2,000 | ms | One wreck per victim per 2 s | `:62` | code | Below `ROAM_WRECK` 3 s |
 | `KC_MAX` | 1,000,000 | count | Saved count above this is reset | `:63` | code | |
 | Auth timer | 15,000 | ms | Close if no sign-in | `:138` | code | Client welcome timeout 12 s |
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch/roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 13 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 14 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20; 14: no EMP, v0.2.21) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)
@@ -77,7 +77,7 @@
 | Reload-on-old guard | 60,000 | ms | At most one reload per minute | `src/online/live.js:171` | code | |
 | `ROAM_HUB` | (0, 175, 70) | m | Spawn hub | `src/roam.js` | code | |
 | `ROAM_SLOTS` | 24 | slots | Spawn slots | `src/roam.js` | code | ≥ `MAX_PLAYERS` |
-| `ROAM_KNOCK` | bolt [0.9, 0.25, 6, 21], missile [0.45, 1.0, 26, 48], emp [0.6, 1.2, 34, 25] | [speed kept (factor), stun s, push m/s, damage hp] | FREE ROAM hit reaction | `src/roam.js` | code | Meaning from the code comment above it; damage = `WEAPON.*_DMG` |
+| `ROAM_KNOCK` | bolt [0.9, 0.25, 6, 21], missile [0.45, 1.0, 26, 48] (emp removed in v0.2.21) | [speed kept (factor), stun s, push m/s, damage hp] | FREE ROAM hit reaction | `src/roam.js` | code | Meaning from the code comment above it; damage = `WEAPON.*_DMG` |
 | `ROAM_WRECK` | 3 | s | Down time after wreck | `src/roam.js` | code | > relay `DIE_MS` |
 | `ROAM_SAFE` | 3 | s | Spawn protection | `src/roam.js` | code | |
 | `RESPAWN_SAFE` | 2 | s | RACE: every car's protection after a wreck (no damage, shots pass through, not targeted, can't attack, blinking; v0.2.20) | `src/race.js` | code | `race.test.mjs` |
@@ -99,20 +99,19 @@
 | `CAR_MODELS[id].flames` | roadster side [0.85, 0.25] middle [0.85, 0.4] · viper [0.85, 0.34] / [0.85, 0.6] · titan [0.85, 0.25] / [0.85, 0.34] | [length, width] scale | Thruster flame size per car (v0.2.18), spots in `exhaust` / `turbineFlame` (marked by the owner) | `src/car.js` | code | Same length, middle thicker (`controls.test.mjs`) |
 | `BOLT_LOOKS` | roadster len 8, flash [2.6, 1.07, 0.34], impact 5.5 · viper 8, [2.6, 0.91, 0.41], 5.5 · titan 7, [3, 1.26, 0.32], 6; glow (flash / impact added) roadster, viper | m, [height m, width / height, gun across 0..1], m | Each car's bolt (v0.2.19): 3D model scaled to `len` (×1.6 at most with distance), muzzle flash 0.09 s, impact | `src/fx.js` | code | Rivals: roadster. Art and GLBs checked by `controls.test.mjs` |
 | Engine smoke | every 0.012 s + health / 20; 93% of the car's speed, drag e^(−1.6 t); 1.3 + 2.2 k m | s, m | Damage smoke from the nozzles under 60% health (v0.2.18) | `src/main.js` `stepRacer`, `src/fx.js` `exhaustSmoke` | code | |
-| `CAR_STATS` | roadster: all 1, hp 200, spinCD 6, missiles 3 · viper: top 1.08, accel 1.276, turn 1.12, hp 150, knock 1.3, mass 0.8, spinCD 4 · titan: top 0.94, accel 0.797, turn 0.9, hp 250, knock 0.4, stun 0.6, mass 2, missiles 4, emp 1.25 | factors, hp, s | Per shop car (v0.2.17; hp 100 / 75 / 140 until v0.2.19): speed, acceleration, turning, health, knock-back, stun, bump weight, spin cooldown, seekers, EMP radius | `src/car.js` | code | Rivals use roadster; the relay's `EMP_CAR_MAX` = the biggest `emp` (`constants.test.mjs`) |
-| `EMP_CAR_MAX` | 1.25 | factor | The biggest shop-car EMP the relay allows for | `server/hits.js` | code | |
-| `RIVAL_AIM` | SPREAD 0.03 rad, CONE 35° (0.3 rad before v0.2.16), SLOWER 3, SEEKER_RANGE 600 m, LOCK_TIME 1.5 s, SEEKERS 2, SEEKER_RECHARGE 9 s, SEEKER_GAP 6 s (v0.2.20; the player's 0.5 s / 3 / 4.5 s, gap 1.5 s before), DODGE 0.5, EMP_CARS 2 | | Rivals use the player's arsenal: bolt aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s); seekers on a full lock within range, at most one per gap (v0.2.16); spin-dodge chance per seeker homing on them; cars within the EMP radius to set it off | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
+| `CAR_STATS` | roadster: all 1, hp 200, spinCD 6, missiles 3 · viper: top 1.08, accel 1.276, turn 1.12, hp 150, knock 1.3, mass 0.8, spinCD 4 · titan: top 0.94, accel 0.797, turn 0.9, hp 250, knock 0.4, stun 0.6, mass 2, missiles 4 | factors, hp, s | Per shop car (v0.2.17; hp 100 / 75 / 140 until v0.2.19): speed, acceleration, turning, health, knock-back, stun, bump weight, spin cooldown, seekers, EMP radius | `src/car.js` | code | Rivals use roadster; the relay's `EMP_CAR_MAX` = the biggest `emp` (`constants.test.mjs`) |
+| `RIVAL_AIM` | SPREAD 0.03 rad, CONE 35° (0.3 rad before v0.2.16), SLOWER 3, SEEKER_RANGE 600 m, LOCK_TIME 1.5 s, SEEKERS 2, SEEKER_RECHARGE 9 s, SEEKER_GAP 6 s (v0.2.20; the player's 0.5 s / 3 / 4.5 s, gap 1.5 s before), DODGE 0.5 | | Rivals use the player's arsenal: bolt aim error at road 1 (× road `fire`), target cone, × the player's bolt interval (0.63 s); seekers on a full lock within range, at most one per gap (v0.2.16); spin-dodge chance per seeker homing on them; cars within the EMP radius to set it off | `src/race.js` | code | Replaced `RIVAL_POWER`, `DAMAGE`, `AI_FIRE_INTERVAL` |
 | `RIVAL_SPEED` | ROAD1 120, STEP 1.02 | m/s, factor | Rival top speed `rivalTop(id) = 120 × 1.02^(id − 1)`: 120 … 141 m/s (v0.2.15) | `src/roads.js` | code | Replaced road `ai` factors |
 | `CORNER` | TURN 1.15 rad/s, GRIP 0.8, BRAKE 45 m/s², SPAN 3 samples | | Rival corner speeds and braking (v0.2.15) | `src/ai.js` | code | |
 | `GATE_R` / `GATE_R_RIVAL` | 15 / 45 | m | Gate ring radius that counts a pass: player / rivals (v0.2.15) | `src/race.js` | code | |
-| `WEAPON` | BOLT_DMG 21, BOLT_RATE 0.21 s, BOLT_SPEED 300 m/s, BOLT_LIFE 3.5 s (750 / 1.5 in v0.2.14-0.2.18), BOLT_LEN 45 m, BOLT_WID 7 m (unused by bolts since v0.2.19: `BOLT_LOOKS`), HEAT_PER_BOLT 0.08 (~22 bolts to overheat), COOL_RATE 0.45 /s, LOCK_RANGE 2000 m, LOCK_KEEP 2100 m, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s, EMP_DMG 25, EMP_RADIUS 95 m, EMP_COOLDOWN 11 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
+| `WEAPON` | BOLT_DMG 21, BOLT_RATE 0.21 s, BOLT_SPEED 300 m/s, BOLT_LIFE 3.5 s (750 / 1.5 in v0.2.14-0.2.18), BOLT_LEN 45 m, BOLT_WID 7 m (unused by bolts since v0.2.19: `BOLT_LOOKS`), HEAT_PER_BOLT 0.08 (~22 bolts to overheat), COOL_RATE 0.45 /s, LOCK_RANGE 2000 m, LOCK_KEEP 2100 m, MISSILE_DMG 48, MISSILES 3, MISSILE_RECHARGE 4.5 s, LOCK_TIME 0.5 s | | Player arsenal | `src/ai.js:18-22` | code | Comment says seekers on "Space / F / MMB"; F is spin dodge (stale comment) |
 | `COIN` | PER_GATE_GAP 6, VALUE 1, RESPAWN 6 s, RADIUS 6.5 m | | Track coins | `src/ai.js:23` | code | |
 | Race wreck | 2.4 | s | Down time in races | `src/race.js` `wreck` | code | |
 | Loot on wreck | 25 % (rounded up) | of coins | Coins the attacker takes on a takedown | `src/race.js` `wreck` | code | Tested in `tests/race.test.mjs` |
 | Podium coin bonus | [0, 15, 8, 4] | coins | Bonus for 1st/2nd/3rd in the coin race (`multi` = a RACE with AI rivals) | `src/race.js` `showResults` | code | Counts toward the 200 cap |
 | Rubber band (`RUBBER_BAND`) | clamp(gap·0.05, 0, 0.07) (−0.05 before v0.2.15) | speed factor | AI catch-up; a rival ahead is never slowed | `src/race.js` `updateRanking` | code | |
 | Lock-on | acquire < 0.3 rad within 2000 m (`LOCK_RANGE`), keep < 0.5 rad within 2100 m (`LOCK_KEEP`), min 8 m (400 / 460 before v0.2.14) | rad, m | Seeker lock | `src/aim.js` `updateLock` | code | |
-| `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], emp [0.65, 1.6], shot [0.6, 0.7] | [speed kept (factor), stun s] | Race hit reaction | `src/race.js` | code | Tested in `tests/race.test.mjs` (missile halves the speed) |
+| `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], shot [0.6, 0.7] (emp removed in v0.2.21) | [speed kept (factor), stun s] | Race hit reaction | `src/race.js` | code | Tested in `tests/race.test.mjs` (missile halves the speed) |
 | `CAMS` | {d 9, h 2.7}, {d 15, h 4.8}, cockpit | m | Camera presets | `src/camera.js` | device (`neon.view`) | |
 | `MOUSE_RAD_PER_PX` | 0.0021 | rad / px | Mouse look | `src/aim.js` | × device `neon.sens` | |
 | `PLAYER_SLOT` | 7 | grid slot | Player's start slot | `src/main.js` | code | `GRID` has 12 (`src/track.js:8`) |
@@ -177,7 +176,6 @@
 |---|---|---|---|---|
 | `BOLT_SPEED` / `BOLT_LIFE` | 300 / 3.5 (v0.2.19; 750 / 1.5 from v0.2.14, 430 / 1.3 before) | m/s, s | Bolt reach (+ the shooter's speed) | = `WEAPON.BOLT_SPEED`, `src/aim.js`; `constants.test.mjs` checks |
 | `MISSILE_TOP` / `MISSILE_LIFE` | 330 / 3.6 | m/s, s | Seeker reach (+ the shooter's speed) | = `maxSpeed: speed + 330`, `life: 3.6` |
-| `EMP_RADIUS` | 95 | m | EMP reach (+ `REACH_SLACK`) | = `WEAPON.EMP_RADIUS` |
 | `SEEN_MS` | 1,500 | ms | How far back a victim's / shooter's positions count | Covers 150 ms playback + lag |
 | `TRACK_MS` | 3,000 | ms | Positions kept per player | |
 | `LAG_S` / `LATE_S` | 0.6 / 1 | s | Extra flight time; a hit may arrive this long after the shot's life | |
