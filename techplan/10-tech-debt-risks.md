@@ -122,11 +122,11 @@ The causes found and fixed are in `game/docs/validation/v0.2.27/RenderingAssetAu
 - **A4 owner visual acceptance** of the refined cars: tested on localhost by the owner, released with v0.2.28.
 
 ## 13.6 Shop skins (v0.2.28)
-- **S1 deploy order:** skins are sold by the `buyCar` function (`SKIN_PRICES`). Until the functions are deployed, the
+- **K1 deploy order:** skins are sold by the `buyCar` function (`SKIN_PRICES`). Until the functions are deployed, the
   released game shows the skins but buying one answers *This is not for sale.* Deploy the functions with (or before)
   the client release.
-- **S2 skins are local only:** other players in FREE ROAM see the stock look; showing skins needs a new field in the
+- **K2 skins are local only:** other players in FREE ROAM see the stock look; showing skins needs a new field in the
   live protocol (a `LIVE_PROTOCOL` bump) and the relay checking `profile.skins`.
-- **S3 downloads and GPU memory:** two 2048² WebP textures per skin (1.5-3 MB each, 65 MB for all 30 on the server),
+- **K3 downloads and GPU memory:** two 2048² WebP textures per skin (1.5-3 MB each, 65 MB for all 30 on the server),
   fetched only when a skin is shown; ~40 MB of GPU memory per skin, freed once it is neither shown nor worn.
-- **S4 chip colours** in `SHOP_SKINS` are picked by eye from the textures (no thumbnails rendered yet).
+- **K4 chip colours** in `SHOP_SKINS` are picked by eye from the textures (no thumbnails rendered yet).
