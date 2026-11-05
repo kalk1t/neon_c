@@ -42,7 +42,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | D15 | **Fixed in v0.2.1:** a finished race was refused (`no-ticket`) when RACE AGAIN was pressed while `finishRace` was still on its way: the new `startRace` replaced the player's only ticket. Seen in the production function logs (2026-11-01 16:59:34 UTC). The client now waits for the save before asking for the next ticket | `src/account.js` `startRace` | Server-side alternative: accept the previous ticket too |
 | D14 | ~~`RACE_GAP_S` (120 s) longer than a fast race~~ **Fixed in v0.2.1:** `RACE_GAP_S` = `MIN_RACE_S` = 60 s, so a real back-to-back race never waits (trade-off: R8 cheat rate doubles) | `functions/rules.js` | — |
 
-## 13.3 Status 2026-11-04 (v0.2.19)
+## 13.3 Status 2026-11-05 (v0.2.20)
 v0.2.4 went live 2026-11-03; its build carried `RELAY_SECRET` inside `firebase-*.js` (a missing newline in `.env.local`
 glued it onto `VITE_APPCHECK_SITE_KEY`). v0.2.5 rotated the secret, disabled the leaked version and added a build guard
 (`vite.config.js` `secretGuard`). v0.2.6 split `main.js` (D1). v0.2.7 fixed the security findings C2 (plain-text HUD
@@ -62,7 +62,11 @@ far slower; the owner chose not to touch the leaderboard). v0.2.18 (visual): thr
 car's marked nozzles; no new debt. v0.2.19 (visual + gameplay): each car's own 3D bolt, muzzle flash and impact from
 the owner's art, fired from the marked shooting spots; bolts 300 m/s × 3.5 s (`LIVE_PROTOCOL` 12, the relay's hit check
 too); fixed painted cars counting as ROADSTERs (`car.modelId`). No new debt; `WEAPON.BOLT_LEN` / `BOLT_WID` are now
-unused by bolts (kept, still in the tests).
+unused by bolts (kept, still in the tests). v0.2.20 (balance): health 200 / 150 / 250 (rivals 200), rival seekers
+slower (1.5 s lock, 2 charges, 9 s recharge, 6 s apart), 2 s protection after a wreck in races for every car (no hits, no attacks); exact positions (fractional, held at a
+missed gate, wrecked cars at their respawn point, every frame); `LIVE_PROTOCOL` 13;
+the Killer R block is FREE ROAM only (it wrongly applied in races). No
+new debt.
 
 Fixed: R2-R8, R10-R13, D1-D15. Still open:
 - **R9** App Check enforcement: date-gated, not before 2026-11-05.

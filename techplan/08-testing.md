@@ -91,6 +91,15 @@ below (`rivals` updated for the new speed and fire rules).
 on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars within 95 m: the player's damage, rivals
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
+### v0.2.20 (2026-11-05)
+`test:live` 127 / 127: `race.test.mjs` (+7: protected after a wreck, the player (no damage, not aimed at) and a rival
+(no damage, holds fire); positions: exact on the same 4 m, a missed gate held at the gate, the start line, a wrecked
+car, the respawn point's sample; `controls.test.mjs` +1: no weapons while protected; changed: rival seekers
+after a 1.5 s lock, 6 s apart, 2 charges, one back every 9 s; rivals at 200 health and 2 seekers whatever the car),
+`roam.test.mjs` / `controls.test.mjs` at the new health (a ROADSTER takes 10 bolts), `live.test.mjs` protocol 13.
+Browser `killer` suite: R in a race now respawns a Killer (the block is FREE ROAM only; the roam check is unchanged).
+Balance measured in the browser (`balance.mjs`, player on autopilot, not firing, 60 s): see the changelog.
+
 ### v0.2.19 (2026-11-04)
 `test:live` 119 / 119: `controls.test.mjs` 22 (+2: each shop car has its bolt art, pictures and 3D model; a painted car,
 a clone whose spec is a JSON copy, keeps its own `modelId` and bolt; changed: bolts leave from each car's marked spots,

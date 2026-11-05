@@ -11,7 +11,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/main.js` | ~700 | (entry) `window.NEON` (dev builds only since v0.2.4) | Start-up; game state machine (menu, roads, countdown, race, pause, results, shop); menus and settings; car paint and loading; KILLER STATUS sync; main loop. Split in v0.2.6 (D1) |
 | `src/render.js` | ~150 | `initRender`, `renderer`, `scene`, `camera`, `lens`, `GFX`, `setQuality`, `measureGfx`, `applyAtmosphere`, `volAt`, `panAt` | Renderer, post-processing, graphics quality, map atmosphere |
 | `src/world.js` | ~95 | `initWorld`, `buildWorld`, `setRoad`, `bestKey`, live bindings `map`, `road`, `track`, `course`, `coins`… | The map and its nine roads |
-| `src/race.js` | ~290 | `initRace`, `GATE`, `raceRules`, `respawn`, `damage`, `wreck`, `rivalCombat`, `RIVAL_AIM`, `RUBBER_BAND`, `GATE_R`, `carContacts`, `updateRanking`, `showResults` | Race rules and results; rivals' weapons (bolts v0.2.15; seekers, spin dodge, EMP v0.2.16) |
+| `src/race.js` | ~290 | `initRace`, `GATE`, `raceRules`, `respawn`, `damage`, `wreck`, `rivalCombat`, `RIVAL_AIM`, `RUBBER_BAND`, `GATE_R`, `carContacts`, `updateRanking`, `showResults` | Race rules and results; rivals' weapons (bolts v0.2.15; seekers, spin dodge, EMP v0.2.16; slower rival seekers v0.2.20); `RESPAWN_SAFE` protection after a wreck, exact positions (`updateRanking` every frame; `Racer.progress` in `ai.js`) (v0.2.20) |
 | `src/aim.js` | ~200 | `initAim`, `centreAim`, `updateAim`, `updateLock`, `playerWeapons`, `autopilot` | Mouse aim (the car flies to the aim, forwards and backwards: `inp.aimSteer`, v0.2.12), lock-on, the player's weapons |
 | `src/camera.js` | ~150 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras; with the mouse captured the chase camera follows the aim (`g.camAim`, v0.2.12) |
 | `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
@@ -63,7 +63,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (12), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (13), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)
