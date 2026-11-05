@@ -31,7 +31,7 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 |---|---|---|---|---|
 | C1 | ~~`window.NEON` debug handle is exposed in production~~ **Fixed in v0.2.4 (D9):** only dev builds define it (`import.meta.env.DEV`) | `src/main.js` | — | — |
 | C2 | ~~`hud.sub()` sets `innerHTML` with remote names~~ **Fixed in v0.2.7:** `sub()` writes plain text (`textContent`); the kill feed, chat and roster already did. The results lists escape names (`esc`) | `src/hud.js` | — | — |
-| C3 | ~~No Content-Security-Policy~~ **Fixed in v0.2.7, report-only first:** `server/serve.mjs` sends a CSP on every page (scripts only from the site and the Google services Firebase loads; no inline or eval'd scripts; `object-src 'none'`; `frame-ancestors 'self'`); violations go to `/csp-report`, logged as `[csp]` lines in `server.log`. A real build loaded through it had no violations (2026-11-03: reCAPTCHA, Analytics, Firebase, Google Fonts). Next: `CSP_ENFORCE=1` once the log stays clean for signed-in players | `server/serve.mjs` | Low | Enforce after a few days of clean reports |
+| C3 | ~~No Content-Security-Policy~~ **Fixed in v0.2.7, report-only first:** `server/serve.mjs` sends a CSP on every page (scripts only from the site and the Google services Firebase loads; no inline or eval'd scripts; `object-src 'none'`; `frame-ancestors 'self'`); violations go to `/csp-report`, logged as `[csp]` lines in `server.log`. A real build loaded through it had no violations (2026-11-03: reCAPTCHA, Analytics, Firebase, Google Fonts). Reports since: the inline `onclick` and the Cloudflare beacon (fixed in v0.2.11), Analytics' `www.google.com/g/collect` (fixed in v0.2.23). Next: `CSP_ENFORCE=1` once v0.2.23 is live and the log stays clean | `server/serve.mjs` | Low | Enforce after a day of clean reports on v0.2.23 |
 | C4 | Race results, `place`, coins are client-claimed | `src/account.js:401` | Medium | By design; see 10.1 |
 | C5 | The Firebase auth helper is proxied through the site (`/__` → `roadsters-race.firebaseapp.com`) | `vite.config.js` | Info | Required for first-party sign-in; trusts that host |
 
@@ -47,10 +47,14 @@ The browser is untrusted. Everything a client sends (race results, kills, killer
 
 ## 10.4 Recommendations
 
-1. Turn on App Check (reCAPTCHA Enterprise key → `VITE_APPCHECK_SITE_KEY`, release, watch metrics, then `ENFORCE_APP_CHECK=true` in a committed `functions/.env` + Firestore enforcement). In progress: code ready 2026-11-02. Note: the relay's unauthenticated Firestore REST read of `users/{uid}` needs the player's App Check token once Firestore is enforced; the client now sends it (`hi.ac`) and the relay forwards it.
+1. Turn on App Check (reCAPTCHA Enterprise key → `VITE_APPCHECK_SITE_KEY`, release, watch metrics, then `ENFORCE_APP_CHECK=true` in a committed `functions/.env` + Firestore enforcement). In progress: code ready 2026-11-02, tokens live since v0.2.2; the enforce date (2026-11-05) has passed: the owner checks the metrics and enforces. Note: the relay's unauthenticated Firestore REST read of `users/{uid}` needs the player's App Check token once Firestore is enforced; the client now sends it (`hi.ac`) and the relay forwards it.
 2. ~~Move kill and killer saving server-side~~ Done in v0.2.4 (R7): the relay saves through `relayKills` (shared secret); `isKillAward` and `isKillerUpdate` are gone from the rules.
 3. ~~Credit kills only when the named killer recently `hit` the victim~~ Done in v0.2.10 (S3).
 4. ~~Strip `window.NEON` from production builds~~ Done in v0.2.4 (D9).
 5. ~~Use `textContent` in `hud.sub`~~ Done in v0.2.7 (C2).
 6. ~~Add a CSP~~ Done in v0.2.7 (report-only, then enforce with `CSP_ENFORCE=1`).
 7. ~~Rotate `server.log` and avoid logging chat text.~~ Done in v0.2.4 (R12).
+
+**Dependencies (2026-11-05, v0.2.23):** `npm audit` is clean in `game/` and `game/functions/` after two `overrides`
+(`@grpc/grpc-js ^1.14.7` under the Firebase client SDK, server-side gRPC flaws the browser never used; `rimraf ^6.1.4`
+under `google-gax`, never called). Re-run `npm audit` in both folders when dependencies change.

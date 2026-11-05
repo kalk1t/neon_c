@@ -102,7 +102,7 @@ sequenceDiagram
   participant FS as Firestore REST
   participant B as Player B
   A->>R: WebSocket upgrade /live (via Cloudflare)
-  A->>R: hi {token: Firebase ID token, c: color, v: 6}
+  A->>R: hi {token: Firebase ID token, c: color, car, v: LIVE_PROTOCOL (15)}
   Note over R: v ≠ LIVE_PROTOCOL → err 'old' (client reloads, at most once a minute)
   R->>G: jwtVerify (issuer/audience = project)
   R->>FS: GET users/{uid} (8 s timeout) → nickname, isKiller, killerKillCount

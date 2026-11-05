@@ -47,7 +47,7 @@
 | `MAX_PLAYERS` | 24 | players | One shared city; limits PC upload | `:47` | code (restart) | Must be ≤ client `ROAM_SLOTS` (24) |
 | `TICK_MS` | 66.7 (1000/15) | ms | Snapshot rate 15/s | `:48` | code | Client `SEND_MS` and `DELAY` assume it |
 | `MAX_MSG` | 600 | bytes | Max frame once joined | `:49` | code | |
-| `MAX_HI` | 4,096 | bytes | Max sign-in frame (ID token ~1 KB) | `:50` | code | Also `maxPayload` |
+| `MAX_HI` | 8,192 | bytes | Max sign-in frame (ID token ~1 KB + App Check token ~1 KB; 4,096 before v0.2.2) | `server/live.js` | code | Also `maxPayload` |
 | `MAX_RATE` | 45 | msgs / s | Per client (state 15 + shots) | `:51` | code | Excess dropped |
 | `MAX_SHOTS` | 14 | / s | Fire events and hits per client | `:52` | code | |
 | `IDLE_MS` | 30,000 | ms | Silent car removed | `:53` | code | Client idle keep-alive 500 ms |

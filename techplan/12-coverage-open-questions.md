@@ -31,13 +31,13 @@ Not examined: GLB/texture assets, `docs/media`, the Cloudflare dashboard, the Fi
 |---|---|---|---|
 | Q1 | ~~Was a Firebase Hosting site ever deployed?~~ **Answered 2026-11-02:** no. `roadsters-race.web.app` and `.firebaseapp.com` both answer 404 "Site Not Found"; the `hosting` section was then removed from `firebase.json` | — | — |
 | Q2 | Was **M6** (two-real-account go-live test) ever done? | Milestone status shows ⬜ | owner |
-| Q3 | **App Check:** ~~is a key planned?~~ Yes, rollout started 2026-11-02 (R9); open: the date enforcement goes on | Bot and cost protection | owner / GCP console |
+| Q3 | **App Check:** ~~is a key planned?~~ Yes, rollout started 2026-11-02 (R9); the earliest enforce date (2026-11-05) has passed: open is the owner's go after checking the metrics | Bot and cost protection | owner / GCP console |
 | Q4 | **Cloudflare config:** WAF, rate limiting, bot fight mode, cache rules, security headers, WebSocket timeouts? | DoS posture of the relay; CSP (C3) | Cloudflare dashboard |
 | Q5 | Which **Firestore indexes** exist in production (the repo file is empty)? | Rank queries rely on automatic single-field indexes | Firebase console → Firestore → Indexes |
-| Q6 | Are there **Firestore backups / PITR** and any budget alerts? | Data loss and cost | GCP console |
+| Q6 | ~~Are there **Firestore backups**?~~ **Answered 2026-11-03:** yes, daily (7 days) and weekly (14 weeks), R11. Still open: PITR and budget alerts? | Data loss and cost | GCP console |
 | Q7 | Value of `VITE_FIREBASE_AUTH_DOMAIN` in production: `roadstersrace.com` (via the `/__` proxy) or `roadsters-race.firebaseapp.com`? | Sign-in behaviour in Safari/Firefox | `.env.local` (owner) |
 | Q8 | ~~Why `raceTime >= 90` for PB rank display (D4), and why +10 per killer write?~~ Both gone in v0.2.4 (D4 replaced by the server's `newTime`; the killer rule was removed with R7) | — | answered |
-| Q9 | Meaning of the `KNOCK` / `ROAM_KNOCK` tuple elements | Undocumented tuning | code author |
+| Q9 | ~~Meaning of the `KNOCK` / `ROAM_KNOCK` tuple elements~~ **Answered:** `KNOCK` = [speed kept (factor), stun s], `ROAM_KNOCK` = [speed kept, stun s, push m/s, damage hp] ([11-constants](11-constants.md)) | — | — |
 | Q10 | ~~When is `multi` true?~~ Answered: `multi = g.racers.length > 1`, i.e. a RACE with AI rivals (`src/race.js` `showResults`); TIME ATTACK is alone | — | — |
 | Q11 | Is there a process for privacy requests (deleting `players` / `users` docs)? | Rules forbid client deletion | owner; `public/privacy.html` |
 | Q12 | PC uptime expectations: sleep settings, UPS, Windows Update restart windows | R1 | owner |

@@ -85,6 +85,6 @@ Other configuration files:
 | `.firebaserc` | project alias | git-ignored; `.firebaserc.example` committed |
 | `firestore.indexes.json` | composite indexes | **empty**; current queries need only single-field indexes [inferred from `src/online/firebase.js:182-193`] |
 | `functions/rules.js` | economy limits | must stay in step with `src/online/index.js` (comment, `functions/rules.js:1-4`) |
-| `src/online/protocol.js` | `LIVE_PROTOCOL` (7), `KILLER_KILLS`, `VOID_KILLS`, `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | shared by client and relay |
+| `src/online/protocol.js` | `LIVE_PROTOCOL` (15), `KILLER_KILLS`, `VOID_KILLS`, `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | shared by client and relay |
 
 **Runtime settings stored per device** (`localStorage`) are listed in [05-data.md](05-data.md#localstorage).

@@ -6,18 +6,18 @@
 
 HTTPS callables (`firebase-functions/v2/https` `onCall`), region us-central1, invoked with `httpsCallable(fns, name, {timeout: 15000})` (`src/online/firebase.js:41`). All require Firebase Auth (`uidOf(req)` throws `unauthenticated` otherwise). Besides them (v0.2.4): `relayKills`, a plain HTTPS POST (`onRequest`) only the live relay may call, with `Authorization: Bearer <RELAY_SECRET>` (403 otherwise, 400 on any bad entry): `{ players: [{ uid, kills 0-60, kc 0-1e6, killer }] }` (≤ 50) → `{ saved, missing }`; and `cleanRaceTickets`, a daily schedule (04:00 UTC). `finishRace` returns `{ gain, coins, totalCoins, capped, newTime }` since v0.2.4. Request and response shapes are in [04-components.md §7.6](04-components.md#76-cloud-functions-functionsindexjs).
 
-## 9.2 FREE ROAM WebSocket protocol (version 7)
+## 9.2 FREE ROAM WebSocket protocol (version 15, v0.2.22)
 
-Endpoint: `wss://roadstersrace.com/live` (same origin; `server/serve.mjs` passes it to the relay process). Text JSON frames only; binary frames close the connection. Max frame 4,096 bytes before joining, 600 after [confirmed: `server/live.js:49-50,141`].
+Endpoint: `wss://roadstersrace.com/live` (same origin; `server/serve.mjs` passes it to the relay process). Text JSON frames only; binary frames close the connection. Max frame 8,192 bytes before joining, 600 after [confirmed: `server/live.js:49-50,141`].
 
 **Client → server**
 
 | `t` | Fields | Limits / validation |
 |---|---|---|
-| `hi` | `token`, `c` (−1..15), `car` (a `CAR_IDS` id; one the profile doesn't own shows as the ROADSTER), `v` (7); test logins also `x`, `kc` | Once; 15 s to complete; `v` must equal `LIVE_PROTOCOL` |
-| `s` | `d`: 10 or 11 finite numbers | Position within ±20,000; clamps on the rest |
+| `hi` | `token`, `ac` (App Check token, optional, < 4 KB; forwarded to Firestore), `c` (−1..15), `car` (a `CAR_IDS` id; one the profile doesn't own shows as the ROADSTER), `v` (`LIVE_PROTOCOL`, 15); test logins also `x`, `kc` | Once; 15 s to complete; `v` must equal `LIVE_PROTOCOL` |
+| `s` | `d`: 10 or 11 finite numbers | Position within ±20,000; clamps on the rest (pitch ±3.15 since v0.2.22, for loops) |
 | `f` | `k` ∈ bolt / missile / spin / flip (flip since v0.2.22; emp dropped since v0.2.21), `o`, `d` (vec3), `tg` | ≤ 14 / s |
-| `hit` | `v` (victim id), `k` ∈ bolt / missile, `d` | ≤ 14 / s; within 5 s of the sender's own shot |
+| `hit` | `v` (victim id), `k` ∈ bolt / missile, `d` | ≤ 14 / s; passed on only if `server/hits.js` finds a real unused shot of that kind from where the shooter was, the victim within reach and in the line of fire (S3, v0.2.10) |
 | `die` | `by` (killer id) | Once per 2 s per victim; killer must be connected and not the sender |
 | `chat` | `s` | Control and bidi characters stripped, whitespace collapsed, ≤ 120 chars; token bucket 5, +1 per 3 s; `/…` = command |
 | `ping` | `c` (client clock) | |
@@ -37,7 +37,7 @@ All messages: ≤ 45 per second per client; the excess is dropped silently [conf
 | `chat` | `id, name, s` | everyone |
 | `cmd` | `c, ok, msg` | sender |
 | `pong` | `c` | sender |
-| `err` | `code`: `old`, `auth`, `nickname`, `full`, `again` | then closed |
+| `err` | `code`: `old`, `auth`, `nickname`, `full`, `again`, `banned` (v0.2.9) | then closed |
 
 Full table with history: `docs/technical/07-online.md`.
 

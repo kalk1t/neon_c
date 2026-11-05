@@ -55,7 +55,7 @@ flowchart LR
 | Browser game (`src/`) | player's device | rendering, physics, AI, input, race simulation | **anything** that reaches the server; the server must check it |
 | `firestore.rules` | Firebase | the only check on direct client writes (rename, kill award, killer status, profile create, private info) | — |
 | Cloud Functions | Firebase (Google) | **coins** (race rewards, purchases), best times, roads won, ticket timing | the race result itself: it is client-reported and only plausibility-checked |
-| Relay `server/live.js` | owner's PC, in the Vite process | identity (verifies the Google ID token), rate limits, kill crediting (kills follow own shots, 2 s per victim), killer counting | hit detection: the shooter decides hits (protocol 4) |
+| Relay `server/live.js` | owner's PC, its own process since v0.2.4 (`server/relay.mjs`, started by `serve.mjs`; inside Vite on the dev server) | identity (verifies the Google ID token), rate limits, hit checks (S3, v0.2.10: a real shot, from where the shooter was, within reach), kill crediting (a checked hit of the killer in the last 30 s, 2 s per victim), killer counting, saving kills (R7) | hit detection: the shooter decides hits (protocol 4) |
 | Cloudflare Tunnel | Cloudflare + `cloudflared` on the PC | TLS, public hostname | no WAF or rate-limit config is in the repo [unknown] |
 
 Key design decisions [inferred from comments and changelog]:
