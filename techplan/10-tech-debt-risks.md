@@ -81,6 +81,7 @@ A full pass over the code, the tests, the dependencies, the production folder (`
 | B4 | The free pitch's auto-level counted in fixed 1/60 s steps, so on a 144 Hz screen it waited and turned 2.4× faster | bug (fixed before the v0.2.22 tag) | `updateAim(inp, dt)` |
 | B5 | Three code comments said v0.2.21 for v0.2.20 changes (health, slower rival seekers, positions every frame): a find-and-replace during v0.2.21 caught them | wrong comments | restored from the v0.2.20 tag (`src/ai.js`, `src/race.js`) |
 | B6 | FREE ROAM relay (v0.2.22): the free-pitch edit put a `//` comment before the roll on the same line of `server/live.js`, so each state lost its roll and shifted by one: nitro = time stamp (all remote cars glowed), time stamp = health (snapshots dropped: remote cars looked stuck; health bars full until the wreck), S3 speed = thrust | **high**: FREE ROAM broken in production since v0.2.22 | roll restored; tests: a whole state relayed value for value (`live.test.mjs`), B sees A's health and no nitro (browser `killer`); the whole diff since v0.2.20 scanned for other swallowed code (none) |
+| B7 | FREE ROAM: a hidden tab (minimized, another tab) stops the frame loop: its car froze, couldn't take hits (the victim's game decides them), was dropped after 30 s idle and the background tab rejoined on its reconnect timer in a loop (others saw *joined* again and again, never the car) | **high**: a player who looks away breaks FREE ROAM for everyone (found by the owner, 2026-11-05) | v0.2.24: `LiveRoom` leaves after `AWAY_MS` 3 s hidden, no reconnect while hidden, one rejoin when shown; `LIVE_PROTOCOL` 16 so old tabs reload; test with the real `LiveRoom` in `live.test.mjs` |
 | D16 | Unused imports: `CYAN`, `MAGENTA`, `hdr` (`ads.js`), `SPIN` (`hud.js`), `WEAPON` (`shop.js`, left over from the EMP trait) | dead code | removed |
 | D17 | `WEAPON.BOLT_LEN` / `BOLT_WID` passed with every bolt but always replaced by the car's `BOLT_LOOKS` size since v0.2.19 | dead code | removed (3 call sites, the test checks they're gone) |
 | D18 | The bolt test still checked "5 bolts wreck a car" (100 health) | stale test | now 10 bolts against the car's `maxHp` (200) |
@@ -91,7 +92,7 @@ A full pass over the code, the tests, the dependencies, the production folder (`
 Checked and fine: every constant in [11-constants](11-constants.md) against the code (one mismatch, `MAX_HI`, fixed),
 no unused exports, `test:live` 135, `test:rules` 33, `test:functions` 26, the browser suites, CI green.
 
-Fixed: R2-R8, R10, R11, R13, D1-D20, B1-B6. Still open:
+Fixed: R2-R8, R10, R11, R13, D1-D20, B1-B7. Still open:
 - **R12 install:** owner step above.
 - **R9** App Check enforcement: the date gate (2026-11-05) has passed. **Owner step:** check Firebase console →
   App Check → APIs that almost all requests are verified, then enforce ([steps](../game/docs/technical/10-operations.md#app-check)).

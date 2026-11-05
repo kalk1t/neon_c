@@ -62,8 +62,8 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/index.js` | ~45 | `loadBackend`, `NICK_RE` (re-exported from protocol.js), `RACE_COIN_CAP`, `KILL_CAP` / `KILL_SAVE_GAP_MS` (mock only), `SHOP_CARS`, `timeField` | Backend choice and shared limits |
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
-| `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (15), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, away while the tab is hidden (v0.2.24), protocol mismatch reload |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (16), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)
