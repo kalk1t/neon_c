@@ -65,7 +65,8 @@ too); fixed painted cars counting as ROADSTERs (`car.modelId`). No new debt; `WE
 unused by bolts (kept, still in the tests). v0.2.20 (balance): health 200 / 150 / 250 (rivals 200), rival seekers
 slower (1.5 s lock, 2 charges, 9 s recharge, 6 s apart), 2 s protection after a wreck in races for every car (no hits, no attacks); exact positions (fractional, held at a
 missed gate, wrecked cars at their respawn point, every frame); `LIVE_PROTOCOL` 13. v0.2.21: the EMP removed
-(player, rivals, relay), no RESTART in FREE ROAM's pause menu; `LIVE_PROTOCOL` 14;
+(player, rivals, relay), no RESTART in FREE ROAM's pause menu; `LIVE_PROTOCOL` 14. v0.2.22: loops by hand (free mouse pitch,
+camera turns over), backflip (2), air brake (Space), seeker on 1; `LIVE_PROTOCOL` 15;
 the Killer R block is FREE ROAM only (it wrongly applied in races). No
 new debt.
 

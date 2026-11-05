@@ -92,7 +92,8 @@ on a low random draw and not on a high one, 6 s cooldown; the EMP with 2 cars wi
 hold fire 3 s, 11 s cooldown, none with one car near). Browser suites as below.
 
 ### v0.2.20 (2026-11-05)
-`test:live` 127 / 127 (v0.2.21: the EMP tests replaced by "no EMP" ones; the hits EMP-reach test removed): `race.test.mjs` (+7: protected after a wreck, the player (no damage, not aimed at) and a rival
+`test:live` 134 / 134 (v0.2.22: +7: a full loop by hand with the mouse and the auto-level after it, seeker on 1, the backflip (loop, cooldown, refused while protected, `flipClear`),
+the air brake, rivals not aiming at a car mid-loop, a `flip` passed on by the relay. v0.2.21: the EMP tests replaced by "no EMP" ones; the hits EMP-reach test removed): `race.test.mjs` (+7: protected after a wreck, the player (no damage, not aimed at) and a rival
 (no damage, holds fire); positions: exact on the same 4 m, a missed gate held at the gate, the start line, a wrecked
 car, the respawn point's sample; `controls.test.mjs` +1: no weapons while protected; changed: rival seekers
 after a 1.5 s lock, 6 s apart, 2 charges, one back every 9 s; rivals at 200 health and 2 seekers whatever the car),

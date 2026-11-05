@@ -65,7 +65,7 @@ Sources: `firestore.rules`, `functions/index.js`, `src/online/firebase.js`. The 
 
 Per connection `p` (`server/live.js:137`): `id` (session counter), `uid`, `name`, `c` (color), `state` (11 numbers), rate windows (`msgs`, `shots`, `hits`), `heard`, `alive`, `kills` (session), `diedAt`, chat token bucket, `firedAt`, `killer`, `kc`, `slot`. Maps: `players` (joined), `byUid` (one connection per account), `conns` (all sockets). **Nothing is persisted.** A relay restart drops all sessions; killer counts survive only because clients save them to their profiles [confirmed].
 
-State vector `s` (`server/live.js:153-162`): `[x, y, z, yaw, pitch(±1.6), roll(±1.6), speed(−50..400), boost(0..1), nitro(0..1), t, hp(0..100)]`. The semantics of indexes 3 and 9 are [inferred] from `src/online/live.js`.
+State vector `s` (`server/live.js:153-162`): `[x, y, z, yaw, pitch(±3.15 since v0.2.22; ±1.6 before), roll(±1.6), speed(−50..400), boost(0..1), nitro(0..1), t, hp(0..100)]`. The semantics of indexes 3 and 9 are [inferred] from `src/online/live.js`.
 
 ## 8.3 localStorage
 
