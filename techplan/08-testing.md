@@ -121,6 +121,20 @@ and a TITAN refilling to 4 seekers), `constants.test.mjs` (the relay's `EMP_CAR_
 CI fix: `shootAt` (`tests/browser/browser.mjs`) sends the shooter's position before the shot; on the ~0.4 fps runner the
 relay's 1.5 s origin check could miss it and one kill was ignored (run 41760860639: killer suite 21 / 29).
 
+### v0.2.27 (2026-11-05, car rendering and assets)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 156 / 156 | + `carassets.test.mjs` 18: the three car files against `tests/fixtures/car-baseline-v0.2.26.json` (part names, pivots ±1 mm, size ±2 cm, no body growth, triangle budget, authored maps, clear coat, tangents, size < 12 MB). `CAR_ASSET_DIR` checks a staged build. Caught a 29 cm TITAN `lo_body` bug before release |
+| `test:browser` | cars 182/182, killer 33/33, rivals 10/10, save 5/5, void 9/9 | `cars.test.mjs` (new; on the dev-only `inspect.html`): palette frozen, authored materials, 33 car/colour combinations + 99 with dev-only test finishes rendered lights-only (accent match, lit area), copies isolated, disposal on `useModel`, legacy fallback, every tangent usable and no NaN pixel in lit renders. Fails 3/182 with the tangent repair switched off |
+| Visual | before/after sheets | `docs/validation/v0.2.27/BeforeAfter/` (`tools/capture-cars.mjs`, `meshy/contact_sheet.py`); performance `tools/perf-cars.mjs` |
+
+### v0.2.28 (2026-11-05, ROADSTER skins)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 157 / 157 | + `constants.test.mjs`: `SHOP_SKINS` prices = `functions/rules.js` `SKIN_PRICES`, both textures of every skin shipped |
+| `test:browser` | cars 188/188, killer 33/33, rivals, save, void pass | `cars.test.mjs` +6: skin maps swapped (paint, metal, roughness, coat), normal/light maps shared, the car file's textures untouched, copies share skin textures, `car-livery-skin` shader compiles and draws |
+| Manual (scripted, not in CI) | pass | ROADSTER, VIPER and TITAN skins (30, prices 500 / 1,500 / 3,500); mock shop flow: preview → buy (−500) → equip → kept after closing; startup car and VIPER/TITAN switch (regression found by the owner: a car without a skin was never drawn) |
+
 ## 11.3 Gaps
 
 | Area | Automated test? |
@@ -129,6 +143,6 @@ relay's 1.5 s origin check could miss it and one kill was ignored (run 417608606
 | `account.js` flows (pending races, retry, unsaved-kills display) | Partly (`save.test.mjs`: pending races, retry) |
 | `src/online/live.js` client (reconnect, interpolation) | Indirectly, by `killer.test.mjs` (reconnect) |
 | Relay: rate limits, size limits, idle drop, `die` / `hit` validation, `err full`, `err again` | Partly (KILLER STATUS, kill saving, shop cars, invalid kills, connection limits, moderation, hit and wreck checks) |
-| Rendering / visual regressions | No (`docs:shots` makes screenshots for docs, no comparison) |
+| Rendering / visual regressions | Partly (v0.2.27): car materials, colours, NaN and asset contract tested; matched captures by `tools/capture-cars.mjs` are compared by eye, not automatically |
 | Build smoke test | No script; builds were checked manually into a scratch `outDir` |
 | CI | **GitHub Actions** since 2026-11-02 (`.github/workflows/ci.yml`): on push to `main`, pull requests and by hand; Node 22, Java 21; build + live + rules + functions + browser. Never deploys |

@@ -16,7 +16,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/camera.js` | ~160 | `initCamera`, `cam`, `CAMS`, `show`, `setInterior`, `chaseCamera`, `showcaseCamera`, `cinematicCamera` | Cameras; with the mouse captured the chase camera follows the aim (`g.camAim`, v0.2.12), at any pitch with its up vector turned over (loops, v0.2.22) |
 | `src/roam.js` | ~410 | `initRoam`, `live`, `avatars`, `startRoam`, `endRoam`, `updateRoam`, `roamHit`, `roamSpawn`… | FREE ROAM (avatars wear each player's shop car since v0.2.4) |
 | `src/clock.js` | 7 | `time`, `advance` | The game clock |
-| `src/car.js` | ~990 | `Car`, `CAR`, `SPIN`, `FLIP`, `AIRBRAKE`, `PITCH`, `CAR_STATS`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader` | Player and rival car: flight model (speed, boost, climb, roll; free pitch toward `inp.pitchTo`, v0.2.22), spin dodge, backflip (`flip` / `flipStep` / `flipClear`, v0.2.22), air brake (v0.2.22), sideways slide, per-model muzzle at the owner's marked shooting spots (`car.muzzle(side)`, v0.2.14, spots v0.2.19), `car.modelId` found by the model file (painted clones too, v0.2.19), GLB model loading and livery shader, nitro and ribbons, thruster flames at each model's marked nozzles (`turbineFlame`, `flames`, pod-mounted ROADSTER side flames, v0.2.18), killer aura attachment |
+| `src/car.js` | ~990 | `Car`, `CAR`, `SPIN`, `FLIP`, `AIRBRAKE`, `PITCH`, `CAR_STATS`, `CAR_MODELS`, `loadCarModel`, `liveryModel`, `sculptShader`, `isAuthored`, `LIGHT` | Player and rival car: flight model (speed, boost, climb, roll; free pitch toward `inp.pitchTo`, v0.2.22), spin dodge, backflip (`flip` / `flipStep` / `flipClear`, v0.2.22), air brake (v0.2.22), sideways slide, per-model muzzle at the owner's marked shooting spots (`car.muzzle(side)`, v0.2.14, spots v0.2.19), `car.modelId` found by the model file (painted clones too, v0.2.19), GLB model loading (authored materials from the v0.2.27 car files: emissive light mask, region maps, baked normals, clear coat on the normal map; the v0.2.26 material for files without an emissive texture), livery shader (per-copy materials, freed by `releaseModel`, v0.2.27), nitro and ribbons, thruster flames at each model's marked nozzles (`turbineFlame`, `flames`, pod-mounted ROADSTER side flames, v0.2.18), killer aura attachment |
 | `src/ai.js` | ~195 | `Racer`, `aiInput`, `LIVERIES`, `WEAPON`, `COIN`, `CORNER`, `cornerSpeeds` | 10 rival liveries with skill (boost eagerness only since v0.2.3; top speed = player × `road.ai`), `RIVAL_POWER` 1.5 on rival damage and fire rate; AI steering along the track, rubber band (in `race.js`), weapon and coin constants |
 | `src/physics.js` | 162 | `OBB`, `Cyl`, `Torus`, `Colliders` | Static collision world: uniform grid (`CELL` 120 m), swept segment tests (3 m steps) |
 | `src/track.js` | 155 | `Track`, `Corridor`, `SAMPLE_STEP`, `GRID` | Road spline (sampled every 4 m), start grid (12 slots), corridor grid (`CELL` 160) used to keep scenery off the road |
@@ -46,7 +46,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 |---|---|---|---|
 | `src/hud.js` | 396 | `HUD` | Speed, boost, heat, missiles, lap times, sub-titles (`sub()` is plain text since v0.2.7, C2), kill feed, health bars |
 | `src/chat.js` | 76 | `Chat`, `CHAT_MAX` | FREE ROAM chat log and input (120 chars, own pace 1.2 s) |
-| `src/shop.js` | 251 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge; per-car stat bars (`statRows`, v0.2.17) |
+| `src/shop.js` | ~340 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge; per-car stat bars (`statRows`, v0.2.17); skins: chips, preview, buy, wear (`neon.skin.<car>`, v0.2.28) |
 | `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |
 | `src/touch.js` | 176 | `TouchControls` | Phone controls: tilt steering (24°), climb (18°), dead zone 2.5° |
 | `src/input.js` | ~135 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); A / D give `strafe` while the mouse is captured (v0.2.13); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
@@ -59,7 +59,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | Module | Lines | Key exports | Responsibility |
 |---|---|---|---|
 | `src/account.js` | ~470 | `Account` | Single source of account state for the UI: sign-in, nickname dialog, races (`startRace`, `recordRace`, `flushPending`), unsaved-kills display (saving only with the mock backend), `setKiller` (shows; the relay saves), buying, ranks; 15 s timeouts; friendly errors |
-| `src/online/index.js` | ~45 | `loadBackend`, `NICK_RE` (re-exported from protocol.js), `RACE_COIN_CAP`, `KILL_CAP` / `KILL_SAVE_GAP_MS` (mock only), `SHOP_CARS`, `timeField` | Backend choice and shared limits |
+| `src/online/index.js` | ~45 | `loadBackend`, `NICK_RE` (re-exported from protocol.js), `RACE_COIN_CAP`, `KILL_CAP` / `KILL_SAVE_GAP_MS` (mock only), `SHOP_CARS`, `SHOP_SKINS` / `SKIN_PRICE` / `shopItem` / `ownedSkins` (v0.2.28), `timeField` | Backend choice and shared limits |
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, away while the tab is hidden (v0.2.24), protocol mismatch reload |
@@ -85,7 +85,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 |---|---|---|---|---|
 | `startRace` | 32 | `{mode: 'race'\|'attack', road: 1..9}` (bad values default to `attack` / 1) | `{ticket}` | `unauthenticated`, `resource-exhausted 'too-fast'` |
 | `finishRace` | 48 | `{ticket, coins, bestLap, raceTime, place}` | `{gain, coins, totalCoins}` | `invalid-argument 'no-ticket'`, `failed-precondition 'no-profile' \| 'no-ticket' \| 'expired'`, `resource-exhausted 'too-soon'` |
-| `buyCar` | 86 | `{id: 'viper'\|'titan'}` | `{coins}` | `invalid-argument 'unknown'`, `already-exists 'owned'`, `failed-precondition 'no-profile' \| 'funds'` |
+| `buyCar` | 86 | `{id: 'viper'\|'titan'\|<skin id>}` (skins v0.2.28: `roadster-r01`…`titan-t10`) | `{coins}` | `invalid-argument 'unknown'`, `already-exists 'owned'`, `failed-precondition 'no-profile' \| 'funds'` |
 
 Global options: region us-central1, `maxInstances` 10, memory 256 MiB, `cors: true`, `enforceAppCheck` from `ENFORCE_APP_CHECK` (`functions/index.js:22-25`).
 
@@ -96,3 +96,6 @@ Global options: region us-central1, `maxInstances` 10, memory 256 MiB, `cors: tr
 | `tools/roadgen/` (`gen.mjs`, `emit.mjs`, `check.mjs`, `metrics.mjs`, `roads.json`) | Offline generation and checking of the 9 roads (writes into `src/roads.js`) [inferred from file names; not run while writing this] |
 | `docs/tools/capture-screens.mjs` | Screenshots for the docs (Playwright + Chrome) |
 | `tools/fx/voidaura.mjs` | Builds the VOID CROWN textures `public/fx/voidaura_*.webp` from `neon_c/Assets/06_Effects` (recolour + crown cut-out, Playwright Chromium) |
+| `inspect.html` + `src/inspect.js` (v0.2.27) | Dev-only car inspection scene on the game renderer (not built: Vite builds `index.html` only): one car, fixed views, diagnostic modes (clay, wire, normals, base, rough, metal, emissive, nocoat, ...), `pipeline=legacy` (frozen v0.2.26 materials), any GLB under `public/`, the 11 colours |
+| `tools/capture-cars.mjs`, `tools/inspect-glb.mjs`, `tools/perf-cars.mjs` (v0.2.27) | Matched captures of the inspection scene; GLB report (nodes, pivots, triangles, attributes, materials, textures, GPU estimate, hash); in-game performance before/after (the v0.2.26 car files served in place) |
+| `meshy/refine_car.py` (+ `clay_render.py`, `glb_textures.py`, `contact_sheet.py`) (v0.2.27) | Blender 5.2 build of the three shop car files from the raw Meshy sources: production parts/pivots/budget kept, normals from the source, baked normal map, tangents, region maps, emissive light mask, metal pods; saves `meshy/refined/<car>.blend` |

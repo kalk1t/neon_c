@@ -32,6 +32,7 @@
 | `ROADS` (functions) | 9 | roads | Valid road ids 1..9 | `functions/rules.js:15` | `functions/index.js:35` | code | Must match `src/roads.js` length |
 | `SHOP_PRICES.viper` | 2,500 | coins | Price | `functions/rules.js:21` | `functions/index.js:89` | code | Must match `SHOP_CARS` (`src/online/index.js:21`) |
 | `SHOP_PRICES.titan` | 7,500 | coins | Price | `functions/rules.js:22` | as above | code | as above |
+| `SKIN_PRICES` (v0.2.28) | 500 / 1,500 / 3,500 | coins | ROADSTER / VIPER / TITAN skin | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `SKIN_PRICE` (`src/online/index.js`); `constants.test.mjs` |
 | `KILL_CAP` | 60 | kills / save | `?mock` backend only since v0.2.4 (the relay saves real kills) | `src/online/index.js` | `src/online/mock.js` | code | — |
 | `KILL_SAVE_GAP_MS` | 60,000 | ms | `?mock` backend only since v0.2.4 | `src/online/index.js` | `src/account.js` `flushKills` | code | — |
 | ~~Killer count step~~ | — | — | Removed with the browser's KILLER STATUS writes (v0.2.4) | — | — | — | — |

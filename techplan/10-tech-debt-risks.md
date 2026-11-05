@@ -107,3 +107,26 @@ Fixed: R2-R8, R10, R11, R13, D1-D20, B1-B7. Still open:
 - Two accounts killing each other as often as they like (R7 remainder): kills earn no reward, so there is nothing to farm.
 - Up to 2,000 coins a day with plausible times (R8 remainder): real play can earn that much too, so the cap is the
   limit by design.
+
+## 13.5 Car rendering and assets (v0.2.27)
+
+The causes found and fixed are in `game/docs/validation/v0.2.27/RenderingAssetAudit.md`. Left open:
+- **A1 download size:** the car files grew by 3.2-3.6 MB each (8.6 / 11.1 / 10.7 MB): a fourth 2048² texture and
+  tangents. The ROADSTER loads at start-up. GPU texture compression (KTX2/Basis) and meshopt geometry would cut this,
+  but three.js needs their WASM decoders (and the CSP may need `'wasm-unsafe-eval'`): not done without a decision.
+- **A2 baked lighting in the Meshy base colours** and a fragmented UV atlas: only a re-texture fixes them (Meshy,
+  paid; needs the owner's authorisation for this project).
+- **A3 Windows app references:** `win_app/` (Codex's) records hashes of `public/models/car*.glb` and `src/car.js`;
+  its drift checks will flag v0.2.27. Node names, pivots and sizes are unchanged. Refreshing its references is for
+  Codex / the owner.
+- **A4 owner visual acceptance** of the refined cars: tested on localhost by the owner, released with v0.2.28.
+
+## 13.6 Shop skins (v0.2.28)
+- **S1 deploy order:** skins are sold by the `buyCar` function (`SKIN_PRICES`). Until the functions are deployed, the
+  released game shows the skins but buying one answers *This is not for sale.* Deploy the functions with (or before)
+  the client release.
+- **S2 skins are local only:** other players in FREE ROAM see the stock look; showing skins needs a new field in the
+  live protocol (a `LIVE_PROTOCOL` bump) and the relay checking `profile.skins`.
+- **S3 downloads and GPU memory:** two 2048² WebP textures per skin (1.5-3 MB each, 65 MB for all 30 on the server),
+  fetched only when a skin is shown; ~40 MB of GPU memory per skin, freed once it is neither shown nor worn.
+- **S4 chip colours** in `SHOP_SKINS` are picked by eye from the textures (no thumbnails rendered yet).

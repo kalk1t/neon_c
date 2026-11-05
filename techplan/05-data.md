@@ -22,6 +22,7 @@ erDiagram
     int roadsWon "highest road won"
     map coinsDay "day + coins banked today (functions only, v0.2.4)"
     array cars "owned shop cars"
+    array skins "owned shop skins (v0.2.28)"
     int kills "relay via relayKills (v0.2.4)"
     timestamp lastKillsAt
     bool isKiller "relay via relayKills (v0.2.4)"
@@ -78,6 +79,7 @@ State vector `s` (`server/live.js:153-162`): `[x, y, z, yaw, pitch(±3.15 since 
 | `neon.paint` | livery index | `main.js` |
 | `neon.sens`, `neon.invert`, `neon.vol`, `neon.view` | mouse sensitivity, invert, volume, camera / cockpit | `main.js`; `neon.view` in `camera.js` |
 | `neon.car` | equipped car | `shop.js:9` |
+| `neon.skin.<car>` | skin worn by that car (v0.2.28; '' = stock) | `shop.js` `SKIN_KEY` |
 | `neon.shopSeen` | NEW badge seen | `shop.js` |
 | `neon.kills.<uid>` | unsaved FREE ROAM kills | `account.js:45` |
 | `neon.mockdb` | whole mock database (dev `?mock`) | `mock.js` |
