@@ -14,7 +14,7 @@ Endpoint: `wss://roadstersrace.com/live` (same origin; `server/serve.mjs` passes
 
 | `t` | Fields | Limits / validation |
 |---|---|---|
-| `hi` | `token`, `ac` (App Check token, optional, < 4 KB; forwarded to Firestore), `c` (−1..15), `car` (a `CAR_IDS` id; one the profile doesn't own shows as the ROADSTER), `skin` (a skin code `^[a-z]\d{2}$` or null; one the profile's `skins` doesn't hold for that car shows the stock look, v0.3), `v` (`LIVE_PROTOCOL`, 17); test logins also `x`, `kc` | Once; 15 s to complete; `v` must equal `LIVE_PROTOCOL` |
+| `hi` | `token`, `ac` (App Check token, optional, < 4 KB; forwarded to Firestore), `c` (−1..15), `car` (a `CAR_IDS` id; one the profile doesn't own shows as the ROADSTER), `skin` (a skin code `^[a-z]\d{2}$` or null; one the profile's `skins` doesn't hold for that car shows the stock look, v0.3), `nitro` (a nitro code `^f\d{2}$` or null, checked against `nitros` the same way, v0.3.2), `v` (`LIVE_PROTOCOL`, 18); test logins also `x`, `kc` | Once; 15 s to complete; `v` must equal `LIVE_PROTOCOL` |
 | `s` | `d`: 10 or 11 finite numbers | Position within ±20,000; clamps on the rest (pitch ±3.15 since v0.2.22, for loops); the hp slot is replaced by the relay's own (S4, v0.3) |
 | `f` | `k` ∈ bolt / missile / spin / flip (flip since v0.2.22; emp dropped since v0.2.21), `o`, `d` (vec3), `tg` | ≤ 14 / s |
 | `hit` | `v` (victim id), `k` ∈ bolt / missile, `d` | ≤ 14 / s; counts only if `server/hits.js` finds a real unused shot of that kind from where the shooter was, the victim within reach and in the line of fire (S3, v0.2.10); then `server/health.js` applies it (S4, v0.3) and the victim gets `hit {id, k, d, r: hit / wreck / dodged, hp}`; a wreck is the shooter's kill. (`die` was removed in v0.3) |

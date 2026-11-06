@@ -153,6 +153,14 @@ cars; the workers now load `basis/ktx2-worker.js` with a policy of its own (eval
 glow with the v0.3 cars' lines (the old v0.2.28 lines painted out of the skin textures, `lights.ktx2` from the v0.3
 car).
 
+**v0.3.2 (2026-11-06, ROADSTER + VIPER nitros):** 10 ROADSTER shop nitros (1,000 coins) 10 VIPER (2,000) and 10 TITAN (5,000) (envelope runtime per their directives, all emitters on the body) from the owner's effect packs
+(`Assets/01_Vehicle/nitro/roadster/`, directive followed): `src/nitrostyle.js` attaches a pack's three emitters to
+the car's own body and rear-pod nodes (manifest positions, hi / lo tables), drives Ignition / NitroLoop / FlameLoop /
+Shutdown from `Car.boosting` and the throttle; bought via `buyCar` into `nitros` (server-only), seen in FREE ROAM
+(`hi.nitro`, `LIVE_PROTOCOL` 18). New debt: the packs are fitted to the exact `car.glb` (SHA-256 checked by
+`constants.test.mjs`): a re-built ROADSTER needs the packs re-fitted; VIPER / TITAN packs not delivered yet; in the
+chase camera the plumes are seen end-on and read small (owner review). Release order: **functions, then client**.
+
 **Owner steps for v0.3:**
 - Run `server/install-autostart.ps1` once as administrator (R12; also installs the v0.2.4 log rotation).
 - No functions change in v0.3: `npm run release` only.

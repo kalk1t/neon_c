@@ -135,6 +135,15 @@ relay's 1.5 s origin check could miss it and one kill was ignored (run 417608606
 | `test:browser` | cars 188/188, killer 33/33, rivals, save, void pass | `cars.test.mjs` +6: skin maps swapped (paint, metal, roughness, coat), normal/light maps shared, the car file's textures untouched, copies share skin textures, `car-livery-skin` shader compiles and draws |
 | Manual (scripted, not in CI) | pass | ROADSTER, VIPER and TITAN skins (30, prices 500 / 1,500 / 3,500); mock shop flow: preview → buy (−500) → equip → kept after closing; startup car and VIPER/TITAN switch (regression found by the owner: a car without a skin was never drawn) |
 
+### v0.3.2 (2026-11-06, ROADSTER nitros)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 168 / 168 | + `constants.test.mjs`: `SHOP_NITROS` = `NITRO_PRICES`, every pack in its manifest and as delivered (SHA-256), the shipped `car.glb` = the file the packs were fitted to; `live.test.mjs`: `hi.nitro` accepted / malformed → null, carried in `welcome` / `join` |
+| `test:functions` | 27 / 27 | + nitro purchase: 1,000 coins into `nitros`, once, unknown ids refused |
+| `test:rules` | 33 / 33 | + the player can't write `skins` / `nitros` |
+| `test:browser` | cars 188/188, nitros 17/17, save, skins pass | `nitros.test.mjs` (new): own car (hi nodes), stock flames hidden, FREE ROAM: B draws A's nitro on the lo nodes and follows A's boost; VIPER: body-only emitters (hi and lo), pods tilt without moving them, envelope flame / boost sizes, collapse then hidden, nozzle scales; TITAN (F02): the same with its sizes, vapour at renderOrder 29 |
+| Manual (scripted, real GPU, not in CI) | pass | all 10 from the rear and side; shop buy → equip; race: flame / boost / off / rapid toggles / respawn / paint change; production build with `CSP_ENFORCE=1` |
+
 ## 11.3 Gaps
 
 | Area | Automated test? |

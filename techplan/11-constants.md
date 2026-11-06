@@ -33,6 +33,8 @@
 | `SHOP_PRICES.viper` | 2,500 | coins | Price | `functions/rules.js:21` | `functions/index.js:89` | code | Must match `SHOP_CARS` (`src/online/index.js:21`) |
 | `SHOP_PRICES.titan` | 7,500 | coins | Price | `functions/rules.js:22` | as above | code | as above |
 | `SKIN_PRICES` (v0.2.28) | 500 / 1,500 / 3,500 | coins | ROADSTER / VIPER / TITAN skin | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `SKIN_PRICE` (`src/online/index.js`); `constants.test.mjs` |
+| `NITRO_PRICES` (v0.3.2) | 1,000 / 2,000 / 5,000 | coins | ROADSTER / VIPER / TITAN nitro (10 each) | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `NITRO_PRICE` (`src/online/index.js`); `constants.test.mjs` |
+| `NITRO_LOD` (v0.3.2) | 35 / 60 / 90 / 18 | m | Nitro details / side emitters / whole effect hidden past; sparks 0-3 only past | `src/nitrostyle.js` | `NitroStyle.update` | code | From the pack's directive |
 | `KILL_CAP` | 60 | kills / save | `?mock` backend only since v0.2.4 (the relay saves real kills) | `src/online/index.js` | `src/online/mock.js` | code | — |
 | `KILL_SAVE_GAP_MS` | 60,000 | ms | `?mock` backend only since v0.2.4 | `src/online/index.js` | `src/account.js` `flushKills` | code | — |
 | ~~Killer count step~~ | — | — | Removed with the browser's KILLER STATUS writes (v0.2.4) | — | — | — | — |
@@ -62,7 +64,7 @@
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch ±3.15 (v0.2.22; ±1.6 before), roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 17 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20; 14: no EMP, v0.2.21; 15: backflip, v0.2.22; 16: away tabs leave, v0.2.24; 17: health on the relay (S4) and skins (K2), v0.3) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 18 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20; 14: no EMP, v0.2.21; 15: backflip, v0.2.22; 16: away tabs leave, v0.2.24; 17: health on the relay (S4) and skins (K2), v0.3; 18: nitros, v0.3.2) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)

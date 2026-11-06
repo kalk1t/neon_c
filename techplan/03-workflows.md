@@ -82,12 +82,12 @@ sequenceDiagram
   participant FS as Firestore
   P->>S: BUY VIPER (price shown from SHOP_CARS)
   S->>F: buyCar {id:'viper'} (15 s timeout)
-  F->>F: price = SHOP_PRICES[id] or SKIN_PRICES[id] (skins, v0.2.28) or invalid-argument
+  F->>F: price = SHOP_PRICES[id] or SKIN_PRICES[id] (skins, v0.2.28) or NITRO_PRICES[id] (nitros, v0.3.2) or invalid-argument
   F->>FS: tx: read users/{uid}
   Note over F: already-exists if owned; failed-precondition 'funds' if coins < price
-  F->>FS: coins −price, cars ∪ id (a skin: skins ∪ id); create users/{uid}/purchases/{auto} {item, price, coinsBefore, at}
+  F->>FS: coins −price, cars ∪ id (a skin: skins ∪ id; a nitro: nitros ∪ id); create users/{uid}/purchases/{auto} {item, price, coinsBefore, at}
   F-->>S: {coins}
-  S->>P: car unlocked; equip stored in localStorage neon.car (a skin: neon.skin.<car>)
+  S->>P: car unlocked; equip stored in localStorage neon.car (a skin: neon.skin.<car>; a nitro: neon.nitro.<car>)
 ```
 
 Sources: `src/account.js:72`, `functions/index.js:86-103`, `functions/rules.js:20`, `src/shop.js:9`. `totalCoins` (the ranking) is not reduced by spending [confirmed].
@@ -102,15 +102,15 @@ sequenceDiagram
   participant FS as Firestore REST
   participant B as Player B
   A->>R: WebSocket upgrade /live (via Cloudflare)
-  A->>R: hi {token: Firebase ID token, c: color, car, skin, v: LIVE_PROTOCOL (17)}
+  A->>R: hi {token: Firebase ID token, c: color, car, skin, nitro, v: LIVE_PROTOCOL (18)}
   Note over R: v ≠ LIVE_PROTOCOL → err 'old' (client reloads, at most once a minute)
   R->>G: jwtVerify (issuer/audience = project)
   R->>FS: GET users/{uid} (8 s timeout) → nickname, isKiller, killerKillCount
   alt no nickname → err 'nickname'; full (24) → err 'full'; same uid elsewhere → old tab gets err 'again'
   end
-  R-->>A: welcome {id, name, n, slot, x, kc, car, skin}
+  R-->>A: welcome {id, name, n, slot, x, kc, car, skin, nitro}
   R-->>A: join … (each player already there)
-  R-->>B: join {id A, name, c, car, skin, k:0, x, kc}
+  R-->>B: join {id A, name, c, car, skin, nitro, k:0, x, kc}
   loop every 66 ms (15/s), 500 ms when idle
     A->>R: s [x,y,z, yaw, pitch, roll, speed, boost, …, hp (ignored since v0.3)]
     R-->>A: w {n, p:[[id, …state, the relay's hp %]]} (tick 15/s)
