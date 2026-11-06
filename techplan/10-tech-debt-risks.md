@@ -19,7 +19,7 @@ Severity: **H** high, **M** medium, **L** low. The "known issue" column refers t
 | R9 | No App Check. **In progress (2026-11-02):** code ready (dev debug token, `appCheckToken()`, relay forwards `hi.ac` as `X-Firebase-AppCheck` so Firestore enforcement won't break FREE ROAM); **tokens live since v0.2.2** (2026-11-02, exchange verified 200, TTL 1 h); next: watch metrics, enforce no earlier than 2026-11-05 | M | `src/online/firebase.js`, `server/live.js` identify | yes (open) | Rollout steps in `docs/technical/10-operations.md#app-check` |
 | R10 | ~~No CI; tests only run by hand~~ **Fixed 2026-11-02:** GitHub Actions (`.github/workflows/ci.yml`) runs build, live, rules, functions and browser tests on every push to `main` | ~~M~~ | `.github/workflows/ci.yml` | | Done |
 | R11 | ~~No Firestore backups~~ **Fixed 2026-11-03:** Firestore scheduled backups on `(default)`: daily (kept 7 days) and weekly on Sunday (kept 14 weeks). Restore = `firebase firestore:databases:restore` into a new database (see `docs/technical/10-operations.md#backups`) | ~~M~~ | `firebase firestore:backups:schedules:list` | | Done |
-| R12 | `server.log` grows forever. **Code fixed in v0.2.4** (the launcher rotates it at 5 MB, 3 old files kept; chat text isn't logged since v0.2.4), **but not installed:** the review of 2026-11-05 found `neon_c/live/launcher.mjs` still the 2026-11-02 copy without rotation (the log is 25 KB, so nothing is lost yet) | L | `server/launcher.mjs` vs `neon_c/live/launcher.mjs` | | **Owner step:** run `server/install-autostart.ps1` once from an administrator PowerShell (copies the launcher, restarts the task, ~3 s downtime) |
+| R12 | `server.log` grows forever. **Code fixed in v0.2.4** (the launcher rotates it at 5 MB, 3 old files kept; chat text isn't logged since v0.2.4), **but not installed:** the review of 2026-11-05 found `neon_c/live/launcher.mjs` still the 2026-11-02 copy without rotation (the log is 25 KB, so nothing is lost yet). **v0.3:** launcher updates ship with releases (the launcher installs a newer one itself, `start.cmd` restarts it), so this is the last manual install | L | `server/launcher.mjs` vs `neon_c/live/launcher.mjs` | | **Owner step, once:** run `server/install-autostart.ps1` from an administrator PowerShell (copies the launcher and the new `start.cmd`, restarts the task, ~3 s downtime) |
 | R13 | ~~`neon_c/` not in git~~ **Fixed 2026-11-03:** github.com/kalk1t/neon_c (private): Assets, techplan, milestones, archive, meshy scripts, win_app; left out (root `.gitignore`): `game/` (own repo), `live/`, raw Meshy downloads, videos | ~~L~~ | `neon_c/.gitignore` | | Claude commits and pushes it after changes (win_app committed as-is, never edited) |
 
 ## 13.2 Code-level debt
@@ -100,8 +100,7 @@ Fixed: R2-R8, R10, R11, R13, D1-D20, B1-B7. Still open:
   v0.2.11, Analytics' `www.google.com/g/collect` in v0.2.23), so once v0.2.23 is live and a day of play adds no new
   `[csp]` line: `CSP_ENFORCE=1` in `game/.env.local` and `npm run release`.
 - **R1** single home PC: deferred by the owner until the Windows app's server needs are known.
-- **S4** server-authoritative health (hp and dodges decided by the server; no EMP since v0.2.21): deferred by the owner, to be
-  planned with the Windows app's game server (same decision as R1).
+- ~~**S4** server-authoritative health~~: done in v0.3 on the relay (§13.7).
 
 **Accepted by the owner (2026-11-03), not debt:**
 - Two accounts killing each other as often as they like (R7 remainder): kills earn no reward, so there is nothing to farm.
@@ -111,10 +110,10 @@ Fixed: R2-R8, R10, R11, R13, D1-D20, B1-B7. Still open:
 ## 13.5 Car rendering and assets (v0.2.27)
 
 The causes found and fixed are in `game/docs/validation/v0.2.27/RenderingAssetAudit.md`. Left open:
-- **A1 download size:** the car files grew by 3.2-3.6 MB each (8.6 / 11.1 / 10.7 MB): a fourth 2048² texture and
+- ~~**A1 download size:**~~ **Fixed in v0.3 (§13.7).** The car files grew by 3.2-3.6 MB each (8.6 / 11.1 / 10.7 MB): a fourth 2048² texture and
   tangents. The ROADSTER loads at start-up. GPU texture compression (KTX2/Basis) and meshopt geometry would cut this,
   but three.js needs their WASM decoders (and the CSP may need `'wasm-unsafe-eval'`): not done without a decision.
-- **A2 baked lighting in the Meshy base colours** and a fragmented UV atlas: only a re-texture fixes them (Meshy,
+- ~~**A2 baked lighting in the Meshy base colours**~~ **Fixed in v0.3 (§13.7; the UV atlas is kept, so skins fit).** and a fragmented UV atlas: only a re-texture fixes them (Meshy,
   paid; needs the owner's authorisation for this project).
 - **A3 Windows app references:** `win_app/` (Codex's) records hashes of `public/models/car*.glb` and `src/car.js`;
   its drift checks will flag v0.2.27. Node names, pivots and sizes are unchanged. Refreshing its references is for
@@ -125,8 +124,47 @@ The causes found and fixed are in `game/docs/validation/v0.2.27/RenderingAssetAu
 - **K1 deploy order:** skins are sold by the `buyCar` function (`SKIN_PRICES`). Until the functions are deployed, the
   released game shows the skins but buying one answers *This is not for sale.* Deploy the functions with (or before)
   the client release.
-- **K2 skins are local only:** other players in FREE ROAM see the stock look; showing skins needs a new field in the
+- ~~**K2 skins are local only:**~~ **Fixed in v0.3 (§13.7).** other players in FREE ROAM see the stock look; showing skins needs a new field in the
   live protocol (a `LIVE_PROTOCOL` bump) and the relay checking `profile.skins`.
-- **K3 downloads and GPU memory:** two 2048² WebP textures per skin (1.5-3 MB each, 65 MB for all 30 on the server),
+- ~~**K3 downloads and GPU memory:**~~ **Fixed in v0.3 (§13.7).** two 2048² WebP textures per skin (1.5-3 MB each, 65 MB for all 30 on the server),
   fetched only when a skin is shown; ~40 MB of GPU memory per skin, freed once it is neither shown nor worn.
-- **K4 chip colours** in `SHOP_SKINS` are picked by eye from the textures (no thumbnails rendered yet).
+- ~~**K4 chip colours**~~ **Fixed in v0.3 (§13.7).** in `SHOP_SKINS` are picked by eye from the textures (no thumbnails rendered yet).
+
+## 13.7 v0.3 (2026-11-05): the owner's tech-debt scope
+Scope set by the owner: A1, A2, R12, S4, K2, K3, K4. Validation: `game/docs/validation/v0.3/ValidationSummary.md`;
+detail: `game/docs/changelog.md`.
+
+| # | Fix | Where |
+|---|---|---|
+| A2 | The three cars re-textured in Meshy on their own UVs (no baked shadows; 110 of 180 authorised credits), rebuilt with `refine_car.py --bake`. Same UV atlas, so the v0.2.28 skins still fit | `meshy/v03/`, `meshy/refined/` (v0.2.28 masters in `refined/v0228/`) |
+| A1 | KTX2 / ETC1S textures (the normal map stays WebP) and meshopt normals, tangents and UVs; positions kept float (pivots). Cars 4.8 / 6.0 / 6.1 MB (were 8.6 / 11.1 / 10.7), skins 35 MB (64). Basis transcoder at `/basis/`; CSP `'wasm-unsafe-eval'` | `game/tools/compress-car.mjs`, `vite.config.js`, `server/serve.mjs` |
+| K2 | `hi.skin` → checked against the profile's `skins` → `welcome.skin` / `join.skin`; others draw it | `server/live.js`, `src/roam.js` |
+| K3 | Skins as KTX2 (stay compressed on the GPU: ~6-11 MB each, was ~40); freed when not shown, worn or on a remote car | `tools/extract-skins.mjs`, `src/main.js` `freeSkins` |
+| K4 | Rendered 112×56 thumbnails on the skin chips | `tools/skin-thumbs.mjs`, `public/ui/skins/` |
+| S4 | Health on the relay: damage, spin dodges (own timing and cooldown), protection, regeneration, wrecks (= kills; `die` removed). `LIVE_PROTOCOL` 17 | `server/health.js`, `server/live.js`, `src/roam.js` |
+| R12 | The launcher installs a newer launcher from a release (`LAUNCHER`, `node --check`, exit 75; `start.cmd` loops); never older | `server/launcher.mjs`, `server/start-live.cmd`, `server/release.mjs` |
+
+Found and fixed on the way: `meshopt()` in gltf-transform ignores its `pattern` at level `medium` and quantized the
+positions too, moving every node's origin (pods 4 cm off); caught by `carassets.test.mjs` before release.
+
+**Owner steps for v0.3:**
+- Run `server/install-autostart.ps1` once as administrator (R12; also installs the v0.2.4 log rotation).
+- No functions change in v0.3: `npm run release` only.
+
+**Left / new:**
+- S4 remainder: positions and the spin's timing are still each game's own (the relay checks hits against them). With
+  lag the relay's dodge window can differ from the victim's screen by up to ~0.35 s. A full server simulation goes
+  with R1 and the Windows app's server.
+- A3 still for Codex (below).
+
+**For the Windows app (`win_app/`, Codex's; notes only, not edited):**
+- Protocol 17: `hi` gains `skin` (a code like `r04` or null); `welcome` / `join` carry `skin`; the `hit` sent to a victim
+  carries `r` (`hit` / `wreck` / `dodged`) and `hp`; snapshots' `d[10]` is the relay's hp %; `die` is gone (a relay
+  wreck sends `kill`, and the victim explodes on its own `kill`). A client that still sends `die` is ignored.
+- Health rules to mirror (or simply show): `server/health.js` (`CAR_HP`, `DAMAGE`, `SPIN_S`, `SPIN_CD`, `WRECK_S`,
+  `SAFE_S`, `REGEN`).
+- Car files: `public/models/car*.glb` are now KTX2 (`KHR_texture_basisu`, required) + `EXT_meshopt_compression`
+  (required) + `KHR_mesh_quantization` (normals, tangents, UVs); a loader needs Basis and meshopt decoders. Node
+  names, pivots and sizes are unchanged. **A3:** the hashes of `car*.glb` and `src/car.js` it records have changed.
+- Skins: `public/models/skins/<car>/<code>_{base,orm}.ktx2` + `lights.ktx2` (emissive RGB, light mask A); thumbnails
+  `public/ui/skins/<car>-<code|stock>.webp`.

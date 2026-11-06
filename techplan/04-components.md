@@ -63,7 +63,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/online/firebase.js` | 207 | `createFirebase` | Auth, visit record, profile snapshot, nickname transactions, callables (15 s), kill award transaction, killer update, leaderboards, ranks, App Check (optional) |
 | `src/online/mock.js` | 112 | `createMock` | `?mock` backend (dev only): `localStorage neon.mockdb`, 10,000 test coins, test profile starts as a Killer |
 | `src/online/live.js` | 242 | `LiveRoom`, `onlineCount` | WebSocket client: send at 15/s, interpolation (0.15 s delay), ping, reconnect with backoff, away while the tab is hidden (v0.2.24), protocol mismatch reload |
-| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (16), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
+| `src/online/protocol.js` | ~20 | `LIVE_PROTOCOL` (17), `KILLER_KILLS` (3), `VOID_KILLS` (10), `NICK_RE`, `CHAT_MAX`, `CAR_IDS` | Shared constants (client and relay) |
 | `src/online/analytics.js` | 47 | `setConsent`, `track`, `identify` | Consent-gated GA events (queue of 50 before consent) |
 
 ## 7.5 Server: relay (`server/live.js`)
@@ -71,7 +71,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | Function | Lines | Responsibility |
 |---|---|---|
 | `killerOf(x, kc)` | 67-71 | Sanitise a saved killer status |
-| `liveRelay({projectId, allowMock, log, perIp, perIpMinute, maxPending, mod})` | ~100-460 | Creates the `WebSocketServer` (`noServer`, `maxPayload` 8 KB, `MAX_HI`); `identify(token)` (JWKS verify, REST profile read); message handlers `s`, `f`, `die`, `ping`, `hit`, `chat` (+ `command`: `/pkclear`, `/report`, `/help`), `hi`; hit, shot and wreck checks through `server/hits.js` (S3), chat/name filter and bans through `mod` (S6); 15/s snapshot tick; 15 s heartbeat with idle drop |
+| `liveRelay({projectId, allowMock, log, perIp, perIpMinute, maxPending, mod})` | ~100-460 | Creates the `WebSocketServer` (`noServer`, `maxPayload` 8 KB, `MAX_HI`); `identify(token)` (JWKS verify, REST profile read); message handlers `s`, `f`, `ping`, `hit`, `chat` (+ `command`: `/pkclear`, `/report`, `/help`), `hi`; hit and shot checks through `server/hits.js` (S3), health, dodges and wrecks through `server/health.js` (S4, v0.3), chat/name filter and bans through `mod` (S6); 15/s snapshot tick; 15 s heartbeat with idle drop |
 | `livePlugin(env)` | end of file | Vite plugin for the **dev** server: hooks `upgrade` for `/live` only (leaves HMR alone), serves `GET /live/count`; mock logins only with `LIVE_MOCK=1`. `killSaver()` builds the `relayKills` saver from `RELAY_SECRET`. `liveRelay` queues and saves kills / KILLER STATUS (`queueSave`, `save`, `flush`) |
 | `server/serve.mjs` | ~210 | **Production server** (v0.2.4, R5/R6): static `dist/` with cache headers, `/__` proxy, `/live` + `/live/count` passed to the relay; forks and restarts `relay.mjs` |
 | `server/relay.mjs` | ~45 | The relay as its own process on `127.0.0.1:LIVE_RELAY_PORT`; reads `.env.local`; exits when `serve.mjs` does |

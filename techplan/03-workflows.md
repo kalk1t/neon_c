@@ -102,27 +102,27 @@ sequenceDiagram
   participant FS as Firestore REST
   participant B as Player B
   A->>R: WebSocket upgrade /live (via Cloudflare)
-  A->>R: hi {token: Firebase ID token, c: color, car, v: LIVE_PROTOCOL (16)}
+  A->>R: hi {token: Firebase ID token, c: color, car, skin, v: LIVE_PROTOCOL (17)}
   Note over R: v ≠ LIVE_PROTOCOL → err 'old' (client reloads, at most once a minute)
   R->>G: jwtVerify (issuer/audience = project)
   R->>FS: GET users/{uid} (8 s timeout) → nickname, isKiller, killerKillCount
   alt no nickname → err 'nickname'; full (24) → err 'full'; same uid elsewhere → old tab gets err 'again'
   end
-  R-->>A: welcome {id, name, n, slot, x, kc}
+  R-->>A: welcome {id, name, n, slot, x, kc, car, skin}
   R-->>A: join … (each player already there)
-  R-->>B: join {id A, name, c, k:0, x, kc}
+  R-->>B: join {id A, name, c, car, skin, k:0, x, kc}
   loop every 66 ms (15/s), 500 ms when idle
-    A->>R: s [x,y,z, yaw, pitch, roll, speed, boost, …, hp]
-    R-->>A: w {n, p:[[id, …state]]} (tick 15/s)
+    A->>R: s [x,y,z, yaw, pitch, roll, speed, boost, …, hp (ignored since v0.3)]
+    R-->>A: w {n, p:[[id, …state, the relay's hp %]]} (tick 15/s)
   end
   A->>R: f {k:'missile', o, d, tg}
   R-->>B: f {id A, …}
   A->>R: hit {v: B, k, d} (only ≤ 5 s after A's own shot)
-  R-->>B: hit {id A, k, d}
-  Note over B: B applies damage; hp ≤ 0 → wreck, down 3 s, respawn at slot
-  B->>R: die {by: A}
-  Note over R: once per victim per 2 s; A.kills++, A.kc++
-  R-->>A: kill {k:A, v:B, n, kc} (to everyone)
+  Note over R: health.js (S4, v0.3): protected / dodging? else damage
+  R-->>B: hit {id A, k, d, r: hit|wreck|dodged, hp}
+  Note over B: B shows it (knock-back, health bar)
+  Note over R: hp ≤ 0 → wreck: B down 3 s, then full hp; A.kills++, A.kc++
+  R-->>A: kill {k:A, v:B, n, kc} (to everyone; B explodes on it)
   R->>FS: 3 s later: relayKills {uid A, kills +n, kc, killer} (shared secret)
   opt A.kc reaches 3
     R-->>A: killer {id:A, on:true, kc} (to everyone)
