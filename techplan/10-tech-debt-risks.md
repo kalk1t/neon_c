@@ -147,6 +147,12 @@ detail: `game/docs/changelog.md`.
 Found and fixed on the way: `meshopt()` in gltf-transform ignores its `pattern` at level `medium` and quantized the
 positions too, moving every node's origin (pods 4 cm off); caught by `carassets.test.mjs` before release.
 
+**v0.3.1 (2026-11-06):** (1) the v0.3.0 production log showed `[csp] would block eval`: the Basis transcoder
+(Emscripten) needs eval and ran in `blob:` workers under the page's policy, so enforcing the CSP would have broken the
+cars; the workers now load `basis/ktx2-worker.js` with a policy of its own (eval inside that worker only). (2) Skins
+glow with the v0.3 cars' lines (the old v0.2.28 lines painted out of the skin textures, `lights.ktx2` from the v0.3
+car).
+
 **Owner steps for v0.3:**
 - Run `server/install-autostart.ps1` once as administrator (R12; also installs the v0.2.4 log rotation).
 - No functions change in v0.3: `npm run release` only.
