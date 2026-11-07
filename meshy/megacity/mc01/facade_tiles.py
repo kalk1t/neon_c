@@ -51,6 +51,10 @@ PAL = {
     'granite':        dict(col=(0.6, 0.36, 0.29), rough=0.35, metal=0.0, mask=0.0),
     'granite_dark':   dict(col=(0.4, 0.22, 0.17), rough=0.4, metal=0.0, mask=0.0),
     'glass_hotel':    dict(col=(0.05, 0.055, 0.06), rough=0.06, metal=0.0, mask=1.0),
+    # MAT-07 pencil tower (BLD-11): white architectural concrete grid, large square panes
+    'concrete_white': dict(col=(0.78, 0.77, 0.74), rough=0.6, metal=0.0, mask=0.0),
+    'concrete_white_d': dict(col=(0.62, 0.61, 0.59), rough=0.7, metal=0.0, mask=0.0),
+    'glass_pencil':   dict(col=(0.04, 0.05, 0.06), rough=0.04, metal=0.0, mask=1.0),
 }
 MATS = {}
 
@@ -230,7 +234,25 @@ def hotel():
     return W, H
 
 
-FAMILIES = {'office': office, 'residential': residential, 'transport': transport, 'office_stone': office_stone, 'hotel': hotel}
+def pencil():
+    """MAT-07: 4.75 m bay x 4.75 m floor (432 Park Avenue: 10 ft square windows in a 15.5 ft square concrete grid).
+    White concrete frame of equal bars both ways (1.7 m), a 3.05 m square pane set deep (0.45 m reveal), no
+    mullion; a thin inner frame line and a darker reveal soffit."""
+    W, H = 4.75, 4.75
+    o0, o1 = 0.85, 3.9
+    wrap_box(-o0, o0, 0, H, -0.5, 0.0, 'concrete_white', W, H)             # column bar (wraps across the bay line)
+    wrap_box(o0, o1, o1, H + o0, -0.5, 0.0, 'concrete_white', W, H)        # slab bar between the columns (wraps across the floor line)
+    box(o0, o1, o0, o1, -0.5, -0.46, 'glass_pencil')                       # the pane, deep in the grid
+    box(o0, o1, o1 - 0.06, o1, -0.46, -0.05, 'concrete_white_d')           # reveal soffit (shadowed)
+    for x0, x1 in ((o0, o0 + 0.05), (o1 - 0.05, o1)):
+        box(x0, x1, o0, o1, -0.47, -0.42, 'steel_dark')
+    for z0, z1 in ((o0, o0 + 0.05), (o1 - 0.05, o1)):
+        box(o0, o1, z0, z1, -0.47, -0.42, 'steel_dark')
+    wrap_box(-0.01, 0.01, 0, H, -0.02, 0.002, 'joint', W, H)              # formwork joint on the column centre
+    return W, H
+
+
+FAMILIES = {'office': office, 'residential': residential, 'transport': transport, 'office_stone': office_stone, 'hotel': hotel, 'pencil': pencil}
 
 
 # ---------------------------------------------------------------- bake

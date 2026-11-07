@@ -30,6 +30,9 @@ FAM = {
     # hotel: one room per bay (cluster 1, 3.6 m), each window its own room
     'hotel': dict(W=3.6, H=2.75, D=7.0, ZF=3.5, rooms=['king', 'twin', 'suite', 'king_b', 'twin_b', 'suite_b',
                                                 'king_desk', 'corner_king']),
+    # pencil (BLD-11): one 4.75 m bay per room, 4.0 m ceilings, deep luxury apartments
+    'pencil': dict(W=4.75, H=4.0, D=8.0, ZF=4.0, rooms=['living', 'bedroom', 'kitchen', 'home_office', 'living_b',
+                                                 'dining', 'bedroom_b', 'living']),
     'transport': dict(W=12.0, H=4.3, D=10.0, ZF=5.0, rooms=['control', 'waiting', 'workshop', 'staff_office',
                                                      'control_b', 'stair_hall', 'lockers', 'waiting_b']),
 }
@@ -198,7 +201,7 @@ def art(x, y, w, h, z, rnd):
 
 # ---------------------------------------------------------------- the rooms
 def room(fam, kind, W, H, D, rnd):
-    warm = fam in ('residential', 'hotel')
+    warm = fam in ('residential', 'hotel', 'pencil')
     wall = mat('wall', rnd.choice([(0.72, 0.7, 0.66), (0.62, 0.64, 0.66), (0.78, 0.74, 0.66), (0.55, 0.58, 0.6)]), 0.85)
     floor_m = mat('floor', rnd.choice([(0.25, 0.25, 0.27), (0.4, 0.3, 0.2), (0.32, 0.3, 0.28), (0.5, 0.42, 0.32)]), 0.5)
     ceil = mat('ceil', (0.8, 0.8, 0.8), 0.9)
@@ -263,7 +266,7 @@ def room(fam, kind, W, H, D, rnd):
             ceiling_lights(W, H, D, power=0.6)
             for y in (D * 0.3, D * 0.55, D * 0.8):
                 shelf(0.5, W - 0.5, y, 2.3, rnd)
-    elif fam == 'residential':
+    elif fam in ('residential', 'pencil'):
         ceiling_lights(W, H, D, kind='pendant', warm=True, power=0.55)
         rug = mat('rug', rnd.choice([(0.5, 0.2, 0.15), (0.2, 0.25, 0.4), (0.6, 0.55, 0.45)]), 0.95)
         if kind in ('living', 'living_b'):
