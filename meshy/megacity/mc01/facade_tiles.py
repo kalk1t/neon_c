@@ -47,6 +47,10 @@ PAL = {
     'limestone_dark': dict(col=(0.46, 0.43, 0.38), rough=0.82, metal=0.0, mask=0.0),
     'bronze':         dict(col=(0.24, 0.16, 0.09), rough=0.38, metal=0.9, mask=0.0),
     'glass_stone':    dict(col=(0.05, 0.06, 0.075), rough=0.06, metal=0.0, mask=1.0),
+    # hotel (MAT-05): warm red-brown granite bands (Lipstick Building), French windows, bronze frames and rails
+    'granite':        dict(col=(0.6, 0.36, 0.29), rough=0.35, metal=0.0, mask=0.0),
+    'granite_dark':   dict(col=(0.4, 0.22, 0.17), rough=0.4, metal=0.0, mask=0.0),
+    'glass_hotel':    dict(col=(0.05, 0.055, 0.06), rough=0.06, metal=0.0, mask=1.0),
 }
 MATS = {}
 
@@ -202,7 +206,31 @@ def office_stone():
     return W, H
 
 
-FAMILIES = {'office': office, 'residential': residential, 'transport': transport, 'office_stone': office_stone}
+def hotel():
+    """MAT-05: 3.6 m bay (one hotel room) x 3.2 m floor. Polished red-brown granite: a broad band across each slab
+    (2.75 -> 0.15 of the next floor, the room bands) and a pier on the bay line; between them a French window
+    (2.6 x 2.6 m, bronze frame, one mullion) behind a bronze French-balcony rail (no deck, the rail only)."""
+    W, H = 3.6, 3.2
+    ox0, ox1, oz0, oz1 = 0.5, 3.1, 0.15, 2.75
+    wrap_box(-ox0, ox0, 0, H, -0.22, 0.0, 'granite', W, H)                # pier (wraps across the bay line)
+    wrap_box(0, W, oz1, H + oz0, -0.22, 0.04, 'granite', W, H)            # room band over the slab (wraps)
+    wrap_box(0, W, oz1 - 0.05, oz1, -0.2, 0.06, 'granite_dark', W, H)     # its lower drip edge
+    box(ox0, ox1, oz0, oz1, -0.26, -0.22, 'glass_hotel')                   # French window
+    for x0, x1 in ((ox0, ox0 + 0.07), (ox1 - 0.07, ox1), ((ox0 + ox1) / 2 - 0.03, (ox0 + ox1) / 2 + 0.03)):
+        box(x0, x1, oz0, oz1, -0.23, -0.16, 'bronze')
+    for z0, z1 in ((oz0, oz0 + 0.07), (oz1 - 0.07, oz1), (2.2, 2.25)):
+        box(ox0, ox1, z0, z1, -0.23, -0.16, 'bronze')
+    # French balcony: bronze rail in the reveal, 1.0 m high, balusters every 0.13 m
+    for z in (0.18, 0.95, 1.02):
+        box(ox0 + 0.05, ox1 - 0.05, z, z + 0.05, -0.12, -0.06, 'bronze')
+    n = int((ox1 - ox0 - 0.1) / 0.13)
+    for k in range(n + 1):
+        x = ox0 + 0.05 + k * (ox1 - ox0 - 0.1) / n
+        box(x - 0.012, x + 0.012, 0.18, 1.02, -0.11, -0.07, 'bronze')
+    return W, H
+
+
+FAMILIES = {'office': office, 'residential': residential, 'transport': transport, 'office_stone': office_stone, 'hotel': hotel}
 
 
 # ---------------------------------------------------------------- bake

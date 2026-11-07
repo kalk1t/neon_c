@@ -27,6 +27,9 @@ FAM = {
                                                 'lift_lobby', 'fit_out', 'break_room', 'archive']),
     'residential': dict(W=6.8, H=2.75, D=6.5, ZF=3.2, rooms=['living', 'bedroom', 'kitchen', 'home_office',
                                                       'kids', 'living_b', 'dining', 'bedroom_b']),
+    # hotel: one room per bay (cluster 1, 3.6 m), each window its own room
+    'hotel': dict(W=3.6, H=2.75, D=7.0, ZF=3.5, rooms=['king', 'twin', 'suite', 'king_b', 'twin_b', 'suite_b',
+                                                'king_desk', 'corner_king']),
     'transport': dict(W=12.0, H=4.3, D=10.0, ZF=5.0, rooms=['control', 'waiting', 'workshop', 'staff_office',
                                                      'control_b', 'stair_hall', 'lockers', 'waiting_b']),
 }
@@ -195,7 +198,7 @@ def art(x, y, w, h, z, rnd):
 
 # ---------------------------------------------------------------- the rooms
 def room(fam, kind, W, H, D, rnd):
-    warm = fam == 'residential'
+    warm = fam in ('residential', 'hotel')
     wall = mat('wall', rnd.choice([(0.72, 0.7, 0.66), (0.62, 0.64, 0.66), (0.78, 0.74, 0.66), (0.55, 0.58, 0.6)]), 0.85)
     floor_m = mat('floor', rnd.choice([(0.25, 0.25, 0.27), (0.4, 0.3, 0.2), (0.32, 0.3, 0.28), (0.5, 0.42, 0.32)]), 0.5)
     ceil = mat('ceil', (0.8, 0.8, 0.8), 0.9)
@@ -303,6 +306,41 @@ def room(fam, kind, W, H, D, rnd):
                 s = rnd.uniform(0.12, 0.3)
                 box(bx, bx + s, by, by + s, 0, s, mat('toy', rnd.choice([(0.9, 0.2, 0.2), (0.2, 0.5, 0.9), (0.95, 0.8, 0.1), (0.2, 0.7, 0.3)]), 0.6))
             box(W * 0.3, W - 0.3, D - 0.05, D, 1.0, 1.9, mat('poster', (0.2, 0.5, 0.8), 0.8))
+    elif fam == 'hotel':
+        ceiling_lights(W, H, D, kind='pendant', warm=True, power=0.35)
+        wood = mat('wood', rnd.choice([(0.32, 0.2, 0.12), (0.4, 0.28, 0.17), (0.22, 0.15, 0.1)]), 0.5)
+        sheet = mat('sheet', rnd.choice([(0.9, 0.9, 0.87), (0.85, 0.82, 0.76), (0.9, 0.88, 0.84)]), 0.9)
+        throw = mat('throw', rnd.choice([(0.5, 0.15, 0.12), (0.2, 0.25, 0.35), (0.55, 0.45, 0.3)]), 0.9)
+        box(0.2, W - 0.2, 0.8, D - 0.3, 0, 0.01, mat('carpet', rnd.choice([(0.3, 0.22, 0.2), (0.25, 0.25, 0.3), (0.4, 0.33, 0.25)]), 0.95))
+        box(0.3, W - 0.3, D - 0.06, D, 0.9, 2.3, wood)                               # headboard wall panel
+        if kind in ('king', 'king_b', 'king_desk', 'corner_king'):
+            bx = W / 2 if kind != 'corner_king' else W * 0.45
+            box(bx - 0.95, bx + 0.95, D - 2.15, D - 0.1, 0, 0.6, sheet)
+            box(bx - 0.95, bx + 0.95, D - 1.2, D - 0.95, 0.6, 0.63, throw)
+            for x in (bx - 1.25, bx + 1.25):
+                if 0.2 < x < W - 0.2:
+                    box(x - 0.22, x + 0.22, D - 0.5, D - 0.06, 0, 0.5, wood)
+                    lamp(x, D - 0.28, 0.5, (1.0, 0.7, 0.4))
+        elif kind in ('twin', 'twin_b'):
+            for x in (W * 0.27, W * 0.73):
+                box(x - 0.48, x + 0.48, D - 2.1, D - 0.1, 0, 0.55, sheet)
+                box(x - 0.48, x + 0.48, D - 1.1, D - 0.9, 0.55, 0.58, throw)
+            box(W / 2 - 0.2, W / 2 + 0.2, D - 0.45, D - 0.06, 0, 0.5, wood)
+            lamp(W / 2, D - 0.26, 0.5, (1.0, 0.7, 0.4))
+        else:  # suite: the sitting room
+            sofa(W * 0.5, D * 0.72, 2.0, rnd)
+            box(W * 0.35, W * 0.65, D * 0.45, D * 0.58, 0, 0.4, wood)
+            lamp(W - 0.35, D * 0.75)
+            plant(0.35, D * 0.4, 1.3)
+            tv(W * 0.5, D - 0.08, 1.3, (0.35, 0.5, 0.9)) if kind == 'suite_b' else art(W * 0.5, D, 1.2, 0.8, 1.4, rnd)
+        if kind in ('king', 'twin', 'king_desk', 'twin_b'):                        # armchair by the window
+            box(W - 1.1, W - 0.35, 1.0, 1.75, 0, 0.42, throw)
+            box(W - 1.1, W - 0.35, 1.65, 1.8, 0.42, 0.85, throw)
+            lamp(W - 0.3, 2.2, 1.5)
+        if kind in ('king_desk', 'king_b', 'twin_b'):                             # desk on the side wall
+            box(0.2, 0.75, 2.2, 3.6, 0.74, 0.78, wood)
+            box(0.2, 0.25, 2.4, 3.4, 1.1, 1.7, mat('mirror', (0.7, 0.72, 0.75), 0.05, 1.0))
+            chair(0.95, 2.9, rnd)
     else:  # transport
         ceiling_lights(W, H, D, power=1.1)
         steel = mat('steel', (0.35, 0.37, 0.4), 0.4, 0.9)

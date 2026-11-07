@@ -49,6 +49,10 @@ def common_mats():
         ('wood_deck', (0.36, 0.25, 0.16), 0.7, 0.0), ('soil', (0.12, 0.09, 0.06), 0.95, 0.0),
         ('planter', (0.2, 0.2, 0.2), 0.6, 0.0), ('tank_wood', (0.33, 0.24, 0.17), 0.8, 0.0),
         ('fin_alu', (0.55, 0.58, 0.62), 0.32, 0.9), ('hazard', (0.85, 0.65, 0.1), 0.5, 0.0),
+        ('MAT-01B', (0.58, 0.54, 0.47), 0.78, 0.0), ('limestone', (0.58, 0.54, 0.47), 0.78, 0.0),
+        ('limestone_dark', (0.46, 0.43, 0.38), 0.82, 0.0), ('bronze', (0.24, 0.16, 0.09), 0.38, 0.9),
+        ('MAT-05', (0.6, 0.36, 0.29), 0.35, 0.0), ('granite', (0.6, 0.36, 0.29), 0.35, 0.0),
+        ('granite_dark', (0.4, 0.22, 0.17), 0.4, 0.0), ('pool_tile', (0.75, 0.78, 0.8), 0.4, 0.0),
     ]:
         mat(*a)
     mat('leaf', (0.06, 0.2, 0.06), 0.7, 0.0, (0.3, 0.6, 0.2), 0.04)
@@ -56,12 +60,17 @@ def common_mats():
     mat('lamp_sodium', (1.0, 0.7, 0.3), 0.5, 0.0, (1.0, 0.55, 0.15), 3.0)
     mat('lamp_cool', (0.85, 0.92, 1.0), 0.5, 0.0, (0.85, 0.92, 1.0), 2.5)
     mat('lamp_dim', (0.75, 0.82, 0.9), 0.5, 0.0, (0.75, 0.85, 1.0), 0.6)
+    mat('uplight', (1.0, 0.85, 0.65), 0.5, 0.0, (1.0, 0.8, 0.55), 1.6)
+    mat('lantern', (1.0, 0.85, 0.6), 0.4, 0.0, (1.0, 0.78, 0.5), 0.7)
+    mat('red_light', (1.0, 0.1, 0.05), 0.5, 0.0, (1.0, 0.08, 0.04), 5.0)
     mat('string_light', (1.0, 0.8, 0.5), 0.5, 0.0, (1.0, 0.75, 0.4), 4.0)
     mat('rail_glass', (0.6, 0.7, 0.72), 0.05, 0.0, alpha=0.25)
     mat('lobby_glass', (0.05, 0.055, 0.06), 0.05, 0.0, alpha=0.22)
     mat('lobby_stone', (0.62, 0.58, 0.52), 0.3, 0.0, (1.0, 0.8, 0.6), 0.06)
     mat('lobby_ceiling', (0.75, 0.74, 0.72), 0.8, 0.0, (1.0, 0.85, 0.7), 0.1)
     mat('opening_dark', (0.02, 0.02, 0.025), 0.9, 0.0)
+    mat('pool_water', (0.1, 0.45, 0.55), 0.05, 0.0, (0.2, 0.75, 0.95), 0.9)
+    mat('bar_glow', (1.0, 0.8, 0.6), 0.5, 0.0, (1.0, 0.7, 0.4), 1.1)
 
 
 def block(name, x0, x1, y0, y1, z0, z1, m, uv_tile=None, coll=None):
@@ -84,6 +93,53 @@ def block(name, x0, x1, y0, y1, z0, z1, m, uv_tile=None, coll=None):
             else:
                 u = (y1 - c.y) if n.x < 0 else (c.y - y0)
             l[uv].uv = (u / bay, (c.z - zb) / flo)
+    me = bpy.data.meshes.new(name)
+    bm.to_mesh(me)
+    bm.free()
+    me.materials.append(M[m])
+    o = bpy.data.objects.new(name, me)
+    (coll or S.collection).objects.link(o)
+    return o
+
+
+def rblock(name, hx, hy, cy, r, z0, z1, m, uv_tile=None, seg=8, caps=True, coll=None):
+    """A rectangle with rounded corners (centre x = 0, y = cy; half sizes hx, hy; corner radius r), extruded z0..z1.
+    Side UVs in tile units run along the outline by arc length from the left end of the front (-y) straight, counter-
+    clockwise seen from above (= left to right seen from outside), so bays continue round the curves: choose r so a
+    quarter arc (r * pi / 2) is whole bays. Sides are smooth-shaded (tagged for join), caps flat."""
+    pts = [(-hx + r, cy - hy)]
+    for (ox, oy, a0) in ((hx - r, cy - hy + r, -90), (hx - r, cy + hy - r, 0), (-hx + r, cy + hy - r, 90), (-hx + r, cy - hy + r, 180)):
+        for k in range(seg + 1):
+            a = math.radians(a0 + 90 * k / seg)
+            pts.append((ox + r * math.cos(a), oy + r * math.sin(a)))
+    pts = pts[:-1]                                             # the last point is the first one
+    us = [0.0]
+    for i in range(len(pts)):
+        a, b = pts[i], pts[(i + 1) % len(pts)]
+        us.append(us[-1] + math.hypot(b[0] - a[0], b[1] - a[1]))
+    bm = bmesh.new()
+    uv = bm.loops.layers.uv.new('UVMap')
+    sm = bm.faces.layers.int.new('smooth')
+    lo = [bm.verts.new((x, y, z0)) for x, y in pts]
+    hi = [bm.verts.new((x, y, z1)) for x, y in pts]
+    n = len(pts)
+    for i in range(n):
+        j = (i + 1) % n
+        if math.hypot(pts[j][0] - pts[i][0], pts[j][1] - pts[i][1]) < 1e-6:
+            continue
+        f = bm.faces.new((lo[i], lo[j], hi[j], hi[i]))
+        f[sm] = 1
+        for l, (u, z) in zip(f.loops, ((us[i], z0), (us[i + 1], z0), (us[i + 1], z1), (us[i], z1))):
+            if uv_tile:
+                bay, flo, zb = uv_tile
+                l[uv].uv = (u / bay, (z - zb) / flo)
+            else:
+                l[uv].uv = (0.02, 0.02)
+    if caps:
+        for ring_, flip in ((hi, False), (lo, True)):
+            f = bm.faces.new(list(reversed(ring_)) if flip else ring_)
+            for l in f.loops:
+                l[uv].uv = (0.02, 0.02)
     me = bpy.data.meshes.new(name)
     bm.to_mesh(me)
     bm.free()
@@ -138,8 +194,14 @@ def join(parts, name):
     bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)
     bm.to_mesh(o.data)
     bm.free()
-    for p in o.data.polygons:
-        p.use_smooth = False
+    sm = o.data.attributes.get('smooth')                     # rblock sides stay smooth, the rest is flat
+    flags = [0] * len(o.data.polygons)
+    if sm:
+        sm.data.foreach_get('value', flags)
+    for p, f in zip(o.data.polygons, flags):
+        p.use_smooth = bool(f)
+    if sm:
+        o.data.attributes.remove(sm)
     return o
 
 

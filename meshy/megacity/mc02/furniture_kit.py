@@ -227,6 +227,21 @@ p = piece('lockers')
 for k in range(5):
     p.box(-1.25 + k * 0.5, -0.77 + k * 0.5, -0.25, 0.25, 0, 1.9, (0.2, 0.35, 0.5) if k % 2 else (0.3, 0.3, 0.33))
 p.box(-1.0, 1.0, -0.9, -0.6, 0.4, 0.45, WOOD)
+# ---- hotel (BLD-04)
+p = piece('armchair')   # faces the room (its back to the window)
+p.box(-0.4, 0.4, -0.38, 0.38, 0.1, 0.42, (0.55, 0.42, 0.3)); p.box(-0.4, 0.4, -0.38, -0.22, 0.42, 0.9, (0.55, 0.42, 0.3))
+p.box(-0.45, -0.35, -0.38, 0.38, 0.1, 0.62, (0.48, 0.36, 0.26)); p.box(0.35, 0.45, -0.38, 0.38, 0.1, 0.62, (0.48, 0.36, 0.26))
+p.box(-0.45, 0.45, -0.38, 0.38, 0.0, 0.1, DARK)
+p = piece('twin_beds')   # two singles, headboards against the core side, a nightstand between them
+for x in (-0.75, 0.75):
+    p.box(x - 0.48, x + 0.48, -1.0, 1.0, 0.0, 0.3, WOOD); p.box(x - 0.46, x + 0.46, -0.98, 0.98, 0.3, 0.5, (0.86, 0.85, 0.81))
+    p.box(x - 0.46, x + 0.46, -0.98, 0.1, 0.5, 0.55, (0.55, 0.22, 0.17)); p.box(x - 0.3, x + 0.3, 0.5, 0.85, 0.5, 0.64, WHITE)
+    p.box(x - 0.5, x + 0.5, 0.95, 1.05, 0.0, 1.1, WOOD)
+p.box(-0.2, 0.2, 0.6, 1.0, 0, 0.5, WOOD); p.cyl(0, 0.8, 0.5, 0.75, 0.1, WARM, 6, glow=True)
+p = piece('hotel_desk')   # vanity desk on a partition, mirror, chair and a desk lamp
+p.box(-0.7, 0.7, -0.27, 0.27, 0.71, 0.75, WOOD); p.box(-0.7, -0.62, -0.27, 0.27, 0, 0.71, WOOD); p.box(0.62, 0.7, -0.27, 0.27, 0, 0.71, WOOD)
+p.box(-0.5, 0.5, 0.25, 0.28, 1.05, 1.75, (0.55, 0.6, 0.65)); chair(p, 0, -0.5, (0.45, 0.2, 0.15), face=1)
+p.cyl(0.5, 0.05, 0.75, 1.15, 0.012, METAL, 5); p.cyl(0.5, 0.05, 1.1, 1.25, 0.12, WARM, 8, glow=True)
 # ---- the building itself (scaled per instance in the game)
 p = piece('panel')   # one ceiling light panel 1.2 x 0.6, glows
 p.box(-0.6, 0.6, -0.3, 0.3, -0.02, 0.0, (1.0, 1.0, 1.0), glow=True)
