@@ -82,7 +82,7 @@ sequenceDiagram
   participant FS as Firestore
   P->>S: BUY VIPER (price shown from SHOP_CARS)
   S->>F: buyCar {id:'viper'} (15 s timeout)
-  F->>F: price = SHOP_PRICES[id] or SKIN_PRICES[id] (skins, v0.2.28) or NITRO_PRICES[id] (nitros, v0.3.2) or invalid-argument
+  F->>F: price = SHOP_PRICES[id] or SKIN_PRICES[id] (skins, v0.2.28) or NITRO_PRICES[id] (nitros, v0.3.2) or INTERIOR_PRICES[id] (interiors, v0.3.3) or invalid-argument
   F->>FS: tx: read users/{uid}
   Note over F: already-exists if owned; failed-precondition 'funds' if coins < price
   F->>FS: coins −price, cars ∪ id (a skin: skins ∪ id; a nitro: nitros ∪ id); create users/{uid}/purchases/{auto} {item, price, coinsBefore, at}

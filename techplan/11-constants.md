@@ -33,6 +33,10 @@
 | `SHOP_PRICES.viper` | 2,500 | coins | Price | `functions/rules.js:21` | `functions/index.js:89` | code | Must match `SHOP_CARS` (`src/online/index.js:21`) |
 | `SHOP_PRICES.titan` | 7,500 | coins | Price | `functions/rules.js:22` | as above | code | as above |
 | `SKIN_PRICES` (v0.2.28) | 500 / 1,500 / 3,500 | coins | ROADSTER / VIPER / TITAN skin | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `SKIN_PRICE` (`src/online/index.js`); `constants.test.mjs` |
+| `INTERIOR_PRICES` (v0.3.3) | 2,500 / 5,000 / 10,000 | coins | ROADSTER / VIPER / TITAN interior (10 each) | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `INTERIOR_PRICE` (`src/online/index.js`); `constants.test.mjs` |
+| `LOD_TOWER` / `LOD_TREE` (v0.3.4) | 600 / 900 / 4,200 · 400 / 450 / 2,600 | m | Scenery LOD: cell size / simplified past / hidden past | `src/skyprops.js` | `lodInstances` | code | Fog hides ~93% at 2.6 km |
+| `DYN_LOW` / `DYN_HIGH` / `DYN_MIN_RATIO` (v0.3.4) | 45 / 56 / 0.5 | fps / fps / ratio | Dynamic resolution: step down below, up above (after 4 s), lowest pixel ratio | `src/render.js` | `adaptResolution` | code | step x0.85 |
+| `COCKPIT` (v0.3.3) | FOV 66 / NEAR 0.05 | ° / m | Cockpit camera (the pack's CAM_Driver) | `src/interior.js` | `camera.js` | code | From the pack's manifest |
 | `NITRO_PRICES` (v0.3.2) | 1,000 / 2,000 / 5,000 | coins | ROADSTER / VIPER / TITAN nitro (10 each) | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `NITRO_PRICE` (`src/online/index.js`); `constants.test.mjs` |
 | `NITRO_LOD` (v0.3.2) | 35 / 60 / 90 / 18 | m | Nitro details / side emitters / whole effect hidden past; sparks 0-3 only past | `src/nitrostyle.js` | `NitroStyle.update` | code | From the pack's directive |
 | `KILL_CAP` | 60 | kills / save | `?mock` backend only since v0.2.4 (the relay saves real kills) | `src/online/index.js` | `src/online/mock.js` | code | — |
@@ -148,8 +152,6 @@
 | `TIERS` (killer) | embers / shards (shards: VOID CROWN only): high 28 / 7 + trail, menu 14 / 7, remote 10 / 5 + trail, low 0 / 3 | particles, meshes | Aura cost | `src/killer.js` `TIERS` | code |
 | `AURA_STYLES` | `crimson` (CRIMSON FLAME), `void` (VOID CROWN) | style | The two Killer auras | `src/killer.js` | code | `auraStyleFor(kc)`: `void` from `VOID_KILLS`, else `crimson` |
 | `KILLER_AURA.*.crown` / `.shards` | crown [1.35 × body width, lift −0.25 m roadster / 0.1 m others, +0.05 × length]; shards [0.55 m beyond sides, 0.9 × half length] | ×, m | VOID CROWN placement per car | `src/killer.js` `KILLER_AURA` | code |
-| `ART` | 1672×941 | px | Cockpit art size | `src/cockpit.js:7` | code |
-| `DROP` | 0.2 | fraction | Cockpit layout shift | `src/cockpit.js:10` | code |
 
 ## F. Input, audio, UI, analytics
 

@@ -9,7 +9,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | Module | Lines | Key exports | Responsibility |
 |---|---|---|---|
 | `src/main.js` | ~700 | (entry) `window.NEON` (dev builds only since v0.2.4) | Start-up; game state machine (menu, roads, countdown, race, pause, results, shop); menus and settings; car paint and loading; KILLER STATUS sync; main loop. Split in v0.2.6 (D1) |
-| `src/render.js` | ~150 | `initRender`, `renderer`, `scene`, `camera`, `lens`, `GFX`, `setQuality`, `measureGfx`, `applyAtmosphere`, `volAt`, `panAt` | Renderer, post-processing, graphics quality, map atmosphere |
+| `src/render.js` | ~190 | `initRender`, `renderer`, `scene`, `camera`, `lens`, `GFX`, `setQuality`, `measureGfx`, `adaptResolution`, `applyAtmosphere`, `volAt`, `panAt` | Renderer, post-processing, graphics quality, dynamic resolution (v0.3.4), map atmosphere |
 | `src/world.js` | ~95 | `initWorld`, `buildWorld`, `setRoad`, `bestKey`, live bindings `map`, `road`, `track`, `course`, `coins`… | The map and its nine roads |
 | `src/race.js` | ~390 | `initRace`, `GATE`, `raceRules`, `respawn`, `damage`, `wreck`, `rivalCombat`, `RIVAL_AIM`, `RUBBER_BAND`, `GATE_R`, `carContacts`, `updateRanking`, `showResults` | Race rules and results; rivals' weapons (bolts v0.2.15; seekers, spin dodge v0.2.16; their EMP v0.2.16-0.2.20; slower rival seekers v0.2.20); backflip, air brake and free mouse pitch (`FLIP`, `AIRBRAKE`, `PITCH` in `car.js`, `FREE_PITCH` in `aim.js`, v0.2.22), `RESPAWN_SAFE` protection after a wreck, exact positions (`updateRanking` every frame; `Racer.progress` in `ai.js`) (v0.2.20) |
 | `src/aim.js` | ~225 | `initAim`, `centreAim`, `updateAim`, `updateLock`, `playerWeapons`, `autopilot`, `FREE_PITCH` | Mouse aim (the car flies to the aim, forwards and backwards: `inp.aimSteer`, v0.2.12; free pitch, loops by hand with an auto-level, v0.2.22), lock-on, the player's weapons (`playerWeapons(dt, inp, keys)`: keys = false runs only the timers, FREE ROAM's Esc menu, v0.2.26; blaster, seeker on 1, spin dodge on F, backflip on G since v0.2.25) |
@@ -34,7 +34,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 |---|---|---|---|
 | `src/city.js` | 313 | `buildCity`, `facadeBox`, `HERO_ASPECT` | Procedural city (seed 1337, extent 2,700 m, base −260 m), hero towers |
 | `src/env.js` | 228 | `buildSky`, `buildClouds`, `MOON_DIR` | Sky shader, cloud sea / mist (900 puffs by default) |
-| `src/skyprops.js` | 246 | `buildSkyProps`, `loadModel`, `dressScenery` | Flying props (drones, taxis, blimps, islands, koi) on looped paths clear of the track (seed 4242) |
+| `src/skyprops.js` | ~280 | `buildSkyProps`, `loadModel`, `dressScenery` | Flying props (drones, taxis, blimps, islands, koi) on looped paths clear of the track (seed 4242); Meshy tower crowns, control tower and trees; crowns and trees in LOD cells (`lodInstances`, v0.3.4) |
 | `src/props.js` | 295 | prefabs, `RING` | Gates, rings, deck, towers, signs, trees |
 | `src/ads.js` | 408 | `buildAds` | Animated billboard screens (canvas atlas 768×384 slides, 7 s each, max 48 screens) |
 | `src/materials.js` | 344 | `makeMaterials`, `rng`, colors, textures | Shared materials, seeded RNG, canvas textures, environment maps |
@@ -48,12 +48,12 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 | `src/chat.js` | 76 | `Chat`, `CHAT_MAX` | FREE ROAM chat log and input (120 chars, own pace 1.2 s) |
 | `src/shop.js` | ~340 | `Shop` | 3D showcase, buy, equip (`neon.car`), NEW badge; per-car stat bars (`statRows`, v0.2.17); skins: chips, preview, buy, wear (`neon.skin.<car>`, v0.2.28); nitros: SKINS / NITROS tabs, fit (`neon.nitro.<car>`, v0.3.2) |
 | `src/nitrostyle.js` | ~230 | `NitroStyle`, `NitroEnvelope`, `loadNitroPack`, `nitroManifest` | v0.3.2: shop nitro effect packs (`public/vfx/<car>/`) on a car model: mounts on body / rear pods (ROADSTER) or body only (VIPER, TITAN), mixer, off / flame / boost (ROADSTER: the four clips; VIPER, TITAN: filtered NitroLoop + envelope controller), distance LOD |
-| `src/cockpit.js` | 194 | `Cockpit` | Cockpit view overlays (art 1672×941) |
+| `src/interior.js` | ~330 | `CockpitInterior`, `loadInteriorPack`, `interiorManifest`, `routeOf`, `COCKPIT` | v0.3.3: shop interiors (`public/interiors/<car>/`) in the player's car (ROADSTER, VIPER, TITAN; one master GLB per car + colour finish + own steering wheel `wheels/iXX.glb` on `CTRL_Steer`): glass cutaway of `hi_body` (`glass.json` per car), CTRL_* poses from `src/interiorkinematics.js` (pack copy), 10 Hz canvas screens; the cockpit view (I) and the shop's INTERIORS tab. Replaces `src/cockpit.js` (removed) |
 | `src/touch.js` | 176 | `TouchControls` | Phone controls: tilt steering (24°), climb (18°), dead zone 2.5° |
 | `src/input.js` | ~135 | `Input` | Keyboard, mouse, gamepad (deadzone 0.15); A / D give `strafe` while the mouse is captured (v0.2.13); mouse buttons re-read from `e.buttons` on every captured movement, so none can stay stuck (v0.2.12) |
 | `src/online/mutes.js` | 41 | `isMuted`, `mutedNames`, `muteCommand` | FREE ROAM `/mute`, `/unmute`, `/muted` on this device (localStorage `neon.muted`, v0.2.9) |
 | `src/audio.js` | 245 | `Sound` | Procedural Web Audio (no sound files), 18 voices |
-| `src/sysreq.js` | 89 | `showRequirements` | Minimum requirements and device check |
+| `src/sysreq.js` | ~95 | `showRequirements` | Minimum requirements and device check; integrated GPUs: LOW recommended (v0.3.4) |
 
 ## 7.4 Client: online layer
 
@@ -86,7 +86,7 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 |---|---|---|---|---|
 | `startRace` | 32 | `{mode: 'race'\|'attack', road: 1..9}` (bad values default to `attack` / 1) | `{ticket}` | `unauthenticated`, `resource-exhausted 'too-fast'` |
 | `finishRace` | 48 | `{ticket, coins, bestLap, raceTime, place}` | `{gain, coins, totalCoins}` | `invalid-argument 'no-ticket'`, `failed-precondition 'no-profile' \| 'no-ticket' \| 'expired'`, `resource-exhausted 'too-soon'` |
-| `buyCar` | 86 | `{id: 'viper'\|'titan'\|<skin id>}` (skins v0.2.28: `roadster-r01`…`titan-t10`; nitros v0.3.2: `roadster-f01`…`roadster-f10`, `viper-f01`…`viper-f10`, `titan-f01`…`titan-f10`) | `{coins}` | `invalid-argument 'unknown'`, `already-exists 'owned'`, `failed-precondition 'no-profile' \| 'funds'` |
+| `buyCar` | 86 | `{id: 'viper'\|'titan'\|<skin id>}` (skins v0.2.28: `roadster-r01`…`titan-t10`; nitros v0.3.2: `roadster-f01`…`roadster-f10`, `viper-f01`…`viper-f10`, `titan-f01`…`titan-f10`; interiors v0.3.3: `roadster-i01`…`roadster-i10`, `viper-i01`…, `titan-i01`…`titan-i10`) | `{coins}` | `invalid-argument 'unknown'`, `already-exists 'owned'`, `failed-precondition 'no-profile' \| 'funds'` |
 
 Global options: region us-central1, `maxInstances` 10, memory 256 MiB, `cors: true`, `enforceAppCheck` from `ENFORCE_APP_CHECK` (`functions/index.js:22-25`).
 

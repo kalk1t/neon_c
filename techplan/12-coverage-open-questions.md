@@ -16,7 +16,7 @@
 | `src/main.js` | Start-up, state machine, menus, `window.NEON` (dev only since v0.2.4), main loop | read (~700 lines since the v0.2.6 split) |
 | `src/race.js`, `aim.js`, `roam.js`, `camera.js`, `render.js`, `world.js` | Race rules, weapons, FREE ROAM, cameras, renderer, world (split from `main.js` in v0.2.6) | read; `race.js` unit-tested (`tests/race.test.mjs`), `roam.js` hits (`roam.test.mjs`), `aim.js` + `camera` follow + `car.js` steering (`controls.test.mjs`, v0.2.12) |
 | `car.js`, `ai.js`, `physics.js`, `track.js`, `roads.js`, `maps.js`, `killer.js`, `chat.js`, `shop.js`, `touch.js`, `input.js`, `audio.js` | Constants and public API | grepped headers, exports, constants |
-| `city.js`, `env.js`, `skyprops.js`, `props.js`, `ads.js`, `materials.js`, `geo.js`, `fx.js`, `nitro.js`, `cockpit.js`, `coins.js`, `sysreq.js`, `hud.js` | Headers, exports, constants | skimmed |
+| `city.js`, `env.js`, `skyprops.js`, `props.js`, `ads.js`, `materials.js`, `geo.js`, `fx.js`, `nitro.js`, `interior.js`, `coins.js`, `sysreq.js`, `hud.js` | Headers, exports, constants | skimmed |
 | `index.html`, `style.css` | External resources (Google Fonts); the CSP is a header from `server/serve.mjs` (v0.2.7) | skimmed; DOM structure not documented in detail |
 | `tools/roadgen` | File list only | not read or run |
 | `tests/*` | Suites and counts | **run**: live 7/7, rules 40/40, functions 18/18 (2026-11-01; live and functions re-run for v0.2.1) |

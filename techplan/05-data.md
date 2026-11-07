@@ -24,6 +24,7 @@ erDiagram
     array cars "owned shop cars"
     array skins "owned shop skins (v0.2.28)"
     array nitros "owned shop nitros (v0.3.2)"
+    array interiors "owned shop interiors (v0.3.3)"
     int kills "relay via relayKills (v0.2.4)"
     timestamp lastKillsAt
     bool isKiller "relay via relayKills (v0.2.4)"
@@ -82,6 +83,7 @@ State vector `s` (`server/live.js:153-162`): `[x, y, z, yaw, pitch(±3.15 since 
 | `neon.car` | equipped car | `shop.js:9` |
 | `neon.skin.<car>` | skin worn by that car (v0.2.28; '' = stock) | `shop.js` `SKIN_KEY` |
 | `neon.nitro.<car>` | nitro fitted to that car (v0.3.2; '' = stock flames) | `shop.js` `NITRO_KEY` |
+| `neon.interior.<car>` | interior fitted to that car (v0.3.3; owned ids only; none = no cockpit view) | `shop.js` `INTERIOR_KEY` |
 | `neon.shopSeen` | NEW badge seen | `shop.js` |
 | `neon.kills.<uid>` | unsaved FREE ROAM kills | `account.js:45` |
 | `neon.mockdb` | whole mock database (dev `?mock`) | `mock.js` |
@@ -91,4 +93,4 @@ Exact key spellings are [confirmed] for those with line numbers; the rest come f
 
 ## 8.4 Static assets
 
-`public/models` (car GLBs `car.glb`, `car02.glb`, `car03.glb` and sky props), `public/tex`, `public/fx` (killer aura WebP), `public/ui`, `public/cockpit`, `public/brand`, `public/og-image.jpg`, `public/privacy.html`, `public/terms.html`. Source art lives outside git in `neon_c/Assets` and `neon_c/meshy` [confirmed].
+`public/models` (car GLBs `car.glb`, `car02.glb`, `car03.glb` and sky props), `public/tex`, `public/fx` (killer aura WebP), `public/ui`, `public/interiors/<car>` (v0.3.3: manifest, master GLB, `wheels/`, `glass.json` per car), `public/models/props/*_far.glb` (v0.3.4 simplified scenery for distance), `public/brand`, `public/og-image.jpg`, `public/privacy.html`, `public/terms.html`. Source art lives outside git in `neon_c/Assets` and `neon_c/meshy` [confirmed].

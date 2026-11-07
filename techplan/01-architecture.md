@@ -82,7 +82,7 @@ flowchart TB
     coins["coins.js"]
   end
   subgraph UI
-    hud["hud.js"]; chat["chat.js"]; shop["shop.js"]; cockpit["cockpit.js"]; sysreq["sysreq.js"]
+    hud["hud.js"]; chat["chat.js"]; shop["shop.js"]; interior["interior.js"]; sysreq["sysreq.js"]
   end
   subgraph Input
     input["input.js<br/>keyboard, mouse, gamepad"]; touch["touch.js"]

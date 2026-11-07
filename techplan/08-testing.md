@@ -135,6 +135,25 @@ relay's 1.5 s origin check could miss it and one kill was ignored (run 417608606
 | `test:browser` | cars 188/188, killer 33/33, rivals, save, void pass | `cars.test.mjs` +6: skin maps swapped (paint, metal, roughness, coat), normal/light maps shared, the car file's textures untouched, copies share skin textures, `car-livery-skin` shader compiles and draws |
 | Manual (scripted, not in CI) | pass | ROADSTER, VIPER and TITAN skins (30, prices 500 / 1,500 / 3,500); mock shop flow: preview → buy (−500) → equip → kept after closing; startup car and VIPER/TITAN switch (regression found by the owner: a car without a skin was never drawn) |
 
+### v0.3.4 (2026-11-07, integrated graphics)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 169 / 169 | no new tests (rendering only) |
+| Manual (real GPUs, not in CI) | pass | race frame rate at 1915x940 in Chromium on the PC's AMD Radeon iGPU (`--use-angle=d3d11 --enable-gpu --ignore-gpu-blocklist --force_low_power_gpu`): HIGH 12 → ~51 fps, LOW 20 → ~50; RTX 5080 60 fps at full resolution (dynamic resolution stays at 1); `renderer.info` 5.3 M → 1.9 M triangles a frame; fixed-camera screenshots before / after the LOD identical |
+
+**Low-end GPU recipe:** this PC has an RTX 5080 and an AMD Radeon integrated GPU; Chromium with `--force_low_power_gpu` renders on the iGPU, a stand-in for the Intel UHD 620/630 class.
+
+### v0.3.3 (2026-11-06, interiors for every car)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 169 / 169 | + `constants.test.mjs` (per car: ROADSTER / `car`, VIPER / `car02`, TITAN / `car03`): `SHOP_INTERIORS` = `INTERIOR_PRICES` (30), manifest and `glass.json` built for the shipped car file (SHA-256), master GLB and each wheel as built (SHA-256), CAM_Driver, thumbnails |
+| `test:functions` | 29 / 29 | + interior purchase: 2,500 coins into `interiors`, once, unknown ids refused; VIPER 5,000 / TITAN 10,000, not enough coins refused |
+| `test:rules` | 33 / 33 | + the player can't write `interiors` |
+| `test:browser` | interiors 11/11 | `interiors.test.mjs` (new): no interior → no cockpit view / hint / VIEW; shop INTERIORS tab from CAM_Driver, no STOCK, buy + fit; race I in / out (cut body, glass, 66°, near 0.05), yoke follows steering, live screens |
+| Manual (real GPU, not in CI) | pass | shop view = I view; ROADSTER road through the cut windshield, VIPER through its canopy, TITAN open-top view with wheel and dash; chase view body intact; all 30 cockpits looked at in game |
+
+The browser test (`interiors.test.mjs`) drives the ROADSTER only; VIPER / TITAN cockpits are covered by the asset checks and the manual pass (gap).
+
 ### v0.3.2 (2026-11-06, ROADSTER nitros)
 | Suite | Result | Covers |
 |---|---|---|
