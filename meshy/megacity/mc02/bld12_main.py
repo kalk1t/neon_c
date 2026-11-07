@@ -32,6 +32,18 @@ STAGES = [(105.0, 24.0, PH, 360.0), (85.0, 20.0, 376.0, 640.0), (66.0, 16.0, 656
 ROOF = 1062.0                                   # the spawn deck's surface
 CROWN = (18.0, 30.0, ROOF, 1110.0)              # half size, centre y (back), z0, z1
 MAST_TOP = 1200.0
+FL, Z0 = 4.0, PH                                # office floor height; floor 0 at the podium roof
+MECH = [38, 114, 180, 232]                      # two-floor mechanical bands (louvres), one per stage
+
+
+def fz(f):
+    return Z0 + f * FL
+
+
+def fl(z):
+    return int(round((z - Z0) / FL))
+
+
 SLOTS = [((c - 2.5) * 12.0, -40.0 + r * 13.0) for r in range(4) for c in range(6)]   # spawn pads (x, y)
 rnd = random.Random(12)
 L.start()
@@ -117,7 +129,21 @@ def roof_garden(parts, c, full):
 def shafts(parts, c, full):
     for i, (h, ch, z0, z1) in enumerate(STAGES):
         parts.append(oct_('shaft', h, ch, z0, z1, 'MAT-01', UV, c))
-        parts.append(oct_('cap', h + 0.6, ch + 0.25, z1 - 0.6, z1 + 0.4, 'alu_dark' if 'alu_dark' in L.M else 'steel_dark', None, c))
+        parts.append(oct_('cap', h + 0.6, ch + 0.25, z1 - 0.6, z1 + 0.4, 'steel_dark', None, c))
+        for m in MECH:                                                  # the mechanical band: louvres, proud of the glass
+            if z0 <= fz(m) < z1:
+                parts.append(oct_('mech', h + 0.35, ch + 0.15, fz(m), fz(m + 2), 'louvre_dark', None, c))
+                if full:
+                    for k in range(1, 8):
+                        zz = fz(m) + k * 1.0
+                        parts.append(oct_('mech_fin', h + 0.6, ch + 0.25, zz - 0.06, zz + 0.06, 'steel_rail', None, c))
+                parts.append(oct_('mech_edge', h + 0.6, ch + 0.25, fz(m) - 0.3, fz(m), 'steel_dark', None, c))
+                parts.append(oct_('mech_edge', h + 0.6, ch + 0.25, fz(m + 2), fz(m + 2) + 0.3, 'steel_dark', None, c))
+        if full:                                                        # a slim metal band every tenth floor: scale
+            for f in range(fl(z0) + 10, fl(z1) - 2, 10):
+                if any(m - 1 <= f <= m + 3 for m in MECH):
+                    continue
+                parts.append(oct_('band', h + 0.18, ch + 0.07, fz(f) - 0.18, fz(f) + 0.18, 'steel_rail', None, c))
         if i + 1 < len(STAGES):
             sky_lobby(parts, c, full, STAGES[i], STAGES[i + 1])
 
@@ -129,10 +155,48 @@ def sky_lobby(parts, c, full, lower, upper):
     hu, chu, z0u, _ = upper
     z = z1 + 0.4
     parts.append(oct_('lobby_glass', hu - 6.0, max(2.0, chu - 2.5), z, z0u, 'lobby_glass', None, c))
-    parts.append(oct_('lobby_core', hu - 9.0, max(2.0, chu - 3.5), z, z0u, 'garden_glow', None, c))
     parts.append(oct_('terrace', h - 1.0, ch - 0.4, z1 + 0.4, z1 + 0.6, 'lawn', None, c))
     if not full:
+        parts.append(oct_('lobby_core', hu - 9.0, max(2.0, chu - 3.5), z, z0u, 'garden_glow', None, c))
         return
+    # inside the glass: a stone floor, a dark core with lit lift doors, a lit ceiling with light rows, a mezzanine,
+    # trees in planters, benches and people-scale lamps; the glow is in the lights, not a wall
+    hi = hu - 6.4
+    parts.append(oct_('lobby_floor', hi, max(2.0, chu - 2.7), z, z + 0.15, 'lobby_stone', None, c))
+    parts.append(oct_('lobby_ceil', hi, max(2.0, chu - 2.7), z0u - 0.5, z0u - 0.3, 'concrete_pale', None, c))
+    core = hu * 0.42
+    parts.append(oct_('lobby_core', core, 3.0, z, z0u, 'concrete_pale', None, c))
+    for k in range(-2, 3):                                              # lift doors on the four core faces
+        u = k * 5.0
+        for (x0, x1, y0, y1) in ((u - 1.1, u + 1.1, -core - 0.05, -core), (u - 1.1, u + 1.1, core, core + 0.05),
+                                 (-core - 0.05, -core, u - 1.1, u + 1.1), (core, core + 0.05, u - 1.1, u + 1.1)):
+            parts.append(block('lift', x0, x1, y0, y1, z + 0.15, z + 3.2, 'bronze' if 'bronze' in L.M else 'steel_rail', coll=c))
+    for k in range(6):                                                  # light rows in the ceiling (rings)
+        r_ = core + 2.0 + k * (hi - core - 3.0) / 5
+        ring(parts, 'lobby_light', -r_, r_, -r_, r_, z0u - 0.56, z0u - 0.5, 1.2, 'garden_glow', c)
+    for k in range(-3, 4):                                              # warm lit stone panels on the core between the lifts
+        u = k * 5.0 + 2.5
+        if abs(u) > core - 2.0:
+            continue
+        for (x0, x1, y0, y1) in ((u - 1.0, u + 1.0, -core - 0.06, -core), (u - 1.0, u + 1.0, core, core + 0.06),
+                                 (-core - 0.06, -core, u - 1.0, u + 1.0), (core, core + 0.06, u - 1.0, u + 1.0)):
+            parts.append(block('core_panel', x0, x1, y0, y1, z + 3.6, z0u - 1.0, 'bar_glow', coll=c))
+    zm = z + 8.0                                                        # a mezzanine ring round the core
+    ring(parts, 'mezz', -core - 6.0, core + 6.0, -core - 6.0, core + 6.0, zm - 0.3, zm, 6.0, 'concrete_pale', c)
+    ring(parts, 'mezz_rail', -core - 6.0, core + 6.0, -core - 6.0, core + 6.0, zm, zm + 1.1, 0.05, 'rail_glass', c)
+    n = max(4, int(2 * (hi - core) / 9))
+    for k in range(n):                                                  # trees and benches in the hall, on all four sides
+        u = -hi + 10 + k * (2 * hi - 20) / max(1, n - 1)
+        for (x, y) in ((u, -(core + hi) / 2), (u, (core + hi) / 2), (-(core + hi) / 2, u), ((core + hi) / 2, u)):
+            if max(abs(x), abs(y)) < core + 2 or abs(x) + abs(y) > 2 * hi - max(2.0, chu - 2.7) - 2:
+                continue
+            if k % 2 == 0:
+                parts.append(cyl('planter', x, y, z + 0.15, z + 0.9, 1.4, 'planter', 10, coll=c))
+                tree(parts, x, y, z + 0.9, 5.5 + rnd.random() * 1.5, c)
+            else:
+                parts.append(block('bench', x - 1.2, x + 1.2, y - 0.3, y + 0.3, z + 0.15, z + 0.6, 'wood_deck', coll=c))
+                parts.append(cyl('lamp_post', x + 1.8, y, z + 0.15, z + 3.0, 0.06, 'steel_dark', 6, coll=c))
+                parts.append(block('lamp_head', x + 1.6, x + 2.0, y - 0.2, y + 0.2, z + 3.0, z + 3.3, 'lamp_warm', coll=c))
     n = int(2 * h / 14)
     for k in range(n + 1):
         u = -h + 6 + k * (2 * h - 12) / n
@@ -228,8 +292,12 @@ for i, (h, ch, z0, z1) in enumerate(STAGES):
 hc, cy, z0, z1 = CROWN
 solids.append({'x0': -hc - 1.5, 'x1': hc + 1.5, 'y0': cy - hc - 1.5, 'y1': cy + hc + 1.5, 'z0': z0, 'z1': z1})
 solids.append({'x0': -3.0, 'x1': 3.0, 'y0': cy - 3.0, 'y1': cy + 3.0, 'z0': z1, 'z1': MAST_TOP + 1.6})
-results = {'asset_id': 'BLD-12', 'version': '1.0-mc02', 'units': 'm', 'origin': 'bottom-centre of the podium',
-           'family': 'office', 'facade': 'MAT-01 shafts, MAT-01B podium', 'interiors': False,
+skip = sorted({f for (h, ch, z0, z1) in STAGES[1:] for f in range(fl(z0) - 4, fl(z0))} | {f for m in MECH for f in (m, m + 1)})
+stages = [{'hx': h, 'hy': h, 'cx': 0.0, 'cy': 0.0, 'f0': fl(z0), 'f1': fl(z1), 'r': ch, 'chamfer': True} for (h, ch, z0, z1) in STAGES]
+results = {'asset_id': 'BLD-12', 'version': '1.1-mc02', 'units': 'm', 'origin': 'bottom-centre of the podium',
+           'family': 'office', 'facade': 'MAT-01 shafts, MAT-01B podium',
+           'floor_m': FL, 'shaft_base_m': Z0, 'floors': fl(STAGES[-1][3]), 'skip': skip, 'mechanical_floors': MECH,
+           'stages': stages, 'crown_m': 0.0,
            'podium_m': [2 * P, 2 * P, PH], 'stages_m': [{'w': 2 * h, 'chamfer': ch, 'z0': z0, 'z1': z1} for (h, ch, z0, z1) in STAGES],
            'roof_m': ROOF, 'crown_top_m': CROWN[3], 'mast_top_m': MAST_TOP + 1.6,
            'spawn': {'deck_m': ROOF, 'front': '-y', 'pads': [[x, y] for (x, y) in SLOTS]},
