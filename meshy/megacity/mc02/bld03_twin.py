@@ -204,6 +204,7 @@ results = {'asset_id': 'BLD-03', 'version': '1.0-mc02', 'units': 'm', 'origin': 
            'floors': FLOORS, 'mechanical_floor': None, 'skip': [MECH], 'lobby_h_m': LOBBY_H, 'shaft_base_m': SHAFT0,
            'roof_m': [zf(t['f1']) for t in TW], 'crown_top_m': [zf(t['f1']) + 20.4 for t in TW],
            'bridge_floors': list(range(*BRIDGE)),
+           'solids': [{'x0': ext(TW[0])[1], 'x1': ext(TW[1])[0], 'y0': -4.0, 'y1': 4.0, 'z0': zf(BRIDGE[0]) - 0.5, 'z1': zf(BRIDGE[1])}],
            'stages': [{'hx': POD[0] * BAY / 2, 'hy': POD[1] * BAY / 2, 'cx': 0.0, 'cy': 0.0, 'f0': POD[2], 'f1': POD[3]}]
            + [{'hx': t['bx'] * BAY / 2, 'hy': t['by'] * BAY / 2, 'cx': t['cx'], 'cy': t['cy'], 'f0': t['f0'], 'f1': t['f1']} for t in TW]}
 L.build('BLD-03', OUT, {'near': lod_near, 'mid': lod_mid, 'far': lod_far}, results, sockets,
