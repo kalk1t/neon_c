@@ -279,6 +279,7 @@ def build(asset, out, lods, results, sockets, review):
     cam.location = review['cam']
     cam.rotation_euler = (Vector(review['look']) - cam.location).to_track_quat('-Z', 'Y').to_euler()
     cam.data.lens = 28
+    cam.data.clip_end = 20000.0                          # BLD-12 is 1.2 km tall
     S.camera = cam
     S.render.resolution_x, S.render.resolution_y = 900, 1200
     S.render.filepath = os.path.join(out, f'{asset}_review.png')
