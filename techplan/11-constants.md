@@ -47,7 +47,7 @@
 | `RESPAWN_MS` (v0.3.7) | 60000 | ms | A wrecked city car is hidden this long | `src/trafficsim.js` | relay, game | code | |
 | `CHECK_TICKS` / `SNAP_GAP_MS` (v0.3.7) | 50 / 10000 | ticks / ms | Traffic checksum (`tk`) cadence; at most one snapshot per player this often | `server/traffic.js` | relay | code | |
 | `WRECKS_BURST` / `WRECK_GAP_MS` (v0.3.7) | 6 / 1200 | wrecks / ms | Coin rate bucket | `server/traffic.js` | relay | code | A wreck with the bucket empty pays nothing |
-| `MATCH` (v0.3.7) | 3 a side, ball 1,000 hp, r 8 m at GROUND+12, new ball 3 s, match 180 s, countdown 5 s, results 12 s, 100 coins a winner | | STADIUM 3V3 | `src/stadiumgame.js` | `server/stadium.js`, `src/stadium.js` | code | |
+| `MATCH` (v0.3.7) | 3 a side, ball 1,000 hp, r 6.67 m (8 in v0.3.7) at GROUND+12; v0.3.8 moving ball: kick bolt 3 / seeker 9 m/s, ballDrag 0.7/s, ballFloat 0.8, ballMax 16 m/s, ballBox ±56 × ±74 m, GROUND+9..38; new ball 3 s, match 180 s, countdown 5 s, results 12 s, 100 coins a winner | | STADIUM 3V3 | `src/stadiumgame.js` | `server/stadium.js`, `src/stadium.js` | code | |
 | `GROUND_NEAR` (v0.3.6) | 700 (LOW 400) | m | Full ground-shader detail this near | `src/newcity.js` | ground shader `uNear` | code | iGPU cost |
 | `LOD_TOWER` / `LOD_TREE` (v0.3.4) | 600 / 900 / 4,200 · 400 / 450 / 2,600 | m | Scenery LOD: cell size / simplified past / hidden past | `src/skyprops.js` | `lodInstances` | code | Fog hides ~93% at 2.6 km |
 | `DYN_LOW` / `DYN_HIGH` / `DYN_MIN_RATIO` (v0.3.4) | 45 / 56 / 0.5 | fps / fps / ratio | Dynamic resolution: step down below, up above (after 4 s), lowest pixel ratio | `src/render.js` | `adaptResolution` | code | step x0.85 |
@@ -136,7 +136,7 @@
 | Loot on wreck | 25 % (rounded up) | of coins | Coins the attacker takes on a takedown | `src/race.js` `wreck` | code | Tested in `tests/race.test.mjs` |
 | Podium coin bonus | [0, 15, 8, 4] | coins | Bonus for 1st/2nd/3rd in the coin race (`multi` = a RACE with AI rivals) | `src/race.js` `showResults` | code | Counts toward the 200 cap |
 | Rubber band (`RUBBER_BAND`) | clamp(gap·0.05, 0, 0.07) (−0.05 before v0.2.15) | speed factor | AI catch-up; a rival ahead is never slowed | `src/race.js` `updateRanking` | code | |
-| Lock-on | acquire < 0.3 rad within 2000 m (`LOCK_RANGE`), keep < 0.5 rad within 2100 m (`LOCK_KEEP`), min 8 m (400 / 460 before v0.2.14) | rad, m | Seeker lock | `src/aim.js` `updateLock` | code | |
+| `AIM_PICK` (v0.3.8) | size 5 / slack 0.02 | m / rad | The target: the nearest car the aim ray passes within size + slack × distance, 8 m to `LOCK_RANGE` 2000 m; none behind the stadium ball. Replaces the lock-on (acquire < 0.3 rad, keep < 0.5 rad within `LOCK_KEEP` 2100 m, `LOCK_TIME` 0.5 s; now unused by the player) | `src/aim.js` | `updateLock` | code | |
 | `KNOCK` | bolt [0.985, 0.12], missile [0.5, 1.0], shot [0.6, 0.7] (emp removed in v0.2.21) | [speed kept (factor), stun s] | Race hit reaction | `src/race.js` | code | Tested in `tests/race.test.mjs` (missile halves the speed) |
 | `CAMS` | {d 9, h 2.7}, {d 15, h 4.8}, cockpit | m | Camera presets | `src/camera.js` | device (`neon.view`) | |
 | `MOUSE_RAD_PER_PX` | 0.0021 | rad / px | Mouse look | `src/aim.js` | × device `neon.sens` | |
