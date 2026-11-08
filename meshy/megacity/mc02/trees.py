@@ -4,7 +4,7 @@ every copy to its own height), origin = foot of the trunk, Blender Z up:
   TREE-A  plane tree   broad crown of leaf clumps on a forked trunk (streets, plazas, parks)
   TREE-B  pine         tiers of ragged boughs (parks, golf club, the country)
   TREE-C  poplar       a tall narrow column (avenues, roofs, terraces)
-  TREE-D  cherry       a low round crown in blossom (planters, courtyards, sky lobbies)
+  TREE-D  linden       a tall oval green crown on a clear trunk (planters, courtyards, parks; v0.3.6, was a pink cherry)
 
 Each comes as _near (real branches and clumps, about 1-2.5k triangles) and _far (two or three blobs, about 100).
 Materials: bark, leaf_a .. leaf_d (+ a lighter _lit shade per species for the sunny clumps), shipped as PBR factors.
@@ -29,7 +29,7 @@ SPECIES_MATS = {
     'a': ((0.07, 0.19, 0.06), (0.16, 0.32, 0.08)),
     'b': ((0.03, 0.11, 0.07), (0.07, 0.19, 0.1)),
     'c': ((0.08, 0.2, 0.05), (0.18, 0.34, 0.07)),
-    'd': ((0.62, 0.22, 0.36), (0.86, 0.48, 0.6)),
+    'd': ((0.05, 0.15, 0.04), (0.17, 0.33, 0.07)),
 }
 for k, (dark, lit) in SPECIES_MATS.items():
     L.mat(f'leaf_{k}', dark, 0.75, 0.0)
@@ -120,22 +120,22 @@ def cone_tier(bm, z0, z1, r, mi, rnd, n=11):
 def plane_tree(lod, rnd):
     bm = bmesh.new()
     if lod == 'near':
-        limb(bm, (0, 0, -0.2), (0.15, 0.1, 3.6), 0.34, 0.22, 9, 0.04, rnd, 0, 4)
+        limb(bm, (0, 0, -0.2), (0.15, 0.1, 4.6), 0.34, 0.22, 9, 0.04, rnd, 0, 4)
         tips = []
-        for k in range(5):
-            a = k * 2 * math.pi / 5 + rnd.random() * 0.5
-            tip = Vector((math.cos(a) * 2.6, math.sin(a) * 2.6, 6.2 + rnd.random() * 1.6))
-            limb(bm, (0.15, 0.1, 3.4), tip, 0.2, 0.07, 6, 0.08, rnd, 0, 3)
+        for k in range(6):
+            a = k * 2 * math.pi / 6 + rnd.random() * 0.5
+            tip = Vector((math.cos(a) * 2.5, math.sin(a) * 2.5, 6.8 + rnd.random() * 1.4))
+            limb(bm, (0.15, 0.1, 4.4), tip, 0.2, 0.07, 6, 0.08, rnd, 0, 3)
             tips.append(tip)
             for q in range(2):               # twigs into the clumps
                 t2 = tip + Vector((rnd.random() - 0.5, rnd.random() - 0.5, 0.4 + rnd.random() * 0.6)) * 2.0
                 limb(bm, tip, t2, 0.07, 0.03, 4, 0.0, None, 0, 1)
-        crown(bm, (0.1, 0.1, 7.4), 3.9, 3.7, 2.5, 46, 1.05, rnd)
-        for t in tips[:3]:                   # lobes: an uneven, real-tree outline
+        crown(bm, (0.1, 0.1, 7.7), 3.6, 3.5, 2.3, 56, 1.0, rnd)
+        for t in tips[:4]:                   # lobes: an uneven, real-tree outline
             crown(bm, (t.x * 1.15, t.y * 1.15, t.z + 0.3), 1.6, 1.6, 1.2, 8, 0.8, rnd)
         return bm, ['bark', 'leaf_a_lit', 'leaf_a']
-    limb(bm, (0, 0, -0.2), (0, 0, 4.5), 0.34, 0.2, 5, 0, None, 0, 1)
-    clump(bm, (0, 0, 7.3), 3.9, 3.9, 2.8, 1, rnd, 1, 0.15)
+    limb(bm, (0, 0, -0.2), (0, 0, 5.2), 0.34, 0.2, 5, 0, None, 0, 1)
+    clump(bm, (0, 0, 7.6), 3.7, 3.7, 2.5, 1, rnd, 1, 0.15)
     return bm, ['bark', 'leaf_a']
 
 
@@ -173,22 +173,23 @@ def poplar(lod, rnd):
     return bm, ['bark_pale', 'leaf_c']
 
 
-def cherry(lod, rnd):
+def linden(lod, rnd):
     bm = bmesh.new()
     if lod == 'near':
-        limb(bm, (0, 0, -0.2), (0.3, 0, 2.8), 0.3, 0.2, 8, 0.06, rnd, 0, 3)
+        limb(bm, (0, 0, -0.2), (0.1, 0, 6.2), 0.3, 0.12, 8, 0.03, rnd, 0, 4)       # a straight clear trunk into the crown
         tips = []
-        for k in range(6):
-            a = k * math.pi / 3 + rnd.random() * 0.4
-            tip = Vector((0.3 + math.cos(a) * 3.0, math.sin(a) * 3.0, 4.6 + rnd.random() * 1.4))
-            limb(bm, (0.3, 0, 2.6), tip, 0.16, 0.05, 5, 0.12, rnd, 0, 3)
+        for k in range(7):
+            a = k * 2 * math.pi / 7 + rnd.random() * 0.4
+            z = 3.4 + k * 0.45
+            tip = Vector((math.cos(a) * 2.2, math.sin(a) * 2.2, z + 2.2 + rnd.random()))
+            limb(bm, (0.1, 0, z), tip, 0.13, 0.04, 5, 0.1, rnd, 0, 2)
             tips.append(tip)
-        crown(bm, (0.3, 0, 6.2), 4.1, 3.9, 2.1, 52, 0.95, rnd, 0.3, rough=0.5)
+        crown(bm, (0.1, 0, 6.6), 2.7, 2.6, 3.2, 64, 0.9, rnd, 0.3, rough=0.45)       # a tall oval
         for t in tips[::2]:
-            crown(bm, (t.x * 1.1, t.y * 1.1, t.z + 0.2), 1.3, 1.3, 0.9, 7, 0.7, rnd, rough=0.5)
+            crown(bm, (t.x * 1.1, t.y * 1.1, t.z + 0.2), 1.1, 1.1, 1.0, 6, 0.7, rnd, rough=0.45)
         return bm, ['bark', 'leaf_d_lit', 'leaf_d']
-    limb(bm, (0, 0, -0.2), (0.3, 0, 3.4), 0.3, 0.18, 5, 0, None, 0, 1)
-    clump(bm, (0.3, 0, 6.2), 4.0, 4.0, 2.4, 1, rnd, 1, 0.18)
+    limb(bm, (0, 0, -0.2), (0.1, 0, 4.0), 0.3, 0.16, 5, 0, None, 0, 1)
+    clump(bm, (0.1, 0, 6.6), 2.8, 2.8, 3.3, 1, rnd, 1, 0.16)
     return bm, ['bark', 'leaf_d']
 
 
@@ -210,7 +211,7 @@ def mid_of(fn, n_scale=0.12):
     return f
 
 
-SPECIES = [('TREE-A', mid_of(plane_tree)), ('TREE-B', mid_of(pine)), ('TREE-C', mid_of(poplar)), ('TREE-D', mid_of(cherry))]
+SPECIES = [('TREE-A', mid_of(plane_tree)), ('TREE-B', mid_of(pine)), ('TREE-C', mid_of(poplar)), ('TREE-D', mid_of(linden))]
 report = {}
 for i, (name, fn) in enumerate(SPECIES):
     report[name] = {}
