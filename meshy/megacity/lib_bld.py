@@ -18,6 +18,7 @@ def start():
     bpy.ops.wm.read_factory_settings(use_empty=True)
     S = bpy.context.scene
     M.clear()
+    TREES.clear()
     return S
 
 
@@ -176,8 +177,19 @@ def ring(parts, name, x0, x1, y0, y1, z0, z1, t, m, c, sides='nsew'):
     if 'e' in sides: parts.append(block(name, x1 - t, x1, y0, y1, z0, z1, m, coll=c))
 
 
-def tree(parts, x, y, z, h, c):
+TREES = []                    # the near form's trees: [x, y, z, height, species] (build() writes them to the JSON)
+
+
+def tree(parts, x, y, z, h, c, kind=None):
+    """A planter and a tree. The near form ships only the planter: the game plants a real tree there (TREE-A..D,
+    trees.py; JSON 'trees'). Mid and far forms keep a cheap trunk and crown.
+    kind: 'A' plane, 'C' poplar, 'D' cherry; by default big trees are plane trees, the rest mixed by position."""
     parts.append(block('pl', x - 0.5, x + 0.5, y - 0.5, y + 0.5, z, z + 0.7, 'planter', coll=c))
+    if c.name.endswith('_near'):
+        if kind is None:
+            kind = 'A' if h >= 4.5 else 'ACD'[int(abs(x * 7.3 + y * 13.1 + z * 0.7)) % 3]
+        TREES.append([round(x, 3), round(y, 3), round(z + 0.7, 3), round(h * 1.25, 2), kind])
+        return
     parts.append(cyl('trunk', x, y, z + 0.7, z + 0.7 + h * 0.45, 0.08, 'tank_wood', 6, coll=c))
     parts.append(cyl('crown', x, y, z + 0.7 + h * 0.35, z + 0.7 + h, h * 0.32, 'leaf', 8, coll=c))
 
@@ -285,6 +297,9 @@ def build(asset, out, lods, results, sockets, review):
     S.render.filepath = os.path.join(out, f'{asset}_review.png')
     bpy.ops.render.render(write_still=True)
     bpy.ops.wm.save_as_mainfile(filepath=os.path.join(out, f'{asset}.blend'))
+    if TREES:
+        results['trees'] = list(TREES)
+    TREES.clear()
     with open(os.path.join(out, f'{asset}.json'), 'w') as fh:
         json.dump(results, fh, indent=1)
     print(asset, json.dumps({k: v['triangles'] for k, v in results['lods'].items()}))
