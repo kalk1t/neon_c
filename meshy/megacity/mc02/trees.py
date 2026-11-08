@@ -192,7 +192,7 @@ def cherry(lod, rnd):
     return bm, ['bark', 'leaf_d']
 
 
-def mid_of(fn, n_scale=0.22):
+def mid_of(fn, n_scale=0.12):
     def f(lod, rnd):
         if lod != 'mid':
             return fn(lod, rnd)
@@ -201,7 +201,7 @@ def mid_of(fn, n_scale=0.22):
         try:
             g = globals()['crown']
             def thin(bm, c, rx, ry, rz, n, size, rnd, *a, **k):
-                return g(bm, c, rx, ry, rz, max(3, int(n * n_scale)), size * 1.7, rnd, *a, **k)
+                return g(bm, c, rx, ry, rz, max(3, int(n * n_scale)), size * 2.1, rnd, *a, **k)
             globals()['crown'] = thin
             return fn('near', rnd)
         finally:
