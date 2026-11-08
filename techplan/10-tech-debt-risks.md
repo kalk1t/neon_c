@@ -155,6 +155,17 @@ car).
 
 **v0.3.4 (2026-11-07, integrated graphics):** a player's Intel UHD 630 was unplayable (reproduced on the PC's AMD iGPU: 12 fps HIGH, 20 LOW). Cause: 5.3 M triangles a frame, 4 M of them 450 instanced Meshy tower crowns (9,000 triangles each) in one InstancedMesh with one bounding sphere, so never culled and drawn at any distance. Fixed by ground-cell `THREE.LOD`s (full / simplified `*_far.glb` / none in the fog; towers 900 m / 4.2 km, trees 450 m / 2.6 km), dynamic resolution (45 / 56 fps, min ratio 0.5; a step that does not help is undone) and an integrated-GPU hint in the requirements; ~50 fps. **Rule:** new instanced scenery goes through `lodInstances` (or is cheap); check `renderer.info.render.triangles` on the iGPU before shipping heavy models. The menu's auto LOW (`measureGfx`) still only runs without a saved choice; dynamic resolution covers a saved HIGH.
 
+**v0.3.6 (2026-11-08, the city polished):** exact building colliders (`meshy/megacity/colgen.py`: boxes filled from the model slice by slice, sample cap 2 M; BLD-12 910 boxes) and a solid ground (`Colliders.ground`). Traffic, traffic lights, props, parked cars, balloons and drones are solid too.
+- **Risks:**
+  - iGPU LOW is up 1–2 ms (street level 16.7 ms, uncapped), right at 60 fps; dynamic resolution covers drops.
+  - Traffic is simulated within 800 m (0.35 ms of CPU per frame).
+  - The collider count grows with props (one `Compound` per placement).
+  - Farm animals, hay and fences are still not solid.
+- **Rules:**
+  - A new prop needs its `colgen.py` entry in `PROPS-colliders.json`. Without one it is not solid.
+  - Pools and arenas must stay unturned, because the ground paints them unturned.
+  - The traffic stop line (40 m) and lane (6 m) are hard-coded in the ground shader: change `TRAFFIC` and the shader together.
+
 **v0.3.5 (2026-11-07, Living Megacity):** the procedural city is replaced by 958 modelled buildings plus BLD-12 on a painted ground at 25 m (`cityplan.js`, `newcity.js`).
 - **Risks:**
   - +17 MB of assets.

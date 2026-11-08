@@ -38,7 +38,10 @@
 | `PITCH` / `STREET` (v0.3.5) | 120 / 30 | m | City grid: lot pitch / street width (90 m lots) | `src/cityplan.js` | `newcity.js` ground shader | code | |
 | `NEAR_IN` / `NEAR_OUT` / `NEAR_MAX` (v0.3.5) | 300 / 360 / 6 (LOW 3) | m / m / buildings | Near forms with interiors | `src/newcity.js` | `lod()` | code | |
 | `FAST` (v0.3.5) | 90 | m/s | Faster: no new near forms or interior bands | `src/newcity.js` | `lod()` | code | Upload stalls on iGPUs |
-| `TRAFFIC` (v0.3.5) | range 650 / cap 360 / gap 70 / lane 6 | m / cars / m / m | Street traffic | `src/newcity.js` | `buildTraffic` | code | |
+| `TRAFFIC` (v0.3.5) | range 650 / cap 360 / gap 70 / lane 6 | m / cars / m / m | Street traffic | `src/newcity.js` | `buildTraffic` | code | v0.3.6: simulated within 800 m, accel 3.5 / brake 6 m/s² |
+| `CYCLE` (v0.3.6) | 32 (NS green 0-13, amber 13-16, then EW) | s | Traffic-light cycle per crossing; 160 nearest drawn | `src/newcity.js` | `signal`, `buildSignals` | code | Stop lines are painted at 40 m (ground shader) |
+| `FLY` (v0.3.6) | balloons 12 / drones 60 / cams 24 / range 2,600 / droneRange 700 | count / m | Balloons and drones | `src/newcity.js` | `buildFlyers` | code | 70 m clear of every road |
+| `GROUND_NEAR` (v0.3.6) | 700 (LOW 400) | m | Full ground-shader detail this near | `src/newcity.js` | ground shader `uNear` | code | iGPU cost |
 | `LOD_TOWER` / `LOD_TREE` (v0.3.4) | 600 / 900 / 4,200 · 400 / 450 / 2,600 | m | Scenery LOD: cell size / simplified past / hidden past | `src/skyprops.js` | `lodInstances` | code | Fog hides ~93% at 2.6 km |
 | `DYN_LOW` / `DYN_HIGH` / `DYN_MIN_RATIO` (v0.3.4) | 45 / 56 / 0.5 | fps / fps / ratio | Dynamic resolution: step down below, up above (after 4 s), lowest pixel ratio | `src/render.js` | `adaptResolution` | code | step x0.85 |
 | `COCKPIT` (v0.3.3) | FOV 66 / NEAR 0.05 | ° / m | Cockpit camera (the pack's CAM_Driver) | `src/interior.js` | `camera.js` | code | From the pack's manifest |

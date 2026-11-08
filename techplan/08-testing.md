@@ -183,3 +183,11 @@ The browser test (`interiors.test.mjs`) drives the ROADSTER only; VIPER / TITAN 
 | Production build (scripted, not in CI) | pass | `vite build` served by `server/serve.mjs` with `CSP_ENFORCE=1`: v0.3.5 label, 0 page errors, 0 HTTP errors, 0 CSP blocks, 120 megacity files. A TIME ATTACK race at 487 km/h, 60 fps (RTX 5080). `?newcity=off` and `neon.megacity = off` are ignored in production |
 | Frame probes (scratchpad, AMD iGPU LOW 1280x720) | pass | Fly paths at 60-200 m/s: mean 12.6-13.5 ms, p95 16-19 ms, worst ~35 ms, no shader compiles in flight. Static views 10.7-13.0 ms (old city 16-19) |
 | Visual (scripted captures) | pass | Courts, pools, pitch, stadium, farmyard, pastures and animals, golf, horizon hills, traffic both ways, the 48 ad screens on the new buildings, warps |
+
+### v0.3.6 (2026-11-08, the city polished)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` + `test:browser` | 178 / 178; browser cars, interiors, killer, nitros, rivals, save, skins, void all pass | + `colliders.test.mjs` (5): compounds push out from outside and inside; every building's colliders fit its model with no hollow pocket (sections at 1/4, 1/2, 3/4 height, < 60 m²); a solid sloped ground; `groundHeight` flat in the city, hills from 3.8 km |
+| Frame probes (scratchpad, AMD iGPU LOW 1280x720, dev-mode bundles of v0.3.5 and v0.3.6) | pass | Street 14.4 → 16.7 ms, air 13.5 → 14.4 ms; city CPU update 0.4 ms; per-part cost by hiding groups (ground ~1.5, props ~1.2, trees ~0.8, traffic ~0.3 ms) |
+| Behaviour probes (scratchpad) | pass | Cars rest on the street at 27.6 m and are pushed up on hills; 9,601 cars, 2,000–3,000 stopped at red, 0 overlaps; car hits on traffic, poles, props, balloons |
+| Visual (scripted captures) | pass | Lots, parks, playgrounds, pools, intersections, balloons and drones, the stadium (LED ring, boards, car parks), arenas |
