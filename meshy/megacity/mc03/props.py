@@ -168,7 +168,11 @@ def pool(c):
         for y in (y0 - 0.2, y1 + 0.2):
             p.append(cyl('ladder', x, y, 0, 1.0, 0.03, 'steel_rail', 6, coll=c))
             p.append(cyl('ladder', x + 0.5, y, 0, 1.0, 0.03, 'steel_rail', 6, coll=c))
-    p.append(cyl('kidring', -22, -25, 0, 0.12, 7.4, 'pool_tile', 24, coll=c))
+    kr = cyl('kidring', -22, -25, 0, 0.12, 7.4, 'pool_tile', 24, coll=c)
+    bm = bmesh.new(); bm.from_mesh(kr.data)                 # v0.3.6: a rim, not a lid over the kids' pool's water
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if abs(f.normal.z) > 0.9], context='FACES')
+    bm.to_mesh(kr.data); bm.free()
+    p.append(kr)
     # loungers and parasols on the deck (game z +8..+20 = Blender y -8..-20) and along the long side
     for k in range(10):
         x = -22 + k * 4.6
