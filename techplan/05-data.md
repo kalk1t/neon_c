@@ -15,6 +15,7 @@ erDiagram
     string nicknameLower
     int coins "wallet (functions only)"
     int totalCoins "lifetime, ranking (functions only)"
+    int roamCoins "v0.3.7: coins earned in FREE ROAM (city cars, STADIUM 3V3 wins), relay via relayKills"
     int races
     number bestLap "seconds"
     number best2 "road 1 2-lap time, s"

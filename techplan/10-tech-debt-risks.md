@@ -166,6 +166,19 @@ car).
   - Pools and arenas must stay unturned, because the ground paints them unturned.
   - The traffic stop line (40 m) and lane (6 m) are hard-coded in the ground shader: change `TRAFFIC` and the shader together.
 
+**v0.3.7 (2026-11-08, city cars pay coins, STADIUM 3V3):** one deterministic city traffic shared by the relay and every game (`trafficsim.js`, `server/traffic.js`); city cars have health and pay 5 coins (bus 15) with no daily cap; STADIUM 3V3 run by the relay (`server/stadium.js`); `LIVE_PROTOCOL` 19 (18 still admitted).
+- **Release order:** deploy **functions first** (`relayKills` now takes `coins`), then restart the relay, then the client.
+- **Risks:**
+  - A leaked `RELAY_SECRET` can now mint coins, not only kills: at most `RELAY_COINS_MAX` (300) a player per `relayKills` call, with no daily cap. Rotate the secret if in doubt.
+  - Coins have only the rate check (6 wrecks at once, then one per 1.2 s; a too-fast wreck pays nothing). A player who farms the city all day earns all day, as asked.
+  - The 100-coin STADIUM win can be farmed with two accounts (one each side, one leaves). Watch `win` coins in the relay log.
+  - A wrecked car keeps driving invisibly for 60 s (so the simulation stays the same everywhere): the cars behind keep their distance from it.
+  - A game whose float maths differed would drift; it then asks for a snapshot (~160 KB, at most one per 10 s). Not seen in Chromium or Node (Firefox untested).
+  - The relay steps all 9,601 cars (0.42 ms per tick, 10 ticks a second) while anyone is online.
+- **Rules:**
+  - `trafficsim.js` must stay deterministic: only `+ - * /`, `Math.sqrt`, `Math.round`/`floor`, integer hashes; no `Math.sin`, no `Math.random`, no frame-time dependence. `tests/traffic.test.mjs` checks two runs and a restored snapshot match.
+  - A new car type needs `VEH[ty].hp` and `coins`.
+
 **v0.3.5 (2026-11-07, Living Megacity):** the procedural city is replaced by 958 modelled buildings plus BLD-12 on a painted ground at 25 m (`cityplan.js`, `newcity.js`).
 - **Risks:**
   - +17 MB of assets.

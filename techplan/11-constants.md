@@ -26,6 +26,7 @@
 | `PACE_MAX` | 240 (170 before v0.2.15) | m/s | Faster than any driver can average (nitro 196 + a 1.5× spin surge 2 s in every 6 s ≈ 229) | `functions/rules.js` | `ROAD_MIN_*` | code | `constants.test.mjs` checks it against `CAR` / `SPIN` |
 | `ROAD_MIN_RACE_S` / `ROAD_MIN_LAP_S` | 43, 47, 51, 56, 59, 66, 61, 73, 75 / 21, 23, 25, 28, 29, 33, 30, 36, 37 (v0.2.15) | s | Fastest possible 2-lap race / lap per road: gate-to-gate distance ÷ `PACE_MAX` (R8, v0.2.4) | `functions/rules.js` | `finishRace` | code | Recomputed from `src/roads.js` by `constants.test.mjs`: change them with the roads |
 | `RULES.DAILY_COIN_CAP` | 2,000 | coins / UTC day | Most coins banked per day (R8) | `functions/rules.js` | `finishRace` (`coinsDay`) | code | Real players make ~10–50 a race |
+| `RULES.RELAY_COINS_MAX` (v0.3.7) / `SAVE_COINS` | 300 / 300 | coins | Most coins one `relayKills` save may give a player (the relay splits bigger sums) | `functions/rules.js`, `server/live.js` | `relayKills` | code | A leaked secret can mint this much a call |
 | `RULES.RELAY_BATCH` / `RELAY_KILLS_MAX` / `KILLER_COUNT_MAX` | 50 / 60 / 1e6 | players / kills / count | What one `relayKills` save may hold | `functions/rules.js` | `relayKills` | code | Relay copies `SAVE_BATCH`, `SAVE_KILLS`, `KC_MAX` (`server/live.js`), checked by `constants.test.mjs` |
 | `RULES.TICKET_MAX_AGE_S` | 2,700 (45 min) | s | A race left open longer isn't saved | `functions/rules.js:10` | `functions/index.js:58` | code | |
 | `RULES.TICKET_MIN_GAP_S` | 3 | s | Restarting faster than this is refused | `functions/rules.js:11` | `functions/index.js:41` | code | `resource-exhausted 'too-fast'` |
@@ -41,6 +42,12 @@
 | `TRAFFIC` (v0.3.5) | range 650 / cap 360 / gap 70 / lane 6 | m / cars / m / m | Street traffic | `src/newcity.js` | `buildTraffic` | code | v0.3.6: simulated within 800 m, accel 3.5 / brake 6 m/s² |
 | `CYCLE` (v0.3.6) | 32 (NS green 0-13, amber 13-16, then EW) | s | Traffic-light cycle per crossing; 160 nearest drawn | `src/newcity.js` | `signal`, `buildSignals` | code | Stop lines are painted at 40 m (ground shader) |
 | `FLY` (v0.3.6) | balloons 12 / drones 60 / cams 24 / range 2,600 / droneRange 700 | count / m | Balloons and drones | `src/newcity.js` | `buildFlyers` | code | 70 m clear of every road |
+| `VEH` (v0.3.7) | sedan 60 / hatch 50 / van 80 / taxi 60 / bus 160 health; 5 coins (bus 15) | hp / coins | City cars' health and reward | `src/trafficsim.js` | `server/traffic.js` | code | A bolt does 21, a seeker 48 |
+| `DT` / `Q` (v0.3.7) | 0.1 / 1/256 | s / m | Traffic tick; the grid every place and speed is rounded to | `src/trafficsim.js` | `trafficSim` | code | Determinism |
+| `RESPAWN_MS` (v0.3.7) | 60000 | ms | A wrecked city car is hidden this long | `src/trafficsim.js` | relay, game | code | |
+| `CHECK_TICKS` / `SNAP_GAP_MS` (v0.3.7) | 50 / 10000 | ticks / ms | Traffic checksum (`tk`) cadence; at most one snapshot per player this often | `server/traffic.js` | relay | code | |
+| `WRECKS_BURST` / `WRECK_GAP_MS` (v0.3.7) | 6 / 1200 | wrecks / ms | Coin rate bucket | `server/traffic.js` | relay | code | A wreck with the bucket empty pays nothing |
+| `MATCH` (v0.3.7) | 3 a side, ball 1,000 hp, r 8 m at GROUND+12, new ball 3 s, match 180 s, countdown 5 s, results 12 s, 100 coins a winner | | STADIUM 3V3 | `src/stadiumgame.js` | `server/stadium.js`, `src/stadium.js` | code | |
 | `GROUND_NEAR` (v0.3.6) | 700 (LOW 400) | m | Full ground-shader detail this near | `src/newcity.js` | ground shader `uNear` | code | iGPU cost |
 | `LOD_TOWER` / `LOD_TREE` (v0.3.4) | 600 / 900 / 4,200 · 400 / 450 / 2,600 | m | Scenery LOD: cell size / simplified past / hidden past | `src/skyprops.js` | `lodInstances` | code | Fog hides ~93% at 2.6 km |
 | `DYN_LOW` / `DYN_HIGH` / `DYN_MIN_RATIO` (v0.3.4) | 45 / 56 / 0.5 | fps / fps / ratio | Dynamic resolution: step down below, up above (after 4 s), lowest pixel ratio | `src/render.js` | `adaptResolution` | code | step x0.85 |
@@ -76,7 +83,7 @@
 | Profile REST timeout | 8,000 | ms | Firestore read | `:94` | code | |
 | Heartbeat | 15,000 | ms | WebSocket ping, idle check | `:264` | code | Keeps Cloudflare from closing quiet sockets |
 | State clamps | pitch ±3.15 (v0.2.22; ±1.6 before), roll ±1.6, speed −50..400, boost 0..1, hp 0..100 | rad, m/s, ratio | Sanitise | `:156-161` | code | |
-| `LIVE_PROTOCOL` | 18 | version | Client/relay compatibility (7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20; 14: no EMP, v0.2.21; 15: backflip, v0.2.22; 16: away tabs leave, v0.2.24; 17: health on the relay (S4) and skins (K2), v0.3; 18: nitros, v0.3.2) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
+| `LIVE_PROTOCOL` | 19 (relay admits 18) | version | Client/relay compatibility (19: shared traffic, coins, STADIUM 3V3, v0.3.7; 7: relay-saved kills, shop cars; 8: moderation, `err banned`, v0.2.9; 9: bolts 21 damage, 750 m/s × 1.5 s, v0.2.14; 10: cars 135 / 196 m/s, v0.2.15; 11: shop cars differ, hp sent in %, v0.2.17; 12: bolts 300 m/s × 3.5 s, v0.2.19; 13: health 200 / 150 / 250, v0.2.20; 14: no EMP, v0.2.21; 15: backflip, v0.2.22; 16: away tabs leave, v0.2.24; 17: health on the relay (S4) and skins (K2), v0.3; 18: nitros, v0.3.2) | `src/online/protocol.js` | code | Bump on any message change; old clients reload |
 | `VOID_KILLS` | 10 | Killer kills | CRIMSON FLAME → VOID CROWN | `src/online/protocol.js:9` | `src/killer.js` `auraStyleFor`, `src/main.js` | code | > `KILLER_KILLS`; rules allow +10 per save, so the count can reach it in one save |
 
 ## C. FREE ROAM client (`src/online/live.js`, `src/roam.js`)

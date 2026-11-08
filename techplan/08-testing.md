@@ -191,3 +191,10 @@ The browser test (`interiors.test.mjs`) drives the ROADSTER only; VIPER / TITAN 
 | Frame probes (scratchpad, AMD iGPU LOW 1280x720, dev-mode bundles of v0.3.5 and v0.3.6) | pass | Street 14.4 → 16.7 ms, air 13.5 → 14.4 ms; city CPU update 0.4 ms; per-part cost by hiding groups (ground ~1.5, props ~1.2, trees ~0.8, traffic ~0.3 ms) |
 | Behaviour probes (scratchpad) | pass | Cars rest on the street at 27.6 m and are pushed up on hills; 9,601 cars, 2,000–3,000 stopped at red, 0 overlaps; car hits on traffic, poles, props, balloons |
 | Visual (scripted captures) | pass | Lots, parks, playgrounds, pools, intersections, balloons and drones, the stadium (LED ring, boards, car parks), arenas |
+
+### v0.3.7 (2026-11-08, city cars pay coins, STADIUM 3V3)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 194 / 194 | + `traffic.test.mjs` (10): two runs and a restored snapshot give the same checksum; hits checked against the relay's car; health, wrecks, 60 s respawn, coins, the rate bucket; joining gets the relay's city, `tk` matches, a drifted game gets one snapshot per 10 s. + `stadium.test.mjs` (6): joining only in the stadium, team balance, 3 a side; countdown, 1,000-hp ball (48 bolts), goal, new ball after 3 s, 3 min, winners; empty team ends it, draw, refused hits, no friendly fire; through the relay: 100 coins saved for each winner |
+| `test:functions` | 30 / 30 | + `relayKills` `coins`: adds to `coins`, `totalCoins`, `roamCoins`; over `RELAY_COINS_MAX` refused |
+| `test:browser` | all pass (cars 188, interiors 11, killer 33, nitros 17, rivals 10, save 5, skins 4, stadium 8, traffic 6, void 9) | + `stadium.test.mjs`: two games join BLUE/RED with B, start at their ends, see team tags, A's bolts destroy the ball, both see BLUE 1, a new ball, RED leaves and A gets 100 coins. + `traffic.test.mjs`: two games show the same city, a wreck seen by both, coins in the wallet |
