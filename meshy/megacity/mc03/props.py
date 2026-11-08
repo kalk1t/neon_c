@@ -45,6 +45,13 @@ L.mat('flood', (1.0, 1.0, 1.0), 0.3, 0.0, (0.9, 0.95, 1.0), 6.0)
 L.mat('window_warm', (1.0, 0.8, 0.5), 0.4, 0.0, (1.0, 0.72, 0.42), 2.2)
 L.mat('pool_light', (0.4, 0.9, 1.0), 0.3, 0.0, (0.3, 0.85, 1.0), 2.5)
 L.mat('concourse', (1.0, 0.9, 0.7), 0.4, 0.0, (1.0, 0.82, 0.55), 2.0)
+# v0.3.6: the stadium's video boards and LED ring, the arenas
+L.mat('screen_a', (0.2, 0.55, 1.0), 0.3, 0.0, (0.25, 0.6, 1.0), 3.5)
+L.mat('screen_b', (1.0, 0.3, 0.6), 0.3, 0.0, (1.0, 0.28, 0.62), 3.5)
+L.mat('screen_c', (1.0, 0.85, 0.3), 0.3, 0.0, (1.0, 0.82, 0.3), 3.0)
+L.mat('led_ring', (0.3, 1.0, 0.9), 0.3, 0.0, (0.25, 1.0, 0.85), 3.0)
+L.mat('arena_roof', (0.55, 0.57, 0.6), 0.35, 0.7)
+L.mat('arena_glass', (0.05, 0.08, 0.12), 0.1, 0.5)
 rnd = random.Random(31)
 
 
@@ -255,7 +262,7 @@ def loft(name, loops, m, c, mat_per_band=None):
     return o
 
 
-mat_per_band_names = ['seat_blue', 'concrete_pale', 'seat_red', 'seat_white', 'concrete_struct', 'steel_dark', 'concourse']
+mat_per_band_names = ['seat_blue', 'concrete_pale', 'seat_red', 'seat_white', 'concrete_struct', 'steel_dark', 'concourse', 'arena_glass', 'screen_a', 'arena_roof']
 
 
 def stadium(c):
@@ -307,6 +314,51 @@ def stadium(c):
             p.append(block('gate', x - 0.3, x + 0.3, -6, 6, 0.0, 6.0, 'concourse', coll=c))
         else:
             p.append(block('gate', -6, 6, y - 0.3, y + 0.3, 0.0, 6.0, 'concourse', coll=c))
+    # v0.3.6: a lit LED ring along the pitch wall
+    p.append(loft('ledring', [rr_loop(HX + 1.95, HY + 1.95, R + 1.95, 0.35), rr_loop(HX + 1.95, HY + 1.95, R + 1.95, 1.05)], 'led_ring', c))
+    # two video boards on the roof at the ends, facing the pitch: a frame, the screen (a score, a picture), legs
+    for sy in (-1, 1):
+        yb = sy * (HY + oo - 14.0)
+        p.append(block('board', -19, 19, yb - 1.2, yb + 1.2, rz + 1.0, rz + 15.0, 'steel_dark', coll=c))
+        face = yb - sy * 1.25
+        p.append(block('screen', -17.5, 3.0, face - 0.06, face + 0.06, rz + 2.4, rz + 13.6, 'screen_a', coll=c))
+        p.append(block('score', 4.0, 17.5, face - 0.06, face + 0.06, rz + 8.6, rz + 13.6, 'screen_c', coll=c))
+        p.append(block('clock', 4.0, 17.5, face - 0.06, face + 0.06, rz + 2.4, rz + 7.6, 'screen_b', coll=c))
+        for x in (-14, 0, 14):
+            p.append(cyl('leg', x, yb, rz - 1.0, rz + 1.0, 0.5, 'steel_dark', 8, coll=c))
+    # the entrance plazas at the ends (ground shader stadium()): ticket booths by the gates, a row of flags
+    for sy in (-1, 1):
+        y0 = sy * (HY + oo)
+        for x in (-12.0, 12.0):
+            p.append(block('booth', x - 2.2, x + 2.2, y0 + sy * 6 - 1.6, y0 + sy * 6 + 1.6, 0.0, 3.0, 'concrete_struct', coll=c))
+            p.append(block('boothwin', x - 1.8, x + 1.8, y0 + sy * 7.62 - 0.05, y0 + sy * 7.62 + 0.05, 1.0, 2.3, 'window_warm', coll=c))
+        for k in range(7):
+            x = -30 + k * 10
+            if abs(x) < 16: continue
+            p.append(cyl('flagpole', x, y0 + sy * 16, 0, 12, 0.12, 'steel_rail', 6, coll=c))
+            p.append(block('flag', x + 0.15, x + 3.2, y0 + sy * 16 - 0.03, y0 + sy * 16 + 0.03, 9.6, 11.6, 'flag_red' if k % 2 else 'seat_blue', coll=c))
+    return p
+
+
+def arena(c):
+    """v0.3.6: a round indoor arena (outer ring): a glass drum with an LED band, a silver dome, four lit entrances."""
+    p = []
+    Rr = 36.0
+    circ = lambda r, z: rr_loop(r, r, r - 0.001, z, 12)
+    p.append(loft('drum', [circ(Rr, 0.0), circ(Rr, 3.2), circ(Rr, 9.5), circ(Rr, 11.0), circ(Rr, 13.0), circ(Rr + 1.0, 13.0), circ(Rr + 1.0, 14.0)],
+                  'arena_glass', c, [4, 7, 8, 7, 9, 9]))   # base, glass, the LED band, glass, the cornice
+    dome = [circ(Rr + 1.0, 14.0)] + [circ((Rr + 1.0) * math.cos(a), 14.0 + 11.0 * math.sin(a)) for a in [k * math.pi / 2 / 7 for k in range(1, 7)]] + [circ(1.0, 25.0)]
+    p.append(loft('dome', dome, 'arena_roof', c))
+    p.append(cyl('cap', 0, 0, 24.6, 25.4, 1.6, 'arena_roof', 12, coll=c))
+    for a in range(4):
+        th = a * math.pi / 2
+        x, y = math.cos(th) * (Rr + 1.5), math.sin(th) * (Rr + 1.5)
+        if a % 2 == 0:
+            p.append(block('entry', x - 1.5, x + 1.5, y - 7, y + 7, 0.0, 5.0, 'concourse', coll=c))
+            p.append(block('canopy', x - 5 if x > 0 else x - 1, x + 1 if x > 0 else x + 5, y - 9, y + 9, 5.0, 5.6, 'steel_dark', coll=c))
+        else:
+            p.append(block('entry', x - 7, x + 7, y - 1.5, y + 1.5, 0.0, 5.0, 'concourse', coll=c))
+            p.append(block('canopy', x - 9, x + 9, y - 5 if y > 0 else y - 1, y + 1 if y > 0 else y + 5, 5.0, 5.6, 'steel_dark', coll=c))
     return p
 
 
@@ -487,7 +539,7 @@ def chicken(c):
     return p
 
 
-PROPS = {'tennis': tennis, 'basket': basket, 'pool': pool, 'football': football, 'stadium': stadium,
+PROPS = {'arena': arena, 'tennis': tennis, 'basket': basket, 'pool': pool, 'football': football, 'stadium': stadium,
          'barn': barn, 'silo': silo, 'house': house, 'fence': fence_seg, 'hay': hay,
          'club': club, 'flag': flag, 'cart': cart, 'horse': horse, 'cow': cow, 'sheep': sheep, 'chicken': chicken}
 report = {}
@@ -521,7 +573,7 @@ S.collection.objects.link(cam)
 S.camera = cam
 cam.data.clip_end = 5000
 S.render.resolution_x, S.render.resolution_y = 640, 420
-VIEW = {'tennis': 48, 'basket': 44, 'pool': 85, 'football': 95, 'stadium': 330, 'barn': 32, 'silo': 30, 'house': 24,
+VIEW = {'arena': 110, 'tennis': 48, 'basket': 44, 'pool': 85, 'football': 95, 'stadium': 330, 'barn': 32, 'silo': 30, 'house': 24,
         'fence': 12, 'hay': 5, 'club': 45, 'flag': 5, 'cart': 6, 'horse': 5, 'cow': 5, 'sheep': 3, 'chicken': 1}
 for name in PROPS:
     for c2 in bpy.data.collections:
