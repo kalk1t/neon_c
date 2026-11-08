@@ -174,3 +174,12 @@ The browser test (`interiors.test.mjs`) drives the ROADSTER only; VIPER / TITAN 
 | Rendering / visual regressions | Partly (v0.2.27): car materials, colours, NaN and asset contract tested; matched captures by `tools/capture-cars.mjs` are compared by eye, not automatically |
 | Build smoke test | No script; builds were checked manually into a scratch `outDir` |
 | CI | **GitHub Actions** since 2026-11-02 (`.github/workflows/ci.yml`): on push to `main`, pull requests and by hand; Node 22, Java 21; build + live + rules + functions + browser. Never deploys |
+
+### v0.3.5 (2026-11-07, Living Megacity)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 173 / 173 | + `cityplan.test.mjs` (4): every lot type present, every building clear of every road, buildings inside their lots without overlap, BLD-12's plaza kept |
+| `test:browser` | cars, interiors, nitros, rivals, save, skins, void pass; killer 33/33 (rerun alone) | In the full run, killer failed 2 checks: the source was edited mid-run, Vite reloaded the pages, and `prep` reset `neon.gfx` to `low`. Not a game fault |
+| Production build (scripted, not in CI) | pass | `vite build` served by `server/serve.mjs` with `CSP_ENFORCE=1`: v0.3.5 label, 0 page errors, 0 HTTP errors, 0 CSP blocks, 120 megacity files. A TIME ATTACK race at 487 km/h, 60 fps (RTX 5080). `?newcity=off` and `neon.megacity = off` are ignored in production |
+| Frame probes (scratchpad, AMD iGPU LOW 1280x720) | pass | Fly paths at 60-200 m/s: mean 12.6-13.5 ms, p95 16-19 ms, worst ~35 ms, no shader compiles in flight. Static views 10.7-13.0 ms (old city 16-19) |
+| Visual (scripted captures) | pass | Courts, pools, pitch, stadium, farmyard, pastures and animals, golf, horizon hills, traffic both ways, the 48 ad screens on the new buildings, warps |

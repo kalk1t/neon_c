@@ -155,6 +155,24 @@ car).
 
 **v0.3.4 (2026-11-07, integrated graphics):** a player's Intel UHD 630 was unplayable (reproduced on the PC's AMD iGPU: 12 fps HIGH, 20 LOW). Cause: 5.3 M triangles a frame, 4 M of them 450 instanced Meshy tower crowns (9,000 triangles each) in one InstancedMesh with one bounding sphere, so never culled and drawn at any distance. Fixed by ground-cell `THREE.LOD`s (full / simplified `*_far.glb` / none in the fog; towers 900 m / 4.2 km, trees 450 m / 2.6 km), dynamic resolution (45 / 56 fps, min ratio 0.5; a step that does not help is undone) and an integrated-GPU hint in the requirements; ~50 fps. **Rule:** new instanced scenery goes through `lodInstances` (or is cheap); check `renderer.info.render.triangles` on the iGPU before shipping heavy models. The menu's auto LOW (`measureGfx`) still only runs without a saved choice; dynamic resolution covers a saved HIGH.
 
+**v0.3.5 (2026-11-07, Living Megacity):** the procedural city is replaced by 958 modelled buildings plus BLD-12 on a painted ground at 25 m (`cityplan.js`, `newcity.js`).
+- **Risks:**
+  - +17 MB of assets.
+  - The iGPU on HIGH runs 24-28 ms a frame (dynamic resolution covers it); LOW ~13 ms.
+  - The native `win_app` still draws the old city, so FREE ROAM positions match but the scenery differs.
+  - Traffic, props and animals have no colliders.
+  - The 48 ad screens now hang on the buildings' bounding boxes. On setback designs a screen can sit off the upper wall.
+- **Fixed while building it:** fast-flight freezes of 0.5-1 s. Causes and fixes:
+  - textures reloaded per material: a material pool;
+  - program dropped with the last material: shared near geometry;
+  - warm-up compiled for the screen, not the composer target: compile for the composer target, then one off-screen draw;
+  - big `bufferData` uploads and synchronous interior bands: a 3 ms/frame build queue, two meshes revealed a frame, nothing new above 90 m/s.
+- **Rules:**
+  - New scenery goes through `trees.js` `Scatter` (cells, ranges) or a `BatchedMesh`.
+  - A new material must be in the warm-up or it compiles mid-flight.
+  - Don't hide the player car in frame probes (its lights change every program).
+- **Backup:** the old SKYLINE CITY stays in the files (`city.js`); the dev server builds it with `neon.megacity` = `off`, production never. A rollback is `npm run release -- --rollback`.
+
 **v0.3.3 (2026-11-06, interiors for every car):** 30 shop interiors (ROADSTER 2,500, VIPER 5,000, TITAN 10,000 coins; `<car>-i01..i10`). One Blender leather master per car (two seats, centre console; VIPER / TITAN built against their body fitted into the ROADSTER cabin and mapped back, `master.bodyFit`), ten colour finishes, a Meshy steering wheel per interior (VIPER / TITAN: retextures of the ROADSTER shapes; Meshy budget 1,000 credits, ~830 used, log `meshy/interior_neo/meshy_jobs/LOG.txt`). The cockpit view is the 3D interior with the glass cut out of `hi_body` (`glass.json` per car; TITAN: open top, its windshield was a slit); the 2D dashboards removed. **Risk:** `glass.json` and each master are tied to the car file's hash (tests fail if a car GLB changes: rebuild with `tools/cockpit-glass.mjs <car>` and the builder); no browser test drives a VIPER / TITAN cockpit yet.
 
 **v0.3.2 (2026-11-06, ROADSTER + VIPER nitros):** 10 ROADSTER shop nitros (1,000 coins) 10 VIPER (2,000) and 10 TITAN (5,000) (envelope runtime per their directives, all emitters on the body) from the owner's effect packs

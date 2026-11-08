@@ -93,4 +93,4 @@ Exact key spellings are [confirmed] for those with line numbers; the rest come f
 
 ## 8.4 Static assets
 
-`public/models` (car GLBs `car.glb`, `car02.glb`, `car03.glb` and sky props), `public/tex`, `public/fx` (killer aura WebP), `public/ui`, `public/interiors/<car>` (v0.3.3: manifest, master GLB, `wheels/`, `glass.json` per car), `public/models/props/*_far.glb` (v0.3.4 simplified scenery for distance), `public/brand`, `public/og-image.jpg`, `public/privacy.html`, `public/terms.html`. Source art lives outside git in `neon_c/Assets` and `neon_c/meshy` [confirmed].
+`public/models` (car GLBs `car.glb`, `car02.glb`, `car03.glb` and sky props), `public/tex`, `public/fx` (killer aura WebP), `public/ui`, `public/interiors/<car>` (v0.3.3: manifest, master GLB, `wheels/`, `glass.json` per car), `public/models/props/*_far.glb` (v0.3.4 simplified scenery for distance), `public/megacity/` (v0.3.5: `buildings/` near/mid/far GLB + JSON per building, `facades/`, `interiors/`, `trees/`, `props/`; 17 MB), `public/brand`, `public/og-image.jpg`, `public/privacy.html`, `public/terms.html`. Source art lives outside git in `neon_c/Assets` and `neon_c/meshy` [confirmed].

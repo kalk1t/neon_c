@@ -32,7 +32,11 @@ Line counts and exports are [confirmed] (`wc -l`, `grep export`). Each file's ro
 
 | Module | Lines | Key exports | Responsibility |
 |---|---|---|---|
-| `src/city.js` | 313 | `buildCity`, `facadeBox`, `HERO_ASPECT` | Procedural city (seed 1337, extent 2,700 m, base −260 m), hero towers |
+| `src/cityplan.js` | 113 | `planCity`, `KINDS`, `GROUND`, `C`, `PITCH`, `T`, `SPORT`, `FARM`, `STADIUM`, `GOLF` | v0.3.5: the new city's plan (grid, lot types, building placement clear of the roads); pure data, node-tested |
+| `src/newcity.js` | 826 | `NEWCITY`, `buildNewCity` | v0.3.5: the Living Megacity: ground shader, horizon, lamps, trees, props, traffic, BatchedMesh mid/far forms, near forms with interiors, shader warm-up, dev warps |
+| `src/megacity.js` | 283 | `MEGACITY`, `SITES`, `ROAM_DECK`, `nearLevel`, `dress`, `stageColliders`, `WARPS` | The 12 buildings' models, colliders, BLD-12 and the FREE ROAM roof hub. Since v0.3.5 on in every build (the old city is kept as a backup: dev server with `neon.megacity` = `off` only) |
+| `src/facades.js`, `src/interiors.js`, `src/trees.js` | 300 / 393 / 165 | `facadeMaterial`, `releaseMaterial`, `buildInteriors`, `pauseInteriors`, `Scatter`, `forest`, `modelParts` | See-through facades with per-building tints, real interiors (3 ms/frame build queue), instanced trees and props by distance |
+| `src/city.js` | 313 | `buildCity`, `facadeBox`, `HERO_ASPECT` | The old procedural city (seed 1337, extent 2,700 m, base −260 m), hero towers; kept in the files as a backup (dev server, megacity off) |
 | `src/env.js` | 228 | `buildSky`, `buildClouds`, `MOON_DIR` | Sky shader, cloud sea / mist (900 puffs by default) |
 | `src/skyprops.js` | ~280 | `buildSkyProps`, `loadModel`, `dressScenery` | Flying props (drones, taxis, blimps, islands, koi) on looped paths clear of the track (seed 4242); Meshy tower crowns, control tower and trees; crowns and trees in LOD cells (`lodInstances`, v0.3.4) |
 | `src/props.js` | 295 | prefabs, `RING` | Gates, rings, deck, towers, signs, trees |
