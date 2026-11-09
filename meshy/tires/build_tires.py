@@ -521,6 +521,11 @@ for car, C in CARS.items():
         loL = next(o for o in objs if o.name.endswith('lo_L'))
         print('TIRE', car, w['code'], w['name'], 'hi', tris(hiL), 'lo', tris(loL))
         if THUMBS:
+            # v0.3.9 (owner: no lights on the tyres): the game keeps every wheel_glow* dark (src/car.js carMaterial), so the
+            # chips show them dark too
+            for m in hiL.data.materials:
+                if m and m.name.startswith('wheel_glow'):
+                    m.node_tree.nodes['Principled BSDF'].inputs['Emission Strength'].default_value = 0.0
             thumb(hiL, os.path.join(OUT, 'thumbs', f"{car}-{w['code']}.png"))
         for o in list(objs):  # names are reused by the next wheel
             bpy.data.objects.remove(o)
