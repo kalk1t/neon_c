@@ -166,15 +166,16 @@ car).
   - Pools and arenas must stay unturned, because the ground paints them unturned.
   - The traffic stop line (40 m) and lane (6 m) are hard-coded in the ground shader: change `TRAFFIC` and the shader together.
 
-**v0.3.9 (2026-11-09, land and drive, seekers on Q):** FREE ROAM drive mode on E (`DRIVE`, `toggleDrive`, `groundStep` in `src/car.js`); the seeker moved from 1 to Q; E / Q no longer climb and dive.
-- **Release:** client only (no functions, rules or relay change; `LIVE_PROTOCOL` stays 19): `npm run release`.
+**v0.3.9 (2026-11-09, land and drive, wheels, seekers on Q):** FREE ROAM drive mode on hold E (`DRIVE`, `toggleDrive`, `groundStep` in `src/car.js`, `driveHold` in `src/aim.js`); shop car pods split into frame + wheel (`tools/split-wheels.mjs`); the seeker moved from 1 to Q; E / Q no longer climb and dive.
+- **Release:** client only (no functions, rules or relay change; `LIVE_PROTOCOL` stays 19): `npm run release`. The three car files change (+~40 KB each).
 - **Risks:**
-  - Other players see a driving car through its normal pose; its body isn't lowered on their screens (up to ~0.2 m higher than the driver sees).
+  - Other players see a driving car through its normal pose: its body isn't lowered (~0.2 m higher) and its wheels don't turn on their screens.
   - Keyboard-only players lost E / Q climb (arrows still climb); players used to 1 for seekers must learn Q.
   - Only things with colliders are solid: traffic, props and animals have none (v0.3.5), so a driving car passes through them.
-  - A driving car can sit on a ledge narrower than the car (the probe is a 2.1 m sphere).
+  - The wheel cut is by radius around the axle: a few frame triangles inside it turn with the wheel, and the cut edge is a little jagged where frame and wheel meet (one mesh from Meshy, no separate tyre). Separately modelled tyres (Blender) would be cleaner; they'd need the skins, nitros and interiors re-checked.
+  - New skins: `tools/extract-skins.mjs` compares nodes with the v0.3 masters, which now have wheel nodes (the skin GLBs don't).
   - The native `win_app` has no drive mode yet.
-- **Rules:** a walkable surface is a collider contact with normal y > 0.5; `place()` must reset `mode` to `fly` (respawn always flies).
+- **Rules:** a drivable surface is a contact with normal y > `DRIVE.FLOOR`; a steeper one must never lift a driving car; `place()` must reset `mode` to `fly`; re-run `split-wheels.mjs` + `compress-car.mjs` after rebuilding a car master (`refine_car.py`).
 
 **v0.3.8 (2026-11-09, STADIUM 3V3 fixes, no lock-on):** the ball is 1.2x smaller, without its beam, and moves when hit (`stepBall`, relay-owned, sent in every `w` as `b`); the player's lock-on is replaced by the car under the aim ring (`AIM_PICK`), in races too.
 - **Release:** client and relay only (no functions or rules change); `LIVE_PROTOCOL` stays 19.
