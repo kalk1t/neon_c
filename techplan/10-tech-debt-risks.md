@@ -166,12 +166,14 @@ car).
   - Pools and arenas must stay unturned, because the ground paints them unturned.
   - The traffic stop line (40 m) and lane (6 m) are hard-coded in the ground shader: change `TRAFFIC` and the shader together.
 
-**v0.3.8 (2026-11-08, STADIUM 3V3 fixes, no lock-on):** the ball is 1.2x smaller, without its beam, and moves when hit (`stepBall`, relay-owned, sent in every `w` as `b`); the player's lock-on is replaced by the car under the aim ring (`AIM_PICK`), in races too.
+**v0.3.8 (2026-11-09, STADIUM 3V3 fixes, no lock-on):** the ball is 1.2x smaller, without its beam, and moves when hit (`stepBall`, relay-owned, sent in every `w` as `b`); the player's lock-on is replaced by the car under the aim ring (`AIM_PICK`), in races too.
 - **Release:** client and relay only (no functions or rules change); `LIVE_PROTOCOL` stays 19.
 - **Risks:**
   - Without lock-on, keyboard / gamepad players (no mouse aim) have to point the car at a target; seekers no longer need a 0.5 s lock (they home at once on the car under the ring), which makes them easier to land.
   - v0.3.7 games still connected see the ball jump on match updates (they ignore `b`) until they reload.
   - `w` grows by ~50 bytes while a ball exists.
+- **Fixed with it:** the city traffic clock (`clockAt`): a `tk` handled late (the page busy for seconds) pulled the clock back by its lateness past 2 s, so the traffic stood still until the next `tk`; and a stalled page's ping (its own stall, seconds) ran the traffic ahead. Now a late `tk` eases the clock by 5% and the ping counts up to 500 ms.
+- **CI lesson:** on the 2-core runner (one frame every few seconds, a page held for 30 s+) a browser test must wait on frames and states, never fixed timeouts, and must never compare two pages' values read at different moments (normalise with `Date.now`). Check a suspect test with the CPU throttled 30x (`Emulation.setCPUThrottlingRate`); run it through `run.mjs` (its relay keeps silent players 15 min, a plain dev server drops them after 30 s).
 - **Rules:** `stepBall` must stay shared by the relay and the game (the game's copy steps between snapshots); keep `ballBox` inside the stadium wall with the ball's radius to spare (`tests/stadium.test.mjs` pushes it in every direction).
 
 **v0.3.7 (2026-11-08, city cars pay coins, STADIUM 3V3):** one deterministic city traffic shared by the relay and every game (`trafficsim.js`, `server/traffic.js`); city cars have health and pay 5 coins (bus 15) with no daily cap; STADIUM 3V3 run by the relay (`server/stadium.js`); `LIVE_PROTOCOL` 19 (18 still admitted).
