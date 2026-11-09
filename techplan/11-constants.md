@@ -34,6 +34,7 @@
 | `SHOP_PRICES.viper` | 2,500 | coins | Price | `functions/rules.js:21` | `functions/index.js:89` | code | Must match `SHOP_CARS` (`src/online/index.js:21`) |
 | `SHOP_PRICES.titan` | 7,500 | coins | Price | `functions/rules.js:22` | as above | code | as above |
 | `SKIN_PRICES` (v0.2.28) | 500 / 1,500 / 3,500 | coins | ROADSTER / VIPER / TITAN skin | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `SKIN_PRICE` (`src/online/index.js`); `constants.test.mjs` |
+| `TIRE_PRICES` (v0.3.9) | 5,000 / 7,500 / 12,500 | coins | ROADSTER / VIPER / TITAN tires (10 each, codes w01-w10) | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `TIRE_PRICE` (`src/online/index.js`); `constants.test.mjs` |
 | `INTERIOR_PRICES` (v0.3.3) | 2,500 / 5,000 / 10,000 | coins | ROADSTER / VIPER / TITAN interior (10 each) | `functions/rules.js` | `functions/index.js` `buyCar` | code | Must match `INTERIOR_PRICE` (`src/online/index.js`); `constants.test.mjs` |
 | `GROUND` (v0.3.5) | 25 | m | The new city's ground; FREE ROAM `roamFloor` = GROUND + 1.2 | `src/cityplan.js` | `newcity.js`, `world.js` | code | Lowest road 81 m |
 | `PITCH` / `STREET` (v0.3.5) | 120 / 30 | m | City grid: lot pitch / street width (90 m lots) | `src/cityplan.js` | `newcity.js` ground shader | code | |

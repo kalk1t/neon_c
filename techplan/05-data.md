@@ -26,6 +26,7 @@ erDiagram
     array skins "owned shop skins (v0.2.28)"
     array nitros "owned shop nitros (v0.3.2)"
     array interiors "owned shop interiors (v0.3.3)"
+    array tires "owned shop tires (v0.3.9)"
     int kills "relay via relayKills (v0.2.4)"
     timestamp lastKillsAt
     bool isKiller "relay via relayKills (v0.2.4)"

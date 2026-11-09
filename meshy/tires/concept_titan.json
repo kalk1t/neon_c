@@ -1,0 +1,16 @@
+{
+ "id": "01a1c23e-d847-75b0-86d6-e20f48fb899d",
+ "type": "text-to-image",
+ "ai_model": "gpt-image-2",
+ "prompt": "Product design sheet for a futuristic neon racing game: ten clearly different wheel designs (rim + tyre), each shown from its outer face, slightly three-quarter, arranged in a neat 5 by 2 grid on a plain dark grey background, even studio light, no car, no text, no labels. Every wheel has a different rim style, spoke count, finish and tyre. For a heavy armoured off-road truck-car: big chunky off-road tyres with deep lugs and beadlock rims: armour plates, bolted rings, deep dish, six and eight thick spokes, hex hubs, gunmetal, matte olive, desert tan, chrome, hazard orange accents and glowing cyan or amber rings.",
+ "status": "SUCCEEDED",
+ "progress": 100,
+ "created_at": 1794260260946,
+ "started_at": 1794260260953,
+ "finished_at": 1794260285132,
+ "expires_at": 1794519485132,
+ "image_urls": [
+  "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/image_01a1c23e-d847-75b0-86d6-e20f48fb899d_0.png?Expires=1794519485&Signature=TD5F~EKmQZ34qbWRNT7Wq1-kHyr4kyu88-JQ2wvJ4HPyGDERow5ycdOA~bfW3IVeL~5O5v7~M43AwmWxqP5KE23HGDWrv9bxcOTqkDz4tC-Dy2R~vUs23cymSj8QY2RIIktjlw7O-d1QgdchNRPz5tt9R71IGuDGO6LtPe36s8jAt-v8ZNCL5gKRzV50z7ZbIqOQXPbduAFE4r33b2~xfhaTkf9eK7wZith0YN2wZFeAUdD14kIIg7aRLPZ-~ghwVnRl5GyUPST3nGE60HYGxr1HvvW2gSf-xl4zdLO-rLN6Ql3eFyk5zdShYU9Cyh-ypMN9kjl6uzF~WOH7krGRMA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+ ],
+ "consumed_credits": 9
+}

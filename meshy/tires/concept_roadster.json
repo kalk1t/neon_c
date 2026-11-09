@@ -1,0 +1,16 @@
+{
+ "id": "01a1c23d-f536-7031-ace9-71f9802bef28",
+ "type": "text-to-image",
+ "ai_model": "gpt-image-2",
+ "prompt": "Product design sheet for a futuristic neon racing game: ten clearly different wheel designs (rim + tyre), each shown from its outer face, slightly three-quarter, arranged in a neat 5 by 2 grid on a plain dark grey background, even studio light, no car, no text, no labels. Every wheel has a different rim style, spoke count, finish and tyre. For a sleek black hover sports car with magenta neon: iron and machined-steel wheels, no rubber needed: turned steel bands, chrome, gunmetal, gold, carbon; split spokes, mesh lattice, turbine blades, disc covers, thin glowing accent rings in magenta, cyan, gold, red, green.",
+ "status": "SUCCEEDED",
+ "progress": 100,
+ "created_at": 1794260202830,
+ "started_at": 1794260202840,
+ "finished_at": 1794260227644,
+ "expires_at": 1794519427644,
+ "image_urls": [
+  "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/image_01a1c23d-f536-7031-ace9-71f9802bef28_0.png?Expires=1794519427&Signature=RNq2CBQBVWanogGo3mCPPD9zsIJ9w5AEyLeoHQwZFhZUkSNPjW3VXX79Japbnw2jeBgcOrxKp1IX8MsvPbiyah7BvIH8GeK9ZOqCasfJ7zIl9BcphhM6Seye83jwja00xJaErafqBH2avncdSe-9nTJXr6HNlNHq9FSvxWz78~PZnI28MPp4ddyOHmZt01h4NbHzxq0R9xpNtCSrsSze-uPHddCersQR-6dqwuw-oldhLzmvqIWp9eYgVNU0qXRE0q-XgUHuTO1yA2EI-5Qpao6RY1YhhgMCJ8PICKkSlV8nkJ9phBHwOokUTSGpgdKQrciZeBVwrHz5c5zs7dJ14Q__&Key-Pair-Id=K1VGYTHIYLM9UM"
+ ],
+ "consumed_credits": 9
+}

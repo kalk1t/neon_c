@@ -167,14 +167,16 @@ car).
   - The traffic stop line (40 m) and lane (6 m) are hard-coded in the ground shader: change `TRAFFIC` and the shader together.
 
 **v0.3.9 (2026-11-09, land and drive, wheels, seekers on Q):** FREE ROAM drive mode on hold E (`DRIVE`, `toggleDrive`, `groundStep` in `src/car.js`, `driveHold` in `src/aim.js`); shop car pods split into frame + wheel (`tools/split-wheels.mjs`); the seeker moved from 1 to Q; E / Q no longer climb and dive.
-- **Release:** client only (no functions, rules or relay change; `LIVE_PROTOCOL` stays 19): `npm run release`. The three car files change (+~40 KB each).
+- **Release:** the tire shop adds `TIRE_PRICES` to the functions: `npm run deploy -- functions` FIRST, then `npm run release`, then restart the relay (`server/live.js`: `tire` in hi / welcome / join; `LIVE_PROTOCOL` stays 19, an old relay just shows stock wheels). The car files carry the new stock wheels; 30 tire files (`public/tires/`, ~15 MB in all, loaded per tire on use).
+- **ROADSTER regeneration pilot (uncommitted until the owner approves):** a new body (`meshy/roadster_v4`, 36 Meshy credits) on iron wheels; its skins, nitros and interiors were fitted to the old body and fail their guard tests (pivots, size, triangle budget, nitro/interior hashes) until refitted. The ROADSTER tires are sized for the new body (front 0.38 m, rear 0.405 m).
 - **Risks:**
   - Other players see a driving car through its normal pose: its body isn't lowered (~0.2 m higher) and its wheels don't turn on their screens.
   - Keyboard-only players lost E / Q climb (arrows still climb); players used to 1 for seekers must learn Q.
   - Only things with colliders are solid: traffic, props and animals have none (v0.3.5), so a driving car passes through them.
   - The wheel cut is by radius around the axle: a few frame triangles inside it turn with the wheel, and the cut edge is a little jagged where frame and wheel meet (one mesh from Meshy, no separate tyre). Separately modelled tyres (Blender) would be cleaner; they'd need the skins, nitros and interiors re-checked.
   - New skins: `tools/extract-skins.mjs` compares nodes with the v0.3 masters, which now have wheel nodes (the skin GLBs don't).
-  - The native `win_app` has no drive mode yet.
+  - The native `win_app` has no drive mode yet, and no tires.
+  - Remote players' tires load on first sight (0.3-0.7 MB each): many players with different tires cost bandwidth; the AI rivals keep stock wheels.
 - **Rules:** a drivable surface is a contact with normal y > `DRIVE.FLOOR`; a steeper one must never lift a driving car; `place()` must reset `mode` to `fly`; re-run `split-wheels.mjs` + `compress-car.mjs` after rebuilding a car master (`refine_car.py`).
 
 **v0.3.8 (2026-11-09, STADIUM 3V3 fixes, no lock-on):** the ball is 1.2x smaller, without its beam, and moves when hit (`stepBall`, relay-owned, sent in every `w` as `b`); the player's lock-on is replaced by the car under the aim ring (`AIM_PICK`), in races too.
