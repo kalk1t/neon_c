@@ -2,7 +2,7 @@
 # (game/tools/split-wheels.mjs puts them into the cars). Each wheel: a tyre with tread (lathed profile, tread blocks),
 # a rim in the car's style, a hub and a neon accent ring. Axle along X, origin at the wheel's centre; the L wheel's outer
 # face looks to -X (the car's left), the R wheel is its mirror. Two levels of detail (hi / lo).
-# Usage: blender -b --python build_wheels.py -- [out dir]     (default meshy/wheels/)
+# Usage: blender -b --python build_wheels.py -- [car id ...] [out dir]     (default: every car, meshy/wheels/)
 #   writes <car>_wheels.glb with four objects: hi_L, hi_R, lo_L, lo_R (and <car>_preview.png)
 import math, os, sys
 import bpy, bmesh
@@ -10,6 +10,8 @@ from mathutils import Vector, Matrix
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+ONLY = [a for a in argv if not os.sep in a and '/' not in a]  # car ids to build (default: all)
+argv = [a for a in argv if a not in ONLY]
 OUT = argv[0] if argv else os.path.join(HERE, 'wheels')
 os.makedirs(OUT, exist_ok=True)
 
@@ -22,6 +24,12 @@ CARS = {
                   accent=(1.0, 0.08, 0.6), metal=((0.62, 0.63, 0.66), 0.18)),
     'titan': dict(R=0.44, W=0.68, side=0.16, hub_w=0.06, rim='beadlock', spokes=6, tread='offroad',
                   accent=(0.05, 0.75, 1.0), metal=((0.2, 0.21, 0.23), 0.3)),
+    # v0.3.9 ROADSTER pilot (meshy/roadster_v4): iron wheels, no rubber (owner, 2026-11-09): a machined steel tyre with
+    # turned ribs, bigger and wider at the rear (measured on the new body: roadster_v4/measure.py); rear: the rear pair's
+    # R / W (objects hi_L_rear ...)
+    'roadster4': dict(R=0.38, W=0.52, side=0.1, hub_w=0.2, rim='split', spokes=5, tread='iron',
+                      accent=(1.0, 0.05, 0.75), metal=((0.32, 0.32, 0.35), 0.2), iron=((0.2, 0.2, 0.22), 0.3),
+                      rear=dict(R=0.405, W=0.6)),
 }
 
 
@@ -78,6 +86,10 @@ def wheel(car, P, lod):
     prof = [(x1 - 0.01, rb), (x1 + bulge, rb + S * 0.45), (x1 + bulge * 0.4, R - 0.035), (x1 - 0.03, R - 0.004),
             (x1 - 0.06, R), (x0 + 0.06, R), (x0 + 0.03, R - 0.004), (x0 - bulge * 0.4, R - 0.035),
             (x0 - bulge, rb + S * 0.45), (x0 + 0.01, rb)]
+    if P['tread'] == 'iron':  # a steel band: flat faces, chamfered edges, no sidewall bulge
+        prof = [(x1 - 0.01, rb), (x1, rb + 0.01), (x1, R - 0.022), (x1 - 0.014, R - 0.004),
+                (x1 - 0.06, R), (x0 + 0.06, R), (x0 + 0.014, R - 0.004), (x0, R - 0.022),
+                (x0, rb + 0.01), (x0 + 0.01, rb)]
     if hi:  # extra tread rows so blocks can be cut
         n = 8
         tread = [(x1 - 0.06 - (W - 0.12) * k / n, R) for k in range(n + 1)]
@@ -97,6 +109,9 @@ def wheel(car, P, lod):
                     lug = (i // 2 + (0 if k < 0.5 else 1)) % 2 == 0
                     groove = not lug or abs(k - 0.5) < 0.05
                     depth = 0.035
+                elif P['tread'] == 'iron':  # turned steel: three circumferential grooves and fine cross knurls
+                    groove = any(abs(k - c) < 0.045 for c in (0.25, 0.5, 0.75)) or (i % 4 == 0 and 0.08 < k < 0.92)
+                    depth = 0.012 if i % 4 == 0 and not any(abs(k - c) < 0.045 for c in (0.25, 0.5, 0.75)) else 0.02
                 else:  # slick: two thin circumferential grooves
                     groove = abs(k - 0.3) < 0.05 or abs(k - 0.7) < 0.05
                     depth = 0.014
@@ -151,7 +166,7 @@ def wheel(car, P, lod):
     mesh = bpy.data.meshes.new(f'{car}_{lod}')
     bm.to_mesh(mesh)
     bm.free()
-    for m in mats[car]:
+    for m in mats[car.split('_')[0]]:
         mesh.materials.append(m)
     return mesh
 
@@ -159,27 +174,32 @@ def wheel(car, P, lod):
 bpy.ops.wm.read_factory_settings(use_empty=True)
 mats = {}
 for car, P in CARS.items():
-    mats[car] = [material(f'wheel_tyre', (0.025, 0.025, 0.028), 0.0, 0.82),
+    tyre = (material(f'wheel_tyre_{car}', P['iron'][0], 1.0, P['iron'][1]) if P.get('iron')
+            else material('wheel_tyre', (0.025, 0.025, 0.028), 0.0, 0.82))
+    mats[car] = [tyre,
                  material(f'wheel_rim_{car}', P['metal'][0], 1.0, P['metal'][1]),
                  material(f'wheel_glow_{car}', (0.02, 0.02, 0.02), 0.0, 0.4, emit=P['accent']),
                  material('wheel_dark', (0.012, 0.012, 0.014), 0.3, 0.6)]
 
 for car, P in CARS.items():
+    if ONLY and car not in ONLY:
+        continue
     for o in list(bpy.data.objects):
         bpy.data.objects.remove(o)
-    for lod in ('hi', 'lo'):
-        left = wheel(car, P, lod)
-        ol = bpy.data.objects.new(f'{lod}_L', left)
+    for lod, axle in [(l, a) for l in ('hi', 'lo') for a in ('', '_rear') if a == '' or P.get('rear')]:
+        PP = {**P, **P['rear']} if axle else P
+        left = wheel(car + axle, PP, lod)
+        ol = bpy.data.objects.new(f'{lod}_L{axle}', left)
         bpy.context.scene.collection.objects.link(ol)
         right = left.copy()
-        right.name = f'{car}_{lod}_R'
+        right.name = f'{car}{axle}_{lod}_R'
         right.transform(Matrix.Diagonal((-1, 1, 1, 1)))
         right.flip_normals()
-        orr = bpy.data.objects.new(f'{lod}_R', right)
+        orr = bpy.data.objects.new(f'{lod}_R{axle}', right)
         bpy.context.scene.collection.objects.link(orr)
         for o in (ol, orr):  # bevel-like smoothing: smooth by angle
             o.data.shade_smooth_by_angle(angle=math.radians(40)) if hasattr(o.data, 'shade_smooth_by_angle') else None
-        print('WHEEL', car, lod, 'tris', sum(len(p.vertices) - 2 for p in left.polygons))
+        print('WHEEL', car + axle, lod, 'tris', sum(len(p.vertices) - 2 for p in left.polygons))
     path = os.path.join(OUT, f'{car}_wheels.glb')
     bpy.ops.export_scene.gltf(filepath=path, export_format='GLB', use_selection=False, export_yup=True)
     # preview: the hi L wheel, three-quarter from outside

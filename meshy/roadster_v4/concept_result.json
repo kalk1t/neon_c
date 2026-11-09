@@ -1,0 +1,18 @@
+{
+ "id": "01a1c21a-045f-7028-a63f-26da1d58e200",
+ "type": "image-to-image",
+ "ai_model": "nano-banana-2",
+ "prompt": "Redesign this car as a clean, production-quality futuristic sports car for a racing game, keeping its silhouette, low wedge nose, cockpit and rear wing. Smooth, crisp, symmetric body panels with sharp creases, no dents or lumps. Gloss black paint with thin magenta and cyan neon light lines along the sides and nose. Four large wheels in open, deep wheel arches with clear gaps between wheel and body: solid machined dark iron wheels (metal tyres, no rubber) with a 5-spoke rim. The car should look equally right driving on a road and hovering. Full car visible, plain white background, soft studio light, no shadow, no text.",
+ "status": "SUCCEEDED",
+ "progress": 100,
+ "created_at": 1794257847838,
+ "started_at": 1794257847854,
+ "finished_at": 1794257876598,
+ "expires_at": 1794517076598,
+ "image_urls": [
+  "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a1c21a-7422-7791-a308-7f92e1f64d24_part_0.png?Expires=1794517076&Signature=clLxRfrsMyS-JNeWgMw2NhcS8v3qJJ6RJEnnzQOxwB3zLpqZ-gvexW~Hws8cS8w9qcY31ugwWi0olNu5uupUJR7juQpH3Fl946IYKvZfKvgmAZQ8A5uZ-oBgU7yZzcyh4KdRuXmHiLXo66zkuxsC3C~qXfImbRsQHani70I-GfQA8jIif61JvPR7Jd1hlvLslsmOb~oVbFJDbAZECRGnAA4Knu6ne8Wc26uTNy0y7aij1gAbebvySh1Lvg~2ShnEhPPRLU6XshpZjy3Iz8N94FOFXMMWYQ1~j3qMVB3im~vU4Gq9vxJVrqLv6VWf9F-vfRt1fhY2v1S5wnzrM88Ahg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a1c21a-7422-7791-a308-7f92e1f64d24_part_1.png?Expires=1794517076&Signature=BFhXBi2dqK53qFaO~XD4o8DlYOjtCdDdSQbp4AiYpm~9Laf0iNfXV1LEH50ldqAZ5RETsoqdAPrOa5nOxAO5Trlnz~alOpBJVQY47nrQSVdc0azprZYllmOiRXnB6rvDpaSR8mDDteOasNmhzWatspqBQ4qD1eri1TvCl57rWKz56sHvTF~skN9k37xPqZoSOql9qQAOB9B2ddlzpa-EhaB0qgyeP2bWTtU4UuIQAE61QsrzdE9AV1wQzyqy0uyDwqRzQM7LidgZhkDZBCyALmuG2UhLX6Jtr-Ws2riPVd3NUIj0-zsJzWFBpG99yDf3J~PaMSGQR5qgdgngVmy8SQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "https://assets.meshy.ai/720c345f-800c-46ee-899c-3c361d2b5443/uploads/multi_view_image_01a1c21a-7422-7791-a308-7f92e1f64d24_part_2.png?Expires=1794517076&Signature=KlTvBDKHswQq04tn-69tGo7d35kSSbTETZH1FcunnasVEMOgWwXuND0FPtCaFiSQ7hIK-Yr2mFFy2Qlncl4YXF~m1WNzKPRh~ko321yzGO2-xGM0GfDxsjQDNKPSYgTDosSa7aTEEPJe5Bbaas3i6ymZQrUHsAoIQdHv5u619Xs04HEAZr0Lva2p2K4TtBvE-JSzMHBIlk7WZZUYYsZSXp8xDyjBrX6psDLT1Nwg~J4J~qSFedDNKzJAUng0aGhaN-H4MFjZjJJ2p-~NVtNUvfApUkZ6EqXf9t49A3whOSp8H3Rc7GxnYhw4I28YEdgzzUyyFTh17pqAnE7eSgujeg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+ ],
+ "consumed_credits": 6
+}
