@@ -117,6 +117,7 @@
 | `CAR.RADIUS` | 2.1 | m | Collision radius | `src/car.js:10` | code | |
 | `FREE_PITCH` | LEAD 0.62, LEVEL 0.9, LEVEL_AFTER 0.5 | rad, rad/s, s | Mouse loops: aim lead, auto-level (v0.2.22) | `src/aim.js` | code | Tested in `tests/controls.test.mjs` |
 | `PITCH` | RATE 2.4, FOLLOW 4 | rad/s, 1/s | The nose following the mouse's pitch (v0.2.22) | `src/car.js` | code | |
+| `DRIVE` (v0.3.9) | RANGE 15, LAND 3.5, RISE 3.5, LIFT 14, G 32, DROP 1.6 | m, s, s, m, m/s², m | Drive mode (FREE ROAM, E): lands only within RANGE above a walkable surface (normal y > 0.5); landing / take-off animations; take-off height; gravity while driving; how far the body settles | `src/car.js` | code | Tested in `tests/controls.test.mjs` |
 | `FLIP` | TIME 1.2, R 15 | s, m | Backflip: the loop (v0.2.22) | `src/car.js` | code | Tested in `tests/controls.test.mjs` |
 | `AIRBRAKE` | DECEL 220, MIN 25, TURN 1.6, GRIP 6 | m/s², m/s, ×, 1/s | Air brake (Space, v0.2.22) | `src/car.js` | code | Tested in `tests/controls.test.mjs` |
 | `SPIN` | ROLL 0.55, SURGE 2, MUL 1.5, JINK 22, COOLDOWN 6 | s, s, ×, m/s, s | Spin dodge | `src/car.js:12` | code | Units [inferred] from comments |

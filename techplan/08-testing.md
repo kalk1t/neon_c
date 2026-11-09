@@ -206,3 +206,9 @@ The browser test (`interiors.test.mjs`) drives the ROADSTER only; VIPER / TITAN 
 | `test:browser` | all pass (cars 188, interiors 11, killer 33, nitros 17, rivals 10, save 5, skins 4, stadium 10, traffic 6, void 9) | + stadium: aiming at the ball with B behind it gives no target; aiming at B in the open gives *TARGET StadiumB* at once |
 | CI fix: `traffic.test.mjs` with Chrome's CPU throttled 30x (`Emulation.setCPUThrottlingRate`, through `run.mjs`) | pass 6 / 6 | The v0.3.7 CI run 42501866409 failed 4 of its checks on the 2-core runner; the old test fails the same way throttled. Fixed: waits on frames and states (`frames`, `hold`, SLOW), relay clocks compared at the same moment, a checksum tick both pages have, `traffic.following` instead of "within 3 ticks" (the game steps at most 30 ticks a frame) |
 | Bot probe (`npm run bots` + a scripted player, 60 s) | pass | 3v3 (player + 2 bots against 3); the ball reached the side bound (56 m) and bounced, top speed 11.8 m/s, height 9-14 m above the ground; no hit refused by the relay |
+
+### v0.3.9 (2026-11-09, land and drive, seekers on Q)
+| Suite | Result | Covers |
+|---|---|---|
+| `test:live` | 203 / 203 | `controls.test.mjs` (37): Q and the middle mouse fire a seeker, 1 doesn't; drive mode on a flat stand-in ground: too high → `far`; landing takes ~3.5 s and rests on the surface with the body settled; driving reaches the same top speed as flying; E rises 14 m in ~3.5 s, then flies; off an edge it falls and stays a car |
+| Real game probe (dev server, FREE ROAM) | pass | Landing from 36 m onto the 25 m street (rests at 27.1), driving 87 m/s with the height steady and pitch 0, rising +14 m then `fly`; Q fires a seeker; no page errors |
